@@ -1,0 +1,11 @@
+# Allowlist: only the bot's own source, docs and edit log are published.
+/*
+!/.gitignore
+!/LICENSE
+!/README.md
+!/requirements.txt
+!/common.py
+!/plan.py
+!/edit.py
+!/pipeline.py
+!/edits.csv
