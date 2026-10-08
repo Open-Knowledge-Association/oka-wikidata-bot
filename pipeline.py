@@ -64,9 +64,15 @@ def chosen(qids):
 
 
 def fetch(ids):
-    """Live JSON of up to 50 items (read-only, no login)."""
-    return curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=labels|aliases|descriptions|claims"
-                     "&ids=" + "|".join(ids))["entities"]
+    """Live JSON of up to 50 items (read-only, no login). While Wikidata is unreachable, waits and retries."""
+    for attempt in range(1, 11):
+        try:
+            return curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
+                             "&props=labels|aliases|descriptions|claims&ids=" + "|".join(ids))["entities"]
+        except (ValueError, KeyError):           # an error page instead of JSON, or an API error
+            out(f"Wikidata did not answer, retrying in {attempt} min")
+            time.sleep(60 * attempt)
+    raise RuntimeError("Wikidata did not answer wbgetentities for 55 minutes")
 
 
 # ---------------------------------------------------------------- saving
