@@ -4,6 +4,7 @@
   python pipeline.py preview [--n 10]          show what the next edits would change (read-only)
   python pipeline.py run [--kind edit|create] [--batches K] [--batch-size N] [--rate R]
                                                edit as OKA bot; checks each batch after saving and stops on problems
+  python pipeline.py run --qids Q1,Q2          re-check items already done (after a rule change); only what is missing
   python pipeline.py verify [--last N]         read back logged edits and check them
   python pipeline.py userpage                  refresh User:OKA bot (also done after every run)
   python pipeline.py status                    counts from edits.csv
@@ -54,6 +55,12 @@ def pending(kind):
     _, rows = planmod.load()
     return [r for r in rows if (kind in (None, r["kind"]))
             and (r["kind"], r["qid"] if r["kind"] == "edit" else r["rec"]["uuid"]) not in done]
+
+
+def chosen(qids):
+    """Plan rows of these items, logged or not, to re-check them (e.g. after a rule change)."""
+    want = set(qids.split(","))
+    return [r for r in planmod.load()[1] if r["kind"] == "edit" and r["qid"] in want]
 
 
 def fetch(ids):
@@ -166,6 +173,8 @@ def check(entity, kind, row, changes):
     want = {"height": lambda: ok("P2044"), "source for height": lambda: ok("P2044"),
             "swisstopo height (preferred)": lambda: any(cites(c, SWISSNAMES3D) and c["rank"] == "preferred" for c in cl.get("P2044", [])),
             "source for position": lambda: ok("P625"),
+            "precision of position (from its digits)": lambda: any(
+                cites(c, SWISSNAMES3D) and c["mainsnak"]["datavalue"]["value"].get("precision") for c in cl.get("P625", [])),
             "swisstopo position (preferred)": lambda: any(cites(c, SWISSNAMES3D) and c["rank"] == "preferred" for c in cl.get("P625", [])),
             "default label": lambda: entity.get("labels", {}).get("mul", {}).get("value") == rec["name"],
             "official name": lambda: ok("P1448"),
@@ -237,6 +246,7 @@ def main():
     ap.add_argument("--rate", type=float, default=1 / 3, help="edits per second (approved: at most 20 per minute)")
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--last", type=int, default=500)
+    ap.add_argument("--qids", help="run: re-check these already logged items (comma-separated), e.g. after a rule change")
     a = ap.parse_args()
 
     if a.mode == "plan":
@@ -247,7 +257,7 @@ def main():
         out(f"pending: {len(pending('edit'))} edits, {len(pending('create'))} creations")
     elif a.mode == "preview":
         refs = refs_for_today()
-        rows = pending(a.kind or "edit")[:a.n]
+        rows = chosen(a.qids) if a.qids else pending(a.kind or "edit")[:a.n]
         edits = [r for r in rows if r["kind"] == "edit"]
         live = {}
         for i in range(0, len(edits), 50):
@@ -285,8 +295,8 @@ def main():
         site = bot_site(max(1, round(1 / a.rate)))
         refs = refs_for_today()
         total = Counter()
-        for b in range(a.batches):
-            rows = pending(a.kind)[:a.batch_size]
+        for b in range(1 if a.qids else a.batches):
+            rows = chosen(a.qids) if a.qids else pending(a.kind)[:a.batch_size]
             if not rows:
                 break
             stats, saved = run_batch(site, rows, a.rate, refs)

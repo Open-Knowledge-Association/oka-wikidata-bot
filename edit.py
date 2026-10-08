@@ -2,7 +2,8 @@
 
 Rules (Wikidata:Requests for permissions/Bot/OKA bot, after review):
 - nothing is removed; existing labels, descriptions and classes are never changed;
-- heights are whole metres; a matching height or position gets a reference;
+- heights are whole metres; a matching height or position gets a reference (an old position saved without a
+  precision gets the one its digits imply, since Wikidata refuses it otherwise; the position itself is unchanged);
 - a missing height is added for summits and lakes (not passes, glaciers or reservoirs: a pass's swissNAMES3D
   point can sit beside the saddle, a glacier spans many heights, a reservoir's level changes);
 - if an existing value's only source is a Wikipedia import and it is more than 5 m (height) or 50 m (position,
@@ -22,6 +23,15 @@ from common import (CANTONS, GENERIC, METRE, OFFICIAL_TYPES, RADIUS, SWISSBOUNDA
 
 def _amount(c):
     return round(float(c["mainsnak"]["datavalue"]["value"]["amount"]))
+
+
+def implied_precision(lat, lon):
+    """Precision that the digits of an old coordinate saved without one imply: whole degrees, arcminutes or
+    arcseconds when both numbers are such multiples, else the last decimal place (at most 6)."""
+    for p in (1, 1 / 60, 1 / 3600):
+        if all(abs(v / p - round(v / p)) * p < 3e-6 for v in (lat, lon)):
+            return p
+    return 10.0 ** -min(max(len(repr(float(v)).split(".")[1].rstrip("0")) for v in (lat, lon)), 6)
 
 
 def name_changes(raw, rec, ref):
@@ -100,12 +110,15 @@ def build_edit(raw, row, refs):
                   and not any(c["rank"] == "preferred" for c in best) and all(only_import_refs(c) for c in best)):
                 out_claims.append(height_claim(z, ref, "preferred"))
                 done.append("swisstopo height (preferred)")
-    # an old coordinate without a precision can't be resubmitted unchanged, so it gets no reference
-    if offset <= 50 and cv.get("precision") is not None and not cites(coords[0], SWISSNAMES3D):
+    if offset <= 50 and not cites(coords[0], SWISSNAMES3D):
         c = copy.deepcopy(coords[0])
         c.setdefault("references", []).append(ref)
         out_claims.append(c)
         done.append("source for position")
+        v = c["mainsnak"]["datavalue"]["value"]
+        if v.get("precision") is None:      # old imports lack it, and Wikidata won't take the claim back without one
+            v["precision"] = implied_precision(v["latitude"], v["longitude"])
+            done.append("precision of position (from its digits)")
     elif (offset > 50 and group == "summit" and not any(c["rank"] == "preferred" for c in coords)
           and all(only_import_refs(c) for c in coords)):
         out_claims.append(coord_claim(lat, lon, ref, "preferred"))

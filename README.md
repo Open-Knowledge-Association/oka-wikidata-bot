@@ -23,7 +23,9 @@ feature lies within 250 m (summits, passes) or 2 km (lakes, glaciers), and the p
 
 For a paired item, in one edit, the bot:
 
-- adds swisstopo as a source to a height that matches in whole metres, and to a position within 50 m;
+- adds swisstopo as a source to a height that matches in whole metres, and to a position within 50 m (if that
+  position was saved long ago without a precision, which Wikidata no longer accepts, the bot fills in the precision
+  its digits imply, for example to the arcsecond; the position itself is not changed);
 - adds a missing height (summits and lakes only);
 - where an existing value's only source is an import from a Wikipedia and it is more than 5 m (height) or 50 m
   (position, summits only) off, adds swisstopo's value with preferred rank and *reason for preferred rank: best
