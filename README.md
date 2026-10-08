@@ -47,12 +47,12 @@ checks that no item with the same name exists within 2 km.
 ```
 python pipeline.py plan                 # download the latest data, build work/plan.jsonl (all local)
 python pipeline.py preview --n 6000     # totals of what the run would change (read-only)
-python pipeline.py run --batches 4 --batch-size 500 --rate 1
+python pipeline.py run --batches 4 --batch-size 500
 python pipeline.py verify
 ```
 
 The bot logs in with a [bot password](https://www.mediawiki.org/wiki/Manual:Bot_passwords) read from the user
-environment, respects `maxlag=5`, edits at most once per second, checks each batch on Wikidata after saving and
+environment, respects `maxlag=5`, makes at most 20 edits per minute (the approved rate), checks each batch on Wikidata after saving and
 stops on any problem. Runs resume where they stopped. Every saved edit is listed in [edits.csv](edits.csv), and the
 bot's [user page](https://www.wikidata.org/wiki/User:OKA_bot) is updated after each run.
 

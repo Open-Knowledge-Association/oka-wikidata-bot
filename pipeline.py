@@ -216,7 +216,7 @@ def main():
     ap.add_argument("--kind", choices=["edit", "create"])
     ap.add_argument("--batches", type=int, default=1)
     ap.add_argument("--batch-size", type=int, default=500)
-    ap.add_argument("--rate", type=float, default=1.0, help="edits per second")
+    ap.add_argument("--rate", type=float, default=1 / 3, help="edits per second (approved: at most 20 per minute)")
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--last", type=int, default=500)
     a = ap.parse_args()
