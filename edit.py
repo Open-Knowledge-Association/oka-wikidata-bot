@@ -100,7 +100,8 @@ def build_edit(raw, row, refs):
                   and not any(c["rank"] == "preferred" for c in best) and all(only_import_refs(c) for c in best)):
                 out_claims.append(height_claim(z, ref, "preferred"))
                 done.append("swisstopo height (preferred)")
-    if offset <= 50 and not cites(coords[0], SWISSNAMES3D):
+    # an old coordinate without a precision can't be resubmitted unchanged, so it gets no reference
+    if offset <= 50 and cv.get("precision") is not None and not cites(coords[0], SWISSNAMES3D):
         c = copy.deepcopy(coords[0])
         c.setdefault("references", []).append(ref)
         out_claims.append(c)
