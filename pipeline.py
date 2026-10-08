@@ -25,6 +25,7 @@ import plan as planmod
 
 LOG = ROOT / "edits.csv"
 FIELDS = ["time", "kind", "qid", "uuid", "name", "revid", "changes"]
+MAX_REFUSED = 5          # edits Wikidata refuses in one batch before the run stops
 
 
 def logged():
@@ -134,9 +135,13 @@ def run_batch(site, rows, rate, refs):
             last = time.time()
             if revid:
                 saved.append({"qid": entity_id, "kind": row["kind"], "row": row, "changes": done})
-        stats["saved" if revid else ("skipped" if done and done[0].startswith("skipped") else "no change")] += 1
+        refused = bool(done) and done[0].startswith("skipped: refused")
+        stats["saved" if revid else "refused" if refused else
+              ("skipped" if done and done[0].startswith("skipped") else "no change")] += 1
         log({"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "kind": row["kind"],
              "qid": entity_id or "", "uuid": rec["uuid"], "name": rec["name"], "revid": revid or "", "changes": "; ".join(done)})
+        if stats["refused"] >= MAX_REFUSED:                # more than the odd bad item: likely a bug, so stop
+            break
     return stats, saved
 
 
@@ -291,6 +296,9 @@ def main():
             out(f"batch {b + 1}: {dict(stats)}; check: {len(saved) - len(problems)}/{len(saved)} ok")
             if problems:
                 out("stopping: problems after saving:", problems[:10])
+                break
+            if stats["refused"] >= MAX_REFUSED:
+                out(f"stopping: Wikidata refused {stats['refused']} edits in this batch (see edits.csv)")
                 break
         userpage(site)
         out(f"run done: {dict(total)}; pending: {len(pending('edit'))} edits, {len(pending('create'))} creations")
