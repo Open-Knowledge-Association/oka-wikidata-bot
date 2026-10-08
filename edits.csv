@@ -183,3 +183,503 @@ time,kind,qid,uuid,name,revid,changes
 2026-10-08T09:48:44Z,edit,Q75400,{75F8292A-BF86-49A6-B456-DE1737306BAE},Hinderi Spillgerte,2554975276,source for height; source for position; default label; official name
 2026-10-08T09:48:47Z,edit,Q75403,{0551F15C-1053-494E-9344-5984CC4724C7},Mattjisch Horn,2554975317,source for height; source for position; default label; de label; official name
 2026-10-08T09:50:50Z,edit,Q16940,{E6438283-4921-4DC0-B5A1-09213E289563},Rotsee,2554975989,source for position; precision of position (from its digits)
+2026-10-08T09:51:25Z,edit,Q75406,{1C124903-B707-4CCA-8169-7814C400987C},Glegghorn,2554976244,source for position; default label; official name
+2026-10-08T09:51:28Z,edit,Q75567,{4C2CDE7E-2718-4411-9D37-0C92F9AEAA0D},Dent de Nendaz,2554976277,source for height; source for position; default label; official name
+2026-10-08T09:51:32Z,edit,Q75819,{2CA5EC35-DC5F-44D4-AEC3-83FD77CABB02},Pierre Avoi,2554976304,source for position; default label; official name
+2026-10-08T09:51:35Z,edit,Q82662,{8C032799-241C-4C23-90D2-C475C607A4E5},Silberhorn,2554976319,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T09:51:39Z,edit,Q84162,{26740342-6A5A-44C2-86C6-7B013390DFEB},Ful Berg,2554976338,source for height; source for position; default label; de label; official name
+2026-10-08T09:51:42Z,edit,Q84163,{97FB9DA8-265B-40B2-9065-29BC0EA0B1FF},Gürgaletsch,2554976362,source for height; source for position; default label; official name
+2026-10-08T09:51:45Z,edit,Q84164,{C140699F-C700-4EE7-B3ED-C247616DB61A},Gufelstock,2554976387,source for position; default label; official name
+2026-10-08T09:51:49Z,edit,Q85166,{4451935B-B814-4FEC-A2FF-E6FDCA220AE2},Les Cornettes de Bise,2554976420,source for height; source for position; default label; official name
+2026-10-08T09:51:59Z,edit,Q117310,{6558451B-984D-4E69-A93B-228F83BE7413},Tête du Portail,2554976454,source for height; source for position; default label; official name
+2026-10-08T12:47:31Z,edit,Q117314,{2E678BA1-DCED-4554-AA0F-062C8D7E912F},Croix de Fer,2555025714,source for height; source for position; default label; official name
+2026-10-08T12:47:35Z,edit,Q117399,{0059682E-110A-4CDE-9B54-2818B40BA550},Vilan,2555025754,source for position; default label; official name
+2026-10-08T12:47:38Z,edit,Q117414,{7E1DE40D-34A4-40AA-B1F1-94CC37A855FF},Pic Chaussy,2555025789,source for height; source for position; default label; official name
+2026-10-08T12:47:42Z,edit,Q117417,{4EDFA19F-0082-4BB2-BC8F-4F2096F16DA4},Männlichen,2555025819,source for position; default label; official name
+2026-10-08T12:47:45Z,edit,Q122494,{A740D16B-C90B-478A-A68E-B7FC02CFCC53},Mont Noble,2555025847,source for position; default label; official name
+2026-10-08T12:47:49Z,edit,Q125968,{EC6FB811-F14C-4C6E-AC59-C351EC6DD985},Hinter Grauspitz,2555025871,source for height; source for position; de label; official name
+2026-10-08T12:47:52Z,edit,Q136821,{3C8C0751-2BE6-4EB4-831F-007AF33086CD},Grande Pointe des Planereuses,2555025894,source for height; source for position; default label; fr label; official name
+2026-10-08T12:47:56Z,edit,Q136824,{DF44CED2-6DB2-44DF-A664-D2ECAADE5053},Pointe des Grands,2555025917,source for position; default label; official name
+2026-10-08T12:47:59Z,edit,Q136829,{DE91D7AA-7B56-4461-BEFC-5B598A64EA5A},Pointe Kurz,2555025942,source for height; source for position; default label; official name
+2026-10-08T12:49:03Z,edit,Q136836,{173C39FF-4D75-4FD3-8B53-CF9D750F00C6},Pointe des Genevois,2555026158,source for position; default label; official name
+2026-10-08T12:49:07Z,edit,Q136838,{DB211AC1-48CD-4AF3-8D8E-A43A64291A40},Petite Pointe d'Orny,2555026194,source for position; default label; official name
+2026-10-08T12:49:10Z,edit,Q136840,{96760C6C-6E29-4098-94C5-6FB66A9E277C},Pointe d'Otemma,2555026225,source for height; source for position; default label; fr label; official name
+2026-10-08T12:49:14Z,edit,Q136856,{A2E8DC9D-EA9D-4A19-8B68-F061E7A6215D},Pointe d'Orny,2555026264,source for position; default label; official name
+2026-10-08T12:49:17Z,edit,Q136859,{7A07B890-4DF9-4B3E-926A-CB8C90375C6C},Pointe de Bricola,2555026305,source for position; default label; official name
+2026-10-08T12:49:21Z,edit,Q136871,{F9C820F1-C13F-483A-884E-5642CAC3F128},Tête du Géant,2555026355,swisstopo position (preferred); default label; official name
+2026-10-08T12:49:24Z,edit,Q136873,{0CC03CA2-36D4-4C10-B48A-72C59205FCB7},Dent de Ruth,2555026387,source for height; source for position; default label; official name
+2026-10-08T12:49:28Z,edit,Q136875,{FD70AAEB-0E81-4A8A-94B5-9C6DEE8CD1B9},Les Jumelles,2555026422,source for height; source for position; default label; official name
+2026-10-08T12:49:32Z,edit,Q136877,{123CFC69-6CA3-4CFE-9278-D13A3245B72F},Pointe de Chésery,2555026443,source for position; names in other languages (fr alias); official name
+2026-10-08T12:49:35Z,edit,Q136921,{7E0BFE43-6549-4A68-8A8B-42F25125FEF3},Schwalmis,2555026473,source for height; source for position; default label; official name
+2026-10-08T12:49:39Z,edit,Q136995,{201CE4B2-1420-442C-8320-F2831F7A1238},Pointe des Ecandies,2555026509,source for position; default label; fr label; official name
+2026-10-08T12:49:42Z,edit,Q136998,{6430FC1C-87EA-43D2-B2A2-96891044EAFA},Pointe Ronde,2555026543,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-08T12:49:46Z,edit,Q137000,{37BBDF54-AFE7-42B5-914D-1FE41FFDEC09},Pointe des Plines,2555026575,source for position; default label; fr label; official name
+2026-10-08T12:49:49Z,edit,Q141362,{D11B163C-AC6B-4914-A507-7254AE9E8C3D},Silberen,2555026605,swisstopo position (preferred); default label; official name
+2026-10-08T12:49:52Z,edit,Q141457,{79F696E8-1B8B-4550-AD09-AF1802F2D212},Sassauna,2555026632,source for position; default label; rm label; official name
+2026-10-08T12:49:56Z,edit,Q141463,{414FA9B7-8211-4057-9487-9E3CA198F082},Schilt,2555026658,source for position; default label; official name
+2026-10-08T12:50:00Z,edit,Q141470,{2EECD2FB-4BD8-48DB-9FA5-4094CCBC7D4A},Dent de Savigny,2555026688,source for height; source for position; default label; official name
+2026-10-08T12:51:15Z,edit,Q141486,{970515E5-2C00-4687-8B42-543AA0E9D22B},Mutteristock,2555026898,source for position; default label; official name
+2026-10-08T12:51:19Z,edit,Q154896,{95B36B54-EE33-4D12-852D-D5235A7B86C4},Le Grammont,2555026939,source for height; source for position; default label; official name
+2026-10-08T12:51:22Z,edit,Q154898,{15C82AF8-E5A7-40AE-88A3-9BED298D3613},First,2555026980,swisstopo height (preferred); swisstopo position (preferred); default label; official name
+2026-10-08T12:51:26Z,edit,Q155030,{D76FDD1A-FA31-42A1-9E21-388156D2EFFB},Gantrisch,2555027023,source for position; default label; official name
+2026-10-08T12:51:29Z,edit,Q155031,{013EA491-CBF9-4EAA-A7EE-1CB18DBB1DC5},Gridone,2555027054,source for position; official name
+2026-10-08T12:51:33Z,edit,Q155035,{B4650F2A-6E91-4E72-BF48-06A7CE77363C},Kaiseregg,2555027100,source for height; source for position; default label; official name
+2026-10-08T12:51:36Z,edit,Q155036,{B38E0C1B-B534-4F21-9E48-F8B5ABFF1246},Pointe de l'Au,2555027154,source for height; source for position; default label; official name
+2026-10-08T12:51:40Z,edit,Q163131,{B749F09A-70C6-4D6B-B2B6-9E3474DB882D},Hockenhorn,2555027201,source for height; source for position; default label; official name
+2026-10-08T12:51:43Z,edit,Q164570,{8706B272-F813-471F-B0B9-14F882E5756B},Lago Sfundau,2555027242,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T12:51:47Z,edit,Q166359,{7565BF35-5A70-4CFE-BD4A-2642896BBA51},Geistsee,2555027272,source for height; default label; official name
+2026-10-08T12:51:50Z,edit,Q167274,{96DD7D23-FAD7-416A-BCF1-5208899271EB},Lagh da Palü,2555027312,source for height; default label; official name
+2026-10-08T12:51:54Z,edit,Q175584,{CECB4F79-E5A3-47FB-84B8-5666FB61D851},Corn da Tinizong,2555027348,source for height; swisstopo position (preferred); official name
+2026-10-08T12:51:57Z,edit,Q176101,{F0BDDE1B-D9A2-4019-807F-E73750D6EE77},Agassizhorn,2555027377,source for height; source for position; default label; official name
+2026-10-08T12:52:01Z,edit,Q176231,{6819FC64-F8CE-4EB9-BFC1-C67BAC4283C9},Piz Languard,2555027404,source for height; source for position; default label; rm label; official name
+2026-10-08T12:52:04Z,edit,Q177758,{6C5D1F26-7D83-474C-BDD2-83CDDEC8CFC0},Piz Sesvenna,2555027424,source for height; source for position; default label; rm label; official name
+2026-10-08T12:52:08Z,edit,Q185990,{773C39A2-691D-4CC8-879C-CAAECA6508E9},Blinnenhorn,2555027442,source for height; source for position; official name
+2026-10-08T12:52:11Z,edit,Q191711,{D852EB6F-9610-4B5F-930C-70E125B5E373},Berneuse,2555027464,source for height; source for position; default label; official name
+2026-10-08T12:52:15Z,edit,Q191741,{8400CBEB-5E35-4755-ADBA-CFEA99BFD813},Le Chamossaire,2555027484,source for height; source for position; default label; official name
+2026-10-08T12:52:18Z,edit,Q196791,{5A270AEF-7960-48AE-AB47-74607B264126},Zervreilahorn,2555027510,source for height; source for position; default label; official name
+2026-10-08T12:52:22Z,edit,Q196793,{CA471DB6-71B7-40F0-B76F-DEA7210E1848},Zervreilasee,2555027532,default label; official name
+2026-10-08T12:52:26Z,edit,Q204346,{F94DC51D-7697-45A6-A15F-8675850AEA79},Zindlenspitz,2555027551,swisstopo position (preferred); default label; official name
+2026-10-08T12:52:29Z,edit,Q204774,{E6B03830-01F8-4C37-9D53-A534E8FDC695},Berninapass,2555027576,source for position; official name
+2026-10-08T12:52:33Z,edit,Q224681,{BA7962B0-AE09-4968-87CE-9B38A1342408},Sex de Marinda,2555027608,source for position; names in other languages (fr alias); official name
+2026-10-08T12:52:36Z,edit,Q235840,{E527822C-BD7F-4C39-9F30-F2888BEA1458},Fronalpstock,2555027649,source for position; default label; official name
+2026-10-08T12:52:40Z,edit,Q235844,{6E424E6A-A3B8-422C-A680-5ED10FC4EEDC},Pointe de Bellevue,2555027685,source for position; default label; official name
+2026-10-08T12:52:40Z,edit,Q239460,{873E8ECA-E351-4ECA-9EE5-CE3CC296E464},Col de Saint Théodule,,
+2026-10-08T12:52:43Z,edit,Q244861,{39EAB06C-EBD4-4BCF-949C-0B130EBF66F1},Zwischbergenpass,2555027725,default label; official name
+2026-10-08T12:52:47Z,edit,Q248667,{847C0501-1E27-41FA-B18B-BC7BF243EBCE},Zürichberg,2555027761,source for height; source for position; default label; official name
+2026-10-08T12:52:50Z,edit,Q252796,{298CCA76-B8B2-409C-ADD5-9CE8B5EE2A4C},Ächerli,2555027791,source for position; default label; official name
+2026-10-08T12:52:54Z,edit,Q252876,{CA140BB7-DB3E-496A-9614-24B0E9A6E346},Ägelsee,2555027829,source for height; source for position; default label; official name
+2026-10-08T12:52:57Z,edit,Q254822,{7D1752E7-FC1D-4B4F-84B2-C2C6BC7AC381},Älplisee,2555027861,source for height; source for position; default label; official name
+2026-10-08T12:53:01Z,edit,Q257696,{185DE4E5-D331-4377-911C-AC3B8D95B3C4},Piz da las Trais Linguas,2555027896,source for height; swisstopo position (preferred); rm label; names in other languages (de alias); official name
+2026-10-08T13:20:35Z,edit,Q258684,{445B8D29-F3BA-4055-9398-1451044E4EC5},Munt Pers,2555033898,source for height; source for position; default label; rm label; official name
+2026-10-08T13:20:39Z,edit,Q262583,{F6C5DF92-07BD-4355-9D0C-2E2B570929AB},Furgghorn,2555033912,source for height; source for position; names in other languages (it alias); official name
+2026-10-08T13:20:42Z,edit,Q277809,{036D720B-6506-417B-8303-2F6F17E2CAAC},Mont Tendre,2555033924,source for height; source for position; default label; official name
+2026-10-08T13:20:46Z,edit,Q277813,{AA6C6CBF-603D-4AAB-BCFD-EEE11E161AFF},Dent de Jaman,2555033942,source for height; source for position; default label; official name
+2026-10-08T13:20:49Z,edit,Q280792,{521AFE42-DE6D-4BFD-8A02-FD9E3FA38FC8},Giferspitz,2555033956,source for height; source for position; default label; official name
+2026-10-08T13:20:53Z,edit,Q281848,{D14B2623-B48F-4D47-90D3-9030CA46AFBC},Le Crêt du Midi,2555033977,source for position; default label; official name
+2026-10-08T13:20:57Z,edit,Q288984,{BC80D831-B2F8-4070-9F74-A43299387BA4},Etang de la Gruère,2555033983,default label; official name
+2026-10-08T13:20:57Z,edit,Q289806,{57EA6FEF-17E1-474E-B44B-9ECBA16B1249},Schneehore,,
+2026-10-08T13:21:00Z,edit,Q290383,{51249BDE-5386-4DE5-8142-30393FD01E91},Col des Roches,2555033996,source for position; names in other languages (fr alias); official name
+2026-10-08T13:23:09Z,edit,Q302276,{176E2E61-ACF7-40B5-A20F-1F840AC39954},Mont Pèlerin,2555034289,source for position; default label; official name
+2026-10-08T13:23:12Z,edit,Q303215,{31103A76-A065-451F-A8B0-32E27B57981D},Vadret da Porchabella,2555034317,default label; official name
+2026-10-08T13:23:16Z,edit,Q338872,{2F2D3A8F-B490-4FC4-8802-28388667FB87},Piz Lad,2555034345,source for position; default label; rm label; official name
+2026-10-08T13:23:19Z,edit,Q347573,{A3347094-8287-423D-8DA8-45E55B69954B},Aiguille du Croissant,2555034357,source for position; default label; official name
+2026-10-08T13:23:23Z,edit,Q351542,{BBAC8F94-7A46-4966-A1CE-830AE0E9004C},Mutschälle,2555034387,source for height; source for position; default label; official name
+2026-10-08T13:23:26Z,edit,Q352243,{4D5A8BCB-E775-4C3A-A5FC-A2AA7D56E0AB},Chäserrugg,2555034422,source for position; default label; official name
+2026-10-08T13:23:30Z,edit,Q358367,{4DD23550-AC6F-4169-8EA9-8AE39137DE6A},Adlergletscher,2555034453,default label; official name
+2026-10-08T13:23:34Z,edit,Q358382,{6A7C841F-D0AB-4AA0-B47D-86715B87F371},Adlerhorn,2555034473,source for position; default label; official name
+2026-10-08T13:23:37Z,edit,Q358431,{8822B6CA-CEB4-49F3-964D-5954A0DC23E0},Adlerpass,2555034495,default label; official name
+2026-10-08T13:23:40Z,edit,Q358573,{52EB4E10-E3DE-443B-A14E-41D572358B25},Adlisberg,2555034509,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T13:23:44Z,edit,Q358710,{0A329326-733C-456B-B97D-55C54004B4EC},Passwang,2555034527,source for height; source for position; default label; official name
+2026-10-08T13:23:48Z,edit,Q360492,{DD72832C-0ADB-4DB0-93DD-34073E678E56},Gurten,2555034538,source for height; source for position; default label; official name
+2026-10-08T13:23:51Z,edit,Q362530,{9CCC2086-6D15-4B64-BC6A-DFEF19E6EBC4},Hulftegg,2555034561,source for position; default label; official name
+2026-10-08T13:23:55Z,edit,Q365768,{E40C58CE-D59A-4789-A871-99C81330FA6A},Passo San Jorio,2555034580,source for height; source for position; default label; official name
+2026-10-08T13:24:09Z,edit,Q366275,{DCD4FB21-6D2B-4647-9EDF-79C97DA25BE7},Engstlensee,2555034636,default label; official name
+2026-10-08T13:24:13Z,edit,Q368948,{675E50E0-D640-4F93-871A-41A18F999DBE},Mittelhorn,2555034653,source for height; source for position; default label; official name
+2026-10-08T13:24:16Z,edit,Q369093,{44C7D841-5AD5-468A-A4AE-3A7A6106FFB9},Brünigpass,2555034668,default label; official name
+2026-10-08T13:24:20Z,edit,Q371447,{9A4F1F06-EE4A-4914-B0E7-5A1421A1D05F},Tällihorn,2555034701,source for position; default label; official name
+2026-10-08T13:24:24Z,edit,Q371985,{9CC049CA-8DEB-410D-843F-B0D21661F527},Piz Glüschaint,2555034726,source for height; source for position; default label; rm label; official name
+2026-10-08T13:24:28Z,edit,Q372407,{9860D0C5-3F09-4C64-8A5E-794B8C5A39D0},Lago di Luzzone,2555034768,default label; official name
+2026-10-08T13:24:32Z,edit,Q373331,{20694853-D1EE-4803-BA8E-269F1659E546},Schwalmere,2555034798,source for height; source for position; default label; official name
+2026-10-08T13:24:35Z,edit,Q375961,{EFA8F614-4D90-4FEA-8CDE-3539C694C301},Lago dei Cavagnöö,2555034824,default label; it label; official name
+2026-10-08T13:24:39Z,edit,Q376008,{8F3F699C-8D0A-4146-B9F0-BA1061849AD0},Lac de Tseuzier,2555034848,source for position; names in other languages (fr alias); official name
+2026-10-08T13:24:42Z,edit,Q376077,{87559D31-77F9-49AD-A3A5-DA457A54D689},Lac du Vieux Emosson,2555034868,default label; official name
+2026-10-08T13:24:46Z,edit,Q378164,{8D2F62A6-8F4C-4872-AE30-3CD3370BF4CC},Wildhaus,2555034889,source for height; source for position; default label; official name
+2026-10-08T13:24:49Z,edit,Q381979,{E12F3647-7CFE-4AB4-BF39-31793CF70536},Aeugsterberg,2555034904,source for height; source for position; default label; official name
+2026-10-08T13:24:52Z,edit,Q382479,{71F0AEF6-E9E6-49A9-B729-8FEA15F0A5C2},Lago di Lucendro,2555034923,default label; it label; official name
+2026-10-08T13:24:56Z,edit,Q382484,{EE88E232-53A4-48D7-98ED-61B06AA9DCE9},Harderkulm,2555034943,source for height; source for position; default label; official name
+2026-10-08T13:24:59Z,edit,Q382519,{C3F67044-C23B-412C-A5C2-39A56B68EB0E},Griessee,2555034974,source for position; default label; official name
+2026-10-08T13:25:03Z,edit,Q382528,{86B46139-53E1-4CB3-9DD1-799F0E4C2A43},Lai da Nalps,2555034995,default label; rm label; official name
+2026-10-08T13:25:06Z,edit,Q383875,{E09C5226-7EE7-4277-8743-8467483E0319},Wellenkuppe,2555035012,source for position; default label; official name
+2026-10-08T13:25:10Z,edit,Q385232,{4E8BA031-044B-443B-95B6-288550AADB1B},Wolfgang,2555035022,source for position; default label; official name
+2026-10-08T13:25:13Z,edit,Q385301,{137DAADA-A678-4920-9349-E921C17315F9},Hinderrugg,2555035033,source for height; source for position; default label; official name
+2026-10-08T13:25:17Z,edit,Q386202,{7730C4AB-2C10-4492-8C7C-8A3942310E20},Riedgletscher,2555035043,default label; official name
+2026-10-08T13:25:20Z,edit,Q388702,{A2D7FA5C-7DD1-4395-A910-57DDDE48071A},Glaubenbielen,2555035059,source for height; default label; official name
+2026-10-08T13:25:24Z,edit,Q389416,{4C10A530-977D-4A7D-8291-A1D2A93C7D52},Gemmipass,2555035077,source for position; default label; official name
+2026-10-08T13:25:27Z,edit,Q390449,{9117C42A-B864-42AA-AA0F-38985690B650},Arnesee,2555035095,default label; official name
+2026-10-08T13:25:31Z,edit,Q390468,{AB60891E-1994-4F0D-93D2-19B94B6FD465},Lac de Pérolles,2555035136,default label; official name
+2026-10-08T13:25:34Z,edit,Q390993,{A2D22BCA-4FB0-42E5-B54F-CF5505BD575B},Col de la Croix,2555035173,source for height; source for position; default label; official name
+2026-10-08T13:25:38Z,edit,Q390996,{6D978491-8D44-419E-81D1-72215C7F4BE3},Glaubenberg,2555035203,source for height; source for position; default label; official name
+2026-10-08T13:25:41Z,edit,Q391050,{37770626-9E48-407D-84AD-3A43ABDBB35E},Piz Bever,2555035234,source for position; default label; rm label; official name
+2026-10-08T13:25:44Z,edit,Q391710,{90303474-1C88-4B30-84AC-59B655BF7E1B},Col des Rangiers,2555035263,source for height; source for position; default label; official name
+2026-10-08T13:25:48Z,edit,Q391715,{7235670A-5CB3-4B5C-BB04-A31E11FA906B},Col du Mollendruz,2555035281,source for height; default label; official name
+2026-10-08T13:25:51Z,edit,Q391844,{0A51E7AF-EB16-4682-9C10-424E870BB5DD},Col de l'Aiguillon,2555035296,source for height; source for position; default label; official name
+2026-10-08T13:25:55Z,edit,Q391854,{6BDEF952-CF97-4C72-AD9E-D10397150FEB},Col de la Givrine,2555035315,default label; official name
+2026-10-08T13:25:58Z,edit,Q392568,{F5400098-799B-4551-A016-4C320BD984E7},Sattelegg,2555035333,source for height; source for position; default label; official name
+2026-10-08T13:26:02Z,edit,Q404682,{A5D01F14-DA40-4325-B051-D8F33FA886AD},Aiguille de la Tsa,2555035348,source for position; default label; official name
+2026-10-08T13:27:05Z,edit,Q404738,{59796424-DCB7-48E1-AA9E-E32808C48122},Aiguille d'Argentière,2555035474,source for position; default label; official name
+2026-10-08T13:27:08Z,edit,Q425955,{6F507F23-D9D9-4A6E-85C2-68F6EBB0BF62},Piz Terza,2555035497,source for position; rm label; names in other languages (de label); official name
+2026-10-08T13:27:12Z,edit,Q434967,{16DBC868-3904-4B9E-905C-9E825E4BC55C},Altberg,2555035521,source for position; default label; official name
+2026-10-08T13:27:16Z,edit,Q436526,{862C2F33-C8EB-420F-9755-763ABCEDED25},Alteinsee,2555035547,source for position; default label; official name
+2026-10-08T13:27:20Z,edit,Q436536,{5B9D5019-9797-49D8-97C2-7F492262E66E},Altels,2555035575,source for height; source for position; default label; official name
+2026-10-08T13:27:23Z,edit,Q440274,{962F60A2-F079-4411-BE2A-4065575F805F},Wandflue,2555035606,source for height; source for position; default label; official name
+2026-10-08T13:27:27Z,edit,Q442082,{06525CC1-C296-4F61-9C7A-D968EB95DA3D},Hörnli,2555035643,source for height; source for position; default label; official name
+2026-10-08T13:27:30Z,edit,Q458191,{45D7D82A-BA1B-4496-A3CA-1A27A10862C0},Gurnigelpass,2555035666,default label; official name
+2026-10-08T13:27:34Z,edit,Q458220,{676D84B2-34E9-47E7-A173-D0CFDB752A2B},Balmberg,2555035684,source for position; default label; official name
+2026-10-08T13:27:37Z,edit,Q458858,{ED6230CF-7980-428B-B035-0FD4807220B0},Inkwilersee,2555035699,source for position; default label; official name
+2026-10-08T13:27:41Z,edit,Q458876,{CC944332-9FAC-4FD9-B842-BF218EBD9273},Seeli,2555035716,source for height; source for position; default label; official name
+2026-10-08T13:27:45Z,edit,Q459154,{3F965B12-3F69-48F4-BF08-F726EDEF179B},Mettelhorn,2555035738,swisstopo position (preferred); default label; official name
+2026-10-08T13:27:48Z,edit,Q461874,{838B0DBB-34F3-4B22-9D4E-3182F1B134D3},Dittligsee,2555035752,source for height; source for position; default label; official name
+2026-10-08T13:27:51Z,edit,Q461904,{3F9AA702-D1EB-42EB-AF07-C2558BE095A4},Amsoldingersee,2555035776,source for height; source for position; default label; official name
+2026-10-08T13:27:55Z,edit,Q464881,{B03A7CEC-9520-4129-A25A-5A3980BB2D7C},Lenzerheide,2555035797,default label; official name
+2026-10-08T13:27:58Z,edit,Q471166,{7E2BC19F-4F61-4A2F-9390-03A3AFD051AE},Simplonpass,2555035804,source for height; source for position; official name
+2026-10-08T13:28:02Z,edit,Q473238,{B6B681DE-F591-4844-890C-23A53C6C5CCA},Ammertehore,2555035817,source for position; default label; official name
+2026-10-08T13:28:05Z,edit,Q473561,{730D3971-6172-4F86-B8F4-B660C64D2D82},Muttler,2555035834,source for position; default label; official name
+2026-10-08T13:28:09Z,edit,Q474544,{62DA651A-B47A-4D0F-AF69-4064729C51EE},Ampervreilsee,2555035844,source for position; default label; official name
+2026-10-08T13:28:12Z,edit,Q476249,{B2CE2E2C-8CA8-41D6-B4F3-126C8D6FD378},Muttsee,2555035863,source for position; default label; official name
+2026-10-08T13:28:16Z,edit,Q476762,{2465C1E0-456D-4FEE-B26E-A8BB1F52F4B5},Mont Vully,2555035883,source for height; source for position; names in other languages (de alias); official name
+2026-10-08T13:28:20Z,edit,Q487809,{BB230165-412F-48FB-8B98-8F3571AD1AC0},Louwenesee,2555035916,source for position; default label; official name
+2026-10-08T13:28:23Z,edit,Q492680,{0627E374-6691-4EFA-81CE-49B8E1FEB380},Hüttnersee,2555035938,source for height; default label; official name
+2026-10-08T13:28:27Z,edit,Q492685,{C824657A-3955-4154-8017-995FC5E1ACD7},Lac d'Icogne,2555035961,source for position; default label; fr label; official name
+2026-10-08T13:28:31Z,edit,Q492689,{C7EF03E2-19A0-4BB4-AAEC-0DC5607E249B},Gamsberg,2555035989,source for height; source for position; de label; official name
+2026-10-08T13:28:34Z,edit,Q492704,{03045A72-C542-49A0-8D97-73CC9A4EF100},Tannensee,2555036014,default label; official name
+2026-10-08T13:28:38Z,edit,Q492711,{8C980C21-63EA-491E-96A8-580046D84CC4},Illsee,2555036044,default label; official name
+2026-10-08T13:28:41Z,edit,Q493417,{BB1E3B57-EEC7-43AA-9A00-BD027496A11F},Lej da Staz,2555036070,height; source for position; default label; rm label; official name
+2026-10-08T13:28:45Z,edit,Q502389,{6A9B442A-1321-4476-8C8C-A81B9E4A499B},Iffigsee,2555036097,source for height; source for position; default label; official name
+2026-10-08T13:28:48Z,edit,Q502395,{F33F0564-192B-4DDF-8987-B315B1136FE1},Spitzhore,2555036125,source for height; source for position; default label; official name
+2026-10-08T13:28:52Z,edit,Q504436,{804A6EB8-4872-4DF3-BCEB-683C2BBFC0C9},Niesehore,2555036143,source for height; source for position; default label; official name
+2026-10-08T13:28:55Z,edit,Q504442,{A575BF4E-770B-4C47-AAD9-8BE22224631C},Mont Bonvin,2555036161,source for height; source for position; default label; official name
+2026-10-08T13:28:59Z,edit,Q504620,{F55A3899-43B7-48D7-8342-186B77EC6DA5},Märe,2555036176,source for height; source for position; default label; official name
+2026-10-08T13:33:36Z,edit,Q508239,{0612B004-A40D-4C9B-9AB5-1A5CDED52621},Lac de Lovenex,2555037017,source for position; default label; official name
+2026-10-08T13:33:39Z,edit,Q525419,{30A67172-D0B5-436C-A18B-D36E6DDC9D5B},Piz Chavalatsch,2555037048,source for position; default label; official name
+2026-10-08T13:33:43Z,edit,Q568228,{6F2D7023-E383-4B95-8BE4-2696C9DE1860},Illhorn,2555037063,source for position; default label; official name
+2026-10-08T13:33:43Z,edit,Q570647,{9EE8EF53-0C4D-465F-9000-49111483363C},Passo della Novena,,
+2026-10-08T13:33:46Z,edit,Q574888,{40A3C46D-3723-4BF2-9DFF-C35731CF516D},Mutta,2555037088,source for height; source for position; official name
+2026-10-08T13:33:50Z,edit,Q582739,{12E711DE-F1B4-4B9F-A5B9-BE5781713721},Hundstock,2555037109,source for position; default label; official name
+2026-10-08T13:33:53Z,edit,Q585048,{F6D620A7-F853-4B2F-AA9C-AAFFAE527142},Lauberhorn,2555037129,source for height; source for position; default label; official name
+2026-10-08T13:33:57Z,edit,Q588122,{7C83A1D2-036A-4DB1-8F73-6482DCA2BD42},Piz Vial,2555037157,source for height; source for position; default label; rm label; official name
+2026-10-08T13:34:00Z,edit,Q592432,{C3391399-D90B-4168-B9F9-FFBE9F67A4C0},Rossbodegletscher,2555037177,default label; official name
+2026-10-08T13:40:54Z,edit,Q593551,{534F9BA1-3E86-458F-8B68-DB894EC34480},Scopi,2555038614,source for height; source for position; default label; rm label; official name
+2026-10-08T13:41:00Z,edit,Q595502,{8F950BDE-DA92-403F-B414-63BF9212A548},Schopfenspitz,2555038659,source for height; source for position; names in other languages (fr label); official name
+2026-10-08T13:54:21Z,edit,Q595629,{978A78BE-8C3C-41A1-9823-A8CEA9DFCF42},Lac de Mauvoisin,2555040650,default label; official name
+2026-10-08T13:54:25Z,edit,Q598940,{81FCA9D0-3197-41C8-9B6A-92A87A095327},Mont Rogneux,2555040691,source for height; source for position; default label; official name
+2026-10-08T13:54:28Z,edit,Q604732,{8F43F77F-5B1E-4E66-8C97-A91C95D3C1EA},Hohgwächte,2555040732,source for position; default label; de label; official name
+2026-10-08T13:54:32Z,edit,Q605243,{7DADC058-557F-4952-A3B4-B0F4745A77C0},Passo dello Spluga,2555040773,source for position; official name
+2026-10-08T13:54:35Z,edit,Q609320,{FFCDDE42-4399-4D65-960E-D982FA7E6002},Antronapass,2555040816,source for position; names in other languages (it alias); official name
+2026-10-08T13:54:39Z,edit,Q610805,{BC74E4AA-9A73-4ECC-BB5B-5D89C9CEE5A1},Unteraargletscher,2555040855,default label; official name
+2026-10-08T13:54:42Z,edit,Q616069,{8C233337-5CD1-49EE-A013-C5CAD3F70827},Sasseneire,2555040896,source for height; source for position; default label; official name
+2026-10-08T13:54:46Z,edit,Q616773,{29B7539E-EAD5-423F-884D-9DAF303BE533},Mattenalpsee,2555040928,default label; official name
+2026-10-08T13:54:50Z,edit,Q623424,{AF605786-C882-4F8D-A00A-170F3729F533},Grosser St. Bernhard,2555040952,source for height; source for position; official name
+2026-10-08T13:54:53Z,edit,Q629324,{F57BD632-4A12-4212-B187-5DF8742664E1},Bernhardinpass,2555040974,source for position; official name
+2026-10-08T13:54:57Z,edit,Q631690,{1672A661-4C3D-43C8-86F3-29EEA93BE076},Pigne d'Arolla,2555040994,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T13:55:00Z,edit,Q634397,{BFDD3672-7842-49F9-B9CE-01A908645032},Col du Marchairuz,2555041016,source for height; source for position; default label; official name
+2026-10-08T14:06:03Z,edit,Q639043,{87E33425-E011-4E16-BE87-8CFE3C0DB499},Spilauer See,2555042920,source for position; default label; official name
+2026-10-08T14:06:06Z,edit,Q644946,{19941382-E55B-437C-AC18-5C5CC97D0CD8},Oberrothorn,2555042941,source for height; source for position; default label; official name
+2026-10-08T14:06:10Z,edit,Q646742,{AD6051ED-5B94-4866-A673-FA32A243F716},Col de Bretolet,2555042970,source for position; default label; official name
+2026-10-08T14:06:13Z,edit,Q649544,{CA8A243B-8350-4766-B5AF-4B8794C6103C},Fuorcla da Livign,2555043007,official name
+2026-10-08T14:06:17Z,edit,Q651715,{CA9F4B53-B484-4F49-826B-63C9AC48C3F4},Combin du Valsorey,2555043047,source for height; source for position; default label; official name
+2026-10-08T14:06:20Z,edit,Q653090,{37C973B7-840D-4193-B527-2628D2FF180F},Chatzenstrick,2555043083,source for height; source for position; default label; official name
+2026-10-08T14:06:24Z,edit,Q654571,{C952AE5C-E3D7-4474-B4E2-78EDED008809},Rengg,2555043126,source for position; default label; official name
+2026-10-08T14:06:28Z,edit,Q656674,{79BC665C-35E1-4D17-9110-3889F9B73F86},Lago di Lei,2555043149,default label; official name
+2026-10-08T14:06:31Z,edit,Q658938,{EA10B3CB-2756-4F73-8B9B-8FD1043F0FB8},Crap la Pala,2555043161,source for height; source for position; default label; rm label; official name
+2026-10-08T14:06:35Z,edit,Q660920,{6DE7D875-258D-4AA1-8DCF-E8F838205CA5},Seehorn,2555043169,source for position; default label; official name
+2026-10-08T14:06:38Z,edit,Q660933,{161549C3-88A8-4992-B078-87FACF87740C},Pizzo Ruscada,2555043184,source for height; source for position; default label; official name
+2026-10-08T14:06:41Z,edit,Q660943,{D806C769-FA4E-4B35-B6CE-A2C2BAEA7FD8},Piz Chalchagn,2555043193,source for height; source for position; default label; rm label; official name
+2026-10-08T14:06:45Z,edit,Q661427,{A0B228EE-A101-49C3-9F81-29F3AD9395C8},Lai da Tarasp,2555043203,height; source for position; default label; rm label; official name
+2026-10-08T14:06:48Z,edit,Q662646,{14F55EAD-44F2-416D-93AA-496528F99FA3},Pass dal Fuorn,2555043215,source for position; official name
+2026-10-08T14:06:52Z,edit,Q663078,{327B1AFF-F168-477B-B175-EC73CF108FA0},Oberblegisee,2555043218,default label; official name
+2026-10-08T14:06:55Z,edit,Q663089,{C6A7C30B-8897-4461-9324-6B05C4936EDC},Lac de Lona,2555043233,source for position; default label; official name
+2026-10-08T14:06:59Z,edit,Q663099,{2EE37C8C-11D7-4179-A1C8-DC6AAEC1F8B4},Weier,2555043246,source for position; default label; official name
+2026-10-08T14:07:02Z,edit,Q663287,{09EA5B0A-2065-42CA-923D-B5D3473C3F9F},Pizzo di Antigine,2555043254,source for height; source for position; official name
+2026-10-08T14:07:06Z,edit,Q663347,{7D45EF28-1990-4700-B691-6D501AF5772C},Col du Chasseral,2555043264,source for height; source for position; default label; official name
+2026-10-08T14:07:09Z,edit,Q663770,{34441AB6-3320-4486-8288-F347F1230E88},Rotbüelspitz,2555043273,source for position; official name
+2026-10-08T14:07:13Z,edit,Q663783,{E9D3B878-70E5-4EEF-9509-00141E2C2D2F},Piz Roz,2555043280,source for height; source for position; names in other languages (de alias); official name
+2026-10-08T14:07:16Z,edit,Q663910,{029AAA59-DB7F-4912-83AA-BC5477A3E379},Lötschenlücke,2555043293,source for position; default label; official name
+2026-10-08T14:07:20Z,edit,Q664147,{39FB263C-2B10-4153-8D69-4237859DD65F},Pizzo di Vogorno,2555043311,source for height; source for position; default label; official name
+2026-10-08T14:07:23Z,edit,Q664226,{199F9694-D79F-4152-B22E-DD799AB12C7B},Lag Grond,2555043334,source for height; source for position; default label; rm label; official name
+2026-10-08T14:07:27Z,edit,Q664238,{672AC249-1C1A-4F71-AF6D-635A465A6081},Moossee,2555043351,source for position; default label; official name
+2026-10-08T14:07:30Z,edit,Q664253,{8408E32D-C08C-41BB-9D10-C6707078A88E},Lej da Vadret,2555043363,source for height; source for position; default label; rm label; official name
+2026-10-08T14:07:34Z,edit,Q664269,{323AF916-0C91-4F7C-A188-367A62B3B37F},Wichelsee,2555043376,default label; official name
+2026-10-08T14:07:37Z,edit,Q664441,{F07D9702-F045-4C4F-8418-D18DC2D7C467},Klöntalersee,2555043387,default label; official name
+2026-10-08T14:07:41Z,edit,Q664496,{B2B0D31C-D1B8-4506-BAF9-30F47E8203B2},Lej da San Murezzan,2555043400,official name
+2026-10-08T14:07:44Z,edit,Q664630,{A4194F68-44F8-4FE6-8D46-7EA898147C4F},Egelsee,2555043421,default label; official name
+2026-10-08T14:07:48Z,edit,Q664661,{DB886237-B4BD-43D5-BFB2-583DF05784D7},Piz Grisch,2555043448,source for position; default label; rm label; official name
+2026-10-08T14:07:51Z,edit,Q664675,{47CFB6B7-2F7F-4180-B48A-BA0E855005A7},Piz Arblatsch,2555043474,source for position; default label; rm label; official name
+2026-10-08T14:07:55Z,edit,Q664691,{4A4CCBD7-CF2F-46FA-9AC4-F1FF031DD064},Chüebodensee,2555043500,source for height; source for position; default label; official name
+2026-10-08T14:07:58Z,edit,Q664761,{09E32822-2902-4107-A04A-9FAE371B9D08},Voralpsee,2555043523,source for height; source for position; default label; official name
+2026-10-08T14:08:02Z,edit,Q664824,{4C4E1873-0C75-4D95-BECC-5FA93052A7AB},Le Tour Noir,2555043538,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T14:08:05Z,edit,Q664978,{E630290A-293C-44F6-8806-348485DC101B},Malojapass,2555043569,source for height; source for position; official name
+2026-10-08T14:08:09Z,edit,Q665000,{425B7FC6-E68D-4D20-8A52-2FB47DCDDA25},Vorder Grauspitz,2555043592,swisstopo position (preferred); default label; official name
+2026-10-08T14:08:13Z,edit,Q665026,{5B4C83A4-E697-4A2F-A461-61D214BF5374},Giogo di Santa Maria,2555043606,official name
+2026-10-08T14:08:16Z,edit,Q665042,{AD0F6F78-CF6F-4AB1-8580-DC42405EB5F0},Piz Palü,2555043620,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T14:08:20Z,edit,Q665064,{62E5B8AA-FB02-447C-B51D-A1430774D838},Blanc de Moming,2555043633,source for height; source for position; default label; official name
+2026-10-08T14:08:24Z,edit,Q665089,{933A6904-52B0-4003-963F-426CA41C7379},Wetterhorn,2555043649,source for height; source for position; default label; official name
+2026-10-08T14:08:27Z,edit,Q665115,{9D521D06-2698-470C-93A6-9042738380B0},Becs de Bosson,2555043667,source for height; source for position; default label; official name
+2026-10-08T14:08:31Z,edit,Q665130,{4DEC644F-A592-4B39-A6A0-4A707BEEB931},Mont Dolent,2555043685,swisstopo position (preferred); default label; official name
+2026-10-08T14:08:34Z,edit,Q665138,{1BA67457-A2D8-4382-B2F3-0F13CB917240},Fluchthorn,2555043708,source for height; source for position; default label; official name
+2026-10-08T14:08:38Z,edit,Q665150,{C7EEBD91-3AA1-4F7E-9332-E2C7AECCEED6},Gross Bigerhorn,2555043734,source for height; source for position; default label; official name
+2026-10-08T14:08:41Z,edit,Q665185,{B808A099-382E-4941-9FDD-62500BD61A39},Grosse Scheidegg,2555043753,source for height; source for position; default label; official name
+2026-10-08T14:08:45Z,edit,Q665496,{3AEFDACE-B958-495D-A85C-CB8566AD3C48},Jegihorn,2555043770,source for height; source for position; default label; official name
+2026-10-08T14:08:49Z,edit,Q666004,{159B7413-19A6-4A07-B040-7FE291C54A95},Passo del Lucomagno,2555043790,source for height; source for position; names in other languages (rm alias); official name
+2026-10-08T14:08:52Z,edit,Q666384,{D544E321-3F96-4FD6-B26B-30FE7701ABD6},Pointe du Mountet,2555043824,swisstopo height (preferred); swisstopo position (preferred); default label; official name
+2026-10-08T14:08:56Z,edit,Q666398,{72ACC283-3C26-4478-880A-558812F4D13A},Lago di Robièi,2555043857,default label; official name
+2026-10-08T14:08:59Z,edit,Q666413,{83742811-EC8A-4022-8D15-5A08F967A091},Vanil Carré,2555043890,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T14:09:03Z,edit,Q666423,{0B54B415-0845-4087-A4C7-D07993C4B992},Lago della Sella,2555043926,default label; it label; official name
+2026-10-08T14:09:06Z,edit,Q666439,{9FE3B291-4023-49C6-A138-5320299FBEE8},Lago Cadagno,2555043966,source for position; default label; official name
+2026-10-08T14:09:10Z,edit,Q666442,{6157AD30-DC40-4AB5-AAB6-BD7361099106},Alpe di Neggia,2555043992,default label; official name
+2026-10-08T14:09:13Z,edit,Q666531,{B77E7859-06B4-4493-824A-730E7D34FF83},Naafkopf,2555044008,source for position; default label; official name
+2026-10-08T14:09:17Z,edit,Q666628,{57192572-B18B-4838-A8E7-72FBAB48B42E},Furkapass,2555044019,default label; official name
+2026-10-08T14:09:20Z,edit,Q666839,{86F89507-129C-4423-9452-BD3692086D88},Lai da Curnera,2555044034,default label; rm label; official name
+2026-10-08T14:09:23Z,edit,Q667249,{891D7F1F-10E7-48CF-93FA-975542DBA925},Lac de Montsalvens,2555044045,default label; official name
+2026-10-08T14:09:27Z,edit,Q667398,{6DAB50C7-0D8E-4A02-83FE-DF6FF0DCAC6A},Klausenpass,2555044049,source for height; source for position; default label; official name
+2026-10-08T14:09:31Z,edit,Q667434,{48658B32-6711-4942-BFED-952A7B6B360D},Unterer Hauenstein,2555044062,source for position; default label; official name
+2026-10-08T14:09:34Z,edit,Q667461,{0B8A0B2E-8CFA-44AD-B96F-879054CF5735},Griesgletscher,2555044072,default label; official name
+2026-10-08T14:09:38Z,edit,Q667508,{C4E31F05-D92E-4316-9692-31F83C793ECB},Gerzensee,2555044090,source for position; default label; official name
+2026-10-08T14:09:41Z,edit,Q667539,{9BDCEB5B-A907-45A8-9622-BEF05E6F3193},Dammagletscher,2555044107,default label; official name
+2026-10-08T14:09:45Z,edit,Q668051,{8286BD63-060E-4577-A728-08BE673067E0},Ägelsee,2555044120,source for height; source for position; default label; official name
+2026-10-08T14:09:48Z,edit,Q668261,{2E859E96-7811-4B41-BADD-823FA417B04D},Pointe de Zinal,2555044137,source for position; default label; official name
+2026-10-08T14:09:51Z,edit,Q668276,{1B34392F-B60D-4689-8AC2-1953593FF762},Mont Blanc de Cheilon,2555044154,source for height; source for position; default label; official name
+2026-10-08T14:09:55Z,edit,Q668287,{1A04897E-655D-49A9-8BAE-DA96B10A4615},Piz Roseg,2555044165,source for height; source for position; default label; rm label; official name
+2026-10-08T14:09:58Z,edit,Q668314,{29CC56BE-E669-43E7-92B7-A379C5ADA852},Piz Boval,2555044182,source for height; source for position; default label; rm label; official name
+2026-10-08T14:10:02Z,edit,Q668321,{07096649-A3DD-406E-AFBE-34F6F1AA00A1},Pizzo Badile,2555044205,swisstopo position (preferred); official name
+2026-10-08T14:10:05Z,edit,Q668334,{CEDE6740-B0BC-48E1-9FFF-E1D12C709CB5},Mont Collon,2555044231,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:01:53Z,edit,Q668368,{B7528F7B-D809-4D4F-96E3-72B1457DDE0D},Brunegghorn,2555050331,source for height; source for position; default label; official name
+2026-10-08T15:01:56Z,edit,Q668416,{55D1D354-BD05-4ACF-8C7F-8E2ECCB49BBB},Piz Nair,2555050342,source for height; source for position; default label; rm label; official name
+2026-10-08T15:02:00Z,edit,Q668432,{FA02ADC6-3745-4C4E-A25E-A4007CB6A25E},Schwarzsee,2555050349,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:02:03Z,edit,Q668452,{DE2E7E6E-7BCD-4CBA-B8AE-2F859B692F31},Lai da Sontga Maria,2555050358,default label; official name
+2026-10-08T15:02:07Z,edit,Q668465,{D7BD5493-B9A6-40E9-A56D-7CD5DD847D55},Gigerwaldsee,2555050366,default label; official name
+2026-10-08T15:02:10Z,edit,Q668490,{5D64F024-3186-4059-A19D-89B69EC3C5D3},Wildstrubelgletscher,2555050379,default label; official name
+2026-10-08T15:02:14Z,edit,Q668503,{4A1B4080-B375-4181-9DB7-78DA57FE9906},Surenstock,2555050394,source for position; official name
+2026-10-08T15:02:18Z,edit,Q668530,{54E69D22-0EC7-4697-AFE7-188F8F6FEA24},Piz Mitgel,2555050411,source for position; default label; official name
+2026-10-08T15:02:21Z,edit,Q668551,{F9677095-ECEA-4935-B192-3E82C76A1FCB},Piz Fenga,2555050437,source for height; source for position; official name
+2026-10-08T15:02:25Z,edit,Q668561,{A902381D-D21E-4DDC-A3EB-6C716AAE0AF4},Sämtisersee,2555050470,default label; official name
+2026-10-08T15:02:28Z,edit,Q668570,{F143DFC9-4B50-4BF5-A68C-B8675550FE62},Crast'Agüzza,2555050503,source for height; source for position; default label; rm label; official name
+2026-10-08T15:02:32Z,edit,Q668583,{2C5A731E-B1C3-481C-9CEC-00000A931F14},Tschingelgletscher,2555050534,default label; official name
+2026-10-08T15:02:36Z,edit,Q668594,{684DFF27-28F4-4842-A193-C6EC395E3521},Piz d'Es-cha,2555050568,source for position; official name
+2026-10-08T15:02:39Z,edit,Q668604,{D6175477-2DA4-4029-B4E7-2CAB794E5983},Pizzo d'Andolla,2555050604,source for position; default label; official name
+2026-10-08T15:02:43Z,edit,Q668659,{E8AC9926-24EF-4506-B370-EFA3A047CD8B},Lago di Vogorno,2555050643,default label; official name
+2026-10-08T15:02:47Z,edit,Q669587,{E7FF585B-4B81-4ECA-A6FF-D95FBF8AC3C7},Oberaarsee,2555050668,default label; official name
+2026-10-08T15:02:51Z,edit,Q669682,{628FE8DF-7EEC-48F1-8045-7A86294DBF85},Totesee,2555050697,source for height; source for position; default label; official name
+2026-10-08T15:02:54Z,edit,Q669690,{874A50A2-F266-4FE4-98F3-24187B68459A},Almagellerhorn,2555050722,source for height; source for position; default label; official name
+2026-10-08T15:02:57Z,edit,Q669704,{18A765F5-CC46-4F65-995C-1025926AF5FB},Balfrin,2555050747,source for position; default label; official name
+2026-10-08T15:03:01Z,edit,Q669713,{1790CC65-5516-4221-9632-2FFDCAE27951},La Ruinette,2555050780,source for height; source for position; default label; official name
+2026-10-08T15:03:05Z,edit,Q669727,{9CE90B0F-FD3A-4350-AAB2-EA939073517A},Arpelistock,2555050801,source for height; source for position; default label; official name
+2026-10-08T15:03:08Z,edit,Q669744,{80DCA3A1-C1A5-4A82-B1AB-704EF055A881},Dent de Vaulion,2555050821,source for height; source for position; default label; official name
+2026-10-08T15:03:12Z,edit,Q669758,{FAB49352-B728-48FC-A7BA-C474CDFA401A},Mattwaldhorn,2555050850,source for position; default label; official name
+2026-10-08T15:03:15Z,edit,Q669767,{8CD427E7-51FC-4022-AFD3-A776DCDBA63A},Oeschinenhorn,2555050871,source for height; source for position; default label; official name
+2026-10-08T15:03:19Z,edit,Q669782,{2CE001E5-00C0-404D-8EEC-BF0EA7BD9F91},Corne de Sorebois,2555050890,source for position; default label; official name
+2026-10-08T15:03:22Z,edit,Q669794,{C3104008-B6BB-4E59-BD0A-29760F5A61AC},Gwächtenhorn,2555050929,swisstopo height (preferred); swisstopo position (preferred); default label; official name
+2026-10-08T15:03:26Z,edit,Q669837,{AFAAAD3A-352D-4E87-B5FD-37FFA506B0E1},Gross Litzner,2555050965,source for height; source for position; default label; official name
+2026-10-08T15:03:29Z,edit,Q669851,{2DDC33C7-3B0C-4229-890B-16E3B6A5E51D},Gross Seehorn,2555051002,source for height; source for position; official name
+2026-10-08T15:03:33Z,edit,Q669860,{14E791E0-3041-46B5-9F0A-735C529D1BA4},Mont Vélan,2555051033,swisstopo height (preferred); swisstopo position (preferred); default label; official name
+2026-10-08T15:03:36Z,edit,Q669875,{2149A1AC-3C7F-476E-9ABE-11B17B35C906},Grand Cornier,2555051066,source for position; default label; official name
+2026-10-08T15:03:40Z,edit,Q669889,{9F4C1B34-C81C-408F-978E-4219E1246AB6},Lai da Marmorera,2555051096,default label; rm label; official name
+2026-10-08T15:03:43Z,edit,Q670012,{529FA506-9F7E-45AE-B800-A5AC711DD028},Ruppenpass,2555051124,source for position; default label; official name
+2026-10-08T15:03:47Z,edit,Q670026,{1FF0888B-E3D5-412B-9D60-42972BF30BA3},Oberer Hauenstein,2555051147,source for position; default label; official name
+2026-10-08T15:03:50Z,edit,Q670156,{B5C43A56-440C-47EC-A488-97C60ECEAA53},Col de la Forclaz,2555051175,source for height; default label; official name
+2026-10-08T15:03:54Z,edit,Q670173,{60D286D8-04E5-4FC1-87BE-6DC884DBFF8D},Trübsee,2555051195,default label; official name
+2026-10-08T15:03:57Z,edit,Q670183,{089E0141-1C54-4816-9033-8E534FBF82A1},Piz Pisoc,2555051228,source for position; default label; rm label; official name
+2026-10-08T15:04:01Z,edit,Q670215,{AE638240-1C3E-41E1-B9EB-035BD08657BE},Weissfluh,2555051258,source for height; source for position; default label; official name
+2026-10-08T15:04:05Z,edit,Q670223,{2D57ED60-27DE-4962-910B-85E56A638D3B},Weisshorn,2555051294,source for height; source for position; default label; official name
+2026-10-08T15:04:08Z,edit,Q670246,{600F90E6-3999-435F-B23E-FAA41A25C492},Gross Ruchen,2555051323,source for position; default label; official name
+2026-10-08T15:04:12Z,edit,Q670293,{73D35A24-2864-4F45-9627-7A78DC3F3514},Mättenberg,2555051341,source for height; source for position; default label; official name
+2026-10-08T15:04:15Z,edit,Q670435,{AF0EE145-9C82-4C12-9FA4-FB2F8C65426F},Piz Quattervals,2555051366,source for position; default label; rm label; official name
+2026-10-08T15:04:19Z,edit,Q670582,{F63B4F10-4482-4D2A-82F9-E09893A0D37A},Glacier de Cheilon,2555051386,default label; official name
+2026-10-08T15:04:22Z,edit,Q670622,{6A8F14FB-E08E-49AC-9B79-EC967EF3190D},Schiffenensee,2555051409,official name
+2026-10-08T15:04:26Z,edit,Q670651,{8143A243-670F-43A0-9CC5-87622A9D5835},Augstbordhorn,2555051436,source for position; default label; official name
+2026-10-08T15:04:29Z,edit,Q670928,{F38C9B6D-A086-45C9-8B9E-AF3D845A0E0F},Col de Pierre Pertuis,2555051471,source for height; default label; official name
+2026-10-08T15:04:33Z,edit,Q671159,{19BF2AF0-0D93-48E5-8C2A-46901F4571A9},Lac de Derborence,2555051498,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:04:36Z,edit,Q671184,{CB935CC3-760C-4C07-BA18-C989E479CA92},Sufnersee,2555051522,default label; official name
+2026-10-08T15:04:40Z,edit,Q671274,{169ACB14-DAAC-460A-8411-EC029F131067},Lac de Moron,2555051546,default label; official name
+2026-10-08T15:04:44Z,edit,Q671611,{1B5109C9-BEF4-46ED-ADC8-EC8387710C41},Lac des Taillères,2555051566,default label; official name
+2026-10-08T15:04:47Z,edit,Q671624,{439EC88E-844F-46DB-8F06-FC11FE90A9B9},Lac des Brenets,2555051597,swisstopo height (preferred); default label; official name
+2026-10-08T15:04:51Z,edit,Q671636,{9E3504FC-3C75-43F4-9D7E-C381685FAD6F},Lägh dal Lunghin,2555051612,default label; official name
+2026-10-08T15:04:54Z,edit,Q671717,{29D7500A-7324-4081-A4BC-6DA6C002623C},Piz Albris,2555051626,source for position; default label; rm label; official name
+2026-10-08T15:04:58Z,edit,Q671732,{AA8AD08A-32B3-41AD-9A98-F795389108D4},Piz Üertsch,2555051645,source for height; source for position; default label; rm label; official name
+2026-10-08T15:05:01Z,edit,Q671751,{9E1598CB-DF6B-4623-8858-320BF1BC8036},Obersee,2555051653,source for height; default label; official name
+2026-10-08T15:05:05Z,edit,Q671775,{ED75FEB4-825D-4935-96E9-A1D44503F7E6},Piz Uccello,2555051675,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:05:08Z,edit,Q672064,{761238E8-7ABF-405C-AE96-8FC47E62E6BB},Daubensee,2555051695,source for height; default label; official name
+2026-10-08T15:05:12Z,edit,Q672259,{42CF21B4-03E5-408C-A149-C5BE0DE6AC0F},Glacier du Mont Durand,2555051720,default label; fr label; official name
+2026-10-08T15:05:15Z,edit,Q672290,{F112C7C9-F5A0-45DE-86B3-B6B57AC64AD9},Büsisee,2555051754,default label; official name
+2026-10-08T15:05:19Z,edit,Q672321,{4AA33313-9791-415D-8905-33F6CC593332},Verstanclahorn,2555051782,swisstopo position (preferred); default label; official name
+2026-10-08T15:05:22Z,edit,Q672345,{A67F8DEB-15CF-46C9-8CEE-1FD31ED4DA97},Pizzo Gallina,2555051809,source for position; default label; official name
+2026-10-08T15:05:26Z,edit,Q672366,{0EF500F8-1D0A-4D6D-BA88-1AD716426128},Piz Blas,2555051829,source for height; source for position; rm label; official name
+2026-10-08T15:05:30Z,edit,Q672495,{F6374DA0-1E28-4EFD-910A-B968AF4ACB3F},Lago di Livigno,2555051856,default label; official name
+2026-10-08T15:05:33Z,edit,Q672504,{CCD084F2-7C7F-4F97-BFEE-09D8DC51A07B},Gummfluh,2555051887,source for height; source for position; default label; official name
+2026-10-08T15:05:37Z,edit,Q672509,{2404CCBE-7B0F-4C6A-B8B1-B3D997446FB5},Oberaargletscher,2555051917,default label; official name
+2026-10-08T15:05:41Z,edit,Q672737,{52D4A6D0-5FDA-441C-B6BF-41369053B37D},Pizol,2555051949,source for position; default label; rm label; official name
+2026-10-08T15:05:44Z,edit,Q672939,{0BE87C2A-1A21-417F-A524-22A464AED7AC},Bas Glacier d'Arolla,2555051981,default label; official name
+2026-10-08T15:05:47Z,edit,Q672967,{9A769FC8-E15A-430D-8FC5-EBEF09E326B0},Riffelsee,2555052007,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:05:51Z,edit,Q673053,{D13B4A92-99F6-475E-B69E-1FE76EC4EC66},Lago del Sambuco,2555052033,default label; official name
+2026-10-08T15:05:55Z,edit,Q673510,{E36A9162-C99C-401C-BBB4-913A126F5DA6},Stausee Gibidum,2555052047,default label; official name
+2026-10-08T15:05:58Z,edit,Q673588,{29259503-2F2D-4EC1-8A26-7661A202F477},Druesberg,2555052053,source for height; source for position; default label; official name
+2026-10-08T15:06:02Z,edit,Q673660,{B3E5189A-161C-40DB-90B5-2ACA3D9C0660},Falknishorn,2555052068,source for height; source for position; official name
+2026-10-08T15:06:06Z,edit,Q673716,{4C4B7A4F-D113-4635-9405-492D39053DE1},Grenzgipfel,2555052080,source for position; default label; official name
+2026-10-08T15:06:09Z,edit,Q673863,{D9D5105A-E674-48D0-8E27-054678538E5B},Breithorn,2555052101,source for position; default label; official name
+2026-10-08T15:06:13Z,edit,Q673878,{61B81C8A-0723-4B79-9EF5-DB2B66A5356F},Hangendgletscherhorn,2555052123,source for height; source for position; default label; official name
+2026-10-08T15:06:16Z,edit,Q673900,{590A42A3-DB6B-41FF-8E32-11D9FC6A965B},Schalihorn,2555052138,source for position; default label; official name
+2026-10-08T15:06:20Z,edit,Q673909,{71D67C12-F679-4471-B8F9-142C6B580666},Dreiländerspitz,2555052152,source for height; source for position; default label; official name
+2026-10-08T15:06:23Z,edit,Q673993,{F51E8E6E-AE06-4FBD-8E8D-2832888FCF1A},Daubenhorn,2555052171,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:06:27Z,edit,Q674001,{60D08C1D-879D-4278-906A-764F1142663F},Mont Fort,2555052192,source for position; default label; official name
+2026-10-08T15:06:30Z,edit,Q674012,{072E721B-B7C0-44D0-98D0-09E0430CD630},Mont Gelé,2555052224,source for height; source for position; default label; official name
+2026-10-08T15:06:34Z,edit,Q674103,{FA5231AB-966D-4F8E-ADA4-DF0D2923366D},Hillehorn,2555052273,source for position; default label; official name
+2026-10-08T15:06:38Z,edit,Q674126,{D452714C-B5F5-424B-B01D-80F38F48EEEF},Le Chasseron,2555052309,source for height; source for position; default label; official name
+2026-10-08T15:06:41Z,edit,Q674197,{84AFF194-4BDE-4E4E-BE3B-AAA3E5194F10},Petit Combin,2555052349,swisstopo position (preferred); default label; official name
+2026-10-08T15:06:45Z,edit,Q674292,{3804B5E2-D777-4855-882B-774828E9B3FC},Col du Sanetsch,2555052390,source for height; names in other languages (fr alias); official name
+2026-10-08T15:06:48Z,edit,Q674333,{8798DD00-5F62-4953-A323-1EE802FAB537},Piz Platta,2555052424,source for position; default label; rm label; official name
+2026-10-08T15:06:52Z,edit,Q674348,{5B81401F-57FC-4A3E-AEB9-DB7D2DC03DD1},Petit Mont Collon,2555052462,source for height; source for position; default label; official name
+2026-10-08T15:06:55Z,edit,Q674365,{E96EF3D7-6273-4D87-AA94-228596F13A89},Ulrichshorn,2555052488,source for position; default label; official name
+2026-10-08T15:06:59Z,edit,Q674392,{FE69E870-7B98-42B0-A4AB-244DEE789C0F},Tête Blanche,2555052506,swisstopo position (preferred); default label; official name
+2026-10-08T15:07:02Z,edit,Q674403,{8AA0B1B0-05AA-49E4-9F7B-2714AFC86064},Gletscherhorn,2555052511,source for height; source for position; default label; official name
+2026-10-08T15:07:06Z,edit,Q674422,{F7B2032E-32B6-4234-8B56-F41EC7A18AFE},Tête de Valpelline,2555052518,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:07:10Z,edit,Q674447,{62DFA926-B48F-4A9E-BCB3-63F8B7793EA1},Piz Scerscen,2555052541,source for height; source for position; default label; rm label; official name
+2026-10-08T15:07:13Z,edit,Q674459,{913EC4E6-74A5-4A0F-BB0E-54DB429F7440},Mittaghorn,2555052560,source for position; default label; official name
+2026-10-08T15:07:17Z,edit,Q674468,{CCEF8DD0-2771-4554-9A13-29899A1C53F8},Piz Argient,2555052584,source for height; source for position; default label; rm label; official name
+2026-10-08T15:07:20Z,edit,Q674478,{5CA77EBC-1114-4578-9ABF-CD59AB059B70},Gross Spannort,2555052605,source for height; source for position; default label; official name
+2026-10-08T15:07:24Z,edit,Q674518,{83C78C6D-80EF-4EEE-AF1B-44FF5A6FF8D8},Parpaner Rothorn,2555052630,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:07:27Z,edit,Q674531,{145365B6-87E5-4788-AE14-202AEC41089F},Stellihorn,2555052648,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:07:31Z,edit,Q674570,{4D91D9BE-0925-4370-8D49-091DFCFCE18D},Grand Tavé,2555052666,source for height; source for position; default label; official name
+2026-10-08T15:07:34Z,edit,Q674584,{0F3EE7A6-87F7-4000-8E86-6FB5E7E089BE},Grand Muveran,2555052682,source for height; source for position; default label; official name
+2026-10-08T15:07:38Z,edit,Q674594,{7B8B0CC7-E3C1-4726-A947-31C6B2895A89},Madom Gröss,2555052712,source for height; source for position; default label; official name
+2026-10-08T15:07:41Z,edit,Q674610,{AD25EAC5-610D-412D-A8E0-F05D1AC9B1CE},Monte Lema,2555052741,source for position; default label; official name
+2026-10-08T15:07:45Z,edit,Q674622,{5716A95B-12C2-4CCD-859E-8EE0CE83CA9F},Engelberger Rotstock,2555052777,source for height; source for position; default label; official name
+2026-10-08T15:07:49Z,edit,Q674680,{151607FB-4545-4FE8-AD8A-510B8BF14669},Sulzfluh,2555052801,source for position; default label; official name
+2026-10-08T15:07:52Z,edit,Q674692,{24B682DA-B078-4289-90F4-FEC4FE9BDA69},Trugberg,2555052831,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:07:56Z,edit,Q674723,{87ED4C90-6AE9-4C60-AABC-D0A41139BC20},Aroser Rothorn,2555052871,source for height; source for position; default label; official name
+2026-10-08T15:07:59Z,edit,Q674732,{45118F1E-ADF0-4634-A73D-195876F46E6D},Piz d'Err,2555052895,source for position; default label; rm label; official name
+2026-10-08T15:08:03Z,edit,Q674744,{35E830A9-CCD8-4184-A717-3D96F6968452},Tournelon Blanc,2555052919,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:08:07Z,edit,Q674769,{A2B02C4D-187C-425E-BE3A-EF7945B8B038},Faulhorn,2555052946,source for position; default label; official name
+2026-10-08T15:37:15Z,edit,Q674782,{C166381C-1E7C-479F-9F80-A5C0C85BF1EE},Mittelaletschgletscher,2555056902,official name
+2026-10-08T15:37:19Z,edit,Q674801,{5CECB13E-FDA5-473E-B0A1-CFA74C2F0AB0},Schilthorn,2555056932,source for position; default label; official name
+2026-10-08T15:37:22Z,edit,Q674811,{D3A0E676-730E-4AA2-AE11-DAB340A3FE70},Uri Rotstock,2555056967,source for position; default label; official name
+2026-10-08T15:37:26Z,edit,Q674825,{8EA2C0A3-D2E3-47D2-9916-8ABF22ADD1D7},Piz Medel,2555057003,source for position; default label; rm label; official name
+2026-10-08T15:37:30Z,edit,Q674959,{6C38AE93-9A13-417A-A529-AA01400AFE2D},Feegletscher,2555057046,default label; official name
+2026-10-08T15:37:33Z,edit,Q675092,{1633358E-EA56-487C-9DA0-D38F1E3B71E0},Langgletscher,2555057076,default label; official name
+2026-10-08T15:37:37Z,edit,Q675238,{921797FB-3CF7-4FB8-8016-948E48461EE0},Schwarzsee,2555057097,official name
+2026-10-08T15:37:41Z,edit,Q675446,{F73AC2B2-B7CD-49E3-A7EB-BABBEE753BDA},Klein Matterhorn,2555057137,source for height; source for position; default label; official name
+2026-10-08T15:37:45Z,edit,Q675543,{B65EAEF8-1D93-4C46-A7B6-7A49906B312E},Piz Linard,2555057158,source for position; official name
+2026-10-08T15:37:48Z,edit,Q675571,{E63F34BB-83DE-4387-90FC-BE1404D9F388},Munt Schiember,2555057185,source for position; official name
+2026-10-08T15:37:52Z,edit,Q675610,{F801F0B8-5ADF-4AFC-9126-9C4FEB592437},Wägitalersee,2555057212,default label; official name
+2026-10-08T15:37:56Z,edit,Q675628,{712CF17A-F171-47FF-8A84-4E03D818A01A},La Dôle,2555057233,source for height; source for position; default label; official name
+2026-10-08T15:37:59Z,edit,Q675673,{61D2D4C0-9D5D-449C-A272-A8B2E9B3A676},Tour d'Aï,2555057252,source for height; source for position; default label; official name
+2026-10-08T15:40:14Z,edit,Q675745,{4F34F1CC-112D-4A21-915A-9E3042259B01},Rinderhorn,2555057594,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:40:17Z,edit,Q675985,{740D7D5D-C689-47B4-99AA-6802DCEE7B2F},Piz Lunghin,2555057626,source for height; source for position; default label; official name
+2026-10-08T15:40:21Z,edit,Q675997,{149E4D7A-CC20-4DB6-AB5F-752933D54924},Melchsee,2555057657,default label; official name
+2026-10-08T15:40:24Z,edit,Q676012,{B7EA7D01-9A42-4567-BD92-E7AF70501C51},Piz Lischana,2555057700,source for height; source for position; default label; rm label; official name
+2026-10-08T15:40:28Z,edit,Q676030,{C8FE92C9-A1A7-4F0F-ACB3-532347CC490D},Rochers de Naye,2555057730,source for height; source for position; default label; official name
+2026-10-08T15:40:32Z,edit,Q676048,{751E6895-78C7-4042-B140-A015BAD50C46},Silvrettagletscher,2555057751,source for position; default label; official name
+2026-10-08T15:40:35Z,edit,Q676064,{17C5CBB0-3DED-4BC2-ACF4-43F3989936D9},Gauligletscher,2555057762,names in other languages (de alias); official name
+2026-10-08T15:40:38Z,edit,Q676149,{4D1F3DC8-EF3F-43C9-86FD-0E3DD4524686},Piz Nair,2555057779,source for position; default label; rm label; official name
+2026-10-08T15:40:42Z,edit,Q676682,{859EC3B3-FB4C-4C22-912A-D960921F742E},Türlersee,2555057797,default label; official name
+2026-10-08T15:40:45Z,edit,Q676730,{3BF16F1B-0753-4BDA-86E1-FDFFA3B4C95A},Glatscher dil Vorab,2555057814,names in other languages (de alias); official name
+2026-10-08T15:40:49Z,edit,Q676736,{5DD3A780-57F0-45EC-A88A-0C0BCAA4B238},Stockhorn,2555057837,source for height; source for position; default label; official name
+2026-10-08T15:40:52Z,edit,Q676804,{DE7E7302-F13B-478F-A96D-0CBEB912FC48},Lac de Cleuson,2555057850,default label; official name
+2026-10-08T15:40:56Z,edit,Q676816,{93AFDF59-64C0-4AA1-8E5C-F1FACA468205},Lützelsee,2555057867,source for height; default label; official name
+2026-10-08T15:41:00Z,edit,Q677288,{CC07F455-D0F4-493D-B25B-15FB458FCE3E},Piz Corvatsch,2555057877,source for height; source for position; default label; rm label; official name
+2026-10-08T15:41:03Z,edit,Q677605,{A42FDF88-D1F9-496B-907E-E5192E3EA515},Scheltenpass,2555057887,source for height; source for position; default label; official name
+2026-10-08T15:41:07Z,edit,Q677620,{3D07B742-AC53-46BB-B358-A8DEAD8EF3CA},Raten,2555057904,source for height; source for position; default label; official name
+2026-10-08T15:41:10Z,edit,Q677709,{288198A0-DCB8-49DE-8574-5675A17D67E5},Santelhöchi,2555057921,source for height; source for position; default label; official name
+2026-10-08T15:41:14Z,edit,Q677751,{7E77A4D2-FDCA-45DB-AA09-93F7DF308423},Vadret Pers,2555057933,default label; rm label; official name
+2026-10-08T15:41:17Z,edit,Q677862,{DA189E07-FA9C-4A19-B545-02383B521F5A},Gelmersee,2555057948,default label; official name
+2026-10-08T15:41:21Z,edit,Q677909,{EDB0FCCA-DB5D-4D55-86CD-8D2A7C798CBA},Lac des Toules,2555057972,default label; official name
+2026-10-08T15:41:24Z,edit,Q677934,{1DE36130-4BCC-4B2B-8745-36633C8CB38E},Räterichsbodensee,2555057998,default label; official name
+2026-10-08T15:41:28Z,edit,Q677991,{AD078B83-5B46-4DB7-A4DE-D0A902044726},Le Gibloux,2555058015,source for position; default label; official name
+2026-10-08T15:41:31Z,edit,Q678096,{1DFAB21A-785F-490B-B145-37461A36AB93},Wasserfluh,2555058039,source for height; source for position; default label; official name
+2026-10-08T15:41:35Z,edit,Q678180,{A5579973-A69E-41DC-9C6D-F66CCBC3E4B7},Tiefenstock,2555058066,source for position; default label; de label; official name
+2026-10-08T15:41:38Z,edit,Q680120,{254CF31F-F770-49F5-A701-088FDAFE83E6},Saanenmöser,2555058091,default label; official name
+2026-10-08T15:41:42Z,edit,Q680252,{C1E222B1-2E49-4FE4-ACED-ABF4E2D3C3BD},Lägh da l'Albigna,2555058107,default label; official name
+2026-10-08T15:41:45Z,edit,Q680375,{4CAA80DE-6800-4EA4-9E61-7D3FE3EA3AF3},Lac de Salanfe,2555058120,default label; official name
+2026-10-08T15:41:49Z,edit,Q680864,{545404C8-98C9-461F-9461-FDF7E2E0A2CB},Klingnauer Stausee,2555058141,default label; official name
+2026-10-08T15:41:52Z,edit,Q680900,{47BB6962-6B33-4816-BE6A-A393CE18CE52},Lac de l'Hongrin,2555058154,default label; official name
+2026-10-08T15:41:56Z,edit,Q680976,{E59E6A41-81EC-4FA1-B5C5-5B03351C6B96},Stausee Mattmark,2555058173,default label; official name
+2026-10-08T15:41:59Z,edit,Q680999,{449621E2-7743-4013-B444-1FB6A5EE9EB3},Lago Ritóm,2555058188,default label; official name
+2026-10-08T15:42:03Z,edit,Q681017,{637D5E53-4AC9-41D1-8C92-BBD6CFE471F5},Limmerensee,2555058200,default label; official name
+2026-10-08T15:42:06Z,edit,Q681046,{B78D2D40-5A09-4C3C-B531-A6C7C80FA9E5},Benkerjoch,2555058215,source for height; source for position; default label; official name
+2026-10-08T15:42:10Z,edit,Q681994,{458A8F51-C2CF-48C3-B14F-69FE2CADA941},Crest Ault,2555058231,source for position; default label; rm label; official name
+2026-10-08T15:42:13Z,edit,Q682014,{D085F4B9-D463-44C3-BD8A-1444794F5578},Lai Lung,2555058252,source for height; source for position; default label; official name
+2026-10-08T15:42:17Z,edit,Q682050,{65548373-E7A8-4713-823C-A19053C64B61},Piz Toissa,2555058270,source for position; default label; official name
+2026-10-08T15:42:20Z,edit,Q682104,{BCD9F808-CDA5-4202-BF2C-8D75EB2ACA8D},Wissberg,2555058282,source for height; source for position; default label; official name
+2026-10-08T15:42:24Z,edit,Q682177,{0483556D-DBDC-4EAA-B546-6B67A11F7058},Weissfluhjoch,2555058293,swisstopo height (preferred); swisstopo position (preferred); default label; official name
+2026-10-08T15:42:28Z,edit,Q682233,{060EC50F-48D8-4C7E-A3F3-3755A19AAF0D},Seetalhorn,2555058307,source for position; default label; official name
+2026-10-08T15:42:31Z,edit,Q682249,{D886FC65-2905-4636-A422-002E2DDD6102},Piz Plavna Dadaint,2555058324,source for position; default label; rm label; official name
+2026-10-08T15:42:35Z,edit,Q682286,{C43DA9F9-4590-435B-89B1-5E04F1E95796},Piz Arlos,2555058351,source for position; default label; official name
+2026-10-08T15:42:38Z,edit,Q682303,{12B4FF02-30DF-417B-BEA4-6F93FB7B4D29},Crest dil Cut,2555058378,source for position; default label; rm label; official name
+2026-10-08T15:42:42Z,edit,Q682555,{69226ADC-0004-4133-938E-29628BDC83E7},Piz Cartas,2555058402,source for height; source for position; default label; rm label; official name
+2026-10-08T15:42:45Z,edit,Q682581,{3E6C1A70-2D36-43EF-936E-F299CE7EABD9},Piz Dolf,2555058434,source for height; swisstopo position (preferred); rm label; official name
+2026-10-08T15:42:49Z,edit,Q682594,{5A03AFCE-50AA-4237-8502-ADBFE753759C},Mässersee,2555058468,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:42:52Z,edit,Q682623,{DCD43DF9-A2B2-49DC-BA8A-53B8DD45C585},Piz Alv,2555058493,source for height; source for position; default label; rm label; official name
+2026-10-08T15:42:56Z,edit,Q682648,{9E9E50BE-519B-48FF-905A-36B9CE2A03CA},Schallenberg,2555058512,source for position; default label; official name
+2026-10-08T15:42:59Z,edit,Q682719,{2B89F2A9-C35D-4A0B-BD72-220CA5B0137D},Pizzo Peloso,2555058534,source for height; swisstopo position (preferred); default label; it label; official name
+2026-10-08T15:49:03Z,edit,Q682754,{29DD6534-A063-494C-8C87-9F43C0F07DF1},Roc d'Orzival,2555059234,source for position; default label; fr label; official name
+2026-10-08T15:49:08Z,edit,Q682768,{108F0205-EC59-4246-8E8E-B16AC383BD71},Rossbodenstock,2555059265,source for position; default label; official name
+2026-10-08T15:49:12Z,edit,Q682782,{5B31D7A3-DB07-4046-822A-C1ACDB60EB83},Einshorn,2555059293,source for position; default label; official name
+2026-10-08T15:49:15Z,edit,Q682826,{3B25AB54-83DA-4353-BA2A-62E9E3CAA142},Piz Scalottas,2555059324,source for position; default label; rm label; official name
+2026-10-08T15:49:19Z,edit,Q682840,{D738C032-2E04-482B-80D5-EE2AE46C5072},Schijenflue,2555059350,source for position; default label; official name
+2026-10-08T15:49:22Z,edit,Q682985,{1F8CC19B-32B2-481C-80B5-E577843B4DAB},Mont Terri,2555059386,source for position; default label; official name
+2026-10-08T15:49:26Z,edit,Q683183,{1930D365-8167-4AC8-A210-DB6DC9957F99},Piz Lagalb,2555059408,source for height; source for position; default label; rm label; official name
+2026-10-08T15:49:30Z,edit,Q683628,{D8D81E8E-D729-4AAF-B6E4-597A74A5124B},Passo della Greina,2555059441,source for position; names in other languages (rm label); official name
+2026-10-08T15:49:33Z,edit,Q683718,{5C3DEC81-7C23-4AA3-8B6C-F89C09F734D1},Ibergeregg,2555059458,source for height; source for position; default label; official name
+2026-10-08T15:49:37Z,edit,Q683762,{B383AAF3-4683-4D52-93B1-CAEE0D63920D},Etzelpass,2555059476,source for position; default label; official name
+2026-10-08T15:49:40Z,edit,Q684261,{86D45E10-EF19-4D52-9292-3316A63F1C2B},Col des Etroits,2555059487,source for height; source for position; default label; official name
+2026-10-08T15:49:43Z,edit,Q684286,{8AB80BE6-3D7E-4CD6-A5DF-E2149271760B},Rüsler,2555059496,source for position; default label; official name
+2026-10-08T15:49:47Z,edit,Q684399,{982626B2-5042-45E1-884E-229DFF854025},Passo San Giacomo,2555059503,default label; official name
+2026-10-08T15:49:50Z,edit,Q684428,{62A696E2-EB8E-4434-8C2B-523FF80AE8CE},Buchenegg,2555059519,source for height; default label; official name
+2026-10-08T15:49:54Z,edit,Q685235,{AE249211-1EC1-450E-98DB-08178366A99F},Albulapass,2555059536,names in other languages (rm alias); official name
+2026-10-08T15:49:57Z,edit,Q686547,{5E399B94-BB0B-4304-9C87-97E72286A0F8},Staffelegg,2555059548,source for position; default label; official name
+2026-10-08T15:50:01Z,edit,Q686558,{179A062A-911C-4115-A0D4-BD7AC67280F7},Gottschalkenberg,2555059559,default label; official name
+2026-10-08T15:50:04Z,edit,Q686573,{B67E2707-7D2F-4517-8960-FE28077CC289},Chilchzimmersattel,2555059570,source for height; default label; official name
+2026-10-08T15:50:08Z,edit,Q687080,{69B58786-9863-4DD5-A284-3C0EEE4443D8},Albrunpass,2555059580,names in other languages (it alias); official name
+2026-10-08T15:50:11Z,edit,Q688201,{8C4E5C64-FE5B-47FF-86F2-4B612A77E812},Pass dil Veptga,2555059597,source for position; rm label; official name
+2026-10-08T15:50:15Z,edit,Q688358,{59F53550-62B6-45A3-8C87-450118CB7A4C},Col du Mont d'Orzeires,2555059618,source for height; source for position; default label; official name
+2026-10-08T15:50:18Z,edit,Q688846,{BDCE05B4-0962-4292-8B05-6A4435781E19},Sihlsee,2555059644,default label; official name
+2026-10-08T15:50:22Z,edit,Q689431,{59583AA1-8A0B-4D8A-AB5D-40A391C439DE},Piz Morteratsch,2555059673,source for height; source for position; default label; rm label; official name
+2026-10-08T15:50:25Z,edit,Q689755,{4E375D36-74FF-4893-AFA0-89974118EAA9},Lac des Autannes,2555059705,default label; official name
+2026-10-08T15:50:29Z,edit,Q689873,{7582A645-8ADA-47FC-BF03-F5A7AAA296CC},Blausee,2555059740,source for height; source for position; default label; official name
+2026-10-08T15:50:32Z,edit,Q690097,{B4685944-2507-4130-B73E-A87BBC21F961},Lag Prau Pulté,2555059775,swisstopo height (preferred); source for position; default label; rm label; official name
+2026-10-08T15:50:36Z,edit,Q690121,{FF73AFCA-F467-4BBA-8C8D-8454B4977D31},Lej Minor,2555059802,source for height; source for position; default label; rm label; official name
+2026-10-08T15:50:39Z,edit,Q690134,{6680CD01-1D41-4D51-A7CF-950817F103BE},Tguma,2555059832,source for height; source for position; default label; rm label; official name
+2026-10-08T15:50:43Z,edit,Q690143,{1B6B5586-FD7E-4E5F-A290-68C64090C577},Turne,2555059843,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:50:43Z,edit,Q690163,{C3D2601C-59A7-4E13-B57E-53200E962083},Sex Rouge,,
+2026-10-08T15:50:46Z,edit,Q690188,{B942F1E9-9946-4D79-A7DF-D38B4B7F5959},Piz Mundaun,2555059856,source for position; default label; rm label; official name
+2026-10-08T15:50:50Z,edit,Q690343,{0A801C53-953C-4609-9601-E7CEA8F7EE91},Lai da Tuma,2555059866,source for position; rm label; official name
+2026-10-08T15:50:53Z,edit,Q690359,{12F0F86D-31C7-45FC-9195-265D39BEE3D2},Davoser See,2555059878,default label; official name
+2026-10-08T15:50:57Z,edit,Q690508,{1991121A-4861-4614-BCB1-0C5D11D49C8B},Parpaner Schwarzhorn,2555059892,source for position; default label; official name
+2026-10-08T15:51:00Z,edit,Q690537,{3558E2B1-2489-4516-8F2B-878C3A7FBF22},Lej da Gravatscha,2555059901,source for position; default label; rm label; official name
+2026-10-08T15:52:12Z,edit,Q690552,{C6D7491B-F2F6-4809-8CDE-C655BCBB9023},Gross Muttenhorn,2555060120,source for height; source for position; default label; official name
+2026-10-08T15:52:15Z,edit,Q690665,{C0371C25-AF57-4900-B151-BA0FA8472544},Piz Martegnas,2555060148,swisstopo height (preferred); source for position; default label; official name
+2026-10-08T15:52:19Z,edit,Q690679,{FD09512E-1F7F-4661-B71A-568802AA4C96},Piz Mez,2555060173,source for position; default label; rm label; official name
+2026-10-08T15:52:22Z,edit,Q690791,{48CA3784-DF67-4E8B-BA92-589B307457C8},Lag da Laus,2555060205,default label; rm label; official name
+2026-10-08T15:52:25Z,edit,Q690976,{A81434F1-2ADC-441D-BF80-A537F2121CD2},Bachsee,2555060236,source for position; default label; official name
+2026-10-08T15:52:29Z,edit,Q691023,{2A13B673-D832-4827-8F46-2B976894DC9D},Pizzo di Claro,2555060253,source for height; source for position; names in other languages (it alias); official name
+2026-10-08T15:52:32Z,edit,Q691040,{C33651C9-6D69-4405-9B2D-E09F9C3C4F59},Glacier de Moming,2555060265,default label; official name
+2026-10-08T15:52:36Z,edit,Q691113,{21E14A04-C3A1-45C4-8503-809A3D59A466},Flüela Wisshorn,2555060279,source for height; source for position; default label; official name
+2026-10-08T15:52:39Z,edit,Q691134,{5ACE41FF-F43D-4DDF-89B6-1CCB74FE7FFF},Drusenfluh,2555060292,source for height; source for position; default label; official name
+2026-10-08T15:52:43Z,edit,Q691297,{48A921D3-19FF-4602-8F42-940F12EEB64D},Pas de Morgins,2555060312,source for position; default label; official name
+2026-10-08T15:52:46Z,edit,Q691499,{2F78AD2E-EFD6-43D1-AAC6-EBD54C1DB2D8},Piz Calderas,2555060321,source for position; default label; rm label; official name
+2026-10-08T15:52:50Z,edit,Q691668,{A5B5E65D-732A-44B8-8F50-F1BF9685BBBA},Pizzo Centrale,2555060335,source for height; source for position; default label; official name
+2026-10-08T15:52:53Z,edit,Q691695,{A52AFC17-EA4C-43B7-A01F-CBEB45840603},Hüfifirn,2555060351,default label; official name
+2026-10-08T15:52:57Z,edit,Q691708,{1D8AE7D7-4675-4E2A-95D6-1A7BAA92E02E},Grande Dent de Morcles,2555060366,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:53:00Z,edit,Q691768,{686647C9-FC67-4602-9D1A-B99915BFFDC4},Lenzer Horn,2555060378,source for position; default label; official name
+2026-10-08T15:53:04Z,edit,Q691854,{21EE9A94-674E-4F5D-839A-783362123024},Gobba di Rollin,2555060390,swisstopo position (preferred); official name
+2026-10-08T15:53:07Z,edit,Q691910,{30CC1E6D-0209-4BC6-A942-9DB2D1C41F44},Ofenhorn,2555060407,official name
+2026-10-08T15:53:11Z,edit,Q691933,{D03BD0C1-3EC5-4649-BEDB-C30DBA67AA0D},Helsenhorn,2555060428,source for position; default label; official name
+2026-10-08T15:53:14Z,edit,Q692038,{0EA19EF5-AB9A-45CB-829A-EFBDCF92CF41},Pizzo Rotondo,2555060446,swisstopo position (preferred); default label; official name
+2026-10-08T15:53:18Z,edit,Q692064,{040882EE-139D-47AC-BB99-9708F3CC0CFF},Combin de Corbassière,2555060471,swisstopo position (preferred); default label; official name
+2026-10-08T15:53:21Z,edit,Q692079,{85035EB3-05C1-4D3D-950C-69C0011BCEA1},Trifthorn,2555060500,source for position; default label; official name
+2026-10-08T15:53:25Z,edit,Q692088,{EC337FE5-241F-4EF9-90AC-7F1D2DFBF3FF},Güferhorn,2555060521,source for height; source for position; default label; official name
+2026-10-08T15:53:28Z,edit,Q692106,{B84A00EC-87A4-4AD2-9162-5FA70E20A6A5},Cima la Casina,2555060542,source for height; source for position; names in other languages (rm label); official name
+2026-10-08T15:53:32Z,edit,Q692125,{9F92FDB6-51DA-4CEB-83FB-A0C93AF85C1F},Les Diablons,2555060565,source for height; source for position; default label; official name
+2026-10-08T15:53:35Z,edit,Q692270,{953A04F1-C072-485B-9808-0D9432515A95},Lag la Cauma,2555060572,source for position; default label; official name
+2026-10-08T15:53:39Z,edit,Q692385,{D230BB70-E5AE-4BD3-9B23-1B8D9DFFC40C},Monte Brè,2555060586,swisstopo position (preferred); default label; official name
+2026-10-08T15:53:42Z,edit,Q692619,{7BB21E5D-CEB1-4279-8F15-916659EB50BA},Unterrothorn,2555060597,swisstopo position (preferred); default label; official name
+2026-10-08T15:53:46Z,edit,Q693468,{D398B5A7-DE9C-40A0-B9A1-BFEC2E5A32FD},Passo del Muretto,2555060610,source for position; default label; official name
+2026-10-08T15:53:49Z,edit,Q693822,{987AEDE1-3500-42D5-ADBA-81118017BA79},Schauenberg,2555060633,source for position; default label; official name
+2026-10-08T15:53:53Z,edit,Q734448,{289246FB-1AE3-4528-8C8F-ABB88D64C794},Mont Durand,2555060657,source for position; names in other languages (de alias); official name
+2026-10-08T15:53:56Z,edit,Q742342,{19E9F02C-9AD5-4A78-9B9E-2AAA4E14672F},Piz Zuort,2555060677,source for position; default label; rm label; official name
+2026-10-08T15:54:00Z,edit,Q742377,{97242014-2DEA-44FA-B71A-85E29190AC1D},Cima di Paina,2555060696,source for height; source for position; official name
+2026-10-08T15:54:03Z,edit,Q759100,{E15AE5E2-EA3B-477D-B1C5-2F7D665E345C},Auenberg,2555060718,source for height; source for position; default label; official name
+2026-10-08T15:54:07Z,edit,Q760595,{6528CDC5-F2CF-4D4A-84E6-E89D4CBD7EF5},Augstbordpass,2555060742,source for position; default label; official name
+2026-10-08T15:54:10Z,edit,Q760606,{1689F9B2-C2CF-4327-973C-F99AA23EF9A1},Augstmatthorn,2555060770,source for position; default label; official name
+2026-10-08T15:54:14Z,edit,Q762071,{56FB9F53-E755-4F39-B746-0A94801F7759},Verstanclagletscher,2555060793,default label; de label; official name
+2026-10-08T15:54:17Z,edit,Q782954,{BF3D6B59-BD92-48D9-ADB8-D87F0A89867B},Cima di Jazzi,2555060819,source for position; default label; official name
+2026-10-08T15:54:20Z,edit,Q784119,{CE8B5F6B-6A1D-4CA5-809B-66C2EE7C5922},Mont Gardy,2555060843,source for height; source for position; default label; official name
+2026-10-08T15:54:24Z,edit,Q797486,{5707B35B-4163-4115-B03E-4BEB77DDB6CB},Baarburg,2555060870,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:54:30Z,edit,Q806976,{0A9F8673-3658-4609-8CCC-9B9A3F6ABF09},Bantiger,2555060902,source for height; default label; official name
+2026-10-08T15:54:34Z,edit,Q827053,{13814BE0-D982-4594-A19F-E778B614D7F6},La Berra,2555060951,source for height; source for position; default label; official name
+2026-10-08T15:54:37Z,edit,Q831055,{5FEB42AE-23DA-486A-8196-95CD666C8756},Leiterli,2555060982,source for height; swisstopo position (preferred); default label; official name
+2026-10-08T15:54:41Z,edit,Q856199,{60D0895D-8398-4EC4-9621-D21C0B4513A7},Biberlichopf,2555061001,swisstopo position (preferred); default label; official name
+2026-10-08T15:54:44Z,edit,Q869695,{6D7B8BB3-847A-4467-9FDA-95BE6082D935},Lago Bianco,2555061010,default label; official name
+2026-10-08T15:54:48Z,edit,Q869778,{90B09135-E0D3-456F-9BD1-98BD3F7134B1},Col du Lein,2555061019,default label; official name
+2026-10-08T15:54:51Z,edit,Q869946,{3FD57EF3-3620-4B9B-BC8C-162A0AA4D9CD},Rawilpass,2555061029,source for position; official name
+2026-10-08T15:54:55Z,edit,Q869976,{6B13BA76-F1A9-400D-A94C-AA7AB5EEA1DC},Madrisahorn,2555061045,source for height; source for position; default label; official name
+2026-10-08T15:54:58Z,edit,Q870004,{336421E2-D153-4505-9ED0-FCB878FF6C08},Wätterlatte,2555061069,source for height; source for position; default label; official name
+2026-10-08T15:55:02Z,edit,Q870017,{96F18856-2865-4ED5-ADC9-EAA366E0B1B9},Glacier du Giétro,2555061083,default label; official name
