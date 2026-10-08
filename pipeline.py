@@ -272,6 +272,9 @@ def main():
     elif a.mode == "userpage":
         out("user page updated" if userpage(bot_site(1)) else "user page already up to date")
     elif a.mode == "run":
+        if sys.platform == "win32":               # keep Windows awake while the run lasts (released on exit)
+            import ctypes
+            ctypes.windll.kernel32.SetThreadExecutionState(0x80000000 | 0x00000001)
         site = bot_site(max(1, round(1 / a.rate)))
         refs = refs_for_today()
         total = Counter()
