@@ -138,6 +138,17 @@ def run_batch(site, rows, rate, refs):
     return stats, saved
 
 
+def publish_log():
+    """Commit and push edits.csv so the public log on GitHub stays current; a failed push never stops the bot."""
+    import subprocess
+    git = lambda *args: subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True)
+    git("add", "edits.csv")
+    if git("diff", "--cached", "--quiet").returncode:
+        saved = sum(1 for r in logged() if r["revid"])
+        git("commit", "-q", "-m", f"Edit log: {saved} saved edits")
+        git("push", "-q")
+
+
 # ---------------------------------------------------------------- checks after saving
 
 def check(entity, kind, row, changes):
@@ -271,6 +282,7 @@ def main():
             stats, saved = run_batch(site, rows, a.rate, refs)
             total.update(stats)
             problems = verify(saved)
+            publish_log()
             out(f"batch {b + 1}: {dict(stats)}; check: {len(saved) - len(problems)}/{len(saved)} ok")
             if problems:
                 out("stopping: problems after saving:", problems[:10])
