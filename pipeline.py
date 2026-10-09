@@ -161,13 +161,16 @@ def run_batch(site, rows, rate, refs):
 
 def publish_log():
     """Commit and push edits.csv so the public log on GitHub stays current; a failed push never stops the bot."""
-    import subprocess
     git = lambda *args: subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True)
-    git("add", "edits.csv")
-    if git("diff", "--cached", "--quiet").returncode:
-        saved = sum(1 for r in logged() if r["revid"])
-        git("commit", "-q", "-m", f"Edit log: {saved} saved edits")
+    try:
+        git("add", "edits.csv")
+        if git("diff", "--cached", "--quiet").returncode:
+            saved = sum(1 for r in logged() if r["revid"])
+            git("commit", "-q", "-m", f"Edit log: {saved} saved edits")
+        git("pull", "-q", "--rebase")             # code changes pushed from elsewhere
         git("push", "-q")
+    except OSError:                               # no git where the bot runs
+        pass
 
 
 # ---------------------------------------------------------------- checks after saving
