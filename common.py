@@ -348,7 +348,8 @@ def bot_site(throttle):
                 f"password_file = 'user-password.py'\nput_throttle = {throttle}\nmaxlag = 5\n"
                 "max_retries = 200\nretry_wait = 10\nretry_max = 120\n"
                 f"user_agent_description = {UA!r}\n")
-    with open(os.path.join(workdir, "user-password.py"), "w", encoding="utf-8") as f:
+    fd = os.open(os.path.join(workdir, "user-password.py"), os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with open(fd, "w", encoding="utf-8") as f:                    # readable by the bot's account only
         f.write(f"({user!r}, BotPassword({bp_name!r}, {password!r}))\n")
     os.environ["PYWIKIBOT_DIR"] = workdir
     import atexit
