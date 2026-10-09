@@ -99,8 +99,19 @@ def dist_m(lat1, lon1, lat2, lon2):
 # ---------------------------------------------------------------- downloads (latest release from swisstopo's STAC API)
 
 def curl_json(url, *extra):
-    return json.loads(subprocess.run(["curl", "-s", "-S", "-L", "--max-time", "600", "-A", UA, *extra, url],
-                                     capture_output=True, check=True).stdout)
+    import shutil
+    if shutil.which("curl"):
+        return json.loads(subprocess.run(["curl", "-s", "-S", "-L", "--max-time", "600", "-A", UA, *extra, url],
+                                         capture_output=True, check=True).stdout)
+    if extra:                                     # plain GETs only without curl (e.g. on Toolforge)
+        raise RuntimeError("curl is needed for this request")
+    import urllib.error
+    import urllib.request
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=600) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:           # like curl: hand back the error page, which then fails to parse
+        return json.loads(e.read())
 
 
 def latest_asset(collection, suffix):
@@ -321,10 +332,13 @@ def only_import_refs(claim):
 def bot_site(throttle):
     import shutil
     import tempfile
-    import winreg
-    with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as key:
-        login = winreg.QueryValueEx(key, "COMMONS_BOT_USER")[0]
-        password = winreg.QueryValueEx(key, "COMMONS_BOT_PASSWORD")[0]
+    if sys.platform == "win32":                   # the operator's PC: user environment in the registry
+        import winreg
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as key:
+            login = winreg.QueryValueEx(key, "COMMONS_BOT_USER")[0]
+            password = winreg.QueryValueEx(key, "COMMONS_BOT_PASSWORD")[0]
+    else:                                         # Toolforge: set with `toolforge envvars create`
+        login, password = os.environ.get("COMMONS_BOT_USER", ""), os.environ.get("COMMONS_BOT_PASSWORD", "")
     if "@" not in login or len(password) != 32:
         sys.exit("COMMONS_BOT_USER/COMMONS_BOT_PASSWORD are not a Special:BotPasswords pair; refusing to log in.")
     user, bp_name = login.split("@", 1)

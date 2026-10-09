@@ -15,6 +15,7 @@ import argparse
 import csv
 import datetime
 import json
+import subprocess
 import sys
 import time
 from collections import Counter
@@ -69,7 +70,7 @@ def fetch(ids):
         try:
             return curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
                              "&props=labels|aliases|descriptions|claims&ids=" + "|".join(ids))["entities"]
-        except (ValueError, KeyError):           # an error page instead of JSON, or an API error
+        except (ValueError, KeyError, OSError, subprocess.CalledProcessError):   # error page, API error, no network
             out(f"Wikidata did not answer, retrying in {attempt} min")
             time.sleep(60 * attempt)
     raise RuntimeError("Wikidata did not answer wbgetentities for 55 minutes")
@@ -223,6 +224,8 @@ def userpage(site):
 
 Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Association). To report a problem, please write on [[User talk:7804j]] or to info@oka.wiki. If the bot misbehaves and I'm not around, any administrator may block it.
 
+'''Source code''' (public, MIT licence): [https://github.com/Open-Knowledge-Association/oka-wikidata-bot github.com/Open-Knowledge-Association/oka-wikidata-bot], with the [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv list of every edit] the bot has made.
+
 == Task: geographic feature updates from swisstopo data ==
 Approved at [[Wikidata:Requests for permissions/Bot/OKA bot]]. Data: [https://www.swisstopo.admin.ch/en/landscape-model-swissnames3d swissNAMES3D] ({{{{Q|{SWISSNAMES3D}}}}}, release {header['release']}) and [https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d swissBOUNDARIES3D] ({{{{Q|{SWISSBOUNDARIES3D}}}}}), from the Federal Office of Topography.
 
@@ -230,7 +233,7 @@ For Swiss mountains, summits, hills, passes, lakes, reservoirs and glaciers, the
 
 * Items edited: {edited:,}. Items created: {created:,}. Last run: {last}.
 * Planned: {sum(1 for r in plan_rows if r['kind'] == 'edit'):,} items to check and {sum(1 for r in plan_rows if r['kind'] == 'create'):,} to create.
-* Every edit is listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv edits.csv]; source code (MIT licence): [https://github.com/Open-Knowledge-Association/oka-wikidata-bot oka-wikidata-bot].
+* Every edit is listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv edits.csv].
 """
     page = pywikibot.Page(site, "User:OKA bot")
     if page.exists() and page.text.strip() == text.strip():
