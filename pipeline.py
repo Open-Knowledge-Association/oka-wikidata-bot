@@ -15,6 +15,7 @@ import argparse
 import csv
 import datetime
 import json
+import os
 import subprocess
 import sys
 import time
@@ -161,7 +162,8 @@ def run_batch(site, rows, rate, refs):
 
 def publish_log():
     """Commit and push edits.csv so the public log on GitHub stays current; a failed push never stops the bot."""
-    git = lambda *args: subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True)
+    env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}    # never wait for a password prompt
+    git = lambda *args: subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True, env=env)
     try:
         git("add", "edits.csv")
         if git("diff", "--cached", "--quiet").returncode:
