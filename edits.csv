@@ -3223,3 +3223,503 @@ time,kind,qid,uuid,name,revid,changes
 2026-10-10T00:57:05Z,edit,Q22444220,{C8EA32DD-11A8-4C91-8EE1-C6ED43053B25},Höchst,2555452939,source for height; source for position; default label; official name; de label left out (clash with another item)
 2026-10-10T00:57:12Z,edit,Q22444227,{FDF2C10D-CFE0-4A39-B04D-24B608133F29},Höchst,2555452961,source for height; source for position; default label; official name; de label left out (clash with another item)
 2026-10-10T00:57:15Z,edit,Q22444235,{27E47774-E0B9-49A5-8883-DB1BCD9E6702},Höchstelli,2555452980,source for height; source for position; default label; de label; official name
+2026-10-10T00:57:22Z,edit,Q22444267,{594EF343-4CC8-4F9D-AA06-42C3BCC279C9},Höchstutz,2555453017,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T00:57:25Z,edit,Q22444299,{2D028F9D-06DD-45A3-A31A-B77608795D65},Höh Grat,2555453032,source for position; default label; de label; official name
+2026-10-10T00:57:28Z,edit,Q22444321,{1CE09330-BD72-4317-8C9F-5F0F02BAA3B5},Höhegg,2555453048,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T00:57:32Z,edit,Q22444329,{0DCAAE75-1866-4C40-823C-49201454808E},Höhenberg,2555453058,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T00:57:35Z,edit,Q22444343,{09427A4E-143E-4AE1-8FF1-C6C420BBF3DC},Höhenbiel,2555453079,source for position; default label; de label; official name
+2026-10-10T00:57:38Z,edit,Q22444349,{78CC486C-A140-4543-9E59-385A4D026D4E},Höhflue,2555453092,source for position; default label; de label; official name
+2026-10-10T00:57:41Z,edit,Q22444376,{FE0918D9-9213-47D2-953E-7D933634A5DC},Höhi Egg,2555453114,source for height; source for position; default label; de label; official name
+2026-10-10T00:57:45Z,edit,Q22444451,{F17C1B34-BB42-4050-AD34-149294CB4FB5},Höji Sulegg,2555453137,source for height; source for position; default label; de label; official name
+2026-10-10T00:57:48Z,edit,Q22444520,{AE0D97C4-D7F4-459A-B56D-AF3FA5507C53},Höreli,2555453158,source for position; default label; de label; official name
+2026-10-10T00:57:54Z,edit,Q22444531,{CAECBC2E-4681-4292-9AEF-449421D41E0C},Höreli,2555453183,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T00:58:01Z,edit,Q22444551,{BAD6A5FB-24D0-4584-988C-661192BF422B},Höreli,2555453219,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T00:58:07Z,edit,Q22444561,{3E1238D2-11ED-48BA-B4B7-038E63D50591},Höreli,2555453254,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T00:58:10Z,edit,Q22444569,{67637B74-D55D-4955-A826-1F9A742A5DD5},Höri,2555453270,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T00:58:14Z,edit,Q22444830,{416F1087-D6C9-485B-A5EE-F54AEACF1349},Anuchnubel,2555453280,source for height; source for position; default label; de label; official name
+2026-10-10T00:58:17Z,edit,Q22444979,{330B041D-9507-4F83-9994-C0565DA57BDA},Etscherzapfen,2555453300,swisstopo position (preferred); default label; de label; official name
+2026-10-10T00:58:20Z,edit,Q22445042,{96D4B0AF-DBC5-4F61-8C8F-DE9CB8C50FE0},Sunnenberg,2555453313,source for height; source for position; default label; de label; official name
+2026-10-10T00:58:24Z,edit,Q22445062,{7E11673C-D704-4270-80E4-0B3C1BECD580},Sunnennösseli,2555453326,source for position; default label; de label; official name
+2026-10-10T00:58:27Z,edit,Q22445095,{036E5500-F18F-449F-955C-05439386CFC4},Sunnig,2555453337,source for height; source for position; default label; de label; official name
+2026-10-10T00:58:30Z,edit,Q22445114,{4938BBF1-052A-4A60-BAA3-3580A4D33947},Sunnig Wichel,2555453353,source for position; default label; official name
+2026-10-10T00:58:34Z,edit,Q22445141,{26B850D4-CBEA-40A2-8672-5465658E5FB8},Sunnsbiel,2555453367,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T00:58:37Z,edit,Q22445150,{66394F87-0D9D-42BE-900E-105E4DC1959E},Sunntigberg,2555453380,source for height; source for position; default label; de label; official name
+2026-10-10T00:58:40Z,edit,Q22445252,{FBAC2EA7-E9A3-4A44-8782-D8EF98F9CD39},Carraye,2555453388,source for height; source for position; default label; fr label; official name
+2026-10-10T00:58:43Z,edit,Q22445425,{09BD45B0-5344-41DB-9179-F8C6AB66831E},Etzelstock,2555453398,source for position; default label; de label; official name
+2026-10-10T00:58:47Z,edit,Q22445450,{86AA25C5-C54D-431C-BB27-8FF1136030B4},Etzlibergstock,2555453411,source for height; source for position; default label; de label; official name
+2026-10-10T00:58:50Z,edit,Q22445511,{302A9031-A45B-46F8-9681-FDB383B2D332},Maschgenkamm,2555453438,source for position; default label; official name
+2026-10-10T00:58:53Z,edit,Q22446063,{6D378D74-0B65-435F-832B-7A98924C98D1},Euschelsflue,2555453458,swisstopo position (preferred); default label; de label; official name
+2026-10-10T00:58:56Z,edit,Q22446816,{36E32657-9594-4DCD-81EE-E3B378C2A616},Irgilihorn,2555453485,source for position; default label; de label; official name
+2026-10-10T00:59:00Z,edit,Q22446818,{549A0E92-22E7-4451-A96B-87AE7F635D2F},Sur l'Enfer,2555453511,source for position; default label; fr label; official name
+2026-10-10T00:59:03Z,edit,Q22447580,{5937C9AF-ED2F-45D2-929B-28F63A65841A},Carungas,2555453534,source for height; source for position; default label; rm label; official name
+2026-10-10T00:59:06Z,edit,Q22447946,{015CF873-17A5-4AFF-B5B4-947FC45F4964},Arblihore,2555453552,source for height; source for position; default label; de label; official name
+2026-10-10T00:59:10Z,edit,Q22448065,{42C3326A-DD55-4713-A003-A15AD91D059A},Roc à l'Ours,2555453566,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T00:59:13Z,edit,Q22448075,{F930726D-C541-4566-B491-F451227C6E9E},Roc Blanc,2555453581,source for position; default label; fr label; official name
+2026-10-10T00:59:16Z,edit,Q22448095,{A0F196A0-103A-47CD-A498-AA10F62B2407},Roc de Cornet,2555453592,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T00:59:20Z,edit,Q22448116,{9D2302D2-F14D-4C61-901F-BCD338F7398D},Roc de la Tsa,2555453605,source for height; source for position; default label; fr label; official name
+2026-10-10T00:59:23Z,edit,Q22448126,{7B00D5F7-03D4-47F4-8EEF-61D8A7E9E21D},Roc de la Vache,2555453619,source for position; default label; official name
+2026-10-10T00:59:26Z,edit,Q22448138,{0447215C-3C7E-4071-B8AF-0BB2C06E5E47},Roc de la Vache,2555453632,swisstopo position (preferred); default label; official name
+2026-10-10T00:59:30Z,edit,Q22448147,{AAAF7334-E72B-4121-A3C4-1000B262A773},Roc des Plines,2555453647,source for height; source for position; default label; fr label; official name
+2026-10-10T00:59:33Z,edit,Q22448165,{326DB95E-EF59-497E-B77E-4167C3ACC262},Caschlè,2555453658,source for height; source for position; default label; rm label; official name
+2026-10-10T00:59:36Z,edit,Q22448172,{78B92DB3-75A5-4AA1-8B0E-0AE606092115},Caschlera,2555453669,source for height; source for position; default label; rm label; official name
+2026-10-10T00:59:40Z,edit,Q22448214,{45CE7716-2173-450D-B44F-3A7639619AEE},Arbächnubel,2555453688,source for height; source for position; default label; de label; official name
+2026-10-10T00:59:43Z,edit,Q22448673,{2D9B8676-D474-43E8-BC35-500D36AFF291},Sustenlochspitz,2555453702,source for height; source for position; default label; official name
+2026-10-10T00:59:46Z,edit,Q22448684,{544F91DC-2384-41E4-B730-44C61B1D9BDD},Sustenspitz,2555453719,source for height; source for position; default label; de label; official name
+2026-10-10T00:59:49Z,edit,Q22449387,{2BE808A8-E6BE-4084-8959-BC9F80706F51},Castalegns,2555453733,source for height; source for position; default label; rm label; official name
+2026-10-10T00:59:53Z,edit,Q22449508,{D2A3204E-735E-4B09-B8C5-E008BC0066C8},Matarello,2555453751,source for height; source for position; default label; it label; official name
+2026-10-10T00:59:56Z,edit,Q22449522,{B9EF967B-77BF-4E4B-9AB4-03106A23D344},Castello,2555453764,source for height; source for position; default label; it label; official name
+2026-10-10T00:59:59Z,edit,Q22449923,{7C71350C-A814-47BD-A666-9306471016C9},Mater de Paia,2555453782,source for height; source for position; default label; it label; official name
+2026-10-10T01:00:03Z,edit,Q22450843,{1357AA7B-3A7D-451B-B5B6-ED40A525889D},Mathildespitze,2555453797,source for position; default label; de label; official name
+2026-10-10T01:00:06Z,edit,Q22450972,{4AEB8522-9848-4115-B9DD-347914E95B18},Isenwegg,2555453816,source for position; default label; de label; official name
+2026-10-10T01:00:09Z,edit,Q22451315,{5CB50040-835A-4CFC-810D-079BBC365E26},Rocher Plat,2555453834,source for height; source for position; default label; official name
+2026-10-10T01:00:12Z,edit,Q22451334,{A1584BF6-78C1-41F8-8EDC-E6079838EA3E},Rocher Pourri,2555453858,swisstopo height (preferred); swisstopo position (preferred); default label; fr label; official name
+2026-10-10T01:00:16Z,edit,Q22451605,{3B255B8C-9D3F-4E1A-891F-78231E495275},Matro di Stinchè,2555453888,swisstopo height (preferred); source for position; default label; it label; official name
+2026-10-10T01:00:19Z,edit,Q22451958,{98DC86B2-1BBE-4037-9521-9C01E38B93BA},Ostermundigeberg,2555453919,source for position; default label; de label; official name
+2026-10-10T01:00:22Z,edit,Q22452674,{CA4BA348-DD41-489B-85FF-061A2ECAF1AA},Cauma,2555453951,source for height; source for position; default label; rm label; official name
+2026-10-10T01:00:26Z,edit,Q22452691,{DEB7A328-9674-4E96-8C4E-86745E0BA9B5},Arnehubel,2555453967,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:00:29Z,edit,Q22452736,{6F342550-69F3-45C4-98BE-D7EBD49CC597},Matthorn,2555453980,source for height; source for position; default label; official name
+2026-10-10T01:00:32Z,edit,Q22452816,{28C24BAB-7993-40F1-9E2E-D5296DCF7F72},Arnibergegg,2555453993,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:00:35Z,edit,Q22452850,{7376A8B0-83EB-480D-9AD4-4FDAA1F5AEB4},Mattner First,2555454006,source for height; source for position; default label; de label; official name
+2026-10-10T01:00:39Z,edit,Q22452855,{2A8480D4-CABF-47E8-B96E-76B58BBB4175},Caval Drossa,2555454020,source for height; source for position; default label; it label; official name
+2026-10-10T01:00:42Z,edit,Q22452861,{BC6B68F1-D28E-4772-92B6-97F3F38AE6B4},Mattner Stock,2555454035,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:00:45Z,edit,Q22452896,{7763CF57-400D-4D8A-9B34-C8C12E96C1B8},Arnifirst,2555454047,source for position; default label; de label; official name
+2026-10-10T01:00:49Z,edit,Q22452921,{AB770C6D-3A05-4120-AF65-66C7810BA50F},Arnitriste,2555454060,source for height; source for position; default label; de label; official name
+2026-10-10T01:00:52Z,edit,Q22453118,{5A36FF57-412E-4425-815D-5C2470CF90E6},Falhörnli,2555454073,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:00:56Z,edit,Q22453360,{B06E9160-E98A-4B15-AF0A-28A9355F6F4E},Arnätschistand,2555454082,source for height; source for position; default label; de label; official name
+2026-10-10T01:00:59Z,edit,Q22453441,{74FB23E5-5831-4F25-AC0A-68D16A4F7B4A},Caviduraspitz,2555454096,source for height; source for position; default label; de label; official name
+2026-10-10T01:01:02Z,edit,Q22453488,{5E1CA11C-C8EF-4A21-8BB2-7CFC1F9BC56D},Matzlenstock,2555454105,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T01:01:05Z,edit,Q22453514,{BB43B084-532E-4CE5-8BBF-7E9FF80037A3},Arpeliflue,2555454123,source for position; default label; de label; official name
+2026-10-10T01:01:09Z,edit,Q22453518,{42A0BFAD-8124-40C1-8444-78134703E734},Fallbodenhubel,2555454144,source for height; source for position; default label; de label; official name
+2026-10-10T01:01:12Z,edit,Q22453523,{6444FF3C-09F0-44D3-BFF3-9BBC52B609A4},Arpelihore,2555454169,source for height; source for position; default label; de label; official name
+2026-10-10T01:01:15Z,edit,Q22453892,{EEE90045-D877-4F35-8303-58720367FA3C},Mauerhorn,2555454196,source for position; default label; de label; official name
+2026-10-10T01:01:19Z,edit,Q22454018,{8AFA5230-207F-45B1-A7E9-896552C73536},Maulerhubel,2555454222,source for position; default label; de label; official name
+2026-10-10T01:01:22Z,edit,Q22454822,{6CC7CAE2-205F-4961-9FEB-884E934BA063},Ars,2555454245,source for height; source for position; default label; de label; official name
+2026-10-10T01:01:25Z,edit,Q22454833,{57CAEB9D-3D06-4583-B774-CD4272CFE38F},Arsass,2555454263,source for height; source for position; default label; rm label; official name
+2026-10-10T01:01:29Z,edit,Q22454996,{3A409BED-2395-480F-A945-1C189C3BB49B},Sarotlaspitz,2555454279,source for position; default label; official name
+2026-10-10T01:01:32Z,edit,Q22455006,{9436A179-E1BC-4AB2-A693-6CAC6A994762},Nördlicher Chalausspitz,2555454294,source for position; default label; official name
+2026-10-10T01:01:35Z,edit,Q22455016,{22CE641A-EE88-4060-8346-8D88C793D356},Südliches Wysshorn,2555454306,source for position; default label; official name
+2026-10-10T01:01:38Z,edit,Q22455043,{473C5D3F-9FFB-4C72-B3EE-B2153DBA762A},Artg Diesrut,2555454323,source for height; source for position; default label; rm label; official name
+2026-10-10T01:01:42Z,edit,Q22455081,{0873236E-CBEA-4654-84BC-EC2D1CB7D41A},Fanenstock,2555454336,swisstopo position (preferred); default label; official name
+2026-10-10T01:01:45Z,edit,Q22455228,{3C08B3D8-3557-4CD6-AB53-2BFD3654006B},Süessegg,2555454349,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:01:48Z,edit,Q22455838,{BC6F85EC-4B00-4949-B85E-475FAC706371},Farcletta,2555454362,swisstopo height (preferred); source for position; default label; rm label; official name
+2026-10-10T01:01:52Z,edit,Q22455884,{E897EA5F-9C6B-4D70-9311-54EAEBB6BBCC},Farengütsch,2555454380,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T01:01:55Z,edit,Q22455896,{F2ADC5EA-9438-4A27-8EA1-7DED2CBF889B},Farenstock,2555454392,source for height; source for position; default label; de label; official name
+2026-10-10T01:01:58Z,edit,Q22455916,{DE46ED9A-C141-4320-B245-60789BEFEFCA},Farenstöckli,2555454405,source for position; default label; de label; official name
+2026-10-10T01:02:02Z,edit,Q22455917,{4D0696EA-0EE7-4AD5-9AC8-8D7EF788AAAF},Arvidossen,2555454424,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:16:40Z,edit,Q22456104,{51942C36-6C1E-43B0-B7D0-9B9F057899CE},Sächsmoor,2555455685,source for position; default label; official name
+2026-10-10T01:16:43Z,edit,Q22456116,{961C9ADA-96A5-405F-A685-E185A7B42F02},Sädelhorn,2555455694,source for position; default label; official name
+2026-10-10T01:16:46Z,edit,Q22456138,{503ADA6E-6F84-43BC-9D45-DE6CBCFB8DB6},Säsagit,2555455704,source for height; source for position; default label; de label; official name
+2026-10-10T01:16:50Z,edit,Q22456157,{E59C665F-89E2-46F6-9C62-CEB139C39A60},Sässchopf,2555455711,source for height; swisstopo position (preferred); default label; de label; official name
+2026-10-10T01:16:53Z,edit,Q22458216,{6A649E73-B7FA-476B-A33C-FF7B6BB6EAC4},Asperstrihe,2555455722,source for height; source for position; default label; de label; official name
+2026-10-10T01:16:56Z,edit,Q22458262,{F7AAC294-D05A-43BA-B29D-0E414B314629},Aspiegg,2555455736,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T01:17:00Z,edit,Q22458379,{05F8EDE8-907A-438B-9D96-AF24333AD629},Taghorn,2555455750,swisstopo height (preferred); source for position; de label; official name
+2026-10-10T01:17:03Z,edit,Q22458509,{4AAA163A-E8FE-4732-94C7-949F71A7F682},Tagweidlichopf,2555455764,source for height; source for position; default label; official name
+2026-10-10T01:17:06Z,edit,Q22458854,{EFF98262-2D8F-41F4-852D-BDE5F387E92A},Astelhorn,2555455776,source for position; default label; de label; official name
+2026-10-10T01:17:09Z,edit,Q22459336,{927CD3AB-3449-476F-AC73-F44DC04D0CB8},Roggenflue,2555455791,swisstopo position (preferred); default label; de label; official name
+2026-10-10T01:17:13Z,edit,Q22459348,{FF288CE3-34BF-4B40-B874-C4A135A9932C},Roggenstöckli,2555455809,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:17:16Z,edit,Q22459561,{CDB3DBEA-DC63-4797-AC78-1C1A9DDBCA7C},Fedenstock,2555455830,source for height; source for position; default label; de label; official name
+2026-10-10T01:17:19Z,edit,Q22459609,{9B690126-BE55-4752-88AC-B3F2DC1F6DFC},Fedistock,2555455854,source for height; source for position; default label; official name
+2026-10-10T01:17:23Z,edit,Q22459981,{3078CDCE-B23D-491C-BCFF-FCC460DC3320},Feissihubel,2555455874,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:17:26Z,edit,Q22460074,{17072F5F-C8F1-4580-A44A-F0671F6E4CC3},Feldimoosegg,2555455897,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:17:30Z,edit,Q22460254,{D505C751-460E-4501-B489-117C3DE781F4},Feldmoshubel,2555455915,source for position; default label; de label; official name
+2026-10-10T01:17:33Z,edit,Q22460505,{D1906C3C-79DD-4BFB-BA39-D7AD632BCE2C},Talbühel,2555455936,source for position; default label; de label; official name
+2026-10-10T01:17:36Z,edit,Q22460673,{897ABA59-0754-4BFB-AAD3-324849047116},Felsberger Calanda,2555455946,source for position; default label; official name
+2026-10-10T01:17:39Z,edit,Q22460832,{A3712536-DDF8-4C12-A98C-FC9D47C6F85E},Talistock,2555455956,source for height; source for position; default label; de label; official name
+2026-10-10T01:17:43Z,edit,Q22460859,{733EA456-FBFD-4C25-B105-E5439D6F906A},Atlas,2555455970,source for position; default label; rm label; official name
+2026-10-10T01:17:46Z,edit,Q22460982,{F596F983-2D79-4D01-8574-F7F586B0579A},Rond Rochet,2555455981,source for position; default label; fr label; official name
+2026-10-10T01:17:49Z,edit,Q22461081,{411B488C-EDEC-4D61-B54E-4389B8C43176},Ronenegg,2555455993,source for position; default label; de label; official name
+2026-10-10T01:17:53Z,edit,Q22461204,{3DCB7483-873F-490C-9A89-F2021C20F637},Talschien,2555456007,source for height; source for position; default label; de label; official name
+2026-10-10T01:17:56Z,edit,Q22461511,{3CD34FFE-DFF3-4890-AFA7-527C6A768FD8},Fergenhorn,2555456025,source for position; default label; de label; official name
+2026-10-10T01:17:59Z,edit,Q22462188,{85B02E3E-EABF-4FA4-822C-90DBD893AF6C},Roriwanghorn,2555456036,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:18:03Z,edit,Q22462325,{F2AC1278-B520-49A0-A5CE-A423521B1912},Taminser Calanda,2555456045,source for height; source for position; default label; de label; official name
+2026-10-10T01:18:06Z,edit,Q22462499,{2FA719EF-F1A7-4014-AC33-70F10BFB01B3},Augstberg,2555456067,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:18:09Z,edit,Q22462539,{C1607E2B-350C-40FF-8C4E-6E8A5567A9DC},Tanatzhöhi,2555456081,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:18:12Z,edit,Q22462565,{8D21914C-AF0C-4F18-AD98-AEC7CA4C6024},Augstkummenhorn,2555456093,source for position; default label; de label; official name
+2026-10-10T01:18:16Z,edit,Q22462721,{7809D75D-9FAB-4A26-95C9-4B8C1621FDDB},Tanèda,2555456109,source for height; source for position; default label; it label; official name
+2026-10-10T01:18:19Z,edit,Q22462920,{3984EAF8-7D52-400D-9C97-59CB153CB309},Fernerspitz,2555456127,source for position; official name
+2026-10-10T01:18:22Z,edit,Q22462954,{BD1B03CF-3685-449A-B5BF-3D53F27EA601},Aula,2555456140,swisstopo height (preferred); source for position; default label; it label; official name
+2026-10-10T01:18:26Z,edit,Q22463183,{980F6E69-B669-40C5-897C-047AD0719574},Aulinachopf,2555456160,source for position; default label; official name
+2026-10-10T01:18:29Z,edit,Q22463225,{548E220D-31CD-42E5-B8C5-29DA21492D28},Ault da Val Gronda,2555456183,swisstopo height (preferred); source for position; default label; rm label; official name
+2026-10-10T01:18:32Z,edit,Q22463320,{70F2B951-1133-4706-912B-E8C572181F7A},Oxni,2555456200,source for position; default label; de label; official name
+2026-10-10T01:18:36Z,edit,Q22463502,{98FDD6B6-F5EC-4A62-9D46-D1A4E5DE599F},Tannenschild,2555456221,source for position; default label; de label; official name
+2026-10-10T01:18:39Z,edit,Q22463512,{86391015-3EAB-402D-8CC4-401207E86853},Tannenstock,2555456242,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:18:42Z,edit,Q22463745,{77F3965E-BDA0-4EA7-8FAA-2DD71AC7068C},Tannkopf,2555456266,source for position; default label; de label; official name
+2026-10-10T01:18:46Z,edit,Q22463762,{9B7593C1-689E-4120-828F-CD409219F14D},Tannmattchopf,2555456281,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:18:49Z,edit,Q22464048,{FE6B66D4-8F05-4E25-86B4-FA94574AD295},Austock,2555456299,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:18:52Z,edit,Q22464112,{C41A7B7F-E5C8-4DBA-8986-90177C8DB8DE},Rosenhöchi,2555456310,source for height; source for position; default label; de label; official name
+2026-10-10T01:18:56Z,edit,Q22464271,{CD7B9F3E-69F8-4CED-B5F0-EF76849BB90D},Fidisberg,2555456327,source for height; source for position; default label; de label; official name
+2026-10-10T01:18:59Z,edit,Q22464530,{A0F58F83-75F3-4C6B-BE20-B3AE46522D69},Ross,2555456343,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:02Z,edit,Q22464675,{51146F28-1977-4F7D-86C9-2F78C2F2D9D1},Fiescherhorli,2555456353,source for height; source for position; official name
+2026-10-10T01:19:05Z,edit,Q22464727,{1FF9332B-9842-4A76-8882-170ED135941A},Ross Chopf,2555456373,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:12Z,edit,Q22464744,{0E578645-5DC4-4BDC-96E9-659DD969DF4E},Ross Chopf,2555456403,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:19:15Z,edit,Q22465891,{29266C3C-7597-4F62-9A32-26C5629F30C4},Rossa,2555456425,source for height; source for position; default label; it label; official name
+2026-10-10T01:19:18Z,edit,Q22465953,{3A5D7058-BFC3-4FD0-A083-8531786C864A},Rossbiel,2555456439,source for position; default label; de label; official name
+2026-10-10T01:19:22Z,edit,Q22465988,{38D73E81-DE2E-4B1E-B27E-FA7D2B80BAD8},Rossbodenegg,2555456454,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:25Z,edit,Q22465999,{2601C8D2-F911-4538-A8FD-72E367F07960},Rossbodenstock,2555456468,source for height; source for position; default label; de label; official name
+2026-10-10T01:19:28Z,edit,Q22466026,{1992B17A-3E53-48CA-9B5E-955C3A5A1DC7},Filo delle Lettere,2555456489,source for height; source for position; default label; official name
+2026-10-10T01:19:32Z,edit,Q22466163,{5A446E44-01C3-49F5-AF23-B0DA33395398},Rossflue,2555456505,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:35Z,edit,Q22466172,{F95A7178-C49D-4870-A4F3-F2B17F8B0F50},Rossgrabenegg,2555456519,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:38Z,edit,Q22466319,{23A824F0-3C51-484D-ABF9-01CA1E6867B7},Rosso,2555456536,source for height; source for position; default label; it label; official name
+2026-10-10T01:19:41Z,edit,Q22466346,{247190C1-6FB1-4B7C-B6F4-067E7ED11F62},Rossstock,2555456553,source for position; default label; official name
+2026-10-10T01:19:45Z,edit,Q22466385,{823D9649-76E4-4DCF-911A-8CC34D244457},Rossweidlihubel,2555456572,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:48Z,edit,Q22466569,{C5644442-D409-4175-9336-0448A8AF323D},Rot Gitschen,2555456591,source for height; source for position; default label; de label; official name
+2026-10-10T01:19:51Z,edit,Q22466600,{7B4E5723-2577-40F7-B53E-E02329A02142},Rot Grind,2555456616,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:19:55Z,edit,Q22466622,{090649FC-EB69-481F-A2F7-16CD6E7800DB},Rot Horn,2555456647,source for position; default label; de label; official name
+2026-10-10T01:19:58Z,edit,Q22466631,{368258E1-9BFD-4568-9CB4-6CD1E0BEFE3B},Rots Hore,2555456673,source for height; source for position; default label; official name
+2026-10-10T01:20:01Z,edit,Q22466639,{227027DA-951E-4698-89E3-C6EB591119E9},Rot Nollen,2555456692,source for position; default label; de label; official name
+2026-10-10T01:20:05Z,edit,Q22466651,{B71493CE-BEA2-4680-8E6C-6B021226DF21},Rot Nossen,2555456708,source for position; default label; de label; official name
+2026-10-10T01:20:08Z,edit,Q22466668,{6B28B5F8-E40C-45F4-BA8C-504A4FFFB616},Rot Schutz,2555456722,source for height; source for position; default label; de label; official name
+2026-10-10T01:20:11Z,edit,Q22466681,{3FB6B9F5-9A12-47D4-8066-9941850128EA},Rot Stock,2555456736,source for position; default label; de label; official name
+2026-10-10T01:20:18Z,edit,Q22466690,{7E5090D3-8DE3-4436-B2B9-967FEA99416E},Rot Stock,2555456766,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:20:21Z,edit,Q22466710,{6FEC4B19-93F7-416E-AECF-A93FC2740A31},Rot Turm,2555456779,source for height; source for position; default label; de label; official name
+2026-10-10T01:20:24Z,edit,Q22466792,{38DB43BD-7E1B-4792-95AE-B8AAD8336897},Rotberg,2555456795,source for position; default label; de label; official name
+2026-10-10T01:20:31Z,edit,Q22466801,{9A49FBDC-DAA3-46B1-97AE-5198DCF7958A},Rotberg,2555456822,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:20:34Z,edit,Q22466828,{9DCD840E-39B9-4DE6-8794-14BCBFE33557},Rotbrätthoren,2555456844,source for height; source for position; default label; de label; official name
+2026-10-10T01:20:37Z,edit,Q22466840,{268A9347-691D-499F-9371-3189C2E045F6},Rotchnubel,2555456867,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:20:41Z,edit,Q22466874,{308BDFD9-982C-4B68-A401-68B7DA97E69E},Rote Nollen,2555456881,source for position; default label; de label; official name
+2026-10-10T01:20:44Z,edit,Q22466885,{8F47982D-D137-481B-89D6-64DB8A379362},Rote Schije,2555456895,source for position; default label; de label; official name
+2026-10-10T01:20:47Z,edit,Q22466898,{3068CCFA-D299-41B4-98EA-45054F7769CF},Rote Totz,2555456909,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:20:51Z,edit,Q22466909,{5AB5F629-9E80-4FC9-BC26-48E7C29252FA},Rote Tätsch,2555456930,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T01:20:54Z,edit,Q22466917,{D6F13B53-54FF-4B79-B911-A1D04CBB446A},Roteberg,2555456953,source for position; default label; de label; official name
+2026-10-10T01:20:57Z,edit,Q22466928,{F7D044B0-8DC9-4FA6-A394-FAA394C832A2},Rotefluespitz,2555456982,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:21:01Z,edit,Q22466938,{28EEAFBF-DAA6-4D43-9F2F-4987A037BF16},Rotegg,2555457009,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:21:04Z,edit,Q22466947,{450662E5-532F-4624-B3D3-5A8AA7F25528},Roten,2555457029,source for height; source for position; default label; de label; official name
+2026-10-10T01:21:07Z,edit,Q22466957,{F7D2AA34-3C60-4840-A793-006DA1314129},Roten Eggen,2555457049,source for height; source for position; default label; de label; official name
+2026-10-10T01:21:07Z,edit,Q22466979,{6AB3B8E5-65D9-4F50-AC44-30687BD4F3D0},Roten Turra,,
+2026-10-10T01:21:11Z,edit,Q22467000,{3D2E90ED-84F9-42CD-969A-6DE0D1E73EFF},Rotenegg,2555457060,source for height; source for position; default label; de label; official name
+2026-10-10T01:21:14Z,edit,Q22467024,{9D810B8C-1ADC-42C4-BD89-53D05D3CB50A},Rot Spitz,2555457078,source for position; default label; official name
+2026-10-10T01:21:17Z,edit,Q22467174,{DFE718FF-33A2-451E-85D8-00F197CC6658},Rothoren,2555457097,source for position; default label; de label; official name
+2026-10-10T01:21:20Z,edit,Q22467187,{17DA0C84-22C8-42D0-8747-6B348E6C82B7},Rothorn,2555457110,source for height; source for position; default label; de label; official name
+2026-10-10T01:21:27Z,edit,Q22467226,{EEBD5909-E8BA-4335-8223-21464A82F1AA},Rothorn,2555457145,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:21:33Z,edit,Q22467242,{AE4022AB-7F57-4984-8A72-783F829885D1},Rothorn,2555457172,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:21:39Z,edit,Q22467252,{04266F24-0AB3-47AA-BC5E-98804CD74FF2},Rothorn,2555457217,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:21:45Z,edit,Q22467268,{E7E2A6EF-6724-472A-88B0-AFCF5560726D},Rothorn,2555457261,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:21:52Z,edit,Q22467281,{B8C8D6D8-9B2B-4590-B48E-C79D3587C174},Rothorn,2555457305,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:21:58Z,edit,Q22467289,{F0E8070D-D0E2-4DFA-BE64-D08D5B051170},Rothorn,2555457346,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:22:04Z,edit,Q22467298,{FCE73F11-3BD4-4B91-9EB2-D4DB7CC831A3},Rothorn,2555457395,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:22:11Z,edit,Q22467309,{7BCDD93A-9634-48A3-BEA9-C5046B1F4853},Rothorn,2555457421,source for height; source for position; names in other languages (it label); official name; de label left out (clash with another item)
+2026-10-10T01:22:17Z,edit,Q22467319,{C158B8FA-76F6-4F3D-8CE9-2FC0411580CB},Rothorn,2555457448,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:22:20Z,edit,Q22467329,{AE5BD035-E56F-491F-BE08-C6EE8CC74FA0},Rothorn,2555457459,source for height; source for position; default label; official name
+2026-10-10T01:22:27Z,edit,Q22467340,{87704F0A-1824-4F3B-AFAD-2F28FA80F1D3},Rothorn,2555457493,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:22:30Z,edit,Q22467349,{23C600A7-3183-4D1F-9BB2-FC1F14883454},Rothorn,2555457508,source for position; default label; official name
+2026-10-10T01:22:36Z,edit,Q22467368,{918A4983-FA1F-41B9-BDEC-F21676876456},Rothorn,2555457537,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:22:40Z,edit,Q22467492,{141EEDDB-8F14-457D-A5F9-F45952A0F370},Roti Chüe,2555457557,source for position; default label; de label; official name
+2026-10-10T01:22:43Z,edit,Q22467549,{3D925939-C760-4060-97F5-DF38D9830347},Rotighorn,2555457579,source for height; source for position; default label; de label; official name
+2026-10-10T01:22:46Z,edit,Q22467561,{C76905D6-EFB0-4A5B-8197-DE626D3099D7},Rotrüfner,2555457605,source for position; default label; official name
+2026-10-10T01:22:50Z,edit,Q22467570,{63537689-B834-4767-8B78-15F833FC91CF},Rots Brätt,2555457624,source for position; default label; de label; official name
+2026-10-10T01:22:53Z,edit,Q22467578,{252D4A28-AEC8-4402-AEBF-45E926991F6D},Rots Stockji,2555457645,source for position; default label; de label; official name
+2026-10-10T01:22:56Z,edit,Q22467589,{EB179ECE-ADA5-4451-9EA1-05509CB5EE38},Rotspitz,2555457667,source for height; source for position; default label; de label; official name
+2026-10-10T01:23:00Z,edit,Q22467611,{30D3420E-E42A-465A-8ED0-1B658EEE2CA3},Rotstein,2555457687,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:23:06Z,edit,Q22467627,{CED9EA0C-02C3-414F-A43C-5FA3817779AE},Rotstock,2555457734,swisstopo height (preferred); swisstopo position (preferred); default label; official name; de label left out (clash with another item)
+2026-10-10T01:23:12Z,edit,Q22467635,{E226F6D2-3FA8-4BE4-A0D1-21D816BD7052},Rotstock,2555457761,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:23:19Z,edit,Q22467644,{E6297913-0B1D-4C68-92E9-361F61678972},Rotstock,2555457799,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:23:22Z,edit,Q22467667,{E2A00218-9B73-48AF-8690-7F23F71F77D8},Rotstogg,2555457817,source for height; swisstopo position (preferred); default label; official name
+2026-10-10T01:23:28Z,edit,Q22467676,{8A4BD3D1-1E56-4BD2-8FEE-1CB929EDE056},Rotstock,2555457854,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:23:35Z,edit,Q22467686,{600E2859-ACBF-4E44-811B-FE8C0A3A2EBC},Rotstock,2555457885,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:23:38Z,edit,Q22467859,{D010987B-1737-41ED-8448-08EA41064E85},Rottor,2555457903,source for position; default label; de label; official name
+2026-10-10T01:23:41Z,edit,Q22467867,{BDED63F1-8BB8-4DB9-81E6-F37D3A5EBA02},Rotturm,2555457921,source for position; default label; de label; official name
+2026-10-10T01:23:45Z,edit,Q22467888,{69E1E8EF-BC1D-44E6-A376-621209E975FA},Rottällihorn,2555457945,source for position; default label; de label; official name
+2026-10-10T01:23:48Z,edit,Q22468111,{B9D04A2E-6810-4232-92B9-27ACB669CAC1},Finsterbüel,2555457969,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:23:51Z,edit,Q22469114,{07960F88-9E58-4DD1-9E0A-DD27D1469AC3},Jakobiger,2555457991,source for height; source for position; default label; de label; official name
+2026-10-10T01:23:54Z,edit,Q22469119,{1E249DEA-596A-4E5F-AED7-BA71DEC58C09},Jakobsberg,2555458017,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T01:23:58Z,edit,Q22469551,{ABDB41A0-479A-4C10-8E05-2D0892B3D828},Firenstöckli,2555458042,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:24:01Z,edit,Q22469606,{1890A1AD-195B-4B59-B679-B74C42371E15},Bachegg,2555458060,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:38:10Z,edit,Q22469780,{AD7D5D36-7080-453C-89AB-DCE58BD4DC7C},Bachscheitistock,2555459804,swisstopo height (preferred); default label; de label; official name
+2026-10-10T01:38:13Z,edit,Q22469789,{458218DA-126F-4B82-97CF-014B346E856C},Firnstock,2555459826,source for position; default label; de label; official name
+2026-10-10T01:38:16Z,edit,Q22469793,{F42314B7-CE41-46F9-80D0-3CC045BEDA67},Bachtelhörnli,2555459850,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T01:38:23Z,edit,Q22469798,{8211D8FE-3C49-44F5-902D-AB83F048F2AF},First,2555459898,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:38:29Z,edit,Q22469817,{DA550059-9EF7-4566-B8E0-FD30589FB81C},First,2555459952,source for height; swisstopo position (preferred); default label; official name; de label left out (clash with another item)
+2026-10-10T01:38:35Z,edit,Q22469828,{85DF0AE7-11D3-4D8C-9B0D-8030DE9ED843},First,2555460000,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:38:42Z,edit,Q22469837,{07181691-E017-4D5B-8DBD-30150A66E53C},First,2555460032,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:38:45Z,edit,Q22471492,{58F197A4-FDE9-4ECF-9557-0493F01A3ABA},Firsthöreli,2555460052,source for height; source for position; default label; de label; official name
+2026-10-10T01:38:48Z,edit,Q22471621,{61FFE906-A8B3-447A-9C26-74B72217D0F8},Firzstock,2555460076,source for height; source for position; default label; de label; official name
+2026-10-10T01:38:51Z,edit,Q22472651,{AF959CFB-D378-4AB5-BB55-7A4C2A63B874},Teischer,2555460104,source for height; source for position; default label; de label; official name
+2026-10-10T01:38:55Z,edit,Q22473530,{B6382851-E193-4AE5-B9DE-C4E0A058141A},Tellihorn,2555460125,source for height; source for position; default label; de label; official name
+2026-10-10T01:38:58Z,edit,Q22473550,{F2AE6659-4DA3-44E1-806A-0ADB7425E283},Tellispitza,2555460143,source for height; source for position; default label; official name
+2026-10-10T01:39:01Z,edit,Q22473584,{7D5ADFBC-8188-4090-841C-A1555C55FEC8},Telltistock,2555460161,source for position; default label; official name
+2026-10-10T01:39:05Z,edit,Q22473676,{9757D11C-E7D0-4F5E-8D02-6B6F38659D24},Teltschehorn,2555460181,source for position; default label; de label; official name
+2026-10-10T01:39:08Z,edit,Q22474005,{07BEFF97-12C1-4149-B28B-CC86A3237A49},Jegertosse,2555460204,source for position; default label; de label; official name
+2026-10-10T01:39:11Z,edit,Q22474012,{1C55D937-1843-40CD-BB77-D7D8C0E29B44},Jegichnubel,2555460219,source for height; source for position; default label; official name
+2026-10-10T01:39:15Z,edit,Q22474023,{5DE238D8-46BD-4983-A2B4-D0C3CD9F1289},Jegihoren,2555460238,source for position; default label; de label; official name
+2026-10-10T01:39:18Z,edit,Q22474029,{7B6DEAFA-25DD-4C83-84B2-18ED29E7802C},Jegihorn,2555460249,source for position; default label; de label; official name
+2026-10-10T01:39:21Z,edit,Q22474037,{81FA0FF9-FD88-4BC9-89D0-8ACA420BC3B4},Jegiturm,2555460261,source for height; source for position; default label; de label; official name
+2026-10-10T01:39:25Z,edit,Q22474100,{8ADCB579-4014-4BB8-8C45-D4E8284B5DCB},Paradieshüreli,2555460281,source for position; default label; de label; official name
+2026-10-10T01:39:28Z,edit,Q22474269,{554DDC09-39A4-402D-88BC-81B5FEE1524A},Tempahorn,2555460307,source for height; source for position; default label; de label; official name
+2026-10-10T01:39:31Z,edit,Q22474354,{E4D86CBC-D408-4F82-911D-73828C3F0953},Ruch Stöckli,2555460337,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:39:35Z,edit,Q22474377,{2D5C7B30-AF27-4070-A335-AD5A2C2F840D},Ruchberg,2555460369,source for position; default label; de label; official name
+2026-10-10T01:39:38Z,edit,Q22474384,{929A3A25-D2C3-452C-954C-A98356CECD33},Ruchbüel,2555460400,source for height; source for position; default label; de label; official name
+2026-10-10T01:39:42Z,edit,Q22474398,{F8FFCDE0-8B54-4B33-92A6-6510E9FE123F},Ruchegg,2555460426,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:39:48Z,edit,Q22474406,{D74F6A09-CBAE-4A09-A3D8-F8F49A9C609B},Ruchen,2555460464,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:39:54Z,edit,Q22474418,{BE3BD703-A0C6-4B4F-9E76-D79AB0F6FE49},Ruchen,2555460496,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:40:01Z,edit,Q22474429,{F3209522-1127-4A86-93BC-62987903B778},Ruchen,2555460535,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:40:04Z,edit,Q22474441,{06627169-65B1-4A36-8331-6335EB6D2B07},Ruchen,2555460552,source for position; default label; official name
+2026-10-10T01:40:10Z,edit,Q22474451,{9DB10700-8157-4DBB-970B-2CD96E69A244},Ruchen,2555460587,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:40:14Z,edit,Q22474467,{C7A4F7C5-C357-4956-A604-17A7B970E5E3},Ruchennadel,2555460604,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:40:17Z,edit,Q22474491,{EAED526F-0703-4AB4-A54E-7932CA3B56A7},Ruchsitenstöckli,2555460623,source for position; de label; official name
+2026-10-10T01:40:20Z,edit,Q22474503,{04713EF4-6909-465D-A722-A27177349ABA},Ruchälplistock,2555460634,source for height; source for position; default label; de label; official name
+2026-10-10T01:40:24Z,edit,Q22475059,{6FD79143-CF43-4AF3-89E0-8C366179A27C},Ruederstock,2555460652,source for height; source for position; default label; official name
+2026-10-10T01:40:27Z,edit,Q22475127,{3ABD6C2E-0F09-4473-9B6B-40EB182241C5},Rufenenhubel,2555460669,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:40:30Z,edit,Q22475900,{47472396-E901-4578-BB94-15746FC97D81},Tennbachhorn,2555460696,source for position; default label; de label; official name
+2026-10-10T01:40:34Z,edit,Q22475959,{57EF81FC-8D96-4494-BB60-71321B6B77E2},Tennhorn,2555460723,source for position; default label; de label; official name
+2026-10-10T01:40:37Z,edit,Q22476137,{622071EF-2DD7-4CA8-8CD2-534A1FF3D78A},Chaiserstock,2555460750,source for position; default label; official name
+2026-10-10T01:40:40Z,edit,Q22476214,{39819F03-093E-4356-B9A6-1F11FB470B12},Chalberhöri,2555460778,source for height; source for position; default label; de label; official name
+2026-10-10T01:40:43Z,edit,Q22476227,{94070BEC-82D0-4843-9D42-FEEAEF581456},Chalberstock,2555460802,source for position; default label; de label; official name
+2026-10-10T01:40:47Z,edit,Q22476234,{2088C7B1-9BEC-4162-89BE-41527D6E9CDA},Chalberstöckli,2555460828,source for position; default label; de label; official name
+2026-10-10T01:40:53Z,edit,Q22476247,{C24B6A1C-82AC-4324-9067-A3AD6EC4517F},Chalberstöckli,2555460862,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:40:59Z,edit,Q22476254,{0AA9AA81-A4F9-4C19-8596-28132F2B31F7},Chalberstöckli,2555460895,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:41:03Z,edit,Q22476255,{F1A4B635-96DE-4ED7-A7FA-83FACFC71BC3},Bahubel,2555460924,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:41:06Z,edit,Q22476265,{9E9F4CA5-651A-410C-81E4-9F23B90B2FA9},Chalbersäntis,2555460941,source for position; default label; de label; official name
+2026-10-10T01:41:09Z,edit,Q22476277,{1D6AC60B-1454-4EE0-B027-091256D8A742},Chalbertalstock,2555460957,source for height; source for position; default label; de label; official name
+2026-10-10T01:41:13Z,edit,Q22476342,{9611E8C8-5A60-45FF-9D71-ADFDF72AA219},Chalchstöckli,2555460979,source for position; default label; de label; official name
+2026-10-10T01:41:16Z,edit,Q22476800,{F33465D0-0186-465D-B5D7-8D00D8FED158},Term da la Pêsch,2555460998,source for height; source for position; default label; rm label; official name
+2026-10-10T01:41:20Z,edit,Q22477316,{F38D0F98-18F7-452E-9453-94B1E42AE27F},Chamerstock,2555461015,source for position; default label; de label; official name
+2026-10-10T01:41:23Z,edit,Q22477375,{FED46377-B7B3-41FD-9CE4-FE1CF1D112C1},Chamm,2555461036,source for height; source for position; default label; de label; official name
+2026-10-10T01:41:26Z,edit,Q22477405,{A53A64BD-1B1D-4837-A87C-B5242153EDE5},Chammlihoren,2555461055,source for height; source for position; default label; de label; official name
+2026-10-10T01:41:30Z,edit,Q22477413,{28904A04-FE21-4378-B549-A2FC575ED2DD},Chammlihöreli,2555461074,source for position; default label; de label; official name
+2026-10-10T01:41:33Z,edit,Q22478100,{7E6648B8-ED73-4DA1-A6DB-FBA275CBE8FB},Champechnubel,2555461100,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:41:36Z,edit,Q22478112,{0FB2E421-FDBD-47D2-82D8-B2BBEC425280},Testa di Misello,2555461121,source for height; source for position; default label; it label; official name
+2026-10-10T01:41:39Z,edit,Q22478128,{79E8A66E-02A3-4BBD-B6CB-7AC5CD146901},Champillon,2555461144,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:41:43Z,edit,Q22478161,{8E61470E-6719-4687-8BAE-0602AD4847D4},Testun,2555461174,swisstopo height (preferred); swisstopo position (preferred); default label; rm label; official name
+2026-10-10T01:41:46Z,edit,Q22478344,{9FFC7D6E-C03C-488C-8834-B20218445481},Tête à Gay,2555461200,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:41:49Z,edit,Q22478354,{ADB12EB6-13CE-4684-B994-16929669EC51},Tête à Grosjean,2555461221,source for position; default label; fr label; official name
+2026-10-10T01:41:53Z,edit,Q22478364,{F809678B-2B6C-44FE-A50E-C873D5A54FA9},Tête à Josué,2555461239,swisstopo position (preferred); default label; fr label; official name
+2026-10-10T01:41:56Z,edit,Q22478384,{C3DA819B-2033-4D56-AEF6-F20EAC8DBA4F},Tête à Vincent,2555461253,source for height; source for position; default label; fr label; official name
+2026-10-10T01:41:59Z,edit,Q22478404,{9BDAC314-C56C-4729-97D1-599DA1B9F78D},Tête aux Veillon,2555461269,source for height; source for position; default label; fr label; official name
+2026-10-10T01:42:02Z,edit,Q22478414,{65178BD6-3CC0-498E-9405-5B0F4ED7CB66},Tête Biselx,2555461284,source for position; default label; fr label; official name
+2026-10-10T01:42:06Z,edit,Q22478434,{89AD3516-E9FC-48D9-8258-E2079EDCCB55},Tête Blanche,2555461305,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T01:42:09Z,edit,Q22478451,{77674F85-6BA5-4EED-ADAD-C5502C14EAAD},Tête Carrée,2555461321,source for position; default label; official name
+2026-10-10T01:42:12Z,edit,Q22478474,{3AC63DB2-BFBD-4BE9-8553-AE99F8925352},Tête d'Arpette,2555461333,source for position; default label; official name
+2026-10-10T01:42:15Z,edit,Q22478484,{F395CD4A-7F65-44D7-9CEF-7184300D63A3},Tête d'Enfer,2555461342,source for position; default label; fr label; official name
+2026-10-10T01:42:19Z,edit,Q22478504,{2F252406-488D-4808-AE08-CA7388E47654},Tête de Bellalué,2555461354,source for position; default label; fr label; official name
+2026-10-10T01:42:22Z,edit,Q22478514,{F65CB66A-0577-42D5-9376-199F6E86D25D},Tête de Chalin,2555461366,source for position; default label; fr label; official name
+2026-10-10T01:42:25Z,edit,Q22478523,{7BEDDD09-9D01-4F92-B09A-4F5335F1821A},Tête de Chat,2555461377,source for position; default label; fr label; official name
+2026-10-10T01:42:29Z,edit,Q22478533,{71DA41F0-3132-472A-80AA-102D7583FA3F},Tête de Chavannes,2555461392,source for position; fr label; official name
+2026-10-10T01:42:32Z,edit,Q22478551,{2E879602-DCB4-460C-99ED-706B8383B5DE},Tête de Fonteinte,2555461409,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:42:35Z,edit,Q22478562,{97F94D03-AEA6-4BB7-908F-B524F6104FB8},Tête de l'Ane,2555461425,swisstopo height (preferred); source for position; fr label; names in other languages (de label); official name
+2026-10-10T01:42:39Z,edit,Q22478586,{5500C20A-5858-47FE-9159-48CF1EC355B7},Tête de l'Herbette,2555461453,source for height; source for position; default label; fr label; official name
+2026-10-10T01:42:42Z,edit,Q22478597,{14C2B187-27A3-422F-8F96-F6C942A54443},Tête de l'Ortière,2555461480,source for height; source for position; default label; fr label; official name
+2026-10-10T01:42:45Z,edit,Q22478617,{12213A87-DDF6-4241-B110-C6BD4171A2CE},Tête de la Croix,2555461500,source for position; default label; fr label; official name
+2026-10-10T01:42:49Z,edit,Q22478633,{2D9EAC57-2FC6-4148-8BFE-7DBF81EFEA1E},Tête de la Payanne,2555461528,source for height; source for position; default label; fr label; official name
+2026-10-10T01:42:52Z,edit,Q22478657,{764EAF75-F9FC-4F30-9176-513C59F1951E},Tête de Meilleret,2555461552,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:42:55Z,edit,Q22478665,{4EAAF42F-795E-4B02-99C6-AE3F1A6340F3},Tête de Momin,2555461571,source for position; default label; fr label; official name
+2026-10-10T01:42:58Z,edit,Q22478693,{6D4C3F3D-C2F0-4FD4-9FF8-09EB4149D771},Tête de Vare,2555461582,source for position; default label; fr label; official name
+2026-10-10T01:43:02Z,edit,Q22478718,{361647D4-7FD6-48F3-A98B-384A36ABD837},Tête des Econduits,2555461593,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:43:05Z,edit,Q22478728,{CBA224E6-BE83-4E5F-AFBB-3BF1FAC353A9},Tête des Etablons,2555461602,source for position; default label; official name
+2026-10-10T01:43:08Z,edit,Q22478737,{DADF158B-54C0-497F-9C25-1633E9E2F361},Tête des Filasses,2555461615,source for height; source for position; default label; fr label; official name
+2026-10-10T01:43:12Z,edit,Q22478756,{5001BACA-999E-4CF9-BAFB-996FB37F4CFB},Tête des Ottans,2555461627,source for position; default label; official name
+2026-10-10T01:43:15Z,edit,Q22478763,{372224C4-44B0-4B93-B0E9-8EB396CE0905},Tête des Pelottes,2555461635,source for position; default label; fr label; official name
+2026-10-10T01:43:18Z,edit,Q22478772,{8AC0DE5E-1E9A-4DD5-AB48-E160F7681E93},Tête des Planards,2555461649,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:43:21Z,edit,Q22478784,{F879A97D-3AFE-45E3-B579-9BDBE43A0EBF},Tête des Planards,2555461662,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:43:25Z,edit,Q22478793,{AB86FBB0-2657-495C-8AB3-6E611A320541},Tête des Rosses,2555461679,source for position; default label; official name
+2026-10-10T01:43:28Z,edit,Q22478815,{C8A2934D-1ED7-48FF-8CAB-8F82E7D6E5E0},Tête des Vaux,2555461698,source for position; default label; fr label; official name
+2026-10-10T01:43:31Z,edit,Q22478826,{B74F3389-43C7-4338-A8B3-78CB326E8D56},Tête du Betson,2555461707,swisstopo position (preferred); default label; fr label; official name
+2026-10-10T01:43:35Z,edit,Q22478852,{70E7D2A7-B80A-4D70-A330-DA6A4BA8C960},Tête du Filon,2555461716,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:43:38Z,edit,Q22478870,{DB7A49C5-35B3-4117-8876-94DDAABD6E3C},Tête du Largey,2555461732,source for height; source for position; default label; official name
+2026-10-10T01:43:41Z,edit,Q22478888,{668AE040-4B59-4965-B86A-D517E5E9784B},Tête du Petit Cor,2555461745,source for position; default label; fr label; official name
+2026-10-10T01:43:45Z,edit,Q22478917,{FD272B8F-3DAE-425F-A7BE-620C073F3C68},Tête du Tronchey,2555461757,source for height; source for position; default label; fr label; official name
+2026-10-10T01:43:48Z,edit,Q22478923,{5E858922-578F-4C28-9B7F-B0100601DC37},Tête du Vrieux,2555461773,source for position; default label; fr label; official name
+2026-10-10T01:43:51Z,edit,Q22478954,{840B3C8D-9721-449C-9E14-82FF75E8A63E},Tête Motte,2555461796,source for position; default label; fr label; official name
+2026-10-10T01:43:54Z,edit,Q22478975,{3C525D79-E082-4D68-8F59-4B8B38077B73},Tête Noire,2555461812,source for position; default label; fr label; official name
+2026-10-10T01:43:58Z,edit,Q22478984,{C35C2620-B4F0-4F48-88B7-350882548B41},Tête Noire,2555461829,source for position; default label; fr label; official name
+2026-10-10T01:44:01Z,edit,Q22479020,{CF5FE09F-5DCE-405A-B6C6-9B7010F31743},Tête Rouge,2555461846,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T01:57:49Z,edit,Q22479129,{2C2C94B7-00F1-4BCF-A43C-62A25F81F482},Jochlistock,2555462925,source for height; source for position; default label; de label; official name
+2026-10-10T01:57:52Z,edit,Q22479377,{28C8BDF9-5B26-495B-AEC4-3A733EF170D7},Jodershubel,2555462936,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:57:55Z,edit,Q22479382,{A80F73FE-8F8D-4B50-AD92-E115E6447E7D},Teuf Hund,2555462951,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:57:59Z,edit,Q22479440,{0B602F62-C7DF-496B-BF9E-DA72264627AF},Chanzel,2555462965,source for height; source for position; default label; de label; official name
+2026-10-10T01:58:05Z,edit,Q22479451,{0E4A7FFD-98F7-44EF-A7E7-BE337CD0C26C},Chanzel,2555462987,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:58:11Z,edit,Q22479458,{ACFB13F1-3DC8-4FA3-BBF5-C02145A5CE31},Chanzel,2555463013,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:58:18Z,edit,Q22479467,{073E1965-6752-4C5A-AF2D-2A083C7843E1},Chanzel,2555463054,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:58:21Z,edit,Q22479480,{2DF2191B-A383-4B9F-92C7-BDDFF890517E},Chanzeli,2555463082,source for position; default label; de label; official name
+2026-10-10T01:58:24Z,edit,Q22479485,{CADF5418-365B-40BF-B60B-5657C968E18F},Chanzilti,2555463104,source for position; default label; de label; official name
+2026-10-10T01:58:28Z,edit,Q22479497,{2A4078DF-01B1-403C-8F15-C1DB091E849F},Chanzle,2555463132,source for height; source for position; default label; de label; official name
+2026-10-10T01:58:31Z,edit,Q22479515,{78EB72B2-D8F9-4237-85F8-76597429ADF3},Chanzlen,2555463158,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T01:58:34Z,edit,Q22479633,{74D57F9D-E7E4-49A8-9BD9-AFBE52B98450},Tgiern da Vanescha,2555463188,source for height; source for position; default label; rm label; official name
+2026-10-10T01:58:38Z,edit,Q22479643,{6A2692F6-1D79-4DE6-A6BD-5113D59E7859},Tgiern Grond,2555463206,swisstopo height (preferred); source for position; default label; rm label; official name
+2026-10-10T01:58:41Z,edit,Q22479653,{EECAA15D-62D9-40B2-A02A-603C416E5213},Tgiern Pign,2555463221,source for position; default label; rm label; official name
+2026-10-10T01:58:44Z,edit,Q22479664,{7DEF1B0F-56BF-4376-8E1A-268E10CAD73C},Tgiern Ravetsch,2555463234,swisstopo height (preferred); source for position; default label; rm label; official name
+2026-10-10T01:58:48Z,edit,Q22479673,{E480513A-F74B-4B72-A6CE-4A15661476A6},Tgiern Sogn Gions,2555463248,source for height; source for position; default label; rm label; official name
+2026-10-10T01:58:51Z,edit,Q22479680,{5E5BFEAC-4D28-4641-A7B6-3D629D0BE842},Tgiern Tuma,2555463258,source for position; default label; rm label; official name
+2026-10-10T01:58:54Z,edit,Q22480011,{CB3C7F08-A8D3-4534-99B4-46AEB08B4595},Chapf,2555463276,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:59:01Z,edit,Q22480022,{AF59DE6A-4B70-47D0-9768-B3351DA9D65F},Chapf,2555463305,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:59:07Z,edit,Q22480032,{D874A3EE-7FB1-4DB6-A7F5-DF5DE0A8112B},Chapf,2555463330,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T01:59:10Z,edit,Q22480042,{D5A7EE30-0BBF-4417-A426-1EBCE8D58748},Chapferplanggenstock,2555463339,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T01:59:13Z,edit,Q22480722,{8AE3870E-5567-416F-B791-9A37856DD6D0},Chappelen,2555463353,source for position; default label; de label; official name
+2026-10-10T01:59:17Z,edit,Q22480945,{AD81984F-3DA0-4620-8165-038678970450},Chapütschin Pitschen,2555463372,source for height; source for position; default label; rm label; official name
+2026-10-10T01:59:20Z,edit,Q22481271,{071417D1-31C7-4F8B-AC00-6261F4B4BB82},Charenstock,2555463392,source for position; default label; de label; official name
+2026-10-10T01:59:23Z,edit,Q22481279,{EA180A9B-ED79-43A0-9EEF-891D34F413D9},Charenstöckli,2555463419,source for height; source for position; default label; de label; official name
+2026-10-10T01:59:27Z,edit,Q22483210,{46E619B6-8D54-4564-8B46-72478D5DC7CB},Fleschenhoren,2555463440,source for position; default label; de label; official name
+2026-10-10T01:59:30Z,edit,Q22483217,{206A5A91-FDAE-45E9-862B-608EBE484F2F},Fleschenhubel,2555463464,source for position; default label; de label; official name
+2026-10-10T01:59:33Z,edit,Q22484174,{D0F2468F-7DC3-4722-B6A7-F80FC1DCDA8A},Chastelegga,2555463483,source for position; default label; de label; official name
+2026-10-10T01:59:37Z,edit,Q22484183,{56607D11-1065-4A38-8A2C-05F9AFFCCF4E},Chastelets,2555463505,source for height; source for position; default label; rm label; official name
+2026-10-10T01:59:40Z,edit,Q22484203,{6FFD49D7-296D-4140-B7D6-7FBB311DD9F7},Chastenchöpfli,2555463531,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T01:59:43Z,edit,Q22484225,{3D060DB9-1602-4437-AB92-D3964B051E00},Chastlerhorn,2555463544,source for position; default label; de label; official name
+2026-10-10T01:59:47Z,edit,Q22484233,{55C805D1-8736-4B1F-B043-647032A8E937},Chastol,2555463561,source for position; default label; de label; official name
+2026-10-10T01:59:50Z,edit,Q22484312,{5CED3CCF-E884-456C-9DFF-9A23803DFF98},Château Chamois,2555463578,swisstopo position (preferred); default label; fr label; official name
+2026-10-10T01:59:53Z,edit,Q22484583,{C89B56B9-9BA4-4F96-9706-16B6BF6464FF},Châtillon,2555463595,source for position; default label; official name
+2026-10-10T01:59:56Z,edit,Q22484594,{D0712B55-2B41-4F09-81A5-C7775C20B5E4},Châtillon,2555463613,source for height; source for position; default label; official name
+2026-10-10T02:00:00Z,edit,Q22484623,{8C973D5E-4EAE-4A90-B1D5-492496DFDFCE},Châtillon,2555463627,swisstopo height (preferred); source for position; default label; fr label; official name
+2026-10-10T02:00:03Z,edit,Q22484651,{BAFC9B30-8E7C-465F-986D-D64377DA4D59},Chatscha Bella,2555463644,source for height; source for position; default label; rm label; official name
+2026-10-10T02:00:06Z,edit,Q22484906,{3857AF59-011E-459A-9FE5-4C04AC4B1683},Chaumont du Signal,2555463657,source for position; default label; fr label; official name
+2026-10-10T02:00:06Z,edit,Q22484972,{288F886A-959C-43F5-9545-5D431827AF61},Chaux d'Antème,,
+2026-10-10T02:00:10Z,edit,Q22485020,{1BAF5074-E776-427E-B0EF-44B029F45EE8},Chavagl dal Polaschin,2555463672,source for position; default label; rm label; official name
+2026-10-10T02:00:13Z,edit,Q22485032,{F177CA0C-0C05-47EF-875F-F82E53A6D7FB},Gross Ross,2555463685,source for height; source for position; names in other languages (rm label); official name
+2026-10-10T02:00:16Z,edit,Q22485646,{90EE208E-835B-4481-BF2B-BCBD8CE73551},Jolihorn,2555463703,source for height; source for position; default label; de label; official name
+2026-10-10T02:00:20Z,edit,Q22485717,{D864069D-7612-4CF6-9B76-F7620B3A3186},Cheerhubel,2555463716,source for position; default label; de label; official name
+2026-10-10T02:00:23Z,edit,Q22485770,{833D1BF4-D49B-4CF3-B935-26FDAF011E05},Floriette,2555463741,source for position; default label; fr label; official name
+2026-10-10T02:00:26Z,edit,Q22486251,{28D927B2-0272-4226-AD26-B2045BF0BDD0},Chellenspitz,2555463769,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:00:29Z,edit,Q22486270,{3DBF1F59-AF3B-4AA5-AE2D-25C85D145DB7},Chellihorn,2555463793,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T02:00:33Z,edit,Q22486346,{F410F842-7772-4FDA-8AAE-27F129B91273},Fluachopf,2555463818,source for position; default label; official name
+2026-10-10T02:00:36Z,edit,Q22486374,{4D0AF490-13B9-4826-B8CD-720A68E75494},Fluehorn,2555463845,source for position; default label; de label; official name
+2026-10-10T02:00:39Z,edit,Q22486395,{A0F197AA-7277-486A-A448-155772292D81},Flueseehöri,2555463875,source for position; default label; de label; official name
+2026-10-10T02:00:43Z,edit,Q22486558,{AF3A43A7-2597-48F1-8F24-5C43FF9A83C2},Chemiflue,2555463889,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:00:46Z,edit,Q22487041,{D9DBEEA7-6A15-4A28-B52F-85C77249CD86},Flügenspitz,2555463906,source for height; source for position; default label; official name
+2026-10-10T02:00:49Z,edit,Q22487532,{440660E0-70DB-4529-AEDE-5FC670B0BF97},Fläschlihöchi,2555463917,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:00:52Z,edit,Q22487541,{4CACDF07-8863-47F1-BFA1-7A8862E0E805},Flätstock,2555463926,source for height; source for position; default label; de label; official name
+2026-10-10T02:00:56Z,edit,Q22487553,{3A1059F4-85C3-462D-A876-8B4EBB883653},Fläugenfadhorn,2555463942,source for position; default label; official name
+2026-10-10T02:00:59Z,edit,Q22487561,{51CB485F-E7D0-4EC8-83E7-0472710FC523},Flöschhore,2555463955,source for height; source for position; default label; official name
+2026-10-10T02:01:02Z,edit,Q22487894,{C0B17CA4-CFED-4925-A0F3-759CDFA7D950},Josenberg,2555463966,source for position; default label; de label; official name
+2026-10-10T02:01:06Z,edit,Q22488098,{6291A511-23B4-46E1-A4E8-9D8AAF522F3F},Foggen,2555463977,source for position; default label; official name
+2026-10-10T02:01:09Z,edit,Q22488106,{7EA38D10-DD69-42AA-B637-2C5B3B74CEC0},Foggenhorn,2555463990,source for height; source for position; default label; de label; official name
+2026-10-10T02:01:12Z,edit,Q22488652,{0CD902D2-B6B3-4F4E-B320-906D3F76508F},Paré di Scut,2555464005,source for position; default label; it label; official name
+2026-10-10T02:01:16Z,edit,Q22488886,{B4696E88-9DBC-4350-BA7B-0949A62E461C},Follhore,2555464017,source for height; source for position; default label; de label; official name
+2026-10-10T02:01:19Z,edit,Q22488904,{6B68BA43-7B88-4EA1-A75A-39BB8BBD5193},Folliu Borna,2555464036,source for position; default label; fr label; official name
+2026-10-10T02:01:22Z,edit,Q22488941,{886E9155-1AC4-4B62-9FE8-CB9FEDBF01BA},Folluhorn,2555464052,source for height; source for position; default label; de label; official name
+2026-10-10T02:01:25Z,edit,Q22488946,{A3FB20FC-D0D0-4C5F-8DC6-BB6D0F11F94D},Parisbüchel,2555464071,source for position; default label; de label; official name
+2026-10-10T02:01:29Z,edit,Q22489594,{E85005BA-90B2-42F5-9792-EEF105D09315},Juchli,2555464091,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:01:32Z,edit,Q22489604,{9B1394DA-C45F-40D0-ADB2-F5DD8E722060},Juchlistock,2555464102,source for position; default label; official name
+2026-10-10T02:01:35Z,edit,Q22489736,{D21D16B9-363D-4A37-B74B-0D68457D0DDF},Foostöckli,2555464116,source for position; default label; official name
+2026-10-10T02:01:39Z,edit,Q22489965,{CA868BC5-27A1-45C3-8E31-3229A46BE109},Chesselhorn,2555464136,source for height; source for position; default label; de label; official name
+2026-10-10T02:01:42Z,edit,Q22489987,{9A85574C-FB53-421B-AAC2-CCFA9BF8662C},Chessihorn,2555464156,source for height; source for position; default label; de label; official name
+2026-10-10T02:01:45Z,edit,Q22490252,{1F65A34E-7190-4738-ACE8-F8ADCAE42DF3},Fòpp,2555464175,source for height; source for position; default label; it label; official name
+2026-10-10T02:01:49Z,edit,Q22490268,{D6008ADC-ED41-41FC-88D7-10011525AB39},Foppachopf,2555464194,swisstopo position (preferred); default label; de label; official name
+2026-10-10T02:01:52Z,edit,Q22490277,{33E3D926-CA0B-4549-A4EB-766F3F0AE477},Foppaspitz,2555464202,source for position; default label; de label; official name
+2026-10-10T02:01:55Z,edit,Q22490318,{CD4F131B-C710-4333-8F11-B3CAAB4BBA1A},Cheval Blanc,2555464212,source for height; source for position; default label; official name
+2026-10-10T02:01:58Z,edit,Q22490327,{21B51E93-A553-43A6-B709-EDA352E4815F},Cheval Blanc,2555464219,source for height; source for position; default label; official name
+2026-10-10T02:02:02Z,edit,Q22490333,{47B4548C-ED0F-415C-9E6D-86CF8CD9522B},Foratrida,2555464225,source for position; default label; rm label; official name
+2026-10-10T02:02:05Z,edit,Q22490689,{F6C994D8-37C2-442F-81FA-4B272D6DD1F0},Medee di Pietro,2555464231,source for height; source for position; default label; it label; official name
+2026-10-10T02:02:09Z,edit,Q22490713,{5E0A8CF3-D173-4A2C-900C-4F0C9E7B1E8A},Forca di Casséo,2555464241,source for position; default label; it label; official name
+2026-10-10T02:02:12Z,edit,Q22490745,{C900E13F-28D0-481D-AE54-3CD305A57F6E},Forcella,2555464251,swisstopo height (preferred); source for position; default label; it label; official name
+2026-10-10T02:02:15Z,edit,Q22491051,{6048DCAD-ED28-47A8-9915-0B1B53691526},Medjichopf,2555464258,source for position; default label; de label; official name
+2026-10-10T02:02:19Z,edit,Q22491508,{79344FD1-F67F-43D1-8277-23AB832B3379},Forenchopf,2555464266,source for position; default label; de label; official name
+2026-10-10T02:02:22Z,edit,Q22491517,{AD316088-FF63-4B38-BA4D-F3DC7E32ED68},Forenstogg,2555464280,source for height; source for position; default label; de label; official name
+2026-10-10T02:02:25Z,edit,Q22491963,{22737E8C-1C59-4235-BB11-6FEAAFA0E7FD},Chiehorn,2555464295,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T02:02:28Z,edit,Q22492006,{A220D1F5-7A5C-49D9-892F-EA904FE23028},Chienflue,2555464309,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T02:02:32Z,edit,Q22492056,{FBA2F5C6-B99C-4753-AFE3-CA8C14C6DE69},Chietalstock,2555464329,source for height; source for position; default label; de label; official name
+2026-10-10T02:02:35Z,edit,Q22492160,{5E75D278-4E80-41E6-95D8-D3519770E1C8},Meidhoru,2555464336,source for position; default label; official name
+2026-10-10T02:02:38Z,edit,Q22492179,{B974F59C-77B2-4280-9CA6-E5F0B79027AB},Jupper Horn,2555464346,source for position; default label; official name
+2026-10-10T02:02:42Z,edit,Q22492229,{3B3728D0-A698-4C7A-8024-7FBCACFC978D},Meiggelenstock,2555464353,source for position; default label; de label; official name
+2026-10-10T02:02:45Z,edit,Q22492243,{9D06E3DE-8EC4-442B-B041-C6869398342C},Meiggerhorn,2555464367,source for position; default label; de label; official name
+2026-10-10T02:02:48Z,edit,Q22492274,{89179092-8A77-4AC0-B681-1F32F86A1CF5},Chilbiritzenspitz,2555464382,source for position; default label; de label; official name
+2026-10-10T02:02:51Z,edit,Q22492292,{BBD112E4-91E6-43E5-9D4F-77DE81C87080},Chilchflue,2555464399,source for height; source for position; default label; de label; official name
+2026-10-10T02:02:55Z,edit,Q22492305,{17741081-F167-4941-AF3C-1A70173DB452},Chilchhore,2555464418,source for position; default label; de label; official name
+2026-10-10T02:02:58Z,edit,Q22492313,{53B205F6-0B0A-4E7F-B059-2E4EDAB5EEB1},Chilchhorn,2555464438,source for height; source for position; default label; de label; official name
+2026-10-10T02:03:01Z,edit,Q22492322,{0B3A064F-CD32-4B0E-9360-FA6006759C73},Chilchli,2555464455,source for position; default label; de label; official name
+2026-10-10T02:03:08Z,edit,Q22492333,{1AA6AF9E-3ECF-4353-BB04-0B6F2D3B6EF4},Chilchli,2555464475,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:03:14Z,edit,Q22492344,{FABA4662-1AEC-4BFE-8299-C5FDD00C0014},Chilchli,2555464491,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:03:17Z,edit,Q22492353,{40E6B262-C2CE-4BD9-A126-58E19C452E5C},Chilchli,2555464503,source for position; default label; official name
+2026-10-10T02:03:20Z,edit,Q22492464,{D90F0BD6-1F83-46C7-B1B5-1D100916F5AB},Juzfadstock,2555464511,source for height; source for position; default label; de label; official name
+2026-10-10T02:03:24Z,edit,Q22492480,{4282E3A8-0BCF-473D-88C9-36F391ED7C34},Jägerchrüz,2555464526,source for height; source for position; default label; de label; official name
+2026-10-10T02:03:27Z,edit,Q22492503,{E9F7EA6A-F3E8-471A-A43A-A782A47F3EB4},Jänzi,2555464542,source for height; source for position; default label; de label; official name
+2026-10-10T02:03:30Z,edit,Q22492512,{86F763ED-50D7-4A20-BCDF-04D9B682266A},Jöchliturm,2555464560,swisstopo height (preferred); swisstopo position (preferred); default label; official name
+2026-10-10T02:03:34Z,edit,Q22492540,{01EB1EF2-51A2-4FA1-A964-2E7C3CDAA332},Jöriflüelafurgga,2555464587,default label; official name
+2026-10-10T02:03:37Z,edit,Q22492550,{E1FBDCB5-BA6D-4B0F-8EA7-3A98E7834F60},Jörihorn,2555464603,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:03:40Z,edit,Q22493063,{56653FC7-CFCB-4278-9E23-3885878606C5},Mel de la Niva,2555464617,source for position; default label; fr label; official name
+2026-10-10T02:03:44Z,edit,Q22493414,{8F8073E4-4359-4BB9-96A1-4AF85BF84255},Melchseestock,2555464629,source for height; source for position; default label; de label; official name
+2026-10-10T02:03:47Z,edit,Q22493562,{7DD3BC5C-6AF0-47EC-84CE-55472DD44789},Forstberg,2555464644,source for height; source for position; default label; official name
+2026-10-10T02:03:50Z,edit,Q22493948,{FD123243-FACB-489F-BB85-5EC3475CF0C9},Chipfestock,2555464660,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:03:54Z,edit,Q22494352,{53F6BA78-EC89-484F-8D15-CD8094F3F5A1},Chirchli,2555464679,source for height; source for position; default label; de label; official name
+2026-10-10T02:03:57Z,edit,Q22494363,{941B3A04-A457-4C57-93E3-98E212176E70},Chirgelischibe,2555464706,source for height; source for position; default label; de label; official name
+2026-10-10T02:04:00Z,edit,Q22494380,{76CC23B6-00EE-4A6A-B559-B510DF8BC878},Chirnenberg,2555464727,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:04Z,edit,Q22495340,{5AA8A180-582A-49D3-ABAA-4BC5517CD545},Chistihubel,2555464755,source for position; default label; de label; official name
+2026-10-10T02:04:07Z,edit,Q22495542,{9F414C69-544B-417F-AB3C-6819A6AF5D72},Chlaggchopf,2555464771,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:10Z,edit,Q22495558,{ED646BB0-B863-4162-BAD4-7CD80261F18D},Chlei Chrüz,2555464785,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:13Z,edit,Q22495572,{444F0E51-200C-42FE-8F5B-111C7BFA7915},Chlei Schild,2555464799,source for position; default label; de label; official name
+2026-10-10T02:04:17Z,edit,Q22495601,{F197AD81-316B-49BF-9944-BFFD2AAF02DD},Chleine Huwetz,2555464811,source for position; default label; de label; official name
+2026-10-10T02:04:20Z,edit,Q22495640,{F4FB737E-DCBF-4814-83D5-AB302A313268},Chli Achslenstock,2555464820,source for height; source for position; default label; de label; official name
+2026-10-10T02:04:24Z,edit,Q22495650,{C922151C-E96B-49C9-A408-D6BB059815E0},Chli Alvier,2555464837,source for position; default label; de label; official name
+2026-10-10T02:04:27Z,edit,Q22495659,{782E02A3-D64E-4FAB-A729-9CE3AC28CBA5},Chli Amslen,2555464850,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:31Z,edit,Q22495671,{6210AF30-3DB5-4476-8678-E1C1CD7A7E9E},Chli Bristen,2555464868,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:34Z,edit,Q22495681,{902527FB-0E8C-419B-911A-06417A8751F5},Chli Chaiser,2555464885,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:37Z,edit,Q22495699,{B6D88926-A10E-44AD-B9F1-A9B8829A6EA6},Chli Chilchberg,2555464910,source for height; source for position; default label; de label; official name
+2026-10-10T02:04:40Z,edit,Q22495708,{677FC21F-7BA2-4CF7-BB92-78D6A9B4F7C1},Chli Düssi,2555464920,source for position; default label; official name
+2026-10-10T02:04:44Z,edit,Q22495716,{76841D05-FB06-4B43-9219-4154EF6FD460},Chli Fulen,2555464932,source for position; default label; official name
+2026-10-10T02:04:47Z,edit,Q22495726,{C52C862B-EAF8-4128-ADB9-A570B3C82065},Chli Fulfirst,2555464937,source for position; default label; de label; official name
+2026-10-10T02:04:50Z,edit,Q22495739,{28228FAC-78BE-477F-A337-5A3E6849DDA7},Chli Geissberg,2555464956,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:04:54Z,edit,Q22495749,{FF9C73E7-B16F-4363-914E-EBC31504CB38},Chli Gemsispil,2555464974,source for position; default label; official name
+2026-10-10T02:04:57Z,edit,Q22495755,{9DF34A84-3A93-4E69-9E35-DDB253208006},Chli Glatten,2555464996,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T02:05:00Z,edit,Q22495769,{FD195F68-3382-4B51-B392-7CCF9A10077A},Chli Griessenhorn,2555465021,source for position; default label; de label; official name
+2026-10-10T02:05:04Z,edit,Q22495773,{E91C0244-446C-4746-9F95-16DC01C23BD7},Chli Gumen,2555465045,source for position; default label; de label; official name
+2026-10-10T02:05:07Z,edit,Q22495793,{768ABADA-8D9F-4231-8EC9-57D017DA8CE7},Chli Hahnen,2555465069,source for position; default label; de label; official name
+2026-10-10T02:05:10Z,edit,Q22495806,{C50DFB0B-76CE-49F5-A912-BE8CAB333721},Chli Haupt,2555465084,source for position; de label; official name
+2026-10-10T02:05:16Z,edit,Q22495811,{98BCA413-846C-44FD-A65B-452A718A2C77},Chli Haupt,2555465107,source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:05:20Z,edit,Q22495822,{E2D35B51-A260-4F9F-98B2-974A4FC22C7C},Klein Hochmättli,2555465116,source for height; source for position; default label; official name
+2026-10-10T02:05:23Z,edit,Q22495830,{6C8B5B0B-847A-4D9C-912A-EFB00705646D},Chli Hohmad,2555465122,source for position; default label; de label; official name
+2026-10-10T02:05:26Z,edit,Q22495837,{D863D708-5342-41C1-A443-5ADFC053FF1B},Chli Horn,2555465137,source for position; default label; de label; official name
+2026-10-10T02:05:30Z,edit,Q22495851,{ABF6F29C-6EE9-4752-BE16-780745E06FA1},Chli Hüreli,2555465152,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:05:33Z,edit,Q22495858,{119F7BD9-AADF-4060-8C38-C7010D568A9F},Chli Höch,2555465162,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:05:36Z,edit,Q22495867,{399E227C-15DC-49E5-9E31-3AE46D73528C},Chli Kastel,2555465183,source for height; source for position; default label; de label; official name
+2026-10-10T02:05:40Z,edit,Q22495900,{4EBDEF7D-BF77-4CE3-AC30-DCAC7F4BED44},Chli Mutzenstein,2555465209,source for height; source for position; default label; de label; official name
+2026-10-10T02:05:43Z,edit,Q22495909,{E70B0B10-F9CC-4C73-91F8-4AD531BAFED4},Chli Rimistock,2555465221,source for height; source for position; default label; de label; official name
+2026-10-10T02:05:46Z,edit,Q22495926,{2463BA24-2068-41B6-AF18-0CA37A173DAC},Chli Schiben,2555465230,source for position; default label; de label; official name
+2026-10-10T02:05:49Z,edit,Q22495936,{2F671FF2-0BA3-453A-B19A-28BDEAA874E3},Chli Schijen,2555465240,source for position; default label; de label; official name
+2026-10-10T02:05:56Z,edit,Q22495946,{91FC46C8-96D1-41A8-9282-94F338AA6689},Chli Schijen,2555465263,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:06:02Z,edit,Q22495954,{8487D0DC-5F0A-484A-B500-29938CF086BA},Chli Schijen,2555465302,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:06:05Z,edit,Q22495965,{727205F7-808E-4997-AA1A-7971CD36FC32},Chli Schinder,2555465325,source for height; source for position; default label; de label; official name
+2026-10-10T02:06:09Z,edit,Q22495986,{001A9B67-9BA7-465D-B2B6-4516939396B7},Chli Speer,2555465346,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:06:13Z,edit,Q22495994,{2E2EA3DE-DA08-4857-9623-7D4EC526A497},Chli Spitzen,2555465363,source for position; default label; de label; official name
+2026-10-10T02:06:16Z,edit,Q22496003,{441451B7-27E5-4DBA-91E8-496AB1F75D8F},Chli Stockberg,2555465383,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:06:19Z,edit,Q22496013,{E0BD3E87-33CB-4E3A-B675-6BBE3F654EE2},Chli Sächser,2555465393,source for position; default label; official name
+2026-10-10T02:06:23Z,edit,Q22496073,{917E251E-3185-48B9-8224-1C7B5F134D89},Chlihörnli,2555465401,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T02:06:26Z,edit,Q22496084,{4CF3C89C-E919-4331-A600-14B7D2A452D9},Chlin Gürgaletsch,2555465413,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T02:06:29Z,edit,Q22496091,{C2EE76DF-E049-4B6C-9AB2-ED15F6BD6062},Chlin Horn,2555465424,source for position; default label; de label; official name
+2026-10-10T02:06:33Z,edit,Q22496101,{9B290773-911D-4D24-AC6A-C3406166BD40},Chlin Hüreli,2555465436,swisstopo height (preferred); source for position; default label; official name
+2026-10-10T02:06:36Z,edit,Q22496113,{FA3B91E0-942E-4FBA-BDC6-9FC76A00BCE0},Chline Gibel,2555465448,source for height; source for position; default label; de label; official name
+2026-10-10T02:06:39Z,edit,Q22496131,{03AA5498-B4DB-408D-9B46-4A246E84A73F},Chlis Fülhorn,2555465459,source for height; source for position; default label; de label; official name
+2026-10-10T02:06:43Z,edit,Q22496142,{9F01AC5B-479D-4537-A3DB-70D71F272098},Chlistollen,2555465467,source for position; default label; de label; official name
+2026-10-10T02:06:46Z,edit,Q22496205,{3C987DF6-CD4A-48A2-8521-D92890C7EC71},Chly Chastelhorn,2555465479,source for height; source for position; default label; de label; official name
+2026-10-10T02:06:49Z,edit,Q22496214,{45E50532-418B-477F-982A-0CDF9882CBC0},Chlyn Wendestock,2555465489,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:06:52Z,edit,Q22496246,{5175E56F-252A-4F42-A32B-FAF0B0596A25},Chlyne Ruuge,2555465498,source for position; default label; de label; official name
+2026-10-10T02:06:56Z,edit,Q22496265,{E9EE35CA-8827-4575-8AA8-2AE54F4A0F58},Chlyni Nadla,2555465515,source for height; source for position; default label; de label; official name
+2026-10-10T02:06:59Z,edit,Q22496277,{644E22B9-25E0-431A-B9E1-D5EAD5FB86C7},Chlys Engelhorn,2555465537,source for position; default label; de label; official name
+2026-10-10T02:07:02Z,edit,Q22496283,{26480E56-69A7-4567-BC2B-B5C28AE71FB2},Chlys Gelmerhorn,2555465559,source for height; source for position; default label; de label; official name
+2026-10-10T02:07:06Z,edit,Q22496291,{48820D76-B7A0-4D59-80B5-90AA2DD7E84F},Chlys Hüri,2555465585,source for height; source for position; default label; de label; official name
+2026-10-10T02:07:09Z,edit,Q22496304,{AE4C92F8-4C74-4B8F-A467-C1A171A57888},Chlys Schilthoren,2555465604,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:07:12Z,edit,Q22496312,{E128AD59-D6E4-4141-AF04-788D1241055B},Chlys Silberhoren,2555465619,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:07:16Z,edit,Q22496323,{BFC2E4EB-2934-441F-A2C1-D21EA34B8668},Chlys Öugstchummuhorn,2555465627,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:07:19Z,edit,Q22496334,{4CF9EE26-7450-4C00-8166-D53243608C22},Chläbdächer,2555465637,source for position; default label; de label; official name
+2026-10-10T02:07:22Z,edit,Q22496364,{01BA47CC-4695-4911-9194-DD71E7CD139B},Chnebelhorn,2555465643,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:07:26Z,edit,Q22496411,{39BF79A0-AD2D-4C4A-9F9E-60B2A509ADFF},Chnubel,2555465660,source for position; default label; de label; official name
+2026-10-10T02:07:32Z,edit,Q22496420,{CBB5C02B-B69C-4859-9B7D-C3DDD9AE9B7B},Chnubel,2555465681,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:07:38Z,edit,Q22496432,{0455A365-E5BF-4991-9151-E8BEF36A3093},Chnubel,2555465706,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:07:41Z,edit,Q22496439,{2A22EFAD-CFDD-4E9F-832F-58BAA335D76F},Chnubelegg,2555465713,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:07:45Z,edit,Q22496449,{2122AD26-58DF-47CA-BE8F-ACC8BFA8216F},Chnübeli,2555465725,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:07:48Z,edit,Q22496468,{6857AC18-EC8E-47FD-A5C6-A417CA9B087F},Cho d'Suvretta,2555465739,source for position; default label; official name
+2026-10-10T02:07:51Z,edit,Q22496474,{96C1CEC9-3F34-4B42-A882-CC5C6619157B},Cho d'Valletta,2555465748,swisstopo position (preferred); default label; rm label; official name
+2026-10-10T02:07:55Z,edit,Q22496487,{20263CE9-CFAB-4432-BD0E-CB990C05FBA8},Cho da Palüd Marscha,2555465758,source for position; default label; rm label; official name
+2026-10-10T02:07:58Z,edit,Q22496495,{F1DF8BA2-4218-4412-AE87-3DFCDE5C2BD6},Cho dal Buoch,2555465776,source for position; default label; rm label; official name
+2026-10-10T02:08:01Z,edit,Q22496505,{5CE31460-FF45-4CBD-B26F-C6D419C76BC1},Cho dal Fain,2555465803,source for height; source for position; default label; rm label; official name
+2026-10-10T02:08:05Z,edit,Q22496773,{B3C5943D-61A0-46C8-A2B9-B48EC038E4A2},Cholebärgli,2555465830,source for position; default label; official name
+2026-10-10T02:08:08Z,edit,Q22496784,{B0F8DF85-463C-4539-BA85-D601B1C1CF3C},Cholerhöchi,2555465854,source for position; default label; de label; official name
+2026-10-10T02:08:11Z,edit,Q22496820,{45DA0312-ADD0-424D-BBDB-B9337886F0A7},Cholisgrind,2555465874,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:08:15Z,edit,Q22496827,{BDBAF127-8893-4E57-BCAE-829EE56CEBB6},Chollerhorn,2555465888,source for position; default label; de label; official name
+2026-10-10T02:08:18Z,edit,Q22496919,{14CDD421-347F-4944-AECD-F50F1F894FB3},Meretschihorn,2555465906,source for position; default label; de label; official name
+2026-10-10T02:08:21Z,edit,Q22496920,{D7388208-B00C-4C79-9427-70632EAC6FEC},Chopf,2555465924,source for height; source for position; default label; de label; official name
+2026-10-10T02:08:27Z,edit,Q22496931,{951F90E8-FF7B-4E94-8373-11369E9F5D32},Chopf,2555465951,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:08:34Z,edit,Q22496941,{CC221114-F12C-4024-800A-BEEE85D7ABCD},Chopf,2555465988,swisstopo height (preferred); source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:08:37Z,edit,Q22496974,{40178E33-456D-4C1D-B474-06C8B9DD5FB0},Merezebachschije,2555466007,source for position; default label; de label; official name
+2026-10-10T02:08:40Z,edit,Q22497360,{FF9FDBDA-D8D1-46F4-8D28-7FA292137CFE},Chrazerispitz,2555466021,source for position; default label; de label; official name
+2026-10-10T02:08:44Z,edit,Q22497389,{569FD390-2884-4F3F-B95A-283E61B870EE},Chridegg,2555466034,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:08:47Z,edit,Q22497405,{52F3122E-32E0-4CFE-A46E-56282856B7D4},Chriesihorn,2555466046,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
+2026-10-10T02:08:50Z,edit,Q22497430,{E2698A7C-2753-4C4D-8AEB-B54F7328E0F1},Chrindelspitza,2555466059,source for height; source for position; default label; de label; official name
+2026-10-10T02:08:54Z,edit,Q22497681,{985D3234-A3EC-4F65-96C0-B666D4A423B4},Merra,2555466073,source for height; source for position; default label; de label; official name
+2026-10-10T02:08:57Z,edit,Q22498482,{DF32BA98-8AF9-47DD-B5B7-687DA1399090},Passhöreli,2555466091,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:09:00Z,edit,Q22499047,{AECCBC2B-C67E-4F49-8E2A-9442FC884885},Chrizerhorlini,2555466115,source for height; source for position; default label; de label; official name
+2026-10-10T02:09:04Z,edit,Q22499133,{99F3A5CD-499F-4FA0-B6CF-E095751C1E66},Chronenstock,2555466144,source for height; source for position; default label; de label; official name
+2026-10-10T02:09:07Z,edit,Q22499167,{DCBB044A-068B-4D5B-ACB6-27FEFD8B2A2D},Chrummenstein,2555466173,source for position; default label; de label; official name
+2026-10-10T02:09:10Z,edit,Q22499176,{3CB37C59-41B2-4EB2-9E80-43D0C7A8815F},Chrummflue,2555466200,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:09:13Z,edit,Q22499204,{93DA7506-2BBB-4377-9F84-49C48826BA95},Chrummhüreli,2555466224,source for position; default label; de label; official name
+2026-10-10T02:09:17Z,edit,Q22499264,{74171184-A467-46D9-A1D1-62C6CF5B6493},Chrütighorn,2555466247,source for height; source for position; default label; de label; official name
+2026-10-10T02:09:20Z,edit,Q22499270,{191CA6D2-5258-4D22-AE0B-2AB8484B917C},Chrütz,2555466264,swisstopo height (preferred); source for position; default label; de label; official name
+2026-10-10T02:09:26Z,edit,Q22499291,{604FEA4A-FF6D-4950-9816-73CE461FDF42},Chrüzegg,2555466290,source for height; source for position; default label; official name; de label left out (clash with another item)
+2026-10-10T02:09:29Z,edit,Q22499300,{7DABEEB6-06F8-44BD-9D5A-7E178E5C8B52},Chrüzegg,2555466307,source for height; source for position; default label; official name
+2026-10-10T02:09:33Z,edit,Q22499319,{1DD41638-714D-41DF-8607-0FC83CAF2E92},Chrüzflue,2555466326,swisstopo height (preferred); swisstopo position (preferred); default label; de label; official name
