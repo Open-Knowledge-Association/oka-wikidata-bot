@@ -27,7 +27,7 @@ import time
 import urllib.parse
 import urllib.request
 
-from common import ROOT, UA, cites, curl_json, entity, ref_json, statement
+from common import ROOT, UA, cites, curl_json, entity, only_import_refs, ref_json, statement
 
 WORK2 = ROOT / "work" / "task2"
 REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 2|test run]]"
@@ -154,7 +154,12 @@ def same(a, b):
     if a["type"] == "wikibase-entityid":
         return va.get("id") == vb.get("id")
     if a["type"] == "time":
-        return (va["time"], va["precision"], va.get("calendarmodel")) == (vb["time"], vb["precision"], vb.get("calendarmodel"))
+        if va["precision"] != vb["precision"]:
+            return False
+        digits = {9: 5, 10: 8}.get(va["precision"])     # a year may be stored as 1899-00-00 or 1899-01-01
+        if digits:
+            return va["time"][:digits] == vb["time"][:digits]
+        return (va["time"], va.get("calendarmodel")) == (vb["time"], vb.get("calendarmodel"))
     return str(va).strip().upper() == str(vb).strip().upper()
 
 
@@ -329,10 +334,9 @@ def hds_facts(hid, kind):
             m = re.search(rf'itemprop="{prop}"[^>]*>(\d{{4}})(?:-(\d\d)-(\d\d))?<', t)
             if m:
                 y, mo, d = int(m.group(1)), m.group(2) and int(m.group(2)), m.group(3) and int(m.group(3))
-                if d and y < 1813:
-                    notes.append(f"{label} {m.group(0)[-11:-1]} not used: calendar before 1813 unclear")
-                else:
-                    facts.append(fact(pid, time_value(y, mo, d), label))
+                f = fact(pid, time_value(y, mo, d), label)
+                f["calendar_unclear"] = bool(d and y < 1813)  # used only where the item already has it from the HDS
+                facts.append(f)
             m = re.search(rf'class="{span}"[^>]*>[^<]*</span>\s*([^,<]+?)\s*,', first)
             if m:
                 name = re.sub(r"^\d{1,2}\.\d{1,2}\.\d{4}\s+", "", clean(m.group(1)))   # date written outside the span
@@ -462,12 +466,28 @@ def place_labels(live, chosen):
     return {q: {v["value"] for v in e.get("labels", {}).values()} for q, e in found.items()}
 
 
+PREFER_OVER_WEAK = False      # until the request says so: a differing value with no source, or only a Wikipedia
+                              # import, gets the entry's value beside it at preferred rank ("best referenced value")
+
+
+def entry_is_person(entry):
+    """Whether the source describes a person: an HDS biography, or SNL metadata with life dates."""
+    if entry["work"] == "hds":
+        return entry["id"] in hds_open()["bio"]
+    return any(f["pid"] in ("P569", "P570", "P21", "P4574") for f in entry["facts"])
+
+
 def build(ent, entry, today, labels=None):
     """(claims for wbeditentity, list of changes, notes) for one entry and its live item."""
     work_q, idp, _ = WORKS[entry["work"]]
     ref = reference(entry["work"], entry["id"], today)
     claims = ent.get("claims", {})
     out_claims, done, notes = [], [], list(entry.get("notes", []))
+    is_human = any(c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") == "Q5" for c in claims.get("P31", []))
+    if entry_is_person(entry) != is_human:                 # e.g. a company carrying the HDS ID of its founder
+        return [], [], notes + ["the entry describes " + ("a person" if not is_human else "no person")
+                                + " but the item " + ("does not" if not is_human else "does") + ": the identifier is "
+                                "probably on the wrong item; nothing added"]
     plain = lambda v: urllib.parse.unquote(str(v))      # the query mirror returns some IDs URL-encoded
     if not any(plain(c["mainsnak"].get("datavalue", {}).get("value")) == plain(entry["id"]) for c in claims.get(idp, [])):
         out_claims.append({"type": "statement", "rank": "normal",
@@ -488,12 +508,20 @@ def build(ent, entry, today, labels=None):
         if not equal and labels and f["pid"] in PLACE_PROPS:            # a place of the same name
             ours = labels.get(f["value"]["value"]["id"], set())
             equal = [c for c in existing if labels.get(c["mainsnak"]["datavalue"]["value"].get("id"), set()) & ours]
+        if f.get("calendar_unclear") and not (equal and cites(equal[0], work_q)):
+            notes.append(f"{f['label']} {f['value']['value']['time'][1:11]} not used: calendar before 1813 unclear")
+            continue
         if equal:
             if f["pid"] not in IDS | {"P21"} and not cites(equal[0], work_q):
                 c = copy.deepcopy(equal[0])
                 c.setdefault("references", []).append(ref)
                 out_claims.append(c)
                 done.append(f"source for {f['label']}")
+        elif existing and f["pid"] not in MULTI and PREFER_OVER_WEAK and f["pid"] not in IDS and all(
+                not c.get("references") or only_import_refs(c) for c in existing):
+            c = statement(f["pid"], f["value"], ref, rank="preferred")   # with reason: best referenced value
+            out_claims.append(c)
+            done.append(f"{f['label']} (preferred: the item's other value has no source)")
         elif existing and f["pid"] not in MULTI:  # several occupations or places of origin are normal
             notes.append(f"{f['label']}: item has a different value, left alone")
         else:
@@ -654,10 +682,17 @@ def report(rows, notes):
     lines += ["", '{| class="wikitable sortable"', "! # !! Round !! Work !! Kind !! Entry !! Item !! Changes !! Diff"]
     for i, (r, rnd) in enumerate(zip(rows, rounds), 1):
         url = f"https://hls-dhs-dss.ch/de/articles/{r['id']}/" if r["work"] == "hds" else f"https://snl.no/{r['id']}"
+        changes = f"{'; '.join(r['done'])}{' (matched by ' + r['matched_by'] + ')' if r['matched_by'] != 'identifier' else ''}"
+        if r.get("undone"):                      # a wrong test edit, reverted by the bot: shown, not hidden
+            changes = f"<s>{changes}</s> '''undone''' ([[Special:Diff/{r['undo_revid']}|diff]]): {r['undone']}"
         lines += ["|-", f"| {i} || {rnd} || {r['work'].upper()} || {r['kind']} || [{url} {r['title']}] || {{{{Q|{r['qid'][1:]}}}}} "
-                        f"|| {'; '.join(r['done'])}{' (matched by ' + r['matched_by'] + ')' if r['matched_by'] != 'identifier' else ''} "
-                        f"|| [[Special:Diff/{r['revid']}|diff]]"]
+                        f"|| {changes} || [[Special:Diff/{r['revid']}|diff]]"]
     lines.append("|}")
+    manual = json.loads((WORK2 / "manual.json").read_text(encoding="utf-8")) if (WORK2 / "manual.json").exists() else []
+    if manual:
+        lines += ["", "== Conflicts resolved by hand ==",
+                  "Disagreements the bot found, checked against further sources and resolved by the operator's account:"]
+        lines += [f"* {{{{Q|{m['qid'][1:]}}}}}: {m['change']} ([[Special:Diff/{m['revid']}|diff]])" for m in manual]
     lines += ["", "== Left alone ==", "Values the bot does not add for these entries, and why (checked when this page was written):"]
     lines += [f"* {c['work'].upper()} {c['title']} ({{{{Q|{c['qid'][1:]}}}}}): {clean(n)}" for c, n in notes] or ["* none"]
     return "\n".join(lines) + "\n"
