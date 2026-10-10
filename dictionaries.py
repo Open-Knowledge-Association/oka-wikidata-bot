@@ -37,7 +37,12 @@ WORKS = {"hds": ("Q642074", "P902", "the Historical Dictionary of Switzerland"),
 IDS = {"P902", "P4342", "P227", "P214", "P1248", "P4574", "P2504", "P2333"}     # identifiers: compared as text
 GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
-NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",))   # city, big city; then municipality of Norway
+NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",),   # city, big city; municipality of Norway; then former
+                    ("Q18663579", "Q15092344", "Q486972"))  # municipality, urban area in Norway, settlement
+WORLD_CITIES = (("Q515", "Q1549591", "Q5119", "Q200250", "Q1637706"),)   # well-known cities anywhere
+NO_LANGS, CH_LANGS = ("nb", "nn", "en"), ("de", "fr", "it", "rm")
+MULTI = {"P106", "P1321"}                        # several values are normal: a new one is added beside the others
+PLACE_PROPS = {"P19", "P20", "P159", "P1321"}
 GENDER = {"m": "Q6581097", "k": "Q6581072", "f": "Q6581072"}
 OCCUPATIONS = {                                  # SNL word -> (item, its English label, checked at start)
     "maler": ("Q1028181", "painter"), "grafiker": ("Q11569986", "printmaker"), "forfatter": ("Q36180", "writer"),
@@ -54,6 +59,7 @@ OCCUPATIONS = {                                  # SNL word -> (item, its Englis
     "jurist": ("Q185351", "jurist"), "forfattar": ("Q36180", "writer"), "ornitolog": ("Q1225716", "ornithologist"),
     "bibliotekar": ("Q182436", "librarian"), "skolemann": ("Q974144", "educator"), "skulemann": ("Q974144", "educator"),
     "sjefbibliotekar": ("Q10728547", "chief librarian"), "pressemann": ("Q1930187", "journalist"),
+    "salmebokutgiver": ("Q1607826", "editor"),
 }
 
 
@@ -173,12 +179,39 @@ CANTON_ITEMS = {"ZH": "Q11943", "BE": "Q11911", "LU": "Q12121", "UR": "Q12404", 
 
 def swiss_place(raw):
     """HDS place names: 'Netstal (heute Gemeinde Glarus)' is Netstal; 'Biel (BE)' is Biel among the municipalities
-    of canton Bern, where aliases count too (the item is called 'Biel/Bienne')."""
+    of canton Bern, where aliases count too (the item is called 'Biel/Bienne'); 'München' is a well-known city."""
     name = re.sub(r"\s*\((?:heute|ehemals|früher)\b[^)]*\)", "", clean(raw)).strip()
     m = re.fullmatch(r"(.+?)\s*\(([A-Z]{2})\)", name)
     if m and m.group(2) in CANTON_ITEMS:
-        return place(m.group(1), SWISS_PLACES, ("de", "fr", "it", "rm"), "Q39", within=CANTON_ITEMS[m.group(2)])
-    return place(name, SWISS_PLACES, ("de", "fr", "it", "rm"), "Q39")
+        return place(m.group(1), SWISS_PLACES, CH_LANGS, "Q39", within=CANTON_ITEMS[m.group(2)])
+    return place(name, SWISS_PLACES, CH_LANGS, "Q39") or place(name, WORLD_CITIES, CH_LANGS, None, min_links=20)
+
+
+def norwegian_place(raw):
+    """SNL place values: a link to an SNL article; 'Aker (Oslo)' or 'Skafså i Tokke': the first place, which lies
+    in the second (or is its old name, as Kristiania is Oslo's); else a city, municipality or settlement in
+    Norway; else a well-known city anywhere."""
+    q = snl_linked(raw)
+    if q:
+        return q
+    name = clean(raw).split(",")[0].strip()
+    m = re.fullmatch(r"(.+?)\s*\((.+?)\)", name) or re.fullmatch(r"(.+?)\s+i\s+(.+)", name)
+    if m:
+        part, whole = m.group(1).strip(), m.group(2).strip()
+        q = place(part, NORWEGIAN_PLACES, NO_LANGS, "Q20")
+        if q:
+            return q
+        within = place(whole, NORWEGIAN_PLACES, NO_LANGS, "Q20")
+        if within and named(within, part):
+            return within
+        return place(part, (sum(NORWEGIAN_PLACES, ()),), NO_LANGS, "Q20", within=within) if within else None
+    return place(name, NORWEGIAN_PLACES, NO_LANGS, "Q20") or place(name, WORLD_CITIES, NO_LANGS, None, min_links=20)
+
+
+def named(q, name):
+    """Whether this item has the name as a label or alias (e.g. Oslo is also called Kristiania)."""
+    lits = " ".join(f'"{name}"@{lang}' for lang in NO_LANGS + CH_LANGS + ("mul",))
+    return bool(qlever(f"SELECT ?l WHERE {{ VALUES ?l {{ {lits} }} wd:{q} rdfs:label|skos:altLabel ?l }}"))
 
 
 def snl_linked(raw):
@@ -191,14 +224,15 @@ def snl_linked(raw):
     return rows[0][0] if len(rows) == 1 else None
 
 
-def place(name, tiers, langs, country, within=None):
+def place(name, tiers, langs, country, within=None, min_links=5):
     """The one item whose label (or default label) is exactly this name, trying the class tiers in order (e.g. city
     before municipality, the usual target of a place of birth); None if a tier has several or no tier has one.
-    With `within` (a canton), aliases count as well, but only for items located in it."""
+    With `within` (a canton or municipality), aliases count as well, but only for items located in it. Without a
+    country, only well-known places qualify (min_links Wikipedia articles and three times the next candidate)."""
     name = clean(name).split(",")[0].strip()          # 'Lyngdal, Agder' -> 'Lyngdal'
     if not name or re.search(r"[()\d]", name):
         return None
-    key = (name, tiers, within)
+    key = (name, tiers, within, country)
     if key not in _places:
         _places[key] = None
         lits = " ".join(f'"{name}"@{lang}' for lang in langs + ("mul",))
@@ -206,10 +240,12 @@ def place(name, tiers, langs, country, within=None):
         inside = f"?i wdt:P131* wd:{within} ." if within else ""
         for classes in tiers:
             cls = " ".join(f"wd:{c}" for c in classes)
+            in_country = f"; wdt:P17 wd:{country}" if country else ""
             rows = qlever(f"SELECT DISTINCT ?i ?links WHERE {{ VALUES ?l {{ {lits} }} VALUES ?c {{ {cls} }} {names} "
-                          f"?i wdt:P31 ?c ; wdt:P17 wd:{country} ; wikibase:sitelinks ?links . {inside} }} ORDER BY DESC(?links)")
+                          f"?i wdt:P31 ?c {in_country} ; wikibase:sitelinks ?links . {inside} }} ORDER BY DESC(?links)")
             links = [int(r[1].split("^")[0].strip('"')) if not r[1].isdigit() else int(r[1]) for r in rows]
-            if len(rows) == 1 or (len(rows) > 1 and links[0] >= 5 and links[0] >= 3 * links[1]):
+            if (len(rows) == 1 and (country or links[0] >= min_links)) or \
+                    (len(rows) > 1 and links[0] >= min_links and links[0] >= 3 * links[1]):
                 _places[key] = rows[0][0]                # one candidate, or one far better known (a city, not its urban area)
                 break
             if rows:
@@ -244,6 +280,24 @@ def hds_open():
     return _open
 
 
+_viaf = {}
+
+
+def viaf_current(vid):
+    """VIAF merges clusters; an abandoned one names the cluster that replaced it."""
+    if vid not in _viaf:
+        _viaf[vid] = vid
+        try:
+            time.sleep(1)
+            d = curl_json(f"https://viaf.org/viaf/{vid}", "-H", "Accept: application/json")
+            target = d.get("ns0:abandoned_viaf_record", {}).get("ns0:redirect", {}).get("ns0:directto")
+            if target:
+                _viaf[vid] = str(target)
+        except (ValueError, KeyError, AttributeError, RuntimeError, subprocess.CalledProcessError):
+            pass
+    return _viaf[vid]
+
+
 def life_years(precision):
     """'1825 - 1908' -> (1825, 1908); uncertain years (marked //) are not used."""
     m = re.fullmatch(r"(\d{4}) -(?: (\d{4}))?", (precision or "").strip())
@@ -254,6 +308,8 @@ def hds_facts(hid, kind):
     od = hds_open()
     facts, notes = [], []
     for pid, ident in od["links"].get(hid, []):
+        if pid == "P214":
+            ident = viaf_current(ident)
         facts.append(fact(pid, string_value(ident), "GND ID" if pid == "P227" else "VIAF ID"))
     page = WORK2 / "hds" / f"{hid}.html"
     t = page.read_text(encoding="utf-8") if page.exists() else ""
@@ -344,7 +400,7 @@ def snl_facts(slug, kind):
     if d.get("metadata_license_name") != "fri":
         return d.get("title", slug), [], ["metadata not marked free to reuse"]
     m = d.get("metadata") or {}
-    no = lambda raw: snl_linked(raw) or place(raw, NORWEGIAN_PLACES, ("nb", "nn", "en"), "Q20")
+    no = norwegian_place
     if kind == "person":
         for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
             v = snl_date(m.get(key), label, notes)
@@ -396,7 +452,17 @@ def reference(work, ident, today):
     return ref
 
 
-def build(ent, entry, today):
+def place_labels(live, chosen):
+    """Labels of the places on the items and in the entries: a place of the same name counts as the same place
+    (Drammen the town and Drammen the urban area are two items; the source goes to the one the item uses)."""
+    qs = {c["mainsnak"]["datavalue"]["value"]["id"] for e in live.values() for p in PLACE_PROPS
+          for c in e.get("claims", {}).get(p, []) if c["mainsnak"]["snaktype"] == "value"}
+    qs |= {f["value"]["value"]["id"] for c in chosen for f in c["facts"] if f["pid"] in PLACE_PROPS}
+    found = items(sorted(qs)) if qs else {}
+    return {q: {v["value"] for v in e.get("labels", {}).values()} for q, e in found.items()}
+
+
+def build(ent, entry, today, labels=None):
     """(claims for wbeditentity, list of changes, notes) for one entry and its live item."""
     work_q, idp, _ = WORKS[entry["work"]]
     ref = reference(entry["work"], entry["id"], today)
@@ -419,13 +485,16 @@ def build(ent, entry, today):
                 c["mainsnak"]["datavalue"]["value"]["time"][:5] == f["value"]["value"]["time"][:5]
                 and c["mainsnak"]["datavalue"]["value"]["precision"] > f["value"]["value"]["precision"] for c in existing):
             continue
+        if not equal and labels and f["pid"] in PLACE_PROPS:            # a place of the same name
+            ours = labels.get(f["value"]["value"]["id"], set())
+            equal = [c for c in existing if labels.get(c["mainsnak"]["datavalue"]["value"].get("id"), set()) & ours]
         if equal:
             if f["pid"] not in IDS | {"P21"} and not cites(equal[0], work_q):
                 c = copy.deepcopy(equal[0])
                 c.setdefault("references", []).append(ref)
                 out_claims.append(c)
                 done.append(f"source for {f['label']}")
-        elif existing and f["pid"] != "P106":     # several occupations are normal; other differences are left alone
+        elif existing and f["pid"] not in MULTI:  # several occupations or places of origin are normal
             notes.append(f"{f['label']}: item has a different value, left alone")
         else:
             c = statement(f["pid"], f["value"], ref)
@@ -589,9 +658,10 @@ def run():
     today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
     rows, skipped = [], []
     live = items([c["qid"] for c in chosen])
+    labels = place_labels(live, chosen)
     for c in chosen:
         ent = live.get(c["qid"], {})
-        claims, done, notes = build(ent, c, today)
+        claims, done, notes = build(ent, c, today, labels)
         c["notes_out"] = notes
         if not claims:
             skipped.append(c)
@@ -626,8 +696,9 @@ def preview():
     chosen = json.loads((WORK2 / "sample.json").read_text(encoding="utf-8"))
     today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
     live = items([c["qid"] for c in chosen])
+    labels = place_labels(live, chosen)
     for c in chosen:
-        claims, done, notes = build(live.get(c["qid"], {}), c, today)
+        claims, done, notes = build(live.get(c["qid"], {}), c, today, labels)
         out(f"{c['work']} {c['kind']:12} {c['qid']:>11} {c['title'][:34]:34} {'; '.join(done) or 'no change'}"
             + (f"   [{' | '.join(notes)}]" if notes else ""))
 
