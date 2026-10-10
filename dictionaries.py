@@ -52,7 +52,8 @@ OCCUPATIONS = {                                  # SNL word -> (item, its Englis
     "botaniker": ("Q2374149", "botanist"), "geolog": ("Q520549", "geologist"), "fysiker": ("Q169470", "physicist"),
     "kjemiker": ("Q593644", "chemist"), "matematiker": ("Q170790", "mathematician"), "redaktør": ("Q1607826", "editor"),
     "jurist": ("Q185351", "jurist"), "forfattar": ("Q36180", "writer"), "ornitolog": ("Q1225716", "ornithologist"),
-    "bibliotekar": ("Q182436", "librarian"),
+    "bibliotekar": ("Q182436", "librarian"), "skolemann": ("Q974144", "educator"), "skulemann": ("Q974144", "educator"),
+    "sjefbibliotekar": ("Q10728547", "chief librarian"), "pressemann": ("Q1930187", "journalist"),
 }
 
 
@@ -93,7 +94,8 @@ def qlever(query):
     for attempt in range(1, 6):                     # an error page is not an empty result: wait and retry
         r = subprocess.run(["curl", "-s", "-G", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
                             "Accept: text/tab-separated-values", "--data-urlencode",
-                            "query=PREFIX wikibase: <http://wikiba.se/ontology#> " + pfx + query],
+                            "query=PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
+                            + pfx + query],
                            capture_output=True, text=True, encoding="utf-8")
         if r.stdout.startswith("?"):
             break
@@ -162,20 +164,50 @@ def clean(s):
 _places = {}
 
 
-def place(name, tiers, langs, country):
+CANTON_ITEMS = {"ZH": "Q11943", "BE": "Q11911", "LU": "Q12121", "UR": "Q12404", "SZ": "Q12433", "OW": "Q12573",
+                "NW": "Q12592", "GL": "Q11922", "ZG": "Q11933", "FR": "Q12640", "SO": "Q11929", "BS": "Q12172",
+                "BL": "Q12146", "SH": "Q12697", "AR": "Q12079", "AI": "Q12094", "SG": "Q12746", "GR": "Q11925",
+                "AG": "Q11972", "TG": "Q12713", "TI": "Q12724", "VD": "Q12771", "VS": "Q834", "NE": "Q12738",
+                "GE": "Q11917", "JU": "Q12755"}
+
+
+def swiss_place(raw):
+    """HDS place names: 'Netstal (heute Gemeinde Glarus)' is Netstal; 'Biel (BE)' is Biel among the municipalities
+    of canton Bern, where aliases count too (the item is called 'Biel/Bienne')."""
+    name = re.sub(r"\s*\((?:heute|ehemals|früher)\b[^)]*\)", "", clean(raw)).strip()
+    m = re.fullmatch(r"(.+?)\s*\(([A-Z]{2})\)", name)
+    if m and m.group(2) in CANTON_ITEMS:
+        return place(m.group(1), SWISS_PLACES, ("de", "fr", "it", "rm"), "Q39", within=CANTON_ITEMS[m.group(2)])
+    return place(name, SWISS_PLACES, ("de", "fr", "it", "rm"), "Q39")
+
+
+def snl_linked(raw):
+    """The item an SNL metadata value links to (its first snl.no link), found through the SNL ID on Wikidata."""
+    m = re.search(r'href="https?://snl\.no/([^"#?]+)"', raw or "")
+    if not m:
+        return None
+    slug = urllib.parse.unquote(m.group(1))
+    rows = qlever(f"SELECT DISTINCT ?i WHERE {{ VALUES ?v {{ {json.dumps(slug)} {json.dumps(urllib.parse.quote(slug))} }} ?i wdt:P4342 ?v }}")
+    return rows[0][0] if len(rows) == 1 else None
+
+
+def place(name, tiers, langs, country, within=None):
     """The one item whose label (or default label) is exactly this name, trying the class tiers in order (e.g. city
-    before municipality, the usual target of a place of birth); None if a tier has several or no tier has one."""
+    before municipality, the usual target of a place of birth); None if a tier has several or no tier has one.
+    With `within` (a canton), aliases count as well, but only for items located in it."""
     name = clean(name).split(",")[0].strip()          # 'Lyngdal, Agder' -> 'Lyngdal'
     if not name or re.search(r"[()\d]", name):
         return None
-    key = (name, tiers)
+    key = (name, tiers, within)
     if key not in _places:
         _places[key] = None
         lits = " ".join(f'"{name}"@{lang}' for lang in langs + ("mul",))
+        names = "{ ?i rdfs:label ?l } UNION { ?i skos:altLabel ?l }" if within else "?i rdfs:label ?l ."
+        inside = f"?i wdt:P131* wd:{within} ." if within else ""
         for classes in tiers:
             cls = " ".join(f"wd:{c}" for c in classes)
-            rows = qlever(f"SELECT DISTINCT ?i ?links WHERE {{ VALUES ?l {{ {lits} }} VALUES ?c {{ {cls} }} "
-                          f"?i rdfs:label ?l ; wdt:P31 ?c ; wdt:P17 wd:{country} ; wikibase:sitelinks ?links }} ORDER BY DESC(?links)")
+            rows = qlever(f"SELECT DISTINCT ?i ?links WHERE {{ VALUES ?l {{ {lits} }} VALUES ?c {{ {cls} }} {names} "
+                          f"?i wdt:P31 ?c ; wdt:P17 wd:{country} ; wikibase:sitelinks ?links . {inside} }} ORDER BY DESC(?links)")
             links = [int(r[1].split("^")[0].strip('"')) if not r[1].isdigit() else int(r[1]) for r in rows]
             if len(rows) == 1 or (len(rows) > 1 and links[0] >= 5 and links[0] >= 3 * links[1]):
                 _places[key] = rows[0][0]                # one candidate, or one far better known (a city, not its urban area)
@@ -230,7 +262,7 @@ def hds_facts(hid, kind):
         (f"{bio['Complement']} {bio['Lemma']}".strip() if bio else od["names"].get(hid, hid))
     paras = [p for p in re.findall(r"<p[^>]*>(.*?)</p>", t, re.S) if len(clean(p)) > 40]
     first = paras[0] if paras else ""
-    ch = lambda name: place(name, SWISS_PLACES, ("de", "fr", "it", "rm"), "Q39")
+    ch = swiss_place
     if kind == "person" and not t and bio:
         born, died = life_years(bio["Precision"])
         for year, pid, label in ((born, "P569", "year of birth"), (died, "P570", "year of death")):
@@ -312,7 +344,7 @@ def snl_facts(slug, kind):
     if d.get("metadata_license_name") != "fri":
         return d.get("title", slug), [], ["metadata not marked free to reuse"]
     m = d.get("metadata") or {}
-    no = lambda name: place(name, NORWEGIAN_PLACES, ("nb", "nn", "en"), "Q20")
+    no = lambda raw: snl_linked(raw) or place(raw, NORWEGIAN_PLACES, ("nb", "nn", "en"), "Q20")
     if kind == "person":
         for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
             v = snl_date(m.get(key), label, notes)
@@ -572,11 +604,13 @@ def run():
             rows.append({**c, "done": done, "revid": revid})
         out(f"{c['work']} {c['kind']:12} {c['qid']:>11} {'saved ' + str(revid) if revid else err or 'no change'}: {'; '.join(done)}")
         time.sleep(5)
-    (WORK2 / "testrun.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    log = WORK2 / "testrun.json"                  # earlier test edits stay in the report
+    rows = (json.loads(log.read_text(encoding="utf-8")) if log.exists() else []) + rows
+    log.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
     page = pywikibot.Page(site, REPORT_PAGE)
     page.text = report(rows, skipped)
     page.save(summary=f"Test run report for [[Wikidata:Requests for permissions/Bot/OKA bot 2]] ({len(rows)} edits)", bot=True)
-    out(f"saved {len(rows)} edits; report at {REPORT_PAGE}")
+    out(f"{len(rows)} test edits in all; report at {REPORT_PAGE}")
 
 
 def refacts():
