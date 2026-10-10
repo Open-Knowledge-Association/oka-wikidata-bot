@@ -632,22 +632,49 @@ def save(site, qid, claims, done, work, baserevid):
         return None, f"refused by Wikidata: {e.code}"
 
 
-def report(rows, skipped):
+def current_notes(chosen, today):
+    """What the bot still leaves alone for these entries, checked against Wikidata now."""
+    live = items([c["qid"] for c in chosen])
+    labels = place_labels(live, chosen)
+    return [(c, n) for c in chosen for n in build(live.get(c["qid"], {}), c, today, labels)[2]]
+
+
+def report(rows, notes):
+    rounds, last = [], None
+    for r in rows:                                # a new round starts where the revision IDs jump (a later run)
+        rounds.append(1 if last is None else rounds[-1] + (r["revid"] - last > 2000))
+        last = r["revid"]
     lines = [f"This page lists the test edits for [[Wikidata:Requests for permissions/Bot/OKA bot 2]], made on "
              f"{datetime.date.today():%d %B %Y}. The bot wrote it. Each edit adds or sources facts from one entry of "
-             "the [[Q642074|Historical Dictionary of Switzerland]] (HDS) or [[Q746368|Store norske leksikon]] (SNL).", "",
-             '{| class="wikitable sortable"', "! # !! Work !! Kind !! Entry !! Item !! Changes !! Diff"]
-    for i, r in enumerate(rows, 1):
+             "the [[Q642074|Historical Dictionary of Switzerland]] (HDS) or [[Q746368|Store norske leksikon]] (SNL)."]
+    if max(rounds) > 1:
+        lines.append(f"Round 1 made {rounds.count(1)} edits. After the operator reviewed them, the matching rules were "
+                     "improved and the same entries were checked again; round 2 made the remaining "
+                     f"{len(rows) - rounds.count(1)} edits.")
+    lines += ["", '{| class="wikitable sortable"', "! # !! Round !! Work !! Kind !! Entry !! Item !! Changes !! Diff"]
+    for i, (r, rnd) in enumerate(zip(rows, rounds), 1):
         url = f"https://hls-dhs-dss.ch/de/articles/{r['id']}/" if r["work"] == "hds" else f"https://snl.no/{r['id']}"
-        lines += ["|-", f"| {i} || {r['work'].upper()} || {r['kind']} || [{url} {r['title']}] || {{{{Q|{r['qid'][1:]}}}}} "
+        lines += ["|-", f"| {i} || {rnd} || {r['work'].upper()} || {r['kind']} || [{url} {r['title']}] || {{{{Q|{r['qid'][1:]}}}}} "
                         f"|| {'; '.join(r['done'])}{' (matched by ' + r['matched_by'] + ')' if r['matched_by'] != 'identifier' else ''} "
                         f"|| [[Special:Diff/{r['revid']}|diff]]"]
     lines.append("|}")
-    notes = [(r, n) for r in rows + skipped for n in r.get("notes_out", [])]
-    if notes:
-        lines += ["", "== Left alone ==", "Values the bot did not add, and why:"]
-        lines += [f"* {r['work'].upper()} {r['title']} ({{{{Q|{r['qid'][1:]}}}}}): {n}" for r, n in notes]
+    lines += ["", "== Left alone ==", "Values the bot does not add for these entries, and why (checked when this page was written):"]
+    lines += [f"* {c['work'].upper()} {c['title']} ({{{{Q|{c['qid'][1:]}}}}}): {clean(n)}" for c, n in notes] or ["* none"]
     return "\n".join(lines) + "\n"
+
+
+def write_report(site=None):
+    """Rewrite the report page from the run log and the current state of the items."""
+    from common import bot_site
+    site = site or bot_site(5)
+    import pywikibot
+    rows = json.loads((WORK2 / "testrun.json").read_text(encoding="utf-8"))
+    chosen = json.loads((WORK2 / "sample.json").read_text(encoding="utf-8"))
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
+    page = pywikibot.Page(site, REPORT_PAGE)
+    page.text = report(rows, current_notes(chosen, today))
+    page.save(summary=f"Test run report for [[Wikidata:Requests for permissions/Bot/OKA bot 2]] ({len(rows)} edits)", bot=True)
+    out(f"{len(rows)} test edits listed; report at {REPORT_PAGE}")
 
 
 def run():
@@ -677,10 +704,7 @@ def run():
     log = WORK2 / "testrun.json"                  # earlier test edits stay in the report
     rows = (json.loads(log.read_text(encoding="utf-8")) if log.exists() else []) + rows
     log.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
-    page = pywikibot.Page(site, REPORT_PAGE)
-    page.text = report(rows, skipped)
-    page.save(summary=f"Test run report for [[Wikidata:Requests for permissions/Bot/OKA bot 2]] ({len(rows)} edits)", bot=True)
-    out(f"{len(rows)} test edits in all; report at {REPORT_PAGE}")
+    write_report(site)
 
 
 def refacts():
@@ -706,4 +730,4 @@ def preview():
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     check_occupations()
-    {"sample": sample, "refacts": refacts, "preview": preview, "run": run}[sys.argv[1]]()
+    {"sample": sample, "refacts": refacts, "preview": preview, "run": run, "report": write_report}[sys.argv[1]]()
