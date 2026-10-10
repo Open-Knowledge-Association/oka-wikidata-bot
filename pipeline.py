@@ -29,6 +29,7 @@ import plan as planmod
 LOG = ROOT / "edits.csv"
 FIELDS = ["time", "kind", "qid", "uuid", "name", "revid", "changes"]
 MAX_REFUSED = 5          # edits Wikidata refuses in one batch before the run stops
+CREATE_INTERVAL = 3.0    # seconds between new items: Wikidata limits how fast an account may create them
 
 
 def logged():
@@ -85,7 +86,7 @@ def save(site, entity_id, data, done, baserevid=None):
     import re
     from pywikibot.data import api
     from pywikibot.exceptions import APIError
-    for _ in range(6):
+    for attempt in range(1, 13):
         params = {"action": "wbeditentity", "data": json.dumps(data), "bot": 1, "token": site.tokens["csrf"],
                   "summary": f"{', '.join(done)} from swisstopo data ({REQUEST})"}
         params.update({"id": entity_id, "baserevid": baserevid} if entity_id else {"new": "item"})
@@ -94,6 +95,9 @@ def save(site, entity_id, data, done, baserevid=None):
             return r["entity"]["id"], r["entity"]["lastrevid"], done
         except APIError as e:
             text = str(e)
+            if e.code in ("no-automatic-entity-id", "ratelimited") or "anti-abuse" in text:
+                time.sleep(60 * min(attempt, 5))  # Wikidata's limit on new items (or edits): wait, then retry
+                continue
             if e.code == "editconflict" or "edit conflict" in text.lower():
                 return entity_id, None, ["skipped: edited by someone else since it was read"]
             m = re.search(r"associated with language code ([\w-]+)", text)
@@ -104,7 +108,7 @@ def save(site, entity_id, data, done, baserevid=None):
             data, done = drop_language(data, done, m.group(1))
             if not data:
                 return entity_id, None, done
-    raise RuntimeError("too many label/description clashes")
+    raise RuntimeError("Wikidata kept refusing: rate limit or label/description clashes")
 
 
 def duplicate_nearby(site, rec):
@@ -145,7 +149,8 @@ def run_batch(site, rows, rate, refs):
             data, done, entity_id = (None, [f"skipped: {reason}"], None) if reason else (build_new(row, refs), ["new item"], None)
         revid = ""
         if data:
-            time.sleep(max(0.0, 1.0 / rate - (time.time() - last)))
+            interval = max(1.0 / rate, CREATE_INTERVAL if row["kind"] == "create" else 0.0)
+            time.sleep(max(0.0, interval - (time.time() - last)))
             entity_id, revid, done = save(site, entity_id, data, done, base)
             last = time.time()
             if revid:
