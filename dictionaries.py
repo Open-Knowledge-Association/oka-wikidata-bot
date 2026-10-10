@@ -550,10 +550,10 @@ def report(rows, skipped):
 
 
 def run():
-    import pywikibot
     from common import bot_site
     chosen = json.loads((WORK2 / "sample.json").read_text(encoding="utf-8"))
-    site = bot_site(5)
+    site = bot_site(5)                        # writes the login settings; pywikibot may only be imported after this
+    import pywikibot
     today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
     rows, skipped = [], []
     live = items([c["qid"] for c in chosen])
