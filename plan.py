@@ -25,7 +25,44 @@ def official(rec):
     return rec["status"] == "offiziell" and rec["ntype"] in OFFICIAL_TYPES
 
 
+def build_p131():
+    """Swiss items with a position and no municipality, of point-like classes: the municipality swissBOUNDARIES3D
+    places every one of their positions in (none if positions disagree or lie outside Switzerland)."""
+    from common import P131_NOT, P131_ROOTS
+    bounds = Boundaries()
+    muni_item = defaultdict(set)
+    for item, code in sparql_tsv("SELECT ?item ?code WHERE { ?item wdt:P31 wd:Q70208 ; wdt:P771 ?code . "
+                                 "MINUS { ?item wdt:P576 ?end } }", "municipalities.tsv"):
+        muni_item[int(literal(code)[0])].add(qid(item))
+    muni_item = {k: next(iter(v)) for k, v in muni_item.items() if len(v) == 1}
+    roots, bad = " ".join("wd:" + q for q in P131_ROOTS), " ".join("wd:" + q for q in P131_NOT)
+    query = (f"SELECT DISTINCT ?item ?coord WHERE {{ ?item wdt:P17 wd:Q39 ; wdt:P625 ?coord ; wdt:P31 ?c . "
+             f"MINUS {{ ?item wdt:P131 ?x }} VALUES ?root {{ {roots} }} ?c wdt:P279* ?root . "
+             f"FILTER NOT EXISTS {{ VALUES ?bad {{ {bad} }} ?item wdt:P31/wdt:P279* ?bad }} }}")
+    coords = defaultdict(list)
+    for item, c in sparql_tsv(query, "p131_candidates.tsv"):
+        if "(" in c:
+            coords[qid(item)].append(point(c))
+    rows, skipped = [], Counter()
+    for q, pts in sorted(coords.items()):
+        found = {tuple(muni_item.get(bfs) for bfs, _ in bounds.at(e, n)) for e, n in pts}
+        if len(found) != 1 or not next(iter(found)) or not all(next(iter(found))):
+            skipped["outside, on a border or positions disagree"] += 1
+            continue
+        e, n = pts[0]
+        rows.append({"kind": "edit", "batch": "p131", "qid": q, "munis": list(next(iter(found))),
+                     "rec": {"uuid": "", "name": q, "e": e, "n": n, "group": "point"}})
+    path = plan_path("p131")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps({"release": "swissboundaries3d", "items_in_scope": len(coords)}) + "\n")
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    out(f"plan: {len(rows)} items get a municipality, skipped {dict(skipped)} -> {path}")
+
+
 def build(batch=""):
+    if batch == "p131":
+        return build_p131()
     cfg = BATCHES[batch]
     classes, cache, tag = cfg["classes"], cfg["cache"], ({"batch": batch} if batch else {})
     recs, release = swissnames3d(cfg["types"])

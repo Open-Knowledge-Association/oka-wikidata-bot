@@ -72,6 +72,15 @@ def name_changes(raw, rec, ref):
     return labels, aliases, claims, done
 
 
+def build_p131(raw, row, refs):
+    """Batch p131: only the municipality, if the item still has none."""
+    if raw.get("redirects") or "missing" in raw:
+        return None, ["skipped: redirect or deleted"]
+    if raw.get("claims", {}).get("P131"):
+        return None, []                          # someone added one in the meantime
+    return {"claims": [item_claim("P131", m, refs[SWISSBOUNDARIES3D]) for m in row["munis"]]}, ["municipality"]
+
+
 def build_edit(raw, row, refs):
     """Return (data for wbeditentity or None, list of changes or a reason it was skipped)."""
     rec, ref = row["rec"], refs[SWISSNAMES3D]

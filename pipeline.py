@@ -25,7 +25,7 @@ from collections import Counter
 
 from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json,
                     dist_m, lv95_to_wgs84, out, ref_json)
-from edit import build_edit, build_new, drop_language
+from edit import build_edit, build_new, build_p131, drop_language
 import plan as planmod
 
 LOG = ROOT / "edits.csv"
@@ -161,7 +161,7 @@ def run_batch(site, rows, rate, refs):
         base = None
         if row["kind"] == "edit":
             ent = live.get(row["qid"], {"missing": ""})
-            data, done = build_edit(ent, row, refs)
+            data, done = (build_p131 if row.get("batch") == "p131" else build_edit)(ent, row, refs)
             entity_id, base = row["qid"], ent.get("lastrevid")
         else:
             reason = duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]))

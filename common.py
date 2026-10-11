@@ -87,6 +87,15 @@ BATCHES["settlements"] = {
     "covers": ["localities", "neighbourhoods"],
     "note": "Localities and neighbourhoods get no heights; new items only for localities of 100 to 9,999 inhabitants."}
 RADIUS.update({"settlement": 1500, "neighbourhood": 1000})
+# Fourth batch, "p131": Swiss items with a position but no municipality get the one swissBOUNDARIES3D places their
+# position in. Point features only: classes under built structure, archaeological site, settlement, fountain, water
+# well, mountain, pass or hill; not waters, glaciers, protected areas, regions, roads, railway lines, bridges or
+# tunnels (they span municipalities). Nothing else changes on these items.
+P131_ROOTS = ("Q811979", "Q839954", "Q486972", "Q483453", "Q43483", "Q8502", "Q133056", "Q54050")
+P131_NOT = ("Q15324", "Q35666", "Q473972", "Q355304", "Q56061", "Q82794", "Q1620908", "Q34442", "Q79007",
+            "Q728937", "Q12280", "Q44377", "Q34379", "Q3325736")   # ...musical instruments, artist-run initiatives
+BATCHES["p131"] = {"plan": "plan_p131.jsonl", "cache": "p131_", "covers": ["buildings and other located items"],
+                   "note": "Buildings and other located items get only their municipality, from swissBOUNDARIES3D."}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")
