@@ -274,14 +274,21 @@ def hds_open():
         names = {r["ID"].zfill(6): " ".join(x for x in (r["Lemma"], r["Complement"]) if x)
                  for fn in ("liste_fam_d_utf8.csv", "liste_geo_d_utf8.csv", "liste_tem_d_utf8.csv") if (d / fn).exists()
                  for r in csv.DictReader(open(d / fn, encoding="utf-8"))}
-        links = {}
+        links, owners = {}, {}
         for fn, pid in (("BEACON-GND-HLS.txt", "P227"), ("BEACON-VIAF-HLS.txt", "P214")):
             for line in open(d / fn, encoding="utf-8"):
                 parts = line.rstrip("\n").split("|")
                 m = len(parts) >= 3 and not line.startswith("#") and re.search(r"articles/(\d{6})/", parts[2])
                 if m:
                     links.setdefault(m.group(1), []).append((pid, parts[0].strip()))
-        _open = {"bio": bio, "names": names, "links": links}
+                    owners.setdefault((pid, parts[0].strip()), set()).add(m.group(1))
+        checked = {}                                  # check_links.py: which links VIAF and the GND have retired
+        if (WORK2 / "link_check.jsonl").exists():
+            for line in open(WORK2 / "link_check.jsonl", encoding="utf-8"):
+                r = json.loads(line)
+                if not r["status"].startswith("error"):
+                    checked[("P214" if r["kind"] == "viaf" else "P227", r["id"])] = r
+        _open = {"bio": bio, "names": names, "links": links, "owners": owners, "checked": checked}
     return _open
 
 
@@ -313,9 +320,20 @@ def hds_facts(hid, kind):
     od = hds_open()
     facts, notes = [], []
     for pid, ident in od["links"].get(hid, []):
-        if pid == "P214":
+        label = "GND ID" if pid == "P227" else "VIAF ID"
+        if len(od["owners"][(pid, ident)] & od["bio"].keys()) > 1:      # two people cannot share one record
+            notes.append(f"{label} {ident} is given to several HDS biographies; not copied")
+            continue
+        r = od["checked"].get((pid, ident)) or {"status": "unchecked"}
+        if r["status"] in ("missing", "abandoned") or r.get("undifferentiated"):
+            notes.append(f"{label} {ident} " + ("is an undifferentiated name record" if r.get("undifferentiated")
+                                                 else "no longer exists") + "; not copied")
+            continue
+        if r["status"] == "replaced":
+            ident = r["now"]
+        elif r["status"] != "ok" and pid == "P214":
             ident = viaf_current(ident)
-        facts.append(fact(pid, string_value(ident), "GND ID" if pid == "P227" else "VIAF ID"))
+        facts.append(fact(pid, string_value(ident), label))
     page = WORK2 / "hds" / f"{hid}.html"
     t = page.read_text(encoding="utf-8") if page.exists() else ""
     bio = od["bio"].get(hid)

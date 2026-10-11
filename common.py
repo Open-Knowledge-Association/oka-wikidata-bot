@@ -176,12 +176,17 @@ def curl_json(url, *extra):
     if shutil.which("curl"):
         return json.loads(subprocess.run(["curl", "-s", "-S", "-L", "--max-time", "600", "-A", UA, *extra, url],
                                          capture_output=True, check=True).stdout)
-    if extra:                                     # plain GETs only without curl (e.g. on Toolforge)
-        raise RuntimeError("curl is needed for this request")
+    headers, args = {"User-Agent": UA}, list(extra)  # without curl (e.g. on Toolforge): GETs, with -H headers
+    while args:
+        if args[0] != "-H" or len(args) < 2:
+            raise RuntimeError("curl is needed for this request")
+        name, _, value = args[1].partition(":")
+        headers[name.strip()] = value.strip()
+        del args[:2]
     import urllib.error
     import urllib.request
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=600) as r:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=600) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:           # like curl: hand back the error page, which then fails to parse
         return json.loads(e.read())
@@ -418,7 +423,8 @@ def bot_site(throttle):
     workdir = tempfile.mkdtemp(prefix="pwb-")
     with open(os.path.join(workdir, "user-config.py"), "w", encoding="utf-8") as f:
         f.write(f"family = 'wikidata'\nmylang = 'wikidata'\nusernames['wikidata']['wikidata'] = {user!r}\n"
-                f"password_file = 'user-password.py'\nput_throttle = {throttle}\nmaxlag = 5\n"
+                f"password_file = 'user-password.py'\nput_throttle = {throttle}\n"
+                "if 'write_maxlag' in globals():\n    write_maxlag = 5\nelse:\n    maxlag = 5\n"  # renamed in pywikibot 11.8
                 "max_retries = 200\nretry_wait = 10\nretry_max = 120\n"
                 f"user_agent_description = {UA!r}\n")
     fd = os.open(os.path.join(workdir, "user-password.py"), os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
