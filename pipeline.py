@@ -83,7 +83,7 @@ def fetch(ids):
     for attempt in range(1, 11):
         try:
             return curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
-                             "&props=labels|aliases|descriptions|claims&ids=" + "|".join(ids))["entities"]
+                             "&props=info|labels|aliases|descriptions|claims&ids=" + "|".join(ids))["entities"]
         except (ValueError, KeyError, OSError, subprocess.CalledProcessError):   # error page, API error, no network
             out(f"Wikidata did not answer, retrying in {attempt} min")
             time.sleep(60 * attempt)

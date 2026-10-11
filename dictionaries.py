@@ -17,6 +17,7 @@ Rules:
 import copy
 import csv
 import datetime
+import functools
 import html
 import json
 import random
@@ -36,6 +37,7 @@ WORKS = {"hds": ("Q642074", "P902", "the Historical Dictionary of Switzerland"),
          "snl": ("Q746368", "P4342", "Store norske leksikon")}
 IDS = {"P902", "P4342", "P227", "P214", "P1248", "P4574", "P2504", "P2333"}     # identifiers: compared as text
 GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
+JULIAN = "http://www.wikidata.org/entity/Q1985786"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
 NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",),   # city, big city; municipality of Norway; then former
                     ("Q18663579", "Q15092344", "Q486972"))  # municipality, urban area in Norway, settlement
@@ -101,10 +103,10 @@ def qlever(query):
     import shutil
     for attempt in range(1, 6):                     # an error page is not an empty result: wait and retry
         if shutil.which("curl"):
-            text = subprocess.run(["curl", "-s", "-G", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
+            text = subprocess.run(["curl", "-s", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
                                    "Accept: text/tab-separated-values", "--data-urlencode", "query=" + query],
                                   capture_output=True, text=True, encoding="utf-8").stdout
-        else:                                       # Toolforge has no curl; a POST also fits long queries
+        else:                                       # Toolforge has no curl
             req = urllib.request.Request("https://qlever.dev/api/wikidata", urllib.parse.urlencode({"query": query}).encode(),
                                          {"User-Agent": UA, "Accept": "text/tab-separated-values"})
             try:
@@ -128,7 +130,7 @@ def items(ids):
         for attempt in range(1, 8):                  # Wikidata answers bursts of reads with an error page: wait, retry
             try:
                 found.update(curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
-                                       "&props=labels|claims&ids=" + "|".join(ids[i:i + 50]))["entities"])
+                                       "&props=info|labels|claims&ids=" + "|".join(ids[i:i + 50]))["entities"])
                 break
             except (ValueError, KeyError, subprocess.CalledProcessError):
                 time.sleep(20 * attempt)
@@ -141,11 +143,12 @@ def items(ids):
 # ---------------------------------------------------------------- values
 
 def time_value(year, month=None, day=None):
+    cal = GREGORIAN if year > 1582 else JULIAN      # Help:Dates: the Julian calendar model before 1583
     if day:
         return {"type": "time", "value": {"time": f"+{year:04d}-{month:02d}-{day:02d}T00:00:00Z", "timezone": 0,
-                                          "before": 0, "after": 0, "precision": 11, "calendarmodel": GREGORIAN}}
+                                          "before": 0, "after": 0, "precision": 11, "calendarmodel": cal}}
     return {"type": "time", "value": {"time": f"+{year:04d}-00-00T00:00:00Z", "timezone": 0, "before": 0, "after": 0,
-                                      "precision": 9, "calendarmodel": GREGORIAN}}
+                                      "precision": 9, "calendarmodel": cal}}
 
 
 def item_value(q):
@@ -222,12 +225,14 @@ def norwegian_place(raw):
     return place(name, NORWEGIAN_PLACES, NO_LANGS, "Q20") or place(name, WORLD_CITIES, NO_LANGS, None, min_links=20)
 
 
+@functools.lru_cache(maxsize=None)
 def named(q, name):
     """Whether this item has the name as a label or alias (e.g. Oslo is also called Kristiania)."""
     lits = " ".join(f'"{name}"@{lang}' for lang in NO_LANGS + CH_LANGS + ("mul",))
     return bool(qlever(f"SELECT ?l WHERE {{ VALUES ?l {{ {lits} }} wd:{q} rdfs:label|skos:altLabel ?l }}"))
 
 
+@functools.lru_cache(maxsize=None)
 def snl_linked(raw):
     """The item an SNL metadata value links to (its first snl.no link), found through the SNL ID on Wikidata."""
     m = re.search(r'href="https?://snl\.no/([^"#?]+)"', raw or "")
@@ -330,8 +335,8 @@ def hds_facts(hid, kind):
     facts, notes = [], []
     for pid, ident in od["links"].get(hid, []):
         label = "GND ID" if pid == "P227" else "VIAF ID"
-        if len(od["owners"][(pid, ident)] & od["bio"].keys()) > 1:      # two people cannot share one record
-            notes.append(f"{label} {ident} is given to several HDS biographies; not copied")
+        if len(od["owners"][(pid, ident)]) > 1:        # one record for several articles: which item is meant?
+            notes.append(f"{label} {ident} is given to several HDS articles; not copied")
             continue
         r = od["checked"].get((pid, ident)) or {"status": "unchecked"}
         if r["status"] in ("missing", "abandoned") or r.get("undifferentiated"):
@@ -372,7 +377,7 @@ def hds_facts(hid, kind):
                 if q:
                     facts.append(fact("P19" if span == "hls-dnais" else "P20", item_value(q), key))
                 else:
-                    notes.append(f"{key} '{name}' not matched to one Swiss municipality")
+                    notes.append(f"{key} '{name}' not matched to one place item")
         header = clean(re.split(r"\.\s+(?:Sohn|Tochter)\b", first)[0])
         m = re.search(r",\s*von ([^.]+)$", header)
         if m:
@@ -381,7 +386,7 @@ def hds_facts(hid, kind):
                 if q:
                     facts.append(fact("P1321", item_value(q), "place of origin"))
                 else:
-                    notes.append(f"place of origin '{name}' not matched to one Swiss municipality")
+                    notes.append(f"place of origin '{name}' not matched to one place item")
     elif kind == "family":
         m = re.search(r",\s*([^,]+)$", title)
         if m and "Familie" in title:
@@ -389,7 +394,7 @@ def hds_facts(hid, kind):
             if q:
                 facts.append(fact("P1321", item_value(q), "place of origin"))
             else:
-                notes.append(f"place of origin '{m.group(1)}' not matched to one Swiss municipality")
+                notes.append(f"place of origin '{m.group(1)}' not matched to one place item")
     elif kind == "place":
         m = re.search(r"\.\s*(\d{3,4})\s+([A-ZÄÖÜ][^.;\d]{1,60}?)\s*\.", clean(first))
         if m and int(m.group(1)) <= 1800:
@@ -410,7 +415,7 @@ def snl_date(s, label, notes):
     m = re.fullmatch(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", s)
     if m:
         d, mo, y = map(int, m.groups())
-        if y < 1700:
+        if y < 1700 and (d or mo):                  # '0.0.1125' is just a year, the same in both calendars
             notes.append(f"{label} {s} not used: calendar before 1700 unclear")
             return None
         return time_value(y, mo, d)
@@ -451,7 +456,7 @@ def snl_facts(slug, kind):
                 if q:
                     facts.append(fact(pid, item_value(q), label))
                 else:
-                    notes.append(f"{label} '{m[key]}' not matched to one Norwegian municipality")
+                    notes.append(f"{label} '{clean(m[key])}' not matched to one place item")
         for word in re.split(r",\s*|\s+og\s+", (m.get("occupation") or "").strip().lower()):
             if word in OCCUPATIONS:
                 facts.append(fact("P106", item_value(OCCUPATIONS[word][0]), "occupation"))
@@ -477,7 +482,7 @@ def snl_facts(slug, kind):
             if q:
                 facts.append(fact("P159", item_value(q), "headquarters"))
             else:
-                notes.append(f"headquarters '{m['organization_headquarter'].strip()}' not matched to one Norwegian municipality")
+                notes.append(f"headquarters '{clean(m['organization_headquarter'])}' not matched to one place item")
     return d.get("title", slug), facts, notes
 
 
