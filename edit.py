@@ -5,14 +5,16 @@ Rules (Wikidata:Requests for permissions/Bot/OKA bot, after review):
 - heights are whole metres; a matching height or position gets a reference (an old position saved without a
   precision gets the one its digits imply, since Wikidata refuses it otherwise; the position itself is unchanged);
 - a missing height is added for summits and lakes (not passes, glaciers or reservoirs: a pass's swissNAMES3D
-  point can sit beside the saddle, a glacier spans many heights, a reservoir's level changes);
+  point can sit beside the saddle, a glacier spans many heights, a reservoir's level changes); valleys, ridges,
+  waterfalls and caves get no height at all (their name point's height says nothing about the feature);
 - if an existing value's only source is a Wikipedia import and it is more than 5 m (height) or 50 m (position,
   summits only) off, swisstopo's value is added with preferred rank and "reason: best referenced value";
 - default label (mul) when swisstopo has a single name, plus the label in the name's own language;
   names in other languages become labels, or aliases when a different label exists;
-- official name (P1448) for swisstopo's official names; municipality (P131) for summits and passes without one;
+- official name (P1448) for swisstopo's official names; municipality (P131) for point features (summits, passes,
+  waterfalls, caves) without one;
 - new items get labels, a "[type] in [canton], Switzerland" description, class, country, position, height
-  (not for passes and glaciers), official name and municipality, every statement referenced.
+  (summits, hills and lakes only), official name and municipality (point features), every statement referenced.
 """
 import copy
 import re
@@ -133,12 +135,19 @@ def build_edit(raw, row, refs):
     return (data or None), done
 
 
-def descriptions(cls, canton):
+def descriptions(cls, canton, muni=None):
+    """'[type] in the canton of X, Switzerland'; with the name of the one municipality a point feature lies in,
+    '[type] in M, canton of X, Switzerland', which keeps many same-named hills ('Egg', 'Büel') apart."""
     if canton in CANTONS and cls in TYPE_WORDS:
         en, de, fr_prep, fr, it = CANTONS[canton]
         t_en, t_de, t_fr, t_it = TYPE_WORDS[cls]
-        texts = (f"{t_en} in the canton of {en}, Switzerland", f"{t_de} im Kanton {de}, Schweiz",
-                 f"{t_fr} du canton {fr_prep}{fr}, en Suisse", f"{t_it} del Canton {it}, Svizzera")
+        if muni:
+            m = lambda lang: muni.get(lang) or muni.get("mul") or muni.get("de")
+            texts = (f"{t_en} in {m('en')}, canton of {en}, Switzerland", f"{t_de} in {m('de')}, Kanton {de}, Schweiz",
+                     f"{t_fr} à {m('fr')}, canton {fr_prep}{fr}, en Suisse", f"{t_it} a {m('it')}, Canton {it}, Svizzera")
+        else:
+            texts = (f"{t_en} in the canton of {en}, Switzerland", f"{t_de} im Kanton {de}, Schweiz",
+                     f"{t_fr} du canton {fr_prep}{fr}, en Suisse", f"{t_it} del Canton {it}, Svizzera")
     else:
         texts = GENERIC[cls]
     return {l: {"language": l, "value": t} for l, t in zip(("en", "de", "fr", "it"), texts)}
@@ -148,12 +157,12 @@ def build_new(row, refs):
     rec, cls, ref = row["rec"], row["cls"], refs[SWISSNAMES3D]
     lat, lon = lv95_to_wgs84(rec["e"], rec["n"])
     claims = [item_claim("P31", cls, ref), item_claim("P17", "Q39", ref), coord_claim(lat, lon, ref)]
-    if cls not in ("Q35666", "Q133056"):                     # no height for glaciers (a range) or passes (name point)
+    if rec["group"] in ("summit", "lake"):      # not glaciers (a range), passes (name point), valleys, ridges, waterfalls, caves
         claims.append(height_claim(rec["z"], ref))
     labels, aliases, name_claims, _ = name_changes({}, rec, ref)
     claims += name_claims
     claims += [item_claim("P131", m, refs[SWISSBOUNDARIES3D]) for m in row.get("munis", [])]
-    data = {"labels": labels, "descriptions": descriptions(cls, row.get("canton")), "claims": claims}
+    data = {"labels": labels, "descriptions": descriptions(cls, row.get("canton"), row.get("muni_names")), "claims": claims}
     if aliases:
         data["aliases"] = aliases
     return data

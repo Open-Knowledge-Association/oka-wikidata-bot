@@ -32,9 +32,46 @@ RESERVOIR = "Q131681"
 TYPES = {"Hauptgipfel": "summit", "Gipfel": "summit", "Alpiner Gipfel": "summit", "Huegel": "summit",
          "Haupthuegel": "summit", "Felskopf": "summit", "Pass": "pass", "Strassenpass": "pass",
          "See": "lake", "Gletscher": "glacier"}
-RADIUS = {"summit": 250, "pass": 250, "lake": 2000, "glacier": 2000}        # matching distance in metres
+RADIUS = {"summit": 250, "pass": 250, "lake": 2000, "glacier": 2000,         # matching distance in metres
+          "valley": 2000, "ridge": 2000, "waterfall": 250, "cave": 250}
 NEW_CLASS = {"See": "Q23397", "Gletscher": "Q35666", "Pass": "Q133056", "Strassenpass": "Q133056",
              "Hauptgipfel": "Q8502", "Alpiner Gipfel": "Q8502", "Haupthuegel": "Q54050"}
+
+# Second batch, "natural": valleys, ridges, waterfalls and caves (CSV points of valleys and ridges are their polygon's
+# centroid, hence the larger radius), plus new items for the minor summit types, which the first batch only edits. Its
+# scope also takes in the classes above, so that the creation checks see every summit, lake, glacier and pass item.
+NATURAL_CLASSES = {"Q39816": "valley", "Q649266": "valley", "Q1006357": "valley", "Q594419": "valley", "Q2490191": "valley",
+                   "Q740445": "ridge", "Q1334383": "ridge", "Q1400565": "ridge", "Q34038": "waterfall",
+                   "Q35509": "cave", "Q2232001": "cave", "Q7558985": "cave", "Q1317637": "cave", "Q2455463": "cave",
+                   "Q1149405": "cave", "Q1131329": "cave", "Q30754717": "cave",
+                   "Q3618634": "summit", "Q111177881": "summit"}    # subpeak, main peak: for the creation checks only
+ALL_CLASSES = {**CLASSES, **NATURAL_CLASSES}
+NATURAL_TYPES = {"Tal": "valley", "Grat": "ridge", "Wasserfall": "waterfall", "Grotte, Hoehle": "cave"}
+NATURAL_NEW_CLASS = {"Tal": "Q39816", "Grat": "Q740445", "Wasserfall": "Q34038",
+                     "Gipfel": "Q207326", "Huegel": "Q54050", "Felskopf": "Q207326"}
+# "Grotte, Hoehle" is not created: swisstopo's type also covers mine entrances, Lourdes grottoes and natural arches.
+# Before this batch creates an item, an existing item of the same kind and name this close is a duplicate too (on top
+# of the 2 km for any item): valley and ridge points are polygon centroids, several km from where the item may sit (a
+# Tal is under 20 km long); waterfall items often sit on their stream; some summit items (e.g. GeoNames imports) are
+# a few km off. Items tied to another swisstopo feature (paired in the plan, or with a swissNAMES3D position when the
+# runner checks live) only count within 2 km.
+NATURAL_SAME_KIND_NAME = {"valley": 10000, "ridge": 10000, "waterfall": 10000, "summit": 5000, "cave": 5000}
+
+# Batches: each has its own plan file. Rows of a later batch carry "batch" and are logged as "edit:<batch>" and
+# "create:<batch>", so an item done in one batch is still checked by the next; the first batch ("") keeps plan.jsonl
+# and the plain kinds "edit" and "create".
+# "ch_only": create only features whose point lies in a Swiss municipality (swissNAMES3D also covers Liechtenstein,
+# and border features can have their point just across the border).
+BATCHES = {
+    "": {"plan": "plan.jsonl", "cache": "", "classes": CLASSES, "types": TYPES, "edit": set(TYPES), "new": NEW_CLASS,
+         "same_kind_name": {}, "ch_only": False,
+         "covers": ["mountains", "summits", "hills", "passes", "lakes", "reservoirs", "glaciers"]},
+    "natural": {"plan": "plan_natural.jsonl", "cache": "natural_", "classes": ALL_CLASSES,
+                "types": {**TYPES, **NATURAL_TYPES}, "edit": set(NATURAL_TYPES), "new": NATURAL_NEW_CLASS,
+                "same_kind_name": NATURAL_SAME_KIND_NAME, "ch_only": True,
+                "covers": ["valleys", "ridges", "waterfalls", "caves"],
+                "note": "Valleys, ridges, waterfalls and caves get no heights, and no new items are made for caves."},
+}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")
@@ -62,12 +99,19 @@ CANTONS = {  # en, de, fr preposition, fr, it
 }
 TYPE_WORDS = {"Q23397": ("lake", "See", "lac", "lago"), "Q35666": ("glacier", "Gletscher", "glacier", "ghiacciaio"),
               "Q133056": ("mountain pass", "Gebirgspass", "col", "valico"), "Q8502": ("mountain", "Berg", "montagne", "montagna"),
-              "Q54050": ("hill", "Hügel", "colline", "collina")}
+              "Q54050": ("hill", "Hügel", "colline", "collina"), "Q207326": ("summit", "Gipfel", "sommet", "cima"),
+              "Q39816": ("valley", "Tal", "vallée", "valle"), "Q740445": ("ridge", "Grat", "crête", "cresta"),
+              "Q34038": ("waterfall", "Wasserfall", "cascade", "cascata"), "Q35509": ("cave", "Höhle", "grotte", "grotta")}
 GENERIC = {"Q23397": ("lake in Switzerland", "See in der Schweiz", "lac suisse", "lago svizzero"),
            "Q35666": ("glacier in Switzerland", "Gletscher in der Schweiz", "glacier suisse", "ghiacciaio svizzero"),
            "Q133056": ("mountain pass in Switzerland", "Gebirgspass in der Schweiz", "col suisse", "valico svizzero"),
            "Q8502": ("mountain in Switzerland", "Berg in der Schweiz", "montagne suisse", "montagna svizzera"),
-           "Q54050": ("hill in Switzerland", "Hügel in der Schweiz", "colline suisse", "collina svizzera")}
+           "Q54050": ("hill in Switzerland", "Hügel in der Schweiz", "colline suisse", "collina svizzera"),
+           "Q207326": ("summit in Switzerland", "Gipfel in der Schweiz", "sommet suisse", "cima svizzera"),
+           "Q39816": ("valley in Switzerland", "Tal in der Schweiz", "vallée suisse", "valle svizzera"),
+           "Q740445": ("ridge in Switzerland", "Grat in der Schweiz", "crête suisse", "cresta svizzera"),
+           "Q34038": ("waterfall in Switzerland", "Wasserfall in der Schweiz", "cascade suisse", "cascata svizzera"),
+           "Q35509": ("cave in Switzerland", "Höhle in der Schweiz", "grotte suisse", "grotta svizzera")}
 
 
 def out(*parts):
@@ -214,8 +258,8 @@ class Boundaries:
 
 # ---------------------------------------------------------------- swissNAMES3D
 
-def swissnames3d():
-    """Records of the feature types the task covers, plus every official/common name of each object."""
+def swissnames3d(types=TYPES):
+    """Records of the feature types a batch covers ({object type: group}), plus every official/common name of each object."""
     folder = fetch_dataset("ch.swisstopo.swissnames3d", ".csv.zip")
     recs, names_of = [], defaultdict(list)
     for fn in ("swissNAMES3D_PKT.csv", "swissNAMES3D_PLY.csv"):
@@ -226,8 +270,8 @@ def swissnames3d():
                     entry = {"lang": lang, "name": r["NAME"], "status": r["STATUS"], "ntype": r["NAMEN_TYP"]}
                     if entry not in names_of[r["UUID"]]:
                         names_of[r["UUID"]].append(entry)
-                if r["OBJEKTART"] in TYPES:
-                    recs.append({"uuid": r["UUID"], "name": r["NAME"], "type": r["OBJEKTART"], "group": TYPES[r["OBJEKTART"]],
+                if r["OBJEKTART"] in types:
+                    recs.append({"uuid": r["UUID"], "name": r["NAME"], "type": r["OBJEKTART"], "group": types[r["OBJEKTART"]],
                                  "e": float(r["E"]), "n": float(r["N"]), "z": int(float(r["Z"])), "status": r["STATUS"],
                                  "lang": lang, "ntype": r["NAMEN_TYP"]})
     for rec in recs:

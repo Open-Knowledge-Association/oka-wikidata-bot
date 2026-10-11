@@ -9,6 +9,8 @@
   python pipeline.py userpage                  refresh User:OKA bot (also done after every run)
   python pipeline.py status                    counts from edits.csv
 
+plan, preview, run, verify and status take --plan natural to work on the second batch (work/plan_natural.jsonl,
+logged as edit:natural / create:natural); without it they work on the first batch (work/plan.jsonl, edit / create).
 Every run is resumable: edits.csv records what was done, and every item is re-checked live before editing.
 """
 import argparse
@@ -21,8 +23,8 @@ import sys
 import time
 from collections import Counter
 
-from common import (REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json, dist_m,
-                    lv95_to_wgs84, out, ref_json)
+from common import (ALL_CLASSES, BATCHES, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json,
+                    dist_m, lv95_to_wgs84, out, ref_json)
 from edit import build_edit, build_new, drop_language
 import plan as planmod
 
@@ -53,17 +55,27 @@ def refs_for_today():
     return {SWISSNAMES3D: ref_json(SWISSNAMES3D, today), SWISSBOUNDARIES3D: ref_json(SWISSBOUNDARIES3D, today)}
 
 
-def pending(kind):
-    done = {(r["kind"], r["qid"] if r["kind"] == "edit" else r["uuid"]) for r in logged()}
-    _, rows = planmod.load()
+def log_kind(row):
+    """Kind of a plan row as logged: "edit" / "create" in the first batch, "edit:<batch>" / "create:<batch>" later."""
+    return f"{row['kind']}:{row['batch']}" if row.get("batch") else row["kind"]
+
+
+def log_key(kind, qid, uuid):
+    """A logged row is one kind (with its batch) of one item (edits) or one swisstopo feature (creations)."""
+    return kind, (qid if kind.split(":")[0] == "edit" else uuid)
+
+
+def pending(kind, batch=""):
+    done = {log_key(r["kind"], r["qid"], r["uuid"]) for r in logged()}
+    _, rows = planmod.load(batch)
     return [r for r in rows if (kind in (None, r["kind"]))
-            and (r["kind"], r["qid"] if r["kind"] == "edit" else r["rec"]["uuid"]) not in done]
+            and log_key(log_kind(r), r.get("qid"), r["rec"]["uuid"]) not in done]
 
 
-def chosen(qids):
+def chosen(qids, batch=""):
     """Plan rows of these items, logged or not, to re-check them (e.g. after a rule change)."""
     want = set(qids.split(","))
-    return [r for r in planmod.load()[1] if r["kind"] == "edit" and r["qid"] in want]
+    return [r for r in planmod.load(batch)[1] if r["kind"] == "edit" and r["qid"] in want]
 
 
 def fetch(ids):
@@ -111,8 +123,10 @@ def save(site, entity_id, data, done, baserevid=None):
     raise RuntimeError("Wikidata kept refusing: rate limit or label/description clashes")
 
 
-def duplicate_nearby(site, rec):
-    """Live search: an item with this exact name that has no coordinates or lies within 2 km."""
+def duplicate_nearby(site, rec, far=None):
+    """Live search: an item with this exact name that has no coordinates or lies within 2 km; with `far` (a later
+    batch's "same_kind_name" distance), also an item of the same kind within `far`, unless its position comes from
+    swissNAMES3D (then it is another swisstopo feature, e.g. a valley of the same name created just before)."""
     from pywikibot.data import api
     lat, lon = lv95_to_wgs84(rec["e"], rec["n"])
     hits = set()
@@ -125,8 +139,13 @@ def duplicate_nearby(site, rec):
         if not cs:
             return f"{q} has the same name and no coordinates"
         v = cs[0]["mainsnak"]["datavalue"]["value"]
-        if dist_m(v["latitude"], v["longitude"], lat, lon) <= 2000:
+        d = dist_m(v["latitude"], v["longitude"], lat, lon)
+        if d <= 2000:
             return f"{q} has the same name within 2 km"
+        kinds = {ALL_CLASSES.get(c["mainsnak"].get("datavalue", {}).get("value", {}).get("id"))
+                 for c in ent.get("claims", {}).get("P31", [])}
+        if far and d <= far and rec["group"] in kinds and not any(cites(c, SWISSNAMES3D) for c in cs):
+            return f"{q} has the same name and kind within {far // 1000} km"
     return None
 
 
@@ -145,7 +164,7 @@ def run_batch(site, rows, rate, refs):
             data, done = build_edit(ent, row, refs)
             entity_id, base = row["qid"], ent.get("lastrevid")
         else:
-            reason = duplicate_nearby(site, rec)
+            reason = duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]))
             data, done, entity_id = (None, [f"skipped: {reason}"], None) if reason else (build_new(row, refs), ["new item"], None)
         revid = ""
         if data:
@@ -158,7 +177,7 @@ def run_batch(site, rows, rate, refs):
         refused = bool(done) and done[0].startswith("skipped: refused")
         stats["saved" if revid else "refused" if refused else
               ("skipped" if done and done[0].startswith("skipped") else "no change")] += 1
-        log({"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "kind": row["kind"],
+        log({"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "kind": log_kind(row),
              "qid": entity_id or "", "uuid": rec["uuid"], "name": rec["name"], "revid": revid or "", "changes": "; ".join(done)})
         if stats["refused"] >= MAX_REFUSED:                # more than the odd bad item: likely a bug, so stop
             break
@@ -196,7 +215,7 @@ def check(entity, kind, row, changes):
             "default label": lambda: entity.get("labels", {}).get("mul", {}).get("value") == rec["name"],
             "official name": lambda: ok("P1448"),
             "municipality": lambda: any(cites(c, SWISSBOUNDARIES3D) for c in cl.get("P131", []))}
-    if kind == "create":
+    if kind.split(":")[0] == "create":                  # "create" or "create:<batch>"
         changes = ["official name", "municipality"] if row.get("munis") else ["official name"]
         missing += [] if any(c["mainsnak"]["datavalue"]["value"]["id"] == row["cls"] for c in cl.get("P31", [])) else ["class"]
         missing += [] if ok("P625") else ["position"]
@@ -222,14 +241,22 @@ def verify(saved):
 
 # ---------------------------------------------------------------- the bot's user page
 
-def userpage(site):
-    import pywikibot
+def userpage_text():
+    """The user page, with the counts of every batch so far (a batch with a plan file or logged rows)."""
     rows = logged()
-    edited = len({r["qid"] for r in rows if r["kind"] == "edit" and r["revid"]})
-    created = sum(1 for r in rows if r["kind"] == "create" and r["revid"])
+    edited = len({r["qid"] for r in rows if r["kind"].split(":")[0] == "edit" and r["revid"]})
+    created = sum(1 for r in rows if r["kind"].split(":")[0] == "create" and r["revid"])
     last = max((r["time"] for r in rows), default="")[:10]
-    header, plan_rows = planmod.load()
-    text = f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
+    logged_batches = {r["kind"].partition(":")[2] for r in rows}
+    batches = [b for b in BATCHES if planmod.plan_path(b).exists() or b in logged_batches] or [""]
+    plans = [planmod.load(b) for b in batches if planmod.plan_path(b).exists()]
+    release = ", ".join(dict.fromkeys(header["release"] for header, _ in plans))
+    covers = [w for b in batches for w in BATCHES[b]["covers"]]
+    covers = ", ".join(covers[:-1]) + " and " + covers[-1]
+    notes = "".join(" " + BATCHES[b]["note"] for b in batches if BATCHES[b].get("note"))
+    to_check = sum(1 for _, plan_rows in plans for r in plan_rows if r["kind"] == "edit")
+    to_create = sum(1 for _, plan_rows in plans for r in plan_rows if r["kind"] == "create")
+    return f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
 ''This page is updated automatically by the bot after each run, with the operator's permission.''
 
 Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Association). To report a problem, please write on [[User talk:7804j]] or to info@oka.wiki. If the bot misbehaves and I'm not around, any administrator may block it.
@@ -237,14 +264,19 @@ Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Associati
 '''Source code''' (public, MIT licence): [https://github.com/Open-Knowledge-Association/oka-wikidata-bot github.com/Open-Knowledge-Association/oka-wikidata-bot], with the [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv list of every edit] the bot has made.
 
 == Task: geographic feature updates from swisstopo data ==
-Approved at [[Wikidata:Requests for permissions/Bot/OKA bot]]. Data: [https://www.swisstopo.admin.ch/en/landscape-model-swissnames3d swissNAMES3D] ({{{{Q|{SWISSNAMES3D}}}}}, release {header['release']}) and [https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d swissBOUNDARIES3D] ({{{{Q|{SWISSBOUNDARIES3D}}}}}), from the Federal Office of Topography.
+Approved at [[Wikidata:Requests for permissions/Bot/OKA bot]]. Data: [https://www.swisstopo.admin.ch/en/landscape-model-swissnames3d swissNAMES3D] ({{{{Q|{SWISSNAMES3D}}}}}, release {release}) and [https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d swissBOUNDARIES3D] ({{{{Q|{SWISSBOUNDARIES3D}}}}}), from the Federal Office of Topography.
 
-For Swiss mountains, summits, hills, passes, lakes, reservoirs and glaciers, the bot adds swisstopo as a source to matching heights and positions, adds missing heights, labels, official names and municipalities, and creates items for official features that have none. It never removes anything or changes existing labels, descriptions or classes. Where an existing value comes only from a Wikipedia import and is more than 5 m (height) or 50 m (summit position) off, swisstopo's value is added with preferred rank and {{{{P|7452}}}} {{{{Q|Q98386534}}}}. Pass heights are only sourced when they already match.
+For Swiss {covers}, the bot adds swisstopo as a source to matching heights and positions, adds missing heights, labels, official names and municipalities, and creates items for official features that have none. It never removes anything or changes existing labels, descriptions or classes. Where an existing value comes only from a Wikipedia import and is more than 5 m (height) or 50 m (summit position) off, swisstopo's value is added with preferred rank and {{{{P|7452}}}} {{{{Q|Q98386534}}}}. Pass heights are only sourced when they already match.{notes}
 
 * Items edited: {edited:,}. Items created: {created:,}. Last run: {last}.
-* Planned: {sum(1 for r in plan_rows if r['kind'] == 'edit'):,} items to check and {sum(1 for r in plan_rows if r['kind'] == 'create'):,} to create.
+* Planned: {to_check:,} items to check and {to_create:,} to create.
 * Every edit is listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv edits.csv].
 """
+
+
+def userpage(site):
+    import pywikibot
+    text = userpage_text()
     page = pywikibot.Page(site, "User:OKA bot")
     if page.exists() and page.text.strip() == text.strip():
         return False
@@ -266,17 +298,19 @@ def main():
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--last", type=int, default=500)
     ap.add_argument("--qids", help="run: re-check these already logged items (comma-separated), e.g. after a rule change")
+    ap.add_argument("--plan", choices=[b for b in BATCHES if b], default="",
+                    help="plan, preview, run, verify, status: work on this later batch (default: the first, work/plan.jsonl)")
     a = ap.parse_args()
 
     if a.mode == "plan":
-        planmod.build()
+        planmod.build(a.plan)
     elif a.mode == "status":
         rows = logged()
         out(dict(Counter((r["kind"], "saved" if r["revid"] else r["changes"].split(":")[0] or "no change") for r in rows)))
-        out(f"pending: {len(pending('edit'))} edits, {len(pending('create'))} creations")
+        out(f"pending: {len(pending('edit', a.plan))} edits, {len(pending('create', a.plan))} creations")
     elif a.mode == "preview":
         refs = refs_for_today()
-        rows = chosen(a.qids) if a.qids else pending(a.kind or "edit")[:a.n]
+        rows = chosen(a.qids, a.plan) if a.qids else pending(a.kind or "edit", a.plan)[:a.n]
         edits = [r for r in rows if r["kind"] == "edit"]
         live = {}
         for i in range(0, len(edits), 50):
@@ -297,12 +331,12 @@ def main():
                 out(f"{'new':>11} {r['rec']['name'][:28]:28} {d['descriptions']['en']['value']} | "
                     f"{sorted(c['mainsnak']['property'] for c in d['claims'])}")
     elif a.mode == "verify":
-        rows = [r for r in logged() if r["revid"]][-a.last:]
-        _, plan_rows = planmod.load()
-        by_key = {(p["kind"], p["qid"] if p["kind"] == "edit" else p["rec"]["uuid"]): p for p in plan_rows}
-        saved = [{"qid": r["qid"], "kind": r["kind"], "row": by_key[(r["kind"], r["qid"] if r["kind"] == "edit" else r["uuid"])],
+        rows = [r for r in logged() if r["revid"] and r["kind"].partition(":")[2] == a.plan][-a.last:]
+        _, plan_rows = planmod.load(a.plan)
+        by_key = {log_key(log_kind(p), p.get("qid"), p["rec"]["uuid"]): p for p in plan_rows}
+        saved = [{"qid": r["qid"], "kind": r["kind"], "row": by_key[log_key(r["kind"], r["qid"], r["uuid"])],
                   "changes": r["changes"].split("; ")} for r in rows
-                 if (r["kind"], r["qid"] if r["kind"] == "edit" else r["uuid"]) in by_key]
+                 if log_key(r["kind"], r["qid"], r["uuid"]) in by_key]
         problems = verify(saved)
         out(f"verified {len(saved)} edits: {len(problems)} with problems", problems[:20])
     elif a.mode == "userpage":
@@ -315,7 +349,7 @@ def main():
         refs = refs_for_today()
         total = Counter()
         for b in range(1 if a.qids else a.batches):
-            rows = chosen(a.qids) if a.qids else pending(a.kind)[:a.batch_size]
+            rows = chosen(a.qids, a.plan) if a.qids else pending(a.kind, a.plan)[:a.batch_size]
             if not rows:
                 break
             stats, saved = run_batch(site, rows, a.rate, refs)
@@ -330,7 +364,8 @@ def main():
                 out(f"stopping: Wikidata refused {stats['refused']} edits in this batch (see edits.csv)")
                 break
         userpage(site)
-        out(f"run done: {dict(total)}; pending: {len(pending('edit'))} edits, {len(pending('create'))} creations")
+        out(f"run done: {dict(total)}; pending: {len(pending('edit', a.plan))} edits, "
+            f"{len(pending('create', a.plan))} creations")
 
 
 if __name__ == "__main__":

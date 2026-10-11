@@ -17,22 +17,24 @@ Data from the Swiss Federal Office of Topography, published under its
 - [swissBOUNDARIES3D](https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d)
   ([Q141599379](https://www.wikidata.org/wiki/Q141599379)): municipality and canton of a point.
 
-Items covered: Swiss mountains, summits, hills, passes, lakes, reservoirs and glaciers. An item is paired with a
-swissNAMES3D feature when one of its labels or aliases is exactly the feature's name, the types are compatible, the
-feature lies within 250 m (summits, passes) or 2 km (lakes, glaciers), and the pairing is unique both ways.
+Items covered: Swiss mountains, summits, hills, passes, lakes, reservoirs and glaciers (first batch), and valleys,
+ridges, waterfalls and caves (second batch, `natural`). An item is paired with a swissNAMES3D feature when one of its
+labels or aliases is exactly the feature's name, the types are compatible, the feature lies within 250 m (summits,
+passes, waterfalls, caves) or 2 km (lakes, glaciers, valleys, ridges: their swissNAMES3D point is the centre of their
+outline), and the pairing is unique both ways.
 
 For a paired item, in one edit, the bot:
 
 - adds swisstopo as a source to a height that matches in whole metres, and to a position within 50 m (if that
   position was saved long ago without a precision, which Wikidata no longer accepts, the bot fills in the precision
   its digits imply, for example to the arcsecond; the position itself is not changed);
-- adds a missing height (summits and lakes only);
+- adds a missing height (summits and lakes only; heights of valleys, ridges, waterfalls and caves are left alone);
 - where an existing value's only source is an import from a Wikipedia and it is more than 5 m (height) or 50 m
   (position, summits only) off, adds swisstopo's value with preferred rank and *reason for preferred rank: best
   referenced value*, keeping the old statement;
 - adds the default label (`mul`) when swisstopo has a single name, the label in the name's own language,
   and swisstopo's names in other languages as labels (or aliases when a different label exists);
-- adds the official name (P1448) and, for summits and passes without one, the municipality (P131).
+- adds the official name (P1448) and, for summits, passes, waterfalls and caves without one, the municipality (P131).
 
 It never removes anything and never changes existing labels, descriptions or classes. Pass heights are only sourced
 when they already match: swissNAMES3D gives the height of the point where the name is placed, which for a pass can
@@ -44,6 +46,13 @@ with labels, a "[type] in the canton of X, Switzerland" description in English, 
 country, position, height (not for passes and glaciers), official name and municipality. A live search first
 checks that no item with the same name exists within 2 km.
 
+The second batch creates valleys, ridges, waterfalls and minor summits, hills and rock heads (class summit or hill),
+with a height for the summits and hills only and a municipality for all but valleys and ridges. It creates nothing
+whose point lies outside Swiss municipalities (swissNAMES3D also covers Liechtenstein), and it also counts as a
+duplicate an item of the same kind and name within 10 km (valleys, ridges, waterfalls) or 5 km (summits, hills),
+unless that item is paired with another swisstopo feature: such items can sit far from swisstopo's point. Caves are
+only edited, never created: swisstopo's cave type also covers mine entrances and Lourdes grottoes.
+
 ## Running
 
 ```
@@ -52,6 +61,11 @@ python pipeline.py preview --n 6000     # totals of what the run would change (r
 python pipeline.py run --batches 4 --batch-size 500
 python pipeline.py verify
 ```
+
+Add `--plan natural` to `plan`, `preview`, `run`, `verify` and `status` for the second batch. Each batch has its own
+plan (`work/plan.jsonl`, `work/plan_natural.jsonl`); in edits.csv the first batch's rows are of kind `edit` or
+`create` and the second batch's `edit:natural` or `create:natural`, so an item done in one batch is checked again in
+the next, and edited only if something is still missing.
 
 The bot logs in with a [bot password](https://www.mediawiki.org/wiki/Manual:Bot_passwords) read from the user
 environment, respects `maxlag=5`, makes at most 20 edits per minute (the approved rate), checks each batch on Wikidata after saving and
