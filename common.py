@@ -72,6 +72,21 @@ BATCHES = {
                 "covers": ["valleys", "ridges", "waterfalls", "caves"],
                 "note": "Valleys, ridges, waterfalls and caves get no heights, and no new items are made for caves."},
 }
+# Third batch, "settlements": localities (Ort) and urban neighbourhoods (Quartier). Items of these classes are paired;
+# current municipalities are not (a municipality is not "located in" itself), former ones are. New items only for
+# localities of 100 to 9,999 inhabitants (bigger ones have items) and for neighbourhoods; same-named villages far
+# apart are normal (Oberdorf), so only 3 km count for a duplicate of the same kind.
+SETTLEMENT_CLASSES = {"Q486972": "settlement", "Q532": "settlement", "Q5084": "settlement", "Q11183787": "settlement",
+                      "Q3957": "settlement", "Q515": "settlement", "Q685309": "settlement",
+                      "Q123705": "neighbourhood", "Q2983893": "neighbourhood"}
+BATCHES["settlements"] = {
+    "plan": "plan_settlements.jsonl", "cache": "settlements_", "classes": SETTLEMENT_CLASSES,
+    "types": {"Ort": "settlement", "Quartier": "neighbourhood"}, "edit": {"Ort", "Quartier"},
+    "new": {"Ort": "Q532", "Quartier": "Q123705"}, "create_pop": {"100 bis 999", "1'000 bis 1'999", "2'000 bis 9'999"},
+    "same_kind_name": {"settlement": 3000, "neighbourhood": 3000}, "ch_only": True,
+    "covers": ["localities", "neighbourhoods"],
+    "note": "Localities and neighbourhoods get no heights; new items only for localities of 100 to 9,999 inhabitants."}
+RADIUS.update({"settlement": 1500, "neighbourhood": 1000})
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")
@@ -101,7 +116,9 @@ TYPE_WORDS = {"Q23397": ("lake", "See", "lac", "lago"), "Q35666": ("glacier", "G
               "Q133056": ("mountain pass", "Gebirgspass", "col", "valico"), "Q8502": ("mountain", "Berg", "montagne", "montagna"),
               "Q54050": ("hill", "Hügel", "colline", "collina"), "Q207326": ("summit", "Gipfel", "sommet", "cima"),
               "Q39816": ("valley", "Tal", "vallée", "valle"), "Q740445": ("ridge", "Grat", "crête", "cresta"),
-              "Q34038": ("waterfall", "Wasserfall", "cascade", "cascata"), "Q35509": ("cave", "Höhle", "grotte", "grotta")}
+              "Q34038": ("waterfall", "Wasserfall", "cascade", "cascata"), "Q35509": ("cave", "Höhle", "grotte", "grotta"),
+              "Q532": ("village", "Dorf", "village", "villaggio"),
+              "Q123705": ("neighbourhood", "Quartier", "quartier", "quartiere")}
 GENERIC = {"Q23397": ("lake in Switzerland", "See in der Schweiz", "lac suisse", "lago svizzero"),
            "Q35666": ("glacier in Switzerland", "Gletscher in der Schweiz", "glacier suisse", "ghiacciaio svizzero"),
            "Q133056": ("mountain pass in Switzerland", "Gebirgspass in der Schweiz", "col suisse", "valico svizzero"),
@@ -111,7 +128,10 @@ GENERIC = {"Q23397": ("lake in Switzerland", "See in der Schweiz", "lac suisse",
            "Q39816": ("valley in Switzerland", "Tal in der Schweiz", "vallée suisse", "valle svizzera"),
            "Q740445": ("ridge in Switzerland", "Grat in der Schweiz", "crête suisse", "cresta svizzera"),
            "Q34038": ("waterfall in Switzerland", "Wasserfall in der Schweiz", "cascade suisse", "cascata svizzera"),
-           "Q35509": ("cave in Switzerland", "Höhle in der Schweiz", "grotte suisse", "grotta svizzera")}
+           "Q35509": ("cave in Switzerland", "Höhle in der Schweiz", "grotte suisse", "grotta svizzera"),
+           "Q532": ("village in Switzerland", "Dorf in der Schweiz", "village suisse", "villaggio svizzero"),
+           "Q123705": ("neighbourhood in Switzerland", "Quartier in der Schweiz", "quartier suisse", "quartiere svizzero")}
+KIND_OF = {**ALL_CLASSES, **SETTLEMENT_CLASSES}     # class -> feature kind, for the runner's live duplicate check
 
 
 def out(*parts):
@@ -273,7 +293,7 @@ def swissnames3d(types=TYPES):
                 if r["OBJEKTART"] in types:
                     recs.append({"uuid": r["UUID"], "name": r["NAME"], "type": r["OBJEKTART"], "group": types[r["OBJEKTART"]],
                                  "e": float(r["E"]), "n": float(r["N"]), "z": int(float(r["Z"])), "status": r["STATUS"],
-                                 "lang": lang, "ntype": r["NAMEN_TYP"]})
+                                 "lang": lang, "ntype": r["NAMEN_TYP"], "pop": r.get("EINWOHNERKATEGORIE") or ""})
     for rec in recs:
         rec["names"] = names_of.get(rec["uuid"], [])
     return recs, folder.name

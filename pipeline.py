@@ -23,7 +23,7 @@ import sys
 import time
 from collections import Counter
 
-from common import (ALL_CLASSES, BATCHES, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json,
+from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json,
                     dist_m, lv95_to_wgs84, out, ref_json)
 from edit import build_edit, build_new, drop_language
 import plan as planmod
@@ -142,7 +142,7 @@ def duplicate_nearby(site, rec, far=None):
         d = dist_m(v["latitude"], v["longitude"], lat, lon)
         if d <= 2000:
             return f"{q} has the same name within 2 km"
-        kinds = {ALL_CLASSES.get(c["mainsnak"].get("datavalue", {}).get("value", {}).get("id"))
+        kinds = {KIND_OF.get(c["mainsnak"].get("datavalue", {}).get("value", {}).get("id"))
                  for c in ent.get("claims", {}).get("P31", [])}
         if far and d <= far and rec["group"] in kinds and not any(cites(c, SWISSNAMES3D) for c in cs):
             return f"{q} has the same name and kind within {far // 1000} km"

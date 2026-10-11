@@ -11,9 +11,10 @@ from collections import Counter, defaultdict
 from common import (BATCHES, NAME_LANGS, OFFICIAL_TYPES, RADIUS, RESERVOIR, WORK, Boundaries, literal, out, point, qid,
                     sparql_tsv, swissnames3d)
 
-MUNI_GROUPS = ("summit", "pass", "waterfall", "cave")    # point features: municipality (P131) from their name point
+MUNI_GROUPS = ("summit", "pass", "waterfall", "cave",   # point features: municipality (P131) from their name point
+               "settlement", "neighbourhood")
 NEAR_KIND = {"summit": 250, "pass": 250, "lake": 1000, "glacier": 1000,      # no item of the same kind this close
-             "valley": 1000, "ridge": 1000, "waterfall": 250, "cave": 250}
+             "valley": 1000, "ridge": 1000, "waterfall": 250, "cave": 250, "settlement": 250, "neighbourhood": 250}
 
 
 def plan_path(batch=""):
@@ -124,7 +125,7 @@ def build(batch=""):
     seen = set()
     for r in recs:
         if (r["uuid"] in matched or r["uuid"] in seen or r["type"] not in cfg["new"] or not r["lang"]
-                or not official(r)):
+                or not official(r) or (r["type"] == "Ort" and r.get("pop") not in cfg.get("create_pop", ()))):
             continue
         if any(math.hypot(r["e"] - e, r["n"] - n) <= 2000 for e, n in name_pts.get(r["name"].casefold(), [])):
             continue
