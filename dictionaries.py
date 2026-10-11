@@ -97,18 +97,27 @@ def cached(name, fetch):
 def qlever(query):
     pfx = ("PREFIX wd: <http://www.wikidata.org/entity/> PREFIX wdt: <http://www.wikidata.org/prop/direct/> "
            "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ")
+    query = "PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + pfx + query
+    import shutil
     for attempt in range(1, 6):                     # an error page is not an empty result: wait and retry
-        r = subprocess.run(["curl", "-s", "-G", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
-                            "Accept: text/tab-separated-values", "--data-urlencode",
-                            "query=PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
-                            + pfx + query],
-                           capture_output=True, text=True, encoding="utf-8")
-        if r.stdout.startswith("?"):
+        if shutil.which("curl"):
+            text = subprocess.run(["curl", "-s", "-G", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
+                                   "Accept: text/tab-separated-values", "--data-urlencode", "query=" + query],
+                                  capture_output=True, text=True, encoding="utf-8").stdout
+        else:                                       # Toolforge has no curl; a POST also fits long queries
+            req = urllib.request.Request("https://qlever.dev/api/wikidata", urllib.parse.urlencode({"query": query}).encode(),
+                                         {"User-Agent": UA, "Accept": "text/tab-separated-values"})
+            try:
+                with urllib.request.urlopen(req, timeout=300) as r:
+                    text = r.read().decode("utf-8")
+            except OSError as e:
+                text = str(e)
+        if text.startswith("?"):
             break
         time.sleep(10 * attempt)
     else:
-        raise RuntimeError(f"query service failed: {r.stdout[:200]}")
-    rows = [line.split("\t") for line in r.stdout.strip().splitlines()[1:]]
+        raise RuntimeError(f"query service failed: {text[:200]}")
+    rows = [line.split("\t") for line in text.strip().splitlines()[1:]]
     return [[v.strip("<>").rsplit("/", 1)[-1].strip('"') if v.startswith("<") else v.split('"')[1] if '"' in v else v
              for v in row] for row in rows]
 
@@ -412,11 +421,19 @@ def snl_date(s, label, notes):
     return None
 
 
+SNL_KEEP = ("title", "metadata_license_name", "metadata")     # all the bot reads; the article text is never kept
+
+
+def snl_entry(slug):
+    return json.loads(cached(f"snl/{slug.replace('/', '_')}.json", lambda: json.dumps(
+        {k: v for k, v in get(f"https://snl.no/{urllib.parse.quote(slug)}.json", as_json=True).items() if k in SNL_KEEP},
+        ensure_ascii=False)))
+
+
 def snl_facts(slug, kind):
     try:
-        d = json.loads(cached(f"snl/{slug.replace('/', '_')}.json",
-                              lambda: json.dumps(get(f"https://snl.no/{urllib.parse.quote(slug)}.json", as_json=True))))
-    except (ValueError, subprocess.CalledProcessError):
+        d = snl_entry(slug)
+    except (ValueError, AttributeError, subprocess.CalledProcessError):
         return slug, [], ["entry not readable through the API"]
     facts, notes = [], []
     if d.get("metadata_license_name") != "fri":
@@ -780,7 +797,30 @@ def preview():
             + (f"   [{' | '.join(notes)}]" if notes else ""))
 
 
+def prefetch():
+    """Read ahead, no edits: the SNL metadata of every entry the bot can use (people, organisations and Norwegian
+    municipalities linked from Wikidata) into the cache the run reads, at one request a second; the small kinds
+    first. Resumable: entries already cached are not read again."""
+    seen, failed = set(), 0
+    for _, kind, classes, _ in sorted((k for k in KINDS if k[0] == "snl"), key=lambda k: k[1] == "person"):
+        rows = qlever(f"SELECT DISTINCT ?id WHERE {{ VALUES ?c {{ {' '.join('wd:' + c for c in classes)} }} "
+                      "?i wdt:P31 ?c ; wdt:P4342 ?id }")
+        slugs = [s for s in dict.fromkeys(urllib.parse.unquote(r[0]) for r in rows) if s not in seen]
+        seen.update(slugs)
+        todo = [s for s in slugs if not (WORK2 / "snl" / f"{s.replace('/', '_')}.json").exists()]
+        out(f"snl {kind}: {len(slugs)} entries, {len(todo)} to read")
+        for n, s in enumerate(todo, 1):
+            try:
+                snl_entry(s)
+            except (ValueError, AttributeError, OSError, subprocess.CalledProcessError):
+                failed += 1
+            if n % 1000 == 0:
+                out(f"snl {kind}: {n} of {len(todo)} read, {failed} not readable so far")
+    out(f"prefetch done; {failed} entries not readable (they are tried again on the next prefetch)")
+
+
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     check_occupations()
-    {"sample": sample, "refacts": refacts, "preview": preview, "run": run, "report": write_report}[sys.argv[1]]()
+    {"sample": sample, "refacts": refacts, "preview": preview, "run": run, "report": write_report,
+     "prefetch": prefetch}[sys.argv[1]]()
