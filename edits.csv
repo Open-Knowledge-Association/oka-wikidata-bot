@@ -17999,3 +17999,503 @@ time,kind,qid,uuid,name,revid,changes
 2026-10-12T04:14:00Z,create:natural,Q141708056,{8BB8D661-C7D7-4F70-8981-15BE59478615},Val Persich,2556117908,new item
 2026-10-12T04:14:04Z,create:natural,Q141708057,{F513EE87-55A9-426B-8C4F-DDA3139FB866},Crête du Lion,2556117944,new item
 2026-10-12T04:14:07Z,create:natural,Q141708059,{F2A6CD8E-2E9B-4967-B80F-E7022E43DF10},Valletta Verda,2556117975,new item
+2026-10-12T04:15:12Z,edit:settlements,Q7116,{F82E011C-C094-417D-9027-B498E2EA717A},Altwis,2556118355,default label; official name
+2026-10-12T04:15:13Z,edit:settlements,Q7120,{446491EB-DE8F-40ED-90AF-49AC849F9609},Aesch LU,2556118367,official name
+2026-10-12T04:15:14Z,edit:settlements,Q7149,{190641B7-A51F-4551-B70E-A91850239F9E},Neudorf,2556118381,default label; official name
+2026-10-12T04:15:16Z,edit:settlements,Q14569,{528F8270-D131-4754-8ADF-D8A23E19B6C5},Honau,2556118396,default label; official name
+2026-10-12T04:15:17Z,edit:settlements,Q14588,{E85FB4D7-1554-4F7A-B659-16262C1D79F4},Ebersecken,2556118413,default label; official name
+2026-10-12T04:15:18Z,edit:settlements,Q29840,{120DDDDF-3C00-42D3-A28A-0200655415EF},Sur,2556118429,official name
+2026-10-12T04:15:20Z,edit:settlements,Q30986,{0FCA90C6-C3E3-4C69-A67F-482D1C8B683A},Aclens,2556118439,default label
+2026-10-12T04:15:21Z,edit:settlements,Q39240,{8F3EAD92-0FC5-4DC0-B17B-8DFB0EFCACA9},Hochschulen,2556118452,default label; official name
+2026-10-12T04:15:21Z,edit:settlements,Q43188,{B8376720-5ED6-4A3F-890F-5F7E371C77C0},Agiez,,
+2026-10-12T04:15:23Z,edit:settlements,Q43202,{4C7759E2-F72B-4334-9683-44BD417C3F86},Apples,2556118465,default label
+2026-10-12T04:15:23Z,edit:settlements,Q52258,{5D2BB337-86E9-42E9-8C40-17C9BD8B3242},Berolle,,
+2026-10-12T04:15:24Z,edit:settlements,Q52265,{ECCE0BBC-D96A-49A5-8107-C1B7F7F21476},Bioley-Orjulaz,2556118475,default label
+2026-10-12T04:15:24Z,edit:settlements,Q52267,{AF323BC2-EB90-44F6-802D-911FEA1EEDB6},Bofflens,,
+2026-10-12T04:15:24Z,edit:settlements,Q52276,{DA51EE63-2897-4DE6-9F1C-15E217D478D1},Bournens,,
+2026-10-12T04:15:25Z,edit:settlements,Q52284,{A4D23FC8-246E-4EA5-90A5-74CD86D34FC4},Brenles,2556118485,default label
+2026-10-12T04:15:25Z,edit:settlements,Q52289,{793DE6D5-2264-45A0-8F9B-BC9474DBC72A},Bretonnières,,
+2026-10-12T04:15:27Z,edit:settlements,Q52304,{2A7C1B90-21A2-42FA-9148-EC40FC3B3040},Bussy-sur-Moudon,2556118491,default label
+2026-10-12T04:15:28Z,edit:settlements,Q52605,{D19AC60F-2B7E-4E1C-9282-AF518BFA5BC6},Forel-sur-Lucens,2556118497,default label
+2026-10-12T04:15:29Z,edit:settlements,Q52696,{3A8FB95A-D57B-4448-AE7F-F537A173C780},Chanéaz,2556118505,default label
+2026-10-12T04:15:31Z,edit:settlements,Q52697,{51CFC5D7-8FEE-455A-8090-93027B873D59},Chapelle-sur-Moudon,2556118517,default label; official name
+2026-10-12T04:15:31Z,edit:settlements,Q52701,{319AF0F6-640D-4C1B-9A6D-AC98DF8C9003},La Chaux (Cossonay),,
+2026-10-12T04:15:32Z,edit:settlements,Q52702,{8EA0B2F6-CA42-42B6-96D6-377533D322FE},Chavannes-de-Bogis,2556118529,default label
+2026-10-12T04:15:32Z,edit:settlements,Q52719,{DBC06583-4470-42D2-8D52-6AB6B675C275},Chavannes-sur-Moudon,,
+2026-10-12T04:15:32Z,edit:settlements,Q52785,{CC52AEC2-38F4-4A8F-939B-43A9F62322F6},Chevilly,,
+2026-10-12T04:15:33Z,edit:settlements,Q54449,{46EFB319-435A-4630-BF5A-489BE5AB8FD0},Vellerat,2556118542,default label
+2026-10-12T04:15:35Z,edit:settlements,Q54450,{3785D9F9-C6AA-4450-90BA-94493AB39361},Vicques,2556118553,default label; official name
+2026-10-12T04:15:35Z,edit:settlements,Q57105,{17A10C9E-336B-4ED1-BF08-16FC351E7046},Corcelles-sur-Chavornay,,
+2026-10-12T04:15:36Z,edit:settlements,Q57107,{16794094-AB6A-44BB-B675-B5D1DBEA2BDB},Correvon,2556118563,default label; official name
+2026-10-12T04:15:38Z,edit:settlements,Q57113,{F3B903F0-B9D8-494C-B519-77C62068E2D2},Cottens VD,2556118576,default label; official name
+2026-10-12T04:15:39Z,edit:settlements,Q57119,{F9761804-5617-4C36-9BB2-72D0ED0F19BB},Cremin,2556118584,default label
+2026-10-12T04:15:40Z,edit:settlements,Q58032,{590F3C11-7353-4AAB-9BB8-642B02B76D5E},Vermes,2556118597,default label; official name
+2026-10-12T04:15:41Z,edit:settlements,Q58937,{45BDA51C-C5D2-4AE7-A132-A8EA0AED5B98},Caneggio,2556118607,default label; official name
+2026-10-12T04:15:43Z,edit:settlements,Q58938,{3024F277-ABC2-426B-BD29-26A25B2DA9D6},Campo (Blenio),2556118615,default label; official name
+2026-10-12T04:15:44Z,edit:settlements,Q58940,{DE5899E6-C811-4C5C-B882-C2ECFD1ABAD3},Capolago,2556118628,official name
+2026-10-12T04:15:46Z,edit:settlements,Q59097,{49A7D43F-D227-407A-9757-023924C52ED8},Cavagnago,2556118640,default label; official name
+2026-10-12T04:15:47Z,edit:settlements,Q62070,{4835DE52-3BC3-4460-A428-C6D86E59B982},Carabbia,2556118646,default label; official name
+2026-10-12T04:15:48Z,edit:settlements,Q63939,{2D7D7D8B-1499-4A5C-99F1-D8A4F1FFA9B8},Baden,2556118654,official name
+2026-10-12T04:15:50Z,edit:settlements,Q64186,{3B9AF30E-F6F4-40D2-8B15-959B6EE2D126},Bad Zurzach,2556118663,source for position; default label; official name
+2026-10-12T04:15:51Z,edit:settlements,Q64195,{69C42643-FCFF-42C8-9391-D55DB4BA2C7A},Splügen,2556118670,default label; official name
+2026-10-12T04:15:51Z,edit:settlements,Q64213,{02A0297A-3942-4D2C-817C-8C52FD37D8D8},Ilanz,,
+2026-10-12T04:15:53Z,edit:settlements,Q64226,{40410EE6-137E-44DE-8467-A24BB67F5E7B},Almens,2556118680,official name
+2026-10-12T04:15:54Z,edit:settlements,Q64314,{D8135EB2-8C39-4331-8D43-8D7E8611706F},Zarzana,2556118688,default label; official name
+2026-10-12T04:15:55Z,edit:settlements,Q64319,{83D16EC4-8963-42F7-9B8F-9795C8CCEFE3},Alvaschein,2556118699,official name
+2026-10-12T04:15:57Z,edit:settlements,Q64368,{85B003ED-07A4-42CB-A67B-D961E5D8E12D},Safien Platz,2556118712,default label; official name
+2026-10-12T04:15:58Z,edit:settlements,Q64389,{88946694-F2BC-49FD-B1E1-8535F387F1EC},Attelwil,2556118716,default label; official name
+2026-10-12T04:15:58Z,edit:settlements,Q64559,{F2C2055E-4774-4409-95C7-0A7B7710D01D},Waltensburg/Vuorz,,
+2026-10-12T04:15:59Z,edit:settlements,Q64651,{27159C7F-D58B-4710-9377-BA9FF5FD3F2D},Saas im Prättigau,2556118721,default label; official name
+2026-10-12T04:16:01Z,edit:settlements,Q64659,{FDB01733-C5BA-4F81-9EBF-C35A1B651D93},Rodels,2556118724,official name
+2026-10-12T04:16:02Z,edit:settlements,Q64743,{B55739C6-E287-4B44-9BA8-472C2A2B4C8B},Ladir,2556118731,default label; official name
+2026-10-12T04:16:03Z,edit:settlements,Q64886,{85F39C6D-CF7B-4ABE-BFAC-079FE0753273},Hinterrhein,2556118737,default label; official name
+2026-10-12T04:16:05Z,edit:settlements,Q64903,{A389F27F-3CDE-4DB7-B407-ADDABB7FA792},Langwies,2556118747,default label; official name
+2026-10-12T04:16:06Z,edit:settlements,Q64937,{49B7FDA6-85F7-411C-9EA3-1406A7B1BF4B},Leggia,2556118758,source for position; default label
+2026-10-12T04:16:08Z,edit:settlements,Q65057,{F06400A0-7EC8-4FA1-BD95-762A563C827C},St. Antönien,2556118769,default label; official name
+2026-10-12T04:16:09Z,edit:settlements,Q65076,{6A8B6041-D6A2-4B13-86A0-B0904F312566},Pitasch,2556118781,default label; official name
+2026-10-12T04:16:10Z,edit:settlements,Q65083,{98A6DC8A-4EE3-4E2E-B5BB-C11E5D64E327},Tschlin,2556118793,default label; official name
+2026-10-12T04:16:12Z,edit:settlements,Q65089,{65BBF9EB-76AD-40A4-8D28-1F6EB48F7A79},Ramosch,2556118802,official name
+2026-10-12T04:16:13Z,edit:settlements,Q65096,{33E1F056-ACDB-47BB-B1B4-06D71C6AFA4E},Savognin,2556118811,default label; official name
+2026-10-12T04:16:14Z,edit:settlements,Q65112,{31CE7BB6-63B6-4CC6-8AA8-E93028257CC7},Marmorera,2556118822,official name
+2026-10-12T04:16:16Z,edit:settlements,Q65122,{99D8295C-4DCD-415A-8D3C-B7815F5CC8E8},Burg AG,2556118836,default label; official name
+2026-10-12T04:16:17Z,edit:settlements,Q65145,{FD7C9AE4-C3AE-4DB5-AC91-034293DBC1EA},Effingen,2556118849,default label; official name
+2026-10-12T04:16:18Z,edit:settlements,Q65177,{6FB66AF7-B77C-4F4F-A9D1-9F7CF608FC2D},Lüen,2556118864,default label; official name
+2026-10-12T04:16:20Z,edit:settlements,Q65208,{7B662B9F-E2B7-4936-B67F-801C3D57CADA},Hermetschwil-Staffeln,2556118879,default label; official name
+2026-10-12T04:16:21Z,edit:settlements,Q65259,{C3F1FA16-521B-46D6-BA41-E8E2F07CAB61},Bernex,2556118892,default label
+2026-10-12T04:16:22Z,edit:settlements,Q65381,{5D969633-8383-4CC7-A913-E82C900684B9},Baldingen,2556118907,default label; official name
+2026-10-12T04:16:24Z,edit:settlements,Q65457,{6ED5BD0A-0B27-4CCD-9714-6A51D587A29C},Linn,2556118919,default label; official name
+2026-10-12T04:16:25Z,edit:settlements,Q65461,{D82D7DAA-5614-4617-808A-2B226CEB0039},Ganterschwil,2556118926,default label; official name
+2026-10-12T04:16:26Z,edit:settlements,Q65469,{24ABD49F-84A2-4E3C-B626-8D8601F7AE28},Verdabbio,2556118931,default label
+2026-10-12T04:16:28Z,edit:settlements,Q65549,{9E7B8B79-476D-4E38-9DC9-27AEE3300F43},Valendas,2556118936,default label; official name
+2026-10-12T04:16:29Z,edit:settlements,Q65557,{CBE945FC-DB1B-48F5-8A9F-8794539FC46B},Lavin,2556118944,source for position; default label; official name
+2026-10-12T04:16:30Z,edit:settlements,Q65634,{C7CEF8F5-0C6C-4236-BC57-1CF36A84B0F8},Uttwil,2556118957,default label; official name
+2026-10-12T04:16:32Z,edit:settlements,Q65656,{44DFA02D-75F8-4120-9036-828FDD35C1B4},Castrisch,2556118967,default label
+2026-10-12T04:16:33Z,edit:settlements,Q65669,{9700FFD2-50E1-4143-9C3F-1975AB002283},Duvin,2556118976,default label; official name
+2026-10-12T04:16:35Z,edit:settlements,Q65694,{20DDDF67-5210-4B1F-A38B-3ED632BFB4D1},Schnaus,2556118988,default label; official name
+2026-10-12T04:16:36Z,edit:settlements,Q65703,{02259A75-ADF8-4DCA-8004-0F6C72733F07},Sevgein,2556119001,source for position; default label; official name
+2026-10-12T04:16:38Z,edit:settlements,Q65706,{99986651-DEAC-45CF-9529-EA0FB2C8650F},Mulegns,2556119014,default label; official name
+2026-10-12T04:16:39Z,edit:settlements,Q65708,{10E6072A-AF18-40B1-BBCA-886399910428},Cauco,2556119031,source for position; default label; official name
+2026-10-12T04:16:40Z,edit:settlements,Q65724,{5F1B81FB-DC82-4F02-B78B-06C66C2827D3},Schwendibach,2556119043,official name
+2026-10-12T04:16:42Z,edit:settlements,Q65727,{FABE68F1-7508-46DB-A227-B0185EE1D8DC},Niederstocken,2556119054,default label; official name
+2026-10-12T04:16:43Z,edit:settlements,Q65839,{A3F23B73-2D99-449E-88E5-CCF6E3C2337E},Gallenkirch,2556119061,default label; official name
+2026-10-12T04:16:45Z,edit:settlements,Q65897,{A35D768F-0584-49D2-98A1-9F209ED821D1},Unterendingen,2556119073,default label; official name
+2026-10-12T04:16:46Z,edit:settlements,Q66003,{4221269A-65A3-4257-A1D7-F357D5731A54},Rueun,2556119084,default label; official name
+2026-10-12T04:16:47Z,edit:settlements,Q66006,{5A5A9D36-99D6-4F55-952D-982B0532DF1D},Ruschein,2556119091,default label; official name
+2026-10-12T04:16:48Z,edit:settlements,Q66034,{EDB9D64D-5D64-46C9-9057-59A68A0BB652},Peist,2556119101,default label; official name
+2026-10-12T04:16:50Z,edit:settlements,Q66036,{38F81D73-298C-4398-B9BD-992965C27621},Arvigo,2556119113,default label; official name
+2026-10-12T04:16:51Z,edit:settlements,Q66104,{BF141105-BE7A-4C9C-9BDA-32A707B67F64},Oekingen,2556119127,default label; official name
+2026-10-12T04:16:53Z,edit:settlements,Q66164,{8139FF64-4556-4967-925D-F7AC7BD7C387},Susch,2556119137,default label; official name
+2026-10-12T04:16:54Z,edit:settlements,Q66167,{911F9244-3864-47E7-AAB1-46530DCEC35E},Clavaleyres,2556119149,default label
+2026-10-12T04:16:55Z,edit:settlements,Q66291,{9E3DFEF3-A68E-401E-B36D-709C8F11C472},Elfingen,2556119168,default label; official name
+2026-10-12T04:16:57Z,edit:settlements,Q66338,{E0FDF6C3-0894-4206-89FF-1CBDD5F9683F},Hirzel,2556119178,default label; official name
+2026-10-12T04:16:58Z,edit:settlements,Q66342,{CA1CE9E1-B8F9-4484-8113-47698DBBD33D},Selma,2556119183,default label; official name
+2026-10-12T04:16:59Z,edit:settlements,Q66349,{59CC70B0-BF1E-445B-86FF-55D2A0DE2257},Gänsbrunnen,2556119188,default label; official name
+2026-10-12T04:17:01Z,edit:settlements,Q66366,{AFC80B12-C29C-4FB6-ABF6-71B6E81DF1BA},Guntmadingen,2556119194,default label; official name
+2026-10-12T04:17:02Z,edit:settlements,Q66376,{FDFCF454-FB52-430D-9B8F-6353A4023853},Welschenrohr,2556119198,default label; official name
+2026-10-12T04:17:04Z,edit:settlements,Q66489,{106ABBF0-3959-49E3-BC27-A2791B6210F4},La Heutte,2556119204,default label; official name
+2026-10-12T04:17:05Z,edit:settlements,Q66492,{DF45230A-9B97-49DB-916E-6607E61B14FC},Ueken,2556119208,default label; official name
+2026-10-12T04:17:07Z,edit:settlements,Q66518,{9C123C6A-5D24-4610-8384-8BC761BF45E6},Oberflachs,2556119213,default label; official name
+2026-10-12T04:17:08Z,edit:settlements,Q66606,{566A05D5-A621-4EA2-A13D-CCDE5B9EF8CA},Haldenstein,2556119226,source for position; default label; official name
+2026-10-12T04:17:09Z,edit:settlements,Q66646,{B9312683-740A-4437-B98F-ED1E47668130},Lohnstorf,2556119229,default label; official name
+2026-10-12T04:17:11Z,edit:settlements,Q66686,{0FEDE806-5EFB-41E2-A7D7-F80D0C28164C},Hellikon,2556119232,source for position; default label; official name
+2026-10-12T04:17:12Z,edit:settlements,Q66694,{9EC1AF1E-8D25-4B8E-A0CF-3E52FE79EB4F},Lohn GR,2556119238,source for position; official name
+2026-10-12T04:17:13Z,edit:settlements,Q66721,{E877AC85-4D6F-405B-A99D-7596A1248042},Scherz,2556119242,default label; official name
+2026-10-12T04:17:15Z,edit:settlements,Q66827,{5CD6E247-842C-492D-9AFD-52B17BA4A37C},Halten,2556119252,default label; official name
+2026-10-12T04:17:16Z,edit:settlements,Q66837,{59213BF6-3CE5-497E-9DC1-2D365F42806A},Diesse,2556119261,default label; official name
+2026-10-12T04:17:17Z,edit:settlements,Q66844,{7D5AF103-E2F1-49ED-B5DA-00526FBC2B1E},Lamboing,2556119275,default label; official name
+2026-10-12T04:17:18Z,edit:settlements,Q66854,{BCE6B5FD-A931-4EF3-81B0-C497A2CED8AB},Rietheim,2556119285,default label; official name
+2026-10-12T04:17:20Z,edit:settlements,Q66895,{24F8FAC7-19B2-4F69-A09E-72F107D8E7C6},Mühledorf BE,2556119297,source for position; default label; official name
+2026-10-12T04:17:21Z,edit:settlements,Q66906,{1F1E331C-2F37-4B48-84AB-776EFA522ECF},Stein SG,2556119311,default label; official name
+2026-10-12T04:17:23Z,edit:settlements,Q66908,{5D242B5C-BD38-46A2-AFA1-9C19F2C6BADA},Escholzmatt,2556119322,default label; official name
+2026-10-12T04:17:24Z,edit:settlements,Q66922,{ECDC456A-EAE0-41E8-BB1C-A98C4E746433},Ependes FR,2556119333,default label; official name
+2026-10-12T04:17:26Z,edit:settlements,Q66991,{A3640A47-7CFD-4A68-98B5-4854C78F8766},Schinznach Dorf,2556119347,default label; official name
+2026-10-12T04:17:27Z,edit:settlements,Q66993,{FA9EBB9E-0A41-4F46-B4B1-EE639B9E8A4D},Brügglen,2556119356,default label; official name
+2026-10-12T04:17:28Z,edit:settlements,Q67032,{3A626A93-CBC9-4590-8C32-81CB5A2E4874},Salouf,2556119367,source for position; default label; official name
+2026-10-12T04:17:30Z,edit:settlements,Q67094,{3DDEA4CC-31BD-4839-816D-15D6AB4B88A8},Kaiserstuhl AG,2556119376,default label; official name
+2026-10-12T04:17:31Z,edit:settlements,Q67217,{45EAFE32-D1CC-462B-A5D4-51DFF8955867},Lüsslingen,2556119383,default label; official name
+2026-10-12T04:17:33Z,edit:settlements,Q67302,{32C8DF04-D0A0-4402-8AFC-1468318A629D},Waltalingen,2556119392,default label; official name
+2026-10-12T04:17:34Z,edit:settlements,Q67307,{9FA53BCD-EE3D-49E6-ACE0-2B55ECB7CC44},Ernetschwil,2556119399,default label; official name
+2026-10-12T04:17:35Z,edit:settlements,Q67330,{BCA5B6A2-DADA-4768-A6A2-7C7FC568E200},Ohmstal,2556119407,default label; official name
+2026-10-12T04:17:37Z,edit:settlements,Q67332,{0B304EEE-CB47-4CCC-ABDE-2423BA5E6957},Grengiols,2556119420,official name
+2026-10-12T04:17:38Z,edit:settlements,Q67336,{A1D99019-8609-4EF5-ADDA-98689ECF592E},Osogna,2556119426,default label
+2026-10-12T04:17:40Z,edit:settlements,Q67338,{1E0DD369-E46E-4DE1-9EBA-69C015899269},Herznach,2556119433,default label; official name
+2026-10-12T04:17:41Z,edit:settlements,Q67393,{9835FE9E-A010-4AB5-AB66-69862C5F3CB1},Eggiwil,2556119437,source for position; default label
+2026-10-12T04:17:42Z,edit:settlements,Q67412,{0A72C902-6A72-4ED5-AD09-D98B9777FACC},Prez-vers-Noréaz,2556119447,default label; official name
+2026-10-12T04:17:44Z,edit:settlements,Q67430,{00090A90-14FD-4D51-A0F5-F23977407D8A},Ulmiz,2556119456,default label; official name
+2026-10-12T04:17:45Z,edit:settlements,Q67437,{C0E696F8-8D38-426A-8F4F-8DFBD2ECA241},Galmiz,2556119464,default label; official name
+2026-10-12T04:17:46Z,edit:settlements,Q67443,{6E9BB3EC-2E34-4A3A-9A10-B32621EF68F6},Vuisternens-en-Ogoz,2556119481,official name
+2026-10-12T04:17:48Z,edit:settlements,Q67453,{F1169375-2692-4D5E-B0E1-DDD658A83716},Chésopelloz,2556119491,default label; official name
+2026-10-12T04:17:49Z,edit:settlements,Q67456,{0CFCFD8C-6015-4F6C-8BDA-ABD34B587C6F},Courgevaux,2556119496,official name
+2026-10-12T04:17:51Z,edit:settlements,Q67478,{5F84F594-6F1A-4BE6-B305-A1FED94744BE},Schlosswil,2556119504,default label; official name
+2026-10-12T04:17:52Z,edit:settlements,Q67484,{6ADA5F10-38FF-46BB-A350-30F2661FD99C},Sonvico,2556119511,default label; official name
+2026-10-12T04:17:53Z,edit:settlements,Q67491,{ED4C519E-F080-4C8F-8510-D64971B85BFF},Unterems,2556119518,default label; official name
+2026-10-12T04:17:54Z,edit:settlements,Q67516,{A9EFEF5B-BB6A-4A9A-A39A-E1A86DF3F290},Estavayer-le-Lac,2556119528,source for position
+2026-10-12T04:17:56Z,edit:settlements,Q67528,{0CB58128-5CFD-480B-96B1-896663A79B66},Schönenberg ZH,2556119536,source for position; default label; official name
+2026-10-12T04:17:57Z,edit:settlements,Q67554,{B5F01A3E-F592-404D-8E31-F4D7159D84D0},Büren zum Hof,2556119545,source for position; default label; official name
+2026-10-12T04:17:59Z,edit:settlements,Q67579,{8F9329A7-EFBA-4D82-946B-6DD361666E7E},Mülchi,2556119549,default label; official name
+2026-10-12T04:18:00Z,edit:settlements,Q67585,{AA5E8DBE-10BD-4A37-A2A0-A50EA3AC3D80},Münchringen,2556119558,default label; official name
+2026-10-12T04:18:01Z,edit:settlements,Q67600,{C5981CA8-ED62-4FDC-BBF3-5C27537C4006},Hermiswil,2556119562,source for position; default label; official name
+2026-10-12T04:18:03Z,edit:settlements,Q67603,{8BD2DEA1-EEF8-4172-B3A5-57EC0C4CF5B8},Etzelkofen,2556119565,default label; official name
+2026-10-12T04:18:04Z,edit:settlements,Q67638,{B31758E0-032C-4AF3-8B55-1766F53EF494},Oberösch,2556119569,source for position; default label; official name
+2026-10-12T04:18:05Z,edit:settlements,Q67652,{5EFAE95F-CEB0-43D2-BB27-EFB55D1E3BAD},Niederösch,2556119575,default label; official name
+2026-10-12T04:18:07Z,edit:settlements,Q67662,{076D7F08-2321-4CD0-B414-9313F5ECE2AB},Verscio,2556119582,default label; official name
+2026-10-12T04:18:08Z,edit:settlements,Q67677,{5B652E02-15DE-4C0F-BA8E-9B512A6D210E},Prato (Leventina),2556119588,default label
+2026-10-12T04:18:09Z,edit:settlements,Q67697,{95F3AD27-41F7-42FD-BF7A-FD15D6E9A095},Corserey,2556119597,default label; official name
+2026-10-12T04:18:11Z,edit:settlements,Q67702,{1D8EB341-1676-4CAA-9A75-4AADB2E60330},Veyras,2556119599,default label; official name
+2026-10-12T04:18:12Z,edit:settlements,Q67782,{6D1B6D6B-A677-467C-9731-9178B1E8D39D},Pontenet,2556119605,default label; official name
+2026-10-12T04:18:14Z,edit:settlements,Q67814,{21DDB6FA-61BC-4617-AA5C-C653AA589CFF},Limpach,2556119613,default label; official name
+2026-10-12T04:18:15Z,edit:settlements,Q67816,{78C087EB-F508-4543-BE23-3350E13F9EA7},Trimstein,2556119621,default label; official name
+2026-10-12T04:18:16Z,edit:settlements,Q67824,{0B89F259-B5A6-407C-BC18-53BA3D2C49A8},Schalunen,2556119628,default label; official name
+2026-10-12T04:18:18Z,edit:settlements,Q67869,{36E1B2FF-7DCD-47E4-9B6F-F4040F1BA0CE},Beurnevésin,2556119635,default label
+2026-10-12T04:18:19Z,edit:settlements,Q67874,{5D41B95D-C186-4F38-BC62-D75D25091953},Mosogno,2556119643,default label; official name
+2026-10-12T04:18:20Z,edit:settlements,Q67878,{2F3929F5-58E2-47DE-8DEA-45813110578B},Novaggio,2556119654,default label
+2026-10-12T04:18:22Z,edit:settlements,Q67880,{16039EA6-D72C-44A1-A8AF-C91163E8DD84},Damphreux,2556119668,default label
+2026-10-12T04:18:23Z,edit:settlements,Q67896,{CCAE53A4-BF3F-4C3B-A028-BA4AFA12D1C8},Kyburg-Buchegg,2556119676,default label; official name
+2026-10-12T04:18:25Z,edit:settlements,Q67898,{C16597D9-5131-404B-9FFC-A64A647ADD8B},Nürensdorf,2556119687,source for position; default label; official name
+2026-10-12T04:18:26Z,edit:settlements,Q67902,{C4F2B46A-9C0B-4A06-A2A1-243E18774A39},Oberstammheim,2556119695,default label; official name
+2026-10-12T04:18:27Z,edit:settlements,Q67916,{87125B93-5DF3-4958-9331-13FF6960465F},Gossliwil,2556119707,source for position; default label; official name
+2026-10-12T04:18:29Z,edit:settlements,Q67933,{B19AD181-4646-4282-AD85-C6E68C5D5A98},Trüllikon,2556119717,default label; official name
+2026-10-12T04:18:30Z,edit:settlements,Q67939,{1A508364-E519-4557-88E2-7CCD1EDE73F2},Bibern SO,2556119726,de label; official name
+2026-10-12T04:18:31Z,edit:settlements,Q67962,{1F9C0398-22A8-4494-B168-D29AD70597FC},Tegna,2556119738,default label; official name
+2026-10-12T04:18:33Z,edit:settlements,Q67972,{E04F8025-AD8B-4D91-83F8-ECF51A07186E},Lugnez,2556119751,default label; official name
+2026-10-12T04:18:33Z,edit:settlements,Q67986,{4C828EF5-198A-48BB-87F2-4A83026E6F16},Rovio,,
+2026-10-12T04:18:34Z,edit:settlements,Q67989,{F6ADD7AF-02B2-4B4A-A8E6-CF32447B46B6},Linescio,2556119762,default label
+2026-10-12T04:18:35Z,edit:settlements,Q67993,{7992DD8B-33A4-422A-86A2-34FA43425AF2},Bonfol,2556119776,default label
+2026-10-12T04:18:37Z,edit:settlements,Q67999,{7117C80B-DDEC-4D1D-8734-101946FC8DF2},Birgisch,2556119791,default label; official name
+2026-10-12T04:18:38Z,edit:settlements,Q68003,{4F01B58C-DBBA-4034-96DB-8D078FB98805},Claro,2556119801,default label
+2026-10-12T04:18:39Z,edit:settlements,Q68007,{DB458B6F-1F34-4FAE-B196-D1102BE76608},Cimadera,2556119812,default label; official name
+2026-10-12T04:18:41Z,edit:settlements,Q68059,{71EACC50-6859-4E10-978C-B12CB6E796DE},Léchelles,2556119822,default label; official name
+2026-10-12T04:18:42Z,edit:settlements,Q68203,{0AA626A9-000A-4089-AF1E-158F6E42B51F},Ponte Tresa,2556119831,source for position; default label
+2026-10-12T04:18:44Z,edit:settlements,Q68350,{FEA32BB4-1BFB-4ECF-8F62-7A5812F6E377},Aetigkofen,2556119842,default label; official name
+2026-10-12T04:18:45Z,edit:settlements,Q68352,{819FE42B-D4E9-4DFC-A65C-7EE21D4FA901},Gresso,2556119850,default label; official name
+2026-10-12T04:18:46Z,edit:settlements,Q68380,{755688FB-8015-45F8-82CA-3352C10EC3BC},Lugnorre,2556119859,official name
+2026-10-12T04:18:48Z,edit:settlements,Q68399,{1C28EFE3-9F2F-412C-9DC4-EF4D639F60ED},Glattfelden,2556119873,official name
+2026-10-12T04:18:49Z,edit:settlements,Q68401,{3E1D8227-A925-447A-9CB5-A2068A55F393},Cadro,2556119883,default label; official name
+2026-10-12T04:18:50Z,edit:settlements,Q68429,{D480F70B-1F5D-4F4B-9BC1-7CFC8686DFE8},Bossonnens,2556119892,default label
+2026-10-12T04:18:52Z,edit:settlements,Q68432,{BF4DB67D-91F8-400D-AFF8-5AE66B520CF4},St-Légier-La Chiésaz,2556119902,default label; official name
+2026-10-12T04:18:53Z,edit:settlements,Q68449,{DA49A1B5-881B-4F5A-BA30-C8A04B4CB2D4},Arogno,2556119915,default label
+2026-10-12T04:18:54Z,edit:settlements,Q68453,{7845A06D-F849-4910-81AD-D17DDCE7335D},Carona,2556119924,default label; official name
+2026-10-12T04:18:56Z,edit:settlements,Q68474,{042E6D9F-4893-46E3-B0BB-B76F1663A969},Betten,2556119936,default label; official name
+2026-10-12T04:18:57Z,edit:settlements,Q68477,{392F14B4-7C13-4575-86A6-768C0FABEB6A},Selkingen,2556119944,default label; official name
+2026-10-12T04:18:58Z,edit:settlements,Q68494,{59242321-1D7B-4138-AC9A-47BC4E9ED444},Glovelier,2556119951,default label; official name
+2026-10-12T04:19:00Z,edit:settlements,Q68496,{F062F165-92B7-474C-8B62-13FC701F43E7},Montsevelier,2556119958,default label; official name
+2026-10-12T04:19:01Z,edit:settlements,Q68498,{FF5ABEEC-B427-4E70-958C-06BDFD876804},Rebeuvelier,2556119965,default label
+2026-10-12T04:19:02Z,edit:settlements,Q68544,{B66BE4A9-7967-4D76-ADBB-11165EFF491C},Fontainemelon,2556119972,default label; official name
+2026-10-12T04:19:04Z,edit:settlements,Q68555,{EB465E7C-C7A9-4B35-A906-3CF1C02096FB},Cheiry,2556119980,default label
+2026-10-12T04:19:05Z,edit:settlements,Q68583,{DE8D6185-5CB5-4EB7-A91E-7016084CF68D},Villeneuve FR,2556119985,official name
+2026-10-12T04:19:06Z,edit:settlements,Q68589,{62E734E4-23DD-4BE5-B18F-8EF45C9E5AB8},Châbles FR,2556119995,source for position; default label; official name
+2026-10-12T04:19:08Z,edit:settlements,Q68595,{B7189D43-C9A5-474A-8E11-847C4D3F7D4A},Bussy FR,2556120005,default label; official name
+2026-10-12T04:19:08Z,edit:settlements,Q68636,{34AFB982-DF96-4748-8F31-7EE652BE3545},Vullierens,,
+2026-10-12T04:19:09Z,edit:settlements,Q68657,{5F48083F-E6B3-4BE5-A046-B729E82A77B5},Rueyres-les-Prés,2556120014,default label; official name
+2026-10-12T04:19:10Z,edit:settlements,Q68667,{C43A45C6-211E-4AC9-902A-C4C2C9739DAE},Erschmatt,2556120019,official name
+2026-10-12T04:19:12Z,edit:settlements,Q68677,{53564E3E-64A8-494A-AC01-6860A44B24BC},Sarzens,2556120027,default label
+2026-10-12T04:19:13Z,edit:settlements,Q68687,{8DE3CA70-5B79-4F34-A477-5BC7B98BF6C9},Montherod,2556120031,default label
+2026-10-12T04:19:14Z,edit:settlements,Q68692,{80081B40-7F8E-4483-A7FF-03D7F7C52CA9},Fenin,2556120039,default label; official name
+2026-10-12T04:19:16Z,edit:settlements,Q68703,{4EB9B7E4-65F3-4627-B1A7-AEA1B6840DBB},Les Brenets,2556120045,default label
+2026-10-12T04:19:17Z,edit:settlements,Q68709,{550D4221-92BE-4BF6-A3FF-0DB545AECB7B},Ménières,2556120056,default label
+2026-10-12T04:19:19Z,edit:settlements,Q68715,{173015DA-DAED-4152-8495-EEF5E8BAE2C2},Essert-Pittet,2556120067,default label
+2026-10-12T04:19:20Z,edit:settlements,Q68729,{99CE68AF-B192-40EB-B3C8-916DF8AEE08A},Ferlens VD,2556120078,default label; official name
+2026-10-12T04:19:21Z,edit:settlements,Q68766,{68F57342-3CEC-414F-8880-3D68EBC3ED18},Brione (Verzasca),2556120086,source for position; default label
+2026-10-12T04:19:23Z,edit:settlements,Q68776,{3BBFB95F-FCFA-4F68-853B-1FEF1094289E},Certara,2556120091,default label; official name
+2026-10-12T04:19:24Z,edit:settlements,Q68784,{F451699A-7F20-407F-87BC-8240A34CD24E},Cavigliano,2556120095,default label; official name
+2026-10-12T04:19:25Z,edit:settlements,Q68816,{6BF663B8-D173-47C1-B877-B91BCA2CA2FF},Moleno,2556120101,default label
+2026-10-12T04:19:26Z,edit:settlements,Q68827,{1B9136B3-0466-4491-8EF3-71B72A074FC8},Bogno,2556120108,default label; official name
+2026-10-12T04:19:28Z,edit:settlements,Q68829,{4FF12BBB-E4AC-4D06-B548-445F4343F508},Meride,2556120113,source for position; default label; official name
+2026-10-12T04:19:29Z,edit:settlements,Q68846,{2B78C18E-55A0-4757-B1FD-36FA11FBE522},Collonges,2556120121,default label
+2026-10-12T04:19:31Z,edit:settlements,Q68858,{581DE360-B953-46A5-8D38-EAED9ABBFB12},Martherenges,2556120128,default label; official name
+2026-10-12T04:19:32Z,edit:settlements,Q68886,{D6FD87A0-0120-4515-AD41-65D2C4DDC3B9},Reverolle,2556120137,default label
+2026-10-12T04:19:33Z,edit:settlements,Q68894,{FE558387-734E-4CBE-9E8A-8F68010A16EF},Pampigny,2556120149,default label
+2026-10-12T04:19:34Z,edit:settlements,Q68921,{EE2AA19F-4257-42E8-B12D-42F18E139F41},Mézières VD,2556120162,default label; official name
+2026-10-12T04:19:36Z,edit:settlements,Q68923,{C8EF485D-6710-42F3-8157-7F6AEAF26041},St-Cierges,2556120173,default label; official name
+2026-10-12T04:19:37Z,edit:settlements,Q68933,{0C3199B7-CF7B-44C2-8892-7F07188B5DD9},Mex VS,2556120181,default label; official name
+2026-10-12T04:19:38Z,edit:settlements,Q69023,{9827F1BC-37BC-49C3-8362-69592038A96E},Molinis,2556120192,default label; official name
+2026-10-12T04:19:38Z,edit:settlements,Q69290,{8AD2B213-87F8-4E13-A854-062833A72578},Genolier,,
+2026-10-12T04:19:40Z,edit:settlements,Q69347,{368B69B9-4A81-48D1-8143-29C059F0D1CB},Morens FR,2556120203,source for position; default label; official name
+2026-10-12T04:19:41Z,edit:settlements,Q69389,{D0A0E1DA-2636-4A60-B7B2-A75BC91F45E1},Aegerten,2556120215,default label; official name
+2026-10-12T04:19:41Z,edit:settlements,Q69445,{196BB7F5-3D0E-4FF7-AE2D-A2C3C67574C9},Vufflens-le-Château,,
+2026-10-12T04:19:43Z,edit:settlements,Q69542,{2D50BF42-C143-4C36-A46B-0A4BEC3473E0},Miège,2556120226,default label; official name
+2026-10-12T04:19:44Z,edit:settlements,Q69567,{4B97B380-8040-4F8C-ADBA-9559B365DF34},Cerniat FR,2556120240,source for position; default label; official name
+2026-10-12T04:19:46Z,edit:settlements,Q69668,{EF389E7F-A44A-4E16-8C97-5D6C8C6661AC},Steffisburg,2556120254,default label; official name
+2026-10-12T04:19:47Z,edit:settlements,Q69684,{28EE758F-F8CE-4540-AEFA-123AB0F52786},Riazzino,2556120267,official name
+2026-10-12T04:19:49Z,edit:settlements,Q69802,{115F5907-BA64-42FA-937E-1C46F0061D46},Camorino,2556120277,default label
+2026-10-12T04:19:50Z,edit:settlements,Q69868,{A4931599-CD53-42FB-B7F1-FFB834A0898A},Souboz,2556120284,default label; official name
+2026-10-12T04:19:51Z,edit:settlements,Q69882,{420CCAA9-EBFA-4945-9281-44004623DB67},Bressaucourt,2556120291,default label; official name
+2026-10-12T04:19:52Z,edit:settlements,Q69895,{8748AB2F-3D38-4800-8158-E1E2808B211E},Lurtigen,2556120298,default label; official name
+2026-10-12T04:19:54Z,edit:settlements,Q69902,{26ABA4EE-BD21-4473-BE96-A05138D4A097},Salvenach,2556120306,default label; official name
+2026-10-12T04:19:55Z,edit:settlements,Q69911,{20B3318C-8D6F-4D78-B2DA-663C60E36303},Gempenach,2556120314,default label; official name
+2026-10-12T04:19:57Z,edit:settlements,Q69991,{F6DEDDD2-3B7D-4F72-93B8-7005D38A106F},Corippo,2556120322,default label
+2026-10-12T04:19:58Z,edit:settlements,Q70002,{1528C79B-A5DD-463B-94CE-4802174976F3},Vuissens,2556120330,default label; official name
+2026-10-12T04:19:59Z,edit:settlements,Q70020,{2007ABF7-B75B-46E9-B72A-545F9FEC6AC0},Sobrio,2556120334,default label; official name
+2026-10-12T04:20:01Z,edit:settlements,Q70040,{E07259AD-9789-475D-B2D4-5F127C498424},Villarepos,2556120338,default label; official name
+2026-10-12T04:20:01Z,edit:settlements,Q70063,{64006F37-4834-4C11-B446-81ABF6296118},Bourrignon,,
+2026-10-12T04:20:02Z,edit:settlements,Q70070,{614A176C-6BD9-4EE8-9E65-593209718133},Preonzo,2556120342,default label
+2026-10-12T04:20:03Z,edit:settlements,Q70075,{1C5ACEF9-3BD0-4885-B641-37CE93B0BFB0},Monte Carasso,2556120344,default label
+2026-10-12T04:20:04Z,edit:settlements,Q70078,{6A67E92D-01EE-4609-8AF9-86184BA027AF},Peseux,2556120350,default label
+2026-10-12T04:20:04Z,edit:settlements,Q70122,{F6B76A53-3ED3-478A-AB71-6525864C3A26},Melano,,
+2026-10-12T04:20:04Z,edit:settlements,Q70135,{3022D51C-7641-4827-9C4A-E232D29104AB},Maroggia,,
+2026-10-12T04:20:04Z,edit:settlements,Q70145,{F4B2F567-1325-49E6-8F90-A881E1A00075},Bovernier,,
+2026-10-12T04:20:06Z,edit:settlements,Q70173,{5781A3AB-BF1B-4403-A1C7-4D7F4A51C0D3},Astano,2556120354,default label
+2026-10-12T04:20:07Z,edit:settlements,Q70175,{8694E68B-307F-4231-94F8-070C49A48BF9},Chapelle (Glâne),2556120359,default label; official name
+2026-10-12T04:20:08Z,edit:settlements,Q70299,{21027DD2-C664-4E6F-818F-6664A31A0842},Russy,2556120365,default label; official name
+2026-10-12T04:20:10Z,edit:settlements,Q70311,{9B4D2A0B-031D-4862-AAFD-432F432E4C9D},Fétigny,2556120370,default label; official name
+2026-10-12T04:20:11Z,edit:settlements,Q70330,{91F2DB78-F76C-44DA-9A81-EABE7036A3A8},Ligornetto,2556120375,default label; official name
+2026-10-12T04:20:12Z,edit:settlements,Q70341,{7D6E79ED-AB82-4D71-8FF0-A0096AE3F8A5},Blitzingen,2556120377,default label; official name
+2026-10-12T04:20:14Z,edit:settlements,Q70345,{2D5F0C79-AD88-4EF3-BD26-0479A2CE3C0E},Martisberg,2556120381,default label; official name
+2026-10-12T04:20:15Z,edit:settlements,Q70355,{6FD76D8D-4517-440F-9C94-8420EFD6F23B},Randogne,2556120386,default label; official name
+2026-10-12T04:20:15Z,edit:settlements,Q70357,{4E88A7EB-8D87-4268-997F-8A6CB97C9D41},Niederwald,,
+2026-10-12T04:20:16Z,edit:settlements,Q70385,{1C72ABA5-6196-4596-88EA-0022B025E61B},Auvernier,2556120392,default label; official name
+2026-10-12T04:20:18Z,edit:settlements,Q70397,{7E231E29-6F1F-4261-B9B0-87D59E0EE532},Montet (Glâne),2556120399,default label; official name
+2026-10-12T04:20:19Z,edit:settlements,Q70399,{C6BF210A-2C62-4DC7-8CF5-A8BC30C136BE},Soulce,2556120407,default label; official name
+2026-10-12T04:20:20Z,edit:settlements,Q70409,{1D4619B7-8548-48D1-B410-3A01518AE712},La Chaux-des-Breuleux,2556120417,default label
+2026-10-12T04:20:21Z,edit:settlements,Q70411,{E6414590-4588-487F-81E0-6DF575183565},Les Enfers,2556120425,default label
+2026-10-12T04:20:23Z,edit:settlements,Q70422,{29D798C7-B9DF-422F-8474-EAFB4E89E22C},Fresens,2556120434,default label
+2026-10-12T04:20:24Z,edit:settlements,Q70424,{E98EF5D0-2177-4886-9CA1-039F5E626769},St-Blaise,2556120440,default label; official name
+2026-10-12T04:20:26Z,edit:settlements,Q70430,{B42D575C-CEFA-4553-B4FB-B267720AA540},Fontaines NE,2556120445,default label; official name
+2026-10-12T04:20:27Z,edit:settlements,Q70432,{7DD43026-B803-406D-A2F6-8B6D57C3D057},Hauterive NE,2556120450,default label; official name
+2026-10-12T04:20:28Z,edit:settlements,Q70438,{44CFED74-02F6-4806-8EF5-A783CF2715F1},Auboranges,2556120454,default label; official name
+2026-10-12T04:20:30Z,edit:settlements,Q70442,{ADA3D4D4-80FD-4096-B43C-0B6919A7ADCD},Montalchez,2556120459,default label
+2026-10-12T04:20:31Z,edit:settlements,Q70448,{5782CD1E-682A-43FD-950C-597B7C57F1BC},Les Geneveys-sur-Coffrane,2556120463,default label; official name
+2026-10-12T04:20:32Z,edit:settlements,Q70459,{260D9DEF-EA41-414D-929B-C983E24DFA6C},Dombresson,2556120468,default label; official name
+2026-10-12T04:20:33Z,edit:settlements,Q70469,{DBDFC0B8-421E-49B5-BD31-DAD4E2412F17},Engollon,2556120476,default label; official name
+2026-10-12T04:20:35Z,edit:settlements,Q70472,{D86F4E28-D7A3-4FA8-A511-DE1F23BEA189},Bôle,2556120483,default label; official name
+2026-10-12T04:20:36Z,edit:settlements,Q70481,{C4725992-8613-41D0-AA13-2BF1A5750F65},Ecublens FR,2556120494,default label; official name
+2026-10-12T04:20:37Z,edit:settlements,Q70485,{01557AE4-3A33-4DAE-A40B-C196F195AEA6},Coffrane,2556120504,default label; official name
+2026-10-12T04:20:39Z,edit:settlements,Q70496,{8BD73E93-602E-41C7-A82E-92316DA79435},Dompierre FR,2556120513,official name
+2026-10-12T04:20:40Z,edit:settlements,Q70498,{B49C03A4-A924-4723-A2E2-56CCF55389BD},Vuiteboeuf,2556120523,default label
+2026-10-12T04:20:40Z,edit:settlements,Q70515,{5384C479-0124-442E-BA5C-F5D2E4EB60B5},Rivaz,,
+2026-10-12T04:20:42Z,edit:settlements,Q70517,{695A84DE-D24E-42A4-BA99-CDADD276DD32},St-Aubin-Sauges,2556120537,default label; official name
+2026-10-12T04:20:43Z,edit:settlements,Q70522,{D33B71DB-95C8-4158-BEC6-903F09AC1E3F},Brot-Dessous,2556120548,default label; official name
+2026-10-12T04:20:44Z,edit:settlements,Q70544,{2F02A59B-94D6-40EA-8861-DE7FFD124CE4},Sévery,2556120563,default label
+2026-10-12T04:20:46Z,edit:settlements,Q70557,{AE34BA1C-FE3D-4B44-AA9A-FBD7DE6EC8A5},Denezy,2556120579,default label; official name
+2026-10-12T04:20:47Z,edit:settlements,Q70576,{37351746-3DAC-4B7D-8177-79ECEB4326DF},Neyruz-sur-Moudon,2556120593,default label; official name
+2026-10-12T04:20:48Z,edit:settlements,Q70663,{0E3D43B1-90A1-4FF9-892C-B2009936F6AD},Oppens,2556120611,default label
+2026-10-12T04:20:50Z,edit:settlements,Q70681,{6A538A84-6BEA-49AE-9690-E00BC9B4D8DD},Thierrens,2556120626,official name
+2026-10-12T04:20:51Z,edit:settlements,Q70683,{605AB76C-4B01-4505-8FEC-F503CCBB9C0C},Peyres-Possens,2556120640,default label; official name
+2026-10-12T04:20:52Z,edit:settlements,Q70691,{07D8D830-F6D0-4579-ADCE-B63D1451C4B5},Wiesenberg,2556120654,source for position; default label; official name
+2026-10-12T04:20:52Z,edit:settlements,Q70693,{667A19C3-301D-4825-9C22-9ECF77C949AD},Tumegl/Tomils,,
+2026-10-12T04:20:54Z,edit:settlements,Q70699,{FBD33425-849D-4012-8964-BEF812D39257},Sonogno,2556120667,default label
+2026-10-12T04:20:55Z,edit:settlements,Q70747,{5F826679-6CBA-479C-AB51-67BE40BA72A5},Curio,2556120679,default label
+2026-10-12T04:20:57Z,edit:settlements,Q74719,{917B5D45-DFC6-40E8-87A8-615CC01433AF},Rodi-Fiesso,2556120690,default label; official name
+2026-10-12T04:20:58Z,edit:settlements,Q76476,{A7360103-D6A9-4B7F-B2C7-99FE93229998},Cavergno,2556120698,default label; official name
+2026-10-12T04:20:59Z,edit:settlements,Q76670,{783595CD-0B30-491D-924C-2C759973FFD3},Castro,2556120709,default label; official name
+2026-10-12T04:21:01Z,edit:settlements,Q86693,{14F0DD4E-6E36-4901-AEEA-6799B48F0111},Chiggiogna,2556120717,official name
+2026-10-12T04:21:02Z,edit:settlements,Q86765,{FDABE310-E07C-4F7A-BBFD-7C10DE7D761A},Coglio,2556120727,source for position; default label; official name
+2026-10-12T04:21:03Z,edit:settlements,Q87088,{F2B93976-8E67-4449-8094-1947CB6941E3},Contone,2556120737,default label; official name
+2026-10-12T04:21:04Z,edit:settlements,Q120101,{93909FD1-8306-44D7-BF87-0D6F3687E1AD},Kirchberg,2556120749,official name
+2026-10-12T04:21:06Z,edit:settlements,Q123003,{7FC6A7CA-A136-4BAF-8836-1EAFFCB5FF81},Rasa,2556120757,source for position; default label; official name
+2026-10-12T04:21:07Z,edit:settlements,Q141502,{064712CC-BD38-4A40-9527-7688E6542847},Oberhofen AG,2556120766,default label; official name
+2026-10-12T04:21:08Z,edit:settlements,Q157349,{008BE944-031F-45D9-8010-BCAB246CA7E1},Corticiasca,2556120773,default label; official name
+2026-10-12T04:21:10Z,edit:settlements,Q164031,{DA997FAB-9447-4D83-BDE7-7D3B3976459A},Leimiswil,2556120780,default label; official name
+2026-10-12T04:21:11Z,edit:settlements,Q165889,{5B4B09D9-7ECC-4F68-9BB9-B1C51A473D8D},Cureggia,2556120785,source for position; default label; official name
+2026-10-12T04:21:12Z,edit:settlements,Q167179,{773A1724-6CFD-48DB-AE13-61D378DEC1C7},Oerlikon,2556120794,default label; official name
+2026-10-12T04:21:14Z,edit:settlements,Q168045,{21953EDC-AA4F-4698-9E0C-0E8D82F2D2BC},La Vounaise,2556120800,default label; official name
+2026-10-12T04:21:15Z,edit:settlements,Q169282,{15A130C2-041D-456C-B7F5-A0DFFE052769},Ze Binne,2556120807,source for position; default label; official name
+2026-10-12T04:21:16Z,edit:settlements,Q173969,{0EDF599E-C4C9-4209-8F84-19E33C89C046},Cavardiras,2556120812,default label; official name
+2026-10-12T04:21:17Z,edit:settlements,Q175227,{ABC9DA81-5AE2-436D-A0D5-1E309549F7A8},Pleujouse,2556120817,default label; official name
+2026-10-12T04:21:19Z,edit:settlements,Q182806,{D4EBB1C8-AB43-4562-8D28-DFD397E7FFC5},Näfels,2556120827,source for position; official name
+2026-10-12T04:21:20Z,edit:settlements,Q206387,{3D6C3A6B-2A26-4399-86E7-5F3D8D510DE3},Brontallo,2556120838,default label; official name
+2026-10-12T04:21:21Z,edit:settlements,Q209270,{6BDD997F-83BA-4F25-A691-137BA43142B9},Appenzell,2556120846,official name
+2026-10-12T04:21:23Z,edit:settlements,Q212308,{9E084D78-8D15-4FDB-9C43-F373FF8DDD13},Ayer,2556120855,official name
+2026-10-12T04:21:24Z,edit:settlements,Q223227,{DAE71A98-2317-4639-AE50-12D17A3DC3AC},Caprino,2556120861,default label; official name
+2026-10-12T04:21:25Z,edit:settlements,Q229691,{2E9617FF-18D6-440C-BB78-3F9AC5DADF8B},Zumdorf,2556120868,default label; official name
+2026-10-12T04:21:27Z,edit:settlements,Q230207,{3CDDB0F1-B702-4F0B-9DB5-7B14B78B3A86},Zuort,2556120873,source for position; default label; official name
+2026-10-12T04:21:28Z,edit:settlements,Q237257,{E3FE5ED8-97E8-4151-9E84-1DAD12EC6A19},Goumois,2556120876,default label; official name
+2026-10-12T04:21:29Z,edit:settlements,Q240791,{707BEEB7-D98B-40D2-AAA4-5BE40864ECBF},Gossens,2556120878,default label; official name
+2026-10-12T04:21:31Z,edit:settlements,Q244729,{E50018CD-BCDB-4C61-9AF2-5A672B10F0E4},Zwillikon,2556120881,official name
+2026-10-12T04:21:32Z,edit:settlements,Q246909,{ED5B614E-ADEE-4F4F-AC86-CF9198BDC0E9},Wengernalp,2556120888,source for position; default label; official name
+2026-10-12T04:21:33Z,edit:settlements,Q247536,{D5003182-2EB7-4AA7-94ED-67FA5F66634E},Zénauva,2556120894,default label; official name
+2026-10-12T04:21:35Z,edit:settlements,Q248395,{008C4F31-1578-4D4F-AA6D-62758CC2EF85},Zünikon,2556120901,default label; official name
+2026-10-12T04:21:36Z,edit:settlements,Q259939,{053B3CBF-5E29-44ED-AEDE-EDC1D4C96F31},Bironico,2556120907,default label; official name
+2026-10-12T04:21:37Z,edit:settlements,Q277414,{2C8799A9-25D1-48A0-9890-B273E0795E94},Cardada,2556120914,default label; official name
+2026-10-12T04:21:39Z,edit:settlements,Q281137,{AC9D4658-6A7B-461D-B2CD-252A2C894417},Bratsch,2556120918,default label; official name
+2026-10-12T04:21:40Z,edit:settlements,Q286332,{558A84E6-E112-440C-81AB-39B4CCBD3ED6},Alt St. Johann,2556120925,default label; official name
+2026-10-12T04:21:41Z,edit:settlements,Q287585,{465E764F-B7E2-4206-90E4-8415748167EE},Muggio,2556120926,default label; official name
+2026-10-12T04:21:43Z,edit:settlements,Q289534,{EEEC9CC3-988D-4168-9ABE-AA25663842A4},Mettau,2556120930,official name
+2026-10-12T04:21:44Z,edit:settlements,Q351326,{1BE789A4-76DF-4D2F-8F1E-0447FE2FC4F0},Belalp,2556120936,default label; official name
+2026-10-12T04:21:45Z,edit:settlements,Q362761,{8D22BD79-A40C-4A1E-90C5-9AA141AF3A75},Moghegno,2556120944,default label; official name
+2026-10-12T04:21:47Z,edit:settlements,Q378869,{132CFD6E-BAC0-440C-8D81-89DAB73C6ED0},Sagno,2556120953,default label; official name
+2026-10-12T04:21:48Z,edit:settlements,Q381858,{89E6DC94-BCDF-4082-AE03-4F9C2C552C85},Aeschlen ob Gunten,2556120963,source for position; official name
+2026-10-12T04:21:49Z,edit:settlements,Q381975,{C5A2C00D-7A5D-490A-AD8F-052D56CE2F8B},Aettenschwil,2556120976,official name
+2026-10-12T04:21:50Z,edit:settlements,Q381976,{204CA506-B669-4E0D-BCA8-D19EC9261123},Aetzikofen,2556120987,default label; official name
+2026-10-12T04:21:52Z,edit:settlements,Q381980,{DD4D11BB-0099-4A46-8B7D-DA4941D2DAE1},Aeugstertal,2556120998,default label; official name
+2026-10-12T04:21:53Z,edit:settlements,Q388657,{3315D966-DFFF-4A0E-B44E-564C6CBEB779},Agriswil,2556121013,default label; official name
+2026-10-12T04:21:54Z,edit:settlements,Q389322,{A6ED83F4-530A-43E1-8E86-B12BA7B09F9D},Sédeilles,2556121025,default label; official name
+2026-10-12T04:21:56Z,edit:settlements,Q389451,{8339DA5F-FBD2-43DD-9288-C5FFF568030E},Rossura,2556121038,source for position; default label; official name
+2026-10-12T04:21:57Z,edit:settlements,Q390482,{5DABD573-88A6-4126-9C5B-3BF761F6B0D5},Donatyre,2556121050,default label; official name
+2026-10-12T04:21:58Z,edit:settlements,Q390838,{75DC7115-B696-4954-9216-0DD2B298F3F8},Agasul,2556121063,source for position; default label; official name
+2026-10-12T04:21:59Z,edit:settlements,Q429085,{FAA111E6-AEE1-4783-A999-6E21A68758DB},Font,2556121077,default label; official name
+2026-10-12T04:22:01Z,edit:settlements,Q429962,{5038E392-CB99-430F-91D1-20768299B56F},Bibern SH,2556121089,default label; official name
+2026-10-12T04:22:02Z,edit:settlements,Q431011,{C80C4696-7227-45FA-A378-3CF6E670C17A},Anzonico,2556121102,default label; official name
+2026-10-12T04:22:03Z,edit:settlements,Q435231,{0572A48B-F6E8-48B1-B5AC-C0DCBCE868BA},Altdorf SH,2556121120,default label; official name
+2026-10-12T04:22:05Z,edit:settlements,Q439034,{6C5A204D-7F21-47A2-8497-3556225971B7},Alterswilen,2556121134,default label; official name
+2026-10-12T04:22:06Z,edit:settlements,Q443634,{BEB3F2D9-8F41-42DA-9C4F-AC1DF6E003AB},Gondo,2556121148,source for position; default label; official name
+2026-10-12T04:22:07Z,edit:settlements,Q443653,{9F6717E5-4B61-4418-9CA2-A13C7BEB1086},Richenthal,2556121160,official name
+2026-10-12T04:22:09Z,edit:settlements,Q445469,{B1A17658-33DD-4BF3-A7E6-127F13074FF3},Altstadt,2556121174,names in other languages (fr alias); official name
+2026-10-12T04:22:10Z,edit:settlements,Q456214,{2939E7CA-898D-49DC-B863-2A2F1BD7DB90},Schindellegi,2556121187,source for position; default label; official name
+2026-10-12T04:22:11Z,edit:settlements,Q474619,{465CFAC8-0960-4F4E-A761-0AAC1A0E41CF},Goldau,2556121192,official name
+2026-10-12T04:22:13Z,edit:settlements,Q478837,{8333EA8D-0B14-4877-ABF5-039C2F2DFD94},Les Crosets,2556121201,default label; official name
+2026-10-12T04:22:14Z,edit:settlements,Q484512,{698014D8-1107-4579-BAC8-A3BA44FCF5F9},Immensee,2556121207,source for position; official name
+2026-10-12T04:22:15Z,edit:settlements,Q485407,{EA769A74-DBB2-49E0-992E-130CE16D148F},Urnerboden,2556121218,default label; official name
+2026-10-12T04:22:17Z,edit:settlements,Q486284,{471EBE70-37AE-4385-88DC-E087DA9C4F14},Heerbrugg,2556121224,default label; official name
+2026-10-12T04:22:18Z,edit:settlements,Q520036,{8BF58C7E-24C0-44D7-83D4-CFB53C0B6A7F},Riex,2556121230,source for position; official name
+2026-10-12T04:22:19Z,edit:settlements,Q526602,{905F67FD-EE02-4408-AAC8-4A7012D97A67},Praden,2556121238,default label; official name
+2026-10-12T04:22:21Z,edit:settlements,Q531220,{BA3EB08C-32BE-48AC-8F38-E1D651805F6D},Davesco-Soragno,2556121248,default label; official name
+2026-10-12T04:22:22Z,edit:settlements,Q531899,{B1FFC14E-2453-4E73-93F5-43F4F8AFDF83},Werd,2556121259,source for position; default label; official name
+2026-10-12T04:22:23Z,edit:settlements,Q534274,{58AD598C-134E-490E-98D3-10CDD797FE8E},Gerra (Gambarogno),2556121269,default label; official name
+2026-10-12T04:22:25Z,edit:settlements,Q540859,{FD952777-943A-4D22-B6EE-D1FF6D696D8A},Anglikon,2556121281,source for position; default label; official name
+2026-10-12T04:22:26Z,edit:settlements,Q568142,{FEF84BFB-5FDA-418F-9F50-4944A9B23BC3},Romairon,2556121288,default label; official name
+2026-10-12T04:22:27Z,edit:settlements,Q580300,{B3F15E6E-456C-4267-BBFE-8FC70293539C},Rossens VD,2556121295,default label; official name
+2026-10-12T04:22:29Z,edit:settlements,Q582543,{545223FD-3A96-4000-8551-1AAC585B0034},Eigergletscher,2556121304,default label; official name
+2026-10-12T04:22:30Z,edit:settlements,Q588882,{AF8508D2-D49C-4531-B726-4D48E58A2ED6},Fuldera,2556121309,default label; official name
+2026-10-12T04:22:31Z,edit:settlements,Q604580,{267D5511-E37D-46D5-BE7D-D480AD5433B0},Kottwil,2556121315,source for position; default label; official name
+2026-10-12T04:22:33Z,edit:settlements,Q611382,{05BB1E6E-6193-453C-892B-91E3F307CC55},Benzenschwil,2556121318,source for position; official name
+2026-10-12T04:22:34Z,edit:settlements,Q621146,{842F87CA-9904-456D-93A5-10635DFB751B},Fescoggia,2556121326,default label; official name
+2026-10-12T04:22:35Z,edit:settlements,Q622853,{0895004A-A0DD-47B1-86BA-908FC2A6B3FA},Genestrerio,2556121334,default label; official name
+2026-10-12T04:22:37Z,edit:settlements,Q623277,{CC51FB12-CE79-4F13-BB48-67825E2B7CB4},Aquila,2556121340,default label; official name
+2026-10-12T04:22:38Z,edit:settlements,Q627621,{D1CB0ED4-D935-4A2E-ADBD-6545C9DD95E5},Mühlethal,2556121346,default label; official name
+2026-10-12T04:22:39Z,edit:settlements,Q628354,{01581290-E153-4253-8316-FE85B7D5025F},Fleurier,2556121351,default label; official name
+2026-10-12T04:22:41Z,edit:settlements,Q633554,{7A50D8F1-5C74-4A30-9170-8AA0699AA3F1},Constantine,2556121356,default label; official name
+2026-10-12T04:22:42Z,edit:settlements,Q639028,{BF923C9D-D15D-4094-AFBA-E98A308760E2},Bruzella,2556121360,default label; official name
+2026-10-12T04:22:43Z,edit:settlements,Q643200,{4A652BDD-26D5-432C-9D66-FD00E2FA5FCE},Mosen,2556121365,official name
+2026-10-12T04:22:45Z,edit:settlements,Q643586,{8D52A4B9-8EA4-43E1-815A-C2A2C6D3B858},Outremont,2556121371,source for position; default label; official name
+2026-10-12T04:22:46Z,edit:settlements,Q644055,{B98DF8D6-E670-4DAF-AE1B-8197977C35E7},Mollis,2556121377,source for position; default label; official name
+2026-10-12T04:22:47Z,edit:settlements,Q644378,{3961AF3D-3BD1-424F-9FC9-AF878237162F},Brunnadern,2556121387,default label; official name
+2026-10-12T04:22:49Z,edit:settlements,Q657274,{F6E704E2-6EA4-49AF-B338-466F15B6A7C3},Sugnens,2556121397,default label; official name
+2026-10-12T04:22:50Z,edit:settlements,Q658739,{70088DF8-9A00-403C-8A0B-EC05978BE853},Igis,2556121405,default label; official name
+2026-10-12T04:22:51Z,edit:settlements,Q659434,{B98D1508-5A64-4B60-96EC-355521A4E6CC},Ennenda,2556121413,source for position; default label; official name
+2026-10-12T04:22:53Z,edit:settlements,Q659766,{E6E6F1E4-1556-4C42-9AC4-5A1A8B5928BF},Montaubion-Chardonney,2556121421,default label; official name
+2026-10-12T04:22:54Z,edit:settlements,Q659815,{B82566DA-735E-4CB7-A8FD-DB77BF37BF5B},Sarn,2556121431,official name
+2026-10-12T04:22:55Z,edit:settlements,Q659899,{DB55C625-BAC7-4E56-9C1F-9CD4BA72F1FC},Portein,2556121443,official name
+2026-10-12T04:22:57Z,edit:settlements,Q659907,{AFE7A1CB-1684-4170-AB69-B9FE796F987E},Präz,2556121454,official name
+2026-10-12T04:22:58Z,edit:settlements,Q659947,{132C3865-1C51-4D6D-93D6-7957DD5D4417},Schwanden GL,2556121466,default label; official name
+2026-10-12T04:22:59Z,edit:settlements,Q659972,{3717BCA8-145D-4847-B1FF-189E1EE9394C},Sta. Maria Val Müstair,2556121473,source for position; default label; official name
+2026-10-12T04:23:01Z,edit:settlements,Q659986,{BC4B5468-E722-4218-8473-66FD0DA61650},Sool,2556121484,default label; official name
+2026-10-12T04:23:02Z,edit:settlements,Q660047,{C19B7920-F33C-46AC-9D65-D6FAC52327B9},Schlans,2556121493,default label; official name
+2026-10-12T04:23:04Z,edit:settlements,Q660077,{D3993E88-A336-49CD-AF12-2A4C95AC690F},Riedern,2556121509,default label; official name
+2026-10-12T04:23:05Z,edit:settlements,Q660093,{9583E664-87D7-4683-B478-B5DBE8B84D32},Davos Wiesen,2556121518,default label; official name
+2026-10-12T04:23:06Z,edit:settlements,Q660108,{DC58D2F5-42AE-491A-BF7D-963D9BB761C1},Campello,2556121529,default label; official name
+2026-10-12T04:23:08Z,edit:settlements,Q660119,{25EC3E5C-AE1D-47A3-837E-0275155150B8},Osco,2556121541,source for position; default label; official name
+2026-10-12T04:23:09Z,edit:settlements,Q660142,{EB657FBB-A815-4B51-94C8-327CEB21E792},Hofen SH,2556121557,source for position; default label; official name
+2026-10-12T04:23:10Z,edit:settlements,Q660153,{1030D230-5FEE-46D8-8DFA-7091A67D7CB4},Malix,2556121567,default label; official name
+2026-10-12T04:23:12Z,edit:settlements,Q660215,{C45E21A7-7869-43D9-B259-6D8EDD4EAA4E},Hilfikon,2556121577,official name
+2026-10-12T04:23:13Z,edit:settlements,Q660433,{5AB87E3C-0206-4C11-B83C-CFC1AEF52674},Vicosoprano,2556121591,default label; official name
+2026-10-12T04:23:15Z,edit:settlements,Q660744,{C87B9ECA-1082-44AC-AD70-A958EB9D4A24},Semione,2556121606,default label; official name
+2026-10-12T04:23:16Z,edit:settlements,Q660790,{8E8C00DB-BB5F-4712-98AB-C2BCA8320ED1},Calpiogna,2556121614,default label; official name
+2026-10-12T04:23:17Z,edit:settlements,Q660880,{2FCB7AFB-8C93-4346-90B9-AB86A1D757F6},Chironico,2556121622,default label; official name
+2026-10-12T04:23:18Z,edit:settlements,Q660974,{1C4D0C3D-C3F3-41BF-9BDA-EA202D8F5091},Ludiano,2556121629,default label; official name
+2026-10-12T04:23:20Z,edit:settlements,Q660999,{4F35A4B1-3A18-4E08-A4E3-4BB5E2FF44A6},Malvaglia,2556121637,default label; official name
+2026-10-12T04:23:21Z,edit:settlements,Q661369,{6C02298D-65C0-4975-A36F-87168201EB98},Steinhof SO,2556121644,default label; official name
+2026-10-12T04:23:22Z,edit:settlements,Q661477,{8A1F4510-C3D4-4C1B-BEF7-9AC8E6F603BF},Filzbach,2556121654,default label; official name
+2026-10-12T04:23:24Z,edit:settlements,Q661499,{654C3759-69DA-4025-9236-D102B8FD13CD},Castasegna,2556121664,official name
+2026-10-12T04:23:25Z,edit:settlements,Q661569,{4332E1CE-6E0B-4E12-A4E3-54C2A90315B0},Medeglia,2556121676,default label; official name
+2026-10-12T04:23:27Z,edit:settlements,Q661631,{F74F930B-A6B6-4FC9-9ABE-DB1DD24B16E5},Elm,2556121685,default label; official name
+2026-10-12T04:23:28Z,edit:settlements,Q661679,{24FDFAC9-EB14-4224-85BC-17B90275A5EA},Magadino,2556121694,default label; official name
+2026-10-12T04:23:29Z,edit:settlements,Q661799,{DA0ADA37-DDBD-45F3-8FDA-572354679E49},St-Ursanne,2556121698,default label; official name
+2026-10-12T04:23:31Z,edit:settlements,Q661817,{5C7D7D89-BAA8-4FE9-BF61-3EB5EE2CF8E8},Noiraigue,2556121705,default label; official name
+2026-10-12T04:23:32Z,edit:settlements,Q662259,{2A468DE0-3A37-4206-90F7-6665A248F0A5},Tartar,2556121713,official name
+2026-10-12T04:23:33Z,edit:settlements,Q662286,{83CE8B20-5D0A-47A7-A2FA-85DC1542E7D0},Villarvolard,2556121719,default label; official name
+2026-10-12T04:23:34Z,edit:settlements,Q662307,{0F8C9F65-7CA4-4EE4-909D-3FFCCC17AC39},Flond,2556121726,default label; official name
+2026-10-12T04:23:36Z,edit:settlements,Q662405,{901C0AC3-717A-4DEF-BA00-59F43562B948},Opfertshofen SH,2556121735,default label; official name
+2026-10-12T04:23:37Z,edit:settlements,Q662473,{2D873187-9154-432F-B7C4-B2DEC8207DB9},Kleindietwil,2556121745,source for position; default label; official name
+2026-10-12T04:23:38Z,edit:settlements,Q663020,{4E56EF55-C5CD-437B-8E02-70CE03FCE32A},Intragna,2556121755,default label; official name
+2026-10-12T04:23:40Z,edit:settlements,Q663071,{4B2D2C1C-3581-47ED-95BE-BB551D788F5C},Sigirino,2556121765,default label; official name
+2026-10-12T04:23:41Z,edit:settlements,Q663123,{03D7A822-44F3-4B2B-9BEE-D2EC0806F8EA},Längenbühl,2556121773,default label; official name
+2026-10-12T04:23:42Z,edit:settlements,Q664152,{84B7FD06-3656-4331-B923-D8D027936832},Piazzogna,2556121781,default label; official name
+2026-10-12T04:23:44Z,edit:settlements,Q664153,{2C92C674-865D-4118-BCC9-0D018054D228},Grandvaux,2556121791,default label; official name
+2026-10-12T04:23:45Z,edit:settlements,Q664197,{8F84B1FC-F456-4BAD-941A-533DA5B1D708},Camignolo,2556121800,default label; official name
+2026-10-12T04:23:48Z,edit:settlements,Q664885,{72CA109C-6E0E-44C7-9347-AFE590DC8C98},Alpnachstad,2556121819,official name
+2026-10-12T04:23:50Z,edit:settlements,Q665376,{6689938A-1E95-4A72-9C0D-E51BE8518879},Lessoc,2556121830,default label; official name
+2026-10-12T04:23:51Z,edit:settlements,Q665766,{2289BB41-14F7-435D-A4A7-8AE41F6BB00D},Arosio,2556121841,default label; official name
+2026-10-12T04:23:52Z,edit:settlements,Q666139,{89078616-CD46-4713-BF2B-5E2BA58836E6},Indemini,2556121851,default label; official name
+2026-10-12T04:23:53Z,edit:settlements,Q666147,{83456116-BDC9-4147-807C-B17F084A766C},Cabbio,2556121862,default label; official name
+2026-10-12T04:23:55Z,edit:settlements,Q666159,{F6411D1E-47A0-4C0F-B5F0-2D07270D3830},Wanzwil,2556121874,official name
+2026-10-12T04:23:56Z,edit:settlements,Q666181,{35F8A88E-404B-434D-BA13-8D8F3E51078B},Ballmoos,2556121885,source for position; default label; official name
+2026-10-12T04:23:57Z,edit:settlements,Q666460,{F1238774-F56E-4850-838D-0086026A0E45},La Fouly VS,2556121898,default label; official name
+2026-10-12T04:23:59Z,edit:settlements,Q666907,{E3E458EF-39C8-484B-8897-C3A30FBA46A6},Goppenstein,2556121908,default label; official name
+2026-10-12T04:24:00Z,edit:settlements,Q667206,{07C9756B-A3AD-407A-8C47-CC82CBA03F08},Ecône,2556121918,official name
+2026-10-12T04:24:01Z,edit:settlements,Q667757,{42516BDA-06A2-47E6-A0B6-EC68DBDF506C},Biel VS,2556121925,official name
+2026-10-12T04:26:09Z,edit:settlements,Q668124,{526B2A57-9C82-4909-B410-36564DF4467D},Roche-d'Or,2556122312,default label; official name
+2026-10-12T04:26:10Z,edit:settlements,Q668125,{16D40C05-9E24-4A62-8727-AF24FAC36E55},Münster VS,2556122327,default label; official name
+2026-10-12T04:26:11Z,edit:settlements,Q668138,{474251CB-3362-4726-99D5-067515889622},Gordevio,2556122342,default label; official name
+2026-10-12T04:26:12Z,edit:settlements,Q668193,{B445752C-8171-45A5-98F9-18EC93B99EDC},Damvant,2556122357,default label; official name
+2026-10-12T04:26:14Z,edit:settlements,Q668230,{17D7BE45-8667-482F-A609-DBF9EB42A8A4},Villars-Bramard,2556122370,default label; official name
+2026-10-12T04:26:15Z,edit:settlements,Q668325,{E4262CB0-8F27-4AC1-AC27-CBAD4ACA49F3},Oleyres,2556122380,default label; official name
+2026-10-12T04:26:17Z,edit:settlements,Q668363,{31CFB706-97D3-4A28-9763-A888034EE294},Montmagny,2556122392,default label; official name
+2026-10-12T04:26:18Z,edit:settlements,Q668377,{A8432BF0-14D7-40C2-99D2-F0CF5B2153A0},Villette (Lavaux),2556122405,default label; official name
+2026-10-12T04:26:19Z,edit:settlements,Q668625,{EB6FB369-650D-4AC7-A8FB-19A4D40BB5E2},Palagnedra,2556122417,default label; official name
+2026-10-12T04:26:21Z,edit:settlements,Q668637,{683398E0-4C7F-4075-B633-1DA079672CCB},Seleute,2556122431,default label; official name
+2026-10-12T04:26:22Z,edit:settlements,Q668672,{F37810AC-A59F-47E0-9509-681BDAC69083},Le Peuchapatte,2556122439,default label; official name
+2026-10-12T04:26:23Z,edit:settlements,Q668683,{FAFF19F1-AA09-48DC-B513-0E6E12E880F5},Montenol,2556122450,default label; official name
+2026-10-12T04:26:25Z,edit:settlements,Q668719,{33520B3B-EC1F-45DA-89A6-30520054FE13},Réclère,2556122468,default label; official name
+2026-10-12T04:26:26Z,edit:settlements,Q668726,{927ABB47-59EF-4854-8EC9-352201704EB2},Morbio Superiore,2556122478,default label; official name
+2026-10-12T04:26:27Z,edit:settlements,Q668740,{1DB7FF01-2ABB-439D-8487-213F77B2DC79},Courtemaîche,2556122486,default label; official name
+2026-10-12T04:26:29Z,edit:settlements,Q668758,{1AEC7E48-BD2A-40A5-9C34-5C7DFB3CA2E8},Ocourt,2556122494,default label; official name
+2026-10-12T04:26:30Z,edit:settlements,Q668768,{DC92EA9C-076F-4321-8E6C-3462A3095B9E},Villa Luganese,2556122504,default label; official name
+2026-10-12T04:26:31Z,edit:settlements,Q668794,{C341F3F2-72EE-417E-9EE7-B83DF8AFD8B8},Miécourt,2556122513,default label; official name
+2026-10-12T04:26:33Z,edit:settlements,Q668825,{CB4281BC-7D65-4EDB-A659-19178F75DCB8},Gerra (Verzasca),2556122519,default label; official name
+2026-10-12T04:26:34Z,edit:settlements,Q668835,{D1219FD7-13D6-4F5D-875E-E6587077816B},Bidogno,2556122526,default label; official name
+2026-10-12T04:26:35Z,edit:settlements,Q668869,{13C5BCED-47B8-4953-B6AA-2AC5D9A7F4A4},Epesses,2556122533,official name
+2026-10-12T04:26:37Z,edit:settlements,Q668880,{BA9A804F-5CCD-4F2C-B864-1993742AA89A},Granges-près-Marnand,2556122537,default label; official name
+2026-10-12T04:26:38Z,edit:settlements,Q668912,{561537A2-09BC-49C0-8F2E-BC95B09EEF0E},Chabrey,2556122543,default label; official name
+2026-10-12T04:26:39Z,edit:settlements,Q669152,{6A82D424-855A-4CE7-B045-F7E521CB585E},Sulz LU,2556122552,official name
+2026-10-12T04:26:41Z,edit:settlements,Q669161,{6497F6F8-C84A-4850-AF6F-5050DAB52DB9},Innerferrera,2556122565,official name
+2026-10-12T04:26:42Z,edit:settlements,Q669218,{F16EB2E3-D88E-469E-A1FA-3385C75202E9},Ausserferrera,2556122570,official name
+2026-10-12T04:26:43Z,edit:settlements,Q669254,{E5AD864F-45B5-46A0-9E0E-D34371772737},Gunzwil,2556122575,official name
+2026-10-12T04:26:45Z,edit:settlements,Q669280,{32AADFC0-03CA-4D06-925F-51DB7A4ECCF4},Retschwil,2556122580,official name
+2026-10-12T04:26:46Z,edit:settlements,Q669292,{8626057E-FA12-4660-90D5-65EEDFBCF199},Brunnenthal,2556122583,official name
+2026-10-12T04:26:47Z,edit:settlements,Q669306,{D4E789D1-DA61-4337-8F83-392CB2E71113},Gelfingen,2556122585,official name
+2026-10-12T04:26:49Z,edit:settlements,Q669332,{99C69E4A-9AA1-4509-8469-C3D7024FB77E},Müswangen,2556122586,source for position; official name
+2026-10-12T04:26:50Z,edit:settlements,Q669360,{6C29D325-702E-4FA9-AAD9-B85429CEC053},Umiken,2556122589,official name
+2026-10-12T04:26:51Z,edit:settlements,Q669375,{D5384C87-6B16-4E7A-8168-B9AE7DE17F40},Hottwil,2556122594,official name
+2026-10-12T04:26:52Z,edit:settlements,Q669400,{DBE12B5E-4503-4597-A10C-46A4C4132E32},Ittenthal,2556122601,official name
+2026-10-12T04:26:54Z,edit:settlements,Q669411,{0B856E43-3BDC-4E79-92FD-CC834F8730EB},Niederwil SO,2556122608,official name
+2026-10-12T04:26:55Z,edit:settlements,Q669424,{C7BA96CC-4EE7-4AC8-B7D8-399E887F7F85},Etzgen,2556122615,official name
+2026-10-12T04:26:56Z,edit:settlements,Q669445,{E53B76F7-AB2E-4FC6-859F-199479EBA3E4},Clugin,2556122625,names in other languages (rm alias); official name
+2026-10-12T04:26:58Z,edit:settlements,Q669454,{5D7AE0F7-F39B-4331-A816-6B843A5A071C},Tschierv,2556122632,source for position; default label; official name
+2026-10-12T04:26:59Z,edit:settlements,Q669466,{BD717474-F177-43C0-B374-7D537DB1D742},Oberramsern,2556122640,official name
+2026-10-12T04:27:01Z,edit:settlements,Q669477,{29432C4B-8B5A-44D7-8935-76B1A0515831},Maloja,2556122651,official name
+2026-10-12T04:27:02Z,edit:settlements,Q669555,{A0ED0235-2D72-49E8-AD4C-B9B066A3B261},Combremont-le-Petit,2556122663,default label; official name
+2026-10-12T04:27:03Z,edit:settlements,Q669644,{D78F1A3C-1B85-4573-8735-AB549A2172A2},Combremont-le-Grand,2556122669,default label; official name
+2026-10-12T04:27:04Z,edit:settlements,Q670731,{B21234B0-C328-4A5B-953C-20B63428B878},Egg SZ,2556122676,source for position; default label; official name
+2026-10-12T04:27:06Z,edit:settlements,Q671049,{01F7DEB3-55ED-4109-8216-54ABAFA71C79},Fontanezier,2556122682,default label; official name
+2026-10-12T04:27:07Z,edit:settlements,Q671061,{6DA71A32-DC97-4908-9255-0FA3621ED5F5},Epauvillers,2556122688,default label; official name
+2026-10-12T04:27:09Z,edit:settlements,Q671092,{A18758CE-DE19-45B7-8654-58318733B03B},Buix,2556122696,official name
+2026-10-12T04:27:10Z,edit:settlements,Q671107,{F65710BC-D837-40A9-BBE9-78A02B89D088},Fregiécourt,2556122704,default label; official name
+2026-10-12T04:27:11Z,edit:settlements,Q671122,{E11DAAC1-D20B-4914-964E-8BE043C29508},Marnand,2556122713,default label; official name
+2026-10-12T04:27:13Z,edit:settlements,Q671135,{252DE2ED-41B4-49B7-AFA8-0FB3A45CA8F3},Villars-le-Grand,2556122722,default label; official name
+2026-10-12T04:27:14Z,edit:settlements,Q671148,{C9559FCE-54C1-4AA1-AB4B-2702E50C4D4C},Cerniaz VD,2556122733,default label; official name
+2026-10-12T04:27:15Z,edit:settlements,Q672249,{3088DAC9-CF3B-4819-9B7B-BAA4D1659D10},Montbrelloz,2556122736,default label; official name
+2026-10-12T04:27:17Z,edit:settlements,Q674237,{31582B22-299A-4614-BDC0-845DC6223830},Villars-sur-Ollon,2556122742,default label; official name
+2026-10-12T04:27:18Z,edit:settlements,Q674405,{D06C225F-A599-42E7-9C87-55919CB59487},Bollion,2556122747,default label; official name
+2026-10-12T04:27:19Z,edit:settlements,Q674412,{06DB87C8-DF7F-4992-9A3F-42CD9DE746EC},Berzona,2556122751,default label; official name
+2026-10-12T04:27:20Z,edit:settlements,Q674417,{64C47490-2B15-4BF3-867D-2D42E9B9BA55},St-Sulpice NE,2556122757,default label; official name
+2026-10-12T04:27:22Z,edit:settlements,Q674433,{B0C828F9-CBA8-448B-8C94-16EAE8552180},Bettmeralp,2556122765,official name
+2026-10-12T04:27:23Z,edit:settlements,Q674886,{7EE06FED-D71A-4E69-9F49-1260CB04106C},Seiry,2556122770,default label; official name
+2026-10-12T04:27:24Z,edit:settlements,Q675392,{E3CBD62B-501B-43D0-ACBA-8E1414163972},Mürren,2556122779,de label; official name
+2026-10-12T04:27:26Z,edit:settlements,Q675655,{124E620A-EB1D-4910-9DE3-4561208851C4},Campocologno,2556122790,official name
+2026-10-12T04:27:27Z,edit:settlements,Q676591,{64190E7F-D972-4EC5-8868-5535C87D9091},Champfèr,2556122796,default label; official name
+2026-10-12T04:27:28Z,edit:settlements,Q677394,{27D2CB18-A4C6-42D0-B653-3A89929D811B},Ausserbinn,2556122805,default label; official name
+2026-10-12T04:27:30Z,edit:settlements,Q678030,{AB8B9000-3483-41F8-A948-321DA63FD07E},Zürich,2556122816,default label; official name
+2026-10-12T04:27:31Z,edit:settlements,Q678056,{3BA85A95-5F85-457E-903B-1CF2EA79D5FA},Unterwasser,2556122826,source for position; precision of position (from its digits); default label; official name
+2026-10-12T04:27:32Z,edit:settlements,Q678072,{D532F29C-3984-4093-BBB7-7976E27E43DC},Eclagnens,2556122835,default label; official name
+2026-10-12T04:27:34Z,edit:settlements,Q678150,{A61A0100-24D7-4001-B274-ACBD20F994AF},Prahins,2556122844,source for position; default label; official name
+2026-10-12T04:27:35Z,edit:settlements,Q678231,{4EFE5806-E197-474F-A6D5-C6B1F8F07BE8},Au ZH,2556122848,default label; official name
+2026-10-12T04:27:36Z,edit:settlements,Q678373,{1CD6FC11-F661-49D4-9F14-9898F680C816},Flüeli-Ranft,2556122857,source for position; official name
+2026-10-12T04:27:38Z,edit:settlements,Q678690,{F45C513A-2E1D-4715-A62C-68DE9589BED8},Châtillens,2556122867,default label; official name
+2026-10-12T04:27:39Z,edit:settlements,Q678700,{0A3AC495-8219-433D-898B-AE28EA8793D1},Villars-Tiercelin,2556122876,default label; official name
+2026-10-12T04:27:40Z,edit:settlements,Q678715,{DA273C44-9B7C-4EBD-AE41-C1ECBB13A3E0},Sottens,2556122888,default label; official name
+2026-10-12T04:27:42Z,edit:settlements,Q678757,{B37F5B6E-38E8-4AB8-B5FD-817088D0AD0E},Chesalles-sur-Oron,2556122900,default label; official name
+2026-10-12T04:27:43Z,edit:settlements,Q678769,{72A5622F-91B6-4355-BD8E-E7BB3710D1D4},Monnaz,2556122915,default label; official name
+2026-10-12T04:27:44Z,edit:settlements,Q678787,{8849B682-C2F5-4DCB-B80A-D788090AEA4B},St-Saphorin-sur-Morges,2556122925,source for position; default label; official name
+2026-10-12T04:27:46Z,edit:settlements,Q678799,{DFF54E96-75C5-46D6-84C7-4611C59EB4F4},Oulens-sur-Lucens,2556122932,default label; official name
+2026-10-12T04:27:47Z,edit:settlements,Q678855,{DB33655D-2DFE-4E29-ADC0-28A0CF4F5DC4},Villars-sous-Champvent,2556122934,default label; official name
+2026-10-12T04:27:48Z,edit:settlements,Q678869,{D6CA95D1-E0E4-4F37-B76E-2997BE243065},Villars-Mendraz,2556122937,default label; official name
+2026-10-12T04:27:50Z,edit:settlements,Q678901,{D0F5DBB5-60E7-40E7-9469-FBC648AFFE78},Colombier VD,2556122939,source for position; official name
+2026-10-12T04:27:51Z,edit:settlements,Q678930,{DCA5DF20-11D2-4729-B34B-BFCFB970197F},Vuibroye,2556122946,default label; official name
+2026-10-12T04:27:52Z,edit:settlements,Q678947,{3CFAC7CC-8712-430C-9335-E5B81ED32718},Dommartin,2556122951,default label; official name
+2026-10-12T04:27:54Z,edit:settlements,Q678975,{449B53B1-3754-4BA0-B372-9A479FE8484E},Naz,2556122956,default label; official name
+2026-10-12T04:27:55Z,edit:settlements,Q679832,{7E9615A7-B1BE-4DD0-B409-5BDABC30EDFC},Stechelberg,2556122961,default label; official name
+2026-10-12T04:27:56Z,edit:settlements,Q680134,{6F5752B1-CD89-4D3B-852E-604AF77A4481},Pambio-Noranco,2556122969,default label; official name
+2026-10-12T04:27:58Z,edit:settlements,Q680299,{9485947C-1094-4811-BDB2-946501F8C838},Stoos SZ,2556122976,official name
+2026-10-12T04:27:59Z,edit:settlements,Q680843,{20561816-6351-4C1D-BE2F-E3B7AECCFB65},Chavannes-les-Forts,2556122982,default label; official name
+2026-10-12T04:28:00Z,edit:settlements,Q680883,{B2518583-5D52-4355-8200-987F6A3BC288},Chapelle (Broye),2556122990,default label; official name
