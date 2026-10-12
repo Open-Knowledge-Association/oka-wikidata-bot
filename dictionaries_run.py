@@ -272,8 +272,8 @@ def unlinked():
         else:                   # topics are only proposed: homonyms ('Schaffner', the steward vs the train conductor)
             topical = {q: c for q, c in free.items() if not c["classes"] & not_topics}
             wiki = [q for q in topical if q in linked_items]
-            if len(wiki) == 1 and approved.get(hid) == wiki[0]:
-                pick, why = wiki[0], "title, its Wikipedia article links this HDS entry, and checked by hand"
+            if approved.get(hid):                          # checked by hand: the right item, proposed or not
+                pick, why = approved[hid], "checked by hand (Wikipedia articles linking this HDS entry, titles)"
             elif len(wiki) == 1:
                 why = f"proposed {wiki[0]}: title, and its Wikipedia article links this HDS entry" + \
                       (" (rejected by hand)" if hid in approved else "")
