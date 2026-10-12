@@ -114,8 +114,9 @@ def save(site, entity_id, data, done, baserevid=None):
                 return entity_id, None, ["skipped: edited by someone else since it was read"]
             m = re.search(r"associated with language code ([\w-]+)", text)
             if "label-with-description-conflict" not in text or not m:
-                if e.code == "modification-failed":    # the item's existing data fails validation: skip it, log why
-                    return entity_id, None, [f"skipped: refused by Wikidata ({e.info[:120]})"]
+                if e.code in ("modification-failed", "failed-save"):   # the item's existing data fails validation
+                    why = re.search(r"wikibase-validator-[\w-]+", text)     # (e.g. a sitelink another item also has)
+                    return entity_id, None, [f"skipped: refused by Wikidata ({why.group(0) if why else e.info[:120]})"]
                 raise
             data, done = drop_language(data, done, m.group(1))
             if not data:
