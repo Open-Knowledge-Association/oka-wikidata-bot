@@ -142,8 +142,8 @@ def items(ids):
 
 # ---------------------------------------------------------------- values
 
-def time_value(year, month=None, day=None):
-    cal = GREGORIAN if year > 1582 else JULIAN      # Help:Dates: the Julian calendar model before 1583
+def time_value(year, month=None, day=None, julian=False):
+    cal = GREGORIAN if year > 1582 and not julian else JULIAN   # Help:Dates: Julian before 1583, or when the source says so
     if day:
         return {"type": "time", "value": {"time": f"+{year:04d}-{month:02d}-{day:02d}T00:00:00Z", "timezone": 0,
                                           "before": 0, "after": 0, "precision": 11, "calendarmodel": cal}}
@@ -410,20 +410,34 @@ def hds_facts(hid, kind):
 
 # ---------------------------------------------------------------- SNL (metadata only: snl.no marks it free to reuse)
 
-def snl_date(s, label, notes):
+def snl_date(s, label, notes, julian=False):
     s = (s or "").strip()
     m = re.fullmatch(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", s)
     if m:
         d, mo, y = map(int, m.groups())
-        if y < 1700 and (d or mo):                  # '0.0.1125' is just a year, the same in both calendars
+        if y < 1700 and (d or mo) and not julian:   # '0.0.1125' is just a year, the same in both calendars
             notes.append(f"{label} {s} not used: calendar before 1700 unclear")
             return None
-        return time_value(y, mo, d)
+        return time_value(y, mo, d, julian)
     if re.fullmatch(r"\d{4}", s):
         return time_value(int(s))
     if s:
         notes.append(f"{label} '{s}' not in a clear format")
     return None
+
+
+DOUBT = re.compile(r"omtrent|usikk|ukjent|ca\.|ikke kjent|antatt|trolig", re.I)
+
+
+def lifespan_caveat(comment):
+    """What SNL's note on a person's life dates means for them: 'omtrentlig fødselsår' (approximate year of birth)
+    or 'usikkert dødsår' puts that date in doubt, 'fødselsår og dødsår er omtrentlige' both, a doubt naming neither
+    both; 'ifølge den julianske kalender' gives Julian dates; 'fødselsdato er dåpsdato' a baptism date."""
+    c = (comment or "").lower()
+    doubt = bool(DOUBT.search(c))
+    birth, death = "fød" in c, "død" in c
+    return {"birth": doubt and (birth or not death), "death": doubt and (death or not birth),
+            "julian": "juliansk" in c, "baptism": "dåpsdato" in c}
 
 
 SNL_KEEP = ("title", "metadata_license_name", "metadata")     # all the bot reads; the article text is never kept
@@ -446,9 +460,16 @@ def snl_facts(slug, kind):
     m = d.get("metadata") or {}
     no = norwegian_place
     if kind == "person":
+        caveat = lifespan_caveat(m.get("lifespan_comment"))
         for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
-            v = snl_date(m.get(key), label, notes)
-            if v:
+            v = snl_date(m.get(key), label, notes, caveat["julian"])
+            if not v:
+                continue
+            if caveat["birth" if pid == "P569" else "death"]:
+                notes.append(f"{label} not used: SNL notes '{clean(m['lifespan_comment'])}'")
+            elif pid == "P569" and caveat["baptism"]:
+                facts.append(fact("P1636", v, "date of baptism"))
+            else:
                 facts.append(fact(pid, v, label))
         for key, pid, label in (("birthplace", "P19", "place of birth"), ("place_of_death", "P20", "place of death")):
             if m.get(key):
