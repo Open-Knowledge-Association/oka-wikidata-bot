@@ -35,9 +35,9 @@ def entries(kind):
 
 
 def get(url):
-    """(HTTP status, parsed JSON or None). Network errors, 429 and 5xx are retried for about an hour; an answer
-    that is not JSON, three times."""
-    for attempt in range(10):
+    """(HTTP status, parsed JSON or None). Network errors, 429 and 5xx are retried for about six minutes, an answer
+    that is not JSON three times; then the ID is logged as an error and tried again on the next run."""
+    for attempt in range(5):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
             with urllib.request.urlopen(req, timeout=120) as r:
@@ -55,7 +55,7 @@ def get(url):
                 return e.code, None
         except (urllib.error.URLError, OSError):
             pass
-        time.sleep(min(30 * 2 ** attempt, 900))
+        time.sleep(min(15 * 2 ** attempt, 120))
     return 0, None
 
 

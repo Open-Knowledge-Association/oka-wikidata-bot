@@ -11,8 +11,10 @@ import csv
 import datetime
 import json
 import os
+import re
 import subprocess
 import sys
+import time
 import urllib.parse
 from itertools import zip_longest
 from pathlib import Path
@@ -100,6 +102,190 @@ def plan():
     with open(WORK2 / f"full_plan_{work}_skipped.csv", "w", encoding="utf-8", newline="") as f:
         csv.writer(f).writerows([("work", "entry", "items", "reason"), *skipped])
     out(f"{work}: {len(entries)} entries with something to add or check, {sum(len(e['facts']) for e in entries)} facts")
+
+
+# ---------------------------------------------------------------- HDS entries no item carries yet (read only)
+
+ARTICLES = {"Le", "La", "Les", "L'", "Der", "Die", "Das", "Il", "Lo", "I", "Gli", "El", "Las", "Los"}
+SWISS_WORDS = re.compile(r"swiss|schweiz|suisse|svizzer|switzerland|helvet|eidgen", re.I)
+
+
+def hds_titles(kind, hid):
+    """The entry's title in each HDS language: 'Le Démocrate', 'Martin Jost', 'Burgdorf (Gemeinde)'."""
+    out = {}
+    for lang in "dfir":
+        r = _lists[(kind, lang)].get(hid)
+        if not r:
+            continue
+        lemma, comp = r["Lemma"].strip(), r["Complement"].strip()
+        if kind == "bio" or comp in ARTICLES or comp.endswith("'"):
+            t = f"{comp} {lemma}".replace("' ", "'").strip() if comp else lemma
+        else:
+            t = f"{lemma} ({comp})" if comp else lemma
+        out["rm" if lang == "r" else {"d": "de", "f": "fr", "i": "it"}[lang]] = t
+    return out
+
+
+def years(precision):
+    """'//1450// - 1501' -> ((1450, True), (1501, False)): each year, and whether the HDS marks it uncertain."""
+    sides = (precision or "").split(" - ")
+    got = []
+    for s in (sides + ["", ""])[:2]:
+        m = re.search(r"\d{3,4}", s)
+        got.append((int(m.group(0)), "//" in s) if m else (None, False))
+    return tuple(got)
+
+
+_lists = {}
+HDS_URL = re.compile(r"hls-dhs-dss\.ch/(?:(?:de|fr|it|rm)/articles/(\d{6})|textes/[dfir]/[DFIR](\d{3,6})\.php)")
+
+
+def api_get(url):
+    """A read from a Wikimedia API; its rate-limit pages (HTTP 429, not JSON) are waited out."""
+    for attempt in range(1, 9):
+        time.sleep(0.5)
+        try:
+            return d.curl_json(url)
+        except ValueError:
+            time.sleep(30 * attempt)
+    raise RuntimeError(f"no JSON from {url[:120]}")
+
+
+def wiki_links():
+    """{HDS ID: {item}}: the Wikipedia articles (de, fr, it, en, rm) that link an HDS article, as their items."""
+    path = WORK2 / "wiki_hds_links.json"
+    if path.exists():
+        return {k: set(v) for k, v in json.loads(path.read_text(encoding="utf-8")).items()}
+    by_title = {}
+    for wiki in ("de", "fr", "it", "en", "rm"):
+        part = WORK2 / f"wiki_hds_links_{wiki}.json"                # per-wiki progress, so a restart skips it
+        if part.exists():
+            by_title.update({(wiki, t): set(v) for t, v in json.loads(part.read_text(encoding="utf-8")).items()})
+            continue
+        api = f"https://{wiki}.wikipedia.org/w/api.php"
+        for prefix in ("hls-dhs-dss.ch/de/articles/", "hls-dhs-dss.ch/fr/articles/", "hls-dhs-dss.ch/it/articles/",
+                       "hls-dhs-dss.ch/rm/articles/", "hls-dhs-dss.ch/textes/"):
+            for proto in ("https", "http"):
+                cont = {}
+                while True:
+                    params = {"action": "query", "list": "exturlusage", "euquery": prefix, "euprotocol": proto,
+                              "eunamespace": 0, "eulimit": 500, "format": "json", **cont}
+                    r = api_get(api + "?" + urllib.parse.urlencode(params))
+                    for u in r.get("query", {}).get("exturlusage", []):
+                        m = HDS_URL.search(u["url"])
+                        if m:
+                            by_title.setdefault((wiki, u["title"]), set()).add((m.group(1) or m.group(2)).zfill(6))
+                    if "continue" not in r:
+                        break
+                    cont = r["continue"]
+        part.write_text(json.dumps({t: sorted(v) for (w, t), v in by_title.items() if w == wiki}), encoding="utf-8")
+        out(f"{wiki}wiki: {sum(1 for w, _ in by_title if w == wiki)} articles link the HDS")
+    links = {}
+    for wiki in ("de", "fr", "it", "en", "rm"):
+        titles = sorted(t for w, t in by_title if w == wiki)
+        for i in range(0, len(titles), 50):
+            r = api_get(f"https://{wiki}.wikipedia.org/w/api.php?" + urllib.parse.urlencode(
+                {"action": "query", "prop": "pageprops", "ppprop": "wikibase_item", "titles": "|".join(titles[i:i + 50]),
+                 "redirects": 1, "format": "json"}))
+            norm = {n["to"]: n["from"] for n in r.get("query", {}).get("normalized", [])}
+            for p in r.get("query", {}).get("pages", {}).values():
+                q = p.get("pageprops", {}).get("wikibase_item")
+                if q:
+                    for hid in by_title.get((wiki, norm.get(p["title"], p["title"])), ()):
+                        links.setdefault(hid, set()).add(q)
+    path.write_text(json.dumps({k: sorted(v) for k, v in links.items()}), encoding="utf-8")
+    return links
+
+
+def unlinked():
+    """Match the HDS entries that no item carries to existing items; strong matches become entries of the run
+    (they add the HDS ID and the facts), the rest is listed for review in work/task2/hds_unlinked_review.csv."""
+    d0 = WORK2 / "opendata"
+    for kind in ("bio", "fam", "geo", "tem"):
+        for lang in "dfir":
+            p = d0 / f"liste_{kind}_{lang}_utf8.csv"
+            _lists[(kind, lang)] = {r["ID"].zfill(6): r for r in csv.DictReader(open(p, encoding="utf-8"))} if p.exists() else {}
+    linked_ids = {urllib.parse.unquote(i).zfill(6) for _, i in qlever("SELECT ?i ?id WHERE { ?i wdt:P902 ?id }")}
+    todo = [(kind, hid) for kind in ("bio", "fam", "geo", "tem") for hid in _lists[(kind, "d")] if hid not in linked_ids]
+    titles = {hid: hds_titles(kind, hid) for kind, hid in todo}
+    lits = sorted({(t, lang) for ts in titles.values() for lang0, t in ts.items()
+                   for lang in {lang0, "de", "fr", "it", "en", "mul"}})
+    found, info = {}, {}                          # title -> items with it as label or alias; item -> what it holds
+    for i in range(0, len(lits), 200):
+        values = " ".join(f"{json.dumps(t)}@{lang}" for t, lang in lits[i:i + 200])
+        for t, q in [r for pred in ("rdfs:label", "skos:altLabel")          # one predicate per query: fast
+                     for r in qlever("SELECT DISTINCT ?l ?i WHERE { VALUES ?l { " + values + " } ?i " + pred + " ?l }")]:
+            found.setdefault(t, {})[q] = info.setdefault(q, {"hds": set(), "classes": set(), "born": set(), "died": set(),
+                                                              "swiss": False})
+    qs = sorted(info)
+    for i in range(0, len(qs), 300):
+        vals = " ".join("wd:" + q for q in qs[i:i + 300])
+        for pid, key in (("P902", "hds"), ("P31", "classes"), ("P569", "born"), ("P570", "died")):
+            for q, v in qlever(f"SELECT ?i ?v WHERE {{ VALUES ?i {{ {vals} }} ?i wdt:{pid} ?v }}"):
+                m = re.match(r"(-?\d{1,4})-", v) if key in ("born", "died") else None
+                if key in ("born", "died"):
+                    if m:
+                        info[q][key].add(int(m.group(1)))
+                else:
+                    info[q][key].add(v)
+        for q in [r[0] for r in qlever(f"SELECT DISTINCT ?i WHERE {{ VALUES ?i {{ {vals} }} {{ ?i wdt:P17 wd:Q39 }} UNION "
+                                       f"{{ ?i wdt:P27 wd:Q39 }} }}")]:
+            info[q]["swiss"] = True
+        for q, desc in qlever(f"SELECT ?i ?d WHERE {{ VALUES ?i {{ {vals} }} ?i schema:description ?d "
+                              "FILTER(LANG(?d) IN ('en','de','fr','it')) }"):
+            info[q]["swiss"] |= bool(SWISS_WORDS.search(desc))
+    links = wiki_links()
+    not_topics = {"Q5", "Q101352", "Q202444", "Q12308941", "Q11879590", "Q3409032", "Q4167410", "Q13406463",
+                  "Q4167836", "Q11266439"}       # people, names, disambiguation/list/category/template pages
+    review, strong = [], []
+    for kind, hid in todo:
+        ts = titles[hid]
+        cands = {}
+        for lang, t in ts.items():
+            for q, f in found.get(t, {}).items():
+                cands.setdefault(q, dict(f, titles=set()))["titles"].add(t)
+        free = {q: c for q, c in cands.items() if not c["hds"]}         # an item with an HDS ID is another entry
+        linked_items = links.get(hid, set())
+        why, pick = "", None
+        if kind == "bio":
+            (b, bu), (dd, du) = years(_lists[("bio", "d")][hid]["Precision"])
+            def fits(c):          # a certain year that matches and none that differs; '//' years are only mentions
+                checks = [(y, have) for y, unsure, have in ((b, bu, c["born"]), (dd, du, c["died"])) if y and not unsure and have]
+                return bool(checks) and all(y in have for y, have in checks)
+            people = {q: c for q, c in free.items() if "Q5" in c["classes"]}
+            good = [q for q, c in people.items() if fits(c)]
+            wiki = [q for q in people if q in linked_items]
+            if len(good) == 1:
+                pick, why = good[0], "name and life years"
+            elif len(wiki) == 1:
+                pick, why = wiki[0], "name, and its Wikipedia article links this HDS entry"
+            else:
+                why = f"{len(good)} people with this name and life years" if good else \
+                      f"{len(people)} people with this name, none with these life years"
+        else:
+            topical = {q: c for q, c in free.items() if not c["classes"] & not_topics}
+            wiki = [q for q in topical if q in linked_items]
+            two = [q for q, c in topical.items() if len(c["titles"]) >= 2 and c["swiss"]]
+            if len(wiki) == 1:
+                pick, why = wiki[0], "title, and its Wikipedia article links this HDS entry"
+            elif len(two) == 1:
+                pick, why = two[0], "titles in two HDS languages, and a Swiss item"
+            else:
+                why = f"{len(topical)} items with this title"
+        row = {"hds_id": hid, "list": kind, "title_de": ts.get("de", ""), "title_fr": ts.get("fr", ""),
+               "title_it": ts.get("it", ""), "years": _lists[(kind, "d")][hid]["Precision"],
+               "item": pick or "", "matched_by": why,
+               "candidates": " ".join(sorted(free))[:300], "taken": " ".join(sorted(q for q, c in cands.items() if c["hds"]))[:200],
+               "wikipedia_links": " ".join(sorted(linked_items))[:200]}
+        (strong if pick else review).append(row)
+    with open(WORK2 / "hds_unlinked_review.csv", "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, list((strong + review)[0]))
+        w.writeheader()
+        w.writerows(strong + review)
+    out(f"{len(todo)} HDS entries without an item: {len(strong)} matched, {len(review)} for review")
+    for kind in ("bio", "fam", "geo", "tem"):
+        out(f"  {kind}: {sum(r['list'] == kind for r in strong)} matched, {sum(r['list'] == kind for r in review)} for review")
+    return strong
 
 
 # ---------------------------------------------------------------- run (after approval)
@@ -192,4 +378,4 @@ def run():
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     d.check_occupations()
-    {"plan": plan, "run": run}[sys.argv[1]]()
+    {"plan": plan, "run": run, "unlinked": unlinked}[sys.argv[1]]()

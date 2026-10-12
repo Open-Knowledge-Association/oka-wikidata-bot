@@ -98,7 +98,7 @@ def cached(name, fetch):
 
 def qlever(query):
     pfx = ("PREFIX wd: <http://www.wikidata.org/entity/> PREFIX wdt: <http://www.wikidata.org/prop/direct/> "
-           "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ")
+           "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX schema: <http://schema.org/> ")
     query = "PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + pfx + query
     import shutil
     for attempt in range(1, 6):                     # an error page is not an empty result: wait and retry
