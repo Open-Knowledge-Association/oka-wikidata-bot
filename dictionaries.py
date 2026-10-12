@@ -310,16 +310,19 @@ _viaf = {}
 
 
 def viaf_current(vid):
-    """VIAF merges clusters; an abandoned one names the cluster that replaced it."""
+    """VIAF merges clusters; an abandoned one names the cluster that replaced it. None when VIAF could not be asked
+    (it throttles) or the cluster is gone without a successor: then the bot does not copy the ID."""
     if vid not in _viaf:
-        _viaf[vid] = vid
+        _viaf[vid] = None
         try:
             time.sleep(1)
             d = curl_json(f"https://viaf.org/viaf/{vid}", "-H", "Accept: application/json")
-            target = d.get("ns0:abandoned_viaf_record", {}).get("ns0:redirect", {}).get("ns0:directto")
-            if target:
-                _viaf[vid] = str(target)
-        except (ValueError, KeyError, AttributeError, RuntimeError, subprocess.CalledProcessError):
+            if "ns0:abandoned_viaf_record" in d:
+                target = (d["ns0:abandoned_viaf_record"].get("ns0:redirect") or {}).get("ns0:directto")
+                _viaf[vid] = str(target) if target else None
+            elif str((d.get("ns1:VIAFCluster") or {}).get("ns1:viafID", "")) == vid:
+                _viaf[vid] = vid
+        except (ValueError, KeyError, AttributeError, RuntimeError, OSError, subprocess.CalledProcessError):
             pass
     return _viaf[vid]
 
@@ -346,7 +349,11 @@ def hds_facts(hid, kind):
         if r["status"] == "replaced":
             ident = r["now"]
         elif r["status"] != "ok" and pid == "P214":
-            ident = viaf_current(ident)
+            checked = viaf_current(ident)
+            if not checked:
+                notes.append(f"{label} {ident} could not be checked against VIAF; not copied")
+                continue
+            ident = checked
         facts.append(fact(pid, string_value(ident), label))
     page = WORK2 / "hds" / f"{hid}.html"
     t = page.read_text(encoding="utf-8") if page.exists() else ""
