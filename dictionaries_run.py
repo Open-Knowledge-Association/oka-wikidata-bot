@@ -89,6 +89,11 @@ def held_elsewhere(entries):
 def plan():
     work = sys.argv[2]
     entries, skipped = linked(work)
+    review = WORK2 / "hds_unlinked_review.csv"            # HDS entries matched by `unlinked`: the run adds the ID
+    if work == "hds" and review.exists():
+        entries += [{"work": "hds", "kind": "person" if r["list"] == "bio" else "other", "id": r["hds_id"],
+                     "qid": r["item"], "matched_by": r["matched_by"]}
+                    for r in csv.DictReader(open(review, encoding="utf-8")) if r["item"]]
     out(f"{work}: {len(entries)} entries on one item each; {len(skipped)} left out (identifier on several items, or several on one)")
     for n, e in enumerate(entries, 1):
         e["title"], e["facts"], e["notes"] = (d.hds_facts if e["work"] == "hds" else d.snl_facts)(e["id"], e["kind"])
@@ -235,6 +240,8 @@ def unlinked():
                               "FILTER(LANG(?d) IN ('en','de','fr','it')) }"):
             info[q]["swiss"] |= bool(SWISS_WORDS.search(desc))
     links = wiki_links()
+    path = WORK2 / "hds_topic_matches_checked.json"          # {HDS ID: item, or "" when rejected}, filled by hand
+    approved = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     not_topics = {"Q5", "Q101352", "Q202444", "Q12308941", "Q11879590", "Q3409032", "Q4167410", "Q13406463",
                   "Q4167836", "Q11266439"}       # people, names, disambiguation/list/category/template pages
     review, strong = [], []
@@ -262,14 +269,14 @@ def unlinked():
             else:
                 why = f"{len(good)} people with this name and life years" if good else \
                       f"{len(people)} people with this name, none with these life years"
-        else:
+        else:                   # topics are only proposed: homonyms ('Schaffner', the steward vs the train conductor)
             topical = {q: c for q, c in free.items() if not c["classes"] & not_topics}
             wiki = [q for q in topical if q in linked_items]
-            two = [q for q, c in topical.items() if len(c["titles"]) >= 2 and c["swiss"]]
-            if len(wiki) == 1:
-                pick, why = wiki[0], "title, and its Wikipedia article links this HDS entry"
-            elif len(two) == 1:
-                pick, why = two[0], "titles in two HDS languages, and a Swiss item"
+            if len(wiki) == 1 and approved.get(hid) == wiki[0]:
+                pick, why = wiki[0], "title, its Wikipedia article links this HDS entry, and checked by hand"
+            elif len(wiki) == 1:
+                why = f"proposed {wiki[0]}: title, and its Wikipedia article links this HDS entry" + \
+                      (" (rejected by hand)" if hid in approved else "")
             else:
                 why = f"{len(topical)} items with this title"
         row = {"hds_id": hid, "list": kind, "title_de": ts.get("de", ""), "title_fr": ts.get("fr", ""),

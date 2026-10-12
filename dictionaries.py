@@ -43,7 +43,7 @@ NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",),   # city, big city; muni
                     ("Q18663579", "Q15092344", "Q486972"))  # municipality, urban area in Norway, settlement
 WORLD_CITIES = (("Q515", "Q1549591", "Q5119", "Q200250", "Q1637706"),)   # well-known cities anywhere
 NO_LANGS, CH_LANGS = ("nb", "nn", "en"), ("de", "fr", "it", "rm")
-MULTI = {"P106", "P1321"}                        # several values are normal: a new one is added beside the others
+MULTI = {"P106", "P1321", "P26", "P40", "P3373"}                        # several values are normal: a new one is added beside the others
 PLACE_PROPS = {"P19", "P20", "P159", "P1321"}
 GENDER = {"m": "Q6581097", "k": "Q6581072", "f": "Q6581072"}
 OCCUPATIONS = {                                  # SNL word -> (item, its English label, checked at start)
@@ -426,6 +426,170 @@ def snl_date(s, label, notes, julian=False):
     return None
 
 
+# ---------------------------------------------------------------- relatives, from SNL's family line
+# 'Foreldre: Lærer William Vold (1874–1943) og lærer Helga Askevold (1875–1930).' 'Gift 14.5.1937 med Sigrid
+# Wilhelmsen (9.8.1913–28.7.1992), datter av ...' 'Far til <a href="https://snl.no/X">X</a> (1939–).' A relative is
+# taken only when found through its link to another SNL or NBL article, or by its exact name and its life years
+# with a single candidate; father or mother follows the relative's sex on Wikidata, not the word order.
+
+SNL_LINK = re.compile(r'<a\b[^>]*href="https?://(?:(nbl|nkl)\.)?snl\.no/([^"#?]+)"[^>]*>(.*?)</a>', re.S)
+REL_UNITS = (("parents", re.compile(r"(?:Foreldre|(?:Sønn|Datter|Barn) av)\s*:?\s*")),     # capitalised: the
+             ("spouse", re.compile(r"(?:Gift|\d\))\s*")),                              # subject's own family
+             ("children", re.compile(r"(?:Far|Mor) til\s+", re.I)),                      # (linked only)
+             ("siblings", re.compile(r"(?:Bror|Søster) (?:av|til)\s+", re.I)))
+NAME_WORD = r"(?:[A-ZÆØÅÄÖÜÉÈ][\w'’-]*\.?|de|von|van|af|la|le|du|der|den|zu|di|da)"
+NAME_YEARS = re.compile(rf"((?:{NAME_WORD}\s+)*[A-ZÆØÅÄÖÜÉÈ][\w'’-]+)\s*\(([^)]*)\)")
+_by_id, _sex = {}, {}
+
+
+def life_span(txt):
+    """'1864–1946' -> (1864, 1946); '1873–89' -> (1873, 1889); 'født 1944' -> (1944, None); a year marked
+    uncertain ('ca.', 'etter', '1943/44', '1470-årene') counts as unknown."""
+    txt = txt.split(";")[0]
+    if "født" in txt and "–" not in txt and "-" not in txt:
+        m = re.search(r"\d{4}", txt)
+        return (int(m.group(0)) if m else None), None
+    parts = txt.split("–", 1) if "–" in txt else re.split(r"(?<=\d)\s*-\s*(?=\d)", txt, maxsplit=1)
+    out = []
+    for p in (parts + [""])[:2]:
+        m = re.search(r"(\d{2,4})\s*$", p.strip())
+        unsure = re.search(r"ca\.|etter|før|årene|/|\?", p)
+        out.append(int(m.group(1)) if m and not unsure else None)
+    born, died = out
+    if born and born < 100:
+        born = None
+    if died and died < 100 and born:                  # '1873–89': the death year shortened
+        died += born // 100 * 100 + (100 if died < born % 100 else 0)
+    elif died and died < 100:
+        died = None
+    return born, died
+
+
+def by_id(pid):
+    if pid not in _by_id:
+        _by_id[pid] = {}
+        for q, ident in qlever(f"SELECT ?i ?id WHERE {{ ?i wdt:{pid} ?id }}"):
+            _by_id[pid].setdefault(urllib.parse.unquote(ident), set()).add(q)
+    return _by_id[pid]
+
+
+@functools.lru_cache(maxsize=None)
+def person_named(name, born, died):
+    """The one human item labelled exactly so whose known life years all match (at least one must be known)."""
+    if not (born or died) or len(name.split()) < 2:
+        return None
+    lits = " ".join(f"{json.dumps(name)}@{lang}" for lang in NO_LANGS + ("mul", "da", "sv", "de"))
+    rows = qlever(f"SELECT DISTINCT ?i ?b ?d WHERE {{ VALUES ?l {{ {lits} }} ?i rdfs:label ?l ; wdt:P31 wd:Q5 . "
+                  "OPTIONAL { ?i wdt:P569 ?b } OPTIONAL { ?i wdt:P570 ?d } }")
+    year = lambda v: int(m.group(1)) if (m := re.match(r"(-?\d{1,4})-", v or "")) else None
+    years = {}
+    for r in rows:
+        r = r + [""] * (3 - len(r))
+        years.setdefault(r[0], (set(), set()))[0].add(year(r[1]))
+        years[r[0]][1].add(year(r[2]))
+    fit = [q for q, (bs, ds) in years.items() if (not born or born in bs) and (not died or died in ds)]
+    return fit[0] if len(fit) == 1 else None
+
+
+def sex(q):
+    if q not in _sex:
+        rows = qlever(f"SELECT ?s WHERE {{ wd:{q} wdt:P21 ?s }}")
+        _sex[q] = rows[0][0] if len(rows) == 1 else None
+    return _sex[q]
+
+
+REL_PIDS = {"father": "P22", "mother": "P25", "spouse": "P26", "child": "P40", "sibling": "P3373"}
+
+
+def sentences(text):
+    """Split at '. ' before a capital letter, outside parentheses, but not after an abbreviation ('Dr.med. Stephan',
+    'St. Olav'): '... (1906–97). Gift med ...' is two sentences."""
+    out, start, depth = [], 0, 0
+    for i, ch in enumerate(text):
+        depth += (ch == "(") - (ch == ")")
+        if ch == "." and depth <= 0 and re.match(r"\s+[A-ZÆØÅ]", text[i + 1:i + 3]):
+            word = re.search(r"(\S+)$", text[start:i])
+            if word and (len(word.group(1)) > 3 or word.group(1)[-1] in ")0123456789") and "." not in word.group(1):
+                out.append(text[start:i + 1])
+                start = i + 1
+    return out + [text[start:]]
+
+
+def split_outside_parens(text, sep):
+    parts, depth, cur = [], 0, ""
+    for ch in text:
+        depth += (ch == "(") - (ch == ")")
+        if ch == sep and depth <= 0:
+            parts.append(cur)
+            cur = ""
+        else:
+            cur += ch
+    return parts + [cur]
+
+
+def relatives(raw):
+    """[(relation, item, marriage date or None)] from SNL's family line; relation is father, mother, spouse,
+    child or sibling."""
+    text = re.sub(r"</p>|<br\s*/?>", "\n", raw or "")
+    text = SNL_LINK.sub(lambda m: f"{clean(m.group(3))}⟦{m.group(1) or 'snl'}:{m.group(2)}⟧", text)
+    text = html.unescape(re.sub(r"<[^>]+>", " ", text))
+    units = [u.strip() for line in text.split("\n") for s in sentences(line) for u in split_outside_parens(s, ";")
+             if u.strip()]
+    found, carry = [], None
+    for unit in units:
+        kind = next((k for k, rx in REL_UNITS if rx.match(unit)), None)
+        if kind is None and carry == "parents" and unit:       # 'Datter av:' alone, the names in the next paragraph
+            kind = carry
+        elif kind is None:
+            carry = None
+            continue
+        body = next((rx.sub("", unit, count=1) for k, rx in REL_UNITS if k == kind and rx.match(unit)), unit)
+        if not body.strip(" :.,"):
+            carry = kind
+            continue
+        carry = kind if kind == "spouse" else None
+        when = None
+        if kind == "spouse":
+            body = re.split(r",\s*(?:datter|sønn|enke|enkemann|ekteskapet)\b", body)[0]
+            body = re.sub(r"^\s*\d\)\s*", "", body)                  # 'Gift 1) 22.6.1877 med ...'
+            m = re.match(r"\s*(?:i\s+)?(\d{1,2}\.\d{1,2}\.\d{4}|\d{4})\b", body)
+            if m:
+                when = m.group(1)
+            parts = re.split(r"(?:^|\s)med\s", body, maxsplit=1)
+            body = parts[1] if len(parts) == 2 else ""
+        people = []
+        for m in re.finditer(r"([^⟦⟧]*?)⟦(snl|nbl|nkl):([^⟧]+)⟧", body):
+            pid = {"snl": "P4342", "nbl": "P5080", "nkl": "P5081"}[m.group(2)]
+            qs = by_id(pid).get(urllib.parse.unquote(m.group(3)), set())
+            if len(qs) == 1:
+                people.append(next(iter(qs)))
+        if kind in ("parents", "spouse"):
+            plain = re.sub(rf"(?:{NAME_WORD}\s+)*[\w'’-]*⟦[^⟧]+⟧\s*(?:\([^)]*\))?", "", body)   # linked ones out
+            plain = re.sub(r"\s*«[^»]*»", "", plain)
+            for name, span in NAME_YEARS.findall(plain):
+                born, died = life_span(span)
+                words = name.split()
+                q = None
+                for start in range(len(words) - 1):       # a capitalised title may lead: 'Billedskjærer Claus Berg'
+                    q = person_named(" ".join(words[start:]), born, died)
+                    if q:
+                        break
+                if q:
+                    people.append(q)
+        if kind == "spouse":
+            people = people[:1]                            # one spouse per marriage
+        if kind == "parents" and not people:
+            carry = "parents"                              # 'Foreldre: Dr.med.' split off: names in the next part
+        for q in dict.fromkeys(people):
+            if kind == "parents":
+                rel = {"Q6581097": "father", "Q6581072": "mother"}.get(sex(q))
+                if rel:
+                    found.append((rel, q, None))
+            else:
+                found.append(({"spouse": "spouse", "children": "child", "siblings": "sibling"}[kind], q, when))
+    return found
+
+
 DOUBT = re.compile(r"omtrent|usikk|ukjent|ca\.|ikke kjent|antatt|trolig", re.I)
 
 
@@ -489,6 +653,9 @@ def snl_facts(slug, kind):
             facts.append(fact("P1248", string_value(m["kulturnav_id"]), "KulturNav ID"))
         if re.fullmatch(r"p[a-z]\d+", m.get("hbr_id") or ""):
             facts.append(fact("P4574", string_value(m["hbr_id"]), "historical population register ID"))
+        for rel, q, when in relatives(m.get("family")):
+            married = snl_date(when, "date of marriage", []) if when else None
+            facts.append(fact(REL_PIDS[rel], item_value(q), rel, {"P580": [married]} if married else None))
     elif kind == "place":
         if re.fullmatch(r"[0-5]\d{3}", (m.get("municipal_number") or "").strip()):
             facts.append(fact("P2504", string_value(m["municipal_number"].strip()), "municipality number"))
@@ -557,8 +724,8 @@ def build(ent, entry, today, labels=None):
     seen = set()
     for f in entry["facts"]:
         key = (f["pid"], json.dumps(f["value"], sort_keys=True))
-        if key in seen:
-            continue
+        if key in seen or (f["value"]["type"] == "wikibase-entityid" and f["value"]["value"]["id"] == ent.get("id")):
+            continue                                       # (an item is never its own relative or place)
         seen.add(key)
         existing = [c for c in claims.get(f["pid"], []) if c["mainsnak"]["snaktype"] == "value" and c["rank"] != "deprecated"]
         equal = [c for c in existing if same(c["mainsnak"]["datavalue"], f["value"])]
