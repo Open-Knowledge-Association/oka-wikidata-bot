@@ -20079,3 +20079,503 @@ time,kind,qid,uuid,name,revid,changes
 2026-10-12T05:30:25Z,edit:settlements,Q117829746,{7E61D2DD-6C62-44C7-A2A6-434507CB083B},Wellnau,2556141733,default label; official name
 2026-10-12T05:30:26Z,edit:settlements,Q117835032,{05537EE9-042C-4915-BF2F-549AD8101142},Ferret,2556141744,source for position; default label
 2026-10-12T05:30:28Z,edit:settlements,Q121298651,{15308EB4-EC53-41C7-A705-7570556FEB27},Wildensbuch,2556141754,source for position; official name
+2026-10-12T09:30:24Z,edit:settlements,Q121339731,{11883202-59CD-443F-AE90-BD7CA35B1CC9},Weier im Emmental,2556202278,default label; official name
+2026-10-12T09:30:25Z,edit:settlements,Q121434809,{5BFE1A31-98E3-41E0-8D7B-8E3C9459CC64},Mümliswil,2556202285,default label; official name
+2026-10-12T09:30:27Z,edit:settlements,Q121434948,{6E4BE09F-CDD2-44FB-B3AE-BF38E685463F},Hagendorn,2556202291,source for position; official name
+2026-10-12T09:30:28Z,edit:settlements,Q122203054,{7378445B-0E8E-4E87-8FCC-83A71305687D},Oberulmiz,2556202294,default label; official name
+2026-10-12T09:30:29Z,edit:settlements,Q123180901,{6F5625DC-E91A-49A0-88D8-EF0C6D2222C8},Urswil,2556202297,default label; de label; official name
+2026-10-12T09:30:31Z,edit:settlements,Q123181531,{75DC51BD-E423-4443-9823-C0C8716C5773},Hinterfultigen,2556202304,default label; official name
+2026-10-12T09:30:32Z,edit:settlements,Q124203549,{E3A86689-A740-46A5-BD1D-91404E77C7FF},Wangenried,2556202308,default label; official name
+2026-10-12T09:30:33Z,edit:settlements,Q124220392,{114BF959-A905-4329-9B2A-D70603950423},Allenlüften,2556202312,default label; official name
+2026-10-12T09:30:35Z,edit:settlements,Q124220485,{43059DF8-5408-49C1-9B46-4503BA82B678},Rosshäusern,2556202316,official name
+2026-10-12T09:30:36Z,edit:settlements,Q124220523,{BE2AD5BE-FF23-4F5B-AFFB-A760AB149CE3},Oberei,2556202319,default label; official name
+2026-10-12T09:30:37Z,edit:settlements,Q124537317,{85556FA6-839A-4401-ADBF-B399F2E7EE46},Säriswil,2556202324,source for position; default label; official name
+2026-10-12T09:30:39Z,edit:settlements,Q124537349,{B14FF9B5-7037-4801-B218-08BAF8E400A3},Murzelen,2556202334,default label; official name
+2026-10-12T09:30:40Z,edit:settlements,Q124537427,{8FF0C660-B54A-40E1-88DC-551C0D3AA285},Uettligen,2556202342,default label; official name
+2026-10-12T09:30:42Z,edit:settlements,Q124632714,{B5741BE4-05AD-45D6-9C83-A0D5AF6A59E6},Cavadura,2556202349,default label; rm label; official name
+2026-10-12T09:30:43Z,edit:settlements,Q124640941,{85880ADD-52AE-4D88-9074-5E0B7AB871BB},Lüsai,2556202355,default label; rm label; official name
+2026-10-12T09:30:44Z,edit:settlements,Q124803160,{B7A07F6D-5E18-4EDF-8A9E-8F1314C933FF},Vorderfultigen,2556202360,default label; official name
+2026-10-12T09:30:46Z,edit:settlements,Q124992363,{D9C2F163-7FB7-4C25-9731-641D35D74908},Les Dévens,2556202365,source for position; default label; official name
+2026-10-12T09:30:47Z,edit:settlements,Q124992863,{128E376D-9F81-4C16-A0A0-48C1D4518081},Frenières-sur-Bex,2556202370,default label; official name
+2026-10-12T09:30:48Z,edit:settlements,Q124993160,{917D6505-1B43-42A2-AE2D-D6ED9699F60B},Fenalet-sur-Bex,2556202377,default label; official name
+2026-10-12T09:30:50Z,edit:settlements,Q125391688,{893BF9BD-339B-4D6B-A5CB-0EA351C1501E},Aeschau,2556202380,official name
+2026-10-12T09:30:51Z,edit:settlements,Q125392125,{BBC4B6C0-361B-41CF-9B91-B21BCCEE7179},Suberg,2556202384,source for position; default label; official name
+2026-10-12T09:30:52Z,edit:settlements,Q125398490,{A5EA84E8-2792-43F6-88DA-E291EBD3310B},Ramsei,2556202388,default label; official name
+2026-10-12T09:30:54Z,edit:settlements,Q125407601,{B7DF69AD-150B-4344-A8B0-BBAB0B09B98B},Würzbrunnen,2556202393,official name
+2026-10-12T09:30:55Z,edit:settlements,Q125705579,{58B300E7-12E9-4533-A0AB-3F5C2881DEC6},Ferrenberg,2556202400,source for position; official name
+2026-10-12T09:30:56Z,edit:settlements,Q125727476,{33456037-7E70-49E0-8745-172BBD7A128C},Dieterswil,2556202404,default label; official name
+2026-10-12T09:30:58Z,edit:settlements,Q125749129,{BF031457-9082-4379-BED1-D0C563742166},Friedersmatt,2556202410,source for position; default label; official name
+2026-10-12T09:30:59Z,edit:settlements,Q125760344,{142FEC9F-D1A9-4898-B0F1-F631C20FE8E3},Rüegsbach,2556202413,official name
+2026-10-12T09:31:00Z,edit:settlements,Q125965166,{98F2DF30-258E-486F-A62F-EAD718E391DE},Hub,2556202418,default label; official name
+2026-10-12T09:31:02Z,edit:settlements,Q126097476,{D41DF914-9195-410A-BEE0-FBA14372F5F9},Obermuhlern,2556202424,source for position; default label; official name
+2026-10-12T09:31:03Z,edit:settlements,Q126114326,{814DA769-19B6-4D35-B501-B1D16CEA03D7},Mattstetten,2556202429,default label; official name
+2026-10-12T09:31:04Z,edit:settlements,Q126163804,{38357598-65BD-4921-A362-EEB327C9F8A4},Mont-Soleil,2556202434,default label; official name
+2026-10-12T09:31:06Z,edit:settlements,Q126164081,{738179A7-E632-4FB6-B097-C7838E72C513},Laubbach,2556202439,source for position; default label; official name
+2026-10-12T09:31:07Z,edit:settlements,Q126164706,{8D4198CC-5432-406E-96E2-F390F0AD0ECB},Nydegg,2556202443,source for position; default label; official name
+2026-10-12T09:31:08Z,edit:settlements,Q126277544,{C0919069-BBB5-416C-B3B0-3D7EBF3282BE},Enggistein,2556202447,default label; official name
+2026-10-12T09:31:09Z,edit:settlements,Q126529237,{09D84ABF-50C4-4FB5-B88C-683FA48D249F},Haldi b. Schattdorf,2556202452,default label; official name
+2026-10-12T09:31:11Z,edit:settlements,Q126893808,{91F06288-78CD-42C4-9626-BB2A14ACEFA6},Sorte,2556202457,source for position; default label; official name
+2026-10-12T09:31:12Z,edit:settlements,Q126894503,{B87796C6-F161-4374-9F14-FC42E177B3A2},Ronco,2556202464,default label; official name
+2026-10-12T09:31:13Z,edit:settlements,Q130318245,{CF2EDBF7-F9B3-4C27-9A0A-58199E47B1F3},Spengelried,2556202467,default label; official name
+2026-10-12T09:31:15Z,edit:settlements,Q130318265,{8E96FC77-C94A-400C-AB1F-723C89CA99FE},Rüplisried,2556202472,default label; official name
+2026-10-12T09:31:16Z,edit:settlements,Q130342002,{BB9D8728-4834-472B-9D23-24C3763EC6DD},Buch,2556202478,default label; official name
+2026-10-12T09:31:17Z,edit:settlements,Q131403907,{78C5231D-BA15-4D4F-8ED4-F29A83360CBD},Fuorns,2556202489,default label; rm label; official name
+2026-10-12T09:31:19Z,edit:settlements,Q131823008,{03CE16CD-A7CF-4579-BB63-1FA202381947},Jassbach,2556202495,official name
+2026-10-12T09:31:20Z,edit:settlements,Q131935371,{C99ADEA8-891C-42C9-847F-823E52A71B5E},Glarisegg,2556202500,default label; official name
+2026-10-12T09:31:22Z,edit:settlements,Q132802189,{BD09C51E-789B-49FD-9E69-9DB94263B3C3},Eisten,2556202505,source for position; official name
+2026-10-12T09:31:23Z,edit:settlements,Q133042741,{092841BA-014D-466F-8B61-6CC16B6BB46E},Weissenried,2556202512,source for position; official name
+2026-10-12T09:31:24Z,edit:settlements,Q133733647,{00CEC924-A1AA-4371-B1CA-3E8CCEA786EF},Flühlen,2556202522,source for position; default label; official name
+2026-10-12T09:31:26Z,edit:settlements,Q135899906,{9116D00E-AD70-45AF-9C1C-B4183F7061D7},Degermoos,2556202530,official name
+2026-10-12T09:31:27Z,edit:settlements,Q135900030,{BF372236-E606-49F8-A39E-ED16FF04A91A},Honegg,2556202539,source for position; official name
+2026-10-12T09:31:28Z,edit:settlements,Q135906974,{579E2DCB-3444-4638-B66D-A4BC5B187E9F},Ottenhusen,2556202546,source for position; default label; de label; official name
+2026-10-12T09:31:29Z,edit:settlements,Q135907468,{A0AB2833-2D20-421D-84B2-E821E2B1B21B},Bonmont,2556202551,source for position; fr label; official name
+2026-10-12T09:31:31Z,edit:settlements,Q135915770,{5A83D8E6-AEBF-46D1-AF6A-63FFCA229078},Montezillon,2556202561,source for position; default label; fr label; official name
+2026-10-12T09:31:32Z,edit:settlements,Q135918585,{120E4F73-B1AC-412B-BB48-F0947E65B43E},Reidermoos,2556202568,default label; de label; official name
+2026-10-12T09:31:33Z,edit:settlements,Q136257136,{CA01E5A3-AB73-4C82-81BB-37DBC281164E},Holzmühle,2556202578,official name
+2026-10-12T09:31:35Z,edit:settlements,Q136311124,{716F1366-82C6-45BF-9EFF-C5B33281D846},Miex,2556202585,default label; official name
+2026-10-12T09:31:36Z,edit:settlements,Q136416400,{568CDA53-E27E-4647-8D29-B273B4B67DD4},Mumpé Tujetsch,2556202590,source for position; official name
+2026-10-12T09:31:37Z,edit:settlements,Q138008504,{79CBB325-D6CC-4346-877E-E0BF2AD1DD9A},Les Monts-de-Pully,2556202600,source for position; official name
+2026-10-12T09:31:38Z,edit:settlements,Q140533125,{9D7E6D27-31EC-44F4-9A96-E0607A418F35},Hüswil,2556202607,official name
+2026-10-12T09:31:40Z,edit:settlements,Q140603385,{B8E6AEA0-655C-43D6-AD80-8FC0A0128B89},Fenil-sur-Corsier,2556202614,official name
+2026-10-12T09:31:41Z,edit:settlements,Q140603401,{CE835653-92B6-43B5-A053-643E69650546},Les Giettes,2556202623,official name
+2026-10-12T09:31:42Z,edit:settlements,Q140603497,{D0936876-526A-4021-B992-499E95A15E45},Muraz (Collombey),2556202631,official name
+2026-10-12T09:31:43Z,edit:settlements,Q140603754,{1E5FDEB9-EDFD-4F65-AD0C-623E143043DC},Pont-de-la-Morge (Sion),2556202637,official name
+2026-10-12T09:31:45Z,edit:settlements,Q140605769,{D9C541EE-CA82-4920-84F1-15AFF637FCDE},St-Séverin,2556202645,default label; official name
+2026-10-12T09:31:46Z,edit:settlements,Q140823742,{0A43C7A7-17A2-4555-BE84-6AC410CFBA61},Bruchegg,2556202649,source for position; official name
+2026-10-12T09:31:47Z,edit:settlements,Q141473616,{EE58E177-FF27-4597-A9F4-EEA063436183},Landerswil,2556202656,official name
+2026-10-12T09:31:49Z,edit:settlements,Q141473685,{9A2869F0-8977-4E7F-B095-7A8972C3FD60},Ostermanigen,2556202658,official name
+2026-10-12T09:31:50Z,edit:settlements,Q141474808,{894A0E2C-B0A0-44F8-9485-34C938F6FA37},Innerberg,2556202663,official name
+2026-10-12T09:31:51Z,edit:settlements,Q141520718,{339F32BE-8BE2-4127-AD66-B836E1763FF8},Neumühle,2556202671,source for position; default label; official name
+2026-10-12T09:31:55Z,create:settlements,Q141709124,{FC810714-7798-4356-9ACC-5C9491BF8BCB},Bouchet - Moillebeau,2556202683,new item
+2026-10-12T09:31:55Z,create:settlements,,{B21344E8-346F-40B7-9BAF-86685605C5F3},Breite,,skipped: Q17165541 has the same name and no coordinates
+2026-10-12T09:31:58Z,create:settlements,Q141709125,{23C163D8-B693-457C-9F14-A4EA806282AB},Champel - Roseraie,2556202691,new item
+2026-10-12T09:32:01Z,create:settlements,Q141709126,{D088FBF6-1082-4BAF-B9FD-017969B0EE6F},Montriond - Cour,2556202700,new item
+2026-10-12T09:32:05Z,create:settlements,Q141709127,{169FAA9E-27E8-4ACA-9F26-E17AE8FD9D26},Loestrasse - Lürlibad,2556202713,new item
+2026-10-12T09:32:08Z,create:settlements,Q141709128,{745D6E8A-F2CF-48A1-8906-DDC26C7FA6D9},Charmilles - Châtelaine,2556202725,new item
+2026-10-12T09:32:11Z,create:settlements,Q141709130,{499C072F-859C-4933-A7FA-074ED249E9E4},Eaux-Vives - Lac,2556202734,new item
+2026-10-12T09:32:15Z,create:settlements,Q141709131,{13823B22-D512-4C69-8089-8A5C96964407},Chailly - Rovéréaz,2556202741,new item
+2026-10-12T09:32:18Z,create:settlements,Q141709132,{3998B6D6-640C-4122-B93D-A4923D603DC9},Langgass - Heiligkreuz,2556202757,new item
+2026-10-12T09:32:21Z,create:settlements,Q141709133,{6793A28D-F5C1-4DF5-9C10-A0D0D591235F},Florissant - Malagnou,2556202777,new item
+2026-10-12T09:32:22Z,create:settlements,,{FE606D3A-E426-4DC9-8B9E-3E440C532346},Biel-Benken BL,,skipped: Q70067 has the same name within 2 km
+2026-10-12T09:32:22Z,create:settlements,,{6E7AF2F0-3FD3-40A8-9847-6701964390D7},La Combe,,skipped: Q110473105 has the same name and no coordinates
+2026-10-12T09:32:23Z,create:settlements,,{6E65301D-5335-4A6B-9C8B-B688973E26BE},Niederholz,,skipped: Q108206017 has the same name and no coordinates
+2026-10-12T09:32:24Z,create:settlements,Q141709134,{8C189702-0639-4167-9ED1-580DB821C997},Bözingenfeld,2556202796,new item
+2026-10-12T09:32:25Z,create:settlements,,{B738A725-715C-4A00-BA81-34AF93398628},Centro,,skipped: Q222052 has the same name and no coordinates
+2026-10-12T09:32:28Z,create:settlements,Q141709135,{C0F876E3-E921-4119-AE49-47B1D1D88CDC},Montoie - Bourdonette,2556202814,new item
+2026-10-12T09:32:31Z,create:settlements,Q141709137,{04C989D1-EE36-4867-AD31-8C80FC3ECC54},Vallon - Béthusy,2556202836,new item
+2026-10-12T09:32:34Z,create:settlements,Q141709138,{702B7183-8741-4220-9F38-FE784D0A2A22},Westquartier,2556202863,new item
+2026-10-12T09:32:38Z,create:settlements,Q141709140,{A1465132-DE71-4414-ACDF-5B10816AF862},Centro Sud,2556202889,new item
+2026-10-12T09:32:41Z,create:settlements,Q141709141,{D9D3B890-766C-4D71-9D5E-459E8DF1A455},Gönhard,2556202918,new item
+2026-10-12T09:32:42Z,create:settlements,,{258FB27F-547C-4864-B13A-10E221CB4272},Centre Ville,,skipped: Q104762081 has the same name and no coordinates
+2026-10-12T09:32:45Z,create:settlements,Q141709142,{AC9B2E5D-8767-4310-96CF-F5A30AB9011A},Crêtets,2556202943,new item
+2026-10-12T09:32:48Z,create:settlements,Q141709143,{835F7699-4990-480A-BB87-64ED702DB6B9},Beaumont-Vignettaz,2556202963,new item
+2026-10-12T09:32:52Z,create:settlements,Q141709144,{43661192-816D-4BAE-9C5C-5575334BF6A1},Südquartier,2556202975,new item
+2026-10-12T09:32:52Z,create:settlements,,{DB0FD576-AF25-4B05-8D85-6D56EFACE670},Gossau ZH,,skipped: Q67525 has the same name within 2 km
+2026-10-12T09:32:53Z,create:settlements,,{5686CE89-D82F-4ED9-9921-669F465E06B9},Oberdorf,,skipped: Q55279233 has the same name and no coordinates
+2026-10-12T09:32:55Z,create:settlements,Q141709145,{BB54A5A1-E5C4-4122-9B4A-FBEC39F803A6},Plaine du Croset,2556202991,new item
+2026-10-12T09:32:55Z,create:settlements,,{EB2DF57F-4EC5-4334-9734-6D1B7B6A0ADF},Militärgebiet,,skipped: Q97095925 has the same name and no coordinates
+2026-10-12T09:32:58Z,create:settlements,Q141709147,{3FB3F914-940C-471C-9B71-BF5993C4B4A3},Cheminet,2556203006,new item
+2026-10-12T09:32:59Z,create:settlements,,{7706F032-038B-49A1-BB6B-F054095E7972},Ruche,,skipped: Q10658288 has the same name and no coordinates
+2026-10-12T09:33:02Z,create:settlements,Q141709148,{808C0CF0-0A99-461B-8065-8156BF2B6091},Obergrund - Allmend,2556203015,new item
+2026-10-12T09:33:02Z,create:settlements,,{CBD6621E-D971-4BA0-9318-389D2966A3E9},Industriegebiet,,skipped: Q104151420 has the same name and no coordinates
+2026-10-12T09:33:05Z,create:settlements,Q141709149,{7E2B35A8-7087-4366-9A04-9FACBD4184A4},Meierhöfli,2556203021,new item
+2026-10-12T09:33:06Z,create:settlements,,{9CF8BDD7-5781-40C1-B644-DFB1FAE77E58},Kappel SO,,skipped: Q65575 has the same name within 2 km
+2026-10-12T09:33:06Z,create:settlements,,{13A54511-D54C-4AA5-8989-2BFF55BE8D9B},Semine,,skipped: Q124302346 has the same name and no coordinates
+2026-10-12T09:33:09Z,create:settlements,Q141709150,{26399C14-D481-4512-A090-C9BB5CA9CCDA},Sous-Gare,2556203035,new item
+2026-10-12T09:33:12Z,create:settlements,Q141709151,{5E28E15D-A66E-4BBA-9C9E-CBCCC9C71C59},Centro Nord,2556203043,new item
+2026-10-12T09:33:13Z,create:settlements,,{4C587E77-54DF-4183-8516-986804496CE1},Letten,,skipped: Q110950551 has the same name and no coordinates
+2026-10-12T09:33:15Z,create:settlements,Q141709152,{9EA92014-CA00-4593-A3A3-8EB5F0EA6450},Burgdorf-Nord,2556203049,new item
+2026-10-12T09:33:18Z,create:settlements,Q141709154,{323B5073-67E3-4F19-8C95-B96DDF6DD1A0},Rheinquartier I,2556203065,new item
+2026-10-12T09:33:22Z,create:settlements,Q141709156,{050A631B-12F9-4E79-A52D-637E806ECC28},Jonction - Plainpalais,2556203073,new item
+2026-10-12T09:33:25Z,create:settlements,Q141709157,{9CD00DAB-AFAA-4D1F-90A9-1C87ACE577DE},Wilen b. Wil,2556203087,new item
+2026-10-12T09:33:28Z,create:settlements,Q141709158,{7A94CAF3-AE0A-4FA2-8544-8EB1582FD357},Champsec,2556203107,new item
+2026-10-12T09:33:32Z,create:settlements,Q141709159,{23B6F4BE-EEE2-451F-8C13-3BDBC4F388E8},Wesemlin - Dreilinden,2556203123,new item
+2026-10-12T09:33:35Z,create:settlements,Q141709160,{A51042EC-E184-44BE-8157-642F1FDBB45E},St-Sulpice VD,2556203141,new item
+2026-10-12T09:33:36Z,create:settlements,,{10407E1C-1DE4-4705-9C67-6FC44E2EF9A0},S. Antonino,,skipped: Q52927753 has the same name and no coordinates
+2026-10-12T09:33:38Z,create:settlements,Q141709161,{E17045DB-0AE6-4B52-AA3B-9EBC7F60C523},Kasernenquartier,2556203158,new item
+2026-10-12T09:33:42Z,create:settlements,Q141709162,{1F9B4AE1-A5A0-4CB9-A2FC-2EDBAB834CA5},Möriken AG,2556203177,new item
+2026-10-12T09:33:45Z,create:settlements,Q141709163,{8A7DFD1F-DC59-4679-AD76-9E97A8CBE7DE},Guldisloo,2556203199,new item
+2026-10-12T09:33:48Z,create:settlements,Q141709164,{1250E595-E41D-486E-9598-010465F8DB31},Quartiere Rusca e Saleggi,2556203221,new item
+2026-10-12T09:33:52Z,create:settlements,Q141709165,{3813B146-4087-4C6E-94D5-7C84A72C74CA},ONU - Rigot,2556203240,new item
+2026-10-12T09:33:55Z,create:settlements,Q141709166,{1EE60DB2-370F-41E9-9DDB-C8E2926C63AC},Ergaten-Talbach,2556203249,new item
+2026-10-12T09:33:58Z,create:settlements,Q141709167,{2D9E708B-116B-43D4-80FE-9786167DAF7A},Bois-de-Bay,2556203266,new item
+2026-10-12T09:33:59Z,create:settlements,,{BBE44BFA-871C-4A88-A1B5-8350D023BBCE},Lac,,skipped: Q23397 has the same name and no coordinates
+2026-10-12T09:34:01Z,create:settlements,Q141709168,{CB54170A-5DE4-4FB7-B582-DB0AFCB36CA5},Pfaffenloh,2556203277,new item
+2026-10-12T09:34:05Z,create:settlements,Q141709169,{D3F63493-404C-4D39-A21D-0A48FEFE29B5},Sallaz - Vennes - Séchaud,2556203290,new item
+2026-10-12T09:34:05Z,create:settlements,,{906B1956-8299-4BF0-AE16-34416BF335B2},Wey,,skipped: Q1147897 has the same name and no coordinates
+2026-10-12T09:34:06Z,create:settlements,,{879FD975-7713-4248-85A8-0715E2096473},Lindenhof,,skipped: Q96240076 has the same name and no coordinates
+2026-10-12T09:34:07Z,create:settlements,,{53D156DB-BA0D-48DE-B2CD-DD0239069384},Altstadt,,skipped: Q112601947 has the same name and no coordinates
+2026-10-12T09:34:07Z,create:settlements,,{9AF2EEC4-D300-429B-9E53-EC13B38CC003},Bodan,,skipped: Q37553119 has the same name and no coordinates
+2026-10-12T09:34:08Z,create:settlements,,{56332734-C3D4-4C74-B41C-C548E221BE76},St. Michael,,skipped: Q45581 has the same name and no coordinates
+2026-10-12T09:34:09Z,create:settlements,Q141709170,{30767634-58F7-4B48-B17F-F76D322F71EE},Allmend,2556203297,new item
+2026-10-12T09:34:12Z,create:settlements,Q141709171,{F2DD6A55-C50C-4D1C-A467-AB60446D0CA6},Gerretta,2556203304,new item
+2026-10-12T09:34:15Z,create:settlements,Q141709172,{CA9BF9F4-656E-4B39-92D0-937EAEACC01A},Wankdorffeld,2556203311,new item
+2026-10-12T09:34:18Z,create:settlements,Q141709173,{CB10D0ED-E0EC-4330-9DD8-F583B8C10FF4},Cologny - Village,2556203321,new item
+2026-10-12T09:34:19Z,create:settlements,,{D6DAAD50-7E36-4640-97A8-5D7EF9F2F6AB},Hofberg,,skipped: Q21515909 has the same name and no coordinates
+2026-10-12T09:34:19Z,create:settlements,,{9F253D29-5765-4030-B56E-0E7A0650EC4C},La Californie,,skipped: Q128597559 has the same name and no coordinates
+2026-10-12T09:34:22Z,create:settlements,Q141709175,{ED5F2F55-AEC9-4E74-A7D0-3D649898EF2E},Sous-Gare - Ouchy,2556203340,new item
+2026-10-12T09:34:22Z,create:settlements,,{20EFC0A5-3161-4FE2-8737-B43652A6ABA8},Vieux-Bourg,,skipped: Q3212411 has the same name and no coordinates
+2026-10-12T09:34:25Z,create:settlements,Q141709177,{EE79F2FB-7CA1-4AF4-940D-1A534FB82A0F},Wettswil,2556203358,new item
+2026-10-12T09:34:28Z,create:settlements,Q141709179,{77CEF1C7-1F80-411E-82E6-D68F57CEC502},Pinchat - Sur-Rang,2556203371,new item
+2026-10-12T09:34:32Z,create:settlements,Q141709180,{30D080BF-076E-428A-813F-D77F7DF679C2},Grand-Pré - Vermont,2556203387,new item
+2026-10-12T09:34:32Z,create:settlements,,{A171A3FA-39B5-4D82-A097-FBE6D2C571D4},Gsteig,,skipped: Q1177720 has the same name and no coordinates
+2026-10-12T09:34:35Z,create:settlements,Q141709181,{C305EC65-279D-4135-A2C8-7D3130DEC226},Langensand - Matthof,2556203399,new item
+2026-10-12T09:34:36Z,create:settlements,,{0EBD01FF-3E55-4FF6-88D8-B7D90160AF12},Hofstetten SO,,skipped: Q70010 has the same name within 2 km
+2026-10-12T09:34:38Z,create:settlements,Q141709182,{05871ABF-A31C-45D5-A262-7C7DEA75BC97},Elfenau-Brunnadern,2556203422,new item
+2026-10-12T09:34:42Z,create:settlements,Q141709183,{50AA5DBC-6EB5-4312-A844-6572892EAB5F},Mousquines - Bellevue,2556203439,new item
+2026-10-12T09:34:45Z,create:settlements,Q141709184,{F46D30D0-4640-4914-96F2-2BBB512B6DDC},Kantonsspital - Ibach,2556203459,new item
+2026-10-12T09:34:48Z,create:settlements,Q141709185,{5E7906A8-A9AD-461A-A610-A853571E7650},Gambach-Guintzet,2556203486,new item
+2026-10-12T09:34:52Z,create:settlements,Q141709186,{F451A5DC-012C-4170-9557-1B26E84EB1DE},Vésenaz - Village,2556203508,new item
+2026-10-12T09:34:55Z,create:settlements,Q141709187,{6489C9CD-EB1E-4FAA-A354-31F316EF7895},Maupas - Valency,2556203524,new item
+2026-10-12T09:34:58Z,create:settlements,Q141709188,{C19DCA2D-06FF-4F26-9826-A40A4DBB13B0},Sécheron - Prieuré,2556203538,new item
+2026-10-12T09:35:02Z,create:settlements,Q141709189,{942C1C17-2252-40C9-9957-B2626562B943},Schlossmatt,2556203551,new item
+2026-10-12T09:35:05Z,create:settlements,Q141709190,{B21476D6-6EB0-4A39-B300-BFE13FC67F6E},Communaux-d'Ambilly,2556203561,new item
+2026-10-12T09:35:08Z,create:settlements,Q141709191,{F53AFA64-7695-4591-A1E2-E7FE758ECC13},Pré-Longet,2556203577,new item
+2026-10-12T09:35:12Z,create:settlements,Q141709194,{E79EB265-D69F-4CE5-A58C-6C62F4F76894},Plan-les-Ouates - Village,2556203593,new item
+2026-10-12T09:35:12Z,create:settlements,,{E2B71B7D-5C6E-40C2-A330-2815D4465538},Obere Altstadt,,skipped: Q104031191 has the same name and no coordinates
+2026-10-12T09:35:13Z,create:settlements,,{28595358-31ED-45B9-B76B-F32B004F0531},Hochstrasse,,skipped: Q106522999 has the same name and no coordinates
+2026-10-12T09:35:24Z,create:settlements,Q141709195,{FD76C292-B3FA-4E96-A921-B06FE01504D1},Würzenbach - Schädrüti,2556203637,new item
+2026-10-12T09:35:24Z,create:settlements,,{74D40F39-04B7-48A7-B4A0-13CFF1033D10},Centre-Ville,,skipped: Q1468524 has the same name and no coordinates
+2026-10-12T09:35:25Z,create:settlements,,{FB669821-B04C-47EA-8CAE-75B3A2E55245},Zentrum,,skipped: Q105438267 has the same name and no coordinates
+2026-10-12T09:35:27Z,create:settlements,Q141709196,{829A5AE4-633B-498C-BAE1-B453954FECCC},Grand-Donzel,2556203650,new item
+2026-10-12T09:35:30Z,create:settlements,Q141709197,{CAF99C9A-325A-4168-A953-5895CC942F0C},Jura-Torry,2556203665,new item
+2026-10-12T09:35:31Z,create:settlements,,{715D7520-50F0-4332-B7C1-A479C3D2DB05},St-Germain,,skipped: Q140388412 has the same name and no coordinates
+2026-10-12T09:35:33Z,create:settlements,Q141709198,{0AE2127D-8412-4DE1-897C-3D8D2992425B},Wenken,2556203683,new item
+2026-10-12T09:35:37Z,create:settlements,Q141709199,{9F454E8C-3F57-4E09-B6F1-FED5FE863C56},Chesières,2556203699,new item
+2026-10-12T09:35:37Z,create:settlements,,{02C76593-C16A-4996-B447-B93517F4E9C1},Rehbüel-Hegetsberg,,skipped: Q64032 has the same name within 2 km
+2026-10-12T09:35:38Z,create:settlements,,{AA13273A-E8E5-46EF-BF6B-895DA1FA968A},Telli,,skipped: Q97704325 has the same name and no coordinates
+2026-10-12T09:35:40Z,create:settlements,Q141709200,{88CCBF72-625D-4579-97FC-5FD8F26EC59A},Hardegg-Weissenstein,2556203716,new item
+2026-10-12T09:35:43Z,create:settlements,Q141709202,{9DDF52EA-9843-40BE-B6EE-B2795AC05A03},Beundenfeld-Baumgarten,2556203730,new item
+2026-10-12T09:35:44Z,create:settlements,,{2906874C-99FE-4092-B10F-AD62C61D5907},Marbach SG,,skipped: Q67900 has the same name within 2 km
+2026-10-12T09:35:44Z,create:settlements,,{A816CCF2-B181-4FD9-9B0E-4BEAFBC43DAF},Vorstadt,,skipped: Q10392519 has the same name and no coordinates
+2026-10-12T09:35:45Z,create:settlements,,{CF1CB70A-8120-4884-AD3F-5B637617E73C},Steinhof,,skipped: Q107378136 has the same name and no coordinates
+2026-10-12T09:35:45Z,create:settlements,,{F660439A-C181-4429-9013-DE1AF15DE1F5},Palatinat,,skipped: Q16086416 has the same name and no coordinates
+2026-10-12T09:35:47Z,create:settlements,Q141709203,{23443E02-16EA-412C-A0FF-CA1E449FB47C},Maladière - Mail,2556203751,new item
+2026-10-12T09:35:47Z,create:settlements,,{B63CC292-93C4-49E5-A484-AE282876E54F},Centre,,skipped: Q2270380 has the same name and no coordinates
+2026-10-12T09:35:48Z,create:settlements,,{B71FF25F-CA8E-4C5E-BC78-D6AFB98D683B},Niklausen,,skipped: Q83374180 has the same name and no coordinates
+2026-10-12T09:35:48Z,create:settlements,,{449BE3FB-C162-455E-A691-14311411FED3},Bains,,skipped: Q37517648 has the same name and no coordinates
+2026-10-12T09:35:50Z,create:settlements,Q141709204,{FF43BF08-5530-4DAF-BB6A-1DA6F6AA8800},Plateau de Bel-Air,2556203777,new item
+2026-10-12T09:35:50Z,create:settlements,,{020FB90C-EBF0-4CAF-8A25-90AE8D8EE77C},Rosenberg,,skipped: Q110076162 has the same name and no coordinates
+2026-10-12T09:35:53Z,create:settlements,Q141709205,{D459FAE8-110F-4AED-A34B-3DA05D11F524},Neulanden,2556203797,new item
+2026-10-12T09:35:54Z,create:settlements,,{96956840-B898-4A6B-99FF-595BFB4A5F42},Altstadt,,skipped: Q112601947 has the same name and no coordinates
+2026-10-12T09:35:57Z,create:settlements,Q141709206,{4EC8F8B1-1B64-45D0-B20F-3F40F7F878CB},Mouille-Galand,2556203818,new item
+2026-10-12T09:36:00Z,create:settlements,Q141709207,{C7E6C786-0D75-415D-8813-4A67B2B3B0D3},Pregny - Village,2556203826,new item
+2026-10-12T09:36:01Z,create:settlements,,{C9619549-9ACE-4B39-9913-DE9C43E56973},Stetten AG,,skipped: Q65158 has the same name within 2 km
+2026-10-12T09:36:04Z,create:settlements,Q141709209,{70FB57EB-505E-46F4-A069-1BCCB384E25C},Unterlachen - Tribschen,2556203840,new item
+2026-10-12T09:36:07Z,create:settlements,Q141709210,{A09FB6E4-2DA7-4B08-B7E7-1FEFA6152780},Sternmatt - Hochrüti,2556203853,new item
+2026-10-12T09:36:07Z,create:settlements,,{0DC6E967-1605-4436-A9E5-6439FC1D3FB7},Charrière,,skipped: Q1067716 has the same name and no coordinates
+2026-10-12T09:36:08Z,create:settlements,,{C4FE4FDD-759D-433E-958F-893982251D86},Chougny,,skipped: Q141457549 has the same name within 2 km
+2026-10-12T09:36:10Z,create:settlements,Q141709212,{3A3502EA-4012-4637-953B-7D29285C008B},Grand-Saconnex - Marais,2556203872,new item
+2026-10-12T09:36:13Z,create:settlements,Q141709213,{64A12D61-5DE8-4964-9F23-152F21157976},Ämmebrügg,2556203878,new item
+2026-10-12T09:36:17Z,create:settlements,Q141709214,{F654E33D-A953-4409-AD2C-8C533132A7DC},Pâquis - Navigation,2556203895,new item
+2026-10-12T09:36:20Z,create:settlements,Q141709216,{A4EB8E21-2C0F-4EE3-81AB-322888002548},St-Jean - Aïre,2556203905,new item
+2026-10-12T09:36:20Z,create:settlements,,{C3B255C0-9CB8-4DB9-BB0F-2D2DB937DB18},Erlinsbach SO,,skipped: Q66252 has the same name within 2 km
+2026-10-12T09:36:23Z,create:settlements,Q141709217,{D4288BF0-3DA5-4BC4-8B3F-B13207B21E4F},Draizes - Vauseyon,2556203920,new item
+2026-10-12T09:36:27Z,create:settlements,Q141709218,{C6622575-D7DD-49F8-A926-2FFE21459AD6},Guthirt,2556203934,new item
+2026-10-12T09:36:27Z,create:settlements,,{4E35BC3A-DB58-4DBD-9DDE-0B7D8DDFCD2C},Gewerbezone Galgenfeld,,skipped: Q97569302 has the same name and no coordinates
+2026-10-12T09:36:30Z,create:settlements,Q141709219,{0F02B49A-FE9B-4547-B7FA-C46766316628},Tuileries-de-Grandson,2556203951,new item
+2026-10-12T09:36:33Z,create:settlements,Q141709220,{DE520DBA-20AB-4636-B882-695C375E245B},Aarau Rohr,2556203967,new item
+2026-10-12T09:36:36Z,create:settlements,Q141709221,{760526DE-478F-4A77-B764-0252E7D5D998},Bevignoux,2556203983,new item
+2026-10-12T09:36:40Z,create:settlements,Q141709222,{E524F80C-887F-46C6-AFDA-9D56FDA39C05},Cressy - Marais,2556204000,new item
+2026-10-12T09:36:43Z,create:settlements,Q141709223,{6ED2116D-297A-4FE8-AA06-D4C6CD6D2B87},Dättwil AG,2556204019,new item
+2026-10-12T09:36:46Z,create:settlements,Q141709224,{D7BFEABA-5B99-4A5D-ACD6-8A1D9B97F23A},Emmersberg,2556204044,new item
+2026-10-12T09:36:47Z,create:settlements,,{7B4EC98C-1809-4F1D-A863-7E47F505BE58},Kornfeld,,skipped: Q116374444 has the same name and no coordinates
+2026-10-12T09:36:47Z,create:settlements,,{FA0C8008-46B8-42D1-8048-D5D1D8C3B44F},Vandoeuvres,,skipped: Q22198918 has the same name and no coordinates
+2026-10-12T09:36:50Z,create:settlements,Q141709225,{F8A903E0-0312-4522-8116-B5B51E98D924},Spiegel b. Bern,2556204069,new item
+2026-10-12T09:36:51Z,create:settlements,,{E76D5F27-3340-4461-BAEE-B4BA81CA0D05},Alp,,skipped: Q216082 has the same name and no coordinates
+2026-10-12T09:36:53Z,create:settlements,Q141709227,{D9C0C568-63DA-4CCD-AA68-340F91E6DC13},Hochwacht - Zürichstrasse,2556204091,new item
+2026-10-12T09:36:57Z,create:settlements,Q141709228,{EB696C09-7424-40F9-A3D5-6EDEF4E72F00},Vissigen,2556204115,new item
+2026-10-12T09:37:00Z,create:settlements,Q141709229,{DDC5FE3E-43E3-419E-9ACD-94CC783D0383},Aproz (Nendaz),2556204128,new item
+2026-10-12T09:37:03Z,create:settlements,Q141709230,{EEBBCF1B-F2C8-4C8D-901F-9D1F07C58D04},Kronbühl,2556204138,new item
+2026-10-12T09:37:07Z,create:settlements,Q141709231,{4212FA33-4BC3-425E-B97E-930530FA2A3D},Forges-Endroits,2556204153,new item
+2026-10-12T09:37:10Z,create:settlements,Q141709232,{8CA4C52B-BE15-4E49-8BC5-674ABE329A30},Riehen Dorf,2556204164,new item
+2026-10-12T09:37:10Z,create:settlements,,{4D9A27AA-7D54-43EA-A370-36B50213E3C2},Seefeld,,skipped: Q37487485 has the same name and no coordinates
+2026-10-12T09:37:11Z,create:settlements,,{E6B86D67-330C-4F2E-9B55-057D20BF8508},Bachgraben,,skipped: Q100499556 has the same name and no coordinates
+2026-10-12T09:37:13Z,create:settlements,Q141709233,{63DB7C73-A0F9-4732-8988-9B5DA8422664},Obermöhlin,2556204176,new item
+2026-10-12T09:37:17Z,create:settlements,Q141709234,{49E43275-509F-4B78-80C4-95ED15618853},Riffig,2556204186,new item
+2026-10-12T09:37:17Z,create:settlements,,{F9DEB867-1F61-4EAF-869E-7D52E5365078},Rombach,,skipped: Q139678635 has the same name and no coordinates
+2026-10-12T09:37:18Z,create:settlements,,{511602C5-B7AF-455D-8CC6-0852BA7F1145},Neugasse,,skipped: Q100340507 has the same name and no coordinates
+2026-10-12T09:37:19Z,create:settlements,,{3D081A95-1AD7-463F-AB3B-977364387B22},Beaumont,,skipped: Q21396351 has the same name and no coordinates
+2026-10-12T09:37:19Z,create:settlements,,{8BE43FAC-CE94-46C0-ADBD-82621DBFC415},Matt,,skipped: Q1158973 has the same name and no coordinates
+2026-10-12T09:37:20Z,create:settlements,Q141709235,{FDD72D14-D86A-4B6E-BF9F-B1CA777C57DF},Ruopigen,2556204197,new item
+2026-10-12T09:37:23Z,create:settlements,Q141709236,{C845F4B9-3424-4924-9D01-A7262C502475},Meyrin - Village,2556204217,new item
+2026-10-12T09:37:27Z,create:settlements,Q141709237,{264473B2-2441-4664-8366-170411550AC5},Lauenen-Hofstetten,2556204239,new item
+2026-10-12T09:37:30Z,create:settlements,Q141709238,{43001BA7-1EF5-4CBB-B23D-BCE13F3413AC},Mayens-de-Chamoson,2556204256,new item
+2026-10-12T09:37:33Z,create:settlements,Q141709240,{A7A094D8-4EC0-48F7-9B21-91A4A67DD15E},Chermignon-d'en-Bas,2556204273,new item
+2026-10-12T09:37:37Z,create:settlements,Q141709241,{471A5FE3-0C22-48B9-9DDA-C3BA87F61249},Bremgarten b. Bern,2556204296,new item
+2026-10-12T09:37:40Z,create:settlements,Q141709242,{D655C01E-B7AF-4CDC-A96C-6DBCA9266992},Agy,2556204320,new item
+2026-10-12T09:37:43Z,create:settlements,Q141709244,{3A323F50-2259-4457-ABFD-D3CD143EF3F1},Troinex - Dessous,2556204343,new item
+2026-10-12T09:37:47Z,create:settlements,Q141709245,{67566144-B2AE-4A0A-8AD7-5B80E12C3EEE},Délices - Grottes,2556204366,new item
+2026-10-12T09:37:47Z,create:settlements,,{E21A2909-F2DA-4D5C-8F3A-C134D81C76BF},Rosenberg,,skipped: Q110076162 has the same name and no coordinates
+2026-10-12T09:37:48Z,create:settlements,,{06E9EE6F-E9F7-4990-8105-8C219BF89747},Marens,,skipped: Q106119880 has the same name and no coordinates
+2026-10-12T09:37:49Z,create:settlements,,{4993EEF2-FF23-4BCB-ADBE-57CF3DFC0126},Neustadt,,skipped: Q37499763 has the same name and no coordinates
+2026-10-12T09:37:50Z,create:settlements,Q141709246,{B573605D-7ECB-4E48-B470-7F3B191B7060},Unteres Kirchenfeld-Dalmazi,2556204390,new item
+2026-10-12T09:37:53Z,create:settlements,Q141709247,{246C0A4C-7243-4781-8543-A7065913F65F},Bramberg - St. Karli,2556204413,new item
+2026-10-12T09:37:56Z,create:settlements,Q141709249,{B43E986C-79C7-4C5F-87B0-73A711B502B3},Schosshalde-Obstberg,2556204440,new item
+2026-10-12T09:38:00Z,create:settlements,Q141709250,{2B1754DF-09CF-4194-8960-C0260F768AB4},Croix-Fédérale,2556204470,new item
+2026-10-12T09:38:03Z,create:settlements,Q141709251,{01AE088B-1A2A-4737-BB5D-B1784660DC6B},Chéserex,2556204494,new item
+2026-10-12T09:38:04Z,create:settlements,,{11D3F062-7935-4B06-B261-E7B2034B8CFE},Gros-Chêne,,skipped: Q109038430 has the same name and no coordinates
+2026-10-12T09:38:05Z,create:settlements,,{7664FA6C-B7C0-4E2E-8E9C-0CBF3F21EBD8},Campagna,,skipped: Q175185 has the same name and no coordinates
+2026-10-12T09:38:07Z,create:settlements,Q141709252,{70C4434E-7D36-49A9-A790-373F47257DD1},Champs-Lovats-PST,2556204507,new item
+2026-10-12T09:38:10Z,create:settlements,Q141709254,{41C63696-1B3E-4516-9E8D-7E6352CE9F00},Matterboden,2556204528,new item
+2026-10-12T09:38:13Z,create:settlements,Q141709255,{3AFC87B5-BDB3-4BD6-919C-2C2DB85C74B1},Blignou (Ayent),2556204546,new item
+2026-10-12T09:38:17Z,create:settlements,Q141709257,{654690CA-1563-4A29-82DC-0BAD0E818771},Monti della SS. Trinità,2556204565,new item
+2026-10-12T09:38:17Z,create:settlements,,{D93A92BC-7730-4EF6-AE49-1C1C8FD486F0},Sisseln AG,,skipped: Q540871 has the same name within 2 km
+2026-10-12T09:38:20Z,create:settlements,Q141709259,{802DB6A7-AF29-4997-9FD9-4C538DBCC4F4},Stettenfeld,2556204579,new item
+2026-10-12T09:38:23Z,create:settlements,Q141709260,{FCAAF71F-1500-4C62-B160-492576D511A7},En Oie,2556204594,new item
+2026-10-12T09:38:27Z,create:settlements,Q141709261,{42841F2C-C911-4E9A-862C-7768F671C475},Cité-Nouvelle,2556204610,new item
+2026-10-12T09:38:27Z,create:settlements,,{377B12B8-DFDF-4695-BA8C-23C2A179BC68},Industrie,,skipped: Q126185511 has the same name and no coordinates
+2026-10-12T09:38:28Z,create:settlements,,{745AF23D-7ED2-4A52-9033-4998B49DD51A},Beauregard,,skipped: Q107417448 has the same name and no coordinates
+2026-10-12T09:38:30Z,create:settlements,Q141709262,{B3A30073-3999-4653-8410-C6D5561A9869},Elzmatte,2556204626,new item
+2026-10-12T09:38:34Z,create:settlements,Q141709264,{CF722E56-DC14-4A75-8271-E520D3961E94},La Gabiule,2556204650,new item
+2026-10-12T09:38:37Z,create:settlements,Q141709265,{2061DD8C-2247-4D43-B2BB-F6262E7D90C8},Quatre-Marronniers,2556204675,new item
+2026-10-12T09:38:40Z,create:settlements,Q141709267,{1158EA45-289E-4611-B61C-91CAE0F0454F},Bösfeld,2556204692,new item
+2026-10-12T09:38:43Z,create:settlements,Q141709268,{0A75EA8A-A70C-4DE7-9739-21B1545F826C},Champs-Fréchets,2556204712,new item
+2026-10-12T09:38:44Z,create:settlements,,{E84EB82F-9E2D-4C3B-979E-93BBEA6995A4},Collex,,skipped: Q48757227 has the same name and no coordinates
+2026-10-12T09:38:47Z,create:settlements,Q141709269,{29643D1D-AD31-418B-9B17-2F3B392B6868},Sous-le-Scex,2556204734,new item
+2026-10-12T09:38:50Z,create:settlements,Q141709270,{2D792BC4-EB59-4BB1-953B-4F2F72F08546},Charmey (Gruyère),2556204759,new item
+2026-10-12T09:38:51Z,create:settlements,,{CCA7052F-377B-44C2-ABCD-D0ED8E111038},Altstadt,,skipped: Q112601947 has the same name and no coordinates
+2026-10-12T09:38:53Z,create:settlements,Q141709271,{45EABC25-6132-476A-B061-214BFBAB56DC},Borerhof,2556204781,new item
+2026-10-12T09:38:54Z,create:settlements,,{D659E3BD-C382-4A35-BE03-D9C70F7DBD60},Vallaire,,skipped: Q37266762 has the same name and no coordinates
+2026-10-12T09:38:54Z,create:settlements,,{AA43DA93-8546-426A-8B17-58A343D5556C},Crans VD,,skipped: Q57115 has the same name within 2 km
+2026-10-12T09:38:55Z,create:settlements,,{01569313-E797-4433-855B-546E9BE097E7},Succès,,skipped: Q2988681 has the same name and no coordinates
+2026-10-12T09:38:57Z,create:settlements,Q141709272,{01A383D8-739B-45AF-AF24-3FEEE31AE686},Hirschmatt - Kleinstadt,2556204809,new item
+2026-10-12T09:38:57Z,create:settlements,,{669CA3AC-0EB2-419B-A6C9-DFEF8E29C7BF},Tonkin,,skipped: Q106782703 has the same name and no coordinates
+2026-10-12T09:39:00Z,create:settlements,Q141709273,{C2729332-9938-4C17-9DF6-B97DDE5EFFEC},Eplatures-Crêt du Locle,2556204839,new item
+2026-10-12T09:39:03Z,create:settlements,Q141709275,{2AECB159-D107-4379-9C57-BF34E4EB8321},Les Hauts-de-Genthod,2556204870,new item
+2026-10-12T09:39:07Z,create:settlements,Q141709276,{83BFC3C0-225B-402F-B30C-F7518E21FCAC},Ormône,2556204896,new item
+2026-10-12T09:39:10Z,create:settlements,Q141709278,{2AF6B073-4B6F-43A0-9618-0F4EEDB2A73A},Gryphenhübeli-Thunplatz,2556204915,new item
+2026-10-12T09:39:14Z,create:settlements,Q141709279,{6B930E7C-5864-4ADC-B789-DB7D04663AB2},L'Ormet,2556204933,new item
+2026-10-12T09:39:17Z,create:settlements,Q141709280,{5430361A-9639-472B-AF29-7D6E537C8C85},Les Rasses,2556204952,new item
+2026-10-12T09:39:18Z,create:settlements,,{15301AB9-449F-49AA-85E6-F0DB91BC49A1},Lindenplatz,,skipped: Q100346544 has the same name and no coordinates
+2026-10-12T09:39:20Z,create:settlements,Q141709281,{437F5AEB-4E38-4A64-A193-6B96B48E17DA},Les Neuvilles,2556204975,new item
+2026-10-12T09:39:24Z,create:settlements,Q141709282,{50C1B6D3-899D-4AA5-9D4B-C4402AF40C2D},Beim Hardwald,2556204995,new item
+2026-10-12T09:39:27Z,create:settlements,Q141709283,{ED18898C-8901-4295-A90E-A611CBD1BB52},Cointrin - Les Ailes,2556205013,new item
+2026-10-12T09:39:30Z,create:settlements,Q141709284,{CD881828-8E8D-4981-B7AE-57ACE806D53D},Les Evouettes,2556205033,new item
+2026-10-12T09:39:34Z,create:settlements,Q141709285,{2D7FEF0A-D2D8-4911-B670-A190A23D1E8C},Lorzen,2556205051,new item
+2026-10-12T09:39:34Z,create:settlements,,{9C40F522-C5D1-4E10-8034-D94C4C6323FB},Cygnes,,skipped: Q135935251 has the same name and no coordinates
+2026-10-12T09:39:35Z,create:settlements,,{EE1E06E4-C433-4036-A2A5-5ACF4D8F83D5},Münchwilen AG,,skipped: Q70379 has the same name within 2 km
+2026-10-12T09:39:37Z,create:settlements,Q141709286,{23C3448D-EDD9-4300-A3FF-B5B4F973E0A0},Untermöhlin,2556205077,new item
+2026-10-12T09:39:38Z,create:settlements,,{4B3368F2-A689-4804-B11B-D257B17091B3},Feuillasse,,skipped: Q99455295 has the same name and no coordinates
+2026-10-12T09:39:40Z,create:settlements,Q141709287,{267F6046-B359-4967-9273-9403E3C2323F},Le Verney,2556205103,new item
+2026-10-12T09:39:43Z,create:settlements,Q141709288,{5C222789-F9C9-4909-AE12-0C8D502AC6ED},Sur Villars,2556205126,new item
+2026-10-12T09:39:47Z,create:settlements,Q141709290,{87EBF218-6FD3-4F67-A3DD-B06FD3B46F17},Rickenbach b. Wil,2556205146,new item
+2026-10-12T09:39:50Z,create:settlements,Q141709291,{DC2F37CF-ED00-4181-9DB2-52F080479AE5},Galbisio,2556205168,new item
+2026-10-12T09:39:51Z,create:settlements,,{D0CB9BC4-D707-43AC-884C-ACB0194CFE04},Feld,,skipped: Q188869 has the same name and no coordinates
+2026-10-12T09:39:51Z,create:settlements,,{6D4F121A-C6F5-4326-AAB4-67F6A7F802E2},Vieux-Bourg,,skipped: Q3212411 has the same name and no coordinates
+2026-10-12T09:39:54Z,create:settlements,Q141709292,{D251A217-91DC-4BE3-8327-350136AB5E83},Unterer Kappelerhof,2556205184,new item
+2026-10-12T09:39:54Z,create:settlements,,{A11A81CE-BD30-482D-9E75-9CBAC9DBE58B},Arni AG,,skipped: Q64324 has the same name within 2 km
+2026-10-12T09:39:54Z,create:settlements,,{B044D1A1-C778-4C2D-9CB4-8245238DBFFF},Niederwil SG,,skipped: Q100350439 has the same name and no coordinates
+2026-10-12T09:39:55Z,create:settlements,,{0E432151-FF9B-4B24-910D-0788015679FD},Dorf,,skipped: Q13100073 has the same name and no coordinates
+2026-10-12T09:39:55Z,create:settlements,,{CDD52A27-E803-4E1D-884F-7CC243183FFC},Nord,,skipped: Q19935567 has the same name and no coordinates
+2026-10-12T09:39:57Z,create:settlements,Q141709293,{CE044194-7732-4D2F-BA53-951F519296F6},Quartiers du lac,2556205214,new item
+2026-10-12T09:40:00Z,create:settlements,Q141709294,{DE9BBF85-8367-4770-9735-451C8BC9BFF9},Creusets,2556205241,new item
+2026-10-12T09:40:04Z,create:settlements,Q141709295,{86EAFEFF-D53C-4AF1-BEE3-D4D2B77C68A4},Halde - Lützelmatt,2556205271,new item
+2026-10-12T09:40:05Z,create:settlements,,{C8F969FC-324D-48D8-B956-271260806D51},Moulins,,skipped: Q298362 has the same name and no coordinates
+2026-10-12T09:40:07Z,create:settlements,Q141709296,{39E4B8D1-5268-4874-8379-648A8180BCE0},Rumimatte,2556205301,new item
+2026-10-12T09:40:11Z,create:settlements,Q141709297,{35736AA5-2734-4E42-8E52-A190ECED5CDD},Flims Waldhaus,2556205327,new item
+2026-10-12T09:40:14Z,create:settlements,Q141709298,{B1679663-9C69-462A-8881-E56D65617027},Härdli,2556205343,new item
+2026-10-12T09:40:15Z,create:settlements,,{051D53EF-2270-4BFC-ACAE-1DF6FED0BD4F},Oberort,,skipped: Q100967306 has the same name and no coordinates
+2026-10-12T09:40:18Z,create:settlements,Q141709299,{E516BA88-DDBB-4BE1-BC5F-3B833BC1524D},Neuveville,2556205361,new item
+2026-10-12T09:40:21Z,create:settlements,Q141709300,{96BBE5CA-FC10-410A-BD84-E4832CEB15D0},Vandoeuvres - Village,2556205377,new item
+2026-10-12T09:40:24Z,create:settlements,Q141709301,{CFB0096B-E7C8-4760-BDEE-7889A1A55FB2},Rüeggisingen,2556205391,new item
+2026-10-12T09:40:25Z,create:settlements,,{88EF150A-F8C7-4757-9681-9A543791FCC6},Kaserne,,skipped: Q131263 has the same name and no coordinates
+2026-10-12T09:40:25Z,create:settlements,,{E78C0D9F-10E8-49B8-A10D-D5F2A163E2D6},Ebnat,,skipped: Q1279925 has the same name and no coordinates
+2026-10-12T09:40:28Z,create:settlements,Q141709302,{E0566512-0436-4F61-B79D-7ECD29B0EA67},Steg VS,2556205408,new item
+2026-10-12T09:40:28Z,create:settlements,,{4C13D61A-929A-4D17-A339-382A76627476},Ouest,,skipped: Q27956580 has the same name and no coordinates
+2026-10-12T09:40:31Z,create:settlements,Q141709304,{9E4DBAB5-85FC-4E3A-9466-96606039878D},Pouillerel-Postiers-Chevreuils,2556205425,new item
+2026-10-12T09:40:34Z,create:settlements,Q141709307,{911045CF-7408-4630-9AA9-4ECAC51A523D},Les Bonnes Luites,2556205441,new item
+2026-10-12T09:40:38Z,create:settlements,Q141709310,{481B13FD-6A50-4E7C-9C8D-1316B59136CE},Schöngrün-Vermont,2556205450,new item
+2026-10-12T09:40:41Z,create:settlements,Q141709311,{AD5982BD-CC0B-4FFD-9512-453DA229B65A},Kleinwangen,2556205462,new item
+2026-10-12T09:40:42Z,create:settlements,,{3A73679B-6C4F-4189-BDE7-DF412347BDA2},Breiti,,skipped: Q108206123 has the same name and no coordinates
+2026-10-12T09:40:42Z,create:settlements,,{FC449A50-BBF8-40AC-BE4D-2610FC535C2B},Büren SO,,skipped: Q70057 has the same name within 2 km
+2026-10-12T09:40:44Z,create:settlements,Q141709312,{5846201B-75C8-4740-ABA3-345E84EB00CD},Limmat rechts,2556205474,new item
+2026-10-12T09:40:45Z,create:settlements,,{D9E18724-10D0-4970-8215-6B8C1B000D81},Goldern,,skipped: Q5580110 has the same name and no coordinates
+2026-10-12T09:40:48Z,create:settlements,Q141709313,{C6E8CA06-C9A2-4D02-970C-8C8903F1108A},St-Aubin FR,2556205496,new item
+2026-10-12T09:40:51Z,create:settlements,Q141709314,{25C3888D-E973-41EA-8ED9-AD67EBDCC3A1},Collombey-le-Grand,2556205517,new item
+2026-10-12T09:40:55Z,create:settlements,Q141709315,{67C65A95-8898-4EDD-A127-42DD0FA0205C},Seymaz,2556205538,new item
+2026-10-12T09:40:58Z,create:settlements,Q141709316,{B3F09DCA-4E46-4B77-9FEC-C8E75FBD7DF0},Ennetturgi,2556205558,new item
+2026-10-12T09:41:01Z,create:settlements,Q141709317,{1DA67019-E4DA-461C-88AF-B2E312C4A37E},Versoix-la-Ville,2556205578,new item
+2026-10-12T09:41:04Z,create:settlements,Q141709318,{72C18D16-2146-43D4-A316-444AFBCB72AD},Oberes Kirchenfeld,2556205598,new item
+2026-10-12T09:41:08Z,create:settlements,Q141709319,{611574AF-DCAA-46AD-8BD3-60B3E876536F},Weid,2556205625,new item
+2026-10-12T09:41:08Z,create:settlements,,{8C77EFAF-FE03-43AE-85A9-7F161833C508},Les Croisettes,,skipped: Q99463176 has the same name and no coordinates
+2026-10-12T09:41:09Z,create:settlements,,{50D2D20E-9801-4FEF-BFBF-88229E759284},Eich,,skipped: Q16869788 has the same name and no coordinates
+2026-10-12T09:41:09Z,create:settlements,,{997010A8-3B3A-4B4F-BF70-E686289292AE},Chandoline,,skipped: Q2955997 has the same name and no coordinates
+2026-10-12T09:41:10Z,create:settlements,,{3C409AB7-1D02-42E1-B7E9-8E8BBCBB7235},Châteauneuf,,skipped: Q37163946 has the same name and no coordinates
+2026-10-12T09:41:11Z,create:settlements,,{E3B9F34F-68F0-4684-911D-D8B0030DB893},Rüfenach AG,,skipped: Q66728 has the same name within 2 km
+2026-10-12T09:41:11Z,create:settlements,Q141709320,{909D571D-836F-490B-BA67-157999C4B7E8},Hexmatt,2556205650,new item
+2026-10-12T09:41:15Z,create:settlements,Q141709321,{A0320D2A-FF0E-41B7-B808-4F2E1A2BB2AD},Dürrenmatten,2556205668,new item
+2026-10-12T09:41:18Z,create:settlements,Q141709322,{2EDDC030-4444-4A7D-BC69-727AB2502A75},Wylergut,2556205681,new item
+2026-10-12T09:41:21Z,create:settlements,Q141709323,{93FFFA5F-763F-4B06-8A1B-3061B682A422},Pregny - Organisations,2556205690,new item
+2026-10-12T09:41:22Z,create:settlements,,{A63DE2DC-CEAC-4F33-A76C-96E321626C30},Binz,,skipped: Q104203317 has the same name and no coordinates
+2026-10-12T09:41:25Z,create:settlements,Q141709324,{911E5732-8F5E-4C6C-85A2-13E57FA0A976},Mayennets,2556205699,new item
+2026-10-12T09:41:28Z,create:settlements,Q141709326,{3B6BE224-1C25-4E93-8CAD-790809C88BD8},Bellerive - Schlössli,2556205713,new item
+2026-10-12T09:41:28Z,create:settlements,,{D50BC569-9E2B-4A40-B90F-4DDCE46340D1},Rickenbach SO,,skipped: Q66833 has the same name within 2 km
+2026-10-12T09:41:29Z,create:settlements,,{0324D5DE-B6EA-4300-BF37-5A5DBE22AC1F},Loreto,,skipped: Q36918685 has the same name and no coordinates
+2026-10-12T09:41:31Z,create:settlements,Q141709327,{77E473AA-0A37-4F0A-9481-B7FE4CF28D67},Meiefeld,2556205726,new item
+2026-10-12T09:41:34Z,create:settlements,Q141709328,{48B0B535-B17A-40E3-88C5-42863DC0F933},Neustadt - Voltastrasse,2556205737,new item
+2026-10-12T09:41:38Z,create:settlements,Q141709329,{4E10498B-88F3-4830-9019-DDCF6F38D4A8},Les Mouilles - Collège de Saussure,2556205749,new item
+2026-10-12T09:41:41Z,create:settlements,Q141709330,{5EE9B48E-FEC3-40EC-BA12-3B1574852D19},Le Reposoir,2556205764,new item
+2026-10-12T09:41:42Z,create:settlements,,{4CB76D67-5BC3-413A-9C6D-EEAA3149C7E3},Ölberg,,skipped: Q30073380 has the same name and no coordinates
+2026-10-12T09:41:44Z,create:settlements,Q141709331,{4B6DC6DE-83DF-41B7-9326-6561620C385E},Scheibenschachen,2556205776,new item
+2026-10-12T09:41:45Z,create:settlements,,{43C6B2CA-0977-4086-BB90-EF55F190147F},Laax GR,,skipped: Q69606 has the same name within 2 km
+2026-10-12T09:41:48Z,create:settlements,Q141709332,{FCC76B3A-A689-4A8A-9339-FEB8C0390C2D},Glattbrugg West,2556205792,new item
+2026-10-12T09:41:48Z,create:settlements,,{2F142449-E0CE-4602-862E-18C669E49224},Pedemonte,,skipped: Q243389 has the same name and no coordinates
+2026-10-12T09:41:51Z,create:settlements,Q141709333,{2CB5EEB5-86AA-4DE4-8AD4-678C3EFF0E3E},Thoracker,2556205807,new item
+2026-10-12T09:41:52Z,create:settlements,,{3F9732AA-B249-43DB-BC84-642050399C68},Louis-Bertrand,,skipped: Q63607884 has the same name and no coordinates
+2026-10-12T09:41:52Z,create:settlements,,{DAB07CA4-B326-416B-A99A-176AAAA725B8},Agarone,,skipped: Q55281762 has the same name and no coordinates
+2026-10-12T09:41:52Z,create:settlements,,{59949BE3-405E-40F0-9867-693D4697BA45},Rüthi (Rheintal),,skipped: Q66890 has the same name within 2 km
+2026-10-12T09:41:53Z,create:settlements,,{4B675368-EF9B-4DF5-8B12-32E2B3FFC3B2},Kindhausen,,skipped: Q1546609 has the same name and no coordinates
+2026-10-12T09:41:54Z,create:settlements,Q141709334,{85320707-23F1-4821-9BB1-0081547D4A3D},Sandrain-Schönau,2556205823,new item
+2026-10-12T09:41:57Z,create:settlements,Q141709335,{AB61EF1C-7DA6-4148-8D65-46234406A2DF},Le Motty,2556205842,new item
+2026-10-12T09:42:01Z,create:settlements,Q141709336,{BA5EE8BE-FC22-4473-8837-0869B642E9E8},Vieille-Ville,2556205859,new item
+2026-10-12T09:42:04Z,create:settlements,Q141709337,{D4AF5E7D-F6DD-4AD2-ADD7-3ED18486811C},Colovray-Métairie,2556205876,new item
+2026-10-12T09:42:05Z,create:settlements,,{2460BEC3-2512-49A2-8857-76A0B51EF637},Places,,skipped: Q104787071 has the same name and no coordinates
+2026-10-12T09:42:05Z,create:settlements,,{E46BAC6E-E535-4742-AF4E-1A47FD9E2AB5},Hang,,skipped: Q1174791 has the same name and no coordinates
+2026-10-12T09:42:08Z,create:settlements,Q141709338,{2CF2422F-842D-4F7B-87E3-B7C26D98B117},Neumünchenstein,2556205896,new item
+2026-10-12T09:42:08Z,create:settlements,,{E7324F03-5BFD-4693-AE00-DF5DF87CD70B},Dorf,,skipped: Q13100073 has the same name and no coordinates
+2026-10-12T09:42:09Z,create:settlements,,{361ED62E-45B9-43B0-8D7C-F24E2DF6FB50},Zentrum,,skipped: Q105438267 has the same name and no coordinates
+2026-10-12T09:42:11Z,create:settlements,Q141709340,{27D82DC5-DC79-4B75-BAF7-0951B404396F},Bahnhof - Werft,2556205914,new item
+2026-10-12T09:42:11Z,create:settlements,,{335F4F3E-4A66-47D7-903C-F7AD93368EC4},Eggfeld,,skipped: Q100149940 has the same name and no coordinates
+2026-10-12T09:42:14Z,create:settlements,Q141709341,{85B4FF83-0A53-43F9-B8D8-DEA9FA35964A},Monruz,2556205933,new item
+2026-10-12T09:42:17Z,create:settlements,Q141709342,{9EB40218-03F3-44C8-AE6D-3CD04A34483D},Fröschmatt,2556205949,new item
+2026-10-12T09:42:18Z,create:settlements,,{A0E10BB0-523C-462B-8B9C-6D29C92A554F},Seewen SO,,skipped: Q66577 has the same name within 2 km
+2026-10-12T09:42:21Z,create:settlements,Q141709343,{19771EB6-43FE-4047-A4A0-C23744647571},Kappelenring,2556205959,new item
+2026-10-12T09:42:21Z,create:settlements,,{B96D2E37-C54C-4D10-B5DD-583D96A17FE8},Erlen,,skipped: Q16423396 has the same name and no coordinates
+2026-10-12T09:42:24Z,create:settlements,Q141709344,{94356FDD-2B62-4B1A-8886-21B034F4FF35},Grossacker,2556205973,new item
+2026-10-12T09:42:25Z,create:settlements,,{79C4C834-B6D8-4D9C-8E4F-746417E42A55},La Proz,,skipped: Q134659342 has the same name and no coordinates
+2026-10-12T09:42:27Z,create:settlements,Q141709345,{50113AD3-EB0D-4C24-AAD2-18878A8A1C36},Abeilles-Numa Droz,2556205990,new item
+2026-10-12T09:42:31Z,create:settlements,Q141709346,{40411E1A-6E9A-40D6-8470-35EA6452A73F},An der Emme,2556206011,new item
+2026-10-12T09:42:31Z,create:settlements,,{333F02F2-FC4D-48DE-81F7-DB5B2EC49217},Bäder,,skipped: Q107376324 has the same name and no coordinates
+2026-10-12T09:42:32Z,create:settlements,,{E549BD0D-FE6A-44A1-A0D7-E772B4B9BCCC},Bildfeld,,skipped: Q860894 has the same name and no coordinates
+2026-10-12T09:42:34Z,create:settlements,Q141709348,{08CEEEDD-0FB7-48CC-8F5B-C7632D2A4A43},Längi,2556206018,new item
+2026-10-12T09:42:37Z,create:settlements,Q141709349,{168087D4-C61F-4429-BA38-A17385074154},Winterhale,2556206028,new item
+2026-10-12T09:42:38Z,create:settlements,,{8DC55B78-55FD-414D-AA04-3FD256942002},Alpes,,skipped: Q136747996 has the same name and no coordinates
+2026-10-12T09:42:41Z,create:settlements,Q141709350,{E02654A4-2EED-48C7-8A9A-ABE1B7BD9A95},Maihof - Rotsee,2556206033,new item
+2026-10-12T09:42:44Z,create:settlements,Q141709351,{3C718B39-D37C-4254-ABEA-1C89447621FB},Champ-Colin,2556206039,new item
+2026-10-12T09:42:47Z,create:settlements,Q141709352,{0D6E2441-D17E-4C52-AF87-7A3CED73CD81},Trois-Portes,2556206052,new item
+2026-10-12T09:42:48Z,create:settlements,,{5121F1A7-68F0-4129-A263-3AF772A734F2},Aeschi SO,,skipped: Q68324 has the same name within 2 km
+2026-10-12T09:42:51Z,create:settlements,Q141709353,{2F2FC3BA-712A-4B92-B25A-5E5225DB655F},Frasnacht,2556206057,new item
+2026-10-12T09:42:54Z,create:settlements,Q141709354,{5E98B73A-A7DF-46A1-85BB-F6F99B0C7C43},Morgenhalden,2556206067,new item
+2026-10-12T09:42:55Z,create:settlements,,{860B1530-A4B9-4A07-ADCE-4F91A1BC47D5},Unterdorf,,skipped: Q100417562 has the same name and no coordinates
+2026-10-12T09:42:57Z,create:settlements,Q141709355,{B65A3BB1-10B1-4FCD-939E-2D25D979EC50},Wahligen,2556206078,new item
+2026-10-12T09:42:58Z,create:settlements,,{CCBF3BFA-D143-4969-9AAC-AC77A698916A},Unterdorf,,skipped: Q100417562 has the same name and no coordinates
+2026-10-12T09:42:58Z,create:settlements,,{514A9E19-DC62-48B3-B4CD-601D243DFD49},Ammerswil AG,,skipped: Q65198 has the same name within 2 km
+2026-10-12T09:42:59Z,create:settlements,,{BFDA9C1C-54D3-457C-B20F-EAB1E2320CA4},Gruben,,skipped: Q37554517 has the same name and no coordinates
+2026-10-12T09:43:01Z,create:settlements,Q141709356,{0AEC2A27-34BE-4FB6-9FCB-0DDD85D10326},Rüti b. Büren,2556206090,new item
+2026-10-12T09:43:01Z,create:settlements,,{49998719-2185-47BE-AE77-DB6A530EFE1D},Hardau,,skipped: Q1585020 has the same name and no coordinates
+2026-10-12T09:43:04Z,create:settlements,Q141709357,{0761CFB7-B9DF-4B64-8C5E-2DBDB5FA57A2},Fläsch,2556206097,new item
+2026-10-12T09:43:07Z,create:settlements,Q141709358,{805B8FB0-017D-477D-8A2E-7436861665BE},Altstadt - Wey,2556206115,new item
+2026-10-12T09:43:11Z,create:settlements,Q141709359,{D35048C9-7871-4BD5-9BD5-D5FB7AAA7475},Crans VS,2556206131,new item
+2026-10-12T09:43:14Z,create:settlements,Q141709360,{42A34513-0E83-4857-A45B-845D4B618307},Mayens-de-la-Zour,2556206148,new item
+2026-10-12T09:43:17Z,create:settlements,Q141709361,{C99E84B3-026D-4A50-B8A9-EE3418465F3F},Sornard (Nendaz),2556206168,new item
+2026-10-12T09:43:20Z,create:settlements,Q141709362,{25F5D1A3-AD05-44C5-9311-52DE4CF15391},Pré de Riva,2556206187,new item
+2026-10-12T09:43:21Z,create:settlements,,{9D2D1890-40CF-4CCF-ABC6-B886F01A5364},Lengnau AG,,skipped: Q69429 has the same name within 2 km
+2026-10-12T09:43:21Z,create:settlements,,{F6D4BDB0-5B56-4E3F-9E7C-F730349BBAC9},St. Gallerstrasse,,skipped: Q117247796 has the same name and no coordinates
+2026-10-12T09:43:24Z,create:settlements,Q141709363,{0091AA03-6346-413E-8F8D-3A1C77FDDE76},Albonago,2556206207,new item
+2026-10-12T09:43:27Z,create:settlements,Q141709364,{3CF5E000-1AD8-44BF-8B6A-DA2B34B2A43C},Chézard-St-Martin,2556206224,new item
+2026-10-12T09:43:28Z,create:settlements,,{700CB02D-C84A-4086-8B0B-AA8E3A5A181D},Bissau,,skipped: Q114020697 has the same name and no coordinates
+2026-10-12T09:43:31Z,create:settlements,Q141709365,{5BB3F89E-8682-40B5-B164-F536608E76A8},Neuwangs,2556206235,new item
+2026-10-12T09:43:31Z,create:settlements,,{B175EC05-9850-4CDF-9361-2E73C341E834},Moncor,,skipped: Q69760 has the same name within 2 km
+2026-10-12T09:43:34Z,create:settlements,Q141709366,{32969AE7-0CC7-47BA-886E-E1CAE9F96BD8},Chailly-Montreux,2556206250,new item
+2026-10-12T09:43:37Z,create:settlements,Q141709367,{7CE77A73-19EE-4D45-AF87-D8CE77759FB2},Lancy - St-Georges,2556206264,new item
+2026-10-12T09:43:40Z,create:settlements,Q141709368,{5C74AC2C-A4AD-4080-BC63-B5097F13CD4A},Oberrüti - Felmis - Rigiblick,2556206274,new item
+2026-10-12T09:43:41Z,create:settlements,,{E3A0669D-2EC3-46ED-BB75-EB1DF2199A9C},Bahnhof,,skipped: Q126186854 has the same name and no coordinates
+2026-10-12T09:43:44Z,create:settlements,Q141709369,{9322A135-106F-440C-8CD0-52A39E9EAEAF},Oberherznach,2556206284,new item
+2026-10-12T09:43:47Z,create:settlements,Q141709370,{587106AF-3246-464A-A9C9-3C5C80421625},Pont de Bramois,2556206299,new item
+2026-10-12T09:43:48Z,create:settlements,,{D0BA5B55-B246-46A7-BBE9-16FD490A2F70},Rosenberg,,skipped: Q110076162 has the same name and no coordinates
+2026-10-12T09:43:50Z,create:settlements,Q141709371,{2D7C1FD4-2E47-4E12-8BB7-37928A949E8A},Troinex - Village,2556206307,new item
+2026-10-12T09:43:54Z,create:settlements,Q141709372,{2A7CDE36-535D-4184-AAD4-A63404226E64},Grabenring,2556206312,new item
+2026-10-12T09:43:57Z,create:settlements,Q141709374,{DC97E1FF-9746-485F-88B1-67911C4E1EE8},Châtaigneriaz,2556206331,new item
+2026-10-12T09:43:57Z,create:settlements,,{D7E9B0E8-22D8-4EEB-B1FD-5AC74D48EF98},Platta,,skipped: Q37450140 has the same name and no coordinates
+2026-10-12T09:44:00Z,create:settlements,Q141709376,{812A832C-275F-48BF-A804-DF31B6750E7C},Oberer Kappelerhof,2556206342,new item
+2026-10-12T09:44:01Z,create:settlements,,{CBEBE63A-A712-4B94-8898-C521D6ACAE8C},Ried,,skipped: Q28557 has the same name and no coordinates
+2026-10-12T09:44:02Z,create:settlements,,{A0D27FAB-215D-460B-8E1C-5460D9F527A2},Falera,,skipped: Q1234613 has the same name and no coordinates
+2026-10-12T09:44:02Z,create:settlements,,{DCB2F7FB-14E5-4F6C-AA35-60FD7EDCD18B},Abtwil AG,,skipped: Q69219 has the same name within 2 km
+2026-10-12T09:44:04Z,create:settlements,Q141709377,{03ADF0EE-C922-40CC-B160-ED9561B2CBCD},Burgdorf-Süd,2556206350,new item
+2026-10-12T09:44:04Z,create:settlements,,{6E8D5B8D-6103-4FB4-BA48-81DBBE0C4948},Langgasse,,skipped: Q100418162 has the same name and no coordinates
+2026-10-12T09:44:05Z,create:settlements,,{687A1407-2AD9-4EA2-A931-A6FDE01EC50D},Vorstadt,,skipped: Q10392519 has the same name and no coordinates
+2026-10-12T09:44:05Z,create:settlements,,{537C2F04-D9EB-4FF7-9088-D1E0F9AA49A3},Letten,,skipped: Q110950551 has the same name and no coordinates
+2026-10-12T09:44:06Z,create:settlements,,{6CE5448C-761F-48B1-8FEB-FEDCB761B659},Colline,,skipped: Q106358418 has the same name and no coordinates
+2026-10-12T09:44:07Z,create:settlements,Q141709378,{CDEAEBAF-A003-46EB-9555-213B1BDA7947},Glattpark West,2556206368,new item
+2026-10-12T09:44:08Z,create:settlements,,{6FFB85C0-00C1-4EA7-B088-3D2F08F1666F},Au,,skipped: Q1811 has the same name and no coordinates
+2026-10-12T09:44:08Z,create:settlements,,{35FC3A6B-67A0-4DD8-84EC-D49FD8E31425},Le Coteau,,skipped: Q108801960 has the same name and no coordinates
+2026-10-12T09:44:11Z,create:settlements,Q141709379,{0DE02476-D77E-4301-B8AE-332C4C472F27},Les Mouilles - Belair,2556206381,new item
+2026-10-12T09:44:14Z,create:settlements,Q141709380,{30263805-75A2-47BB-ADF8-C1F0226F966F},Littau Dorf,2556206397,new item
+2026-10-12T09:44:17Z,create:settlements,Q141709381,{726B9513-C84F-41DD-BC94-94D25B802AD9},Grüssen,2556206412,new item
+2026-10-12T09:44:21Z,create:settlements,Q141709382,{1872F8C2-4B59-4352-9F64-B0BF69ECE42F},Le Courvieux,2556206427,new item
+2026-10-12T09:44:24Z,create:settlements,Q141709384,{9E9ECA69-0FB5-47CC-AC27-D82901AC780A},Le Guintzet,2556206439,new item
+2026-10-12T09:44:27Z,create:settlements,Q141709385,{30701EA6-8691-4718-80D1-A6AA4A70D66E},Glattbrugg Nord,2556206457,new item
+2026-10-12T09:44:31Z,create:settlements,Q141709386,{F1AC7116-7657-447F-B867-F84B2C3212BD},Avenue du Grand-St-Bernard,2556206470,new item
+2026-10-12T09:44:34Z,create:settlements,Q141709387,{7ABBFAD9-525D-4EEA-95D8-F07A12323490},Les Epineys,2556206488,new item
+2026-10-12T09:44:34Z,create:settlements,,{7278B47E-A2AA-43B0-9DAB-E75757B5CD4F},Stetten SH,,skipped: Q69180 has the same name within 2 km
+2026-10-12T09:44:35Z,create:settlements,,{A7FB68A8-0E69-4D8D-B1EB-D9B5671E29FE},Altstadt,,skipped: Q112601947 has the same name and no coordinates
+2026-10-12T09:44:36Z,create:settlements,,{E7C0BB18-AD22-42C7-AEC9-FC6180776D83},Scairolo,,skipped: Q69062 has the same name within 2 km
+2026-10-12T09:44:36Z,create:settlements,,{16F3CDBC-1702-4F02-937F-C225DAEAF711},Unterdorf,,skipped: Q100417562 has the same name and no coordinates
+2026-10-12T09:44:37Z,create:settlements,,{3CC79A32-7B85-47B0-BCE5-1E0E5A1896C3},Niederdorf,,skipped: Q112604094 has the same name and no coordinates
+2026-10-12T09:44:37Z,create:settlements,Q141709389,{F550AF88-1269-4A6F-A4F8-CEE2C4F19CA5},Türliacker,2556206506,new item
+2026-10-12T09:44:38Z,create:settlements,,{CA2D9258-51BD-405D-8D21-70272DC58260},Stöcken,,skipped: Q87185044 has the same name and no coordinates
+2026-10-12T09:44:41Z,create:settlements,Q141709390,{6B04037D-49BE-4B9E-952A-A962F57D5BC7},Général-Guisan,2556206521,new item
+2026-10-12T09:44:44Z,create:settlements,Q141709392,{AD012ECC-4870-43E4-AEDE-F6E3563DCFF5},Le Bachet,2556206542,new item
+2026-10-12T09:44:47Z,create:settlements,Q141709394,{ABBED569-6186-426B-BD7D-5990A7AF01B5},Corsy,2556206564,new item
+2026-10-12T09:44:50Z,create:settlements,Q141709395,{C719D74C-4F66-40A1-919E-D961F7447C3A},Botyre (Ayent),2556206577,new item
+2026-10-12T09:44:54Z,create:settlements,Q141709397,{D55CF3E6-06FE-4C1F-9774-50666B003769},Scuol Sura,2556206585,new item
+2026-10-12T09:44:57Z,create:settlements,Q141709398,{96C561BE-86FD-4589-B31F-18268A384966},Glockenthal,2556206597,new item
+2026-10-12T09:44:58Z,create:settlements,,{68201A6E-BE80-4B46-AA3C-B297C1C2C0C6},Oberhofen,,skipped: Q99371434 has the same name and no coordinates
+2026-10-12T09:44:58Z,create:settlements,,{F4E500AF-6F38-4078-9347-1D28666B8703},Cossy,,skipped: Q76426087 has the same name and no coordinates
+2026-10-12T09:45:01Z,create:settlements,Q141709399,{FD7B3DEE-7854-48FF-BADA-1FCB399D76EA},Schosshaldenwald-Friedhof,2556206605,new item
+2026-10-12T09:45:01Z,create:settlements,,{91D53162-842B-42D0-B015-28365365D5A1},Mauren TG,,skipped: Q47132019 has the same name and no coordinates
+2026-10-12T09:45:02Z,create:settlements,,{32B928AD-E087-4B46-8B71-02756965A633},Bel-Air,,skipped: Q110192708 has the same name and no coordinates
+2026-10-12T09:45:04Z,create:settlements,Q141709400,{F8C6B93D-9FD8-408E-BE67-EABC21BDF1B3},Uetliburg SG,2556206612,new item
+2026-10-12T09:45:07Z,create:settlements,Q141709401,{5EC9E944-462C-4200-86A8-58F6F216F225},Unterbäch VS,2556206626,new item
+2026-10-12T09:45:08Z,create:settlements,,{33B7D772-0E98-4777-847B-B3A6290CDEB0},Langäcker,,skipped: Q125755896 has the same name and no coordinates
+2026-10-12T09:45:11Z,create:settlements,Q141709402,{6F8325C3-D4A8-4813-B94F-B2252A5F4AE2},Champlan (Grimisuat),2556206632,new item
+2026-10-12T09:45:14Z,create:settlements,Q141709403,{E444BEE1-895E-4BD0-9B9A-A884FF630885},Calamin,2556206647,new item
+2026-10-12T09:45:17Z,create:settlements,Q141709404,{FAEC3ED4-3E6C-4DDB-AAF0-140F3B586412},Les Collons,2556206658,new item
+2026-10-12T09:45:21Z,create:settlements,Q141709405,{20123B60-CBB4-425E-8526-40C2A588CEC5},Himmelrich,2556206672,new item
+2026-10-12T09:45:24Z,create:settlements,Q141709406,{013D5474-6825-4DDB-BA9A-28BE4F20BED2},Olives-Crosettes,2556206692,new item
+2026-10-12T09:45:25Z,create:settlements,,{ED228F69-B8DB-4B99-B5C2-D9805F71FFF1},Sonnenfeld,,skipped: Q102040522 has the same name and no coordinates
+2026-10-12T09:45:27Z,create:settlements,Q141709408,{0FA19FCA-9BA7-4C6F-A2EA-056DBE2AAA59},Fortunau (Ayent),2556206715,new item
+2026-10-12T09:45:30Z,create:settlements,Q141709409,{235C929E-B284-48DA-86A2-D6F30FC8619E},Bruch - Gibraltar,2556206739,new item
+2026-10-12T09:45:34Z,create:settlements,Q141709410,{3D26AE3C-C39F-47F8-AE7A-58E2997DA5C0},Maisonneuves,2556206764,new item
+2026-10-12T09:45:35Z,create:settlements,,{3B9E62E6-64A6-4F46-8877-42A63D69DE6E},Kreuzäcker,,skipped: Q104159424 has the same name and no coordinates
+2026-10-12T09:45:35Z,create:settlements,,{66C66974-E42E-49E4-8712-333F0309CFB6},Sonnenhof,,skipped: Q100600293 has the same name and no coordinates
+2026-10-12T09:45:37Z,create:settlements,Q141709411,{DEB31EF1-841F-47CE-8EC6-6AFF73EEF34B},Pfeffikon LU,2556206788,new item
+2026-10-12T09:45:41Z,create:settlements,Q141709412,{FF0A26E3-B35B-4762-BF0F-D5360D763279},Cressy - Sur-le-Beau,2556206795,new item
+2026-10-12T09:45:41Z,create:settlements,,{8B61EFE5-5C84-462C-8F1C-1B131D77549D},Kapf,,skipped: Q11271109 has the same name and no coordinates
+2026-10-12T09:45:44Z,create:settlements,Q141709413,{8B1EC1FA-39A7-4BA8-86C7-2053093C98AF},Gerre di Sotto,2556206809,new item
+2026-10-12T09:45:47Z,create:settlements,Q141709415,{E57FF48E-2EB1-4607-BD5B-8CEEAF417712},Donnerbühl-Stadtbach,2556206822,new item
+2026-10-12T09:45:51Z,create:settlements,Q141709416,{91E2F6ED-1713-45A4-9F1C-7BDC3C026E88},Neumatt - Obchilch,2556206831,new item
+2026-10-12T09:45:54Z,create:settlements,Q141709417,{E05CF05D-C6BF-45BE-9CCD-4277707F0F12},Bellevue - Rives-du-Lac,2556206843,new item
+2026-10-12T09:45:57Z,create:settlements,Q141709418,{FFC2987C-D9F1-4DD5-89D2-C4568AACFF81},Schönberg Ost,2556206860,new item
+2026-10-12T09:45:58Z,create:settlements,,{87840520-24E5-4199-B04A-6B7F5439B23B},Isles,,skipped: Q17142969 has the same name and no coordinates
+2026-10-12T09:45:58Z,create:settlements,,{692843D1-E0C1-402E-8B98-BC503F7D2EA5},Oberdorf,,skipped: Q55279233 has the same name and no coordinates
+2026-10-12T09:46:00Z,create:settlements,Q141709419,{A57D40A4-FFB9-4277-8D48-9A186E1AB28C},Münchacker,2556206882,new item
+2026-10-12T09:46:01Z,create:settlements,,{FA4B82D0-1FE5-4741-A718-D93FE85A2262},Oberhausen,,skipped: Q106677631 has the same name and no coordinates
+2026-10-12T09:46:04Z,create:settlements,Q141709421,{1EC14532-E8B3-4AB0-80E0-3A99CA71385A},Vogelsang AG,2556206890,new item
+2026-10-12T09:46:05Z,create:settlements,,{CBB2E827-8A5D-4553-B148-3F871D3FE3EC},La Résidence,,skipped: Q117254317 has the same name and no coordinates
+2026-10-12T09:46:05Z,create:settlements,,{7288C67D-7D3F-40C3-AB00-6AA35C864016},Seefeld,,skipped: Q37487485 has the same name and no coordinates
+2026-10-12T09:46:06Z,create:settlements,,{EF1D429A-1287-49F5-99D9-8610D3B76AB8},Oberberg,,skipped: Q112742746 has the same name and no coordinates
+2026-10-12T09:46:06Z,create:settlements,,{6EAE896B-27C1-403D-9594-A078D593D091},Rieden AG,,skipped: Q64541 has the same name within 2 km
+2026-10-12T09:46:07Z,create:settlements,Q141709422,{B27615C2-434D-4DB1-8443-876F6BCC081B},Gstühl,2556206901,new item
+2026-10-12T09:46:10Z,create:settlements,Q141709424,{076EDA39-DA16-4812-8BB7-C4B7FDC03F4A},Le Bugnon,2556206912,new item
+2026-10-12T09:46:11Z,create:settlements,,{D4CB600D-02C3-49D0-9A79-E8139F9E27A8},Centre,,skipped: Q2270380 has the same name and no coordinates
+2026-10-12T09:46:12Z,create:settlements,,{D54D3A0B-BA6B-46D5-8BE6-17F5CDE97FB2},Neuhof,,skipped: Q105536276 has the same name and no coordinates
+2026-10-12T09:46:12Z,create:settlements,,{D28F1AE4-5CAE-4F86-B5E2-E5633B161779},Eichbühl,,skipped: Q100468309 has the same name and no coordinates
+2026-10-12T09:46:13Z,create:settlements,,{311524C6-ACAA-4196-AC08-D6C60A25551D},Erlen,,skipped: Q16423396 has the same name and no coordinates
+2026-10-12T09:46:14Z,create:settlements,Q141709425,{38A8742D-003F-4442-B6AA-167586651B73},ZI Bois-du-Lan,2556206926,new item
+2026-10-12T09:46:14Z,create:settlements,,{0A9C04E6-1552-4C6C-A89D-36FB1A8AE468},Stucki,,skipped: Q21508818 has the same name and no coordinates
+2026-10-12T09:46:17Z,create:settlements,Q141709427,{51174C5F-AA35-44A6-9C85-8137F3D1CD8E},Flims Dorf,2556206937,new item
+2026-10-12T09:46:21Z,create:settlements,Q141709428,{2E6EED52-5777-468B-A8F3-5315A6C2498B},L'Ancien Sierre,2556206947,new item
+2026-10-12T09:46:24Z,create:settlements,Q141709429,{53B06CBB-CD61-4F40-8046-7904EAE2FD4E},Stadel b. Niederglatt,2556206958,new item
+2026-10-12T09:46:27Z,create:settlements,Q141709431,{B11E663D-A309-4854-8A63-030EE64C73BA},Murschetg,2556206967,new item
+2026-10-12T09:46:28Z,create:settlements,,{3A9D29B4-EAF3-41DA-8A7F-2719DA81D66E},Dorf,,skipped: Q13100073 has the same name and no coordinates
+2026-10-12T09:46:28Z,create:settlements,,{9466443F-818F-4C3B-9262-752E99180B94},Wiler,,skipped: Q37533944 has the same name and no coordinates
+2026-10-12T09:46:31Z,create:settlements,Q141709432,{1B877C3C-8C58-4F36-AFBF-869E67D7DBF1},Seewis Dorf,2556206977,new item
+2026-10-12T09:46:34Z,create:settlements,Q141709433,{1927242E-3A66-4B46-AE9C-16D0A44A86CE},Les Rousses,2556206983,new item
+2026-10-12T09:46:37Z,create:settlements,Q141709434,{EB2AE9E2-89A1-4F3B-84BB-73C030457424},Steckenberg,2556206993,new item
+2026-10-12T09:46:38Z,create:settlements,,{6C591E95-4194-4CC7-B4CE-07780C9BF94F},Brückfeld,,skipped: Q96678345 has the same name and no coordinates
+2026-10-12T09:46:38Z,create:settlements,,{86C87748-C2B5-49C4-88D2-092139BCCC34},Kehl,,skipped: Q1804428 has the same name and no coordinates
+2026-10-12T09:46:41Z,create:settlements,Q141709435,{6B155D98-1A04-406A-AE81-DD7028F32B85},Obergütsch - Untergütsch,2556207010,new item
+2026-10-12T09:46:44Z,create:settlements,Q141709436,{87D854E8-DC92-445C-8EFF-AFBC1DE30F84},Neurheinau,2556207030,new item
+2026-10-12T09:46:45Z,create:settlements,,{8DA173E1-CDBE-4D8C-9C7B-50F7F7C64B9B},St. Erhard,,skipped: Q2222170 has the same name and no coordinates
