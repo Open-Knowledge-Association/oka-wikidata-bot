@@ -106,12 +106,12 @@ def warm_up(work, todo, facts):
             key = (d.place_name(name), tiers, within, country, aliases)
             if key in d._places:
                 return d._places[key]                   # answered in an earlier round
-            met[0] = True
-            if within is None:
+            if within is None and key[0] and d.PLAIN.match(key[0]):   # (odd names are asked one by one later)
+                met[0] = True
                 places.add((name, tiers, langs, country, min_links, aliases))
 
         def note_person(name, born, died):
-            if (born or died) and len(name.split()) >= 2 and name not in d._humans:
+            if (born or died) and len(name.split()) >= 2 and name not in d._humans and d.PLAIN.match(name):
                 met[0] = True
                 people.add(name)
 
@@ -119,8 +119,9 @@ def warm_up(work, todo, facts):
             name = d.region_name(raw)
             if name in d._regions:
                 return d._regions[name]
-            met[0] = True
-            regions.add(name)
+            if name and d.PLAIN.match(name):
+                met[0] = True
+                regions.add(name)
 
         real = d.place, d.person_named, d.viaf_current, d.region_country
         d.place, d.person_named, d.viaf_current, d.region_country = note_place, note_person, lambda vid: None, note_region

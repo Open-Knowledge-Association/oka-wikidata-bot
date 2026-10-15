@@ -126,10 +126,11 @@ def cached(name, fetch):
 
 
 def qlever(query):
-    """A big query (whole identifier lists): QLever only."""
+    """A big query (whole identifier lists, 100 names at a time): QLever, or the Wikidata Query Service when QLever
+    keeps refusing (Toolforge's address is shared with other tools)."""
     query = PREFIXES + query
     import shutil
-    for attempt in range(1, 10):                    # an error page is not an empty result: wait and retry
+    for attempt in range(1, 21):                    # an error page is not an empty result: wait and retry
         wait_turn(QLEVER, QLEVER_GAP)
         if shutil.which("curl"):
             text = subprocess.run(["curl", "-s", QLEVER, "--max-time", "300", "-H",
@@ -146,7 +147,12 @@ def qlever(query):
         if text.startswith("?"):
             break
         busy = "429" in text[:400] or "Too Many Requests" in text[:400]
-        time.sleep(15 * attempt if busy else 10 * attempt)   # QLever's rate limit refills at about one query a second
+        if busy and attempt >= 3:
+            status, other, _ = post_query(WDQS, query)
+            if status == 200 and other.startswith("?"):
+                text = other
+                break
+        time.sleep(min(15 * attempt, 120) if busy else min(10 * attempt, 120))   # QLever refills about one a second
     else:
         raise RuntimeError(f"query service failed: {text[:200]}")
     return tsv_rows(text)
@@ -159,6 +165,7 @@ def tsv_rows(text):
 
 
 _rest = {}                          # query service -> resting until (after it answered 429)
+_refusals = {}                      # query service -> 429 answers in a row
 asked = collections.Counter()       # requests per query service, and how many it refused with 429
 
 
@@ -194,7 +201,7 @@ def lookup(query):
     after a 429. A query neither service accepts is reported and counts as no match."""
     query = PREFIXES + query
     refused, text = set(), ""
-    for attempt in range(1, 10):
+    for attempt in range(1, 41):
         with _lock:
             now = time.time()
             at, endpoint = min(((max(now, _last.get(e, 0) + gap, _rest.get(e, 0)), e)
@@ -205,18 +212,21 @@ def lookup(query):
         time.sleep(max(0.0, at - time.time()))
         status, text, retry_after = post_query(endpoint, query)
         if status == 200 and text.startswith("?"):
+            _refusals[endpoint] = 0
             return tsv_rows(text)
-        if status == 429:
+        if status == 429:                           # rest longer each time in a row: 5 s, 10 s ... 2 minutes
             with _lock:
                 asked[endpoint + " 429"] += 1
-                _rest[endpoint] = time.time() + (int(retry_after) if (retry_after or "").isdigit() else 5)
+                _refusals[endpoint] = _refusals.get(endpoint, 0) + 1
+                _rest[endpoint] = time.time() + (int(retry_after) if (retry_after or "").isdigit()
+                                                 else min(5 * 2 ** (_refusals[endpoint] - 1), 120))
         elif status == 400:                         # the query itself: try the other service, then give up
             refused.add(endpoint)
             if len(refused) == len(GAPS):
                 out(f"query refused by both services, counted as no match: {query[len(PREFIXES):][:300]}")
                 return []
         else:
-            time.sleep(5 * attempt)                 # an error page is not an empty result: wait and retry
+            time.sleep(min(5 * attempt, 60))        # an error page is not an empty result: wait and retry
     raise RuntimeError(f"query services failed: {text[:200]}")
 
 
