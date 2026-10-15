@@ -26,6 +26,7 @@ from collections import Counter
 from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json,
                     dist_m, lv95_to_wgs84, out, ref_json)
 from edit import build_edit, build_new, build_p131, drop_language
+from edit_stations_areas import area_seen, builder
 import plan as planmod
 from dictionaries_run import task2_section
 
@@ -163,7 +164,7 @@ def run_batch(site, rows, rate, refs):
         base = None
         if row["kind"] == "edit":
             ent = live.get(row["qid"], {"missing": ""})
-            data, done = (build_p131 if row.get("batch") == "p131" else build_edit)(ent, row, refs)
+            data, done = builder(row)(ent, row, refs)
             entity_id, base = row["qid"], ent.get("lastrevid")
         else:
             reason = duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]))
@@ -216,7 +217,8 @@ def check(entity, kind, row, changes):
             "swisstopo position (preferred)": lambda: any(cites(c, SWISSNAMES3D) and c["rank"] == "preferred" for c in cl.get("P625", [])),
             "default label": lambda: entity.get("labels", {}).get("mul", {}).get("value") == rec["name"],
             "official name": lambda: ok("P1448"),
-            "municipality": lambda: any(cites(c, SWISSBOUNDARIES3D) for c in cl.get("P131", []))}
+            "municipality": lambda: any(cites(c, SWISSBOUNDARIES3D) for c in cl.get("P131", [])),
+            "area": lambda: area_seen(entity, row), "source for area": lambda: area_seen(entity, row)}
     if kind.split(":")[0] == "create":                  # "create" or "create:<batch>"
         changes = ["official name", "municipality"] if row.get("munis") else ["official name"]
         missing += [] if any(c["mainsnak"]["datavalue"]["value"]["id"] == row["cls"] for c in cl.get("P31", [])) else ["class"]
@@ -254,6 +256,15 @@ NOTES = {
             "the municipality their position lies in, from [https://www.swisstopo.admin.ch/en/landscape-model-"
             "swissboundaries3d swissBOUNDARIES3D]: they are not named features in swissNAMES3D. Items that span "
             "municipalities (waters, glaciers, regions, roads, railway lines, bridges, tunnels) are left out.",
+    "stations": "Railway stations and other public transport stops get a source for their position, their official name "
+                "and, where missing, their municipality, but no labels: station labels follow their own conventions "
+                "(\"Bern railway station\", \"Bahnhof Bern\"), which differ from the official name by design.",
+    "areas": "Municipalities get their area from [https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d "
+             "swissBOUNDARIES3D], in square kilometres with the date the boundaries are valid on, where the item has no "
+             "area or a different one; where it has older values, the new one gets preferred rank as the most recent "
+             "({{P|7452}} {{Q|Q71533355}}), unless another value is already preferred. An equal area without a date gets "
+             "swisstopo as a source; an equal area with an older date is left as it is. Municipalities with a share of "
+             "a large lake are left out for now: their area statistics leave the lake out, swisstopo's include it.",
 }
 
 
@@ -347,13 +358,13 @@ def main():
         if len(rows) > 30:                       # large previews: totals only
             c = Counter()
             for r in edits:
-                data, done = build_edit(live.get(r["qid"], {"missing": ""}), r, refs)
+                data, done = builder(r)(live.get(r["qid"], {"missing": ""}), r, refs)
                 c.update(["(no change)"] if not done else [d.split(" (")[0].split(":")[0] for d in done])
             out(f"{len(edits)} items: {dict(c.most_common())}")
             return
         for r in rows:
             if r["kind"] == "edit":
-                data, done = build_edit(live.get(r["qid"], {"missing": ""}), r, refs)
+                data, done = builder(r)(live.get(r["qid"], {"missing": ""}), r, refs)
                 out(f"{r['qid']:>11} {r['rec']['name'][:28]:28} {'; '.join(done) or 'no change'}")
             else:
                 d = build_new(r, refs)

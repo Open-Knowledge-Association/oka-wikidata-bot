@@ -60,9 +60,162 @@ def build_p131():
     out(f"plan: {len(rows)} items get a municipality, skipped {dict(skipped)} -> {path}")
 
 
+def build_stations():
+    """Railway stations and other stops paired with swissNAMES3D's stops. A stop is the points of one type and name
+    within STATION_LINK m of each other (one per platform or direction); an item and a stop are paired when one of
+    the item's labels (any language) or aliases is the stop's name, the types are compatible, the stop lies within
+    250 m and each is the other's only candidate. Closed and former stations are left out. No new items."""
+    from common import STATION_CLASSES, STATION_CLOSED, STATION_LINK, STATION_NOT, STATION_RADIUS, STATION_TYPES
+    cache = BATCHES["stations"]["cache"]
+    recs, release = swissnames3d(STATION_TYPES)
+    bounds = Boundaries()
+    values = " ".join("wd:" + q for q in [*STATION_CLASSES, *STATION_NOT])
+    scope = f"VALUES ?class {{ {values} }} ?item wdt:P31 ?class ; wdt:P17 wd:Q39 ."
+    groups, closed = defaultdict(set), set()
+    for item, cls in sparql_tsv(f"SELECT ?item ?class WHERE {{ {scope} }}", cache + "scope.tsv"):
+        if qid(cls) in STATION_NOT:
+            closed.add(qid(item))
+        else:
+            groups[qid(item)].update(STATION_CLASSES[qid(cls)])
+    states = " ".join("wd:" + q for q in STATION_CLOSED)
+    closed |= {qid(r[0]) for r in sparql_tsv(
+        f"SELECT DISTINCT ?item WHERE {{ {scope} {{ ?item wdt:P576 ?x }} UNION {{ ?item wdt:P3999 ?x }} UNION "
+        f"{{ ?item wdt:P582 ?x }} UNION {{ VALUES ?x {{ {states} }} ?item wdt:P5817 ?x }} }}", cache + "closed.tsv")}
+    names = defaultdict(set)
+    for item, n in (sparql_tsv(f"SELECT ?item ?name WHERE {{ {scope} ?item rdfs:label ?name . }}", cache + "labels.tsv")
+                    + sparql_tsv(f"SELECT ?item ?name WHERE {{ {scope} ?item skos:altLabel ?name . }}", cache + "aliases.tsv")):
+        names[qid(item)].add(literal(n)[0])
+    coords = defaultdict(list)
+    for item, c in sparql_tsv(f"SELECT ?item ?coord WHERE {{ {scope} ?item wdt:P625 ?coord . }}", cache + "coords.tsv"):
+        if "(" in c:
+            coords[qid(item)].append(point(c))
+    has_p131 = {qid(r[0]) for r in sparql_tsv(f"SELECT DISTINCT ?item WHERE {{ {scope} ?item wdt:P131 ?x . }}",
+                                              cache + "p131.tsv")}
+    muni_item = defaultdict(set)
+    for item, code in sparql_tsv("SELECT ?item ?code WHERE { ?item wdt:P31 wd:Q70208 ; wdt:P771 ?code . "
+                                 "MINUS { ?item wdt:P576 ?end } }", "municipalities.tsv"):
+        muni_item[int(literal(code)[0])].add(qid(item))
+    muni_item = {k: next(iter(v)) for k, v in muni_item.items() if len(v) == 1}
+
+    stop_of, size = {}, Counter()                 # point uuid -> stop (the uuid of one of its points)
+    same = defaultdict(list)
+    for r in recs:
+        same[r["type"], r["name"]].append(r)
+    for rs in same.values():                      # points linked within STATION_LINK m, transitively, are one stop
+        stop = list(range(len(rs)))
+        for i in range(len(rs)):
+            for j in range(i):
+                if math.hypot(rs[i]["e"] - rs[j]["e"], rs[i]["n"] - rs[j]["n"]) <= STATION_LINK:
+                    old, new = stop[i], stop[j]
+                    stop = [new if s == old else s for s in stop]
+        for i, r in enumerate(rs):
+            stop_of[r["uuid"]] = rs[stop[i]]["uuid"]
+            size[rs[stop[i]]["uuid"]] += 1
+    by_name = defaultdict(list)
+    for r in recs:
+        by_name[r["name"]].append(r)
+
+    stats, found, items_of = Counter(), {}, defaultdict(set)
+    for q, grps in groups.items():
+        if q in closed:
+            stats["closed or former station"] += 1
+            continue
+        if not coords[q]:
+            stats["no coordinates"] += 1
+            continue
+        we, wn = coords[q][0]
+        stops = {}                                    # stop -> (distance, nearest point of the stop)
+        for r in (r for nm in names[q] for r in by_name.get(nm, []) if r["group"] in grps):
+            d = math.hypot(r["e"] - we, r["n"] - wn)
+            if d <= STATION_RADIUS and d < stops.get(stop_of[r["uuid"]], (math.inf,))[0]:
+                stops[stop_of[r["uuid"]]] = (d, r)
+        found[q] = stops
+        for s in stops:
+            items_of[s].add(q)
+    rows = []
+    for q, stops in sorted(found.items(), key=lambda kv: int(kv[0][1:])):
+        if len(stops) != 1:
+            stats["no match" if not stops else "several stops"] += 1
+            continue
+        s, (d, r) = next(iter(stops.items()))
+        if len(items_of[s]) > 1:                      # possible duplicates or parts of one station: left alone
+            stats["one stop, several items"] += 1
+            continue
+        row = {"kind": "edit", "batch": "stations", "qid": q, "dist": round(d, 1), "points": size[s], "rec": r}
+        if q not in has_p131:                         # the stop's municipality, if every position of the item agrees
+            at = {tuple(muni_item.get(bfs) for bfs, _ in bounds.at(e, n)) for e, n in [(r["e"], r["n"])] + coords[q]}
+            m = next(iter(at)) if len(at) == 1 else ()
+            if len(m) == 1 and m[0]:
+                row["munis"] = list(m)
+            else:
+                stats["no municipality: outside, on a border or positions disagree"] += 1
+        rows.append(row)
+    path = plan_path("stations")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps({"release": release, "items_in_scope": len(groups)}) + "\n")
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    out(f"{release}: {sum(1 for r in recs if stop_of[r['uuid']] == r['uuid'])} stops "
+        f"{dict(Counter(r['type'] for r in recs if stop_of[r['uuid']] == r['uuid']))} in {len(recs)} points; "
+        f"{len(groups)} items in scope")
+    out(f"plan: {len(rows)} items paired {dict(Counter(r['rec']['type'] for r in rows))}, "
+        f"{sum(1 for r in rows if r.get('munis'))} with a municipality, skipped {dict(stats)} -> {path}")
+
+
+def build_areas():
+    """Current municipalities paired with their swissBOUNDARIES3D polygon by BFS number (P771), unique both ways; the
+    area to state (whole hectares) follows BATCHES["areas"]["rules"]["lake"]."""
+    import sqlite3
+    from common import fetch_dataset, release_date
+    rules = BATCHES["areas"]["rules"]
+    folder = fetch_dataset("ch.swisstopo.swissboundaries3d", ".gpkg.zip")
+    release, date = folder.name, release_date("ch.swisstopo.swissboundaries3d", folder.name)
+    con = sqlite3.connect(str(next(folder.rglob("*.gpkg"))))
+    polys = defaultdict(list)
+    for uuid, bfs, name, ha, lake, art, icc in con.execute(
+            "select uuid, bfs_nummer, name, gem_flaeche, see_flaeche, objektart, icc from tlm_hoheitsgebiet"):
+        if art == "Gemeindegebiet" and icc == "CH" and bfs:      # not Liechtenstein, enclaves, lakes or condominiums
+            polys[int(bfs)].append({"uuid": uuid, "name": name, "group": "municipality", "bfs": int(bfs),
+                                    "ha": int(round(ha)), "lake_ha": int(round(lake or 0))})
+    items_of, codes_of = defaultdict(set), defaultdict(set)
+    for item, code in sparql_tsv("SELECT ?item ?code WHERE { ?item wdt:P31 wd:Q70208 ; wdt:P771 ?code . "
+                                 "MINUS { ?item wdt:P576 ?end } }", "municipalities.tsv"):
+        items_of[int(literal(code)[0])].add(qid(item))
+        codes_of[qid(item)].add(int(literal(code)[0]))
+    stats, rows = Counter(), []
+    for bfs, recs in sorted(polys.items()):
+        qs = items_of.get(bfs, set())
+        if len(recs) != 1 or len(qs) != 1:
+            stats["no item" if not qs else "several items" if len(qs) > 1 else "several polygons"] += 1
+            continue
+        q, r = next(iter(qs)), recs[0]
+        if len(codes_of[q] & set(polys)) != 1:
+            stats["item has several current BFS numbers"] += 1
+            continue
+        if r["lake_ha"] and rules["lake"] == "skip":
+            stats["share of a lake (rule: skip)"] += 1
+            continue
+        r["area_ha"] = r["ha"] - r["lake_ha"] if rules["lake"] == "land" else r["ha"]
+        rows.append({"kind": "edit", "batch": "areas", "qid": q, "date": date, "rec": r})
+    stale = sorted((q for q, codes in codes_of.items() if not codes & set(polys)), key=lambda q: int(q[1:]))
+    if stale:                                         # e.g. merged municipalities whose item lacks P576
+        out(f"{len(stale)} municipality items without P576 have no current BFS number: {' '.join(stale)}")
+    path = plan_path("areas")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps({"release": release, "date": date, "rules": rules, "items_in_scope": len(codes_of)}) + "\n")
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    out(f"{release} (valid on {date[1:11]}): {len(polys)} municipalities, {len(codes_of)} current municipality items")
+    out(f"plan: {len(rows)} items paired, skipped {dict(stats)}, rules {rules} -> {path}")
+
+
 def build(batch=""):
     if batch == "p131":
         return build_p131()
+    if batch == "stations":
+        return build_stations()
+    if batch == "areas":
+        return build_areas()
     cfg = BATCHES[batch]
     classes, cache, tag = cfg["classes"], cfg["cache"], ({"batch": batch} if batch else {})
     recs, release = swissnames3d(cfg["types"])

@@ -22,7 +22,9 @@ QLEVER = "https://qlever.dev/api/wikidata"
 
 SWISSNAMES3D, SWISSBOUNDARIES3D = "Q141593662", "Q141599379"   # dataset items cited in references
 METRE = "http://www.wikidata.org/entity/Q11573"
+KM2, HECTARE, M2 = ("http://www.wikidata.org/entity/" + q for q in ("Q712226", "Q35852", "Q25343"))
 BEST_REFERENCED = "Q98386534"                                  # "best referenced value" (reason for preferred rank)
+MOST_RECENT = "Q71533355"                                      # "most recent value" (reason for preferred rank)
 IMPORT_ONLY = {"P143", "P813", "P4656"}                         # imported from a Wikimedia project / retrieved / import URL
 
 # Wikidata class -> feature group, and swissNAMES3D object type -> feature group
@@ -96,6 +98,55 @@ P131_NOT = ("Q15324", "Q35666", "Q473972", "Q355304", "Q56061", "Q82794", "Q1620
             "Q728937", "Q12280", "Q44377", "Q34379", "Q3325736")   # ...musical instruments, artist-run initiatives
 BATCHES["p131"] = {"plan": "plan_p131.jsonl", "cache": "p131_", "covers": ["buildings and other located items"],
                    "note": "Buildings and other located items get only their municipality, from swissBOUNDARIES3D."}
+# Fifth batch, "stations": railway stations and other public transport stops, paired with swissNAMES3D's stops
+# ("Haltestelle Bahn" also covers tram and metro stops; "Uebrige Bahnen" are the stops of cable cars and funiculars).
+# Edits only, and only three things: swisstopo as a source for a position within 50 m, the official name, and the
+# municipality. No labels: station labels follow their own conventions ("Bahnhof X", "X railway station", "gare de X").
+# A stop is often several swissNAMES3D points (one per platform or direction): points of the same type and name within
+# STATION_LINK metres are one stop, and an item and a stop are paired only when each is the other's only candidate.
+# Car loading stations ("Verladestation": car trains and car ferries, 14 stops) are left out.
+STATION_TYPES = {"Haltestelle Bahn": "rail", "Haltestelle Bus": "bus", "Haltestelle Schiff": "boat", "Uebrige Bahnen": "cable"}
+_RAIL = ("Q55488 Q55678 Q27996460 Q2175765 Q928830 Q22808403 Q22808404 Q11670533 Q63979268 Q1793804 Q18543139 Q55485 "
+         "Q55491 Q114782406 Q1402443 Q1567913 Q55677 Q11606300 Q55490 Q2451577 Q1335652 Q55484 Q1147171 Q125306799 "
+         "Q13433889 Q4346602 Q1406904 Q125695092").split()
+#  railway station, railway stop, Haltepunkt, tram stop, metro station, underground station, station located on surface,
+#  elevated station, people mover station, S-Bahn station, central station, dead-end station, underground railway
+#  station, break-of-gauge station, border station, harbour station, Keilbahnhof, last station, through station,
+#  junction station, airport station, multi-level station, interchange station, station accessible only by rail,
+#  staggered platforms, passenger station, inter-city station, car-train station
+STATION_CLASSES = {**{q: ("rail",) for q in _RAIL},
+                   "Q99980564": ("rail", "cable"), "Q2391004": ("rail", "cable"),       # top station, bottom station
+                   "Q107133821": ("rail", "cable"), "Q15915771": ("rail", "cable"),     # middle station, funicular station
+                   "Q44696264": ("cable",),                                            # aerial tramway station
+                   "Q813817": ("rail", "bus"), "Q953806": ("bus",), "Q494829": ("bus",),  # request stop, bus stop, bus station
+                   **{q: ("boat",) for q in ("Q863454", "Q16938673", "Q3543043", "Q828909", "Q2240172", "Q4303352", "Q1478783")}}
+#                  pier, landing, quay, wharf, jetty, passenger ship terminal, ferry port
+STATION_NOT = ("Q4663385", "Q65464941", "Q168565")          # former railway station, former railway stop, ghost station
+STATION_CLOSED = ("Q11639308", "Q56651571", "Q104664889", "Q56556915", "Q55570340")   # state of use (P5817): decommissioned,
+#                                                          out of service, permanently closed, demolished, closed to the public
+STATION_LINK = 300
+# Pairing distance: of the items whose exact name is a stop of a compatible type within 5 km, 99% lie within 200 m of
+# it. Deliberately not in RADIUS: edit.build_edit (labels!) must never handle these rows, and fails on them.
+STATION_RADIUS = 250
+BATCHES["stations"] = {"plan": "plan_stations.jsonl", "cache": "stations_",
+                       "covers": ["railway stations and other public transport stops"],
+                       "note": "Railway stations and other public transport stops get only a source for their position, "
+                               "their official name and their municipality: no labels, heights or new items."}
+# Sixth batch, "areas": the area of each current municipality, from its swissBOUNDARIES3D polygon (gem_flaeche, whole
+# hectares, as of the release date), paired by BFS number (P771), unique both ways. Rules (see edit_stations_areas.py):
+#   lake: a municipality with a share of a large lake (see_flaeche > 0): "skip" (left out), "land" (area without the
+#         lake share, which is how the Federal Statistical Office's values on Wikidata count it) or "total";
+#   equal_dated: an equal value is there only with another point in time: "new" (add the dated value), "source" (cite
+#         swissBOUNDARIES3D on it anyway) or "skip";
+#   different: no equal value: "add" (dated value alongside the others) or "skip";
+#   rank: of a new value: "normal" or "preferred" (with reason "most recent value").
+# An equal value without point in time (or with the release date) always gets the source. Nothing is ever removed.
+AREA_RULES = {"lake": "skip", "equal_dated": "skip", "different": "add", "rank": "preferred"}
+BATCHES["areas"] = {"plan": "plan_areas.jsonl", "cache": "areas_", "covers": ["municipalities"], "rules": AREA_RULES,
+                    "note": "Municipalities get their area from swissBOUNDARIES3D, in square kilometres with the date the "
+                            "boundaries are valid on as point in time, or swisstopo as a source for an equal area without "
+                            "a date." + (" Municipalities with a share of a large lake are left out."
+                                         if AREA_RULES["lake"] == "skip" else "")}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")
@@ -197,6 +248,11 @@ def latest_asset(collection, suffix):
     item = max(items, key=lambda f: f["properties"].get("datetime") or f["id"])
     href = next(a["href"] for k, a in item["assets"].items() if k.endswith(suffix))
     return item["id"], href
+
+
+def release_date(collection, release):
+    """The date a release is valid on, from swisstopo's STAC API, as a Wikidata time ("+2026-01-01T00:00:00Z")."""
+    return "+" + curl_json(f"{STAC}/{collection}/items/{release}")["properties"]["datetime"][:10] + "T00:00:00Z"
 
 
 def fetch_dataset(collection, suffix):
@@ -394,6 +450,24 @@ def coord_claim(lat, lon, ref, rank="normal"):
 
 def mono_claim(pid, text, lang, ref):
     return statement(pid, {"type": "monolingualtext", "value": {"text": text, "language": lang}}, ref)
+
+
+def day_snak(pid, date):
+    return {"snaktype": "value", "property": pid, "datavalue": {"type": "time", "value": {
+        "time": date, "timezone": 0, "before": 0, "after": 0, "precision": 11,
+        "calendarmodel": "http://www.wikidata.org/entity/Q1985727"}}}
+
+
+def area_claim(ha, date, ref, rank="normal"):
+    """Area in square kilometres (whole hectares, so two decimals) at a point in time; a preferred one says why."""
+    c = statement("P2046", {"type": "quantity", "value": {"amount": f"+{ha // 100}.{ha % 100:02d}", "unit": KM2}}, ref)
+    c["qualifiers"], c["qualifiers-order"] = {"P585": [day_snak("P585", date)]}, ["P585"]
+    if rank == "preferred":
+        c["rank"] = "preferred"
+        c["qualifiers"]["P7452"] = [{"snaktype": "value", "property": "P7452",
+                                     "datavalue": {"type": "wikibase-entityid", "value": entity(MOST_RECENT)}}]
+        c["qualifiers-order"].append("P7452")
+    return c
 
 
 def cites(claim, dataset):
