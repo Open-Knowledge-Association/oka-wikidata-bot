@@ -79,6 +79,7 @@ def out(*a):
 # ---------------------------------------------------------------- fetching (polite: one request per second per site)
 
 _last = {}
+QLEVER_GAP = 0.5            # seconds between query-service requests (it answers bursts with 429)
 
 
 def get(url, as_json=False):
@@ -108,7 +109,9 @@ def qlever(query):
            "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX schema: <http://schema.org/> ")
     query = "PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + pfx + query
     import shutil
-    for attempt in range(1, 6):                     # an error page is not an empty result: wait and retry
+    for attempt in range(1, 10):                    # an error page is not an empty result: wait and retry
+        time.sleep(max(0.0, QLEVER_GAP - (time.time() - _last.get("qlever", 0))))
+        _last["qlever"] = time.time()
         if shutil.which("curl"):
             text = subprocess.run(["curl", "-s", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
                                    "Accept: text/tab-separated-values", "--data-urlencode", "query=" + query],
@@ -123,7 +126,8 @@ def qlever(query):
                 text = str(e)
         if text.startswith("?"):
             break
-        time.sleep(10 * attempt)
+        busy = "429" in text[:400] or "Too Many Requests" in text[:400]
+        time.sleep(min(60 * attempt, 600) if busy else 10 * attempt)   # QLever's rate limit: back off for minutes
     else:
         raise RuntimeError(f"query service failed: {text[:200]}")
     rows = [line.split("\t") for line in text.strip().splitlines()[1:]]

@@ -100,11 +100,24 @@ def plan():
                      "qid": r["item"], "matched_by": r["matched_by"]}
                     for r in csv.DictReader(open(review, encoding="utf-8")) if r["item"]]
     out(f"{work}: {len(entries)} entries on one item each; {len(skipped)} left out (identifier on several items, or several on one)")
-    for n, e in enumerate(entries, 1):
-        e["title"], e["facts"], e["notes"] = (d.hds_facts(e["id"], e["kind"]) if e["work"] == "hds"
-                                              else d.snl_facts(e["id"], e["kind"], e["work"]))
-        if n % 5000 == 0:
-            out(f"facts for {n} of {len(entries)} entries")
+    partial = WORK2 / f"full_plan_{work}.partial.jsonl"          # facts as they are computed: a restart resumes
+    done = {}
+    if partial.exists():
+        for line in open(partial, encoding="utf-8"):
+            if line.strip():
+                r = json.loads(line)
+                done[(r["id"], r["qid"])] = r
+    with open(partial, "a", encoding="utf-8") as f:
+        for n, e in enumerate(entries, 1):
+            if (e["id"], e["qid"]) in done:
+                e.update({k: done[(e["id"], e["qid"])][k] for k in ("title", "facts", "notes")})
+            else:
+                e["title"], e["facts"], e["notes"] = (d.hds_facts(e["id"], e["kind"]) if e["work"] == "hds"
+                                                      else d.snl_facts(e["id"], e["kind"], e["work"]))
+                f.write(json.dumps(e, ensure_ascii=False) + "\n")
+                f.flush()
+            if n % 5000 == 0:
+                out(f"facts for {n} of {len(entries)} entries")
     held_elsewhere(entries)
     entries = [e for e in entries if e["facts"] or e["notes"]]
     with open(plan_file(work), "w", encoding="utf-8") as f:
