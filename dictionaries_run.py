@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 import urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 from itertools import zip_longest
 from pathlib import Path
 
@@ -28,6 +29,7 @@ plan_file = lambda work: WORK2 / f"full_plan_{work}.jsonl"
 LOG = HERE / "dictionary_edits.csv"
 LEFT = HERE / "dictionary_left_alone.csv"
 SUMMARY_PAGE = "User:OKA bot/Dictionaries"
+PLAN_THREADS = 6             # entries whose facts are worked out at once (lookups are spaced per query service)
 SNL_KINDS = {"Q5": "person", "Q755707": "place", "Q4830453": "organisation", "Q43229": "organisation",
              "Q6881511": "organisation"}
 
@@ -91,6 +93,35 @@ def held_elsewhere(entries):
         e["facts"] = keep
 
 
+def warm_up(work, todo, facts):
+    """Run the entries once without asking anything, noting the places and people they would look up, then fetch
+    those 100 names to a query: the real pass finds nearly all of them answered."""
+    places, people = set(), set()
+
+    def note_place(name, tiers, langs, country, within=None, min_links=5):
+        if within is None:
+            places.add((name, tiers, langs, country, min_links))
+
+    def note_person(name, born, died):
+        if (born or died) and len(name.split()) >= 2:
+            people.add(name)
+
+    real = d.place, d.person_named, d.viaf_current
+    d.place, d.person_named, d.viaf_current = note_place, note_person, lambda vid: None
+    try:
+        for e in todo:
+            if work == "hds" or (WORK2 / work / f"{e['id'].replace('/', '_')}.json").exists():   # nothing fetched
+                try:
+                    facts(e)
+                except Exception:
+                    pass                                    # a real error shows in the real pass
+    finally:
+        d.place, d.person_named, d.viaf_current = real
+    out(f"{work}: looking up {len(places)} place names and {len(people)} names of people, 100 to a query")
+    d.prefetch_places(places)
+    d.prefetch_humans(people)
+
+
 def plan():
     work = sys.argv[2]
     entries, skipped = linked(work)
@@ -107,22 +138,35 @@ def plan():
             if line.strip():
                 r = json.loads(line)
                 done[(r["id"], r["qid"])] = r
-    with open(partial, "a", encoding="utf-8") as f:
-        for n, e in enumerate(entries, 1):
-            if (e["id"], e["qid"]) in done:
-                e.update({k: done[(e["id"], e["qid"])][k] for k in ("title", "facts", "notes")})
-            else:
-                e["title"], e["facts"], e["notes"] = (d.hds_facts(e["id"], e["kind"]) if e["work"] == "hds"
-                                                      else d.snl_facts(e["id"], e["kind"], e["work"]))
-                f.write(json.dumps(e, ensure_ascii=False) + "\n")
-                f.flush()
-            if n % 5000 == 0:
-                out(f"facts for {n} of {len(entries)} entries")
+    todo = []
+    for e in entries:
+        if (e["id"], e["qid"]) in done:
+            e.update({k: done[(e["id"], e["qid"])][k] for k in ("title", "facts", "notes")})
+        else:
+            todo.append(e)
+    if work == "hds":                                   # what the threads share is read once, before they start
+        d.hds_open()
+    else:
+        for pid in ("P4342", "P5080", "P5081"):
+            d.by_id(pid)
+    facts = (lambda e: d.hds_facts(e["id"], e["kind"])) if work == "hds" else \
+        (lambda e: d.snl_facts(e["id"], e["kind"], e["work"]))
+    warm_up(work, todo, facts)
+    out(f"{work}: facts for {len(todo)} entries ({len(entries) - len(todo)} done earlier), {PLAN_THREADS} at a time")
+    with open(partial, "a", encoding="utf-8") as f, ThreadPoolExecutor(PLAN_THREADS) as pool:
+        for n, (e, got) in enumerate(zip(todo, pool.map(facts, todo)), 1):
+            e["title"], e["facts"], e["notes"] = got
+            f.write(json.dumps(e, ensure_ascii=False) + "\n")
+            f.flush()
+            if n % 1000 == 0:
+                out(f"facts for {n} of {len(todo)} entries; queries: {dict(d.asked)}")
     held_elsewhere(entries)
     entries = [e for e in entries if e["facts"] or e["notes"]]
-    with open(plan_file(work), "w", encoding="utf-8") as f:
+    tmp = plan_file(work).with_suffix(".tmp")         # a running `run` reads only whole plans
+    with open(tmp, "w", encoding="utf-8") as f:
         for e in entries:
             f.write(json.dumps(e, ensure_ascii=False) + "\n")
+    os.replace(tmp, plan_file(work))
     with open(WORK2 / f"full_plan_{work}_skipped.csv", "w", encoding="utf-8", newline="") as f:
         csv.writer(f).writerows([("work", "entry", "items", "reason"), *skipped])
     out(f"{work}: {len(entries)} entries with something to add or check, {sum(len(e['facts']) for e in entries)} facts")
@@ -432,34 +476,37 @@ def run():
     site = bot_site(1)                        # at most one edit a second (60 a minute); writes the login settings first
     import pywikibot
     d.REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 2|OKA bot task 2]]"
-    done = logged()
-    todo = [e for w in WORKS if plan_file(w).exists() for e in map(json.loads, open(plan_file(w), encoding="utf-8"))
-            if (e["work"], e["id"]) not in done]
-    by_work = [[e for e in todo if e["work"] == w] for w in WORKS]
-    todo = [e for pair in zip_longest(*by_work) for e in pair if e]      # the works in turn
-    out(f"{len(todo)} entries to do")
-    for b in range(0, len(todo), 50):
-        batch = todo[b:b + 50]
-        today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
-        live = items(sorted({e["qid"] for e in batch}))
-        labels = d.place_labels(live, batch)
-        log, left = [], []
-        for e in batch:
-            ent = live.get(e["qid"], {})
-            claims, changes, notes = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
-            revid, err = d.save(site, e["qid"], claims, changes, e["work"], ent.get("lastrevid")) if claims else (None, None)
-            now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-            log.append((now, e["work"], e["kind"], e["id"], e["qid"], revid or "",
-                        err or ("; ".join(changes) if revid else "no change")))
-            left += [(e["work"], e["id"], e["qid"], e.get("title", ""), n) for n in notes]
-        append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)
-        append(LEFT, ("work", "entry", "item", "title", "note"), left)
-        out(f"{b + len(batch)} of {len(todo)}: {sum(1 for r in log if r[5])} saved in this batch")
-        if (b // 50) % 10 == 9 or b + 50 >= len(todo):
-            publish()
-            page = pywikibot.Page(site, SUMMARY_PAGE)
-            page.text = summary_text()
-            page.save("Progress of task 2", minor=True)
+    while True:                               # a work whose plan is finished meanwhile is taken up after the others
+        done = logged()
+        todo = [e for w in WORKS if plan_file(w).exists() for e in map(json.loads, open(plan_file(w), encoding="utf-8"))
+                if (e["work"], e["id"]) not in done]
+        if not todo:
+            break
+        by_work = [[e for e in todo if e["work"] == w] for w in WORKS]
+        todo = [e for pair in zip_longest(*by_work) for e in pair if e]      # the works in turn
+        out(f"{len(todo)} entries to do")
+        for b in range(0, len(todo), 50):
+            batch = todo[b:b + 50]
+            today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
+            live = items(sorted({e["qid"] for e in batch}))
+            labels = d.place_labels(live, batch)
+            log, left = [], []
+            for e in batch:
+                ent = live.get(e["qid"], {})
+                claims, changes, notes = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
+                revid, err = d.save(site, e["qid"], claims, changes, e["work"], ent.get("lastrevid")) if claims else (None, None)
+                now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                log.append((now, e["work"], e["kind"], e["id"], e["qid"], revid or "",
+                            err or ("; ".join(changes) if revid else "no change")))
+                left += [(e["work"], e["id"], e["qid"], e.get("title", ""), n) for n in notes]
+            append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)
+            append(LEFT, ("work", "entry", "item", "title", "note"), left)
+            out(f"{b + len(batch)} of {len(todo)}: {sum(1 for r in log if r[5])} saved in this batch")
+            if (b // 50) % 10 == 9 or b + 50 >= len(todo):
+                publish()
+                page = pywikibot.Page(site, SUMMARY_PAGE)
+                page.text = summary_text()
+                page.save("Progress of task 2", minor=True)
 
 
 if __name__ == "__main__":

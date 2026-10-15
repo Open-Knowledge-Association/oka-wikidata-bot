@@ -14,6 +14,7 @@ Rules:
 - places, occupations and other items are used only when the name resolves to exactly one item of the right kind;
 - full dates only from 1813 (Switzerland) and 1700 (Norway), when every region used the Gregorian calendar.
 """
+import collections
 import copy
 import csv
 import datetime
@@ -24,7 +25,9 @@ import random
 import re
 import subprocess
 import sys
+import threading
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -79,13 +82,27 @@ def out(*a):
 # ---------------------------------------------------------------- fetching (polite: one request per second per site)
 
 _last = {}
-QLEVER_GAP = 0.5            # seconds between query-service requests (it answers bursts with 429)
+_lock = threading.Lock()    # planning computes several entries at once: requests are spaced across threads
+QLEVER, WDQS = "https://qlever.dev/api/wikidata", "https://query.wikidata.org/sparql"
+QLEVER_GAP = 1.0            # seconds between QLever requests: it allows about one a second (and bursts of
+                            # about 13), refusing the rest with 429 (measured 2026-10-15)
+GAPS = {QLEVER: QLEVER_GAP, WDQS: 0.5}
+SLOWER = 3.0                # seconds the Wikidata Query Service usually takes longer than QLever
+PREFIXES = ("PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
+            "PREFIX wd: <http://www.wikidata.org/entity/> PREFIX wdt: <http://www.wikidata.org/prop/direct/> "
+            "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX schema: <http://schema.org/> ")
+
+
+def wait_turn(key, gap):
+    """Wait until `key` (a site or query service) may be asked again: `gap` seconds after the previous request."""
+    with _lock:
+        at = max(time.time(), _last.get(key, 0) + gap)
+        _last[key] = at
+    time.sleep(max(0.0, at - time.time()))
 
 
 def get(url, as_json=False):
-    host = urllib.parse.urlsplit(url).netloc
-    time.sleep(max(0.0, 1.0 - (time.time() - _last.get(host, 0))))
-    _last[host] = time.time()
+    wait_turn(urllib.parse.urlsplit(url).netloc, 1.0)
     if as_json:
         return curl_json(url)
     import shutil
@@ -105,19 +122,17 @@ def cached(name, fetch):
 
 
 def qlever(query):
-    pfx = ("PREFIX wd: <http://www.wikidata.org/entity/> PREFIX wdt: <http://www.wikidata.org/prop/direct/> "
-           "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX schema: <http://schema.org/> ")
-    query = "PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + pfx + query
+    """A big query (whole identifier lists): QLever only."""
+    query = PREFIXES + query
     import shutil
     for attempt in range(1, 10):                    # an error page is not an empty result: wait and retry
-        time.sleep(max(0.0, QLEVER_GAP - (time.time() - _last.get("qlever", 0))))
-        _last["qlever"] = time.time()
+        wait_turn(QLEVER, QLEVER_GAP)
         if shutil.which("curl"):
-            text = subprocess.run(["curl", "-s", "https://qlever.dev/api/wikidata", "--max-time", "300", "-H",
+            text = subprocess.run(["curl", "-s", QLEVER, "--max-time", "300", "-H",
                                    "Accept: text/tab-separated-values", "--data-urlencode", "query=" + query],
                                   capture_output=True, text=True, encoding="utf-8").stdout
         else:                                       # Toolforge has no curl
-            req = urllib.request.Request("https://qlever.dev/api/wikidata", urllib.parse.urlencode({"query": query}).encode(),
+            req = urllib.request.Request(QLEVER, urllib.parse.urlencode({"query": query}).encode(),
                                          {"User-Agent": UA, "Accept": "text/tab-separated-values"})
             try:
                 with urllib.request.urlopen(req, timeout=300) as r:
@@ -130,9 +145,75 @@ def qlever(query):
         time.sleep(min(60 * attempt, 600) if busy else 10 * attempt)   # QLever's rate limit: back off for minutes
     else:
         raise RuntimeError(f"query service failed: {text[:200]}")
+    return tsv_rows(text)
+
+
+def tsv_rows(text):
     rows = [line.split("\t") for line in text.strip().splitlines()[1:]]
     return [[v.strip("<>").rsplit("/", 1)[-1].strip('"') if v.startswith("<") else v.split('"')[1] if '"' in v else v
              for v in row] for row in rows]
+
+
+_rest = {}                          # query service -> resting until (after it answered 429)
+asked = collections.Counter()       # requests per query service, and how many it refused with 429
+
+
+def post_query(endpoint, query):
+    """(HTTP status, body, Retry-After) of one query; status 0 when the service could not be reached."""
+    import shutil
+    if shutil.which("curl"):                        # the PC, whose Python has an outdated certificate store
+        got = subprocess.run(["curl", "-s", "-D", "-", "-w", "\n%{http_code}", endpoint, "--max-time", "120", "-A", UA,
+                              "-H", "Accept: text/tab-separated-values", "--data-urlencode", "query=" + query],
+                             capture_output=True, text=True, encoding="utf-8").stdout
+        body, _, code = got.rpartition("\n")
+        head = ""
+        while body.startswith("HTTP/"):             # header blocks (a '100 Continue' may come first), then the body
+            block, _, body = body.partition("\n\n")  # (text mode has turned CRLF into LF)
+            head += block
+        retry_after = re.search(r"(?im)^retry-after:\s*(\d+)", head)
+        return int(code) if code.isdigit() else 0, body, retry_after.group(1) if retry_after else None
+    req = urllib.request.Request(endpoint, urllib.parse.urlencode({"query": query}).encode(),
+                                 {"User-Agent": UA, "Accept": "text/tab-separated-values"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.status, r.read().decode("utf-8"), None
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode("utf-8", "replace"), e.headers.get("Retry-After")
+    except OSError as e:
+        return 0, str(e), None
+
+
+def lookup(query):
+    """A small query (a name, an item). QLever answers in a quarter second but allows about one query a second
+    (and rate-limits Toolforge's shared address); the Wikidata Query Service, which holds the same Wikidata, often
+    takes seconds. So the latter is asked only when QLever's turn is more than a few seconds away, or it rests
+    after a 429. A query neither service accepts is reported and counts as no match."""
+    query = PREFIXES + query
+    refused, text = set(), ""
+    for attempt in range(1, 10):
+        with _lock:
+            now = time.time()
+            at, endpoint = min(((max(now, _last.get(e, 0) + gap, _rest.get(e, 0)), e)
+                                for e, gap in GAPS.items() if e not in refused),
+                               key=lambda c: c[0] + (SLOWER if c[1] == WDQS else 0))
+            _last[endpoint] = at
+            asked[endpoint] += 1
+        time.sleep(max(0.0, at - time.time()))
+        status, text, retry_after = post_query(endpoint, query)
+        if status == 200 and text.startswith("?"):
+            return tsv_rows(text)
+        if status == 429:
+            with _lock:
+                asked[endpoint + " 429"] += 1
+                _rest[endpoint] = time.time() + (int(retry_after) if (retry_after or "").isdigit() else 5)
+        elif status == 400:                         # the query itself: try the other service, then give up
+            refused.add(endpoint)
+            if len(refused) == len(GAPS):
+                out(f"query refused by both services, counted as no match: {query[len(PREFIXES):][:300]}")
+                return []
+        else:
+            time.sleep(5 * attempt)                 # an error page is not an empty result: wait and retry
+    raise RuntimeError(f"query services failed: {text[:200]}")
 
 
 def items(ids):
@@ -251,8 +332,8 @@ def norwegian_place(raw):
 @functools.lru_cache(maxsize=None)
 def named(q, name):
     """Whether this item has the name as a label or alias (e.g. Oslo is also called Kristiania)."""
-    lits = " ".join(f'"{name}"@{lang}' for lang in NO_LANGS + CH_LANGS + ("mul",))
-    return bool(qlever(f"SELECT ?l WHERE {{ VALUES ?l {{ {lits} }} wd:{q} rdfs:label|skos:altLabel ?l }}"))
+    lits = " ".join(f'{json.dumps(name, ensure_ascii=False)}@{lang}' for lang in NO_LANGS + CH_LANGS + ("mul",))
+    return bool(lookup(f"SELECT ?l WHERE {{ VALUES ?l {{ {lits} }} wd:{q} rdfs:label|skos:altLabel ?l }}"))
 
 
 @functools.lru_cache(maxsize=None)
@@ -261,9 +342,8 @@ def snl_linked(raw):
     m = re.search(r'href="https?://snl\.no/([^"#?]+)"', raw or "")
     if not m:
         return None
-    slug = urllib.parse.unquote(m.group(1))
-    rows = qlever(f"SELECT DISTINCT ?i WHERE {{ VALUES ?v {{ {json.dumps(slug)} {json.dumps(urllib.parse.quote(slug))} }} ?i wdt:P4342 ?v }}")
-    return rows[0][0] if len(rows) == 1 else None
+    qs = by_id("P4342").get(urllib.parse.unquote(m.group(1)), set())
+    return next(iter(qs)) if len(qs) == 1 else None
 
 
 def place(name, tiers, langs, country, within=None, min_links=5):
@@ -271,28 +351,67 @@ def place(name, tiers, langs, country, within=None, min_links=5):
     before municipality, the usual target of a place of birth); None if a tier has several or no tier has one.
     With `within` (a canton or municipality), aliases count as well, but only for items located in it. Without a
     country, only well-known places qualify (min_links Wikipedia articles and three times the next candidate)."""
-    name = clean(name).split(",")[0].strip()          # 'Lyngdal, Agder' -> 'Lyngdal'
-    if not name or re.search(r"[()\d]", name):
+    name = place_name(name)
+    if not name:
         return None
     key = (name, tiers, within, country)
     if key not in _places:
-        _places[key] = None
-        lits = " ".join(f'"{name}"@{lang}' for lang in langs + ("mul",))
+        lits = " ".join(f'{json.dumps(name, ensure_ascii=False)}@{lang}' for lang in langs + ("mul",))
         names = "{ ?i rdfs:label ?l } UNION { ?i skos:altLabel ?l }" if within else "?i rdfs:label ?l ."
         inside = f"?i wdt:P131* wd:{within} ." if within else ""
-        for classes in tiers:
-            cls = " ".join(f"wd:{c}" for c in classes)
-            in_country = f"; wdt:P17 wd:{country}" if country else ""
-            rows = qlever(f"SELECT DISTINCT ?i ?links WHERE {{ VALUES ?l {{ {lits} }} VALUES ?c {{ {cls} }} {names} "
-                          f"?i wdt:P31 ?c {in_country} ; wikibase:sitelinks ?links . {inside} }} ORDER BY DESC(?links)")
-            links = [int(r[1].split("^")[0].strip('"')) if not r[1].isdigit() else int(r[1]) for r in rows]
-            if (len(rows) == 1 and (country or links[0] >= min_links)) or \
-                    (len(rows) > 1 and links[0] >= min_links and links[0] >= 3 * links[1]):
-                _places[key] = rows[0][0]                # one candidate, or one far better known (a city, not its urban area)
-                break
-            if rows:
-                break                                    # several comparable candidates of the same kind: too unclear
+        in_country = f"; wdt:P17 wd:{country}" if country else ""
+        rows = lookup(f"SELECT DISTINCT ?i ?c ?links WHERE {{ VALUES ?l {{ {lits} }} VALUES ?c {{ {classes_of(tiers)} }} "
+                      f"{names} ?i wdt:P31 ?c {in_country} ; wikibase:sitelinks ?links . {inside} }}")
+        _places[key] = tier_choice(rows, tiers, country, min_links)
     return _places[key]
+
+
+def place_name(name):
+    name = clean(name).split(",")[0].strip()          # 'Lyngdal, Agder' -> 'Lyngdal'
+    return None if not name or re.search(r"[()\d]", name) else name
+
+
+def classes_of(tiers):
+    return " ".join(f"wd:{c}" for classes in tiers for c in classes)
+
+
+def tier_choice(rows, tiers, country, min_links):
+    """place()'s rule on (item, class, sitelinks) rows found for all tiers at once, applied tier by tier."""
+    for classes in tiers:
+        links = {r[0]: int(r[2].split("^")[0].strip('"')) if not r[2].isdigit() else int(r[2])
+                 for r in rows if r[1] in classes}
+        ranked = sorted(links.items(), key=lambda kv: -kv[1])
+        if (len(ranked) == 1 and (country or ranked[0][1] >= min_links)) or \
+                (len(ranked) > 1 and ranked[0][1] >= min_links and ranked[0][1] >= 3 * ranked[1][1]):
+            return ranked[0][0]                          # one candidate, or one far better known (a city, not its urban area)
+        if ranked:
+            return None                                  # several comparable candidates of the same kind: too unclear
+    return None
+
+
+PLAIN = re.compile(r'^[^"\\\t\n\r]+$')                   # names whose literal reads back unchanged in a list query
+
+
+def prefetch_places(calls):
+    """Look up many place() calls (name, tiers, langs, country, min_links; none `within`) 100 names to a query
+    instead of one each, and keep the answers as place() would. Odd names are left to place() itself."""
+    groups = {}
+    for name, tiers, langs, country, min_links in calls:
+        name = place_name(name)
+        if name and PLAIN.match(name) and (name, tiers, None, country) not in _places:
+            groups.setdefault((tiers, langs, country, min_links), set()).add(name)
+    for (tiers, langs, country, min_links), names in groups.items():
+        names, in_country = sorted(names), f"; wdt:P17 wd:{country}" if country else ""
+        for i in range(0, len(names), 100):
+            chunk = names[i:i + 100]
+            lits = " ".join(f'{json.dumps(n, ensure_ascii=False)}@{lang}' for n in chunk for lang in langs + ("mul",))
+            found = {}
+            for label, *row in qlever(f"SELECT DISTINCT ?l ?i ?c ?links WHERE {{ VALUES ?l {{ {lits} }} VALUES ?c "
+                                      f"{{ {classes_of(tiers)} }} ?i rdfs:label ?l . ?i wdt:P31 ?c {in_country} ; "
+                                      "wikibase:sitelinks ?links . }"):
+                found.setdefault(label, []).append(row)
+            for n in chunk:
+                _places[(n, tiers, None, country)] = tier_choice(found.get(n, []), tiers, country, min_links)
 
 
 # ---------------------------------------------------------------- HDS
@@ -329,25 +448,27 @@ def hds_open():
     return _open
 
 
-_viaf = {}
+_viaf, _viaf_lock = {}, threading.Lock()
 
 
 def viaf_current(vid):
     """VIAF merges clusters; an abandoned one names the cluster that replaced it. None when VIAF could not be asked
     (it throttles) or the cluster is gone without a successor: then the bot does not copy the ID."""
-    if vid not in _viaf:
-        _viaf[vid] = None
-        try:
-            time.sleep(1)
-            d = curl_json(f"https://viaf.org/viaf/{vid}", "-H", "Accept: application/json")
-            if "ns0:abandoned_viaf_record" in d:
-                target = (d["ns0:abandoned_viaf_record"].get("ns0:redirect") or {}).get("ns0:directto")
-                _viaf[vid] = str(target) if target else None
-            elif str((d.get("ns1:VIAFCluster") or {}).get("ns1:viafID", "")) == vid:
-                _viaf[vid] = vid
-        except (ValueError, KeyError, AttributeError, RuntimeError, OSError, subprocess.CalledProcessError):
-            pass
-    return _viaf[vid]
+    with _viaf_lock:                                # one request at a time, a second apart, whatever the threads
+        if vid not in _viaf:
+            found = None
+            try:
+                time.sleep(1)
+                d = curl_json(f"https://viaf.org/viaf/{vid}", "-H", "Accept: application/json")
+                if "ns0:abandoned_viaf_record" in d:
+                    target = (d["ns0:abandoned_viaf_record"].get("ns0:redirect") or {}).get("ns0:directto")
+                    found = str(target) if target else None
+                elif str((d.get("ns1:VIAFCluster") or {}).get("ns1:viafID", "")) == vid:
+                    found = vid
+            except (ValueError, KeyError, AttributeError, RuntimeError, OSError, subprocess.CalledProcessError):
+                pass
+            _viaf[vid] = found
+        return _viaf[vid]
 
 
 def life_years(precision):
@@ -497,9 +618,10 @@ def life_span(txt):
 
 def by_id(pid):
     if pid not in _by_id:
-        _by_id[pid] = {}
+        found = {}
         for q, ident in qlever(f"SELECT ?i ?id WHERE {{ ?i wdt:{pid} ?id }}"):
-            _by_id[pid].setdefault(urllib.parse.unquote(ident), set()).add(q)
+            found.setdefault(urllib.parse.unquote(ident), set()).add(q)
+        _by_id[pid] = found                         # whole, never half filled for another thread
     return _by_id[pid]
 
 
@@ -508,9 +630,11 @@ def person_named(name, born, died):
     """The one human item labelled exactly so whose known life years all match (at least one must be known)."""
     if not (born or died) or len(name.split()) < 2:
         return None
-    lits = " ".join(f"{json.dumps(name)}@{lang}" for lang in NO_LANGS + ("mul", "da", "sv", "de"))
-    rows = qlever(f"SELECT DISTINCT ?i ?b ?d WHERE {{ VALUES ?l {{ {lits} }} ?i rdfs:label ?l ; wdt:P31 wd:Q5 . "
-                  "OPTIONAL { ?i wdt:P569 ?b } OPTIONAL { ?i wdt:P570 ?d } }")
+    if name not in _humans:
+        lits = " ".join(f"{json.dumps(name)}@{lang}" for lang in HUMAN_LANGS)
+        _humans[name] = lookup(f"SELECT DISTINCT ?i ?b ?d WHERE {{ VALUES ?l {{ {lits} }} ?i rdfs:label ?l ; "
+                               "wdt:P31 wd:Q5 . OPTIONAL { ?i wdt:P569 ?b } OPTIONAL { ?i wdt:P570 ?d } }")
+    rows = _humans[name]
     year = lambda v: int(m.group(1)) if (m := re.match(r"(-?\d{1,4})-", v or "")) else None
     years = {}
     for r in rows:
@@ -521,9 +645,28 @@ def person_named(name, born, died):
     return fit[0] if len(fit) == 1 else None
 
 
+HUMAN_LANGS = NO_LANGS + ("mul", "da", "sv", "de")
+_humans = {}                                        # name -> (item, birth date, death date) rows of humans so labelled
+
+
+def prefetch_humans(names):
+    """Look up the humans labelled with each name, 100 names to a query, as person_named() would one by one."""
+    names = sorted({n for n in names if n not in _humans and PLAIN.match(n)})
+    for i in range(0, len(names), 100):
+        chunk = names[i:i + 100]
+        lits = " ".join(f"{json.dumps(n)}@{lang}" for n in chunk for lang in HUMAN_LANGS)
+        found = {}
+        for r in qlever(f"SELECT DISTINCT ?l ?i ?b ?d WHERE {{ VALUES ?l {{ {lits} }} ?i rdfs:label ?l ; wdt:P31 wd:Q5 . "
+                        "OPTIONAL { ?i wdt:P569 ?b } OPTIONAL { ?i wdt:P570 ?d } }"):
+            r = r + [""] * (4 - len(r))
+            found.setdefault(r[0], []).append(r[1:])
+        for n in chunk:
+            _humans[n] = found.get(n, [])
+
+
 def sex(q):
     if q not in _sex:
-        rows = qlever(f"SELECT ?s WHERE {{ wd:{q} wdt:P21 ?s }}")
+        rows = lookup(f"SELECT ?s WHERE {{ wd:{q} wdt:P21 ?s }}")
         _sex[q] = rows[0][0] if len(rows) == 1 else None
     return _sex[q]
 
