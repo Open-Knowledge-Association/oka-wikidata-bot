@@ -22,7 +22,7 @@ from pathlib import Path
 import dictionaries as d
 from dictionaries import IDS, WORK2, WORKS, items, out, qlever
 
-APPROVED = False                  # set once a bureaucrat approves the request; until then `run` refuses to start
+APPROVED = True               # Wikidata:Requests for permissions/Bot/OKA bot 2, approved by Ymblanter on 2026-10-14
 HERE = Path(__file__).parent
 plan_file = lambda work: WORK2 / f"full_plan_{work}.jsonl"
 LOG = HERE / "dictionary_edits.csv"
