@@ -94,32 +94,56 @@ def held_elsewhere(entries):
 
 
 def warm_up(work, todo, facts):
-    """Run the entries once without asking anything, noting the places and people they would look up, then fetch
-    those 100 names to a query: the real pass finds nearly all of them answered."""
-    places, people = set(), set()
+    """Run the entries without asking anything, noting the places, people and countries they would look up, then
+    fetch those 100 names to a query: the real pass finds nearly all of them answered. Rounds repeat for the entries
+    that met unknown names, as a town abroad is looked up once its country is known, and an old name once no item has
+    it as its label."""
+    todo = [e for e in todo if work == "hds" or (WORK2 / work / f"{e['id'].replace('/', '_')}.json").exists()]
+    for n in range(1, 6):
+        places, people, regions, met = set(), set(), set(), [False]
 
-    def note_place(name, tiers, langs, country, within=None, min_links=5):
-        if within is None:
-            places.add((name, tiers, langs, country, min_links))
+        def note_place(name, tiers, langs, country, within=None, min_links=5, aliases=False):
+            key = (d.place_name(name), tiers, within, country, aliases)
+            if key in d._places:
+                return d._places[key]                   # answered in an earlier round
+            met[0] = True
+            if within is None:
+                places.add((name, tiers, langs, country, min_links, aliases))
 
-    def note_person(name, born, died):
-        if (born or died) and len(name.split()) >= 2:
-            people.add(name)
+        def note_person(name, born, died):
+            if (born or died) and len(name.split()) >= 2 and name not in d._humans:
+                met[0] = True
+                people.add(name)
 
-    real = d.place, d.person_named, d.viaf_current
-    d.place, d.person_named, d.viaf_current = note_place, note_person, lambda vid: None
-    try:
-        for e in todo:
-            if work == "hds" or (WORK2 / work / f"{e['id'].replace('/', '_')}.json").exists():   # nothing fetched
+        def note_region(raw):
+            name = d.region_name(raw)
+            if name in d._regions:
+                return d._regions[name]
+            met[0] = True
+            regions.add(name)
+
+        real = d.place, d.person_named, d.viaf_current, d.region_country
+        d.place, d.person_named, d.viaf_current, d.region_country = note_place, note_person, lambda vid: None, note_region
+        again = []
+        try:
+            for e in todo:
+                met[0] = False
                 try:
                     facts(e)
                 except Exception:
-                    pass                                    # a real error shows in the real pass
-    finally:
-        d.place, d.person_named, d.viaf_current = real
-    out(f"{work}: looking up {len(places)} place names and {len(people)} names of people, 100 to a query")
-    d.prefetch_places(places)
-    d.prefetch_humans(people)
+                    pass                                # a real error shows in the real pass
+                if met[0]:
+                    again.append(e)
+        finally:
+            d.place, d.person_named, d.viaf_current, d.region_country = real
+        if not (places or people or regions):
+            break
+        out(f"{work}, round {n}: {len(todo)} entries, looking up {len(regions)} countries, {len(places)} places and "
+            f"{len(people)} people, 100 to a query")
+        d.prefetch_regions(regions)
+        d.prefetch_places(places)
+        d.prefetch_humans(people)
+        todo = again
 
 
 def plan():
@@ -144,7 +168,8 @@ def plan():
             e.update({k: done[(e["id"], e["qid"])][k] for k in ("title", "facts", "notes")})
         else:
             todo.append(e)
-    if work == "hds":                                   # what the threads share is read once, before they start
+    d.settlement_classes()                              # what the threads share is read once, before they start
+    if work == "hds":
         d.hds_open()
     else:
         for pid in ("P4342", "P5080", "P5081"):
