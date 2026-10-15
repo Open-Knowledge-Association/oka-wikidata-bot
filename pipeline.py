@@ -257,7 +257,7 @@ def userpage_text():
     notes = "".join(" " + BATCHES[b]["note"] for b in batches if BATCHES[b].get("note"))
     to_check = sum(1 for _, plan_rows in plans for r in plan_rows if r["kind"] == "edit")
     to_create = sum(1 for _, plan_rows in plans for r in plan_rows if r["kind"] == "create")
-    return f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
+    return f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]]); facts from reference works such as the Historical Dictionary of Switzerland and Store norske leksikon ([[Wikidata:Requests for permissions/Bot/OKA bot 2|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
 ''This page is updated automatically by the bot after each run, with the operator's permission.''
 
 Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Association). To report a problem, please write on [[User talk:7804j]] or to info@oka.wiki. If the bot misbehaves and I'm not around, any administrator may block it.
@@ -272,6 +272,14 @@ For Swiss {covers}, the bot adds swisstopo as a source to matching heights and p
 * Items edited: {edited:,}. Items created: {created:,}. Last run: {last}.
 * Planned: {to_check:,} items to check and {to_create:,} to create.
 * Every edit is listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv edits.csv].
+
+== Task 2: facts from reference works ==
+Approved at [[Wikidata:Requests for permissions/Bot/OKA bot 2]]. Sources: the [[Q642074|Historical Dictionary of Switzerland]] (HDS), [[Q746368|Store norske leksikon]] (SNL) and the other works on snl.no, [[Q11992482|Norsk kunstnerleksikon]] and [[Q19378370|Store medisinske leksikon]].
+
+For each entry linked to an item, the bot adds the facts the entry states (for people, dates and places of birth and death, occupations, relatives and places of origin; for organisations and places, the corresponding facts), each with a reference to the entry, and adds the entry as a source where the item already has the same value. Where the entry disagrees with an existing value, nothing is added and the case is listed for review. Only facts are taken; no text is copied.
+
+* Progress: [[User:OKA bot/Dictionaries]].
+* Every edit is listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/dictionary_edits.csv dictionary_edits.csv], and the cases left for review in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/dictionary_left_alone.csv dictionary_left_alone.csv].
 """
 
 
