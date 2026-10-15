@@ -106,25 +106,29 @@ def warm_up(work, todo, facts):
             key = (d.place_name(name), tiers, within, country, aliases)
             if key in d._places:
                 return d._places[key]                   # answered in an earlier round
-            if within is None and key[0] and d.PLAIN.match(key[0]):   # (odd names are asked one by one later)
+            if key[0] and d.PLAIN.match(key[0]):        # (odd names are asked one by one later)
                 met[0] = True
-                places.add((name, tiers, langs, country, min_links, aliases))
+                places.add((name, tiers, langs, country, min_links, aliases, within))
 
         def note_person(name, born, died):
             if (born or died) and len(name.split()) >= 2 and name not in d._humans and d.PLAIN.match(name):
                 met[0] = True
                 people.add(name)
 
-        def note_region(raw):
+        def note_region(raw, answer=lambda name: d._regions[name]):
             name = d.region_name(raw)
             if name in d._regions:
-                return d._regions[name]
+                return answer(name)
             if name and d.PLAIN.match(name):
                 met[0] = True
                 regions.add(name)
 
-        real = d.place, d.person_named, d.viaf_current, d.region_country
-        d.place, d.person_named, d.viaf_current, d.region_country = note_place, note_person, lambda vid: None, note_region
+        def note_is_region(raw):
+            return bool(note_region(raw, lambda name: name in d._region_labels))
+
+        real = d.place, d.person_named, d.viaf_current, d.region_of, d.is_region
+        d.place, d.person_named, d.viaf_current, d.region_of, d.is_region = \
+            note_place, note_person, lambda vid: None, note_region, note_is_region
         again = []
         try:
             for e in todo:
@@ -136,7 +140,7 @@ def warm_up(work, todo, facts):
                 if met[0]:
                     again.append(e)
         finally:
-            d.place, d.person_named, d.viaf_current, d.region_country = real
+            d.place, d.person_named, d.viaf_current, d.region_of, d.is_region = real
         if not (places or people or regions):
             break
         out(f"{work}, round {n}: {len(todo)} entries, looking up {len(regions)} countries, {len(places)} places and "

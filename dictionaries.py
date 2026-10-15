@@ -52,9 +52,9 @@ SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipa
 NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",),   # city, big city; municipality of Norway; then former
                     ("Q18663579",), ("Q15092344", "Q486972"))  # municipality (Norderhov, not its village); urban area
 SETTLEMENT = "settlement"   # a tier of every class below human settlement or municipality: see settlement_classes()
-WORLD_CITIES = (("Q515", "Q1549591", "Q5119", "Q200250", "Q1637706"),   # well-known cities anywhere; then any town,
-                (SETTLEMENT,))                  # as many are typed by country only (Madrid: municipality of Spain)
-FOREIGN_PLACES = ((SETTLEMENT,),)
+CITY_CLASSES = ("Q515", "Q1549591", "Q5119", "Q200250", "Q1637706")    # city, big city, capital, metropolis, million
+WORLD_CITIES = (CITY_CLASSES,)                  # well-known cities anywhere (see world_city())
+FOREIGN_PLACES = (CITY_CLASSES, (SETTLEMENT,))  # in a given country or region: a city first, then any town
 NO_LANGS, CH_LANGS = ("nb", "nn", "en"), ("de", "fr", "it", "rm")
 FOREIGN_LANGS = NO_LANGS + ("da", "sv", "de", "fr", "es", "it", "nl", "pt", "pl")   # 'Antwerpen', 'Lisboa', 'Köln'
 MULTI = {"P106", "P1321", "P26", "P40", "P3373", "P1549", "P1448", "P742", "P937"}                        # several values are normal: a new one is added beside the others
@@ -319,30 +319,33 @@ def swiss_place(raw):
     m = re.fullmatch(r"(.+?)\s*\(([A-Z]{2})\)", name)
     if m and m.group(2) in CANTON_ITEMS:
         return place(m.group(1), SWISS_PLACES, CH_LANGS, "Q39", within=CANTON_ITEMS[m.group(2)])
-    return place(name, SWISS_PLACES, CH_LANGS, "Q39") or place(name, WORLD_CITIES, CH_LANGS, None, min_links=20)
+    return place(name, SWISS_PLACES, CH_LANGS, "Q39") or world_city(name, CH_LANGS)
 
 
 def norwegian_place(raw):
-    """SNL place values: a link to an SNL article; 'Madrid, Spania', 'Venezia (Italia)' or 'Wroclaw i Polen': a town
-    of that country; 'Aker (Oslo)' or 'Skafså i Tokke': the first place, which lies in the second (or is its old name,
-    as Kristiania is Oslo's, also written 'Kristiania (nå Oslo)'); else a city, municipality or settlement in Norway,
-    by name or else by old name; else a well-known city anywhere."""
+    """SNL place values: a link to an SNL article; 'Madrid, Spania', 'Lombard, Illinois, USA', 'Venezia (Italia)' or
+    'Wroclaw i Polen': a town of that country or region; 'Aker (Oslo)' or 'Skafså i Tokke': the first place, which
+    lies in the second (or is its old name, as Kristiania is Oslo's, also written 'Kristiania (nå Oslo)'); else a city,
+    municipality or settlement in Norway, by name or else by old name; else a well-known city anywhere."""
     q = snl_linked(raw)
     if q:
         return q
     text = clean(raw)
-    text = "Kristiania" if text == "Kra." else text
-    now = re.fullmatch(r"(.+?)\s*\((?:nå|no):?\s+(.+)\)", text)
+    parts = [p.strip() for p in split_outside_parens("Kristiania" if text == "Kra." else text, ",")]
+    now = re.fullmatch(r"(.+?)\s*\((?:nå|no):?\s+(.+)\)", parts[0])
     if now and re.search(r",|\si\s", now.group(2)):       # 'Breslau (nå: Wroclaw i Polen)': the place as named now
-        text = now.group(2)
+        parts = [p.strip() for p in split_outside_parens(now.group(2), ",")] + parts[1:]
     elif now:                                           # 'Kristiania (nå Oslo)' reads as 'Kristiania (Oslo)'
-        text = f"{now.group(1)} ({now.group(2)})"
-    parts = [p.strip() for p in split_outside_parens(text, ",")]
+        parts[0] = f"{now.group(1)} ({now.group(2)})"
     name = parts[0]
     m = re.fullmatch(r"(.+?)\s*\((.+?)\)", name) or re.fullmatch(r"(.+?)\s+i\s+(.+)", name)
-    country = region_country(parts[-1]) if len(parts) > 1 else region_country(m.group(2)) if m else None
-    if country and "Q20" not in country:                # abroad
-        return foreign_place(m.group(1) if m and len(parts) == 1 else name, country)
+    region = region_of(parts[-1]) if len(parts) > 1 else region_of(m.group(2)) if m else None
+    if len(parts) > 2:
+        inner = region_of(parts[-2])
+        if inner and inner[0] == "within":              # 'Lombard, Illinois, USA': within Illinois
+            region = inner
+    if region and "Q20" not in region[-1]:              # abroad
+        return foreign_place(m.group(1) if m and len(parts) == 1 else name, region)
     if m:
         part, whole = m.group(1).strip(), m.group(2).strip()
         q = place_or_alias(part, NORWEGIAN_PLACES, NO_LANGS, "Q20")
@@ -352,14 +355,29 @@ def norwegian_place(raw):
         if within and named(within, part):
             return within
         return place(part, (sum(NORWEGIAN_PLACES, ()),), NO_LANGS, "Q20", within=within) if within else None
-    return place_or_alias(name, NORWEGIAN_PLACES, NO_LANGS, "Q20") or \
-        place(name, WORLD_CITIES, NO_LANGS, None, min_links=20)
+    return place_or_alias(name, NORWEGIAN_PLACES, NO_LANGS, "Q20") or world_city(name, NO_LANGS)
 
 
-def foreign_place(name, country):
-    """A town abroad: the one settlement or municipality of that country so named (else so aliased), or the one far
-    better known than the others."""
-    return place_or_alias(name, FOREIGN_PLACES, FOREIGN_LANGS, country)
+def foreign_place(name, region):
+    """A town abroad, inside the region named (a US state, England) or else of the country: a city first, then any
+    settlement or municipality; the one so named (else so aliased), or the one far better known. Not when the name
+    is a country's or region's (Wales, England)."""
+    if region[0] == "within":
+        q = place(name, FOREIGN_PLACES, FOREIGN_LANGS, region[2], within=region[1])
+    else:
+        q = place_or_alias(name, FOREIGN_PLACES, FOREIGN_LANGS, region[1])
+    return None if q and is_region(name) else q
+
+
+def world_city(name, langs):
+    """A well-known city anywhere: of a city class, with 20 Wikipedia articles and three times the next candidate;
+    when no item of those classes has the name, any town with 100 articles and three times the next, as some big
+    cities are typed by country only (Madrid: municipality of Spain). Not when the name is a country's (Norge)."""
+    q = place(name, WORLD_CITIES, langs, None, min_links=20)
+    if q or _any_candidate.get((place_name(name), WORLD_CITIES, None, None, False), True):
+        return q
+    q = place(name, ((SETTLEMENT,),), langs, None, min_links=100)
+    return None if q and is_region(name) else q
 
 
 @functools.lru_cache(maxsize=None)
@@ -382,7 +400,7 @@ def snl_linked(raw):
 def place(name, tiers, langs, country, within=None, min_links=5, aliases=False):
     """The one item whose label (or default label) is exactly this name, trying the class tiers in order (e.g. city
     before municipality, the usual target of a place of birth); None if a tier has several or no tier has one.
-    With `within` (a canton or municipality), aliases count as well, but only for items located in it; with
+    With `within` (a canton, municipality or state), aliases count as well, but only for items located in it; with
     `aliases`, they count everywhere. Without a country, only well-known places qualify (min_links Wikipedia articles
     and three times the next candidate)."""
     name = place_name(name)
@@ -477,64 +495,87 @@ PLAIN = re.compile(r'^[^"\\\t\n\r]+$')                   # names whose literal r
 
 
 def prefetch_places(calls):
-    """Look up many place() calls (name, tiers, langs, country, min_links, aliases; none `within`) 100 names to a
-    query instead of one each, and keep the answers as place() would. Odd names are left to place() itself."""
+    """Look up many place() calls (name, tiers, langs, country, min_links, aliases, within) 100 names to a query
+    instead of one each, and keep the answers as place() would. Odd names are left to place() itself."""
     groups = {}
-    for name, tiers, langs, country, min_links, aliases in calls:
+    for name, tiers, langs, country, min_links, aliases, within in calls:
         name = place_name(name)
-        if name and PLAIN.match(name) and (name, tiers, None, country, aliases) not in _places:
-            groups.setdefault((tiers, langs, country, min_links, aliases), set()).add(name)
-    for (tiers, langs, country, min_links, aliases), names in groups.items():
+        if name and PLAIN.match(name) and (name, tiers, within, country, aliases) not in _places:
+            groups.setdefault((tiers, langs, country, min_links, aliases, within), set()).add(name)
+    for (tiers, langs, country, min_links, aliases, within), names in groups.items():
         names, (in_country, of_country) = sorted(names), country_where(country)
-        labelled = "{ ?i rdfs:label ?l } UNION { ?i skos:altLabel ?l }" if aliases else "?i rdfs:label ?l ."
+        labelled = "{ ?i rdfs:label ?l } UNION { ?i skos:altLabel ?l }" if aliases or within else "?i rdfs:label ?l ."
+        inside = f"?i wdt:P131* wd:{within} ." if within else ""
         for i in range(0, len(names), 100):
             chunk = names[i:i + 100]
             lits = " ".join(f'{json.dumps(n, ensure_ascii=False)}@{lang}' for n in chunk for lang in langs + ("mul",))
             found = {}
             for label, *row in qlever(f"SELECT DISTINCT ?l ?i ?c ?links WHERE {{ VALUES ?l {{ {lits} }} "
                                       f"{class_values(tiers)} {labelled} ?i wdt:P31 ?c {in_country} ; "
-                                      f"wikibase:sitelinks ?links . {of_country} }}"):
+                                      f"wikibase:sitelinks ?links . {inside} {of_country} }}"):
                 found.setdefault(label, []).append(row)
             for n in chunk:
-                key = (n, tiers, None, country, aliases)
+                key = (n, tiers, within, country, aliases)
                 _any_candidate[key] = any_in_tiers(found.get(n, []), tiers)
                 _places[key] = tier_choice(found.get(n, []), tiers, country, min_links)
 
 
-COUNTRY_KINDS = ("Q6256", "Q3624078", "Q3336843", "Q35657", "Q107390", "Q10864048")   # country, sovereign state,
-_regions = {}                       # constituent country (England), US state, federated state, first-level division
+COUNTRY_KINDS = ("Q6256", "Q3624078")               # country, sovereign state: towns in it name it (or its realm) in P17
+REGION_KINDS = ("Q3336843", "Q35657", "Q107390", "Q10864048")   # constituent country (England), US state, federated
+_regions, _region_labels = {}, set()                # state, first-level division: towns lie in it (P131)
 
 
 def region_name(raw):
-    """'Slovakia (den gang Habsburg-imperiet)' is Slovakia; 'Sovjetunionen (nå Russland)' is Russia now."""
+    """'Slovakia (den gang Habsburg-imperiet)' is Slovakia; 'Sovjetunionen (nå Russland)' and 'Tyskland (nå i
+    Frankrike)' are Russia and France now."""
     now = re.search(r"\((?:nå|no):?\s+([^)]+)\)", raw)
-    return now.group(1).strip() if now else re.sub(r"\s*\([^)]*\)?|\)", "", raw).strip()
+    if now:
+        return re.sub(r"^i\s+", "", now.group(1).strip())
+    return re.sub(r"\s*\([^)]*\)?|\)", "", raw).strip()
 
 
-def region_country(raw):
-    """The countries a town's P17 may name when SNL places it in this country or region: the region itself and its
-    P17 ('Danmark': Denmark or the Kingdom of Denmark; 'England': England or the United Kingdom; 'California': the
-    US). None when no region or several regions have the name ('Georgia')."""
+def region_of(raw):
+    """The country or region SNL places a town in: ('country', the countries its towns name in P17: 'Danmark' is
+    Denmark or the Kingdom of Denmark), or ('within', the region its towns lie in, its countries: 'England',
+    'California'). None when no present-day country or region has the name, or several have ('Georgia'); a former
+    one (the Russian Empire) is not used, as towns name today's country."""
     name = region_name(raw)
     if name not in _regions:
         prefetch_regions([name])
     return _regions.get(name)
 
 
+def is_region(name):
+    """Whether a country or region has this name (England, Wales, Norge), which then is no town's name here."""
+    name = region_name(name)
+    if name not in _regions:
+        prefetch_regions([name])
+    return name in _region_labels
+
+
 def prefetch_regions(names):
     names = sorted({n for n in names if n and n not in _regions and PLAIN.match(n)})
-    kinds = " ".join(f"wd:{k}" for k in COUNTRY_KINDS)
+    kinds = " ".join(f"wd:{k}" for k in COUNTRY_KINDS + REGION_KINDS)
     for i in range(0, len(names), 100):
         chunk = names[i:i + 100]
         lits = " ".join(f'{json.dumps(n, ensure_ascii=False)}@{lang}' for n in chunk for lang in NO_LANGS + ("mul",))
         found = {}
-        for r in qlever(f"SELECT DISTINCT ?l ?i ?country WHERE {{ VALUES ?l {{ {lits} }} VALUES ?k {{ {kinds} }} "
-                        "?i rdfs:label ?l ; wdt:P31 ?k . OPTIONAL { ?i wdt:P17 ?country } }"):
-            label, item, country = r + [""] * (3 - len(r))
-            found.setdefault(label, {}).setdefault(item, {item}).update({country} - {""})
+        for r in qlever(f"SELECT DISTINCT ?l ?i ?k ?country ?end WHERE {{ VALUES ?l {{ {lits} }} VALUES ?k {{ {kinds} }} "
+                        "?i rdfs:label ?l ; wdt:P31 ?k . OPTIONAL { ?i wdt:P17 ?country } OPTIONAL { ?i wdt:P576 ?end } }"):
+            label, item, kind, country, end = r + [""] * (5 - len(r))
+            _region_labels.add(label)
+            if not end:                                 # a present-day country or region
+                found.setdefault(label, {}).setdefault(item, [set(), {item}])
+                found[label][item][0].add(kind)
+                found[label][item][1].update({country} - {""})
         for n in chunk:
             regions = found.get(n, {})
-            _regions[n] = tuple(sorted(next(iter(regions.values())))) if len(regions) == 1 else None
+            if len(regions) != 1:
+                _regions[n] = None
+                continue
+            item, (kinds_, countries) = next(iter(regions.items()))
+            countries = tuple(sorted(countries))
+            _regions[n] = ("within", item, countries) if kinds_ & set(REGION_KINDS) else ("country", countries)
 
 
 # ---------------------------------------------------------------- HDS
