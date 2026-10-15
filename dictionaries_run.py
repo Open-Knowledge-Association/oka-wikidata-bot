@@ -193,6 +193,13 @@ def plan():
     with open(partial, "a", encoding="utf-8") as f, ThreadPoolExecutor(PLAN_THREADS) as pool:
         for n, (e, got) in enumerate(zip(todo, pool.map(facts, todo)), 1):
             e["title"], e["facts"], e["notes"] = got
+            if work != "hds":                           # renamed or moved by SNL: the reference cites it where it is
+                try:
+                    moved = d.snl_entry(e["id"], work).get("canonical")
+                except (ValueError, AttributeError, subprocess.CalledProcessError):
+                    moved = None
+                if moved:
+                    e["cite"] = moved
             f.write(json.dumps(e, ensure_ascii=False) + "\n")
             f.flush()
             if n % 1000 == 0:
@@ -515,8 +522,9 @@ def run():
     d.REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 2|OKA bot task 2]]"
     while True:                               # a work whose plan is finished meanwhile is taken up after the others
         done = logged()
+        unread = lambda e: not e["facts"] and "entry not readable through the API" in e["notes"]   # kept for later
         todo = [e for w in WORKS if plan_file(w).exists() for e in map(json.loads, open(plan_file(w), encoding="utf-8"))
-                if (e["work"], e["id"]) not in done]
+                if (e["work"], e["id"]) not in done and not unread(e)]
         if not todo:
             break
         by_work = [[e for e in todo if e["work"] == w] for w in WORKS]

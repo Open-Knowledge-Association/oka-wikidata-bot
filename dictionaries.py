@@ -21,6 +21,7 @@ import datetime
 import functools
 import html
 import json
+import os
 import random
 import re
 import subprocess
@@ -956,12 +957,54 @@ def snl_entry(slug, work="snl"):
     if (work, slug) in _unreadable:
         raise ValueError(f"{slug}: not readable through the API")
     try:
-        return json.loads(cached(f"{work}/{slug.replace('/', '_')}.json", lambda: json.dumps(
-            {k: v for k, v in get(f"https://{SNL_HOSTS[work]}/{urllib.parse.quote(slug)}.json", as_json=True).items()
-             if k in SNL_KEEP}, ensure_ascii=False)))
+        return json.loads(cached(f"{work}/{slug.replace('/', '_')}.json",
+                                 lambda: json.dumps(read_snl(work, slug), ensure_ascii=False)))
     except (ValueError, AttributeError, subprocess.CalledProcessError):
         _unreadable.add((work, slug))
         raise
+
+
+def read_snl(work, slug):
+    """An entry's metadata. SNL renames articles (A._B._Guthrie is now A.B._Guthrie) and has moved NKL entries to
+    snl.no: the old JSON address then answers 404 while the old page redirects, so the entry is read where the page
+    leads, and 'canonical' says where that is (the reference cites it)."""
+    url = lambda w, s: f"https://{SNL_HOSTS[w]}/{urllib.parse.quote(s)}.json"
+    try:
+        return {k: v for k, v in get(url(work, slug), as_json=True).items() if k in SNL_KEEP}
+    except (ValueError, AttributeError, subprocess.CalledProcessError):
+        moved = snl_moved(work, slug)
+        if not moved:
+            raise
+        got = {k: v for k, v in get(url(*moved), as_json=True).items() if k in SNL_KEEP}
+        got["canonical"] = {"work": moved[0], "slug": moved[1]}
+        return got
+
+
+def snl_moved(work, slug):
+    """(work, slug) the entry's page now redirects to, or None."""
+    page = f"https://{SNL_HOSTS[work]}/{urllib.parse.quote(slug)}"
+    wait_turn(SNL_HOSTS[work], 1.0)
+    import shutil
+    if shutil.which("curl"):                        # the PC (its Python's certificate store is out of date)
+        location = subprocess.run(["curl", "-s", "-I", "-o", os.devnull, "-w", "%{redirect_url}", "-A", UA, page],
+                                  capture_output=True, text=True, encoding="utf-8").stdout.strip()
+    else:
+        class Stay(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self, *args, **kwargs):
+                return None
+        try:
+            urllib.request.build_opener(Stay).open(urllib.request.Request(page, headers={"User-Agent": UA},
+                                                                         method="HEAD"), timeout=60)
+            location = ""
+        except urllib.error.HTTPError as e:
+            location = e.headers.get("Location", "") if e.code in (301, 302, 307, 308) else ""
+        except OSError:
+            location = ""
+    target = urllib.parse.urlsplit(urllib.parse.urljoin(page, location)) if location else None
+    hosts = {host: w for w, host in SNL_HOSTS.items()}
+    if not target or target.netloc not in hosts or not target.path.strip("/"):
+        return None
+    return hosts[target.netloc], urllib.parse.unquote(target.path.strip("/"))
 
 
 NAME_PREFIX = re.compile(r"^(?:egentlig|eg\.|også kjent (?:som|under (?:kallenavnet|navnet))|kalt|født|f\.|"
@@ -1135,7 +1178,8 @@ def entry_is_person(entry):
 def build(ent, entry, today, labels=None):
     """(claims for wbeditentity, list of changes, notes) for one entry and its live item."""
     work_q, idp, _ = WORKS[entry["work"]]
-    ref = reference(entry["work"], entry["id"], today)
+    cite = entry.get("cite")                           # an entry SNL has renamed or moved: cited where it is now
+    ref = reference(cite["work"], cite["slug"], today) if cite else reference(entry["work"], entry["id"], today)
     claims = ent.get("claims", {})
     out_claims, done, notes = [], [], list(entry.get("notes", []))
     is_human = any(c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") == "Q5" for c in claims.get("P31", []))
