@@ -123,8 +123,8 @@ def warm_up(work, todo, facts):
                 met[0] = True
                 regions.add(name)
 
-        def note_is_region(raw):
-            return bool(note_region(raw, lambda name: name in d._region_labels))
+        def note_is_region(raw, unless=None):
+            return bool(note_region(raw, lambda name: bool(d._region_items.get(name, set()) - {unless})))
 
         real = d.place, d.person_named, d.viaf_current, d.region_of, d.is_region
         d.place, d.person_named, d.viaf_current, d.region_of, d.is_region = \

@@ -360,13 +360,17 @@ def norwegian_place(raw):
 
 def foreign_place(name, region):
     """A town abroad, inside the region named (a US state, England) or else of the country: a city first, then any
-    settlement or municipality; the one so named (else so aliased), or the one far better known. Not when the name
-    is a country's or region's (Wales, England)."""
-    if region[0] == "within":
-        q = place(name, FOREIGN_PLACES, FOREIGN_LANGS, region[2], within=region[1])
-    else:
-        q = place_or_alias(name, FOREIGN_PLACES, FOREIGN_LANGS, region[1])
-    return None if q and is_region(name) else q
+    settlement or municipality; the one so named (else so aliased), or the one far better known. A settlement does
+    not count when a country or region has the name (Wales: not the village called Wales)."""
+    within, countries = (region[1], region[2]) if region[0] == "within" else (None, region[1])
+    for tiers in FOREIGN_PLACES[:1], FOREIGN_PLACES[1:]:
+        q = place(name, tiers, FOREIGN_LANGS, countries, within=within) if within else \
+            place_or_alias(name, tiers, FOREIGN_LANGS, countries)
+        if q:
+            return None if tiers == FOREIGN_PLACES[1:] and is_region(name, unless=q) else q
+        if _any_candidate.get((place_name(name), tiers, within, countries, False), True):
+            return None                                 # several cities of the name: unclear
+    return None
 
 
 def world_city(name, langs):
@@ -377,7 +381,7 @@ def world_city(name, langs):
     if q or _any_candidate.get((place_name(name), WORLD_CITIES, None, None, False), True):
         return q
     q = place(name, ((SETTLEMENT,),), langs, None, min_links=100)
-    return None if q and is_region(name) else q
+    return None if q and is_region(name, unless=q) else q
 
 
 @functools.lru_cache(maxsize=None)
@@ -522,7 +526,7 @@ def prefetch_places(calls):
 
 COUNTRY_KINDS = ("Q6256", "Q3624078")               # country, sovereign state: towns in it name it (or its realm) in P17
 REGION_KINDS = ("Q3336843", "Q35657", "Q107390", "Q10864048")   # constituent country (England), US state, federated
-_regions, _region_labels = {}, set()                # state, first-level division: towns lie in it (P131)
+_regions, _region_items = {}, {}                   # state, first-level division: towns lie in it (P131)
 
 
 def region_name(raw):
@@ -545,12 +549,13 @@ def region_of(raw):
     return _regions.get(name)
 
 
-def is_region(name):
-    """Whether a country or region has this name (England, Wales, Norge), which then is no town's name here."""
+def is_region(name, unless=None):
+    """Whether a country or region other than `unless` has this name (England, Wales, Norge; but Tashkent is a city
+    and a region in one item)."""
     name = region_name(name)
     if name not in _regions:
         prefetch_regions([name])
-    return name in _region_labels
+    return bool(_region_items.get(name, set()) - {unless})
 
 
 def prefetch_regions(names):
@@ -563,7 +568,7 @@ def prefetch_regions(names):
         for r in qlever(f"SELECT DISTINCT ?l ?i ?k ?country ?end WHERE {{ VALUES ?l {{ {lits} }} VALUES ?k {{ {kinds} }} "
                         "?i rdfs:label ?l ; wdt:P31 ?k . OPTIONAL { ?i wdt:P17 ?country } OPTIONAL { ?i wdt:P576 ?end } }"):
             label, item, kind, country, end = r + [""] * (5 - len(r))
-            _region_labels.add(label)
+            _region_items.setdefault(label, set()).add(item)
             if not end:                                 # a present-day country or region
                 found.setdefault(label, {}).setdefault(item, [set(), {item}])
                 found[label][item][0].add(kind)
