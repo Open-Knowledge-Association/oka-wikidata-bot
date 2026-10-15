@@ -47,6 +47,7 @@ LEGAL_FORMS = {"aksjeselskap": "Q15042660", "as": "Q15042660", "allmennaksjesels
                "stiftelse": "Q7616418", "samvirkeforetak": "Q59554118", "enkeltpersonforetak": "Q16969092"}
 MOUNTAINS = (("Q8502", "Q207326"), ("Q54050",))         # mountain, summit; then hill
 KM2 = "Q712226"
+REDIRECT = "Q45403344"                          # reason for deprecated rank: redirect (renamed SNL entries)
 GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
 JULIAN = "http://www.wikidata.org/entity/Q1985786"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
@@ -1192,6 +1193,29 @@ def build(ent, entry, today, labels=None):
         out_claims.append({"type": "statement", "rank": "normal",
                            "mainsnak": {"snaktype": "value", "property": idp, "datavalue": string_value(entry["id"])}})
         done.append(f"{entry['work'].upper()} ID")
+    new_id = None                                      # SNL renamed or moved the entry: (property, its current ID)
+    if cite and (cite["work"], plain(cite["slug"])) != (entry["work"], plain(entry["id"])):
+        new_id = WORKS[cite["work"]][1], cite["slug"]
+        has = lambda c, v: plain(c["mainsnak"].get("datavalue", {}).get("value")) == plain(v)
+        current = [c for c in claims.get(new_id[0], []) if c["rank"] != "deprecated"]
+        free = any(f["pid"] == new_id[0] and plain(f["value"]["value"]) == plain(new_id[1]) for f in entry["facts"])
+        others = [c for c in current if not has(c, new_id[1]) and not (new_id[0] == idp and has(c, entry["id"]))]
+        if not (free or any(has(c, new_id[1]) for c in current)) or others:
+            notes.append(f"{entry['work'].upper()} ID {entry['id']} now leads to {new_id[1]}, but another item or "
+                         "another ID is in the way; left alone")
+        else:
+            for c in claims.get(idp, []):              # the old ID stays, deprecated, as Wikidata does for redirects
+                if has(c, entry["id"]) and c["rank"] != "deprecated":
+                    c = copy.deepcopy(c)
+                    c["rank"] = "deprecated"
+                    c.setdefault("qualifiers", {})["P2241"] = [{"snaktype": "value", "property": "P2241",
+                                                                 "datavalue": item_value(REDIRECT)}]
+                    c["qualifiers-order"] = list(dict.fromkeys(c.get("qualifiers-order", []) + ["P2241"]))
+                    out_claims.append(c)
+                    done.append(f"{entry['work'].upper()} ID {entry['id']} deprecated (now {cite['work'].upper()} {new_id[1]})")
+            if not any(has(c, new_id[1]) for c in current):
+                out_claims.append(statement(new_id[0], string_value(new_id[1]), ref))
+                done.append(f"{cite['work'].upper()} ID {new_id[1]}")
     names = {(lang, v["value"].casefold()) for lang, v in ent.get("labels", {}).items()} | \
             {(lang, a["value"].casefold()) for lang, al in ent.get("aliases", {}).items() for a in al}
     new_names = {}
@@ -1205,6 +1229,8 @@ def build(ent, entry, today, labels=None):
         done.append("other names")
     seen = set()
     for f in (f for f in entry["facts"] if f["pid"] != "ALIAS"):
+        if new_id and f["pid"] == new_id[0] and plain(f["value"]["value"]) == plain(new_id[1]):
+            continue                                   # the current ID of a renamed entry: handled above
         key = (f["pid"], json.dumps(f["value"], sort_keys=True))
         if key in seen or (f["value"]["type"] == "wikibase-entityid" and f["value"]["value"]["id"] == ent.get("id")):
             continue                                       # (an item is never its own relative or place)
