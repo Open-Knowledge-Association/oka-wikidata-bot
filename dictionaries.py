@@ -52,7 +52,7 @@ GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
 JULIAN = "http://www.wikidata.org/entity/Q1985786"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
 NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",),   # city, big city; municipality of Norway; then former
-                    ("Q18663579",), ("Q15092344", "Q486972"))  # municipality (Norderhov, not its village); urban area
+                    ("Q18663579", "Q15092344", "Q486972"))  # municipality, urban area in Norway, settlement
 SETTLEMENT = "settlement"   # a tier of every class below human settlement or municipality: see settlement_classes()
 CITY_CLASSES = ("Q515", "Q1549591", "Q5119", "Q200250", "Q1637706")    # city, big city, capital, metropolis, million
 WORLD_CITIES = (CITY_CLASSES,)                  # well-known cities anywhere (see world_city())
@@ -361,18 +361,17 @@ def norwegian_place(raw):
 
 
 def foreign_place(name, region):
-    """A town abroad, inside the region named (a US state, England) or else of the country: a city first, then any
-    settlement or municipality; the one so named (else so aliased), or the one far better known. A settlement does
-    not count when a country or region has the name (Wales: not the village called Wales)."""
+    """A town abroad, inside the region named (a US state, England) or else of the country: the one settlement or
+    municipality so named (else so aliased), or the one far better known than the others (Toledo, not 'Toledo city');
+    when several are comparable, the one city among them (Viborg the town, not the municipality). A town that is no
+    city does not count when a country or region has the name (Wales: not the village called Wales)."""
     within, countries = (region[1], region[2]) if region[0] == "within" else (None, region[1])
-    for tiers in FOREIGN_PLACES[:1], FOREIGN_PLACES[1:]:
-        q = place(name, tiers, FOREIGN_LANGS, countries, within=within) if within else \
-            place_or_alias(name, tiers, FOREIGN_LANGS, countries)
-        if q:
-            return None if tiers == FOREIGN_PLACES[1:] and is_region(name, unless=q) else q
-        if _any_candidate.get((place_name(name), tiers, within, countries, False), True):
-            return None                                 # several cities of the name: unclear
-    return None
+    ask = lambda tiers: (place(name, tiers, FOREIGN_LANGS, countries, within=within) if within
+                         else place_or_alias(name, tiers, FOREIGN_LANGS, countries))
+    q = ask(FOREIGN_PLACES[1:])
+    if not q and _any_candidate.get((place_name(name), FOREIGN_PLACES[1:], within, countries, False), True):
+        q = ask(FOREIGN_PLACES[:1])                     # several comparable towns of the name: the one city, if any
+    return None if q and named_like_region(name, q) else q
 
 
 def world_city(name, langs):
@@ -383,7 +382,15 @@ def world_city(name, langs):
     if q or _any_candidate.get((place_name(name), WORLD_CITIES, None, None, False), True):
         return q
     q = place(name, ((SETTLEMENT,),), langs, None, min_links=100)
-    return None if q and is_region(name, unless=q) else q
+    return None if q and named_like_region(name, q) else q
+
+
+_classes_of = {}                                    # item -> its classes, as seen in place lookups
+
+
+def named_like_region(name, q):
+    """A town that is no city, while a country or region (another item) has its name: Wales the village."""
+    return not (_classes_of.get(q, set()) & set(CITY_CLASSES)) and is_region(name, unless=q)
 
 
 @functools.lru_cache(maxsize=None)
@@ -421,6 +428,8 @@ def place(name, tiers, langs, country, within=None, min_links=5, aliases=False):
         rows = lookup(f"SELECT DISTINCT ?i ?c ?links WHERE {{ VALUES ?l {{ {lits} }} {class_values(tiers)} "
                       f"{names} ?i wdt:P31 ?c {in_country} ; wikibase:sitelinks ?links . {inside} {of_country} }}")
         _any_candidate[key] = any_in_tiers(rows, tiers)
+        for r in rows:
+            _classes_of.setdefault(r[0], set()).add(r[1])
         _places[key] = tier_choice(rows, tiers, country, min_links)
     return _places[key]
 
@@ -523,6 +532,8 @@ def prefetch_places(calls):
             for n in chunk:
                 key = (n, tiers, within, country, aliases)
                 _any_candidate[key] = any_in_tiers(found.get(n, []), tiers)
+                for r in found.get(n, []):
+                    _classes_of.setdefault(r[0], set()).add(r[1])
                 _places[key] = tier_choice(found.get(n, []), tiers, country, min_links)
 
 
