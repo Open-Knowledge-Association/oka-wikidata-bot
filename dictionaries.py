@@ -780,10 +780,19 @@ def lifespan_caveat(comment):
 SNL_KEEP = ("title", "metadata_license_name", "metadata")     # all the bot reads; the article text is never kept
 
 
+_unreadable = set()                                 # (work, slug) whose JSON could not be read: not asked again
+
+
 def snl_entry(slug, work="snl"):
-    return json.loads(cached(f"{work}/{slug.replace('/', '_')}.json", lambda: json.dumps(
-        {k: v for k, v in get(f"https://{SNL_HOSTS[work]}/{urllib.parse.quote(slug)}.json", as_json=True).items()
-         if k in SNL_KEEP}, ensure_ascii=False)))
+    if (work, slug) in _unreadable:
+        raise ValueError(f"{slug}: not readable through the API")
+    try:
+        return json.loads(cached(f"{work}/{slug.replace('/', '_')}.json", lambda: json.dumps(
+            {k: v for k, v in get(f"https://{SNL_HOSTS[work]}/{urllib.parse.quote(slug)}.json", as_json=True).items()
+             if k in SNL_KEEP}, ensure_ascii=False)))
+    except (ValueError, AttributeError, subprocess.CalledProcessError):
+        _unreadable.add((work, slug))
+        raise
 
 
 NAME_PREFIX = re.compile(r"^(?:egentlig|eg\.|også kjent (?:som|under (?:kallenavnet|navnet))|kalt|født|f\.|"

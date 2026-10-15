@@ -149,6 +149,13 @@ def plan():
     else:
         for pid in ("P4342", "P5080", "P5081"):
             d.by_id(pid)
+        unread = [e for e in todo if not (WORK2 / work / f"{e['id'].replace('/', '_')}.json").exists()]
+        out(f"{work}: reading {len(unread)} entries not read yet, one a second")
+        for e in unread:                                # read first, so that the warm-up sees every entry
+            try:
+                d.snl_entry(e["id"], work)
+            except (ValueError, AttributeError, subprocess.CalledProcessError):
+                pass                                    # noted by snl_facts as not readable
     facts = (lambda e: d.hds_facts(e["id"], e["kind"])) if work == "hds" else \
         (lambda e: d.snl_facts(e["id"], e["kind"], e["work"]))
     warm_up(work, todo, facts)
