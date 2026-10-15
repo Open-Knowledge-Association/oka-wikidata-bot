@@ -54,6 +54,11 @@ def linked(work):
         elif work == "hds":
             entries.append({"work": work, "kind": "person" if "Q5" in classes[q] else "other", "id": ident, "qid": q,
                             "matched_by": "identifier"})
+        elif work == "nkl":                           # the artists' lexicon: people only
+            if "Q5" in classes[q]:
+                entries.append({"work": work, "kind": "person", "id": ident, "qid": q, "matched_by": "identifier"})
+        elif work == "sml":                           # the medical lexicon: its terms' other names
+            entries.append({"work": work, "kind": "term", "id": ident, "qid": q, "matched_by": "identifier"})
         else:
             kinds = {SNL_KINDS[c] for c in classes[q] if c in SNL_KINDS}
             if len(kinds) == 1:
@@ -96,7 +101,8 @@ def plan():
                     for r in csv.DictReader(open(review, encoding="utf-8")) if r["item"]]
     out(f"{work}: {len(entries)} entries on one item each; {len(skipped)} left out (identifier on several items, or several on one)")
     for n, e in enumerate(entries, 1):
-        e["title"], e["facts"], e["notes"] = (d.hds_facts if e["work"] == "hds" else d.snl_facts)(e["id"], e["kind"])
+        e["title"], e["facts"], e["notes"] = (d.hds_facts(e["id"], e["kind"]) if e["work"] == "hds"
+                                              else d.snl_facts(e["id"], e["kind"], e["work"]))
         if n % 5000 == 0:
             out(f"facts for {n} of {len(entries)} entries")
     held_elsewhere(entries)

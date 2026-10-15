@@ -34,8 +34,15 @@ WORK2 = ROOT / "work" / "task2"
 REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 2|test run]]"
 REPORT_PAGE = "User:OKA bot/Test run 2"
 WORKS = {"hds": ("Q642074", "P902", "the Historical Dictionary of Switzerland"),
-         "snl": ("Q746368", "P4342", "Store norske leksikon")}
-IDS = {"P902", "P4342", "P227", "P214", "P1248", "P4574", "P2504", "P2333"}     # identifiers: compared as text
+         "snl": ("Q746368", "P4342", "Store norske leksikon"),
+         "nkl": ("Q11992482", "P5081", "Norsk kunstnerleksikon"),           # the other works on snl.no, same API
+         "sml": ("Q19378370", "P5082", "Store medisinske leksikon")}
+SNL_HOSTS = {"snl": "snl.no", "nkl": "nkl.snl.no", "sml": "sml.snl.no"}
+IDS = {"P902", "P4342", "P5081", "P5082", "P227", "P214", "P1248", "P4574", "P2504", "P2333"}   # compared as text
+LEGAL_FORMS = {"aksjeselskap": "Q15042660", "as": "Q15042660", "allmennaksjeselskap": "Q14942889",   # Norwegian forms
+               "stiftelse": "Q7616418", "samvirkeforetak": "Q59554118", "enkeltpersonforetak": "Q16969092"}
+MOUNTAINS = (("Q8502", "Q207326"), ("Q54050",))         # mountain, summit; then hill
+KM2 = "Q712226"
 GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
 JULIAN = "http://www.wikidata.org/entity/Q1985786"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
@@ -43,8 +50,8 @@ NORWEGIAN_PLACES = (("Q515", "Q1549591"), ("Q755707",),   # city, big city; muni
                     ("Q18663579", "Q15092344", "Q486972"))  # municipality, urban area in Norway, settlement
 WORLD_CITIES = (("Q515", "Q1549591", "Q5119", "Q200250", "Q1637706"),)   # well-known cities anywhere
 NO_LANGS, CH_LANGS = ("nb", "nn", "en"), ("de", "fr", "it", "rm")
-MULTI = {"P106", "P1321", "P26", "P40", "P3373"}                        # several values are normal: a new one is added beside the others
-PLACE_PROPS = {"P19", "P20", "P159", "P1321"}
+MULTI = {"P106", "P1321", "P26", "P40", "P3373", "P1549", "P1448", "P742", "P937"}                        # several values are normal: a new one is added beside the others
+PLACE_PROPS = {"P19", "P20", "P159", "P1321", "P36", "P119", "P937", "P610"}
 GENDER = {"m": "Q6581097", "k": "Q6581072", "f": "Q6581072"}
 OCCUPATIONS = {                                  # SNL word -> (item, its English label, checked at start)
     "maler": ("Q1028181", "painter"), "grafiker": ("Q11569986", "printmaker"), "forfatter": ("Q36180", "writer"),
@@ -130,7 +137,7 @@ def items(ids):
         for attempt in range(1, 8):                  # Wikidata answers bursts of reads with an error page: wait, retry
             try:
                 found.update(curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
-                                       "&props=info|labels|claims&ids=" + "|".join(ids[i:i + 50]))["entities"])
+                                       "&props=info|labels|aliases|claims&ids=" + "|".join(ids[i:i + 50]))["entities"])
                 break
             except (ValueError, KeyError, subprocess.CalledProcessError):
                 time.sleep(20 * attempt)
@@ -159,12 +166,24 @@ def string_value(s):
     return {"type": "string", "value": s}
 
 
+def text_value(text, lang):
+    return {"type": "monolingualtext", "value": {"text": text, "language": lang}}
+
+
+def quantity_value(amount, unit):
+    return {"type": "quantity", "value": {"amount": f"+{amount}", "unit": f"http://www.wikidata.org/entity/{unit}"}}
+
+
 def same(a, b):
     va, vb = a.get("value"), b.get("value")
     if a.get("type") != b.get("type"):
         return False
     if a["type"] == "wikibase-entityid":
         return va.get("id") == vb.get("id")
+    if a["type"] == "monolingualtext":
+        return (va["text"].casefold(), va["language"]) == (vb["text"].casefold(), vb["language"])
+    if a["type"] == "quantity":                      # '1648' (SNL) and '+1648.03' are the same area, rounded
+        return va.get("unit") == vb.get("unit") and round(float(va["amount"])) == round(float(vb["amount"]))
     if a["type"] == "time":
         if va["precision"] != vb["precision"]:
             return False
@@ -614,15 +633,47 @@ def lifespan_caveat(comment):
 SNL_KEEP = ("title", "metadata_license_name", "metadata")     # all the bot reads; the article text is never kept
 
 
-def snl_entry(slug):
-    return json.loads(cached(f"snl/{slug.replace('/', '_')}.json", lambda: json.dumps(
-        {k: v for k, v in get(f"https://snl.no/{urllib.parse.quote(slug)}.json", as_json=True).items() if k in SNL_KEEP},
-        ensure_ascii=False)))
+def snl_entry(slug, work="snl"):
+    return json.loads(cached(f"{work}/{slug.replace('/', '_')}.json", lambda: json.dumps(
+        {k: v for k, v in get(f"https://{SNL_HOSTS[work]}/{urllib.parse.quote(slug)}.json", as_json=True).items()
+         if k in SNL_KEEP}, ensure_ascii=False)))
 
 
-def snl_facts(slug, kind):
+NAME_PREFIX = re.compile(r"^(?:egentlig|eg\.|også kjent (?:som|under (?:kallenavnet|navnet))|kalt|født|f\.|"
+                         r"[a-zæøå]+sk(?: navn)?|på [a-zæøå]+sk)\s*:?\s*", re.I)
+PARTICLES = {"de", "von", "van", "af", "la", "le", "du", "der", "den", "da", "di", "y", "bin", "ibn", "al", "zu", "og"}
+
+
+def other_names(raw, kind):
+    """(aliases, pseudonyms) from SNL's alternative_form: one name per line or comma part, after a short lead such as
+    'egentlig' or 'ungarsk'; 'Pseudonym: X' gives a pseudonym. Only strings that look like names are kept (for
+    medical terms, short lower-case terms); sentences are dropped."""
+    text = re.sub(r"</p>|<br\s*/?>|</div>", "\n", raw or "")
+    text = html.unescape(re.sub(r"<[^>]+>", " ", text))
+    aliases, pseudonyms = [], []
+    for line in (" ".join(l.split()) for l in text.split("\n")):
+        m = re.match(r"(?:pseudonym|psevdonym)\s*:?\s*(.+)$", line, re.I)
+        if m:
+            pseudonyms += [p.strip(" .") for p in re.split(r",\s*|\s+og\s+", m.group(1)) if p.strip(" .")]
+            continue
+        line = NAME_PREFIX.sub("", line)
+        for part in re.split(r",\s*(?!Jr\b|Sr\b)", line):
+            part = part.strip(" .;")
+            words = part.split()
+            if not words or len(words) > 6 or len(part) > 80 or re.search(r"[0-9:()]", part):
+                continue
+            if kind == "term":
+                if re.fullmatch(r"[\w' -]+", part) and len(words) <= 5:
+                    aliases.append(part)
+            elif all(w[0].isupper() or w.lower() in PARTICLES or re.fullmatch(r"[IVX]+\.?|Jr\.?|Sr\.?|&|A/S|AS|ASA", w)
+                     for w in words) and words[0][0].isupper():
+                aliases.append(part)
+    return list(dict.fromkeys(aliases)), list(dict.fromkeys(pseudonyms))
+
+
+def snl_facts(slug, kind, work="snl"):
     try:
-        d = snl_entry(slug)
+        d = snl_entry(slug, work)
     except (ValueError, AttributeError, subprocess.CalledProcessError):
         return slug, [], ["entry not readable through the API"]
     facts, notes = [], []
@@ -630,6 +681,17 @@ def snl_facts(slug, kind):
         return d.get("title", slug), [], ["metadata not marked free to reuse"]
     m = d.get("metadata") or {}
     no = norwegian_place
+    aliases, pseudonyms = other_names(m.get("alternative_form"), kind)
+    facts += [fact("ALIAS", {"language": "nb", "value": a}, "other name") for a in aliases]
+    if kind == "person":
+        facts += [fact("P742", string_value(p), "pseudonym") for p in pseudonyms]
+        for key, pid, label in (("place_of_burial", "P119", "place of burial"), ("place_of_work", "P937", "work location")):
+            if (m.get(key) or "").strip():
+                q = no(m[key])
+                if q:
+                    facts.append(fact(pid, item_value(q), label))
+                else:
+                    notes.append(f"{label} '{clean(m[key])}' not matched to one place item")
     if kind == "person":
         caveat = lifespan_caveat(m.get("lifespan_comment"))
         for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
@@ -666,10 +728,40 @@ def snl_facts(slug, kind):
     elif kind == "place":
         if re.fullmatch(r"[0-5]\d{3}", (m.get("municipal_number") or "").strip()):
             facts.append(fact("P2504", string_value(m["municipal_number"].strip()), "municipality number"))
+        form = (m.get("language_form") or "").strip().lower()      # bokmål, nynorsk or nøytral (both)
+        demonym = clean(m.get("demonym") or "")
+        if re.fullmatch(r"[a-zæøåA-ZÆØÅ-]+", demonym):
+            for lang in {"bokmål": ["nb"], "nynorsk": ["nn"]}.get(form, ["nb", "nn"]):
+                facts.append(fact("P1549", text_value(demonym, lang), "demonym"))
+        area = re.sub(r"\s", "", clean(m.get("area") or "")).replace(",", ".")
+        if re.fullmatch(r"\d+(?:\.\d+)?", area):
+            facts.append(fact("P2046", quantity_value(area, KM2), "area"))
+        if clean(m.get("administrative_center") or ""):
+            q = no(m["administrative_center"])
+            if q:
+                facts.append(fact("P36", item_value(q), "administrative centre"))
+            else:
+                notes.append(f"administrative centre '{clean(m['administrative_center'])}' not matched to one place item")
+        top = re.match(r"([^(,]+?)\s*\(", clean(m.get("highest_mountain") or ""))   # 'Storskrymten (1985 moh.) på ...'
+        if top:
+            q = snl_linked(m["highest_mountain"]) or place(top.group(1), MOUNTAINS, NO_LANGS, "Q20")
+            if q:
+                facts.append(fact("P610", item_value(q), "highest point"))
+            else:
+                notes.append(f"highest point '{top.group(1)}' not matched to one mountain item")
     elif kind == "organisation":
         v = snl_date(m.get("incorporated"), "inception", notes)
         if v:
             facts.append(fact("P571", v, "inception"))
+        v = snl_date(m.get("closed"), "dissolved", notes)
+        if v:
+            facts.append(fact("P576", v, "dissolved"))
+        form = clean(m.get("organization_type") or "").lower()
+        if form in LEGAL_FORMS:
+            facts.append(fact("P1454", item_value(LEGAL_FORMS[form]), "legal form"))
+        name = clean(m.get("organization_name") or "")
+        if name and len(name) <= 120:
+            facts.append(fact("P1448", text_value(name, "nb"), "official name"))
         if re.fullmatch(r"\d{9}", (m.get("organization_number") or "").strip()):
             facts.append(fact("P2333", string_value(m["organization_number"].strip()), "organisation number"))
         if (m.get("organization_headquarter") or "").strip():
@@ -727,9 +819,20 @@ def build(ent, entry, today, labels=None):
     if not any(plain(c["mainsnak"].get("datavalue", {}).get("value")) == plain(entry["id"]) for c in claims.get(idp, [])):
         out_claims.append({"type": "statement", "rank": "normal",
                            "mainsnak": {"snaktype": "value", "property": idp, "datavalue": string_value(entry["id"])}})
-        done.append(f"{'HDS' if entry['work'] == 'hds' else 'SNL'} ID")
+        done.append(f"{entry['work'].upper()} ID")
+    names = {(lang, v["value"].casefold()) for lang, v in ent.get("labels", {}).items()} | \
+            {(lang, a["value"].casefold()) for lang, al in ent.get("aliases", {}).items() for a in al}
+    new_names = {}
+    for f in (f for f in entry["facts"] if f["pid"] == "ALIAS"):     # other names: aliases, in the same edit
+        lang, name = f["value"]["language"], f["value"]["value"]
+        if (lang, name.casefold()) not in names and ("mul", name.casefold()) not in names:
+            new_names.setdefault(lang, []).append({"language": lang, "value": name, "add": ""})
+            names.add((lang, name.casefold()))
+    if new_names:
+        out_claims.append({"_aliases": new_names})
+        done.append("other names")
     seen = set()
-    for f in entry["facts"]:
+    for f in (f for f in entry["facts"] if f["pid"] != "ALIAS"):
         key = (f["pid"], json.dumps(f["value"], sort_keys=True))
         if key in seen or (f["value"]["type"] == "wikibase-entityid" and f["value"]["value"]["id"] == ent.get("id")):
             continue                                       # (an item is never its own relative or place)
@@ -886,8 +989,14 @@ def save(site, qid, claims, done, work, baserevid):
     from pywikibot.data import api
     from pywikibot.exceptions import APIError
     summary = f"{', '.join(done)} from {WORKS[work][2]} ({REQUEST2})"
+    data = {"claims": [c for c in claims if "_aliases" not in c]}
+    for c in claims:
+        if "_aliases" in c:                                   # other names go into the same edit
+            data["aliases"] = c["_aliases"]
+    if not data["claims"]:
+        del data["claims"]
     try:
-        r = api.Request(site=site, parameters={"action": "wbeditentity", "id": qid, "data": json.dumps({"claims": claims}),
+        r = api.Request(site=site, parameters={"action": "wbeditentity", "id": qid, "data": json.dumps(data),
                                                "bot": 1, "baserevid": baserevid, "token": site.tokens["csrf"],
                                                "summary": summary}).submit()
         return r["entity"]["lastrevid"], None
