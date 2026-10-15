@@ -295,6 +295,67 @@ def unlinked():
     return strong
 
 
+# ---------------------------------------------------------------- reading the HDS pages (no edits)
+
+CRAWL_DELAY = 21              # seconds between HDS pages: its robots.txt asks generic bots for 20
+CHALLENGE = re.compile(r"Just a moment|cf-chl|challenge-platform|cf_chl_opt|Attention Required", re.I)
+
+
+def crawl_hds():
+    """Read the HDS article pages, as the HDS robots.txt allows generic bots: one page every 21 s, under the bot's
+    own name. Keeps only the article (the <main> part) and its date fields, in work/task2/hds/<id>.html, which
+    hds_facts() reads. Biographies linked from Wikidata first, then the other entries. Resumable. At the first
+    challenge or block page it stops: such a page is never solved or worked around."""
+    import time
+    import urllib.error
+    import urllib.request
+    from common import UA
+    folder = WORK2 / "hds"
+    folder.mkdir(parents=True, exist_ok=True)
+    lists = {kind: [r["ID"].zfill(6) for r in csv.DictReader(open(WORK2 / "opendata" / f"liste_{kind}_d_utf8.csv",
+                                                                     encoding="utf-8"))]
+             for kind in ("bio", "tem", "fam", "geo")}
+    on_wd = {urllib.parse.unquote(i).zfill(6) for _, i in qlever("SELECT ?i ?id WHERE { ?i wdt:P902 ?id }")}
+    order = [h for h in lists["bio"] if h in on_wd] + [h for h in lists["bio"] if h not in on_wd]
+    order += [h for kind in ("tem", "fam", "geo") for h in lists[kind]]
+    todo = [h for h in dict.fromkeys(order) if not (folder / f"{h}.html").exists()]
+    out(f"HDS pages to read: {len(todo)} (one every {CRAWL_DELAY} s, about {len(todo) * CRAWL_DELAY / 86400:.1f} days)")
+    last, odd = 0.0, 0
+    for n, hid in enumerate(todo, 1):
+        time.sleep(max(0.0, CRAWL_DELAY - (time.time() - last)))
+        last = time.time()
+        url = f"https://hls-dhs-dss.ch/de/articles/{hid}/"
+        for attempt in range(1, 4):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    status, body = r.status, r.read().decode("utf-8", "replace")
+                break
+            except urllib.error.HTTPError as e:
+                status, body = e.code, e.read().decode("utf-8", "replace")
+                break
+            except (urllib.error.URLError, OSError) as e:
+                status, body = 0, str(e)
+                time.sleep(60 * attempt)
+        if status in (403, 429, 503) or CHALLENGE.search(body[:20000]):
+            out(f"stopped at {hid} after {n - 1} pages: the HDS answered with a challenge or block (HTTP {status})")
+            sys.exit(2)
+        if status == 404:
+            continue
+        main = re.search(r"<main\b.*?</main>", body, re.S)
+        if status != 200 or not main:
+            odd += 1
+            out(f"{hid}: unexpected answer (HTTP {status}); skipped")
+            if odd >= 20:
+                sys.exit("20 unexpected answers: stopping to look at it")
+            continue
+        props = "".join(re.findall(r"<(\w+)[^>]*\bitemprop=\"[^\"]+\"[^>]*>[^<]*</\1>", body))
+        (folder / f"{hid}.html").write_text(main.group(0) + "\n" + props, encoding="utf-8")
+        if n % 500 == 0:
+            out(f"{n} of {len(todo)} pages read")
+    out("all HDS pages read")
+
+
 # ---------------------------------------------------------------- run (after approval)
 
 def logged():
@@ -385,4 +446,4 @@ def run():
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     d.check_occupations()
-    {"plan": plan, "run": run, "unlinked": unlinked}[sys.argv[1]]()
+    {"plan": plan, "run": run, "unlinked": unlinked, "crawl-hds": crawl_hds}[sys.argv[1]]()
