@@ -142,7 +142,7 @@ def qlever(query):
         if text.startswith("?"):
             break
         busy = "429" in text[:400] or "Too Many Requests" in text[:400]
-        time.sleep(min(60 * attempt, 600) if busy else 10 * attempt)   # QLever's rate limit: back off for minutes
+        time.sleep(15 * attempt if busy else 10 * attempt)   # QLever's rate limit refills at about one query a second
     else:
         raise RuntimeError(f"query service failed: {text[:200]}")
     return tsv_rows(text)
