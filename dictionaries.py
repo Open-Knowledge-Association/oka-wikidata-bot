@@ -759,6 +759,12 @@ REL_UNITS = (("parents", re.compile(r"(?:Foreldre|(?:Sønn|Datter|Barn) av)\s*:?
              ("spouse", re.compile(r"(?:Gift|\d\))\s*")),                              # subject's own family
              ("children", re.compile(r"(?:Far|Mor) til\s+", re.I)),                      # (linked only)
              ("siblings", re.compile(r"(?:Bror|Søster) (?:av|til)\s+", re.I)))
+KIN_CUT = re.compile(r"[,;]?\s*\b(?:og\s+)?(?:nevø|niese|barnebarn|oldebarn|sønnesønn|sønnedatter|datterdatter|"
+                     r"dattersønn|halvbror|halvsøster|bror|søster|brorsønn|brordatter|søstersønn|søsterdatter|fetter|"
+                     r"kusine|tremenning|svoger|svigerinne|svigersønn|svigerdatter|svigerfar|svigermor|onkel|tante|"
+                     r"morbror|farbror|morsøster|farsøster|mormor|farmor|morfar|farfar|grandonkel|grandtante|stesønn|"
+                     r"stedatter|stefar|stemor|adoptivsønn|adoptivdatter|fostersønn|fosterdatter)\s+(?:av|til)\b", re.I)
+# where another kin relation starts in a relatives phrase: 'Sønn av Niels Bohr og nevø av Harald Bohr' names one parent
 NAME_WORD = r"(?:[A-ZÆØÅÄÖÜÉÈ][\w'’-]*\.?|de|von|van|af|la|le|du|der|den|zu|di|da)"
 NAME_YEARS = re.compile(rf"((?:{NAME_WORD}\s+)*[A-ZÆØÅÄÖÜÉÈ][\w'’-]+)\s*\(([^)]*)\)")
 _by_id, _sex = {}, {}
@@ -888,6 +894,9 @@ def relatives(raw):
             carry = None
             continue
         body = next((rx.sub("", unit, count=1) for k, rx in REL_UNITS if k == kind and rx.match(unit)), unit)
+        other_kin = KIN_CUT.search(body)
+        if other_kin:                                   # 'Sønn av X og nevø av Y': Y is no parent
+            body = body[:other_kin.start()]
         if not body.strip(" :.,"):
             carry = kind
             continue
