@@ -22,8 +22,10 @@ import dictionaries as d
 from common import ROOT, only_import_refs
 
 API = "https://api.anthropic.com/v1"
-MODEL = "claude-sonnet-5-5"
-LEFT, LOG = ROOT / "dictionary_left_alone.csv", ROOT / "conflict_checks.csv"
+MODEL = os.environ.get("CONFLICT_MODEL", "claude-sonnet-5-5")      # e.g. claude-haiku-5-5, to compare cost and quality
+LEFT = ROOT / "dictionary_left_alone.csv"
+LOG = ROOT / os.environ.get("CONFLICT_LOG", "conflict_checks.csv")
+SAME_AS = os.environ.get("CONFLICT_SAME_AS")     # another log: check exactly its cases again (a model comparison)
 LABELS = {"date of birth": "P569", "date of death": "P570", "place of birth": "P19", "place of death": "P20"}
 WORK_NAMES = {"snl": "Store norske leksikon", "nkl": "Norsk kunstnerleksikon", "sml": "Store medisinske leksikon",
               "hds": "Historical Dictionary of Switzerland"}
@@ -75,6 +77,8 @@ def open_cases():
     under the bot's current rules (a place inside the other, the same day in the other calendar, a year beside the
     full date are no disagreements)."""
     done = {(r["work"], r["entry"], r["property"]) for r in csv.DictReader(open(LOG, encoding="utf-8"))} if LOG.exists() else set()
+    only = {(r["work"], r["entry"], r["property"]) for r in csv.DictReader(open(ROOT / SAME_AS, encoding="utf-8"))} \
+        if SAME_AS else None
     plans = {}
     for w in WORK_NAMES:
         p = d.WORK2 / f"full_plan_{w}.jsonl"
@@ -82,7 +86,8 @@ def open_cases():
             plans.update({(w, e["id"]): e for e in map(json.loads, open(p, encoding="utf-8"))})
     keys = list(dict.fromkeys((r["work"], r["entry"]) for r in csv.DictReader(open(LEFT, encoding="utf-8"))
                               if "different value" in r["note"] and r["note"].split(":")[0] in LABELS
-                              and (r["work"], r["entry"]) in plans))
+                              and (r["work"], r["entry"]) in plans
+                              and (only is None or any(k[:2] == (r["work"], r["entry"]) for k in only))))
     today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
     for i in range(0, len(keys), 50):
         batch = [plans[k] for k in keys[i:i + 50]]
@@ -92,7 +97,8 @@ def open_cases():
             ent = live.get(e["qid"], {})
             for note in d.build(ent, e, today, labels)[2] if ent else []:
                 label = note.split(":")[0]
-                if "different value" not in note or label not in LABELS or (e["work"], e["id"], label) in done:
+                if "different value" not in note or label not in LABELS or (e["work"], e["id"], label) in done \
+                        or (only is not None and (e["work"], e["id"], label) not in only):
                     continue
                 ours = [f["value"] for f in e["facts"] if f["pid"] == LABELS[label]]
                 claims = [c for c in ent.get("claims", {}).get(LABELS[label], [])
