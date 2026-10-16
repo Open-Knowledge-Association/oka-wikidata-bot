@@ -39,6 +39,43 @@ NOTES = {
 }
 
 
+# Why values are not added yet: one column each in the table under the overview, with how each kind gets resolved
+REASONS = [
+    ("duplicate", "Possible duplicate item", "task 1: an item of the same name lies nearby or has no coordinates, so "
+     "no new item is made until it is clear whether it is the same feature. The bot compares the two items' kind and "
+     "municipality; the rest is checked by hand."),
+    ("place", "Place not identified", "the place name in the entry matches no place item, or several (a country or "
+     "region only, a former municipality, a church). The matching rules and a checked list of names are being "
+     "extended."),
+    ("occupation", "Occupation not mapped", "the work's word for the occupation is not yet linked to an occupation "
+     "item. The list of words is being extended; offices such as king or bishop are left out by design."),
+    ("date", "Date unclear", "the source marks the date as approximate, gives a day before the calendar reform there "
+     "(Julian or Gregorian unclear), or writes it in a form the bot does not read yet (years before 1000, years BCE)."),
+    ("identifier", "Identifier issue", "the identifier is also on another item, or the entry's life years do not fit "
+     "the item's (probably another person). Checked by hand, then corrected."),
+    ("unread", "Entry not read", "the entry has moved or could not be read; moved entries are read again at their new "
+     "address."),
+    ("other", "Other", "anything else; each case is in the log."),
+]
+
+
+def reason_of(note):
+    """The REASONS key of one note (task 2's left-alone log) or skipped change (task 1's log)."""
+    if "has the same name" in note:
+        return "duplicate"
+    if "not matched to one" in note:
+        return "place"
+    if "not mapped" in note:
+        return "occupation"
+    if "calendar" in note or "clear format" in note or "notes '" in note or "not used" in note:
+        return "date"
+    if "wrong item" in note or "another person" in note or "already on" in note:
+        return "identifier"
+    if "readable" in note or "not marked free" in note or "item not found" in note:
+        return "unread"
+    return "other"
+
+
 def rows(path):
     return list(csv.DictReader(open(path, encoding="utf-8"))) if path.exists() else []
 
@@ -75,8 +112,11 @@ def counts(log_rows, key):
         changes = [x for x in (r.get("changes") or "").split("; ") if x]
         if r.get("revid"):
             c["created" if r["kind"].split(":")[0] == "create" else "edited"] += 1
-        if any(x.startswith("skipped") for x in changes):
+        skipped = [x for x in changes if x.startswith("skipped")]
+        if skipped:
             c["unclear"] += 1
+            why = c.setdefault("why", {})
+            why[reason_of(skipped[0])] = why.get(reason_of(skipped[0]), 0) + 1
         for x in changes:
             k = kind_of(x)
             if k:
@@ -107,6 +147,10 @@ def table_rows(task1_plans=None, task2_plans=None):
         differs = sum(1 for n in notes if "different value" in n["note"])
         c = counts(mine, lambda r: r["entry"])
         c["unclear"] = len(notes) - differs
+        c["why"] = {}
+        for n in notes:
+            if "different value" not in n["note"]:
+                c["why"][reason_of(n["note"])] = c["why"].get(reason_of(n["note"]), 0) + 1
         out.append((2, f"[[{q}|{name}]]", plans2.get(w), c, differs))
     return out
 
@@ -141,8 +185,27 @@ def overview(task1_plans=None, task2_plans=None):
         f"[{REPO}dictionary_edits.csv dictionary_edits.csv] and, for the values not added, "
         f"[{REPO}dictionary_left_alone.csv dictionary_left_alone.csv]. Updated "
         f"{datetime.datetime.now(datetime.timezone.utc):%d %B %Y, %H:%M} UTC.",
-    ]
+        "",
+        "=== Not added: unclear, by reason ===",
+        "Unclear cases are resolved over time: by better matching, by checked lists of names and words, or by hand, "
+        "after which the bot makes the decided edits.",
+        "",
+    ] + by_reason(task1_plans, task2_plans)
     return "\n".join(lines)
+
+
+def by_reason(task1_plans=None, task2_plans=None):
+    """The unclear cases of each source, one column per reason, and what each reason means."""
+    fmt = lambda n: f"{n:,}" if n else "–"
+    keys = [k for k, _, _ in REASONS]
+    out = ['{| class="wikitable sortable" style="text-align:right"',
+           "! Task !! Source !! " + " !! ".join(title for _, title, _ in REASONS) + " !! Total"]
+    for task, label, _, c, _ in table_rows(task1_plans, task2_plans):
+        why = c.get("why", {})
+        out += ["|-", f'| {task} || style="text-align:left" | {label} || '
+                      + " || ".join(fmt(why.get(k, 0)) for k in keys) + f" || {fmt(sum(why.values()))}"]
+    out += ["|}", ""] + [f"* \'\'\'{title}\'\'\': {text}" for _, title, text in REASONS]
+    return out
 
 
 def task1_section(releases=()):

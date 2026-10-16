@@ -1256,9 +1256,10 @@ PREFER_OVER_WEAK = False      # until the request says so: a differing value wit
 
 
 def life_years_clash(claims, entry):
-    """A note when the entry's life years show another person than the item's: a year of birth or death two or more
-    years off every year the item gives, or both years off (Jacques Martin the philosopher, 1922-1963, whose Lex ID
-    sat on the cartoonist, 1921-2010). Nothing is then added: a place or a relative would be the other person's."""
+    """A note when the entry's life years show another person than the item's: no year the same, and one two or more
+    years off every year the item gives (Jacques Martin the philosopher, 1922-1963, whose Lex ID sat on the
+    cartoonist, 1921-2010). Nothing is then added: a place or a relative would be the other person's. One year the
+    same means the same person with one date in doubt (Anita Greve, 1905 or 1903, died 1972): the run goes on."""
     off, shown = {}, []
     for pid in ("P569", "P570"):
         ours = [int(f["value"]["value"]["time"][:5]) for f in entry["facts"] if f["pid"] == pid
@@ -1270,7 +1271,7 @@ def life_years_clash(claims, entry):
             off[pid] = min(abs(ours[0] - y) for y in theirs)
             shown.append(f"{'birth' if pid == 'P569' else 'death'} {ours[0]} in the entry, "
                          f"{'/'.join(map(str, sorted(set(theirs))))} on the item")
-    if any(v >= 2 for v in off.values()) or (len(off) == 2 and all(off.values())):
+    if off and all(off.values()) and max(off.values()) >= 2:
         return ("the entry's life years do not fit the item's (" + "; ".join(shown) + "): the identifier is probably "
                 "on another person's item; nothing added")
     return None
