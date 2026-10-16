@@ -78,6 +78,7 @@ def open_cases():
         if p.exists():
             plans.update({(w, e["id"]): e for e in map(json.loads, open(p, encoding="utf-8"))})
     for r in csv.DictReader(open(LEFT, encoding="utf-8")):
+        r = {**r, "qid": r["item"]}                   # the log calls the item 'item'
         label = r["note"].split(":")[0]
         if "different value" not in r["note"] or label not in LABELS or (r["work"], r["entry"], label) in done:
             continue
