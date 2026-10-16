@@ -48,6 +48,18 @@ LEGAL_FORMS = {"aksjeselskap": "Q15042660", "as": "Q15042660", "allmennaksjesels
 MOUNTAINS = (("Q8502", "Q207326"), ("Q54050",))         # mountain, summit; then hill
 KM2 = "Q712226"
 REDIRECT = "Q45403344"                          # reason for deprecated rank: redirect (renamed SNL entries)
+MOST_PRECISE = "Q71536040"                      # reason for preferred rank: most precise value
+SAME_PLACE = {"Q21711493": "Q585"}              # Christiania, an item of its own for Oslo's old name: Oslo
+
+
+def less_precise_same(claim, value):
+    """A date on the item that says less than the entry's and agrees with it: 1888 (or 12.1888) for 28.12.1888."""
+    v, w = claim["mainsnak"]["datavalue"]["value"], value["value"]
+    if claim["mainsnak"]["datavalue"].get("type") != "time" or v.get("precision", 11) >= w["precision"]:
+        return False
+    if v["precision"] < 9 or v["time"][:5] != w["time"][:5]:
+        return False                                # decades and centuries are left alone
+    return v["precision"] == 9 or v["time"][:8] == w["time"][:8]
 GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
 JULIAN = "http://www.wikidata.org/entity/Q1985786"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
@@ -1261,9 +1273,23 @@ def build(ent, entry, today, labels=None):
                 c["mainsnak"]["datavalue"]["value"]["time"][:5] == f["value"]["value"]["time"][:5]
                 and c["mainsnak"]["datavalue"]["value"]["precision"] > f["value"]["value"]["precision"] for c in existing):
             continue
+        if not equal and f["pid"] in PLACE_PROPS:                       # Christiania (an item of its own) is Oslo
+            here = SAME_PLACE.get(f["value"]["value"]["id"], f["value"]["value"]["id"])
+            equal = [c for c in existing if SAME_PLACE.get(c["mainsnak"]["datavalue"]["value"].get("id"),
+                                                            c["mainsnak"]["datavalue"]["value"].get("id")) == here]
         if not equal and labels and f["pid"] in PLACE_PROPS:            # a place of the same name
             ours = labels.get(f["value"]["value"]["id"], set())
             equal = [c for c in existing if labels.get(c["mainsnak"]["datavalue"]["value"].get("id"), set()) & ours]
+        vague = [c for c in existing if f["value"]["type"] == "time" and less_precise_same(c, f["value"])]
+        if not equal and existing and len(vague) == len(existing) and f["pid"] not in MULTI and not f.get("calendar_unclear"):
+            rank = "normal" if any(c["rank"] == "preferred" for c in existing) else "preferred"
+            c = statement(f["pid"], f["value"], ref, rank=rank)     # 1888 on the item, 28.12.1888 in the entry
+            if rank == "preferred":
+                c["qualifiers"] = {"P7452": [{"snaktype": "value", "property": "P7452", "datavalue": item_value(MOST_PRECISE)}]}
+                c["qualifiers-order"] = ["P7452"]
+            out_claims.append(c)
+            done.append(f"{f['label']} (more precise)")
+            continue
         if f.get("calendar_unclear") and not (equal and cites(equal[0], work_q)):
             notes.append(f"{f['label']} {f['value']['value']['time'][1:11]} not used: calendar before 1813 unclear")
             continue
