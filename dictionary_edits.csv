@@ -4051,3 +4051,503 @@ time,work,kind,entry,item,revid,changes
 2026-10-16T18:01:57Z,sml,term,kokker,Q63085,2557707435,SML ID kokker deprecated (now SML kokker_-_bakterier); SML ID kokker_-_bakterier; other names
 2026-10-16T18:01:58Z,snl,person,Alice_Bah_Kuhnke,Q4725739,2557707441,source for date of birth
 2026-10-16T18:01:59Z,nkl,person,Henrik_Wilhelm_Bennetter,Q52156085,2557707446,NKL ID Henrik_Wilhelm_Bennetter deprecated (now SNL Henrik_Wilhelm_Bennetter); SNL ID Henrik_Wilhelm_Bennetter; source for occupation
+2026-10-16T19:16:10Z,sml,term,komplikasjon,Q1346149,2557716593,SML ID komplikasjon deprecated (now SML komplikasjon_-_medisin); SML ID komplikasjon_-_medisin
+2026-10-16T19:16:11Z,snl,person,Alice_Cooper,Q332032,2557716609,source for place of birth; source for date of birth
+2026-10-16T19:16:12Z,nkl,person,Hilde_Vemren,Q17113584,2557716629,NKL ID Hilde_Vemren deprecated (now SNL Hilde_Vemren); source for place of birth; source for occupation
+2026-10-16T19:16:12Z,sml,term,koppsetting,Q461707,2557716649,SML ID koppsetting deprecated (now SNL koppsetting); SNL ID koppsetting
+2026-10-16T19:16:14Z,snl,person,Alice_Green,Q4726110,2557716672,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:16:14Z,nkl,person,Hilmar_Fredriksen,Q55470652,2557716686,NKL ID Hilmar_Fredriksen deprecated (now SNL Hilmar_Fredriksen); source for place of birth; source for occupation; source for date of birth
+2026-10-16T19:16:15Z,sml,term,kreatinkinase,Q409458,2557716708,SML ID kreatinkinase deprecated (now SML kreatinkinase_-_CK); SML ID kreatinkinase_-_CK; other names
+2026-10-16T19:16:17Z,snl,person,Alice_Guy,Q263367,2557716735,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:16:17Z,nkl,person,Håkon_Gullvåg,Q5963456,2557716753,NKL ID Håkon_Gullvåg deprecated (now SNL Håkon_Gullvåg); source for place of birth; source for spouse; source for date of birth
+2026-10-16T19:16:19Z,sml,term,kromatografi,Q170050,2557716776,SML ID kromatografi deprecated (now SNL kromatografi)
+2026-10-16T19:16:20Z,snl,person,Alice_Hoffman,Q452722,2557716799,source for place of birth; source for date of birth
+2026-10-16T19:16:21Z,nkl,person,Håkon_Theodor_Arnestad_Bjærke_-_1,Q96210593,2557716821,NKL ID Håkon_Theodor_Arnestad_Bjærke_-_1 deprecated (now NKL Håkon_Theodor_Arnestad_Bjærke); NKL ID Håkon_Theodor_Arnestad_Bjærke; source for place of birth; source for occupation
+2026-10-16T19:16:22Z,sml,term,kromosomer,Q37748,2557716843,SML ID kromosomer deprecated (now SNL kromosomer)
+2026-10-16T19:16:23Z,snl,person,Alice_Lyttkens,Q4964458,2557716862,other names; source for date of birth; source for date of death
+2026-10-16T19:16:23Z,nkl,person,Ida_Lorentzen,Q5987091,2557716882,NKL ID Ida_Lorentzen deprecated (now SNL Ida_Lorentzen); other names; source for place of birth; source for occupation
+2026-10-16T19:16:25Z,sml,term,kvalitetssikring,Q836575,2557716904,SML ID kvalitetssikring deprecated (now SML kvalitetssikring_-_i_helsetjenesten); SML ID kvalitetssikring_-_i_helsetjenesten
+2026-10-16T19:16:26Z,snl,person,Alice_Meynell,Q3611689,2557716923,source for place of death; source for date of death
+2026-10-16T19:16:26Z,nkl,person,Inga_Grøndahl,Q131462882,2557716936,NKL ID Inga_Grøndahl deprecated (now SNL Inga_Grøndahl); SNL ID Inga_Grøndahl; other names; work location; place of birth; occupation
+2026-10-16T19:16:28Z,sml,term,kvikksølv,Q925,2557716956,SML ID kvikksølv deprecated (now SNL kvikksølv)
+2026-10-16T19:16:29Z,snl,person,Alice_Miller,Q236384,2557716974,other names; source for date of birth; source for date of death
+2026-10-16T19:16:30Z,nkl,person,Ingeborg_Rudi_Iversen,Q136435383,2557716987,NKL ID Ingeborg_Rudi_Iversen deprecated (now SNL Ingeborg_Rudi_Iversen); SNL ID Ingeborg_Rudi_Iversen; other names; work location; place of birth; place of death; occupation; date of death
+2026-10-16T19:16:31Z,sml,term,kyss,Q7307,2557717000,SML ID kyss deprecated (now SNL kyss)
+2026-10-16T19:16:32Z,snl,person,Alice_Munro,Q234819,2557717006,source for date of birth
+2026-10-16T19:16:33Z,nkl,person,Ingeborg_Thygesen,Q19974679,2557717012,NKL ID Ingeborg_Thygesen deprecated (now SNL Ingeborg_Thygesen); SNL ID Ingeborg_Thygesen; work location; source for place of birth; source for occupation; source for date of death
+2026-10-16T19:16:34Z,sml,term,laktose,Q127900,2557717025,SML ID laktose deprecated (now SNL laktose); SNL ID laktose
+2026-10-16T19:16:35Z,snl,person,Alice_Mürer_Siem,Q11957429,2557717029,other names
+2026-10-16T19:16:36Z,nkl,person,Inger-Johanne_Brautaset,Q115436778,2557717037,NKL ID Inger-Johanne_Brautaset deprecated (now SNL Inger-Johanne_Brautaset); SNL ID Inger-Johanne_Brautaset; place of birth
+2026-10-16T19:16:37Z,sml,term,legeattest,Q1458153,2557717047,SML ID legeattest deprecated (now SML legeerklæring); SML ID legeerklæring; other names
+2026-10-16T19:16:38Z,snl,person,Alice_Schwarzer,Q62919,2557717054,source for place of birth; source for date of birth
+2026-10-16T19:16:39Z,nkl,person,Inger_Johanne_Nygren,Q63383247,2557717066,NKL ID Inger_Johanne_Nygren deprecated (now SNL Inger_Johanne_Nygren); SNL ID Inger_Johanne_Nygren; work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T19:16:40Z,sml,term,legionærsykdom,Q154882,2557717074,SML ID legionærsykdom deprecated (now SML legionellose); SML ID legionellose
+2026-10-16T19:16:41Z,snl,person,Alice_Sebold,Q239934,2557717082,source for place of birth; source for date of birth
+2026-10-16T19:16:42Z,nkl,person,Inger_Johanne_Rasmussen,Q106512394,2557717091,NKL ID Inger_Johanne_Rasmussen deprecated (now SNL Inger_Johanne_Rasmussen); SNL ID Inger_Johanne_Rasmussen; work location; place of birth; source for date of birth
+2026-10-16T19:16:43Z,sml,term,levercelle,Q827450,2557717093,SML ID levercelle deprecated (now SML leverceller); SML ID leverceller; other names
+2026-10-16T19:16:44Z,snl,person,Alice_Seely_Harris,Q16595090,2557717096,SNL ID Alice_Seely_Harris deprecated (now SNL Alice_Seeley_Harris); SNL ID Alice_Seeley_Harris; source for place of death; source for date of death
+2026-10-16T19:16:45Z,nkl,person,Inger_Kvarving,Q11977203,2557717105,NKL ID Inger_Kvarving deprecated (now SNL Inger_Kvarving); SNL ID Inger_Kvarving; work location; occupation; source for occupation
+2026-10-16T19:16:46Z,sml,term,lineærakselerator,Q836828,2557717117,SML ID lineærakselerator deprecated (now SNL lineærakselerator); other names
+2026-10-16T19:16:47Z,snl,person,Alice_Tegnér,Q462879,2557717129,other names; source for date of birth; source for date of death
+2026-10-16T19:16:48Z,nkl,person,Inger_Lampe_Søholt,Q56435502,2557717135,NKL ID Inger_Lampe_Søholt deprecated (now SNL Inger_Lampe_Søholt); SNL ID Inger_Lampe_Søholt; work location; source for place of birth; place of death; source for occupation; occupation; historical population register ID; source for date of death
+2026-10-16T19:16:49Z,sml,term,lipoprotein-lipase,Q420014,2557717146,SML ID lipoprotein-lipase deprecated (now SML lipoproteinlipase); SML ID lipoproteinlipase
+2026-10-16T19:16:50Z,snl,person,Alice_Walker,Q215868,2557717152,source for date of birth
+2026-10-16T19:16:51Z,nkl,person,Inger_Sitter,Q6032357,2557717158,NKL ID Inger_Sitter deprecated (now SNL Inger_Sitter); source for place of birth; source for place of death; source for occupation; occupation; spouse
+2026-10-16T19:16:52Z,sml,term,lobotomi,Q207684,2557717163,SML ID lobotomi deprecated (now SNL lobotomi); SNL ID lobotomi
+2026-10-16T19:16:53Z,snl,person,Alice_Weidel,Q27975838,2557717169,source for place of birth; source for date of birth
+2026-10-16T19:16:54Z,nkl,person,Ingerid_Paulsen_Kuiters,Q11977222,2557717176,NKL ID Ingerid_Paulsen_Kuiters deprecated (now SNL Ingerid_Paulsen_Kuiters); SNL ID Ingerid_Paulsen_Kuiters; work location; source for place of birth; source for occupation
+2026-10-16T19:16:55Z,sml,term,lungepulsåren,Q206280,2557717188,SML ID lungepulsåren deprecated (now SML lungearteriestammen); SML ID lungearteriestammen
+2026-10-16T19:16:56Z,snl,person,Alice_Zeniter,Q2836679,2557717191,source for date of birth
+2026-10-16T19:16:57Z,nkl,person,Inghild_Karlsen,Q18562397,2557717196,NKL ID Inghild_Karlsen deprecated (now SNL Inghild_Karlsen); source for place of birth; source for date of birth
+2026-10-16T19:16:58Z,sml,term,lymfeåre,Q11238641,2557717198,SML ID lymfeåre deprecated (now SML lymfeårer); SML ID lymfeårer; other names
+2026-10-16T19:16:59Z,snl,person,Alicia_Keys,Q121507,2557717201,source for date of birth
+2026-10-16T19:24:23Z,nkl,person,Ingrid_Bodøgaard,Q72070043,2557718568,NKL ID Ingrid_Bodøgaard deprecated (now SNL Ingrid_Bodøgaard); work location; source for place of birth; source for date of birth
+2026-10-16T19:24:24Z,sml,term,makroskopisk,Q674038,2557718587,SML ID makroskopisk deprecated (now SNL makroskopisk); SNL ID makroskopisk
+2026-10-16T19:24:25Z,snl,person,Alicia_Markova,Q179196,2557718613,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:24:26Z,nkl,person,Ingrid_Book,Q64206811,2557718626,NKL ID Ingrid_Book deprecated (now SNL Ingrid_Book); work location; source for place of birth; source for date of birth
+2026-10-16T19:24:27Z,sml,term,maxille,Q350956,2557718642,SML ID maxille deprecated (now SML maxilla); SML ID maxilla; other names
+2026-10-16T19:24:28Z,snl,person,Alicia_de_Larrocha,Q232255,2557718657,source for place of birth; source for place of death; source for date of death
+2026-10-16T19:24:29Z,nkl,person,Ingrid_Jangaard_Ousland,Q11977245,2557718668,NKL ID Ingrid_Jangaard_Ousland deprecated (now SNL Ingrid_Jangaard_Ousland); SNL ID Ingrid_Jangaard_Ousland; other names; work location; source for place of birth; occupation
+2026-10-16T19:24:30Z,sml,term,mekanoreseptor,Q1348853,2557718681,SML ID mekanoreseptor deprecated (now SML mekanoreseptorer); SML ID mekanoreseptorer
+2026-10-16T19:24:31Z,snl,person,Alida_Valli,Q106940,2557718694,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:24:32Z,nkl,person,Ingunn_Skogholt,Q63349519,2557718704,NKL ID Ingunn_Skogholt deprecated (now SNL Ingunn_Skogholt); SNL ID Ingunn_Skogholt; work location; source for place of birth; source for occupation
+2026-10-16T19:24:33Z,sml,term,meldrøye,Q217227,2557718712,SML ID meldrøye deprecated (now SNL meldrøye); SNL ID meldrøye; other names
+2026-10-16T19:24:34Z,snl,person,Alija_Izetbegović,Q183848,2557718722,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:24:35Z,nkl,person,Irma_Salo_Jæger,Q11977519,2557718735,NKL ID Irma_Salo_Jæger deprecated (now SNL Irma_Salo_Jæger); source for place of birth
+2026-10-16T19:24:36Z,sml,term,menadion,Q192471,2557718743,SML ID menadion deprecated (now SNL menadion); SNL ID menadion
+2026-10-16T19:24:37Z,snl,person,Alina_Bronsky,Q2647090,2557718753,source for place of birth; source for date of birth
+2026-10-16T19:24:38Z,nkl,person,J.J.F._Gaden,Q113439970,2557718761,NKL ID J.J.F._Gaden deprecated (now SNL J.J.F._Gaden); SNL ID J.J.F._Gaden; place of death; occupation
+2026-10-16T19:24:39Z,sml,term,menerstatning,Q19381362,2557718769,SML ID menerstatning deprecated (now SNL menerstatning); SNL ID menerstatning
+2026-10-16T19:24:40Z,snl,person,Alisa_Ganijeva,Q519574,2557718778,other names; source for place of birth; source for date of birth
+2026-10-16T19:24:41Z,nkl,person,J._Stener_Lenschow,Q64217555,2557718795,NKL ID J._Stener_Lenschow deprecated (now SNL Stener_Lenschow); other names; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:24:42Z,sml,term,miljøterapeut,Q11989484,2557718804,SML ID miljøterapeut deprecated (now SNL miljøterapeut); SNL ID miljøterapeut; other names
+2026-10-16T19:24:43Z,snl,person,Alison_Krauss,Q371782,2557718816,other names; source for place of birth; source for date of birth
+2026-10-16T19:24:44Z,nkl,person,Jacob_Coning,Q166384,2557718830,NKL ID Jacob_Coning deprecated (now SNL Jacob_Coning); other names; source for place of birth; source for place of death; source for occupation; source for date of death
+2026-10-16T19:24:45Z,sml,term,misdannelse,Q727096,2557718836,SML ID misdannelse deprecated (now SML medfødte_misdannelser_-_medisinsk_genetikk); SML ID medfødte_misdannelser_-_medisinsk_genetikk
+2026-10-16T19:24:46Z,snl,person,Alison_Lurie,Q272638,2557718841,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:24:47Z,nkl,person,Jacob_Munch,Q1805976,2557718849,NKL ID Jacob_Munch deprecated (now SNL Jacob_Munch); source for place of birth; source for place of death; occupation; source for occupation; source for mother; source for date of birth
+2026-10-16T19:24:48Z,sml,term,morfologi,Q183252,2557718859,SML ID morfologi deprecated (now SNL morfologi); SNL ID morfologi
+2026-10-16T19:24:49Z,snl,person,Alisson_Becker,Q18237361,2557718865,other names; source for place of birth; source for date of birth
+2026-10-16T19:24:50Z,nkl,person,Jacob_Pedersson_Lindgaard,Q43288579,2557718873,other names; source for place of birth; place of death (more precise); source for occupation; source for father; date of birth (more precise); date of death (more precise)
+2026-10-16T19:24:51Z,sml,term,musikkterapi,Q209642,2557718884,SML ID musikkterapi deprecated (now SNL musikkterapi)
+2026-10-16T19:24:53Z,snl,person,Alistair_Darling,Q296639,2557718889,other names; source for place of birth; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:24:53Z,nkl,person,Jacob_Petersen,Q66382045,2557718896,NKL ID Jacob_Petersen deprecated (now SNL Jacob_Petersen); SNL ID Jacob_Petersen; other names; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:24:54Z,sml,term,muskelknute,Q556281,2557718903,SML ID muskelknute deprecated (now SML muskelknute_-_myom); SML ID muskelknute_-_myom; other names
+2026-10-16T19:24:55Z,snl,person,Alistair_MacLean,Q333713,2557718906,source for place of death; source for date of birth
+2026-10-16T19:24:56Z,nkl,person,Jacob_Sann,Q17120219,2557718912,NKL ID Jacob_Sann deprecated (now SNL Jacob_Sann); other names; source for place of birth; place of death; source for occupation; occupation
+2026-10-16T19:24:57Z,sml,term,muskelstølhet,Q574415,2557718917,SML ID muskelstølhet deprecated (now SML stølhet); SML ID stølhet; other names
+2026-10-16T19:24:58Z,snl,person,Alistair_Paterson,Q16091278,2557718924,source for place of birth; source for date of birth
+2026-10-16T19:24:59Z,nkl,person,Jacobine_Nordan_Lund,Q27955423,2557718931,NKL ID Jacobine_Nordan_Lund deprecated (now SNL Jacobine_Nordan_Lund); SNL ID Jacobine_Nordan_Lund; source for place of birth; place of death; source for occupation; historical population register ID; source for mother
+2026-10-16T19:24:59Z,sml,term,mutasjon,Q42918,,no change
+2026-10-16T19:25:00Z,snl,person,Alistair_Te_Ariki_Campbell,Q2710978,2557718939,source for place of death; source for date of death
+2026-10-16T19:25:01Z,nkl,person,Jakob_Bersveinsson_Klukstad,Q4571227,2557718948,NKL ID Jakob_Bersveinsson_Klukstad deprecated (now SNL Jakob_Klukstad); other names; source for place of birth; place of death; source for date of birth
+2026-10-16T19:25:02Z,sml,term,mygg,Q27605,2557718956,SML ID mygg deprecated (now SNL mygg)
+2026-10-16T19:25:02Z,snl,person,Alkaios,Q212872,,no change
+2026-10-16T19:25:03Z,nkl,person,Jan_Harr,Q17094349,2557718960,NKL ID Jan_Harr deprecated (now SNL Jan_Harr); source for place of birth; sibling
+2026-10-16T19:25:04Z,sml,term,mykotoksiner,Q422449,2557718965,SML ID mykotoksiner deprecated (now SNL mykotoksiner)
+2026-10-16T19:25:04Z,snl,person,Alkamenes,Q505640,,no change
+2026-10-16T19:25:05Z,nkl,person,Jardar_Lunde,Q11978234,2557718974,NKL ID Jardar_Lunde deprecated (now SNL Jardar_Lunde); source for place of death; source for occupation; occupation
+2026-10-16T19:25:06Z,sml,term,nanoteknologi,Q11468,2557718984,SML ID nanoteknologi deprecated (now SNL nanoteknologi)
+2026-10-16T19:25:07Z,snl,person,Alkibiades,Q187982,2557718990,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:25:08Z,nkl,person,Jean_Gaspard_De_Cicignon,Q2585876,2557718998,NKL ID Jean_Gaspard_De_Cicignon deprecated (now NKL Jean_Gaspard_de_Cicignon); NKL ID Jean_Gaspard_de_Cicignon
+2026-10-16T19:25:09Z,sml,term,narkotin,Q415619,2557719002,SML ID narkotin deprecated (now SNL narkotin); SNL ID narkotin
+2026-10-16T19:25:40Z,snl,person,Alkidamas,Q444459,,no change
+2026-10-16T19:25:41Z,nkl,person,Jean_Heiberg,Q1781129,2557719485,NKL ID Jean_Heiberg deprecated (now SNL Jean_Heiberg); source for place of birth; source for place of death; source for occupation; source for father; source for spouse
+2026-10-16T19:25:42Z,sml,term,natrium_-_fysiologi,Q658,2557719492,SML ID natrium_-_fysiologi deprecated (now SML natrium_-_i_kroppen); SML ID natrium_-_i_kroppen
+2026-10-16T19:25:42Z,snl,person,Alkifron,Q559866,2557719504,other names
+2026-10-16T19:25:43Z,nkl,person,Jens_Nilssen,Q11157385,2557719513,NKL ID Jens_Nilssen deprecated (now SNL Jens_R._Nilssen); other names; place of death
+2026-10-16T19:25:45Z,sml,term,natriumfluorid,Q407520,2557719523,SML ID natriumfluorid deprecated (now SNL natriumfluorid)
+2026-10-16T19:25:45Z,snl,person,Alkmaion_fra_Kroton,Q188332,,no change
+2026-10-16T19:25:45Z,nkl,person,Jens_Von_Der_Lippe,Q11978465,2557719537,NKL ID Jens_Von_Der_Lippe deprecated (now NKL Jens_von_der_Lippe); NKL ID Jens_von_der_Lippe; work location; source for place of birth; source for place of death; source for spouse
+2026-10-16T19:25:45Z,sml,term,natriumhydrogenkarbonat,Q179731,,no change
+2026-10-16T19:25:46Z,snl,person,Alkman,Q298850,2557719553,other names
+2026-10-16T19:25:47Z,nkl,person,Jo_Vogt,Q113198266,2557719561,other names; place of death
+2026-10-16T19:25:49Z,sml,term,natriumhypokloritt,Q407204,2557719568,SML ID natriumhypokloritt deprecated (now SNL natriumhypokloritt)
+2026-10-16T19:25:50Z,snl,person,Alkuin,Q154332,2557719577,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:25:50Z,nkl,person,Joachim_Andreas_Stukenbrock,Q11978646,2557719584,other names; source for place of death; occupation; source for date of death
+2026-10-16T19:25:51Z,sml,term,nervus_vagus,Q190140,2557719593,SML ID nervus_vagus deprecated (now SML vagusnerven); SML ID vagusnerven; other names
+2026-10-16T19:25:52Z,snl,person,Allamah_ibn_al-Mutahhar_Hilli,Q290506,2557719601,SNL ID Allamah_ibn_al-Mutahhar_Hilli deprecated (now SNL al-Allama_al-Hilli); SNL ID al-Allama_al-Hilli
+2026-10-16T19:25:53Z,nkl,person,Joachim_Frich,Q4568470,2557719609,source for place of birth; source for place of death; source for occupation; source for date of death
+2026-10-16T19:25:54Z,sml,term,nevropsykologi,Q3872,2557719618,SML ID nevropsykologi deprecated (now SNL nevropsykologi); other names
+2026-10-16T19:25:55Z,snl,person,Allan_Boesak,Q726349,2557719625,other names; source for date of birth
+2026-10-16T19:25:56Z,nkl,person,Joachim_Grøgaard,Q17093596,2557719633,other names; source for occupation
+2026-10-16T19:25:57Z,sml,term,nikkel,Q744,2557719639,SML ID nikkel deprecated (now SNL nikkel)
+2026-10-16T19:25:58Z,snl,person,Allan_Botschinsky,Q1680582,2557719650,source for place of birth; source for date of birth
+2026-10-16T19:25:59Z,nkl,person,Joakim_Mathisen,Q133449107,2557719654,source for place of birth; source for occupation
+2026-10-16T19:26:01Z,sml,term,nitrogen,Q627,2557719670,SML ID nitrogen deprecated (now SNL nitrogen); other names
+2026-10-16T19:26:01Z,snl,person,Allan_C._Wilson,Q3398742,2557719674,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:26:02Z,nkl,person,Joan_Burger_Siem,Q63821243,2557719678,work location; occupation; source for occupation; source for date of birth
+2026-10-16T19:26:03Z,sml,term,nøyaktighet,Q1298969,2557719689,SML ID nøyaktighet deprecated (now SNL nøyaktighet); SNL ID nøyaktighet
+2026-10-16T19:26:04Z,snl,person,Allan_Cunningham,Q2062341,2557719696,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:26:05Z,nkl,person,Jochum_Jochumsen_Kirsebom,Q117771900,2557719701,NKL ID Jochum_Jochumsen_Kirsebom deprecated (now SNL Jochum_Jochumsen_Kirsebom); SNL ID Jochum_Jochumsen_Kirsebom; source for date of death
+2026-10-16T19:26:06Z,sml,term,oksalsyre,Q184832,2557719716,SML ID oksalsyre deprecated (now SNL oksalsyre); other names
+2026-10-16T19:26:07Z,snl,person,Allan_Dwan,Q959677,2557719725,other names; source for place of birth; source for place of death; source for date of death
+2026-10-16T19:26:08Z,nkl,person,Joen_Jacobsen,Q26763870,2557719734,source for place of birth; source for place of death; source for date of birth
+2026-10-16T19:26:09Z,sml,term,oksygen_-_fysiologi,Q629,2557719749,SML ID oksygen_-_fysiologi deprecated (now SML oksygen_-_i_kroppen); SML ID oksygen_-_i_kroppen
+2026-10-16T19:26:10Z,snl,person,Allan_Edwall,Q264921,2557719760,other names; source for date of birth; source for date of death
+2026-10-16T19:26:11Z,nkl,person,Johan_Adolf_Gerhard_Fischer,Q5731508,2557719769,source for place of birth; source for place of death; source for occupation; source for father; source for date of death
+2026-10-16T19:26:12Z,sml,term,ortopeditekniker,Q31078846,2557719778,SML ID ortopeditekniker deprecated (now SNL ortopeditekniker); SNL ID ortopeditekniker
+2026-10-16T19:26:13Z,snl,person,Allan_Johansson,Q120837103,2557719787,source for place of birth; source for place of death
+2026-10-16T19:26:14Z,nkl,person,Johan_Bagge,Q13422514,2557719798,source for place of birth; source for place of death; source for date of death
+2026-10-16T19:26:15Z,sml,term,oscilloskop,Q174320,2557719803,SML ID oscilloskop deprecated (now SNL oscilloskop)
+2026-10-16T19:26:16Z,snl,person,Allan_Kaprow,Q366380,2557719816,source for place of birth; source for date of death
+2026-10-16T19:26:17Z,nkl,person,Johan_Barstad,Q113198268,2557719824,other names; place of birth; place of death; occupation
+2026-10-16T19:26:18Z,sml,term,pantotensyre,Q179894,2557719832,SML ID pantotensyre deprecated (now SNL pantotensyre)
+2026-10-16T19:26:19Z,snl,person,Allan_Kardec,Q240643,2557719843,pseudonym; source for place of birth; source for date of birth
+2026-10-16T19:26:20Z,nkl,person,Johan_Bechen,Q61415432,2557719857,NKL ID Johan_Bechen deprecated (now SNL Johan_Bechen); SNL ID Johan_Bechen; source for place of birth; place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:26:21Z,sml,term,paratuberkulose,Q707388,2557719863,SML ID paratuberkulose deprecated (now SNL paratuberkulose)
+2026-10-16T19:26:21Z,snl,person,Allan_Kemakeza,Q654672,,no change
+2026-10-16T19:26:22Z,nkl,person,Johan_Berner_Jakobsen,Q126325373,2557719875,source for occupation
+2026-10-16T19:26:23Z,sml,term,parenkym,Q270524,2557719888,SML ID parenkym deprecated (now SML parenkym_-_anatomi); SML ID parenkym_-_anatomi; other names
+2026-10-16T19:26:24Z,snl,person,Allan_Massie,Q530321,2557719900,source for place of birth
+2026-10-16T19:26:25Z,nkl,person,Johan_Bernhard_Kreutzer,Q113192650,2557719914,source for place of death
+2026-10-16T19:27:03Z,sml,term,paternalisme,Q58434,2557720414,SML ID paternalisme deprecated (now SNL paternalisme)
+2026-10-16T19:27:04Z,snl,person,Allan_Pettersson,Q183359,2557720421,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:27:04Z,nkl,person,Johan_Breder,Q113198269,2557720429,other names; source for place of death; source for occupation
+2026-10-16T19:27:05Z,sml,term,phylloidestumor,Q1149070,2557720438,SML ID phylloidestumor deprecated (now SML phyllodestumor); SML ID phyllodestumor; other names
+2026-10-16T19:27:07Z,snl,person,Allan_Pinkerton,Q365650,2557720449,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:27:07Z,nkl,person,Johan_Bull,Q20111547,2557720457,NKL ID Johan_Bull deprecated (now SNL Johan_Bull); other names; source for place of birth; occupation; source for father; source for sibling
+2026-10-16T19:27:07Z,sml,term,plantevernmidler,Q131656,,no change
+2026-10-16T19:27:09Z,snl,person,Allan_Ramsay_-_britisk_maler_og_skribent,Q560792,2557720462,source for place of birth; source for place of death; source for date of death
+2026-10-16T19:27:10Z,nkl,person,Johan_Carl_Cristian_Micaelsen,Q11977770,2557720471,source for occupation
+2026-10-16T19:27:11Z,sml,term,pollen,Q79932,2557720480,SML ID pollen deprecated (now SML pollenallergi); SML ID pollenallergi; other names
+2026-10-16T19:27:12Z,snl,person,Allan_Ramsay_-_lyriker,Q654775,2557720490,source for place of death; source for date of death
+2026-10-16T19:27:13Z,nkl,person,Johan_Castberg,Q11978707,2557720501,source for work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T19:27:14Z,sml,term,protozoer,Q101274,2557720510,SML ID protozoer deprecated (now SNL protozoer); SNL ID protozoer
+2026-10-16T19:27:15Z,snl,person,Allan_Sandage,Q358253,2557720523,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:27:16Z,nkl,person,Johan_Christensen,Q13122526,2557720536,source for occupation
+2026-10-16T19:27:16Z,sml,term,psykotisk_lidelse_indusert_av_rusmiddelbruk,Q2151786,2557720546,SML ID psykotisk_lidelse_indusert_av_rusmiddelbruk deprecated (now SML rusutløst_psykose); SML ID rusutløst_psykose
+2026-10-16T19:27:18Z,snl,person,Allan_Simonsen,Q153463,2557720558,source for date of birth
+2026-10-16T19:27:19Z,nkl,person,Johan_Christian_Clausen_Dahl,Q164735,2557720571,other names; source for place of birth; source for place of death; source for occupation; source for spouse
+2026-10-16T19:27:19Z,sml,term,pustulose,Q7262033,2557720579,SML ID pustulose deprecated (now SML pustulosis_palmoplantaris); SML ID pustulosis_palmoplantaris
+2026-10-16T19:27:21Z,snl,person,Allart_van_Everdingen,Q539036,2557720595,source for place of birth; source for place of death; date of birth (more precise); date of death (more precise)
+2026-10-16T19:27:22Z,nkl,person,Johan_Christian_Hammerstad,Q6251260,2557720602,NKL ID Johan_Christian_Hammerstad deprecated (now SNL Johan_Christian_Hammerstad); SNL ID Johan_Christian_Hammerstad; source for place of birth; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:27:23Z,sml,term,pyridoksal,Q3065731,2557720615,SML ID pyridoksal deprecated (now SNL pyridoksal); SNL ID pyridoksal
+2026-10-16T19:27:24Z,snl,person,Allen_Curnow,Q1463635,2557720622,place of death; source for date of birth; source for date of death
+2026-10-16T19:27:25Z,nkl,person,Johan_Christoff_Friedrich_Reuter,Q24199518,2557720634,other names; source for date of birth
+2026-10-16T19:27:26Z,sml,term,radium,Q1128,2557720651,SML ID radium deprecated (now SNL radium)
+2026-10-16T19:27:27Z,snl,person,Allen_Dulles,Q317243,2557720656,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:27:28Z,nkl,person,Johan_Christoffer_Johnsen,Q113198271,2557720670,place of birth; place of death; occupation
+2026-10-16T19:27:28Z,sml,term,regenerasjon,Q193119,,no change
+2026-10-16T19:27:29Z,snl,person,Allen_Forte,Q1528610,2557720680,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:27:29Z,nkl,person,Johan_Christopher_Hempel,Q4658604,,no change
+2026-10-16T19:27:30Z,sml,term,reseptregisteret,Q11997617,2557720687,SML ID reseptregisteret deprecated (now SML Legemiddelregisteret); SML ID Legemiddelregisteret; other names
+2026-10-16T19:27:31Z,snl,person,Allen_Ginsberg,Q6711,2557720704,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:27:32Z,nkl,person,Johan_Conrad_Ernst,Q1810879,2557720709,source for place of birth; source for occupation
+2026-10-16T19:27:33Z,sml,term,resipient,Q11997624,2557720721,SML ID resipient deprecated (now SNL resipient); SNL ID resipient
+2026-10-16T19:27:34Z,snl,person,Allen_Iverson,Q190094,2557720740,other names; source for date of birth
+2026-10-16T19:27:35Z,nkl,person,Johan_Daniel_Berlin,Q936230,2557720752,source for place of death; occupation; source for occupation
+2026-10-16T19:27:35Z,sml,term,retrograd,Q312021,,no change
+2026-10-16T19:27:36Z,snl,person,Allen_Johnson,Q311725,2557720762,other names; source for place of birth; source for date of birth
+2026-10-16T19:27:37Z,nkl,person,Johan_Deshington,Q24707786,2557720778,source for place of birth; occupation
+2026-10-16T19:27:38Z,sml,term,rundormer,Q5185,2557720793,SML ID rundormer deprecated (now SML rundorminfeksjon); SML ID rundorminfeksjon
+2026-10-16T19:27:39Z,snl,person,Allen_Jones,Q701564,2557720807,source for place of birth; source for date of birth
+2026-10-16T19:27:40Z,nkl,person,Johan_Diderich_Von_Dram,Q55385234,2557720820,NKL ID Johan_Diderich_Von_Dram deprecated (now NKL Johan_Diderich_von_Dram); NKL ID Johan_Diderich_von_Dram; source for place of burial
+2026-10-16T19:27:41Z,sml,term,røntgenrør,Q174443,2557720847,SML ID røntgenrør deprecated (now SNL røntgenrør)
+2026-10-16T19:27:41Z,snl,person,Allen_Lane,Q1263483,,no change
+2026-10-16T19:27:42Z,nkl,person,Johan_Fahlstrøm,Q4579142,2557720860,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:27:43Z,sml,term,sagittalplan,Q2211994,2557720877,SML ID sagittalplan deprecated (now SML plan_-_anatomi); SML ID plan_-_anatomi
+2026-10-16T19:27:44Z,snl,person,Allen_Stuart_Drury,Q733850,2557720899,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:27:45Z,nkl,person,Johan_Faye,Q92161792,2557720916,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:27:46Z,sml,term,salpetersyre,Q83320,2557720931,SML ID salpetersyre deprecated (now SNL salpetersyre)
+2026-10-16T19:27:47Z,snl,person,Allen_Tate,Q975706,2557720950,other names; source for place of birth; source for place of death
+2026-10-16T19:28:23Z,nkl,person,Johan_Fredrich_Lühr,Q13377839,2557721327,source for occupation; source for date of birth
+2026-10-16T19:28:24Z,sml,term,saltsyre,Q2409,2557721339,SML ID saltsyre deprecated (now SNL saltsyre); other names
+2026-10-16T19:28:25Z,snl,person,Allen_Toussaint,Q963044,2557721347,source for place of birth; source for place of death; source for date of birth
+2026-10-16T19:28:26Z,nkl,person,Johan_Fredrik_Berg,Q110944945,2557721358,source for occupation; source for date of birth; source for date of death
+2026-10-16T19:28:27Z,sml,term,sekvensering,Q1764062,2557721368,SML ID sekvensering deprecated (now SNL sekvensering); SNL ID sekvensering
+2026-10-16T19:28:28Z,snl,organisation,Alliance_Française,Q655810,2557721376,inception; official name; organisation number; headquarters
+2026-10-16T19:28:29Z,nkl,person,Johan_Fredrik_Eckersberg,Q1691964,2557721384,source for place of birth; place of death (more precise); source for occupation; source for spouse
+2026-10-16T19:28:30Z,sml,term,selsnepe,Q27609,2557721399,SML ID selsnepe deprecated (now SNL selsnepe); other names
+2026-10-16T19:28:31Z,snl,person,Alliott_Verdon_Roe,Q1751713,2557721408,other names; source for date of birth; source for date of death
+2026-10-16T19:28:32Z,nkl,person,Johan_Fredrik_Ellefsen,Q17119582,2557721421,place of birth (more precise); source for place of death; source for occupation
+2026-10-16T19:28:33Z,sml,term,sexterapi,Q138686,2557721431,SML ID sexterapi deprecated (now SML sex); SML ID sex
+2026-10-16T19:28:34Z,snl,person,Allis_Helleland,Q11957494,2557721445,source for date of birth; source for date of death
+2026-10-16T19:28:35Z,nkl,person,Johan_Fredrik_Hveding,Q96174810,2557721459,source for place of birth; place of death; source for occupation
+2026-10-16T19:28:36Z,sml,term,sinnssykeasyl,Q12000585,2557721467,SML ID sinnssykeasyl deprecated (now SNL sinnssykeasyl); other names
+2026-10-16T19:28:37Z,snl,person,Allyson_Felix,Q5799,2557721480,source for date of birth
+2026-10-16T19:28:38Z,nkl,person,Johan_Fredrik_Michelet,Q11978723,2557721494,work location; source for place of birth; source for place of death; source for occupation
+2026-10-16T19:28:39Z,sml,term,skeiv,Q125949481,2557721506,SML ID skeiv deprecated (now SNL skeiv); SNL ID skeiv
+2026-10-16T19:28:40Z,snl,person,Alma_Isabella_Fahlstrøm,Q3365638,2557721519,other names; source for place of birth; source for place of death; source for occupation; source for spouse; source for sibling; source for date of birth; source for date of death
+2026-10-16T19:28:41Z,nkl,person,Johan_Friderich_Schweiger,Q76397011,2557721530,source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:28:42Z,sml,term,skrapesyke,Q170102,2557721546,SML ID skrapesyke deprecated (now SNL skrapesyke); other names
+2026-10-16T19:28:43Z,snl,person,Alma_Maria_Schindler_Mahler,Q156898,2557721560,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:28:44Z,nkl,person,Johan_Friedrich_Leonhard_Dreier,Q434175,2557721574,NKL ID Johan_Friedrich_Leonhard_Dreier deprecated (now SNL Johan_Friedrich_Leonhard_Dreier); other names; source for place of birth; source for place of death; source for occupation
+2026-10-16T19:28:44Z,sml,term,skruppel,Q1573593,,no change
+2026-10-16T19:28:45Z,snl,person,Alma_Söderhjelm,Q436480,2557721587,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:28:46Z,nkl,person,Johan_Georg_Müller,Q11978726,2557721603,place of birth; place of death; source for occupation
+2026-10-16T19:28:47Z,sml,term,solbriller,Q217541,2557721622,SML ID solbriller deprecated (now SNL solbriller); SNL ID solbriller
+2026-10-16T19:28:48Z,snl,person,Almar_Almar-Næss,Q140960488,2557721634,place of death
+2026-10-16T19:28:49Z,nkl,person,Johan_Gottfried_Böydler,Q100594751,2557721648,source for place of birth; source for date of birth
+2026-10-16T19:28:50Z,sml,term,sosionom,Q913603,2557721665,SML ID sosionom deprecated (now SNL sosionom)
+2026-10-16T19:28:51Z,snl,person,Almar_Heggen,Q11957538,2557721682,other names; source for date of birth; source for date of death
+2026-10-16T19:28:52Z,nkl,person,Johan_Gustav_Nielsen,Q55766255,2557721703,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:28:53Z,sml,term,spontan,Q24233427,2557721716,SML ID spontan deprecated (now SNL spontan); SNL ID spontan
+2026-10-16T19:28:54Z,snl,person,Almazbek_Atambajev,Q24692,2557721731,source for date of birth
+2026-10-16T19:28:55Z,nkl,person,Johan_Gørbitz,Q3434119,2557721744,source for place of death; source for occupation; occupation
+2026-10-16T19:28:55Z,sml,term,språkpsykologi,Q179488,,no change
+2026-10-16T19:28:56Z,snl,organisation,Alna_teglverk,Q14748182,2557721757,SNL ID Alna_teglverk deprecated (now SNL Alna_Teglverk); SNL ID Alna_Teglverk
+2026-10-16T19:28:56Z,nkl,person,Johan_Hanssønn,Q16187733,,no change
+2026-10-16T19:28:57Z,sml,term,stamming,Q186676,2557721763,SML ID stamming deprecated (now SNL stamming); SNL ID stamming
+2026-10-16T19:28:58Z,snl,person,Alois_-_kronprins_av_Liechtenstein,Q311308,2557721776,other names; source for place of birth; source for date of birth
+2026-10-16T19:28:59Z,nkl,person,Johan_Henrik_Nebelong,Q3354921,2557721789,source for place of birth; source for place of death; source for occupation
+2026-10-16T19:29:00Z,sml,term,stavcelle,Q505544,2557721804,SML ID stavcelle deprecated (now SML stavceller); SML ID stavceller; other names
+2026-10-16T19:29:01Z,snl,person,Alois_Aehrenthal,Q542902,2557721818,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:29:02Z,nkl,person,Johan_Herman_Coning,Q29154372,2557721827,NKL ID Johan_Herman_Coning deprecated (now SNL Johan_Herman_Coning); SNL ID Johan_Herman_Coning; source for occupation
+2026-10-16T19:29:03Z,sml,term,sternokleidomastoideus,Q272830,2557721839,SML ID sternokleidomastoideus deprecated (now SML musculus_sternocleidomastoideus); SML ID musculus_sternocleidomastoideus; other names
+2026-10-16T19:29:03Z,snl,person,Alois_Brandstetter,Q94604,,no change
+2026-10-16T19:29:04Z,nkl,person,Johan_Indrekvam,Q113198277,2557721852,place of birth; occupation
+2026-10-16T19:29:05Z,sml,term,steroider,Q177911,2557721861,SML ID steroider deprecated (now SNL steroider)
+2026-10-16T19:29:06Z,snl,person,Alois_Hába,Q366711,2557721873,source for place of birth; source for place of death; source for date of birth
+2026-10-16T19:29:07Z,nkl,person,Johan_Jacob_Bennetter,Q13392281,2557721885,NKL ID Johan_Jacob_Bennetter deprecated (now SNL Johan_Jacob_Bennetter); source for place of birth; source for place of death; source for occupation
+2026-10-16T19:29:08Z,sml,term,stivelse,Q41534,2557721897,SML ID stivelse deprecated (now SML stivelse_-_ernæring); SML ID stivelse_-_ernæring; other names
+2026-10-16T19:29:41Z,snl,person,Alois_Jirásek,Q161368,2557722197,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:29:42Z,nkl,person,Johan_Jørgen_Broch_-_1,Q37276982,2557722200,NKL ID Johan_Jørgen_Broch_-_1 deprecated (now NKL Johan_Jørgen_Broch_-_1846–1868); NKL ID Johan_Jørgen_Broch_-_1846–1868; source for occupation
+2026-10-16T19:29:43Z,sml,term,stressfraktur,Q41392,2557722210,SML ID stressfraktur deprecated (now SML tretthetsbrudd); SML ID tretthetsbrudd; other names
+2026-10-16T19:29:43Z,snl,person,Alois_Riegl,Q692100,,no change
+2026-10-16T19:29:44Z,nkl,person,Johan_Jørgen_Lyng,Q55394837,2557722219,source for place of birth; source for place of death; source for occupation
+2026-10-16T19:29:45Z,sml,term,sukrose,Q4027534,2557722231,SML ID sukrose deprecated (now SNL sukrose); other names
+2026-10-16T19:29:46Z,snl,person,Alojz_Gradnik,Q658969,2557722236,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:29:47Z,nkl,person,Johan_Jørgen_Schram,Q124797637,2557722251,work location
+2026-10-16T19:29:48Z,sml,term,tantal,Q1123,2557722259,SML ID tantal deprecated (now SNL tantal)
+2026-10-16T19:29:49Z,snl,person,Alojzije_Stepinac,Q310505,2557722267,other names; source for date of birth; source for date of death
+2026-10-16T19:29:50Z,nkl,person,Johan_Keyser_Frölich,Q17119851,2557722280,source for place of birth; source for occupation; source for date of birth
+2026-10-16T19:29:51Z,sml,term,taushetsplikt,Q443955,2557722291,SML ID taushetsplikt deprecated (now SNL taushetsplikt); SNL ID taushetsplikt
+2026-10-16T19:29:52Z,snl,person,Alonso_Berruguete,Q114357,2557722300,source for date of birth; source for date of death
+2026-10-16T19:29:53Z,nkl,person,Johan_Kippenbroeck,Q17099700,2557722316,other names; place of birth
+2026-10-16T19:29:54Z,sml,term,tegnspråk,Q34228,2557722326,SML ID tegnspråk deprecated (now SNL tegnspråk); SNL ID tegnspråk; other names
+2026-10-16T19:29:55Z,snl,person,Alonso_Cano,Q378783,2557722339,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:29:56Z,nkl,person,Johan_Knoff,Q55462377,2557722351,other names; work location; source for place of birth; source for occupation; source for spouse
+2026-10-16T19:29:57Z,sml,term,teobromin,Q206844,2557722365,SML ID teobromin deprecated (now SNL teobromin)
+2026-10-16T19:29:57Z,snl,person,Alonso_Sánchez_Coello,Q503386,,no change
+2026-10-16T19:29:57Z,nkl,person,Johan_Larssen,Q42310841,,no change
+2026-10-16T19:29:58Z,sml,term,thallium,Q932,2557722380,SML ID thallium deprecated (now SNL thallium)
+2026-10-16T19:29:59Z,snl,person,Alonso_de_Ercilla_y_Zúñiga,Q357620,2557722388,source for place of birth; source for place of death; source for date of birth
+2026-10-16T19:30:00Z,nkl,person,Johan_Lie-Gjemre,Q56278503,2557722397,work location; source for place of birth; source for place of death; occupation; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:30:01Z,sml,term,thorium,Q1115,2557722412,SML ID thorium deprecated (now SNL thorium)
+2026-10-16T19:30:02Z,snl,person,Alonso_de_Ojeda,Q313369,2557722423,source for place of birth; source for place of death; source for date of death
+2026-10-16T19:30:03Z,nkl,person,Johan_Lindstrøm,Q11978757,2557722432,source for place of birth; place of death; source for occupation; source for date of death
+2026-10-16T19:30:04Z,sml,term,tiamin,Q83187,2557722452,SML ID tiamin deprecated (now SNL tiamin)
+2026-10-16T19:30:05Z,snl,person,Alonzo_Church,Q92741,2557722467,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:30:06Z,nkl,person,Johan_Ludvig_Losting,Q7107889,2557722480,source for place of birth; source for place of death; source for occupation
+2026-10-16T19:30:06Z,sml,term,tilsynsmyndighet,Q759957,,no change
+2026-10-16T19:30:07Z,snl,person,Aloys_Senefelder,Q161048,2557722496,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:30:08Z,nkl,person,Johan_Meyer,Q11978766,2557722505,source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:30:09Z,sml,term,titan,Q716,2557722526,SML ID titan deprecated (now SNL titan)
+2026-10-16T19:30:10Z,snl,person,Aloysius_Bertrand,Q366464,2557722536,other names; source for place of birth
+2026-10-16T19:30:11Z,nkl,person,Johan_Nicolai_Schavenius,Q55395024,2557722552,source for place of birth; source for occupation
+2026-10-16T19:30:12Z,sml,term,titer,Q2166189,2557722569,SML ID titer deprecated (now SML titer_-_medisin); SML ID titer_-_medisin
+2026-10-16T19:30:13Z,snl,person,Aloysius_Valente,Q15993597,2557722585,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:30:14Z,nkl,person,Johan_Nielssen,Q17120056,2557722595,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:30:15Z,sml,term,toluen,Q15779,2557722608,SML ID toluen deprecated (now SNL toluen); other names
+2026-10-16T19:30:16Z,snl,person,Aloysius_fra_Gonzaga,Q310307,2557722619,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:30:17Z,nkl,person,Johan_Nordhagen,Q1769431,2557722628,source for place of death; source for occupation; occupation
+2026-10-16T19:30:18Z,sml,term,tortur,Q132781,2557722642,SML ID tortur deprecated (now SNL tortur)
+2026-10-16T19:30:18Z,snl,person,Alp_Arslan,Q200193,,no change
+2026-10-16T19:30:19Z,nkl,person,Johan_Omang,Q113198279,2557722652,place of birth; occupation
+2026-10-16T19:30:20Z,sml,term,trijodtyronin,Q327362,2557722668,SML ID trijodtyronin deprecated (now SML trijodtyronin_-_T3); SML ID trijodtyronin_-_T3
+2026-10-16T19:30:21Z,snl,person,Alpha_O._Konaré,Q313239,2557722676,source for date of birth
+2026-10-16T19:30:22Z,nkl,person,Johan_Osness,Q17120105,2557722686,other names; source for place of birth; place of death; source for occupation
+2026-10-16T19:30:23Z,sml,term,tungmetaller,Q105789,2557722695,SML ID tungmetaller deprecated (now SNL tungmetaller)
+2026-10-16T19:30:24Z,snl,person,Alphons_Czibulka,Q447124,2557722700,source for place of death; source for date of birth; source for date of death
+2026-10-16T19:30:25Z,nkl,person,Johan_Peter_Digre,Q46131079,2557722708,source for place of death; source for occupation; source for father
+2026-10-16T19:44:23Z,sml,term,tyroksin,Q216852,2557725501,SML ID tyroksin deprecated (now SML tyroksin_-_T4); SML ID tyroksin_-_T4; other names
+2026-10-16T19:44:24Z,snl,person,Alphons_Diepenbrock,Q952378,2557725514,other names; source for place of birth
+2026-10-16T19:44:25Z,nkl,person,Johan_Reinholdt,Q113194654,2557725519,place of death
+2026-10-16T19:44:26Z,sml,term,uran,Q1098,2557725531,SML ID uran deprecated (now SNL uran)
+2026-10-16T19:44:27Z,snl,person,Alphonse_Aulard,Q1450796,2557725543,source for place of birth; source for date of birth; source for date of death
+2026-10-16T19:44:28Z,nkl,person,Johan_S._Wittrup,Q94686970,2557725550,place of birth; place of death; occupation
+2026-10-16T19:44:29Z,sml,term,urinblærekatarr,Q246084,2557725560,SML ID urinblærekatarr deprecated (now SML blærekatarr); SML ID blærekatarr; other names
+2026-10-16T19:44:30Z,snl,person,Alphonse_Bertillon,Q568386,2557725570,source for date of birth; source for date of death
+2026-10-16T19:44:31Z,nkl,person,Johan_Samuel_Brøgger,Q55765622,2557725576,source for occupation; source for date of birth; source for date of death
+2026-10-16T19:44:32Z,sml,term,utbrenthet,Q327988,2557725586,SML ID utbrenthet deprecated (now SNL utbrenthet); SNL ID utbrenthet; other names
+2026-10-16T19:44:33Z,snl,person,Alphonse_Daudet,Q228546,2557725593,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:34Z,nkl,person,Johan_Sebastian_Cammermeyer_Welhaven,Q954720,2557725600,other names; source for place of birth; source for place of death
+2026-10-16T19:44:35Z,sml,term,vaselin,Q185120,2557725608,SML ID vaselin deprecated (now SNL vaselin)
+2026-10-16T19:44:36Z,snl,person,Alphonse_Laveran,Q189006,2557725617,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:37Z,nkl,person,Johan_Sirnes,Q98912103,2557725623,place of death; occupation; source for date of birth; source for date of death
+2026-10-16T19:44:38Z,sml,term,vinterdepresjon,Q1051223,2557725628,SML ID vinterdepresjon deprecated (now SNL vinterdepresjon)
+2026-10-16T19:44:39Z,snl,person,Alphonse_Legros,Q957538,2557725636,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:40Z,nkl,person,Johan_Storm_Munch,Q24175568,2557725642,source for place of birth; source for occupation
+2026-10-16T19:44:41Z,sml,term,vinylklorid,Q338869,2557725651,SML ID vinylklorid deprecated (now SNL vinylklorid)
+2026-10-16T19:44:42Z,snl,person,Alphonse_Louis_Pierre_Candolle,Q123807,2557725656,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:43Z,nkl,person,Johan_Tenol-Tuxen,Q11978806,2557725662,other names; source for place of birth; source for occupation; source for date of birth; source for date of death
+2026-10-16T19:44:44Z,sml,term,viviseksjon,Q259567,2557725667,SML ID viviseksjon deprecated (now SNL viviseksjon)
+2026-10-16T19:44:45Z,snl,person,Alphonse_Pierre_Juin,Q381244,2557725680,source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:46Z,nkl,person,Johan_Vestly,Q1773793,2557725687,NKL ID Johan_Vestly deprecated (now SNL Johan_Vestly); SNL ID Johan_Vestly; work location; place of death; source for occupation; source for spouse; source for date of birth; source for date of death
+2026-10-16T19:44:47Z,sml,term,vold,Q124490,2557725694,SML ID vold deprecated (now SNL vold); SNL ID vold
+2026-10-16T19:44:48Z,snl,person,Alphonse_de_Lamartine,Q188697,2557725702,source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:49Z,nkl,person,Johan_Wibe,Q3019046,2557725707,source for place of death; occupation; source for date of death
+2026-10-16T19:44:50Z,sml,term,yersiniainfeksjon,Q2600216,2557725713,SML ID yersiniainfeksjon deprecated (now SML yersiniose); SML ID yersiniose; other names
+2026-10-16T19:44:51Z,snl,person,Alphonsus_de_Guimarães,Q981463,2557725723,pseudonym; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:52Z,nkl,person,Johan_d.y._Meyer,Q113198273,2557725730,source for place of birth; source for place of death; source for occupation; source for father
+2026-10-16T19:44:53Z,sml,term,yohimbin,Q412226,2557725742,SML ID yohimbin deprecated (now SNL yohimbin)
+2026-10-16T19:44:54Z,snl,person,Alpo_Ruuth,Q11851028,2557725751,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:54Z,nkl,person,Johann_Albrecht_Becker,Q55392641,,no change
+2026-10-16T19:44:55Z,sml,term,α1-antitrypsin,Q292982,2557725759,SML ID α1-antitrypsin deprecated (now SML alfa-1-antitrypsin); SML ID alfa-1-antitrypsin
+2026-10-16T19:44:56Z,snl,person,Alsing_Emanuel_Andersen,Q723794,2557725769,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T19:44:57Z,nkl,person,Johann_Georg_Bøhmer_Campbell,Q23833547,2557725775,source for occupation
+2026-10-16T19:44:58Z,sml,term,α1-antitrypsinmangel,Q622437,2557725784,SML ID α1-antitrypsinmangel deprecated (now SML alfa-1-antitrypsinmangel); SML ID alfa-1-antitrypsinmangel
+2026-10-16T19:44:59Z,snl,place,Alstahaug,Q217808,2557725793,source for administrative centre; highest point
+2026-10-16T19:45:00Z,nkl,person,Johann_Joachim_Reichborn,Q12912337,2557725798,source for place of birth; source for place of death; source for occupation
+2026-10-16T19:45:01Z,snl,place,Alta,Q6535,2557725800,source for demonym; source for administrative centre; source for highest point
+2026-10-16T19:45:02Z,nkl,person,Johanna_Bugge_Berge,Q11978833,2557725810,work location; source for place of birth; source for place of death; source for occupation; source for father; source for spouse; source for date of birth
+2026-10-16T20:00:29Z,snl,person,Alu_Alkhanov,Q319240,2557728519,other names; source for date of birth
+2026-10-16T20:00:30Z,nkl,person,Johanna_Sinding,Q29034061,2557728525,source for place of birth; source for occupation
+2026-10-16T20:00:32Z,snl,person,Aluísio_Tancredo_Gonçalves_Azevedo,Q2840554,2557728533,SNL ID Aluísio_Tancredo_Gonçalves_Azevedo deprecated (now SNL Aluísio_Azevedo); SNL ID Aluísio_Azevedo; other names; source for place of birth; source for place of death; source for date of birth
+2026-10-16T20:00:32Z,nkl,person,Johanna_Siqveland,Q59336002,2557728535,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:00:33Z,snl,person,Alv_Egeland,Q3374244,2557728539,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:00:34Z,nkl,person,Johanne_Borgen,Q113198285,2557728543,other names; place of birth; occupation
+2026-10-16T20:00:35Z,snl,person,Alv_Erlingsson,Q448091,2557728549,other names; source for date of death
+2026-10-16T20:00:36Z,nkl,person,Johanne_Camilla_Kampevold,Q131470455,2557728553,other names; work location; place of birth; occupation
+2026-10-16T20:00:37Z,snl,person,Alv_Gjestvang,Q1777380,2557728560,source for place of birth; source for place of death
+2026-10-16T20:01:37Z,nkl,person,Johanne_Hansen-Krone,Q11978840,2557729069,work location; occupation; source for date of death
+2026-10-16T20:01:38Z,snl,person,Alv_Jakob_Fostervoll,Q11957623,2557729076,source for place of birth; source for date of birth; source for date of death
+2026-10-16T20:01:39Z,nkl,person,Johannes_Ballestad,Q113198288,2557729081,source for place of birth; source for place of death; source for occupation
+2026-10-16T20:01:41Z,snl,person,Alv_Kjøs,Q448092,2557729092,source for date of birth; source for date of death
+2026-10-16T20:01:41Z,nkl,person,Johannes_Block_Hellum,Q64158214,2557729097,source for place of birth; source for occupation; source for mother; source for spouse; source for date of birth
+2026-10-16T20:01:42Z,snl,person,Alv_Knutsson,Q448100,2557729105,source for spouse; source for child; source for date of death
+2026-10-16T20:01:43Z,nkl,person,Johannes_Bugge_Piene,Q11978878,2557729113,source for place of death; source for occupation
+2026-10-16T20:01:43Z,snl,person,Alv_Torgardsson,Q17131012,,no change
+2026-10-16T20:01:44Z,nkl,person,Johannes_Caspar_Schøller,Q61471470,2557729122,NKL ID Johannes_Caspar_Schøller deprecated (now SNL Johannes_Caspar_Schøller); SNL ID Johannes_Caspar_Schøller; source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:01:46Z,snl,person,Alva_Myrdal,Q152437,2557729134,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:01:46Z,nkl,person,Johannes_Ellingsen_Segalstad,Q107548382,2557729139,NKL ID Johannes_Ellingsen_Segalstad deprecated (now SNL Johannes_Ellingsen_Segalstad); SNL ID Johannes_Ellingsen_Segalstad; place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T20:01:47Z,snl,person,Alvan_Clark,Q448267,2557729144,source for date of birth; source for date of death
+2026-10-16T20:01:48Z,nkl,person,Johannes_Finne_Rosenvinge,Q11978860,2557729150,NKL ID Johannes_Finne_Rosenvinge deprecated (now SNL Johannes_Finne_Rosenvinge); SNL ID Johannes_Finne_Rosenvinge; source for place of death; source for occupation
+2026-10-16T20:01:50Z,snl,person,Alvar_Aalto,Q82840,2557729157,source for place of death; source for date of death
+2026-10-16T20:01:50Z,nkl,person,Johannes_Flintoe,Q2610236,2557729164,source for place of death; source for occupation
+2026-10-16T20:01:51Z,snl,person,Alvar_Cawén,Q4356043,2557729173,source for place of death; source for date of death
+2026-10-16T20:01:53Z,nkl,person,Johannes_Grenness,Q12320061,2557729181,source for place of birth; source for place of death; source for occupation
+2026-10-16T20:01:53Z,snl,person,Alvaro_Arzú_Irigoyen,Q250834,2557729186,SNL ID Alvaro_Arzú_Irigoyen deprecated (now SNL Alvaro_Arzú); SNL ID Alvaro_Arzú; other names; source for place of birth; source for date of birth
+2026-10-16T20:01:55Z,nkl,person,Johannes_Grimelund,Q3180754,2557729197,occupation; source for occupation; source for father
+2026-10-16T20:01:56Z,snl,person,Alvaro_Cunhal,Q250919,2557729202,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:01:56Z,nkl,person,Johannes_Hallvorsson_Maarheim,Q113198289,2557729210,other names; place of birth; place of death
+2026-10-16T20:01:57Z,snl,place,Alvdal,Q48723,2557729214,source for demonym; source for highest point
+2026-10-16T20:01:58Z,nkl,person,Johannes_Iden,Q27955393,2557729220,NKL ID Johannes_Iden deprecated (now SNL Johannes_Iden); SNL ID Johannes_Iden; other names; historical population register ID
+2026-10-16T20:01:59Z,snl,place,Alver,Q56404228,2557729225,SNL ID Alver deprecated (now SNL Alver_-_kommune); SNL ID Alver_-_kommune; source for administrative centre; source for highest point
+2026-10-16T20:02:00Z,nkl,person,Johannes_Kløften,Q113198291,2557729235,place of death; source for occupation
+2026-10-16T20:02:01Z,snl,person,Alvilde_Prydz,Q4973605,2557729242,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:02:02Z,nkl,person,Johannes_Kølbel,Q96190491,2557729247,source for place of birth; place of death; source for occupation; occupation
+2026-10-16T20:02:03Z,snl,person,Alvin_Ailey,Q449037,2557729256,source for date of birth; source for date of death
+2026-10-16T20:02:04Z,nkl,person,Johannes_Larsen_Skråstad,Q6216993,2557729265,source for place of birth; source for place of death
+2026-10-16T20:02:04Z,snl,person,Alvin_Martin_Weinberg,Q449188,,no change
+2026-10-16T20:02:05Z,nkl,person,Johannes_Lidsheim,Q96190449,2557729269,source for place of birth; occupation
+2026-10-16T20:02:07Z,snl,person,Alvise_Vivarini,Q1258585,2557729276,other names
+2026-10-16T20:02:07Z,nkl,person,Johannes_Müller_-_1,Q43289263,2557729279,NKL ID Johannes_Müller_-_1 deprecated (now NKL Johannes_Müller_-_maler); NKL ID Johannes_Müller_-_maler; other names; source for place of birth; source for place of death; source for occupation
+2026-10-16T20:02:08Z,snl,person,Alyattes,Q299551,2557729288,source for date of death
+2026-10-16T20:02:09Z,nkl,person,Johannes_Rieber,Q11978877,2557729295,other names; work location
+2026-10-16T20:02:09Z,snl,person,Alypios,Q450311,,no change
+2026-10-16T20:02:10Z,nkl,person,Johannes_Thorvaldsen_Westbye,Q14545659,2557729303,place of birth; place of death; source for occupation; source for date of death
+2026-10-16T20:02:11Z,snl,person,Alyson_Behrentz,Q62649392,2557729314,place of birth; place of death
+2026-10-16T20:02:12Z,nkl,person,Johannes_Tvedt,Q113194613,2557729317,source for occupation
+2026-10-16T20:02:14Z,snl,person,Ama_Ata_Aidoo,Q298224,2557729323,source for date of death
+2026-10-16T20:02:15Z,nkl,person,Johannes_Vinjum,Q11978891,2557729332,work location; source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:02:16Z,snl,person,Amadeo_1.,Q32432,2557729338,SNL ID Amadeo_1. deprecated (now SNL Amadeus_1.); SNL ID Amadeus_1.; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:02:16Z,nkl,person,Johannes_Von_Ditten,Q38145701,2557729348,NKL ID Johannes_Von_Ditten deprecated (now NKL Johannes_von_Ditten); NKL ID Johannes_von_Ditten; source for place of birth; source for place of death; source for occupation; father; source for date of birth; source for date of death
+2026-10-16T20:02:17Z,snl,person,Amadeo_Bordiga,Q451743,2557729358,source for date of birth; source for date of death
+2026-10-16T20:02:18Z,nkl,person,Johannes_Østby,Q113198293,2557729364,work location; place of birth; place of death; occupation
+2026-10-16T20:02:19Z,snl,person,Amadeus_8.,Q312636,2557729375,source for date of birth
+2026-10-16T20:02:20Z,nkl,person,John_Anker,Q56446668,2557729384,source for place of birth; source for place of death; source for occupation
+2026-10-16T20:02:21Z,snl,person,Amadeus_9.,Q373236,2557729397,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:02:22Z,nkl,person,John_Anton_Risan,Q55408240,2557729403,NKL ID John_Anton_Risan deprecated (now SNL John_Anton_Risan); source for place of birth; source for occupation; source for date of death
+2026-10-16T20:02:24Z,snl,person,Amado_Nervo,Q452130,2557729413,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:03:40Z,nkl,person,John_Audun_Hauge,Q113191717,2557730098,work location; source for place of birth; source for occupation
+2026-10-16T20:03:41Z,snl,person,Amadou_Toumani_Touré,Q170597,2557730115,source for place of birth; source for place of death; source for date of birth
+2026-10-16T20:03:42Z,nkl,person,John_Borgersen,Q63343967,2557730137,source for place of death; source for father; source for date of birth; source for date of death
+2026-10-16T20:03:43Z,snl,person,Amal_Aden,Q4739185,2557730151,source for date of birth
+2026-10-16T20:03:44Z,nkl,person,John_Bothner,Q113198294,2557730169,place of birth; place of death
+2026-10-16T20:03:45Z,snl,person,Amalarik,Q452673,2557730185,source for date of birth; source for date of death
+2026-10-16T20:03:46Z,nkl,person,John_David_Nielsen,Q11978946,2557730202,work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T20:03:47Z,snl,person,Amalasunta,Q371670,2557730222,source for date of death
+2026-10-16T20:03:48Z,nkl,person,John_Ekli,Q113198297,2557730229,other names; work location; place of birth; occupation
+2026-10-16T20:03:49Z,snl,person,Amaldus_Nielsen,Q452733,2557730244,source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:03:50Z,nkl,person,John_Eliassen,Q56446700,2557730255,work location; source for place of birth; source for occupation
+2026-10-16T20:03:50Z,snl,person,Amalia_Lindegren,Q452896,,no change
+2026-10-16T20:03:51Z,nkl,person,John_Engh,Q6231789,2557730261,source for place of birth; source for place of death; source for occupation; source for date of birth
+2026-10-16T20:03:52Z,snl,person,Amalie_Christie,Q4739418,2557730267,source for place of birth; source for date of birth
+2026-10-16T20:03:53Z,nkl,person,John_Gesager_Nielsen,Q11978968,2557730276,work location; source for place of birth; source for occupation
+2026-10-16T20:03:54Z,snl,person,Amalie_Eikeland,Q63643582,2557730282,source for place of birth; source for date of birth
+2026-10-16T20:03:55Z,nkl,person,John_Hansen_Budalsplass,Q11978972,2557730291,source for place of birth; source for place of death
+2026-10-16T20:03:56Z,snl,person,Amalie_Gunnufsen,Q108697952,2557730298,source for date of birth
+2026-10-16T20:03:57Z,nkl,person,John_Macody_Lund,Q43250901,2557730307,source for place of birth; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:03:58Z,snl,person,Amalie_Iuel,Q20963491,2557730312,other names; source for date of birth
+2026-10-16T20:03:59Z,nkl,person,John_Nordhuus,Q113198299,2557730315,other names; work location; place of birth; occupation; date of death (more precise)
+2026-10-16T20:04:00Z,snl,person,Amalie_Kasin_Lerstang,Q15912467,2557730320,source for date of birth
+2026-10-16T20:04:01Z,nkl,person,John_Paulsen,Q110224317,2557730326,source for place of birth; source for place of death; occupation
+2026-10-16T20:04:03Z,snl,person,Amalie_Skram,Q291676,2557730332,other names; source for place of birth; source for place of death; source for occupation; source for spouse; source for date of birth; source for date of death
+2026-10-16T20:04:03Z,nkl,person,John_Savio,Q4404049,2557730334,occupation; source for occupation; source for date of birth
+2026-10-16T20:04:04Z,snl,person,Amalie_Sofie_Bekkevold,Q16898199,2557730343,other names; source for place of birth; source for place of death; source for spouse; source for date of birth; source for date of death
+2026-10-16T20:04:05Z,nkl,person,John_Søraune,Q113194335,2557730346,NKL ID John_Søraune deprecated (now SNL John_Søraune); other names; source for place of birth
+2026-10-16T20:04:06Z,snl,person,Amalrik_1.,Q311808,2557730353,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:04:07Z,nkl,person,John_Thørrisen,Q107740470,2557730360,other names; work location; source for place of birth; occupation; source for date of birth; source for date of death
+2026-10-16T20:04:08Z,snl,person,Amanda_Gorman,Q52369134,2557730365,source for place of birth; source for date of birth
+2026-10-16T20:04:09Z,nkl,person,John_Tverdahl,Q12713070,2557730375,source for place of birth; place of death; source for occupation
+2026-10-16T20:04:10Z,snl,person,Amanda_Igland,Q13400284,2557730381,other names; date of birth (more precise); date of death (more precise)
+2026-10-16T20:04:11Z,nkl,person,Johs_Rian,Q4571187,2557730386,source for place of death; source for occupation
+2026-10-16T20:04:12Z,snl,person,Amanda_Kurtović,Q291584,2557730389,other names; source for date of birth
+2026-10-16T20:04:13Z,nkl,person,Jon_Bjørnson_Sletta,Q113198301,2557730399,place of birth; place of death
+2026-10-16T20:04:15Z,snl,person,Amanda_Seyfried,Q189226,2557730409,other names; source for place of birth; source for date of birth
+2026-10-16T20:04:15Z,nkl,person,Jon_Bøe_Paulsen,Q17106433,2557730418,NKL ID Jon_Bøe_Paulsen deprecated (now SNL Jon_Bøe_Paulsen); SNL ID Jon_Bøe_Paulsen; work location; place of birth; occupation; source for occupation
+2026-10-16T20:04:16Z,snl,person,Amandus_Theodor_Schibsted,Q4739832,2557730428,source for place of birth; source for place of death; occupation; source for father; source for spouse; source for date of birth; source for date of death
+2026-10-16T20:04:17Z,nkl,person,Jon_Ekeland,Q96355888,2557730437,work location; source for place of birth; place of death; date of death (more precise)
+2026-10-16T20:04:18Z,snl,person,Amanullah_Khan,Q153620,2557730447,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:04:19Z,nkl,person,Jon_Gundersen,Q18642654,2557730455,other names; place of birth; place of death; source for occupation; source for date of birth; date of death (more precise)
+2026-10-16T20:04:20Z,snl,person,Amara_Essy,Q454785,2557730463,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:04:21Z,nkl,person,Jon_Knudsen,Q113198304,2557730476,NKL ID Jon_Knudsen deprecated (now SNL Jon_Knudsen); SNL ID Jon_Knudsen; place of birth; place of death; occupation
+2026-10-16T20:04:22Z,snl,person,Amartya_Sen,Q132489,2557730482,source for place of birth; source for date of birth
+2026-10-16T20:04:23Z,nkl,person,Jon_Krosshus,Q56329795,2557730489,source for place of birth; source for occupation
+2026-10-16T20:04:24Z,snl,person,Amaru,Q455251,2557730496,other names
+2026-10-16T20:04:25Z,nkl,person,Jon_Lundberg,Q21289306,2557730508,place of birth; source for occupation; source for date of birth
+2026-10-16T20:04:25Z,snl,person,Amasis,Q455429,,no change
+2026-10-16T20:04:26Z,nkl,person,Jon_Sandsmark,Q17572645,2557730520,place of birth
+2026-10-16T20:04:27Z,snl,person,Ambjørg_Sælthun,Q4586055,2557730527,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:05:04Z,nkl,person,Jon_Sørenson_Breidalen,Q113198305,2557730872,other names; place of birth; place of death
+2026-10-16T20:05:05Z,snl,person,Ambortius_Olsen_Lindvig,Q4567041,2557730879,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:05:06Z,nkl,person,Jon_Torgersen,Q130413986,2557730880,work location; place of birth; source for occupation
+2026-10-16T20:05:07Z,snl,person,Ambrogio_Lorenzetti,Q211562,2557730887,source for place of birth; source for place of death
+2026-10-16T20:05:07Z,nkl,person,Jonas_Granberg,Q5767940,,no change
+2026-10-16T20:05:07Z,snl,person,Ambroise-Auguste_Liébeault,Q767213,,no change
+2026-10-16T20:05:08Z,nkl,person,Jonas_Hidle,Q84057918,2557730894,source for place of birth; source for place of death; occupation; source for spouse; source for date of birth; source for date of death
+2026-10-16T20:05:09Z,snl,person,Ambroise_Paré,Q276480,2557730901,source for place of death
+2026-10-16T20:05:10Z,nkl,person,Jonas_Lie,Q6272171,2557730904,source for place of birth; source for place of death; source for occupation
+2026-10-16T20:05:11Z,snl,person,Ambroise_Thomas,Q297717,2557730909,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-16T20:05:12Z,nkl,person,Jonas_Peson,Q11979214,2557730913,source for place of birth; place of death; source for occupation
+2026-10-16T20:05:13Z,snl,person,Ambroise_Vollard,Q459041,2557730919,source for place of birth; source for place of death; source for date of death
+2026-10-16T20:05:14Z,nkl,person,Joronn_Sitje,Q11979287,2557730924,other names; source for place of birth; source for place of death; source for occupation
+2026-10-16T20:05:15Z,snl,person,Ambrose_Bierce,Q191050,2557730928,source for date of birth; source for date of death
+2026-10-16T20:05:16Z,nkl,person,Jorun_Kraft_Mo,Q113194677,2557730935,work location; place of birth
+2026-10-16T20:05:17Z,snl,person,Ambrose_Everett_Burnside,Q355444,2557730943,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:05:18Z,nkl,person,Jorunn_Jo_Pedersen,Q131625089,2557730949,work location; place of birth
+2026-10-16T20:05:19Z,snl,person,Ambrosia_Tønnesen,Q11957685,2557730955,source for place of birth; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:05:20Z,nkl,person,Jorunn_Steffensen,Q63380957,2557730962,work location; place of birth; source for date of birth
+2026-10-16T20:05:21Z,snl,person,Ambrosius_Bogbinder,Q11957689,2557730967,source for date of death
+2026-10-16T20:05:22Z,nkl,person,Josef_Halse,Q11979307,2557730978,NKL ID Josef_Halse deprecated (now SNL Josef_Halse); SNL ID Josef_Halse; work location; place of birth; source for occupation; source for sibling; source for date of birth
+2026-10-16T20:05:23Z,snl,person,Ambrosius_Egedius,Q63724884,2557730987,source for place of birth; source for place of death; source for date of birth
+2026-10-16T20:05:24Z,nkl,person,Joseph_Grimeland,Q11979333,2557730992,work location; source for place of birth; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:05:25Z,snl,person,Ambrosius_Hardenbeck,Q5548645,2557730998,place of birth
+2026-10-16T20:05:26Z,nkl,person,Joseph_Pedersen_Bark,Q55399051,2557731006,source for occupation
+2026-10-16T20:05:27Z,snl,person,Ambrosius_Rhodius,Q30171202,2557731016,source for occupation; occupation
+2026-10-16T20:05:28Z,nkl,person,Jostein_Molden,Q11979383,2557731024,other names; source for place of birth; source for occupation; source for spouse; source for date of birth
+2026-10-16T20:05:29Z,snl,person,Ambrosius_Stub,Q459770,2557731032,other names; source for date of death
+2026-10-16T20:05:30Z,nkl,person,Jostein_Ytredal,Q63347639,2557731041,other names; work location; source for place of birth; source for occupation; occupation; source for date of birth
+2026-10-16T20:05:30Z,snl,person,Ambrosius_Theodosius_Macrobius,Q313934,,no change
+2026-10-16T20:05:31Z,nkl,person,Judith_Allan,Q11979441,2557731050,work location; occupation
+2026-10-16T20:05:32Z,snl,person,Ambrosius_av_Milano,Q43689,2557731059,other names; source for date of birth; source for date of death
+2026-10-16T20:05:33Z,nkl,person,Juliane_Langberg,Q52155550,2557731070,other names; source for place of birth; source for place of death; source for occupation
+2026-10-16T20:05:34Z,snl,person,Amedeo_Avogadro,Q43476,2557731082,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-16T20:05:35Z,nkl,person,Julie_De_Holmberg_Krohn,Q52156416,2557731091,work location; place of death; occupation
+2026-10-16T20:05:35Z,snl,person,Amedeo_Modigliani,Q120993,,no change
+2026-10-16T20:05:36Z,nkl,person,Julie_Thaulow_Aubert,Q96096689,2557731104,NKL ID Julie_Thaulow_Aubert deprecated (now SNL Lillemor_Aars); other names; source for place of birth; place of death; source for spouse; source for date of death
+2026-10-16T20:05:37Z,snl,organisation,Amedia,Q1775207,2557731112,source for legal form
+2026-10-16T20:05:38Z,nkl,person,Julius_Holck,Q52155324,2557731120,source for place of birth; source for place of death; source for occupation
+2026-10-16T20:05:39Z,snl,organisation,Amediastiftelsen,Q141262689,2557731128,source for inception; source for legal form; source for headquarters
+2026-10-16T20:05:40Z,nkl,person,Julius_Middelthun,Q765744,2557731142,NKL ID Julius_Middelthun deprecated (now SNL Julius_Middelthun); other names; source for occupation
+2026-10-16T20:05:41Z,snl,person,Amelia_Batistich,Q24004642,2557731153,place of death; source for date of birth; source for date of death
+2026-10-16T20:05:42Z,nkl,person,Just_Borthen,Q42530790,2557731165,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T20:05:43Z,snl,person,Amelia_Earhart,Q3355,2557731174,source for place of birth; source for date of birth
+2026-10-16T20:05:43Z,nkl,person,Just_Henningsøn_Denneberg,Q113192010,,no change
+2026-10-16T20:05:44Z,snl,person,Amelie_Posse-Brázdová,Q4742326,2557731186,SNL ID Amelie_Posse-Brázdová deprecated (now SNL Amelie_Posse); SNL ID Amelie_Posse; other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T20:05:45Z,nkl,person,Jørgen_Berner,Q5573924,2557731199,other names; source for place of birth; source for occupation
+2026-10-16T20:05:46Z,snl,organisation,American_Federation_of_Labor,Q464242,2557731207,other names
+2026-10-16T20:05:47Z,nkl,person,Jørgen_Bernhoft_Knoff,Q113198309,2557731222,work location; place of birth; place of death
+2026-10-16T20:05:48Z,snl,organisation,American_Federation_of_Labor_and_Congress_of_Industrial_Organizations,Q464271,2557731237,other names
