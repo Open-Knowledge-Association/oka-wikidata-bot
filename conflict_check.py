@@ -35,7 +35,8 @@ FIELDS = ["time", "work", "entry", "qid", "property", "wikidata_value", "wikidat
 
 def call(path, body=None):
     """One request to the Claude API (the key comes from the environment and is never printed)."""
-    headers = {"x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01",
+    key = os.environ.get("OKA_ANTHROPIC_API_KEY") or os.environ["ANTHROPIC_API_KEY"]   # set by jz on Toolforge
+    headers = {"x-api-key": key, "anthropic-version": "2023-06-01",
                "content-type": "application/json"}
     req = urllib.request.Request(f"{API}/{path}", json.dumps(body).encode() if body else None, headers,
                                  method="POST" if body else "GET")
