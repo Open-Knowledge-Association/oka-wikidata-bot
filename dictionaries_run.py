@@ -434,18 +434,20 @@ def crawl_hds():
         time.sleep(max(0.0, CRAWL_DELAY - (time.time() - last)))
         last = time.time()
         url = f"https://hls-dhs-dss.ch/de/articles/{hid}/"
-        for attempt in range(1, 4):
+        for attempt in range(1, 5):
             try:
                 req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
                 with urllib.request.urlopen(req, timeout=60) as r:
                     status, body = r.status, r.read().decode("utf-8", "replace")
-                break
             except urllib.error.HTTPError as e:
                 status, body = e.code, e.read().decode("utf-8", "replace")
-                break
             except (urllib.error.URLError, OSError) as e:
                 status, body = 0, str(e)
-                time.sleep(60 * attempt)
+            if status in (0, 502, 503, 504) and not CHALLENGE.search(body[:20000]) and attempt < 4:
+                out(f"{hid}: HTTP {status} without a challenge (server busy or down); trying again in {30 * attempt} min")
+                time.sleep(1800 * attempt)          # 03:18 UTC on 16 October was such an outage, not a block
+                continue
+            break
         if status in (403, 429, 503) or CHALLENGE.search(body[:20000]):
             out(f"stopped at {hid} after {n - 1} pages: the HDS answered with a challenge or block (HTTP {status})")
             sys.exit(2)
