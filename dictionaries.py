@@ -60,6 +60,57 @@ def less_precise_same(claim, value):
     if v["precision"] < 9 or v["time"][:5] != w["time"][:5]:
         return False                                # decades and centuries are left alone
     return v["precision"] == 9 or v["time"][:8] == w["time"][:8]
+
+
+_up = {}                                            # place -> every place it lies in (P131, all the way up)
+
+
+def place_containers(qs):
+    """Fill _up for these places: Brooklyn lies in New York City, the state of New York and the United States."""
+    todo = sorted({q for q in qs if q and re.fullmatch(r"Q\d+", q) and q not in _up})
+    for i in range(0, len(todo), 200):
+        part = todo[i:i + 200]
+        rows = qlever("SELECT ?a ?b WHERE { VALUES ?a { " + " ".join(f"wd:{q}" for q in part) + " } ?a wdt:P131+ ?b }")
+        for q in part:
+            _up[q] = set()
+        for r in rows:
+            if len(r) == 2:
+                _up.setdefault(r[0], set()).add(r[1])
+
+
+def lies_in(a, b):
+    """Whether place a lies inside place b (Brooklyn in New York City); Christiania is read as Oslo."""
+    a, b = SAME_PLACE.get(a, a), SAME_PLACE.get(b, b)
+    return bool(a and b) and a != b and b in _up.get(a, set())
+
+
+NARROWER_OK = {"P19", "P20", "P119", "P159"}   # a place inside the item's (a borough of its city) is added as more precise
+
+
+def _ymd(v):
+    m = re.match(r"([+-]?\d+)-(\d\d)-(\d\d)T", v["time"])
+    return int(m.group(1)), int(m.group(2)), int(m.group(3))
+
+
+def _jdn(y, m, d, julian=False):
+    """Julian day number of a date in the Julian or the Gregorian calendar."""
+    a = (14 - m) // 12
+    yy, mm = y + 4800 - a, m + 12 * a - 3
+    n = d + (153 * mm + 2) // 5 + 365 * yy + yy // 4 - 32083
+    return n if julian else n - yy // 100 + yy // 400 + 38
+
+
+def same_day(a, b):
+    """Two day-precise dates that name the same day, each read in its own calendar model (a Julian 28.8.1828 is
+    the Gregorian 9.9.1828)."""
+    return _jdn(*_ymd(a), julian=a.get("calendarmodel") == JULIAN) == _jdn(*_ymd(b), julian=b.get("calendarmodel") == JULIAN)
+
+
+def calendar_mixup(a, b):
+    """Two day-precise dates whose digits are one day written in both calendars (28.8.1828 and 9.9.1828) while their
+    calendar models do not say so: one of them is probably a Julian date taken for a Gregorian one."""
+    (ya, ma, da), (yb, mb, db) = _ymd(a), _ymd(b)
+    return _jdn(ya, ma, da, julian=True) == _jdn(yb, mb, db) or _jdn(yb, mb, db, julian=True) == _jdn(ya, ma, da)
 GREGORIAN = "http://www.wikidata.org/entity/Q1985727"
 JULIAN = "http://www.wikidata.org/entity/Q1985786"
 SWISS_PLACES = (("Q70208", "Q685309"),)         # municipality / former municipality of Switzerland
@@ -303,6 +354,8 @@ def same(a, b):
         digits = {9: 5, 10: 8}.get(va["precision"])     # a year may be stored as 1899-00-00 or 1899-01-01
         if digits:
             return va["time"][:digits] == vb["time"][:digits]
+        if va["precision"] == 11:
+            return same_day(va, vb)
         return (va["time"], va.get("calendarmodel")) == (vb["time"], vb.get("calendarmodel"))
     return str(va).strip().upper() == str(vb).strip().upper()
 
@@ -1194,6 +1247,7 @@ def place_labels(live, chosen):
           for c in e.get("claims", {}).get(p, []) if c["mainsnak"]["snaktype"] == "value"}
     qs |= {f["value"]["value"]["id"] for c in chosen for f in c["facts"] if f["pid"] in PLACE_PROPS}
     found = items(sorted(qs)) if qs else {}
+    place_containers(qs | {SAME_PLACE.get(q, q) for q in qs})      # which of them lies inside which (lies_in)
     return {q: {v["value"] for v in e.get("labels", {}).values()} for q, e in found.items()}
 
 
@@ -1280,7 +1334,19 @@ def build(ent, entry, today, labels=None):
         if not equal and labels and f["pid"] in PLACE_PROPS:            # a place of the same name
             ours = labels.get(f["value"]["value"]["id"], set())
             equal = [c for c in existing if labels.get(c["mainsnak"]["datavalue"]["value"].get("id"), set()) & ours]
-        vague = [c for c in existing if f["value"]["type"] == "time" and less_precise_same(c, f["value"])]
+        place_of = lambda c: c["mainsnak"]["datavalue"]["value"].get("id")
+        if not equal and existing and f["pid"] in PLACE_PROPS and all(
+                lies_in(place_of(c), f["value"]["value"]["id"]) for c in existing):
+            continue                                   # the item names a place inside the entry's: Brooklyn, New York City
+        vague = [c for c in existing if f["value"]["type"] == "time" and less_precise_same(c, f["value"])
+                 or f["pid"] in NARROWER_OK and lies_in(f["value"]["value"]["id"], place_of(c))]   # or the reverse
+        if not equal and existing and len(vague) < len(existing) and f["value"]["type"] == "time" and \
+                f["value"]["value"]["precision"] == 11 and all(
+                c["mainsnak"]["datavalue"]["value"].get("precision") == 11
+                and calendar_mixup(c["mainsnak"]["datavalue"]["value"], f["value"]["value"]) for c in existing):
+            notes.append(f"{f['label']}: item and entry give the same day in the Julian and the Gregorian calendar, "
+                         "one of them without saying so; left alone")
+            continue
         if not equal and existing and len(vague) == len(existing) and f["pid"] not in MULTI and not f.get("calendar_unclear"):
             rank = "normal" if any(c["rank"] == "preferred" for c in existing) else "preferred"
             c = statement(f["pid"], f["value"], ref, rank=rank)     # 1888 on the item, 28.12.1888 in the entry

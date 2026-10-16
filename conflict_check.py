@@ -30,7 +30,8 @@ WORK_NAMES = {"snl": "Store norske leksikon", "nkl": "Norsk kunstnerleksikon", "
 URLS = {"snl": "https://snl.no/{}", "nkl": "https://nkl.snl.no/{}", "sml": "https://sml.snl.no/{}",
         "hds": "https://hls-dhs-dss.ch/de/articles/{}/"}
 FIELDS = ["time", "work", "entry", "qid", "property", "wikidata_value", "wikidata_sources", "entry_value",
-          "wikidata_value_supported", "entry_value_supported", "evidence", "note", "model", "searches"]
+          "decision", "evidence", "note", "model", "searches", "input_tokens", "output_tokens"]
+NOT_EVIDENCE = re.compile(r"wikipedia\.org|wikidata\.org|wikimedia\.org|wikiwand\.|dbpedia\.|snl\.no|lex\.dk/.*Wikipedia", re.I)
 
 
 def call(path, body=None):
@@ -70,74 +71,101 @@ def show(v):
 
 
 def open_cases():
-    """Disagreements on dates and places where Wikidata's value has no source or only a Wikipedia import."""
+    """Disagreements on dates and places where Wikidata's value has no source or only a Wikipedia import, judged again
+    under the bot's current rules (a place inside the other, the same day in the other calendar, a year beside the
+    full date are no disagreements)."""
     done = {(r["work"], r["entry"], r["property"]) for r in csv.DictReader(open(LOG, encoding="utf-8"))} if LOG.exists() else set()
     plans = {}
     for w in WORK_NAMES:
         p = d.WORK2 / f"full_plan_{w}.jsonl"
         if p.exists():
             plans.update({(w, e["id"]): e for e in map(json.loads, open(p, encoding="utf-8"))})
-    for r in csv.DictReader(open(LEFT, encoding="utf-8")):
-        r = {**r, "qid": r["item"]}                   # the log calls the item 'item'
-        label = r["note"].split(":")[0]
-        if "different value" not in r["note"] or label not in LABELS or (r["work"], r["entry"], label) in done:
-            continue
-        e = plans.get((r["work"], r["entry"]))
-        ours = [f["value"] for f in (e or {}).get("facts", []) if f["pid"] == LABELS[label]]
-        if not ours:
-            continue
-        claims = [c for c in d.items([r["qid"]]).get(r["qid"], {}).get("claims", {}).get(LABELS[label], [])
-                  if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"]
-        if not claims or any(c.get("references") and not only_import_refs(c) for c in claims):
-            continue                                  # a sourced value: a person reviews it, no search needed
-        refs = "imported from a Wikipedia" if any(c.get("references") for c in claims) else "no source"
-        yield r, label, ours[0], claims, refs
+    keys = list(dict.fromkeys((r["work"], r["entry"]) for r in csv.DictReader(open(LEFT, encoding="utf-8"))
+                              if "different value" in r["note"] and r["note"].split(":")[0] in LABELS
+                              and (r["work"], r["entry"]) in plans))
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
+    for i in range(0, len(keys), 50):
+        batch = [plans[k] for k in keys[i:i + 50]]
+        live = d.items(sorted({e["qid"] for e in batch}))
+        labels = d.place_labels(live, batch)
+        for e in batch:
+            ent = live.get(e["qid"], {})
+            for note in d.build(ent, e, today, labels)[2] if ent else []:
+                label = note.split(":")[0]
+                if "different value" not in note or label not in LABELS or (e["work"], e["id"], label) in done:
+                    continue
+                ours = [f["value"] for f in e["facts"] if f["pid"] == LABELS[label]]
+                claims = [c for c in ent.get("claims", {}).get(LABELS[label], [])
+                          if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"]
+                if not ours or not claims or any(c.get("references") and not only_import_refs(c) for c in claims):
+                    continue                          # a sourced value: a person reviews it, no search needed
+                refs = "imported from a Wikipedia" if any(c.get("references") for c in claims) else "no source"
+                yield {"work": e["work"], "entry": e["id"], "qid": e["qid"]}, label, ours[0], claims, refs, ent
 
 
-def check(r, label, ours, claims, refs):
-    e = d.items([r["qid"]]).get(r["qid"], {})
+def decide(evidence):
+    """jz's rule: when no source supports Wikidata's value, the entry's value replaces it; when a source supports it
+    (or gives a third value), a person reviews the case."""
+    real = [x for x in evidence if not NOT_EVIDENCE.search(x.get("url", ""))]
+    if any(x.get("supports") in ("wikidata", "both", "other") for x in real):
+        return "review"
+    return "replace"
+
+
+def check(r, label, ours, claims, refs, e):
     name = next((e["labels"][l]["value"] for l in ("en", "nb", "mul", "de") if l in e.get("labels", {})), r["qid"])
     desc = next((e["descriptions"][l]["value"] for l in ("en", "nb") if l in e.get("descriptions", {})), "")
     theirs = "; ".join(show(c["mainsnak"]["datavalue"]) for c in claims)
     entry = show(ours)
     url = URLS[r["work"]].format(r["entry"])
+    work = WORK_NAMES[r["work"]]
     prompt = f"""You are checking one fact on Wikidata against reliable sources.
 
 Person: {name} ({desc}), Wikidata item {r['qid']}.
 Fact: {label}.
 Wikidata says: {theirs} ({refs}).
-{WORK_NAMES[r['work']]} ({url}) says: {entry}.
+{work} ({url}) says: {entry}.
 
-Search the web for reliable sources on this person's {label}: national biographies and encyclopedias, archives,
-official registers, obituaries, museum or library authority records. Wikipedia, Wikidata and sites that copy them do
-not count as evidence, since Wikidata's value may come from them. Report only what you actually read in the results.
+Search the web for this person's {label}: national biographies and encyclopedias, archives, official registers,
+obituaries, museum or library authority records. Wikipedia, Wikidata and sites that copy them do not count, since
+Wikidata's value may come from them; neither does {work} itself, which we already have.
+
+List every source you read that states this fact, whatever value it gives, and say which value it supports:
+"wikidata" ({theirs}), "entry" ({entry}), "both" (compatible with both: one place inside the other, the same place
+under another name, or the same date in another calendar) or "other" (a different value). Report only what the page
+says; do not infer.
 
 End with one fenced JSON block, exactly:
 ```json
-{{"wikidata_value_supported": true or false,
-  "entry_value_supported": true or false,
-  "evidence": [{{"url": "...", "says": "the value this source gives, quoted briefly"}}],
+{{"evidence": [{{"url": "...", "says": "what the source states, quoted briefly", "supports": "wikidata|entry|both|other"}}],
   "note": "one sentence"}}
 ```"""
     messages = [{"role": "user", "content": prompt}]
     tools = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}]
-    searches, texts = 0, []
+    searches, texts, tokens_in, tokens_out = 0, [], 0, 0
     for _ in range(6):                                # 'pause_turn': send the turn back until it ends
         resp = call("messages", {"model": MODEL, "max_tokens": 3000, "messages": messages, "tools": tools})
-        searches += resp.get("usage", {}).get("server_tool_use", {}).get("web_search_requests", 0)
+        usage = resp.get("usage", {})
+        searches += usage.get("server_tool_use", {}).get("web_search_requests", 0)
+        tokens_in += usage.get("input_tokens", 0) + usage.get("cache_read_input_tokens", 0) + usage.get("cache_creation_input_tokens", 0)
+        tokens_out += usage.get("output_tokens", 0)
         texts += [b["text"] for b in resp["content"] if b.get("type") == "text"]
         if resp.get("stop_reason") != "pause_turn":
             break
         messages = messages[:1] + [{"role": "assistant", "content": resp["content"]}]
     blocks = re.findall(r"```json\s*(\{.*?\})\s*```", "\n".join(texts), re.S)
-    verdict = json.loads(blocks[-1]) if blocks else {"note": "no verdict returned"}
+    try:
+        verdict = json.loads(blocks[-1]) if blocks else None
+    except ValueError:
+        verdict = None
+    evidence = (verdict or {}).get("evidence", [])
     return {"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "work": r["work"], "entry": r["entry"], "qid": r["qid"], "property": label,
             "wikidata_value": theirs, "wikidata_sources": refs, "entry_value": entry,
-            "wikidata_value_supported": verdict.get("wikidata_value_supported"),
-            "entry_value_supported": verdict.get("entry_value_supported"),
-            "evidence": json.dumps(verdict.get("evidence", []), ensure_ascii=False),
-            "note": verdict.get("note", ""), "model": MODEL, "searches": searches}
+            "decision": decide(evidence) if verdict else "review",
+            "evidence": json.dumps(evidence, ensure_ascii=False),
+            "note": (verdict or {}).get("note", "no verdict returned"), "model": MODEL, "searches": searches,
+            "input_tokens": tokens_in, "output_tokens": tokens_out}
 
 
 def main():
@@ -158,7 +186,8 @@ def main():
             w.writerow(row)
             f.flush()
             print(n, row["entry"], row["property"], "| WD", row["wikidata_value"], "| entry", row["entry_value"],
-                  "| WD supported:", row["wikidata_value_supported"], "| searches", row["searches"], flush=True)
+                  "|", row["decision"], "| searches", row["searches"], "| tokens", row["input_tokens"],
+                  row["output_tokens"], flush=True)
 
 
 if __name__ == "__main__":
