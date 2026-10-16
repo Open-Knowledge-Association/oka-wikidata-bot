@@ -516,9 +516,10 @@ def run():
         todo = [e for pair in zip_longest(*by_work) for e in pair if e]      # the works in turn
         out(f"{len(todo)} entries to do")
         for b in range(0, len(todo), 50):
-            batch = [d.refresh_life_dates(e) for e in todo[b:b + 50]]   # dates under the current rules
+            batch = todo[b:b + 50]
             today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
             live = items(sorted({e["qid"] for e in batch}))
+            batch = [d.refresh_life_dates(e, live.get(e["qid"])) for e in batch]   # dates under the current rules
             labels = d.place_labels(live, batch)
             log, left = [], []
             for e in batch:

@@ -814,7 +814,7 @@ def hds_facts(hid, kind):
 
 # ---------------------------------------------------------------- SNL (metadata only: snl.no marks it free to reuse)
 
-def snl_date(s, label, notes, julian=False):
+def snl_date(s, label, notes, julian=False, new_style=False):
     """SNL's 'd.m.yyyy', where 0 stands for an unknown day or month and the year may be short or negative: '9.6.62'
     (62 CE), '0.0.-384' (384 BCE). Days before 1583 are Julian, as everywhere then; from 1583 to 1699 the calendar
     depended on the country (Denmark-Norway changed in 1700), so such days and months are not used."""
@@ -825,7 +825,7 @@ def snl_date(s, label, notes, julian=False):
         if y == 0 or mo > 12 or d > 31 or (d and not mo):
             notes.append(f"{label} '{s}' not in a clear format")
             return None
-        if 1582 < y < 1700 and (d or mo) and not julian:   # '0.0.1625' is just a year, the same in both calendars
+        if 1582 < y < 1700 and (d or mo) and not (julian or new_style):   # '0.0.1625' is a year in both calendars
             notes.append(f"{label} {s} not used: calendar before 1700 unclear")
             return None
         return time_value(y, mo or None, d or None, julian)
@@ -1037,12 +1037,15 @@ DOUBT = re.compile(r"omtrent|usikk|ukjent|ca\.|ikke kjent|antatt|trolig", re.I)
 def lifespan_caveat(comment):
     """What SNL's note on a person's life dates means for them: 'omtrentlig fødselsår' (approximate year of birth)
     or 'usikkert dødsår' puts that date in doubt, 'fødselsår og dødsår er omtrentlige' both, a doubt naming neither
-    both; 'ifølge den julianske kalender' gives Julian dates; 'fødselsdato er dåpsdato' a baptism date."""
+    both; 'fødselsdato er dåpsdato' gives a baptism date. A note on the Julian or the then Swedish calendar ('Ifølge
+    den julianske kalender ... ble han født 28. august 1828', Tolstoy) gives the old-style date beside fields that
+    hold the Gregorian one: all 143 such notes read so (October 2026). So the fields stay Gregorian ("julian" is
+    never set), and are known to be Gregorian even where the local calendar was then Julian ("new_style")."""
     c = (comment or "").lower()
     doubt = bool(DOUBT.search(c))
     birth, death = "fød" in c, "død" in c
-    return {"birth": doubt and (birth or not death), "death": doubt and (death or not birth),
-            "julian": "juliansk" in c, "baptism": "dåpsdato" in c}
+    return {"birth": doubt and (birth or not death), "death": doubt and (death or not birth), "julian": False,
+            "new_style": "juliansk" in c or bool(re.search(r"daværende \w+ kalender", c)), "baptism": "dåpsdato" in c}
 
 
 SNL_KEEP = ("title", "metadata_license_name", "metadata")     # all the bot reads; the article text is never kept
@@ -1143,7 +1146,7 @@ def snl_life_dates(m, notes):
     facts = []
     caveat = lifespan_caveat(m.get("lifespan_comment"))
     for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
-        v = snl_date(m.get(key), label, notes, caveat["julian"])
+        v = snl_date(m.get(key), label, notes, caveat["julian"], caveat["new_style"])
         if not v:
             continue
         if caveat["birth" if pid == "P569" else "death"]:   # 'omtrentlig fødselsår': about that year
@@ -1156,8 +1159,30 @@ def snl_life_dates(m, notes):
     return facts
 
 
-def refresh_life_dates(entry):
-    """An SNL person's dates read again from the cached metadata under the current rules (the plan may be older)."""
+_country_of = {}                                    # place -> its countries (P17), as fetched
+
+# Where the local calendar was still Julian (until the day given), SNL gives a day as recorded there unless its note
+# says it is new style; which calendar such a day is in cannot be told from SNL alone (Holberg, 3.12.1684 in Bergen,
+# is old style; Karl XII, 27.6.1682 in Stockholm, new style). Those days and months are left out until settled.
+JULIAN_UNTIL = {("Q20", "Q35", "Q756617", "Q189", "Q4628"): "+1700-03-01",          # Denmark-Norway, Iceland, Faroes
+                ("Q34", "Q33"): "+1753-03-01",                                     # Sweden, Finland
+                ("Q145", "Q174193", "Q161885", "Q179876", "Q21", "Q22", "Q25", "Q26", "Q27", "Q30"): "+1752-09-14"}
+
+
+def place_countries(qs):
+    """Fill _country_of for these places."""
+    todo = sorted({q for q in qs if q and q not in _country_of})
+    for i in range(0, len(todo), 50):
+        found = items(todo[i:i + 50])
+        for q in todo[i:i + 50]:
+            _country_of[q] = {c["mainsnak"]["datavalue"]["value"]["id"]
+                              for c in found.get(q, {}).get("claims", {}).get("P17", []) if c["mainsnak"]["snaktype"] == "value"}
+
+
+def refresh_life_dates(entry, ent=None):
+    """An SNL person's dates read again from the cached metadata under the current rules (the plan may be older).
+    A day or month in a place and time of the Julian calendar (JULIAN_UNTIL: the place of birth or death, else the
+    other place, else the person's citizenship on the item `ent`) is left out unless SNL's note says it is new style."""
     if entry["work"] not in SNL_HOSTS or entry.get("kind") != "person":
         return entry
     try:
@@ -1166,8 +1191,26 @@ def refresh_life_dates(entry):
         return entry
     if d.get("metadata_license_name") != "fri":
         return entry
+    m = d.get("metadata") or {}
     notes = []
-    dates = snl_life_dates(d.get("metadata") or {}, notes)
+    dates = snl_life_dates(m, notes)
+    if not lifespan_caveat(m.get("lifespan_comment"))["new_style"]:
+        place = {p: next((f["value"]["value"]["id"] for f in entry["facts"] if f["pid"] == p), None) for p in ("P19", "P20")}
+        place_countries([q for q in place.values() if q])
+        citizen = {c["mainsnak"]["datavalue"]["value"]["id"] for c in (ent or {}).get("claims", {}).get("P27", [])
+                   if c["mainsnak"]["snaktype"] == "value"}
+        kept = []
+        for f in dates:
+            v = f["value"]["value"]
+            where = place["P20" if f["pid"] == "P570" else "P19"] or place["P19"] or place["P20"]
+            countries = _country_of.get(where, set()) if where else citizen
+            until = next((u for group, u in JULIAN_UNTIL.items() if countries & set(group)), None)
+            if until and v["precision"] >= 10 and v["time"] < until and v["calendarmodel"] == GREGORIAN:
+                notes.append(f"{f['label']} {v['time'][1:11]} not used: calendar unclear there before {until[1:11]} "
+                             "(Julian until then)")
+                continue
+            kept.append(f)
+        dates = kept
     entry["facts"] = [f for f in entry["facts"] if f["pid"] not in ("P569", "P570", "P1636")] + dates
     entry["notes"] = [n for n in entry.get("notes", [])
                       if not n.startswith(("date of birth", "date of death", "date of baptism"))] + notes
