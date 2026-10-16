@@ -49,8 +49,9 @@ REASONS = [
      "extended."),
     ("occupation", "Occupation not mapped", "the work's word for the occupation is not yet linked to an occupation "
      "item. The list of words is being extended; offices such as king or bishop are left out by design."),
-    ("date", "Date unclear", "the source marks the date as approximate, gives a day before the calendar reform there "
-     "(Julian or Gregorian unclear), or writes it in a form the bot does not read yet (years before 1000, years BCE)."),
+    ("date", "Date unclear", "the item has the entry's date in another calendar model (the entry's day is Julian, as "
+     "used there then, the item's Gregorian: probably wrong on the item), the calendar of the entry's date cannot be "
+     "told and the item already has the date, or the source gives the date in a form the bot cannot read."),
     ("identifier", "Identifier issue", "the identifier is also on another item, or the entry's life years do not fit "
      "the item's (probably another person). Checked by hand, then corrected."),
     ("unread", "Entry not read", "the entry has moved or could not be read; moved entries are read again at their new "
@@ -229,7 +230,7 @@ def task2_section():
     return """== Task 2: facts from reference works ==
 Approved at [[Wikidata:Requests for permissions/Bot/OKA bot 2]]. Sources: the [[Q642074|Historical Dictionary of Switzerland]] (HDS), [[Q746368|Store norske leksikon]] (SNL) and the other works on snl.no, [[Q11992482|Norsk kunstnerleksikon]] and [[Q19378370|Store medisinske leksikon]].
 
-For each entry linked to an item, the bot adds the facts the entry states (for people, dates and places of birth and death, occupations, relatives and places of origin; for organisations and places, the corresponding facts), each with a reference to the entry, and adds the entry as a source where the item already has the same value. Where the item has only the year and the entry the exact date, the exact date is added with preferred rank ({{P|7452}} {{Q|Q71536040}}). Where the entry disagrees with an existing value, nothing is added and the case is listed. Where SNL has renamed an entry, the item's old ID is kept with deprecated rank ({{P|2241}}: {{Q|Q45403344}}) and the current one is added. Only facts are taken; no text is copied.
+For each entry linked to an item, the bot adds the facts the entry states (for people, dates and places of birth and death, occupations, relatives and places of origin; for organisations and places, the corresponding facts), each with a reference to the entry, and adds the entry as a source where the item already has the same value. Where the item has only the year and the entry the exact date, the exact date is added with preferred rank ({{P|7452}} {{Q|Q71536040}}). Dates are entered in the calendar used where they happened, as [[Help:Dates]] asks: Julian in Denmark–Norway until 1700, in Sweden and Finland until 1753, in Britain and Ireland until 1752; where that cannot be told (regions that changed at different times), with {{P|1480}} {{Q|Q18195782}}. Dates the work gives as approximate get {{P|1480}} {{Q|Q5727902}}. Where the entry disagrees with an existing value, nothing is added and the case is listed. Where SNL has renamed an entry, the item's old ID is kept with deprecated rank ({{P|2241}}: {{Q|Q45403344}}) and the current one is added. Only facts are taken; no text is copied.
 """
 
 

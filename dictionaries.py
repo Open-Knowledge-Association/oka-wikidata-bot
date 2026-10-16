@@ -1140,33 +1140,68 @@ def other_names(raw, kind):
     return list(dict.fromkeys(aliases)), list(dict.fromkeys(pseudonyms))
 
 
-def snl_life_dates(m, notes):
+def snl_life_dates(m, notes, keep_all=False):
     """Dates of birth (or baptism) and death from SNL metadata, read with SNL's note on them (lifespan_comment):
-    an approximate date becomes its year with 'circa' (P1480); Julian dates keep the Julian model."""
+    an approximate date becomes its year with 'circa' (P1480). With keep_all, days and months from 1583 on are kept
+    and marked "local_calendar": the calendar they are in follows from the place (refresh_life_dates)."""
     facts = []
     caveat = lifespan_caveat(m.get("lifespan_comment"))
     for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
-        v = snl_date(m.get(key), label, notes, caveat["julian"], caveat["new_style"])
+        v = snl_date(m.get(key), label, notes, caveat["julian"], caveat["new_style"] or keep_all)
         if not v:
             continue
         if caveat["birth" if pid == "P569" else "death"]:   # 'omtrentlig fødselsår': about that year
             year = int(re.match(r"[+-]\d+", v["value"]["time"]).group(0))
             facts.append(fact(pid, time_value(year, julian=caveat["julian"]), label, {"P1480": [item_value(CIRCA)]}))
-        elif pid == "P569" and caveat["baptism"]:
-            facts.append(fact("P1636", v, "date of baptism"))
-        else:
-            facts.append(fact(pid, v, label))
+            continue
+        f = fact("P1636", v, "date of baptism") if pid == "P569" and caveat["baptism"] else fact(pid, v, label)
+        if keep_all and not caveat["new_style"] and v["value"]["precision"] >= 10 and int(v["value"]["time"][:5]) >= 1583:
+            f["local_calendar"] = True
+        facts.append(f)
     return facts
 
 
 _country_of = {}                                    # place -> its countries (P17), as fetched
 
-# Where the local calendar was still Julian (until the day given), SNL gives a day as recorded there unless its note
-# says it is new style; which calendar such a day is in cannot be told from SNL alone (Holberg, 3.12.1684 in Bergen,
-# is old style; Karl XII, 27.6.1682 in Stockholm, new style). Those days and months are left out until settled.
-JULIAN_UNTIL = {("Q20", "Q35", "Q756617", "Q189", "Q4628"): "+1700-03-01",          # Denmark-Norway, Iceland, Faroes
-                ("Q34", "Q33"): "+1753-03-01",                                     # Sweden, Finland
-                ("Q145", "Q174193", "Q161885", "Q179876", "Q21", "Q22", "Q25", "Q26", "Q27", "Q30"): "+1752-09-14"}
+# The calendar SNL's days and months are in, from the country of the place where they happened (jz, 16 October
+# 2026, following Help:Dates: the calendar used there then; where it cannot be told, the default model with P1480
+# "unspecified calendar"). SNL gives such days as recorded there unless its note says new style (Holberg 3.12.1684
+# in Bergen and Celsius 27.11.1701 in Uppsala are old style); for Russia it gives new style (Peter I, Tchaikovsky).
+UNSPECIFIED_CALENDAR = "Q18195782"
+JULIAN_UNTIL = {                     # Julian until that day; a window with a calendar of its own is unspecified
+    ("Q20", "Q35", "Q756617", "Q189", "Q4628"): ("+1700-03-01", None),          # Denmark-Norway, Iceland, Faroes
+    ("Q34", "Q33"): ("+1753-03-01", ("+1700-03-01", "+1712-03-01")),           # Sweden, Finland; Swedish calendar
+    ("Q145", "Q174193", "Q161885", "Q179876", "Q21", "Q22", "Q25", "Q26", "Q27", "Q30"): ("+1752-09-14", None),
+}
+GREGORIAN_FROM = {                   # Gregorian from that day (Julian before)
+    ("Q38", "Q29", "Q45", "Q36", "Q237"): "+1582-10-15",   # Italy, Spain, Portugal, Poland, Vatican
+    ("Q142",): "+1582-12-20",                               # France
+    ("Q31", "Q32"): "+1583-01-01",                          # Belgium, Luxembourg
+    ("Q40", "Q213", "Q215", "Q224"): "+1584-01-17",         # Austria, Czechia, Slovenia, Croatia
+    ("Q37",): "+1586-01-01",                                # Lithuania
+    ("Q28", "Q214"): "+1587-11-01",                         # Hungary, Slovakia
+    ("Q159", "Q212", "Q184"): "+1582-10-15",                # Russia, Ukraine, Belarus: SNL gives new style
+}
+MIXED_UNTIL = {("Q183",): "+1700-03-01", ("Q55", "Q29999"): "+1701-01-12", ("Q39",): "+1813-01-01",
+               ("Q16",): "+1752-09-14"}      # Germany, the Netherlands, Switzerland, Canada: regions changed apart
+
+
+def local_calendar(countries, time):
+    """'julian', 'gregorian' or 'unspecified' for a day or month recorded at a place in these countries (P17); a place
+    whose countries point to different answers (a town that changed country) is unspecified."""
+    answers = set()
+    for group, (until, own) in JULIAN_UNTIL.items():
+        if countries & set(group):
+            answers.add("unspecified" if own and own[0] <= time < own[1] else "julian" if time < until else "gregorian")
+    for group, start in GREGORIAN_FROM.items():
+        if countries & set(group):
+            answers.add("gregorian" if time >= start else "julian")
+    for group, until in MIXED_UNTIL.items():
+        if countries & set(group):
+            answers.add("unspecified" if time < until else "gregorian")
+    if not answers:
+        answers.add("unspecified" if time < "+1700" else "gregorian")
+    return answers.pop() if len(answers) == 1 else "unspecified"
 
 
 def place_countries(qs):
@@ -1181,8 +1216,9 @@ def place_countries(qs):
 
 def refresh_life_dates(entry, ent=None):
     """An SNL person's dates read again from the cached metadata under the current rules (the plan may be older).
-    A day or month in a place and time of the Julian calendar (JULIAN_UNTIL: the place of birth or death, else the
-    other place, else the person's citizenship on the item `ent`) is left out unless SNL's note says it is new style."""
+    A day or month from 1583 on gets the calendar of the place where it happened (local_calendar: the place of birth
+    or death, else the other place, else the person's citizenship on the item `ent`): the Julian model, the
+    Gregorian one, or the Gregorian one with P1480 "unspecified calendar". SNL's new-style notes keep the Gregorian."""
     if entry["work"] not in SNL_HOSTS or entry.get("kind") != "person":
         return entry
     try:
@@ -1193,24 +1229,23 @@ def refresh_life_dates(entry, ent=None):
         return entry
     m = d.get("metadata") or {}
     notes = []
-    dates = snl_life_dates(m, notes)
-    if not lifespan_caveat(m.get("lifespan_comment"))["new_style"]:
+    dates = snl_life_dates(m, notes, keep_all=True)
+    if any(f.get("local_calendar") for f in dates):
         place = {p: next((f["value"]["value"]["id"] for f in entry["facts"] if f["pid"] == p), None) for p in ("P19", "P20")}
         place_countries([q for q in place.values() if q])
         citizen = {c["mainsnak"]["datavalue"]["value"]["id"] for c in (ent or {}).get("claims", {}).get("P27", [])
                    if c["mainsnak"]["snaktype"] == "value"}
-        kept = []
         for f in dates:
+            if not f.pop("local_calendar", False):
+                continue
             v = f["value"]["value"]
             where = place["P20" if f["pid"] == "P570" else "P19"] or place["P19"] or place["P20"]
-            countries = _country_of.get(where, set()) if where else citizen
-            until = next((u for group, u in JULIAN_UNTIL.items() if countries & set(group)), None)
-            if until and v["precision"] >= 10 and v["time"] < until and v["calendarmodel"] == GREGORIAN:
-                notes.append(f"{f['label']} {v['time'][1:11]} not used: calendar unclear there before {until[1:11]} "
-                             "(Julian until then)")
-                continue
-            kept.append(f)
-        dates = kept
+            calendar = local_calendar(_country_of.get(where, set()) if where else citizen, v["time"])
+            if calendar == "julian":
+                y, mo, dd = _ymd(v)
+                f["value"] = time_value(y, mo or None, dd or None, julian=True)
+            elif calendar == "unspecified":
+                f["qualifiers"] = {**f["qualifiers"], "P1480": [item_value(UNSPECIFIED_CALENDAR)]}
     entry["facts"] = [f for f in entry["facts"] if f["pid"] not in ("P569", "P570", "P1636")] + dates
     entry["notes"] = [n for n in entry.get("notes", [])
                       if not n.startswith(("date of birth", "date of death", "date of baptism"))] + notes
@@ -1448,6 +1483,25 @@ def build(ent, entry, today, labels=None):
         if not equal and existing and f["pid"] in PLACE_PROPS and all(
                 lies_in(place_of(c), f["value"]["value"]["id"]) for c in existing):
             continue                                   # the item names a place inside the entry's: Brooklyn, New York City
+        when = f["value"]["value"] if f["value"]["type"] == "time" else None
+        unknown_calendar = any(q.get("value", {}).get("id") == UNSPECIFIED_CALENDAR for q in f["qualifiers"].get("P1480", []))
+        if when and when["precision"] >= 10 and existing:
+            twins = [c for c in existing if c["mainsnak"]["datavalue"]["value"].get("precision") == when["precision"]
+                     and c["mainsnak"]["datavalue"]["value"]["time"] == when["time"]]
+            if unknown_calendar and twins and not any(
+                    q.get("datavalue", {}).get("value", {}).get("id") == UNSPECIFIED_CALENDAR
+                    for c in twins for q in c.get("qualifiers", {}).get("P1480", [])):
+                notes.append(f"{f['label']}: the item has {when['time'][1:11]}, but which calendar the entry's date is in "
+                             "cannot be told; not sourced")
+                continue
+            other_model = [c for c in twins if c["mainsnak"]["datavalue"]["value"].get("calendarmodel") != when["calendarmodel"]]
+            if not equal and not unknown_calendar and other_model:
+                model = lambda v: "Julian" if v.get("calendarmodel") == JULIAN else "Gregorian"
+                notes.append(f"{f['label']}: the item has {when['time'][1:11]} in the "
+                             f"{model(other_model[0]['mainsnak']['datavalue']['value'])} calendar model, while the "
+                             f"entry's date is {model(when)} (the calendar used there then); left alone: the item's "
+                             "calendar model is probably wrong")
+                continue
         vague = [c for c in existing if f["value"]["type"] == "time" and less_precise_same(c, f["value"])
                  or f["pid"] in NARROWER_OK and lies_in(f["value"]["value"]["id"], place_of(c))]   # or the reverse
         if not equal and existing and len(vague) < len(existing) and f["value"]["type"] == "time" and \
@@ -1460,9 +1514,11 @@ def build(ent, entry, today, labels=None):
         if not equal and existing and len(vague) == len(existing) and f["pid"] not in MULTI and not f.get("calendar_unclear"):
             rank = "normal" if any(c["rank"] == "preferred" for c in existing) else "preferred"
             c = statement(f["pid"], f["value"], ref, rank=rank)     # 1888 on the item, 28.12.1888 in the entry
+            quals = {p: [{"snaktype": "value", "property": p, "datavalue": v} for v in vs] for p, vs in f["qualifiers"].items()}
             if rank == "preferred":
-                c["qualifiers"] = {"P7452": [{"snaktype": "value", "property": "P7452", "datavalue": item_value(MOST_PRECISE)}]}
-                c["qualifiers-order"] = ["P7452"]
+                quals["P7452"] = [{"snaktype": "value", "property": "P7452", "datavalue": item_value(MOST_PRECISE)}]
+            if quals:
+                c["qualifiers"], c["qualifiers-order"] = quals, list(quals)
             out_claims.append(c)
             done.append(f"{f['label']} (more precise)")
             continue
