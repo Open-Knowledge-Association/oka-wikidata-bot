@@ -49,6 +49,7 @@ MOUNTAINS = (("Q8502", "Q207326"), ("Q54050",))         # mountain, summit; then
 KM2 = "Q712226"
 REDIRECT = "Q45403344"                          # reason for deprecated rank: redirect (renamed SNL entries)
 MOST_PRECISE = "Q71536040"                      # reason for preferred rank: most precise value
+CIRCA = "Q5727902"                              # sourcing circumstances (P1480): circa, for dates a work gives as approximate
 SAME_PLACE = {"Q21711493": "Q585"}              # Christiania, an item of its own for Oslo's old name: Oslo
 
 
@@ -314,11 +315,16 @@ def items(ids):
 # ---------------------------------------------------------------- values
 
 def time_value(year, month=None, day=None, julian=False):
+    """A date, a month or a year; years BCE are negative, as Wikidata writes them (384 BCE is -0384)."""
     cal = GREGORIAN if year > 1582 and not julian else JULIAN   # Help:Dates: Julian before 1583, or when the source says so
+    y = f"{'-' if year < 0 else '+'}{abs(year):04d}"
     if day:
-        return {"type": "time", "value": {"time": f"+{year:04d}-{month:02d}-{day:02d}T00:00:00Z", "timezone": 0,
+        return {"type": "time", "value": {"time": f"{y}-{month:02d}-{day:02d}T00:00:00Z", "timezone": 0,
                                           "before": 0, "after": 0, "precision": 11, "calendarmodel": cal}}
-    return {"type": "time", "value": {"time": f"+{year:04d}-00-00T00:00:00Z", "timezone": 0, "before": 0, "after": 0,
+    if month:
+        return {"type": "time", "value": {"time": f"{y}-{month:02d}-00T00:00:00Z", "timezone": 0, "before": 0,
+                                          "after": 0, "precision": 10, "calendarmodel": cal}}
+    return {"type": "time", "value": {"time": f"{y}-00-00T00:00:00Z", "timezone": 0, "before": 0, "after": 0,
                                       "precision": 9, "calendarmodel": cal}}
 
 
@@ -809,15 +815,21 @@ def hds_facts(hid, kind):
 # ---------------------------------------------------------------- SNL (metadata only: snl.no marks it free to reuse)
 
 def snl_date(s, label, notes, julian=False):
+    """SNL's 'd.m.yyyy', where 0 stands for an unknown day or month and the year may be short or negative: '9.6.62'
+    (62 CE), '0.0.-384' (384 BCE). Days before 1583 are Julian, as everywhere then; from 1583 to 1699 the calendar
+    depended on the country (Denmark-Norway changed in 1700), so such days and months are not used."""
     s = (s or "").strip()
-    m = re.fullmatch(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", s)
+    m = re.fullmatch(r"(\d{1,2})\.(\d{1,2})\.(-?\d{1,4})", s)
     if m:
         d, mo, y = map(int, m.groups())
-        if y < 1700 and (d or mo) and not julian:   # '0.0.1125' is just a year, the same in both calendars
+        if y == 0 or mo > 12 or d > 31 or (d and not mo):
+            notes.append(f"{label} '{s}' not in a clear format")
+            return None
+        if 1582 < y < 1700 and (d or mo) and not julian:   # '0.0.1625' is just a year, the same in both calendars
             notes.append(f"{label} {s} not used: calendar before 1700 unclear")
             return None
-        return time_value(y, mo, d, julian)
-    if re.fullmatch(r"\d{4}", s):
+        return time_value(y, mo or None, d or None, julian)
+    if re.fullmatch(r"-?\d{1,4}", s) and int(s):
         return time_value(int(s))
     if s:
         notes.append(f"{label} '{s}' not in a clear format")
@@ -1125,6 +1137,43 @@ def other_names(raw, kind):
     return list(dict.fromkeys(aliases)), list(dict.fromkeys(pseudonyms))
 
 
+def snl_life_dates(m, notes):
+    """Dates of birth (or baptism) and death from SNL metadata, read with SNL's note on them (lifespan_comment):
+    an approximate date becomes its year with 'circa' (P1480); Julian dates keep the Julian model."""
+    facts = []
+    caveat = lifespan_caveat(m.get("lifespan_comment"))
+    for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
+        v = snl_date(m.get(key), label, notes, caveat["julian"])
+        if not v:
+            continue
+        if caveat["birth" if pid == "P569" else "death"]:   # 'omtrentlig fødselsår': about that year
+            year = int(re.match(r"[+-]\d+", v["value"]["time"]).group(0))
+            facts.append(fact(pid, time_value(year, julian=caveat["julian"]), label, {"P1480": [item_value(CIRCA)]}))
+        elif pid == "P569" and caveat["baptism"]:
+            facts.append(fact("P1636", v, "date of baptism"))
+        else:
+            facts.append(fact(pid, v, label))
+    return facts
+
+
+def refresh_life_dates(entry):
+    """An SNL person's dates read again from the cached metadata under the current rules (the plan may be older)."""
+    if entry["work"] not in SNL_HOSTS or entry.get("kind") != "person":
+        return entry
+    try:
+        d = snl_entry(entry["id"], entry["work"])
+    except (ValueError, AttributeError, OSError, subprocess.CalledProcessError):
+        return entry
+    if d.get("metadata_license_name") != "fri":
+        return entry
+    notes = []
+    dates = snl_life_dates(d.get("metadata") or {}, notes)
+    entry["facts"] = [f for f in entry["facts"] if f["pid"] not in ("P569", "P570", "P1636")] + dates
+    entry["notes"] = [n for n in entry.get("notes", [])
+                      if not n.startswith(("date of birth", "date of death", "date of baptism"))] + notes
+    return entry
+
+
 def snl_facts(slug, kind, work="snl"):
     try:
         d = snl_entry(slug, work)
@@ -1147,17 +1196,7 @@ def snl_facts(slug, kind, work="snl"):
                 else:
                     notes.append(f"{label} '{clean(m[key])}' not matched to one place item")
     if kind == "person":
-        caveat = lifespan_caveat(m.get("lifespan_comment"))
-        for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
-            v = snl_date(m.get(key), label, notes, caveat["julian"])
-            if not v:
-                continue
-            if caveat["birth" if pid == "P569" else "death"]:
-                notes.append(f"{label} not used: SNL notes '{clean(m['lifespan_comment'])}'")
-            elif pid == "P569" and caveat["baptism"]:
-                facts.append(fact("P1636", v, "date of baptism"))
-            else:
-                facts.append(fact(pid, v, label))
+        facts += snl_life_dates(m, notes)
         born_at = None
         for key, pid, label in (("birthplace", "P19", "place of birth"), ("place_of_death", "P20", "place of death")):
             if m.get(key):
@@ -1388,6 +1427,10 @@ def build(ent, entry, today, labels=None):
             notes.append(f"{f['label']} {f['value']['value']['time'][1:11]} not used: "
                          + f.get("calendar_note", "calendar before 1813 unclear"))
             continue
+        if equal and f["qualifiers"].get("P1480") and not any(
+                q.get("datavalue", {}).get("value", {}).get("id") == CIRCA
+                for q in equal[0].get("qualifiers", {}).get("P1480", [])):
+            continue                                   # 'about 1650' in the entry, '1650' on the item: nothing to add
         if equal:
             if f["pid"] not in IDS | {"P21"} and not cites(equal[0], work_q):
                 c = copy.deepcopy(equal[0])
