@@ -1501,9 +1501,9 @@ def build(ent, entry, today, labels=None):
             if not equal and not unknown_calendar and other_model:
                 model = lambda v: "Julian" if v.get("calendarmodel") == JULIAN else "Gregorian"
                 notes.append(f"{f['label']}: the item has {when['time'][1:11]} in the "
-                             f"{model(other_model[0]['mainsnak']['datavalue']['value'])} calendar model, while the "
-                             f"entry's date is {model(when)} (the calendar used there then); left alone: the item's "
-                             "calendar model is probably wrong")
+                             f"{model(other_model[0]['mainsnak']['datavalue']['value'])} calendar model and the entry "
+                             f"the same digits in the {model(when)} one; left alone: one of the two calendar models "
+                             "is wrong")
                 continue
         vague = [c for c in existing if f["value"]["type"] == "time" and less_precise_same(c, f["value"])
                  or f["pid"] in NARROWER_OK and lies_in(f["value"]["value"]["id"], place_of(c))]   # or the reverse
