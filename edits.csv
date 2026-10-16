@@ -26283,3 +26283,503 @@ time,kind,qid,uuid,name,revid,changes
 2026-10-16T09:51:20Z,edit:stations,Q33452551,{C389184C-DA0E-4263-A875-0D8E6DB37B44},Oberentfelden Uerkenbrücke,2557628827,source for position; official name
 2026-10-16T09:51:21Z,edit:stations,Q33452578,{A8D37E6C-F545-4B6F-8A58-6FB12EE7D6B8},Unterentfelden Oberdorf,2557628843,source for position; official name
 2026-10-16T09:51:23Z,edit:stations,Q33452634,{1A2E2755-C77F-422A-8EF3-E1F25CEBF94D},Gränichen Oberdorf,2557628855,source for position; official name
+2026-10-16T09:51:36Z,edit:stations,Q33452831,{995DD7D7-8658-4D46-99D6-A67FD575A400},Bremgarten Isenlauf,2557628961,source for position; official name
+2026-10-16T09:51:38Z,edit:stations,Q33452859,{5B74392F-657C-4DF0-A340-26A65E88778D},Dietikon Stoffelbach,2557628971,source for position; official name
+2026-10-16T09:51:39Z,edit:stations,Q33452889,{DC64AFA4-A474-45A1-B3B2-78DC400D5CFA},Rudolfstetten Hofacker,2557628980,source for position; official name
+2026-10-16T09:51:40Z,edit:stations,Q33452913,{9A7B0C38-803F-40BF-AFB2-1556287FD3AE},Zufikon Hammergut,2557628989,source for position; official name
+2026-10-16T09:51:42Z,edit:stations,Q33452940,{3C157278-D3BA-4766-86DE-A4B2CE125F50},Gränichen Töndler,2557629002,source for position; official name
+2026-10-16T09:51:43Z,edit:stations,Q33452968,{9128DD16-DC65-40DE-BFD4-872BEA6B7930},Binzenhof,2557629009,source for position; official name
+2026-10-16T09:51:44Z,edit:stations,Q33452996,{726A8041-055E-4695-97AE-53E022939483},Distelberg,2557629020,source for position; official name
+2026-10-16T09:51:46Z,edit:stations,Q33453021,{F070B753-287F-4CA3-B087-7C3172527654},Oberentfelden Engelplatz,2557629033,source for position; official name
+2026-10-16T09:51:47Z,edit:stations,Q33453050,{14F63587-1A79-4A4F-B12A-9D54A6913EF0},Muhen,2557629047,official name
+2026-10-16T09:51:48Z,edit:stations,Q33453077,{6492E3CF-2A79-4EE4-B4A8-A7DF0C6280B4},Unterentfelden Post,2557629059,source for position; official name
+2026-10-16T09:51:50Z,edit:stations,Q33453101,{BE8123A2-C1C8-4AF9-9F5C-85BC1F7A99D7},Hirschthal,2557629068,source for position; official name
+2026-10-16T09:51:51Z,edit:stations,Q33453127,{3B37F456-7D23-42BE-A1F1-EEA6D3C66387},Schöftland,2557629079,source for position; official name
+2026-10-16T09:51:52Z,edit:stations,Q33454097,{15900EA6-C725-4F5B-86FA-7F2B106118EA},Bremgarten Obertor,2557629089,source for position; official name
+2026-10-16T09:51:54Z,edit:stations,Q33454123,{6D3A707C-04C3-4EBD-A8F0-1410230DB4FB},Zufikon Belvédère,2557629095,source for position; official name
+2026-10-16T09:51:55Z,edit:stations,Q33454171,{DBD5D6F6-FBFC-4F4D-9C81-B69489342DE9},Erdmannlistein,2557629103,source for position; official name
+2026-10-16T09:51:56Z,edit:stations,Q33454199,{C66F45B8-9D8C-4C90-8917-02E44279D922},Bergfrieden,2557629110,source for position; official name
+2026-10-16T09:51:57Z,edit:stations,Q33454222,{61CDCF8B-A26C-4AD1-93B5-8FA5C07FBBFD},Wohlen Oberdorf,2557629118,source for position; official name
+2026-10-16T09:51:59Z,edit:stations,Q33454246,{4B232F54-2BD2-4856-89D5-006EAD6E22E8},Bremgarten West,2557629125,source for position; official name
+2026-10-16T09:52:00Z,edit:stations,Q33454273,{419581DF-4F91-4D72-818E-401821AC1FF8},Bremgarten,2557629131,source for position; official name
+2026-10-16T09:52:01Z,edit:stations,Q33454300,{B068636A-337C-4E36-9C4E-1C1A0B560DA0},Zufikon,2557629139,source for position; official name
+2026-10-16T09:57:31Z,edit:stations,Q33454328,{8C3D1509-8E80-425E-A77F-E69B16C9A5DC},Widen Heinrüti,2557629933,source for position; official name
+2026-10-16T09:57:32Z,edit:stations,Q33454354,{D9C3F113-03F2-4D1A-8FB8-E5B3C1E02C9B},Berikon-Widen,2557629941,source for position; official name
+2026-10-16T09:57:33Z,edit:stations,Q33454381,{62CF2BE2-27E7-4B37-92C0-184FEF3E6506},Rudolfstetten,2557629947,source for position; official name
+2026-10-16T09:57:35Z,edit:stations,Q33454411,{FFD8727F-CB0F-41D4-B6E6-0C552709A491},Reppischhof,2557629952,source for position; official name
+2026-10-16T09:57:36Z,edit:stations,Q33455795,{84D70B39-4220-4B09-8546-8B80319688FE},"Zürich Stadelhofen, Bahnhof",2557629961,official name
+2026-10-16T09:57:38Z,edit:stations,Q33455831,{A326A905-8FF2-4ED5-918A-85848B1DEF04},Langwies ZH,2557629967,source for position; official name
+2026-10-16T09:57:39Z,edit:stations,Q33455854,{CE9B9A4D-E182-4670-B74B-4EDC85C920AD},Egg,2557629974,source for position; official name
+2026-10-16T09:57:40Z,edit:stations,Q33455872,{8135A575-AB29-4A26-B2CF-1B7B1BFFDE33},Hinteregg,2557629987,source for position; official name
+2026-10-16T09:57:42Z,edit:stations,Q33455893,{0016859B-E331-4F6F-A314-83B79C53C942},Scheuren,2557629998,source for position; official name
+2026-10-16T09:57:43Z,edit:stations,Q33455933,{71764476-F6CA-4432-984D-1F5A03BDF2A6},Zumikon,2557630005,official name
+2026-10-16T09:57:44Z,edit:stations,Q33455956,{34274E74-F014-4F6F-805D-1D4221F38EF8},Zollikerberg,2557630013,source for position; official name
+2026-10-16T09:57:46Z,edit:stations,Q33455979,{097476CF-D9F7-46CC-9237-49D61D52153F},Maiacher,2557630023,source for position; official name
+2026-10-16T09:57:47Z,edit:stations,Q33456018,{54D464F8-3FDA-4876-942A-A5C0C6FC5220},Emmat,2557630032,source for position; official name
+2026-10-16T09:57:48Z,edit:stations,Q33456040,{C06E343C-B0C8-4CD4-AA29-049090879B57},Neuhaus bei Hinteregg,2557630040,source for position; official name
+2026-10-16T09:57:50Z,edit:stations,Q33456063,{4508583E-146E-4162-BAE6-4D8F17BF9A03},Neue Forch,2557630046,source for position; official name
+2026-10-16T09:57:51Z,edit:stations,Q33456087,{E06D90B1-6EE0-4121-A731-A2D92ABCEB8D},Waltikon,2557630054,source for position; official name
+2026-10-16T09:57:52Z,edit:stations,Q33456111,{933C8BE5-3DA1-4E65-9EFE-51A2B209716C},Spital Zollikerberg,2557630059,source for position; official name
+2026-10-16T09:57:53Z,edit:stations,Q33456136,{C9DFBEAA-A75E-4A24-AB28-33DAC2FE308F},Waldburg,2557630067,source for position; official name
+2026-10-16T09:57:55Z,edit:stations,Q33456193,{9C687611-7197-4A35-8F93-4EC1EBB83887},Zürich HB SZU,2557630077,source for position; official name
+2026-10-16T09:57:56Z,edit:stations,Q33462426,{A4E4EB09-B27A-4B39-9AF0-8BCAE42ADFE6},Bossonnens,2557630085,source for position; official name
+2026-10-16T09:57:57Z,edit:stations,Q33462451,{CDD609E2-E979-4749-8E04-FF81D8862F46},Remaufens,2557630096,source for position; official name
+2026-10-16T09:57:59Z,edit:stations,Q33462476,{979F3C45-DCEC-40E0-AC46-8B4BC94ED0E4},Châtel-St-Denis,2557630099,source for position; official name
+2026-10-16T09:58:00Z,edit:stations,Q33462500,{D79E7737-6C65-45AB-B780-FFA05827AA93},Semsales,2557630108,source for position; official name
+2026-10-16T09:58:01Z,edit:stations,Q33462523,{24A11C60-FC08-4522-B68A-5892A8BDEE03},La Verrerie,2557630112,source for position; official name
+2026-10-16T10:25:18Z,edit:stations,Q33462547,{F3D1700C-CCDE-4515-B5E7-BDB4F4E2469E},Vaulruz-Sud,2557633902,source for position; official name
+2026-10-16T10:25:19Z,edit:stations,Q33462572,{E52D683D-EDDD-4673-9279-97B380F0BD96},Vuadens-Sud,2557633915,source for position; official name
+2026-10-16T10:25:20Z,edit:stations,Q33462594,{321617DA-5A83-4248-97ED-AB4EA17AEF97},La Tour-de-Trême,2557633929,source for position; official name
+2026-10-16T10:25:22Z,edit:stations,Q33462666,{E1F7F91C-78C9-4E4D-BF48-CCCC4D8EF0BA},Montbovon,2557633942,source for position; official name
+2026-10-16T10:25:23Z,edit:stations,Q33462688,{4D87C4C0-67A5-480C-9053-936BA25F4A23},Lessoc,2557633953,source for position; official name
+2026-10-16T10:25:25Z,edit:stations,Q33462784,{FEEFF97D-DDEA-4644-B34C-75B90BC6133A},Enney,2557633969,source for position; official name
+2026-10-16T10:25:26Z,edit:stations,Q33462833,{6EEF15A3-4140-4111-A957-D3F638C4D4E0},Gruyères,2557633983,source for position; official name
+2026-10-16T10:25:27Z,edit:stations,Q33462855,{9612A730-08A0-4DD8-8407-51C73CB30964},Le Pâquier-Montbarry,2557633991,source for position; official name
+2026-10-16T10:25:29Z,edit:stations,Q33462876,{1950DD4F-22C6-4910-96E3-17A550F388E2},La Tour-de-Trême Ronclina,2557633998,source for position; official name
+2026-10-16T10:25:30Z,edit:stations,Q33462900,{BDACB2C0-F977-47DC-A12F-A2287055923E},Bulle,2557634008,official name
+2026-10-16T10:25:31Z,edit:stations,Q33462924,{349E2472-741B-4948-8640-D798C28FDB8B},Broc-Village,2557634016,source for position; official name
+2026-10-16T10:25:32Z,edit:stations,Q33462947,{41287C07-5280-46B1-AF19-CF5DB48A3174},Broc-Chocolaterie,2557634025,source for position; official name
+2026-10-16T10:25:34Z,edit:stations,Q33463532,{3CABA421-756A-4729-8605-05F303F550D6},Sugiez,2557634031,official name
+2026-10-16T10:25:35Z,edit:stations,Q33463962,{CE1F7804-D43B-4F53-A09D-3AC620C85C92},Flamatt Dorf,2557634037,source for position; official name
+2026-10-16T10:25:36Z,edit:stations,Q33463987,{5FB3E7C2-1BB3-4A21-8BFD-213BD2DC438B},Neuenegg,2557634050,source for position; official name
+2026-10-16T10:25:38Z,edit:stations,Q33465078,{A16D9A85-D440-4632-9592-AABBF9D78B14},La Presta Mines d'asphalte,2557634056,source for position; official name
+2026-10-16T10:25:39Z,edit:stations,Q33465099,{4CC4BFA8-5BAC-42B0-B46F-2F1268D54311},Couvet,2557634066,official name
+2026-10-16T10:25:40Z,edit:stations,Q33465116,{F1FA2D5F-7D7F-430B-AEBE-ADA5D8807125},Môtiers NE,2557634074,source for position; official name
+2026-10-16T10:25:42Z,edit:stations,Q33465144,{C8DE02FE-5144-4914-8362-868102D7E51B},Fleurier,2557634082,source for position; official name
+2026-10-16T10:25:43Z,edit:stations,Q33465164,{D3F937D2-2A39-4927-A94F-F03590710D07},Buttes,2557634093,official name
+2026-10-16T10:25:44Z,edit:stations,Q33465184,{6C39DBC1-108A-4E71-81E7-DFF7F6442DF2},La Brinaz,2557634102,source for position; official name
+2026-10-16T10:25:45Z,edit:stations,Q33465205,{25E5EF64-FCF6-4B06-B67B-13E524B444A5},Valeyres-sous-Montagny,2557634110,source for position; official name
+2026-10-16T10:25:47Z,edit:stations,Q33465229,{7F25ED46-5677-433F-8520-F32DA4721A0F},Essert-sous-Champvent,2557634120,source for position; official name
+2026-10-16T10:25:48Z,edit:stations,Q33465250,{6042A55F-9466-4461-92A6-F99A7A79C193},Vuiteboeuf,2557634130,source for position; official name
+2026-10-16T10:25:49Z,edit:stations,Q33465272,{970A6DC7-3B96-477F-A8DB-9EC5298B6727},Baulmes,2557634136,source for position; official name
+2026-10-16T10:25:51Z,edit:stations,Q33465305,{D0AE92EC-80A5-476F-9D45-169F8A3D5B03},Six-Fontaines,2557634147,source for position; official name
+2026-10-16T10:25:52Z,edit:stations,Q33465347,{FFF17A08-8EED-40C4-8640-727FA4C0FD8F},Ste-Croix,2557634152,source for position; official name
+2026-10-16T10:25:53Z,edit:stations,Q33465643,{C0D0F812-6EB6-4A3E-96CE-F430662D98CF},Colombier NE Littorail,2557634158,source for position; official name
+2026-10-16T10:25:55Z,edit:stations,Q33465671,{4071D1C7-3212-4DE0-B64D-644A38E9669A},La Chaux-de-Fonds-Grenier,2557634166,source for position; official name
+2026-10-16T10:25:56Z,edit:stations,Q33465707,{EA21F0B8-8E29-41CD-BBB0-92A89B3FBBD5},Le Reymond,2557634169,source for position; official name
+2026-10-16T10:25:57Z,edit:stations,Q33465746,{9AC3DB94-2EC1-4834-906A-45C0C8460DED},La Corbatière,2557634179,source for position; official name
+2026-10-16T10:25:58Z,edit:stations,Q33465777,{67AE1AD6-298D-4E99-B382-9ED2B2DCD62B},La Sagne-Eglise,2557634184,source for position; official name
+2026-10-16T10:26:00Z,edit:stations,Q33465816,{F515DB11-D093-41C7-962F-1083409C12DD},La Sagne,2557634192,source for position; official name
+2026-10-16T10:26:01Z,edit:stations,Q33465855,{F43B4FEF-45E8-4F91-9581-4CCF98ECFB7C},Les Coeudres,2557634196,source for position; official name
+2026-10-16T10:26:02Z,edit:stations,Q33465916,{664EA745-D507-4EB3-9340-A203AD746733},Petit-Martel,2557634201,source for position; official name
+2026-10-16T10:26:04Z,edit:stations,Q33465951,{D41065DC-70FC-4F85-A503-8E02F4C02D64},Les Ponts-de-Martel,2557634206,source for position; official name
+2026-10-16T10:26:05Z,edit:stations,Q33465980,{F9381821-287A-4979-8B92-D97502AA5AD2},Les Frêtes,2557634218,source for position; official name
+2026-10-16T10:26:06Z,edit:stations,Q33466019,{823C772A-6BDD-431B-B4C6-F4A17497A53C},Les Brenets,2557634223,source for position; official name
+2026-10-16T10:26:07Z,edit:stations,Q33466054,{CCB77F13-7ED3-4638-B338-E3ABEDBBF1C5},Neuchâtel Place Pury Littorail,2557634233,source for position; official name
+2026-10-16T10:26:09Z,edit:stations,Q33466264,{923CF929-4BA3-4938-9274-F744F68996A1},Nidau,2557634240,source for position; official name
+2026-10-16T10:26:10Z,edit:stations,Q33466281,{4B407770-A3E6-432D-A52C-9EB971414BF6},Lattrigen,2557634249,source for position; official name
+2026-10-16T10:26:11Z,edit:stations,Q33466301,{7E45A06A-7EFC-4E16-BD05-A7577368344B},Täuffelen,2557634258,source for position; official name
+2026-10-16T10:26:12Z,edit:stations,Q33466320,{27C88A18-273A-4265-B442-A4219607605C},Hagneck,2557634269,source for position; official name
+2026-10-16T10:26:24Z,edit:stations,Q33466338,{9C2766E0-BB13-4149-911E-926F1651992C},Lüscherz,2557634355,source for position; official name
+2026-10-16T10:26:25Z,edit:stations,Q33466353,{EE952C10-D25D-4562-9579-E03FEC7F596E},Siselen-Finsterhennen,2557634367,source for position; official name
+2026-10-16T10:26:26Z,edit:stations,Q33466367,{8D6FDEF6-97A1-4037-B6B5-2E5824A6D017},Brüttelen,2557634380,source for position; official name
+2026-10-16T10:26:28Z,edit:stations,Q33466385,{632F4726-01C5-4984-9061-82CEC7B3D614},Ins Dorf,2557634395,source for position; official name
+2026-10-16T10:26:29Z,edit:stations,Q33466444,{BFF5D5D5-22BB-4CF8-8CCC-F1901432440E},Ipsach Herdi,2557634407,source for position; official name
+2026-10-16T10:26:30Z,edit:stations,Q33466465,{77E00EDA-1CEB-43CD-ADBA-EBCD3488886D},Ipsach,2557634413,source for position; official name
+2026-10-16T10:26:32Z,edit:stations,Q33466515,{40646CC9-7033-427A-8E09-4A9F0A86B004},Sutz,2557634422,source for position; official name
+2026-10-16T10:26:33Z,edit:stations,Q33466558,{BB737146-244E-4AC6-BBBF-88DE04EFAF1B},Mörigen,2557634431,official name
+2026-10-16T10:26:34Z,edit:stations,Q33466602,{84678016-C9BD-450D-B727-A5A1063EF85C},Gerolfingen,2557634440,source for position; official name
+2026-10-16T10:26:36Z,edit:stations,Q33466688,{D8C37186-581B-4879-9DD4-63FCCB4441B5},Gampelen,2557634449,official name
+2026-10-16T10:26:37Z,edit:stations,Q33466716,{1D27239B-9E9E-47DD-B844-6E86C6BA143B},Ins,2557634455,source for position; official name
+2026-10-16T10:26:39Z,edit:stations,Q33466736,{00FEDC46-9896-4DF9-9BCE-32F12B7DC872},Müntschemier,2557634464,source for position; official name
+2026-10-16T10:26:40Z,edit:stations,Q33466788,{E9E5F295-CBA1-4987-B4F7-EF263E70BE34},Rosshäusern,2557634474,source for position; official name
+2026-10-16T10:26:41Z,edit:stations,Q33466805,{8F1A1C48-5A3F-4532-A809-9F114A75B24B},Bern Riedbach,2557634483,source for position; official name
+2026-10-16T10:26:42Z,edit:stations,Q33466824,{0788AFCA-4DF2-4E2D-9029-287F6627AEA7},Bern Bümpliz Nord,2557634491,source for position; official name
+2026-10-16T10:26:44Z,edit:stations,Q33466842,{1B1DB5C3-FB7F-43DF-88C7-E3825B0F797B},Zihlbrücke,2557634502,source for position; official name
+2026-10-16T10:26:45Z,edit:stations,Q33466881,{6EFD49F2-EA08-479E-838C-D112CEF6BC20},Neuchâtel Port-de-Serrières,2557634512,source for position; official name
+2026-10-16T10:26:46Z,edit:stations,Q33466896,{FAEE173F-A384-47B2-8C66-13A63A3F07D5},Auvernier Littorail,2557634516,source for position; official name
+2026-10-16T10:26:48Z,edit:stations,Q33466912,{78ACD545-B59A-4F3E-8E6E-3FDBC994AC60},Boudry Littorail,2557634528,source for position; official name
+2026-10-16T10:26:49Z,edit:stations,Q33467193,{49C970CD-9C33-4BE9-98C2-BDF25B195ADA},Hospental,2557634535,source for position; official name
+2026-10-16T10:26:50Z,edit:stations,Q33467259,{F75037AC-9BDF-4F42-9FE9-971748EEE4CF},Nätschen,2557634540,source for position; official name
+2026-10-16T10:26:52Z,edit:stations,Q33467291,{B65121AA-EC6F-4CA1-BD6E-70C21B41F0A1},Oberalppass,2557634553,source for position; official name
+2026-10-16T10:26:53Z,edit:stations,Q33467326,{BB28694E-4F2F-4388-BB57-689B5186E31D},Tschamut-Selva,2557634561,source for position; official name
+2026-10-16T10:26:54Z,edit:stations,Q33467363,{5923DBFB-9573-493E-AD19-014DB5A1ED0A},Dieni,2557634568,source for position; official name
+2026-10-16T10:26:55Z,edit:stations,Q33467395,{584AD9A2-6629-42C2-BDFB-6414DBCD717E},Rueras,2557634579,source for position; official name
+2026-10-16T10:26:57Z,edit:stations,Q33467457,{5DE0C690-C38D-4729-8EA7-8161148ACF5C},Bugnei,2557634588,source for position; official name
+2026-10-16T10:26:58Z,edit:stations,Q33467490,{0E873692-49E0-4C9F-A999-6DA69A232F32},Mumpé Tujetsch,2557634596,official name
+2026-10-16T10:27:00Z,edit:stations,Q33467516,{A426EE2D-F3DA-49F6-A464-A8A8564E8584},Segnas,2557634605,source for position; official name
+2026-10-16T10:27:01Z,edit:stations,Q33467534,{B69E39E6-D106-4BCD-A3BB-7EB4A33E12CA},Acla da Fontauna,2557634613,official name
+2026-10-16T10:27:02Z,edit:stations,Q33505142,{9D4A568B-D566-4744-9490-79A37ABFD8B1},Tägerschen,2557634624,source for position; official name
+2026-10-16T10:27:03Z,edit:stations,Q33505313,{44CA1C92-F828-43AA-8C17-76C70ECDBBFB},Wiesengrund,2557634634,source for position; official name
+2026-10-16T10:27:05Z,edit:stations,Q33505330,{F2FD44DE-54F7-4E43-9AE6-4846347613C7},Münchwilen Pflegeheim,2557634645,source for position; official name
+2026-10-16T10:27:07Z,edit:stations,Q33505342,{FEDC587D-DF86-488D-AEF0-74C84B03633C},Frauenfeld Marktplatz,2557634652,source for position; official name
+2026-10-16T10:27:08Z,edit:stations,Q33505371,{B52CCC41-4BAB-4747-9067-F08B1F42CD74},Weberei Matzingen,2557634657,source for position; official name
+2026-10-16T10:27:09Z,edit:stations,Q33505389,{C0A0F0C5-3E0E-4CCB-BD61-08BF3FB74EEA},Matzingen,2557634669,source for position; official name
+2026-10-16T10:27:11Z,edit:stations,Q33505408,{DE925792-6594-47BA-89D6-A84D00ECDF6C},Jakobstal,2557634673,official name
+2026-10-16T10:27:12Z,edit:stations,Q33505426,{9EE4A1B3-0661-48AC-8DEB-4584270F69A6},Wängi,2557634679,source for position; official name
+2026-10-16T10:27:13Z,edit:stations,Q33505444,{0CCABEBF-44BF-499E-9D13-8645856FD449},Rosental,2557634683,source for position; official name
+2026-10-16T10:27:15Z,edit:stations,Q33505470,{03313707-27E7-4441-AAB5-73B62CCD5BF3},Münchwilen TG,2557634688,source for position; official name
+2026-10-16T10:27:16Z,edit:stations,Q33505488,{48825FE8-7C55-4688-BFCD-7F971F1663D7},Lüdem,2557634699,source for position; official name
+2026-10-16T10:27:17Z,edit:stations,Q33505500,{C7B4FFBA-971B-45D6-8E5B-B980F4023F1A},Bronschhofen,2557634704,source for position; official name
+2026-10-16T10:27:19Z,edit:stations,Q33505514,{1058444B-8606-42AA-91C5-D9B727E43FF7},Bettwiesen,2557634712,official name
+2026-10-16T10:27:30Z,edit:stations,Q33505531,{79C4F86F-8F5E-44F6-856F-C587D0672322},Tobel-Affeltrangen,2557634763,source for position; official name
+2026-10-16T10:27:32Z,edit:stations,Q33505548,{50F71123-CEF4-415D-9E63-865C6E71986B},Märwil,2557634773,official name
+2026-10-16T10:27:33Z,edit:stations,Q33505571,{46A8A90B-BB81-45B7-BDA1-DCF36622972F},Oppikon,2557634781,source for position; official name
+2026-10-16T10:27:34Z,edit:stations,Q33505594,{CA3D8D2E-F246-410E-9D98-EF5E41D9E893},Bronschhofen AMP,2557634795,source for position; official name
+2026-10-16T10:27:36Z,edit:stations,Q33505610,{340BAD54-4CCF-47DE-ABB9-1BA15FDEC6B3},Bussnang,2557634806,source for position; official name
+2026-10-16T10:27:37Z,edit:stations,Q33505628,{04D9F607-2DA1-4F7B-9CFB-2C8E9A883F5F},Berg,2557634815,source for position; official name
+2026-10-16T10:27:38Z,edit:stations,Q33505639,{5B06B070-FA08-4C82-8B50-9314ABDA6AC6},Siegershausen,2557634825,source for position; official name
+2026-10-16T10:27:40Z,edit:stations,Q33505647,{155AE494-F188-41A9-8194-607A40AA5F37},Lengwil,2557634837,official name
+2026-10-16T10:27:41Z,edit:stations,Q33505655,{2FE32F99-15A8-41A7-9954-5E0E105D9D0E},Kreuzlingen Bernrain,2557634844,official name
+2026-10-16T10:27:42Z,edit:stations,Q33505670,{4CC4E785-A717-4E4E-A4A4-AB6942F9E2C2},Tägerwilen Dorf,2557634854,source for position; official name
+2026-10-16T10:27:44Z,edit:stations,Q33506100,{C3DF411C-0083-494F-8FF6-B2BB0B8AB2B2},St. Gallen Marktplatz,2557634866,source for position; official name
+2026-10-16T10:27:45Z,edit:stations,Q33506110,{5FC0EED0-A239-404D-A817-6D5BF1012C6B},Gontenbad,2557634878,source for position; official name
+2026-10-16T10:27:46Z,edit:stations,Q33506123,{3746773F-6E98-40F3-90BB-B265B8B60CEE},Steinegg,2557634885,source for position; official name
+2026-10-16T10:27:48Z,edit:stations,Q33506133,{91EB218A-5BCA-401A-8C0E-484859F0154E},Strahlholz,2557634892,source for position; official name
+2026-10-16T10:27:49Z,edit:stations,Q33506153,{9B8A6182-169F-4646-ABF9-218FDA9B9F3B},Schwende,2557634899,source for position; official name
+2026-10-16T10:27:50Z,edit:stations,Q33506170,{7E5B73BF-183E-4A86-B4D6-6653E97F0283},Seebleiche,2557634906,source for position; official name
+2026-10-16T10:27:51Z,edit:stations,Q33506188,{D8E7BC9C-B5B9-46A6-BFFE-26D282581524},Waldstatt,2557634918,source for position; official name
+2026-10-16T10:27:53Z,edit:stations,Q33506201,{58AF23A8-CB06-4864-BED3-06EBB2EB5D69},Zürchersmühle,2557634925,source for position; official name
+2026-10-16T10:27:54Z,edit:stations,Q33506215,{FEEDF6F8-1E72-4529-9662-882418011E91},Urnäsch,2557634935,source for position; official name
+2026-10-16T10:27:55Z,edit:stations,Q33506229,{900B2A21-72B8-4194-9FF2-0D3753931C0C},Jakobsbad,2557634946,source for position; official name
+2026-10-16T10:27:57Z,edit:stations,Q33506244,{189F992C-0E64-4427-B1F7-DE57B1C541A0},Gonten,2557634954,source for position; official name
+2026-10-16T10:27:58Z,edit:stations,Q33506261,{89153C23-C957-4304-AB1B-A481D19BD7C8},Appenzell,2557634965,source for position; official name
+2026-10-16T10:27:59Z,edit:stations,Q33506291,{88CBEE74-1804-4A36-AA07-BD7FF3E634E4},Weissbad,2557634973,source for position; official name
+2026-10-16T10:28:01Z,edit:stations,Q33506307,{18D713E9-6247-4ECC-9355-05F44DC77704},Wasserauen,2557634981,source for position; official name
+2026-10-16T10:28:02Z,edit:stations,Q33506338,{F76A559E-793B-41C8-B971-3E0AC62ED8C3},Schachen (Herisau),2557634994,official name
+2026-10-16T10:28:03Z,edit:stations,Q33506347,{19F0FDDC-8A08-46F1-8055-47B4F1BAFCC7},Degersheim,2557635005,source for position; official name
+2026-10-16T10:28:05Z,edit:stations,Q33506355,{377E15D2-D3EE-44AF-A86C-27030B831BB8},Mogelsberg,2557635017,source for position; official name
+2026-10-16T10:28:06Z,edit:stations,Q33506366,{C4601564-68D0-4288-AF22-AED2FC22E336},Brunnadern-Neckertal,2557635028,official name
+2026-10-16T10:28:08Z,edit:stations,Q33506377,{A6411973-6B41-4461-AD24-88FECFCCFE0D},Ebnat-Kappel,2557635036,source for position; official name
+2026-10-16T10:28:09Z,edit:stations,Q33506386,{F4CA13C1-F8D7-4EC9-856E-6180B5AC5043},Krummenau,2557635045,source for position; official name
+2026-10-16T10:28:10Z,edit:stations,Q33506578,{7743EAEF-49DB-4F95-BDEA-9E898B68EFD1},Walzenhausen,2557635051,source for position; official name
+2026-10-16T10:28:12Z,edit:stations,Q33506597,{58E472DA-7F6A-4023-8A8C-5B0267BF4C32},Ruderbach,2557635060,official name
+2026-10-16T10:28:13Z,edit:stations,Q33506615,{5794F037-633B-43FD-B7A5-D890514FBC2C},Wartensee,2557635069,source for position; official name
+2026-10-16T10:28:14Z,edit:stations,Q33506632,{07FA3132-957D-42F7-BA74-4F11197686BC},Wienacht-Tobel,2557635080,source for position; official name
+2026-10-16T10:28:16Z,edit:stations,Q33506650,{5AB5EC47-67A2-436A-9130-8B747E2A0F54},Schwendi bei Heiden,2557635086,source for position; official name
+2026-10-16T10:28:17Z,edit:stations,Q33506670,{E085EFE9-36D1-4235-B8E0-46FE26E73EAB},Heiden,2557635096,source for position; official name
+2026-10-16T10:28:18Z,edit:stations,Q33506677,{47BB11E7-DB8C-4E50-99C8-BF2ED178882E},St. Gallen Spisertor,2557635103,source for position; official name
+2026-10-16T10:28:20Z,edit:stations,Q33506687,{15FF67E9-499E-448F-8854-8C29E1BAF4D3},St. Gallen Schülerhaus,2557635113,source for position; official name
+2026-10-16T10:28:21Z,edit:stations,Q33506698,{6AB50242-8BF1-46C8-A0C1-375D95FDC2A6},St. Gallen Notkersegg,2557635126,official name
+2026-10-16T10:28:22Z,edit:stations,Q33506717,{17B3F019-7974-47C3-9042-7BED3FC288F0},Schwarzer Bären,2557635138,source for position; official name
+2026-10-16T10:28:23Z,edit:stations,Q33506753,{887B16AC-189E-4C42-A8E8-15763E5B508F},Vögelinsegg,2557635151,source for position; official name
+2026-10-16T10:28:35Z,edit:stations,Q33506771,{E82B18B8-FCD8-454B-B0B9-213CF1A41967},Schützengarten,2557635205,official name
+2026-10-16T10:28:36Z,edit:stations,Q33506780,{AC91F88E-3B62-4324-B430-120F57094699},Speicher,2557635215,official name
+2026-10-16T10:28:38Z,edit:stations,Q33506789,{8AE1C4FD-BC76-428C-ACE4-2BAEB247BB3D},Bendlehn,2557635224,official name
+2026-10-16T10:28:39Z,edit:stations,Q33506799,{57383DC7-D526-4049-AAAF-F5C0742B0DB6},Gfeld,2557635231,source for position; official name
+2026-10-16T10:28:40Z,edit:stations,Q33506809,{C6182666-A800-4B15-B983-EA5B0717E26D},Trogen,2557635236,source for position; official name
+2026-10-16T10:28:41Z,edit:stations,Q33506827,{D657BDCB-5E49-4C10-A3B1-B7BB2E8E64BD},St. Gallen Riethüsli,2557635241,source for position; official name
+2026-10-16T10:28:43Z,edit:stations,Q33506837,{77EBFCF1-28A7-4E91-A7ED-E13522E4ABAA},Lustmühle,2557635250,source for position; official name
+2026-10-16T10:28:44Z,edit:stations,Q33506846,{8CEB98F9-7951-4FCB-B84B-C081D679BAD3},Niederteufen,2557635266,source for position; official name
+2026-10-16T10:28:45Z,edit:stations,Q33506855,{BFEBD8B2-BA3E-4197-AA11-C14BCF757939},Sternen bei Teufen,2557635278,source for position; official name
+2026-10-16T10:28:47Z,edit:stations,Q33506866,{63088026-0077-4A71-B55E-797D190D6841},Teufen AR,2557635292,source for position; official name
+2026-10-16T10:28:48Z,edit:stations,Q33506879,{FFE1F871-CBD7-407D-B7EB-1A82664EC157},Steigbach,2557635310,source for position; official name
+2026-10-16T10:28:49Z,edit:stations,Q33506891,{632803E9-4207-4C43-AE51-798A962D7DC2},Bühler,2557635322,source for position; official name
+2026-10-16T10:28:51Z,edit:stations,Q33506900,{14E663C8-9592-4F6C-B611-DA4FEFDEA137},Gais,2557635337,source for position; official name
+2026-10-16T10:28:52Z,edit:stations,Q33506910,{AAE1B6A7-D42F-49A9-9183-5F98F0EF5B2C},Altstätten Stadt,2557635353,source for position; official name
+2026-10-16T10:28:53Z,edit:stations,Q33506921,{5B8E6583-2DB7-4DC3-A95A-EAEF9F5B2526},Hirschberg,2557635365,source for position; official name
+2026-10-16T10:28:55Z,edit:stations,Q33506933,{C1D43163-AE20-46C6-826D-0245A8621F47},Sammelplatz,2557635381,source for position; official name
+2026-10-16T10:28:56Z,edit:stations,Q33506942,{4160D80A-2C4C-43B6-9A7F-46884A986959},Zweibrücken,2557635396,source for position; official name
+2026-10-16T10:28:57Z,edit:stations,Q33506951,{A9E3C4FA-0DFD-4307-9A1F-CDF75AAA5074},Hebrig,2557635408,source for position; official name
+2026-10-16T10:28:59Z,edit:stations,Q33506962,{FF7D6631-2BAB-4068-8505-6D69E5501E55},Schachen (Gais),2557635415,source for position; official name
+2026-10-16T10:29:00Z,edit:stations,Q33506972,{28841E31-D465-4AFB-A80A-FC34C594D28A},Rietli,2557635426,source for position; official name
+2026-10-16T10:29:01Z,edit:stations,Q33506982,{5960CAAF-716C-465D-9EB3-809DB40AD6E9},Stoss AR,2557635435,source for position; official name
+2026-10-16T10:29:03Z,edit:stations,Q33506993,{07FE047B-329C-4C93-9678-AC635D25A7B3},Kreuzstrasse,2557635442,source for position; official name
+2026-10-16T10:29:04Z,edit:stations,Q33507002,{9CBCFFE4-DEA2-4BB1-A0C9-A7D60C974095},Warmesberg,2557635457,source for position; official name
+2026-10-16T10:29:05Z,edit:stations,Q33507013,{52F5AF46-4950-441F-BC2C-752D1F82362C},Alter Zoll,2557635469,source for position; official name
+2026-10-16T10:29:07Z,edit:stations,Q33507037,{D7E961C7-EAAC-42E5-8AA8-0643B19318ED},Roggwil-Berg,2557635477,source for position; official name
+2026-10-16T10:29:08Z,edit:stations,Q33507046,{F258A04C-7264-4396-9560-4DD230BFC46C},Häggenschwil-Winden,2557635488,source for position; official name
+2026-10-16T10:29:09Z,edit:stations,Q33507054,{EA4B1AA1-F5FA-477B-84A2-5B6FB4596F2F},Muolen,2557635494,source for position; official name
+2026-10-16T10:29:11Z,edit:stations,Q33507064,{0DB628AC-B0C0-4DB6-AA19-C72E4BADEEAE},Steinebrunn,2557635499,source for position; official name
+2026-10-16T10:29:12Z,edit:stations,Q33507079,{A7FBDA9A-0999-4C16-B8B9-0C0920D4E055},Neukirch-Egnach,2557635512,source for position; official name
+2026-10-16T10:29:14Z,edit:stations,Q33507091,{7E29F180-3AAA-4D02-BD79-EB428DB6F995},Sandbüchel,2557635520,source for position; official name
+2026-10-16T10:29:15Z,edit:stations,Q33507107,{E15F2DC2-E5F0-475F-946F-673D7535B33C},Teufen AR Stofel,2557635527,source for position; official name
+2026-10-16T10:29:16Z,edit:stations,Q33507181,{29E45EE0-E317-4A1B-BEE6-9392C61D567B},Vechigen,2557635532,source for position; official name
+2026-10-16T10:29:18Z,edit:stations,Q33507190,{541EB300-0AE7-4FF1-BB61-A865C505A4C4},Boll-Utzigen,2557635540,official name
+2026-10-16T10:29:19Z,edit:stations,Q33507203,{739FA4D6-5255-43E3-980B-5F176282EF4D},Stettlen,2557635547,source for position; official name
+2026-10-16T10:29:21Z,edit:stations,Q33507215,{758C77FE-50D5-412D-8378-DF3E35B5B667},Deisswil,2557635556,official name
+2026-10-16T10:29:22Z,edit:stations,Q33507229,{60C43332-3E80-4F63-84DD-EA714DD60304},Bolligen,2557635562,official name
+2026-10-16T10:29:23Z,edit:stations,Q33507245,{71243CB0-68A9-4A00-9B00-880E27A98F1E},Ittigen bei Bern,2557635567,source for position; official name
+2026-10-16T10:29:25Z,edit:stations,Q33507262,{3AFAD0F8-C377-4B36-98FC-F896EB770737},Uetendorf,2557635576,source for position; official name
+2026-10-16T10:29:26Z,edit:stations,Q33507275,{B4DE6F9D-4245-4D16-A68C-8F53D4595559},Seftigen,2557635583,source for position; official name
+2026-10-16T10:29:27Z,edit:stations,Q33507294,{043B5B2C-7131-49C2-9A21-BD4778D3FC81},Burgistein,2557635589,source for position; official name
+2026-10-16T10:29:28Z,edit:stations,Q33507310,{A982F0D8-150A-4417-9FCE-E71662199EB3},Thurnen,2557635595,source for position; official name
+2026-10-16T10:29:30Z,edit:stations,Q33507328,{C7CCD01E-B61F-441C-BA9F-3F1D86B11F18},Kaufdorf,2557635604,source for position; official name
+2026-10-16T10:29:31Z,edit:stations,Q33507357,{1BF9A477-99A9-4D68-A3D9-E3DAAC4FB867},Kehrsatz,2557635614,source for position; official name
+2026-10-16T10:29:32Z,edit:stations,Q33507372,{0D198D12-7923-4CE2-8136-2F6AF7F219CB},Wabern bei Bern,2557635621,source for position; official name
+2026-10-16T10:29:44Z,edit:stations,Q33507383,{6E6C4012-71A0-4CB2-8577-83A173D13F68},Bern Weissenbühl,2557635709,source for position; official name
+2026-10-16T10:29:45Z,edit:stations,Q33507421,{F4FBDFA5-8A1A-4766-B3F7-76BB53BAFCF6},Köniz,2557635721,source for position; official name
+2026-10-16T10:29:46Z,edit:stations,Q33507437,{EFC53D9D-AC87-4D6F-9FCC-9ED1B5757C5A},Moos,2557635730,source for position; official name
+2026-10-16T10:29:48Z,edit:stations,Q33507448,{1AFEC2DD-7B6C-4C53-ADA6-17684725CABB},Gasel,2557635739,source for position; official name
+2026-10-16T10:29:49Z,edit:stations,Q33507465,{D7A6CF1D-A7FE-4BE0-974C-F7B5EA38DDE3},Niederscherli,2557635750,source for position; official name
+2026-10-16T10:29:50Z,edit:stations,Q33507480,{C6347BEE-DA67-4F49-98D6-B6695F9760D7},Mittelhäusern,2557635758,source for position; official name
+2026-10-16T10:29:52Z,edit:stations,Q33507491,{BA2A2A27-156A-4E97-A164-6020ABCCE6F4},Lanzenhäusern,2557635773,source for position; official name
+2026-10-16T10:29:53Z,edit:stations,Q33507507,{E57FF47F-14A8-4184-9F94-BBA92BDCF126},Schwarzenburg,2557635789,source for position; official name
+2026-10-16T10:29:54Z,edit:stations,Q33507525,{2CB7CB12-240F-448D-B11C-E48B4B00940B},Liebefeld,2557635803,source for position; official name
+2026-10-16T10:29:56Z,edit:stations,Q33507542,{37302E27-490A-4245-8D21-0208D693C6EB},Belp Steinbach,2557635815,source for position; official name
+2026-10-16T10:29:57Z,edit:stations,Q33507556,{72D14E6B-C0C7-481D-9FAE-37BADC8E1E3D},Kehrsatz Nord,2557635832,source for position; official name
+2026-10-16T10:29:58Z,edit:stations,Q33507569,{868E8A5D-B6AE-4655-9A0C-E90F01A9C440},Uetendorf Allmend,2557635846,source for position; official name
+2026-10-16T10:30:00Z,edit:stations,Q33507586,{32C2459A-7B56-4804-9536-0D214DD1E6E0},Schwarzwasserbrücke,2557635861,source for position; official name
+2026-10-16T10:30:01Z,edit:stations,Q33507596,{083710B3-3D1B-4302-8E52-23AEE02DE911},Papiermühle,2557635877,official name
+2026-10-16T10:30:02Z,edit:stations,Q33507614,{644509FE-32D1-4928-816D-FA79121CB12A},Gruben,2557635888,source for position; official name
+2026-10-16T10:30:03Z,edit:stations,Q33507623,{3CF5D095-4D28-4912-AAE4-F8E9F56278A6},Schönried,2557635903,source for position; official name
+2026-10-16T10:30:05Z,edit:stations,Q33507635,{9BA4B477-0FB4-4ECD-BEF8-F0CE633202D2},Saanenmöser,2557635917,source for position; official name
+2026-10-16T10:30:06Z,edit:stations,Q33507645,{1C33CB38-BCF5-4707-A145-4E1F40C85F71},Oeschseite,2557635931,official name
+2026-10-16T10:30:07Z,edit:stations,Q33507653,{99BFB853-F7F4-4630-86B1-C44344718E78},Blankenburg,2557635947,source for position; official name
+2026-10-16T10:30:09Z,edit:stations,Q33507664,{C3299711-8A16-4A69-AEFB-6BB57A29EABD},Stöckli,2557635957,source for position; official name
+2026-10-16T10:30:10Z,edit:stations,Q33507673,{FB09331E-779D-400E-BE9A-DC0B1D3E8C2A},St. Stephan,2557635966,source for position; official name
+2026-10-16T10:30:11Z,edit:stations,Q33507683,{33309DA9-7FF8-48F0-8713-73960F915C91},Matten i.S.,2557635976,source for position; official name
+2026-10-16T10:30:13Z,edit:stations,Q33507693,{06DD7EB3-6027-470D-8569-03D89AAC87DE},Boden,2557635984,source for position; official name
+2026-10-16T10:30:14Z,edit:stations,Q33507697,{085D32B0-213C-42B8-A05F-8DD17B6D36F9},Lenk im Simmental,2557635993,official name
+2026-10-16T10:30:15Z,edit:stations,Q33507703,{C7A4481F-D39B-4C2F-BB97-56B6AACCA346},Grubenwald,2557636002,source for position; official name
+2026-10-16T10:30:16Z,edit:stations,Q33507707,{5B429171-2FB4-4D55-AC20-BBC327DE5810},Enge im Simmental,2557636009,source for position; official name
+2026-10-16T10:30:18Z,edit:stations,Q33507717,{0C690A3D-9FA4-4438-873B-A5E05F7C0153},Ringoldingen,2557636017,source for position; official name
+2026-10-16T10:30:19Z,edit:stations,Q33507728,{65E4A882-080E-4953-9D5E-70D2F151A8A1},Burgholz,2557636026,official name
+2026-10-16T10:30:20Z,edit:stations,Q33507739,{E35DB3C8-922D-441D-A4A0-43831A719B38},Eifeld,2557636031,source for position; official name
+2026-10-16T10:30:22Z,edit:stations,Q33507757,{2824D222-24D1-4AA6-82C2-472C257C62B5},Weissenbach,2557636039,source for position; official name
+2026-10-16T10:30:23Z,edit:stations,Q33507765,{DD7E8798-FE8F-49B4-96B3-B5C0354823C1},Boltigen,2557636045,source for position; official name
+2026-10-16T10:30:24Z,edit:stations,Q33507775,{2DA0B43D-0E8B-4D05-A1A8-9CC052D45F45},Oberwil im Simmental,2557636054,source for position; official name
+2026-10-16T10:30:26Z,edit:stations,Q33507785,{CD2865D6-0850-41C1-8EC0-CD2BF72C7518},Weissenburg,2557636060,source for position; official name
+2026-10-16T10:30:27Z,edit:stations,Q33507795,{72C5268B-9A14-490A-B2F2-AF046215B0F3},Därstetten,2557636067,source for position; official name
+2026-10-16T10:30:28Z,edit:stations,Q33507807,{308CDBFC-B794-4B88-A237-2161D36C808A},Erlenbach im Simmental,2557636075,source for position; official name
+2026-10-16T10:30:29Z,edit:stations,Q33507823,{5085B1EB-6B82-4DEA-AF12-2036963861B6},Oey-Diemtigen,2557636083,source for position; official name
+2026-10-16T10:30:31Z,edit:stations,Q33507839,{DA18F084-244E-40F5-95C6-1054977F0DB4},Wimmis,2557636097,source for position; official name
+2026-10-16T10:30:32Z,edit:stations,Q33507853,{4024B385-DA2D-44C7-AA2F-A845AE626978},Lattigen bei Spiez,2557636107,source for position; official name
+2026-10-16T10:30:34Z,edit:stations,Q33508961,{33AF4625-64E6-4CCD-9947-451103C5B288},Bern Felsenau,2557636118,source for position; official name
+2026-10-16T10:30:45Z,edit:stations,Q33508970,{B00BA42F-4142-4256-9E5A-54922F5D85F1},Bern Tiefenau,2557636194,source for position; official name
+2026-10-16T10:30:46Z,edit:stations,Q33508979,{6E62A711-61E6-435F-BD59-AF187B21841A},Steinibach,2557636199,official name
+2026-10-16T10:30:48Z,edit:stations,Q33508989,{34C0BC42-1D3D-439B-81C1-93BB133FB969},Worblaufen,2557636205,source for position; official name
+2026-10-16T10:30:49Z,edit:stations,Q33509000,{70A31F84-E662-4A13-81B9-72B9CB227AF2},Unterzollikofen,2557636212,source for position; official name
+2026-10-16T10:30:50Z,edit:stations,Q33509008,{84AEA6CE-28A0-482A-B09C-6A98D990B948},Moosseedorf,2557636216,source for position; official name
+2026-10-16T10:30:52Z,edit:stations,Q33509018,{F69D2E1C-06EE-4268-96E6-F9ED9AA9EA41},Schönbühl RBS,2557636221,source for position; official name
+2026-10-16T10:30:53Z,edit:stations,Q33509028,{59C1EF3C-C949-4118-BC58-2DEB938DFF5F},Urtenen,2557636229,source for position; official name
+2026-10-16T10:30:54Z,edit:stations,Q33509038,{B80605EE-F355-4746-ADD8-AF134FB49476},Jegenstorf,2557636235,source for position; official name
+2026-10-16T10:30:55Z,edit:stations,Q33509049,{10EE81D5-E601-4276-AD40-8116C7E276F6},Grafenried,2557636238,source for position; official name
+2026-10-16T10:30:57Z,edit:stations,Q33509064,{CD946B04-7F54-40A0-AD89-4CFAE5126985},Fraubrunnen,2557636246,source for position; official name
+2026-10-16T10:30:58Z,edit:stations,Q33509075,{938DD801-966F-468E-8D4A-FB80EA2AEDB3},Büren zum Hof,2557636250,source for position; official name
+2026-10-16T10:30:59Z,edit:stations,Q33509096,{A7FAB252-FCE5-4844-BDD7-8C2E3F3F2608},Schalunen,2557636257,source for position; official name
+2026-10-16T10:31:01Z,edit:stations,Q33509114,{229D8B44-3006-4375-B361-E96DA63B0555},Bätterkinden,2557636267,source for position; official name
+2026-10-16T10:31:02Z,edit:stations,Q33509126,{AA69A4A3-9B66-405E-86CC-D60C2BD662C1},Lohn-Lüterkofen,2557636274,source for position; official name
+2026-10-16T10:31:04Z,edit:stations,Q33509137,{9B6CD530-A043-4FDF-A9F1-4F3D17C50D88},Biberist RBS,2557636284,official name
+2026-10-16T10:31:05Z,edit:stations,Q33509147,{23E34044-00D4-4F59-9357-AAE361F70649},Oberzollikofen,2557636297,source for position; official name
+2026-10-16T10:31:06Z,edit:stations,Q33509157,{B255F73D-1C35-44DD-AA95-C0230089F528},Schönbühl Shoppyland,2557636308,source for position; official name
+2026-10-16T10:31:07Z,edit:stations,Q33509168,{C0584530-ADB3-49C8-AF39-3835B70F86E3},Oberburg,2557636317,source for position; official name
+2026-10-16T10:31:09Z,edit:stations,Q33509180,{92E0DC55-4CC8-4BE0-9BBE-70FE87AEE818},Burgdorf Steinhof,2557636329,official name
+2026-10-16T10:31:10Z,edit:stations,Q33509192,{37476F96-63FF-4A67-99AB-4E61A912D8B7},Burgdorf Buchmatt,2557636343,source for position; official name
+2026-10-16T10:31:11Z,edit:stations,Q33509202,{FDB83F35-6A53-4F52-BDA3-2CBFD12B54DA},Kirchberg-Alchenflüh,2557636352,official name
+2026-10-16T10:31:13Z,edit:stations,Q33509247,{06868BBC-9838-4C34-B4F7-38D41BA44480},Gerlafingen,2557636360,official name
+2026-10-16T10:31:14Z,edit:stations,Q33509259,{2E88F350-6AB2-477F-8436-1706833C9E04},Biberist Ost,2557636371,source for position; official name
+2026-10-16T10:31:15Z,edit:stations,Q33509311,{70890366-4258-459C-9649-4D8C381FEAB6},Langenthal Gaswerk,2557636383,source for position; official name
+2026-10-16T10:31:16Z,edit:stations,Q33509323,{661996D4-B703-49E8-BB85-ED6405280CF4},Hard-Mumenthal,2557636392,source for position; official name
+2026-10-16T10:31:18Z,edit:stations,Q33509333,{2D7237E7-B707-4542-B814-DE64ABE23DFE},Aarwangen,2557636398,source for position; official name
+2026-10-16T10:31:19Z,edit:stations,Q33509345,{733C9D02-B03F-4DAE-BFEE-1AFC4FDF4C1B},Aarwangen Schloss,2557636400,source for position; official name
+2026-10-16T10:31:20Z,edit:stations,Q33509363,{BF6833F6-78DD-4B06-84C7-E382AA030601},Bannwil,2557636404,source for position; official name
+2026-10-16T10:31:22Z,edit:stations,Q33509378,{1D5480E3-5A98-4C05-A349-0C1BEA97D8E1},Holzhäusern,2557636407,source for position; official name
+2026-10-16T10:31:23Z,edit:stations,Q33509391,{1A7B9612-87C5-4934-B1B4-362CC30CEA42},Scharnageln,2557636415,source for position; official name
+2026-10-16T10:31:24Z,edit:stations,Q33509405,{FD3AEDC2-CA81-4153-A53C-AD06D88476DC},Niederbipp Dorf,2557636420,source for position; official name
+2026-10-16T10:31:26Z,edit:stations,Q33509436,{CB5212D6-7749-4EB6-8E81-C99A6D5B5594},Kaltenherberg,2557636424,source for position; official name
+2026-10-16T10:31:27Z,edit:stations,Q33509453,{D4604645-3DF3-4FC1-A7B2-E02CAAF08300},Roggwil Dorf,2557636429,source for position; official name
+2026-10-16T10:31:28Z,edit:stations,Q33509466,{C226F209-5A85-4080-8A33-732970E200B3},St. Urban,2557636435,source for position; official name
+2026-10-16T10:31:29Z,edit:stations,Q33509483,{B9B71D25-C801-44EE-841A-ABF4B836ABC3},St. Urban Ziegelei,2557636442,source for position; official name
+2026-10-16T10:31:31Z,edit:stations,Q33509499,{44F69C83-ADE4-4936-A0F8-A13B1F75C276},Roggwil Buchägerten,2557636453,source for position; official name
+2026-10-16T10:31:32Z,edit:stations,Q33509512,{891FECF3-15F2-43A0-BF09-243BD98A7D68},Roggwil Schmitten,2557636461,official name
+2026-10-16T10:31:33Z,edit:stations,Q33509523,{76E43BE8-0780-45CC-86A2-C1730EF801EB},Gutenburg,2557636469,source for position; official name
+2026-10-16T10:31:35Z,edit:stations,Q33509534,{F8A18287-F8EB-4E04-8A67-2D1CFA609F3B},Langenthal Süd,2557636475,source for position; official name
+2026-10-16T10:31:36Z,edit:stations,Q33509551,{2342601B-9DCE-4843-99CE-F4AD5E6F96B2},Lotzwil,2557636482,source for position; official name
+2026-10-16T10:31:37Z,edit:stations,Q33509563,{DD5F10C9-715B-40BE-9936-9322576F2EF6},Madiswil,2557636487,source for position; official name
+2026-10-16T10:31:38Z,edit:stations,Q33509579,{F5CA050F-F403-4706-8CDD-4FDB0B0E1B64},Lindenholz,2557636496,source for position; official name
+2026-10-16T10:31:40Z,edit:stations,Q33509595,{B49F3910-6D68-4F14-BF8A-8690D3D0FF98},Kleindietwil,2557636504,source for position; official name
+2026-10-16T10:31:51Z,edit:stations,Q33509613,{646631D4-0B23-45FF-A666-516BE1F7BF6D},Rohrbach,2557636547,source for position; official name
+2026-10-16T10:31:53Z,edit:stations,Q33509628,{4DDA90DA-4EA8-4C70-9281-2886BB95CFCC},Huttwil,2557636555,source for position; official name
+2026-10-16T10:31:54Z,edit:stations,Q33509639,{849AEF65-3AF3-4CCA-B58C-C1463873AB3A},Aarwangen Vorstadt,2557636565,source for position; official name
+2026-10-16T10:31:55Z,edit:stations,Q33509798,{B792737D-1721-48CF-AAA4-4F9A23574CC8},Schwäbis,2557636573,source for position; official name
+2026-10-16T10:31:57Z,edit:stations,Q33509807,{685A01F3-56BA-4C65-95B2-68EAAF75A22B},Steffisburg,2557636578,source for position; official name
+2026-10-16T10:31:58Z,edit:stations,Q33509817,{115B5E38-03DB-45BC-B205-72D75F12DB61},Lädeli,2557636584,source for position; official name
+2026-10-16T10:31:59Z,edit:stations,Q33509828,{97FB7278-D4E9-4628-826C-C68C6FAD8040},Heimberg,2557636592,source for position; official name
+2026-10-16T10:32:00Z,edit:stations,Q33509840,{8435B0CF-6ECB-4F7F-9469-E0345A1157F2},Brenzikofen,2557636599,source for position; official name
+2026-10-16T11:01:28Z,edit:stations,Q33509855,{C0FABA40-54CA-4C96-B052-BE4C78C05A63},Oberdiessbach,2557640418,source for position; official name
+2026-10-16T11:01:29Z,edit:stations,Q33509870,{1A084C19-6F47-4A06-8097-188F4E7034B4},Stalden i.E.,2557640426,source for position; official name
+2026-10-16T11:01:30Z,edit:stations,Q33509885,{BE01CEA9-CF1E-4F6F-87E4-8C75AAE4E240},Grosshöchstetten,2557640433,source for position; official name
+2026-10-16T11:01:32Z,edit:stations,Q33509901,{DAC6A43C-D1C9-4FC7-AAA8-84A8128C4760},Biglen,2557640446,source for position; official name
+2026-10-16T11:01:33Z,edit:stations,Q33509915,{BC3C530D-E440-4411-9191-57BFEFAA8914},Walkringen,2557640458,source for position; official name
+2026-10-16T11:01:34Z,edit:stations,Q33509930,{810FD9CA-6476-41E4-BD8E-EE830551C4B2},Bigenthal,2557640465,source for position; official name
+2026-10-16T11:01:36Z,edit:stations,Q33509945,{AE0284A8-066C-49F7-A39E-B20AC0FA191C},Schafhausen i.E.,2557640474,source for position; official name
+2026-10-16T11:01:37Z,edit:stations,Q33509977,{F2AF33E1-C503-431B-A470-4376F15E98D9},Ramsei,2557640482,source for position; official name
+2026-10-16T11:01:38Z,edit:stations,Q33509992,{F053A033-2540-4829-B3D7-8028D3F50B08},Zollbrück,2557640490,official name
+2026-10-16T11:01:40Z,edit:stations,Q33510006,{C9DABD92-A7BD-40C1-AD80-188638EAB9FF},Neumühle,2557640494,source for position; official name
+2026-10-16T11:01:41Z,edit:stations,Q33510021,{824DF9F6-A710-465D-877A-01593FD1192D},Grünenmatt,2557640506,source for position; official name
+2026-10-16T11:01:42Z,edit:stations,Q33510035,{0D7F9349-DBC9-4D86-8463-B6161C61BFD6},Sumiswald-Grünen,2557640515,official name
+2026-10-16T11:01:43Z,edit:stations,Q33510058,{8D79D3D0-1688-46A4-BE4F-B1681A4DE062},Häusernmoos,2557640524,source for position; official name
+2026-10-16T11:01:45Z,edit:stations,Q33510065,{BCA82364-52C7-4367-AC19-D23626F89CE7},Dürrenroth,2557640534,source for position; official name
+2026-10-16T11:01:46Z,edit:stations,Q33510082,{B86B1EC4-13DE-4DFD-9BAA-437A7A5EB7C0},Gammenthal,2557640542,source for position; official name
+2026-10-16T11:01:48Z,edit:stations,Q33510097,{67B848DC-E248-4048-9056-6E76B6B9B655},Griesbach,2557640550,source for position; official name
+2026-10-16T11:01:49Z,edit:stations,Q33510116,{774335A6-D082-4F97-BD07-67DAC77F01BF},Mussachen,2557640559,source for position; official name
+2026-10-16T11:01:50Z,edit:stations,Q33510134,{26E9B316-A558-47AF-8D60-7F9409DDC85D},Hüswil,2557640569,source for position; official name
+2026-10-16T11:01:52Z,edit:stations,Q33510150,{D17147CA-2A4A-46F8-9711-B8775FA415B4},Zell LU,2557640575,source for position; official name
+2026-10-16T11:01:53Z,edit:stations,Q33510164,{BA127740-2659-433B-AE4B-F79268AE36EC},Gettnau,2557640582,source for position; official name
+2026-10-16T11:01:54Z,edit:stations,Q33510180,{BB735B99-A650-4EF0-B3B6-093076B0DCE0},Willisau,2557640585,source for position; official name
+2026-10-16T11:01:56Z,edit:stations,Q33510199,{9DCE4A47-ADF8-40FE-BB05-470483DFEC6D},Menznau,2557640593,source for position; official name
+2026-10-16T11:01:57Z,edit:stations,Q33510439,{25C0C2F0-5646-401A-8F6D-C2301B137AAB},Sarnen Nord,2557640601,source for position; official name
+2026-10-16T11:01:59Z,edit:stations,Q33510469,{0282B377-7C2E-4922-BA65-85A0ADDA296A},Brienz BRB,2557640604,source for position; official name
+2026-10-16T11:02:00Z,edit:stations,Q33510675,{10E0A232-9D8D-4177-BCA5-B1C8AE821F1C},Planalp,2557640608,source for position; official name
+2026-10-16T11:02:01Z,edit:stations,Q33510687,{9C128476-6ECD-4410-8C7C-2A466D299F19},Brienzer Rothorn,2557640610,official name
+2026-10-16T11:03:12Z,edit:stations,Q33510803,{7F421689-E62E-43EC-A9D7-9FAEB0DEE5A9},Innertkirchen Kraftwerk (Bahn),2557640764,source for position; official name
+2026-10-16T11:03:14Z,edit:stations,Q33510844,{05CDCE3C-5B18-4BEB-AC34-FED762D08A79},Innertkirchen Grimseltor,2557640779,source for position
+2026-10-16T11:03:15Z,edit:stations,Q33511138,{B6A275FC-8AC4-4BF2-BD1D-8C94C04DE365},Aemsigen,2557640793,source for position; official name
+2026-10-16T11:03:16Z,edit:stations,Q33511147,{63ECE6A8-A2DC-4EB4-AA9D-FFD51F593038},Pilatus Kulm,2557640807,source for position; official name
+2026-10-16T11:03:17Z,edit:stations,Q33511156,{ACFECF09-8E5A-4769-AD2F-8C95032ED60B},Alpnachstad PB,2557640825,source for position; official name
+2026-10-16T11:03:19Z,edit:stations,Q33511440,{1E705873-197E-4C5C-A9E0-49EBD9813580},Seewis-Pardisla,2557640839,source for position; official name
+2026-10-16T11:03:20Z,edit:stations,Q33511456,{E901DC46-A974-4BE4-90C6-B111D16735B1},Furna,2557640850,source for position; official name
+2026-10-16T11:03:21Z,edit:stations,Q33511467,{D58FA599-5DAB-40AF-880C-E9DECBED7D07},Fideris,2557640863,source for position; official name
+2026-10-16T11:03:23Z,edit:stations,Q33511938,{1A593C53-2CD1-40A2-A408-46D123B90B36},Brig Bahnhofplatz,2557640877,official name
+2026-10-16T11:03:24Z,edit:stations,Q33511982,{13E36269-F0E7-4090-A375-47CE0E14B855},Bern Brünnen Westside,2557640888,source for position; official name
+2026-10-16T11:03:25Z,edit:stations,Q33512066,{F7841501-2689-467A-B0A2-8E56B27D5A9D},Wolhusen Weid,2557640900,official name
+2026-10-16T11:03:27Z,edit:stations,Q33512083,{00FAB9B7-A509-49CF-894B-7FEF5A32D337},Unterkulm Nord,2557640911,source for position; official name
+2026-10-16T11:03:28Z,edit:stations,Q33512113,{D6CAFA87-CC6C-47CE-A959-559C7E00E04D},Dietikon Schöneggstrasse,2557640922,source for position; official name
+2026-10-16T11:03:29Z,edit:stations,Q33512122,{46F1A694-E555-4E6E-85C4-7428450C952E},Bibenlos-Sonnenhof,2557640932,source for position; official name
+2026-10-16T11:03:31Z,edit:stations,Q33512132,{DBAAA65C-5F5F-4301-BECD-4B19D0278142},S-chanf Marathon,2557640942,source for position; official name
+2026-10-16T11:03:32Z,edit:stations,Q33512139,{A9DC83DB-521C-47B0-B268-6C14801B2107},Aigle-Parc Aventure,2557640951,source for position; official name
+2026-10-16T11:03:33Z,edit:stations,Q33512147,{EC363E64-C5F2-4D7D-B04B-D5783FADA232},Sur-le-Buis,2557640965,source for position; official name
+2026-10-16T11:03:35Z,edit:stations,Q33512173,{3859A350-F218-4EAB-B3FA-12C55ADE1FCB},St. Gallen Birnbäumen,2557640977,source for position; official name
+2026-10-16T11:03:36Z,edit:stations,Q33512182,{EC09E54C-878B-4F1D-8778-70CFB9015405},Beringerfeld,2557640986,source for position; official name
+2026-10-16T11:03:37Z,edit:stations,Q33512220,{898B35FB-A286-4961-A038-F65AE741A4D5},Niederbipp Industrie,2557640994,source for position; official name
+2026-10-16T11:03:39Z,edit:stations,Q33512252,{6BA31363-6DA2-45AE-958F-505380BE0051},St-Cergue Les Cheseaux,2557641001,source for position; official name
+2026-10-16T11:03:40Z,edit:stations,Q33512270,{70F11500-6584-4B17-961F-6EE68D5FD9F4},Les Coeudres-Est,2557641010,source for position; official name
+2026-10-16T11:03:41Z,edit:stations,Q33512278,{C6EFC15C-8F77-45F2-9E80-F4E3F60913D1},Petit-Martel-Est,2557641018,official name
+2026-10-16T11:03:43Z,edit:stations,Q33512289,{CE3F7AC9-17F1-42AA-AA62-EEE53AEC6007},Bex Pont-Neuf,2557641027,source for position; official name
+2026-10-16T11:03:44Z,edit:stations,Q33512297,{F6F17E9C-9280-4B97-B6BD-C962F5DC374C},Grand-Moulin,2557641037,source for position; official name
+2026-10-16T11:03:45Z,edit:stations,Q33512304,{E49A54AE-5BB2-4B69-90F4-45B2B7260369},Les Salines,2557641049,source for position; official name
+2026-10-16T11:03:46Z,edit:stations,Q33512318,{B985B236-C190-433A-B4E3-0B4B8FCB37C8},Le Stand,2557641055,source for position; official name
+2026-10-16T11:03:48Z,edit:stations,Q33512326,{0A058DF1-C01C-4839-AC39-563EB8C4D4F6},Foyer Dents-du-Midi,2557641063,source for position; official name
+2026-10-16T11:03:49Z,edit:stations,Q33512343,{42D4C146-8E73-4D17-ADBA-E1A743D4FF4F},Bois-de-Chexbres,2557641074,source for position; official name
+2026-10-16T11:03:50Z,edit:stations,Q33512366,{5F9277A1-284A-4EE5-AF1D-6039343500BE},Les Fumeaux,2557641084,source for position; official name
+2026-10-16T11:03:51Z,edit:stations,Q33512375,{DEFF79C8-9257-4B6D-BFC5-3DF7CB870C1F},La Médettaz,2557641093,source for position; official name
+2026-10-16T11:03:53Z,edit:stations,Q33512396,{568A0148-C5F1-417B-9BD4-C565CFFBE068},Les Arnoux,2557641097,source for position; official name
+2026-10-16T11:03:54Z,edit:stations,Q33512413,{A7545368-1CA2-4812-8776-8A09E5059718},Pont du Rhône,2557641101,source for position; official name
+2026-10-16T11:03:55Z,edit:stations,Q33512421,{BEF91497-8E1D-4370-AA87-9A9616AB3B08},Les Neys,2557641107,source for position; official name
+2026-10-16T11:03:57Z,edit:stations,Q33512432,{19748128-43C8-41E3-9813-DDD9232AB8A7},Route de Morgins,2557641116,official name
+2026-10-16T11:03:58Z,edit:stations,Q33512442,{B754CA6D-999D-4D28-9417-D89E7B8C9E25},En Charnet,2557641123,source for position; official name
+2026-10-16T11:03:59Z,edit:stations,Q33512453,{89C09586-28B7-4C03-9245-ACD930AE60D6},La Ruaz,2557641132,source for position; official name
+2026-10-16T11:04:00Z,edit:stations,Q33512464,{7A5681CE-86E1-416F-80D5-B690629D73F2},Realp DFB,2557641139,source for position; official name
+2026-10-16T11:04:02Z,edit:stations,Q33512485,{35B7DEBB-F453-4680-9F1A-4BAAC2A9062F},Neuchâtel Evole,2557641142,source for position; official name
+2026-10-16T11:06:09Z,edit:stations,Q33512492,{6A1DEC1E-17D0-499C-81A9-B3D756307720},Neuchâtel Champ-Bougin,2557641384,source for position; official name
+2026-10-16T11:06:10Z,edit:stations,Q33512501,{E1FE52ED-51B7-47AB-B3D3-7A83E88C3E63},Neuchâtel Serrières Ruau,2557641393,official name
+2026-10-16T11:06:12Z,edit:stations,Q33512507,{3DA628E9-7D4D-4073-A7A0-7BC6FDB3CE3B},Colombier NE Allées Littorail,2557641405,source for position; official name
+2026-10-16T11:06:13Z,edit:stations,Q33512514,{11CA10A0-B0FB-4F02-9B3E-F2E4E7B047C0},Colombier NE Les Chézards,2557641421,source for position; official name
+2026-10-16T11:06:14Z,edit:stations,Q33512520,{5044553A-A900-4610-AFC7-84EC52676824},Boudry Tuilière,2557641436,source for position; official name
+2026-10-16T11:06:16Z,edit:stations,Q33512537,{F5A811AC-CC87-4384-BDB8-9E72BEA3B010},Aareschlucht West,2557641449,source for position; official name
+2026-10-16T11:06:17Z,edit:stations,Q33512546,{908B918B-C3BB-4CBC-BFCA-BB022BF7A70B},Chez-le-Maître-Ecoles,2557641463,source for position; official name
+2026-10-16T11:06:19Z,edit:stations,Q33512566,{DADA8B94-0541-43BF-BEB3-268E227E5FC8},Meiringen Alpbach,2557641478,source for position; official name
+2026-10-16T11:06:20Z,edit:stations,Q33512574,{B8704D1A-C5AD-4C76-BC27-31DD2DB6C1FB},Innertkirchen Unterwasser,2557641490,source for position; official name
+2026-10-16T11:06:21Z,edit:stations,Q33512582,{229787CD-0D40-4DFA-A626-17AD26D03667},Aareschlucht Ost (Bahn),2557641502,source for position; official name
+2026-10-16T11:06:23Z,edit:stations,Q33512591,{658CF6E8-5C4F-4627-B68E-FD6A887F6AFC},"Zürich, Balgrist",2557641517,source for position; official name
+2026-10-16T11:06:24Z,edit:stations,Q33512599,{0DC0C17B-152C-4B21-B4A6-19E6A530C357},"Zürich, Hegibachplatz",2557641526,source for position; official name
+2026-10-16T11:06:25Z,edit:stations,Q33512609,{5278EC66-8169-435B-B81B-621FB4200715},"Zürich, Kreuzplatz",2557641534,source for position; official name
+2026-10-16T11:06:27Z,edit:stations,Q33512618,{CE8553CE-E262-4660-9363-879969EB1988},Pied du barrage,2557641543,source for position; official name
+2026-10-16T11:06:28Z,edit:stations,Q33513712,{D45E5AAC-23C7-4FEC-B9CA-300190843AFD},Glion-Alpes,2557641553,source for position; official name
+2026-10-16T11:06:29Z,edit:stations,Q33513728,{181754C6-A69E-423F-BEEB-670EFD5B4026},Glion-Collège,2557641565,official name
+2026-10-16T11:06:31Z,edit:stations,Q33513736,{3900F69A-D63F-4CEC-8A3E-BBB3DA6547BF},Haut-de-Caux,2557641571,source for position; official name
+2026-10-16T11:06:32Z,edit:stations,Q33513748,{25BED12A-31EC-4957-BADE-4537EDDB3A22},Toveyre,2557641581,source for position; official name
+2026-10-16T11:06:33Z,edit:stations,Q33513754,{58882934-5897-43E0-8DF8-9DC76E6F292F},Valmont,2557641595,source for position; official name
+2026-10-16T11:06:34Z,edit:stations,Q33513765,{B93E8513-B22C-4150-A3BF-99F38100F0D1},Le Tremblex,2557641600,source for position; official name
+2026-10-16T11:06:36Z,edit:stations,Q33513770,{A0D2F8E5-349B-4F74-A791-88726D98ABAA},Les Echets,2557641608,source for position; official name
+2026-10-16T11:06:37Z,edit:stations,Q33513777,{51AC4561-8D6D-4598-83B2-F53E85C9CC99},Crêt-d'y-Bau,2557641618,source for position; official name
+2026-10-16T11:06:38Z,edit:stations,Q33513783,{921AAB9F-0FE5-4E87-8BB9-6D8E81786338},Paccot,2557641624,source for position; official name
+2026-10-16T11:06:40Z,edit:stations,Q33513790,{6D3EFB85-E9E2-47FF-8936-4F85FAB60FA6},Jaman,2557641637,source for position; official name
+2026-10-16T11:06:41Z,edit:stations,Q33513795,{D36A959C-CDAD-44E9-9877-D66AE4D3172C},La Perche,2557641644,source for position; official name
+2026-10-16T11:06:42Z,edit:stations,Q33513804,{41EAC5B3-33DB-46CA-82EA-2A08D0935F64},Rochers-de-Naye,2557641654,source for position; official name
+2026-10-16T11:06:44Z,edit:stations,Q33513808,{5DE2D555-D78C-45B9-8664-F6498AE3EDED},Glion,2557641663,source for position; official name
+2026-10-16T11:06:45Z,edit:stations,Q33513815,{47752EA7-0071-44E1-A12D-D9FEE4D020A0},Caux,2557641674,source for position; official name
+2026-10-16T11:06:46Z,edit:stations,Q33514141,{93024127-1233-42E1-B229-92937A6A78AD},"Zürich, Dolder",2557641679,source for position; official name
+2026-10-16T11:06:48Z,edit:stations,Q33514615,{40196B01-6CE7-46C7-9137-79AF4CAD59C3},Goldau A4,2557641689,source for position; official name
+2026-10-16T11:06:49Z,edit:stations,Q33514622,{5D425A85-91AC-4F87-80CB-7DA8C0EA2A7A},Arth-Goldau RB,2557641699,source for position; official name
+2026-10-16T11:06:50Z,edit:stations,Q33514628,{5FE1C8B1-9235-46DB-836F-D4281281D219},Kräbel,2557641705,source for position; official name
+2026-10-16T11:06:51Z,edit:stations,Q33514635,{B2EAC34E-5797-4C19-8FE6-86A696E452E4},Fruttli,2557641708,source for position; official name
+2026-10-16T11:06:53Z,edit:stations,Q33514642,{3F5C63C9-8D10-4B78-AB40-4D5D9685D079},Rigi Klösterli,2557641719,source for position; official name
+2026-10-16T11:06:54Z,edit:stations,Q33514650,{D6400604-4823-443D-86AB-CF4ECFC1E876},Rigi Wölfertschen-First,2557641730,source for position; official name
+2026-10-16T11:06:55Z,edit:stations,Q33514656,{22435B69-8496-4610-AAFE-6D480E492A6A},Rigi Staffel,2557641732,source for position; official name
+2026-10-16T11:06:57Z,edit:stations,Q33514665,{1B4F8EC6-C24B-4AEE-9227-EC1F11DF1C71},Rigi Kulm,2557641741,official name
+2026-10-16T11:06:58Z,edit:stations,Q33514674,{6563E589-120A-4606-84D1-DB4B76DF309E},Grubisbalm,2557641750,source for position; official name
+2026-10-16T11:07:00Z,edit:stations,Q33514682,{128128FC-3671-40E2-BB33-3AF6BD07F2A9},Freibergen,2557641758,source for position; official name
+2026-10-16T11:07:01Z,edit:stations,Q33514689,{B7B9D096-BB83-4A82-B624-ACE6CFFAE025},Romiti Felsentor,2557641764,source for position; official name
+2026-10-16T11:16:27Z,edit:stations,Q33514702,{929F2365-873E-4F18-BD62-5E513B1FA0BE},Rigi Kaltbad-First,2557643096,source for position; official name
+2026-10-16T11:16:28Z,edit:stations,Q33514710,{5A590244-086B-4B24-8C5D-9E0C76E00F19},Rigi Staffelhöhe,2557643104,source for position; official name
+2026-10-16T11:16:30Z,edit:stations,Q33514719,{1C5751EC-7066-4FEE-BC56-EB2F99472B7E},Mittlerschwanden,2557643113,source for position; official name
+2026-10-16T11:16:31Z,edit:stations,Q33515933,{64CDBD0B-8C58-436C-AFAF-3ED0D059B75F},Gryon Bois-Gentil,2557643120,source for position; official name
+2026-10-16T11:16:33Z,edit:stations,Q33515978,{844D2135-1417-463B-9251-4DD4AA6E20C4},Worbboden,2557643128,source for position; official name
+2026-10-16T11:16:34Z,edit:stations,Q33516072,{B6667470-26C1-4F59-85EA-10A2C599816C},"Zürich, Titlisstrasse",2557643134,source for position; official name
+2026-10-16T11:16:35Z,edit:stations,Q33516079,{ABEA6A3D-C85F-4E0B-878F-CAB6004DD303},"Zürich, Waldhaus Dolder",2557643140,source for position; official name
+2026-10-16T11:16:37Z,edit:stations,Q33516161,{080DBDED-F421-4BB2-B16A-80566D43544F},Pont de Fayot,2557643153,source for position; official name
+2026-10-16T11:16:38Z,edit:stations,Q33516178,{E76EE169-3025-4F99-980C-81192E5A3D39},Gryon-Chalméry,2557643163,source for position; official name
+2026-10-16T11:16:39Z,edit:stations,Q33516186,{46AE8490-F72A-400D-BF2D-D99865F4A81B},Les Bovets,2557643171,source for position; official name
+2026-10-16T11:16:40Z,edit:stations,Q33516190,{570C9A80-0FD0-436E-B327-A12F38A94744},La Faverge,2557643175,source for position; official name
+2026-10-16T11:16:42Z,edit:stations,Q33516197,{4DB70EC8-29A3-43A1-9EF9-E82CE0E7EA8B},Les Nicolets,2557643181,source for position; official name
+2026-10-16T11:16:43Z,edit:stations,Q33516202,{23AA4FEB-84D6-4FA2-BD08-FD132DC2172A},Plan Morier,2557643188,source for position; official name
+2026-10-16T11:16:44Z,edit:stations,Q33516225,{CEC42877-9D3F-4969-A832-B9DA3A806D4D},Langenthal Industrie Nord,2557643193,source for position; official name
+2026-10-16T11:16:46Z,edit:stations,Q33516262,{3D6FB1C7-309C-4078-8A02-B1BF7AA1BE14},Areuse Littorail,2557643199,source for position; official name
+2026-10-16T11:16:47Z,edit:stations,Q43890330,{77464B8C-971A-4E9D-9052-AB5119B770BA},Lancy-Bachet,2557643204,official name
+2026-10-16T11:16:48Z,edit:stations,Q44375740,{133E5F72-9DC6-4256-BC10-024918E7CE09},"St-Aubin NE, village",2557643211,official name
+2026-10-16T11:16:50Z,edit:stations,Q48610587,{0FC46AF0-01E8-4D52-9A8C-FDA87D308D62},Genève-Champel,2557643215,official name
+2026-10-16T11:16:51Z,edit:stations,Q55063712,{926491E4-C0EF-41A8-921C-7939F8FA5750},"Gerra (Verzasca), Predell",2557643220,source for position; official name
+2026-10-16T11:16:52Z,edit:stations,Q70708571,{70D0D165-3703-4FA9-8709-28D0A31F147D},"Zürich, Bellevue",2557643228,source for position; official name
+2026-10-16T11:16:54Z,edit:stations,Q87124795,{67A87E16-4833-45DD-89C8-F681AF60CFC9},Aarau Torfeld,2557643235,source for position; official name
+2026-10-16T11:16:55Z,edit:stations,Q88675524,{7B2693DB-36BC-4B00-85DB-636EBA31D165},"Haute-Nendaz, Chalet Dardel",2557643245,source for position; official name
+2026-10-16T11:16:56Z,edit:stations,Q105044842,{ADC00034-D36C-4F39-A074-D3B66C1F373A},Giétroz,2557643250,source for position; official name
+2026-10-16T11:16:57Z,edit:stations,Q106449541,{AFF7705C-DEC7-42C7-AE0C-227ACF0FC035},"Stettbach, Bahnhof",2557643258,source for position; official name
+2026-10-16T11:16:59Z,edit:stations,Q106576709,{0DECD6E1-511C-43A9-9B2B-12564FADBE66},Gonten Alpsteinblick,2557643263,source for position; official name
+2026-10-16T11:17:00Z,edit:stations,Q106766684,{BE17D085-5DD4-4595-A747-A588046A5105},Küssnacht am Rigi (See),2557643268,source for position; official name
+2026-10-16T11:17:01Z,edit:stations,Q106772473,{F53306A8-18E4-4009-B275-ED9C4099A031},Luzern Bahnhofquai,2557643278,source for position; official name
+2026-10-16T11:17:03Z,edit:stations,Q110527421,{251DC8E3-02B2-48D0-9425-C5D59E1D87FD},La Chaux-de-Fonds Les Forges,2557643283,source for position; official name
+2026-10-16T11:17:04Z,edit:stations,Q111204350,{CEF5FF85-FE91-4C7B-B503-BD67355C2454},Lally,2557643290,official name
+2026-10-16T11:17:05Z,edit:stations,Q115527985,{907FED03-8491-433D-8C23-51B2F5C29E55},Seon Nord,2557643294,source for position; official name
+2026-10-16T11:17:07Z,edit:stations,Q115632069,{471F5CAA-4E75-4B25-BAC3-8ECE4F817403},St. Gallen Güterbahnhof,2557643301,source for position; official name
+2026-10-16T11:17:08Z,edit:stations,Q115790574,{6146B76F-979C-4C92-AA3D-6559DA8D5EC6},Täsch Monte Rosa,2557643307,source for position; official name; municipality
+2026-10-16T11:17:09Z,edit:stations,Q116008666,{A10C2747-2BFA-4ED9-B765-9FA9A1F2A53E},Chantemerle-près-Blonay,2557643317,official name; municipality
+2026-10-16T11:17:11Z,edit:stations,Q116008667,{0523F9A8-9775-46CA-8804-F06D22541048},Vevey Vignerons,2557643321,source for position; official name
+2026-10-16T11:17:12Z,edit:stations,Q121494009,{AC28069C-959A-489D-AAB2-AE1587C5ABD0},Chrindi,2557643329,source for position; official name
+2026-10-16T11:17:13Z,edit:stations,Q121494090,{90BE628A-8A7D-4AFF-82B9-A60EBEF9F5B1},Stockhorn,2557643337,source for position; official name
+2026-10-16T11:17:15Z,edit:stations,Q123422647,{A3786CED-140F-46CF-B9E6-84C55E8AB5CE},"Basel, Erasmusplatz",2557643345,source for position; official name
+2026-10-16T11:17:16Z,edit:stations,Q123688992,{E73E7F99-715F-4148-BAE5-1809EDE2FFA8},Minusio,2557643354,official name
+2026-10-16T11:17:17Z,edit:stations,Q124053863,{457D4F2D-5124-4E78-A308-0101D4F9EC7E},Sattel,2557643361,source for position; official name
+2026-10-16T11:17:18Z,edit:stations,Q125687336,{E62ACF71-E1F9-4A02-81BE-DEAD7195B8B0},Chaulin-Cornaux,2557643375,source for position; official name; municipality
+2026-10-16T11:17:30Z,edit:stations,Q125694901,{D372DB2E-745E-4FD4-9EF1-C26730C65AB4},Ligerz (Talstation),2557643449,source for position; official name
+2026-10-16T11:17:31Z,edit:stations,Q125694919,{CCA38E1D-A05C-4560-AB05-C41823304F67},Prêles,2557643459,source for position; official name
+2026-10-16T11:17:32Z,edit:stations,Q127946930,{4C9EB365-9446-4951-AA4B-B1C428CF56FE},Villars-sous-Mont,2557643471,source for position; official name
+2026-10-16T11:17:34Z,edit:stations,Q127947088,{0A5135E4-B636-4D14-9812-AA3EA402ACCB},Neirivue,2557643478,source for position; official name
+2026-10-16T11:17:35Z,edit:stations,Q127947243,{2E0D46D7-D9FE-45FE-8563-8DDC0E71ED8D},Albeuve,2557643482,source for position; official name
+2026-10-16T11:17:36Z,edit:stations,Q130299078,{692AB156-0931-499E-94B5-006A28ACECE8},Muottas Muragl,2557643493,source for position; official name
+2026-10-16T11:17:38Z,edit:stations,Q131317500,{C70D73B8-4811-4D2A-9452-FC1DC7976BD6},Trélex dépôt,2557643500,source for position; official name
+2026-10-16T11:17:39Z,edit:stations,Q134439928,{8D276CE3-DDA3-4C6E-BD29-4A74E1E98D90},Lugano Stazione (funicolare),2557643509,source for position; official name
+2026-10-16T11:17:40Z,edit:stations,Q134590099,{1388DEC2-333D-44C0-A539-DEBE8DD3D3D0},"Zürich, Paradeplatz",2557643518,source for position; official name
+2026-10-16T11:17:41Z,edit:stations,Q135458484,{ABE7824B-E54A-4309-B4FF-325C57CA4639},Alp Sellamatt,2557643526,source for position; official name
+2026-10-16T11:17:43Z,edit:stations,Q136029125,{504220E7-A46E-4EED-8A7B-4CE903C35C69},"Zürich, Ueberlandpark",2557643530,source for position; official name
+2026-10-16T11:17:44Z,edit:stations,Q136029270,{307B5B7D-8238-4A1C-A6BD-1BB26EEF931A},"Zürich, Tierspital",2557643541,source for position; official name
+2026-10-16T11:17:45Z,edit:stations,Q136029367,{A526CAC6-889C-44A5-8303-EDA1A0A5AE5E},"Zürich, Waldgarten",2557643547,source for position; official name
+2026-10-16T11:17:46Z,edit:stations,Q136490684,{4F6539C1-B8E6-4459-98F5-38B6934F2481},"Schlieren, Wagonsfabrik",2557643563,source for position; official name
+2026-10-16T11:17:48Z,edit:stations,Q136490685,{E26743DD-DC5D-4BC2-9D58-7A2AC84A5E82},"Schlieren, Gasometerbrücke",2557643575,source for position; official name
+2026-10-16T11:17:49Z,edit:stations,Q136490687,{6B97003A-21D6-4D39-9B18-5506B1DAEFE7},"Zürich, Sportweg",2557643584,source for position; official name
+2026-10-16T11:17:50Z,edit:stations,Q136490688,{39088E3C-66D6-4C53-9308-86324BE56441},"Zürich, Heuried",2557643589,source for position; official name
+2026-10-16T11:17:52Z,edit:stations,Q136490689,{FF03CF64-0D23-4E3F-AE28-52B75DA86EBD},"Zürich, Alte Trotte",2557643601,source for position; official name
+2026-10-16T11:17:53Z,edit:stations,Q136490690,{A33903FF-BF82-4EFC-B9F4-FB2AF8BEF087},"Zürich, Förrlibuckstrasse",2557643607,source for position; official name
+2026-10-16T11:17:54Z,edit:stations,Q136490691,{4DCE95A6-25E4-4D8E-A356-F0069BF6B063},"Zürich, Laubiweg",2557643615,source for position; official name
+2026-10-16T11:17:56Z,edit:stations,Q136490692,{66350711-38AC-46C6-916A-DBCB6A4DF1C2},"Zürich, Letzistrasse",2557643622,source for position; official name
+2026-10-16T11:17:57Z,edit:stations,Q136490693,{CFA8CBB4-7621-4A02-A769-21E1B953AA74},"Spreitenbach, Shoppi Tivoli",2557643634,source for position; official name
+2026-10-16T11:17:58Z,edit:stations,Q136490694,{F576D8DC-CF7B-4748-84A5-AFF614382DEE},"Dietikon, Birmensdorferstrasse",2557643644,source for position; official name
+2026-10-16T11:17:59Z,edit:stations,Q136490695,{9D4236F6-56C0-4BDF-A825-ABB7213B5853},"Wallisellen, Neugut",2557643652,source for position; official name
+2026-10-16T11:18:00Z,edit:stations,Q136490696,{B35A0358-17E3-4738-B040-72D8C1215AA8},"Zürich, Seebacherplatz",2557643663,source for position; official name
+2026-10-16T11:20:16Z,edit:stations,Q136490697,{4BFA413C-A803-4816-8D20-9A51BBA0499B},"Zürich, Winkelriedstrasse",2557644016,source for position; official name
+2026-10-16T11:20:17Z,edit:stations,Q136490698,{9C7E865E-1BF2-483C-A9EC-D9DD87CAB1A6},"Zürich, Seilbahn Rigiblick",2557644030,source for position; official name
+2026-10-16T11:20:19Z,edit:stations,Q136490699,{66199599-29B4-40C8-A4F2-C3DAAF9BE0DD},"Zürich, Kreuzstrasse",2557644042,source for position; official name
+2026-10-16T11:20:20Z,edit:stations,Q136490700,{F0480942-8599-4B0B-86F1-F541EABB76E9},"Rümlang, Bäuler",2557644053,source for position; official name
+2026-10-16T11:20:21Z,edit:stations,Q136490701,{3F1B05A7-1F96-412B-A300-4BB7D7147378},"Glattpark, Lindberghplatz",2557644063,source for position; official name
+2026-10-16T11:20:22Z,edit:stations,Q136490702,{D96BD1B6-A72B-4473-BFC2-47B1948A7A6E},"Zürich, Wetlistrasse",2557644070,source for position; official name
+2026-10-16T11:20:24Z,edit:stations,Q136490703,{6930613B-7BDF-4FE2-A09F-AB2B3E46837D},"Zürich, Heerenwiesen",2557644080,source for position; official name
+2026-10-16T11:20:25Z,edit:stations,Q136490704,{2416E626-9908-46B8-8FE6-1D4B190E5DBB},"Zürich, Roswiesen",2557644089,source for position; official name
+2026-10-16T11:20:26Z,edit:stations,Q136490705,{D5D469DC-4D90-475A-A7B8-FB49772B48D8},"Schlieren, Mülligen",2557644096,source for position; official name
+2026-10-16T11:20:28Z,edit:stations,Q136490706,{4D97C2E2-590A-46D2-BE4D-32A9D9239361},"Zürich, Winzerstrasse",2557644103,source for position; official name
+2026-10-16T11:20:29Z,edit:stations,Q136490707,{C862F153-CBFB-41F2-B4F1-7116272724A6},"Zürich, Fellenbergstrasse",2557644110,source for position; official name
+2026-10-16T11:20:30Z,edit:stations,Q136490708,{CCD2D096-C8BF-49D6-9B2A-FC169F4A7D81},"Zürich, Siemens",2557644124,source for position; official name
+2026-10-16T11:20:31Z,edit:stations,Q136490709,{9DE41B5F-BA77-462F-81BA-33DFD5CC3A5B},"Zürich, Letzigrund",2557644135,source for position; official name
+2026-10-16T11:20:33Z,edit:stations,Q136490710,{A6ABEBA5-A764-436C-A47F-5589897A552C},"Zürich, Fischerweg",2557644149,source for position; official name
+2026-10-16T11:20:34Z,edit:stations,Q136490712,{4ED20E3D-7933-47C1-A239-7842805112C2},"Zürich, Werd",2557644160,source for position; official name
+2026-10-16T11:20:35Z,edit:stations,Q136490714,{62C260A6-E053-4E4B-93C0-7D55673CAC0F},"Zürich, Billoweg",2557644174,source for position; official name
+2026-10-16T11:20:37Z,edit:stations,Q136490715,{5A20FB99-0ECB-43C8-A394-4B9321DD6B45},"Zürich, Brunaustrasse",2557644183,source for position; official name
+2026-10-16T11:20:38Z,edit:stations,Q136490716,{5642ECB0-F67F-4E6A-9E92-7E215D358C1A},"Zürich, Renggerstrasse",2557644192,source for position; official name
+2026-10-16T11:20:39Z,edit:stations,Q136490717,{434B59A3-8C64-4F28-9325-EADDE309A2F8},"Zürich, Rentenanstalt",2557644198,source for position; official name
+2026-10-16T11:20:40Z,edit:stations,Q136490718,{E459DFE8-458B-4974-887C-4DD17DFD4E46},"Zürich, Sihlquai/HB",2557644205,source for position; official name
+2026-10-16T11:20:42Z,edit:stations,Q136490719,{E8EBB3D7-051D-4A76-9E5D-2E00B8A4C257},"Zürich, Rudolf-Brun-Brücke",2557644214,source for position; official name
+2026-10-16T11:20:43Z,edit:stations,Q136490720,{FEC23231-DF30-46C6-B6A5-952BA734E713},"Zürich, Sonneggstrasse",2557644224,source for position; official name
+2026-10-16T11:20:44Z,edit:stations,Q136490722,{A5AEF213-60E1-42BE-986E-45BCD2BE43A9},"Spreitenbach, West",2557644231,source for position; official name
+2026-10-16T11:20:45Z,edit:stations,Q136490723,{7ED48FBE-3E4B-475F-8912-25A90E29C875},"Spreitenbach, Umwelt Arena",2557644241,source for position; official name
+2026-10-16T11:20:47Z,edit:stations,Q136490724,{9FB3524B-0649-46AA-B28A-51EBFEEE8862},"Spreitenbach, Kreuzäcker",2557644249,source for position; official name
+2026-10-16T11:20:48Z,edit:stations,Q136490726,{71C53DE6-AC40-441B-8EDF-24134C37318D},"Urdorf, Urdorf-Nord",2557644263,source for position; official name
