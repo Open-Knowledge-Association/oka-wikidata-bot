@@ -51,10 +51,11 @@ LANGS = {"Q183": ("de", "en"), "Q40": ("de", "en"), "Q347": ("de", "en"), "Q39":
 
 
 def date_fact(pid, label, y, m=None, day=None, country=None):
-    """A date the entry gives (a year, a month or a day) as a fact; a day before the Gregorian year of the country it
-    belongs to is marked calendar_unclear (see GREGORIAN_FROM): it then only sources an equal value."""
+    """A date the entry gives (a year, a month or a day) as a fact; a day from 1583 until the Gregorian year of the
+    country it belongs to is marked calendar_unclear (see GREGORIAN_FROM): it then only sources an equal value. Days
+    before 1583 are Julian everywhere (Help:Dates), as time_value records them."""
     f = d.fact(pid, d.time_value(int(y), int(m) if m else None, int(day) if day else None), label)
-    if day and int(y) < GREGORIAN_FROM.get(country, 1583):
+    if day and 1583 <= int(y) < GREGORIAN_FROM.get(country, 1583):
         f["calendar_unclear"] = True
         f["calendar_note"] = f"calendar unclear before {GREGORIAN_FROM.get(country, 1583)} there"
     return f

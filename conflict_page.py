@@ -138,8 +138,9 @@ def build(log, title):
 
 def save():
     from common import bot_site
+    site = bot_site(5)                           # writes the login settings; pywikibot may only be imported after this
     import pywikibot
-    p = pywikibot.Page(bot_site(5), PAGE)
+    p = pywikibot.Page(site, PAGE)
     p.text = OUT.read_text(encoding="utf-8")
     p.save(summary="How disagreements with unsourced values are settled, with a pilot of 20 cases (nothing edited)", bot=True)
 
