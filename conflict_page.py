@@ -12,14 +12,15 @@ import sys
 import urllib.parse
 
 from common import WORK
-from conflict_check import URLS, WORK_NAMES, counted
+from conflict_check import URLS, WORK_NAMES, counted, decide
 
 PAGE = "User:OKA bot/Disagreement checks"
 OUT = WORK / "conflict_page.wiki"
 PRICES = {"claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50)}    # $ per million tokens in, out
 SEARCH = 0.01                                                                    # $ per web search
 SUPPORTS = {"wikidata": "Wikidata's value", "entry": "the entry's value", "both": "fits both", "other": "another value"}
-OUTCOME = {"replace": "replace", "both": "both", "report": "report", "person": "a person checks"}
+OUTCOME = {"replace": "replace", "prefer": "prefer the entry's value", "both": "both", "report": "report",
+           "person": "a person checks"}
 
 HOW = """This page shows how [[User:OKA bot|OKA bot]] settles a disagreement between a reference work and a Wikidata \
 value that has no source, as described in [[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]. \
@@ -37,17 +38,20 @@ value, a genuine split, or nothing clear. Wikipedia, Wikidata and their copies, 
 edit (family trees, Find a Grave, forums) do not count. The prompt and the rules below are in \
 [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/conflict_check.py conflict_check.py].
 # '''The decision''' is made by code, from the sources counted and the model's reading of them:
-#* '''replace''': no counted source supports Wikidata's value, at least one supports the entry's, and the model reads \
-the sources as establishing the entry's value. The entry's value is added with its reference. Wikidata's value is \
-removed if it has no reference, or deprecated ({{P|2241}}: {{Q|Q41755623}}) if its only reference is {{P|143}}, so \
-that it is not imported again.
+#* '''replace''': no counted source supports Wikidata's value, other sources confirm the entry's, and the model reads \
+the sources as establishing the entry's value. Wikidata's value is taken to be wrong: the entry's value is added with \
+its reference, and Wikidata's value is removed if it has no reference, or deprecated ({{P|2241}}: {{Q|Q41755623}}) \
+if its only reference is {{P|143}}, so that it stays visible and is not imported again.
+#* '''prefer the entry's value''': no counted source supports Wikidata's value, and none confirms the entry's either \
+(often nothing is found at all). The entry is a source; an unsourced value or a Wikipedia import is not. Wikidata's \
+value stays as it is, and the entry's value is added with preferred rank ({{P|7452}}: {{Q|Q98386534}}).
 #* '''both''': counted sources support each value, and the model does not read them as establishing Wikidata's. \
 The entry's value is added beside Wikidata's, at the same rank, with the entry as its reference.
 #* '''report''': the sources establish Wikidata's value. Nothing is added, and the error is reported to the work.
-#* '''a person checks''': anything else: another value, too little evidence, a place name that fits both values, or \
-the model's reading and the sources disagree.
-#: The model's reading can stop an edit but cannot cause one: a removal also needs the counted sources to show no \
-support for Wikidata's value.
+#* '''a person checks''': anything else: another value, a place name that fits both values, sources for Wikidata's \
+value that do not settle the case, or the model's reading and the sources disagree.
+#: The model's reading can stop an edit but cannot cause one. A value is only removed or deprecated when the counted \
+sources show no support for it and confirm the entry's value.
 #: The sources found are only used to decide, and are logged here. They are not cited on Wikidata: the bot cites only \
 the works of its approved tasks.
 # '''Before any edit''', each batch is listed on this page with its evidence, and the operator checks a sample. \
@@ -109,6 +113,8 @@ def table(rows):
         out = OUTCOME.get(r["decision"], r["decision"])
         if r["decision"] == "replace":
             out += ": Wikidata's value " + ("removed" if r["wikidata_sources"] == "no source" else "deprecated")
+        elif r["decision"] == "prefer":
+            out += " (Wikidata's value kept)"
         url = URLS[r["work"]].format(r["entry"])
         lines += ["|-", f"| {{{{Q|{r['qid']}}}}} || {r['property']} || {value(r['wikidata_value'])} <small>({ref})</small> "
                         f"|| {value(r['entry_value'], url)} ||\n" + ("\n".join(items) or "''none found''"),
@@ -119,6 +125,8 @@ def table(rows):
 
 def build(log, title):
     rows = sorted(csv.DictReader(open(log, encoding="utf-8")), key=lambda r: r["entry"])
+    for r in rows:                               # the outcome under the current rules, from the logged evidence
+        r["decision"] = decide(json.loads(r["evidence"] or "[]"), r.get("established"), r["work"], r["property"])
     n = collections.Counter(r["decision"] for r in rows)
     dollars, searches = cost(rows)
     model = rows[0]["model"].replace("claude-", "Claude ").replace("-5-5", " 5.5").replace("sonnet", "Sonnet").replace("haiku", "Haiku")
@@ -127,8 +135,8 @@ def build(log, title):
 == {title} ==
 {len(rows)} disagreements of this kind from {WORK_NAMES[rows[0]['work']]} \
 ([[Wikidata:Requests for permissions/Bot/OKA bot 2|task 2]]), checked on {day} with {model} \
-({searches} searches, about ${dollars:.2f} in all). Outcome: {n['replace']} replace, {n['both']} both, \
-{n['report']} report, {n['person']} for a person to check.
+({searches} searches, about ${dollars:.2f} in all). Outcome under the rules above: {n['replace']} replace, \
+{n['prefer']} prefer the entry's value, {n['both']} both, {n['report']} report, {n['person']} for a person to check.
 
 {table(rows)}
 """

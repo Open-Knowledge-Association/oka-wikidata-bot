@@ -1,11 +1,14 @@
 """Tasks 2 and 3: check the values left alone because Wikidata says something else, where Wikidata's value has no
 source (or only an import from a Wikipedia), under the rules of the OKA bot 3 request (16 October 2026):
-  replace  no counted source supports Wikidata's value and the sources establish the entry's: the entry's value is
+  replace  no counted source supports Wikidata's value and other sources confirm the entry's: the entry's value is
            added; Wikidata's is removed (no reference) or deprecated as incorrect (only a Wikipedia import)
+  prefer   no counted source supports Wikidata's value, and none confirms the entry's: Wikidata's value stays, the
+           entry's value is added with preferred rank (P7452: best referenced value)
   both     reliable sources disagree: the entry's value is added beside Wikidata's at the same rank
   report   the sources establish Wikidata's value: nothing is added, the error is reported to the work
-  person   anything else: a third value, too little evidence, a place name that fits both, or the model's reading
-           and the sources' count disagree
+  person   anything else: a third value, a place name that fits both, sources for Wikidata's value that do not settle
+           the case, or the model's reading and the sources' count disagree
+Nothing is edited until the request is approved (jz, 16 October 2026).
 
 Claude (with web search) does the search; every answer is logged with the sources it found, in conflict_checks.csv.
 Nothing is edited here.
@@ -126,16 +129,23 @@ def counted(evidence, work):
 
 
 def decide(evidence, established, work, label):
-    """The request's rules, applied to the counted sources and to the model's reading of them ('established'). The
-    model's reading can stop an edit but never causes one on its own: a removal needs no counted source for Wikidata's
-    value as well."""
+    """The request's rules, applied to the counted sources and to the model's reading of them ('established'). jz's
+    rules (16 October 2026): when no counted source supports Wikidata's value, the entry's value is added even if no
+    other source states the fact (the entry is a source; an unsourced value or a Wikipedia import is not). If other
+    sources confirm the entry, Wikidata's value is wrong: removed without a reference, deprecated as incorrect when
+    only imported from a Wikipedia (replace). If only the entry contradicts it, it stays, and the entry's value gets
+    preferred rank as the best referenced value (prefer). The model's reading can stop an edit but never causes one."""
     says = {x.get("supports") for x in counted(evidence, work)}
-    if "other" in says or established not in ("wikidata", "entry", "split"):
+    if "other" in says:
         return "person"
     if label.startswith("place") and "both" in says:      # a name that fits either place (an old name, a district)
         return "person"
-    if "wikidata" not in says:
-        return "replace" if established == "entry" and "entry" in says else "person"
+    if "wikidata" not in says:                # other sources confirm the entry: Wikidata's value is wrong (replace);
+        if established not in ("entry", "unclear"):           # only the entry: its value is preferred (prefer)
+            return "person"
+        return "replace" if "entry" in says and established == "entry" else "prefer"
+    if established not in ("wikidata", "entry", "split"):
+        return "person"
     if "entry" not in says:
         return "report" if established == "wikidata" else "person"
     return "report" if established == "wikidata" else "both"
