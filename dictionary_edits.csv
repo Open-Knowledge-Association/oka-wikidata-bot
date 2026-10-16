@@ -6551,3 +6551,503 @@ time,work,kind,entry,item,revid,changes
 2026-10-16T23:07:41Z,snl,person,Annika_Idström,Q434320,2557775740,source for place of birth; source for date of birth
 2026-10-16T23:07:42Z,nkl,person,Sigrid_Lystad,Q131453320,2557775750,place of birth; place of death; occupation
 2026-10-16T23:07:43Z,snl,person,Annika_Linn_Verdal_Homme,Q139589619,2557775757,place of birth; date of birth (more precise)
+2026-10-16T23:08:16Z,nkl,person,Sigrid_Maseng,Q99769418,2557775960,work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T23:08:17Z,snl,person,Annika_Sörenstam,Q232711,2557775966,source for place of birth; source for date of birth
+2026-10-16T23:08:18Z,nkl,person,Sigrid_Øyrehagen,Q60988245,2557775972,NKL ID Sigrid_Øyrehagen deprecated (now SNL Sigrid_Øyrehagen); SNL ID Sigrid_Øyrehagen; other names; place of birth (more precise)
+2026-10-16T23:08:18Z,snl,person,Anniken_Hauglie,Q15477955,,no change
+2026-10-16T23:08:19Z,nkl,person,Sigrun_Berg,Q12000376,2557775981,other names; source for place of birth; place of death
+2026-10-16T23:08:20Z,snl,person,Anniken_Huitfeldt,Q156540,2557775992,source for place of birth; source for date of birth
+2026-10-16T23:08:21Z,nkl,person,Sigrun_Sæbø_Kapsberger,Q4957988,2557775998,NKL ID Sigrun_Sæbø_Kapsberger deprecated (now SNL Sigrun_Sæbø_Kapsberger); SNL ID Sigrun_Sæbø_Kapsberger; source for place of birth; source for place of death; occupation; source for date of death
+2026-10-16T23:08:22Z,snl,person,Anniken_Ramberg_Krutnes,Q567175,2557776003,source for place of birth
+2026-10-16T23:08:23Z,nkl,person,Sigurd_Alf_Eriksen,Q12000381,2557776008,place of birth; occupation
+2026-10-16T23:08:24Z,snl,person,Anniken_Refseth,Q135677865,2557776013,source for date of birth
+2026-10-16T23:08:25Z,nkl,person,Sigurd_Bærheim,Q110951603,2557776019,other names; occupation; source for date of birth; source for date of death
+2026-10-16T23:08:26Z,snl,person,Anniken_Thue,Q11958339,2557776027,place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T23:08:27Z,nkl,person,Sigurd_Danifer,Q16188311,2557776033,source for place of death; source for occupation; occupation; source for date of birth; source for date of death
+2026-10-16T23:08:28Z,snl,person,Annilese_Miskimmon,Q19721090,2557776041,source for place of birth
+2026-10-16T23:08:29Z,nkl,person,Sigurd_Eriksen,Q7513230,2557776046,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:08:30Z,snl,person,Annok_Sarri_Nordrå,Q4970131,2557776056,source for date of birth; source for date of death
+2026-10-16T23:08:31Z,nkl,person,Sigurd_Fosnes,Q64142651,2557776060,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:08:32Z,snl,person,Annunzio_Mantovani,Q505683,2557776070,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:08:33Z,nkl,person,Sigurd_Henrik_Olav_Moe,Q17120001,2557776075,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:08:34Z,snl,person,Annæus_Schjødt,Q4769804,2557776082,source for place of birth; source for place of death; occupation; source for father; source for child; source for date of death
+2026-10-16T23:08:35Z,nkl,person,Sigurd_Lilloe,Q56278137,2557776094,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:08:36Z,snl,person,Annæus_Schjødt_d.y.,Q4769801,2557776100,SNL ID Annæus_Schjødt_d.y. deprecated (now SNL Annæus_Schjødt_-_d.y.); SNL ID Annæus_Schjødt_-_d.y.; occupation; source for father; source for date of birth; source for date of death
+2026-10-16T23:08:37Z,nkl,person,Sigurd_Nome,Q6013571,2557776115,NKL ID Sigurd_Nome deprecated (now SNL Sigurd_Nome); source for place of death; source for occupation; historical population register ID
+2026-10-16T23:08:37Z,snl,person,Anonymus_-_historiker,Q567639,,no change
+2026-10-16T23:08:38Z,nkl,person,Sigurd_Reidolph_Gulbransen,Q42176314,2557776125,source for place of birth; source for occupation
+2026-10-16T23:08:38Z,snl,person,Anote_Tong,Q57456,,no change
+2026-10-16T23:08:39Z,nkl,person,Sigurd_Resell,Q12000405,2557776138,source for place of birth; source for date of birth
+2026-10-16T23:08:40Z,snl,person,Anouar_Benmalek,Q2852386,2557776158,source for place of birth; source for date of birth
+2026-10-16T23:08:41Z,nkl,person,Sigurd_Schjødt,Q56451361,2557776167,source for date of birth; source for date of death
+2026-10-16T23:08:42Z,snl,person,Anouk_Aimée,Q228607,2557776182,source for date of birth; source for date of death
+2026-10-16T23:08:43Z,nkl,person,Sigurd_Winge,Q3434816,2557776195,source for place of birth; source for place of death; occupation; source for occupation
+2026-10-16T23:08:44Z,snl,person,Ansegisel,Q453739,2557776205,source for date of death
+2026-10-16T23:08:45Z,nkl,person,Sigvald_Asbjørnsen,Q7513340,2557776215,source for place of birth; source for place of death; source for occupation; source for date of birth
+2026-10-16T23:08:46Z,snl,person,Ansel_Adams,Q60809,2557776228,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:08:47Z,nkl,person,Simen_Anderssøn_Hodalsgjelten,Q113198537,2557776236,place of birth; place of death
+2026-10-16T23:08:48Z,snl,person,Anselm_Feuerbach,Q250194,2557776247,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:08:49Z,nkl,person,Simon_Olaus_Wolff,Q3420723,2557776266,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:08:50Z,snl,person,Anselm_Kiefer,Q170344,2557776277,source for date of birth
+2026-10-16T23:08:51Z,nkl,person,Simon_Thorbjørnsen,Q21457407,2557776280,source for place of birth; place of death; source for occupation
+2026-10-16T23:08:52Z,snl,person,Anselm_av_Canterbury,Q43939,2557776285,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:08:53Z,nkl,person,Siri_Aurdal,Q17194517,2557776289,NKL ID Siri_Aurdal deprecated (now SNL Siri_Aurdal); other names
+2026-10-16T23:08:54Z,snl,person,Anselm_von_Feuerbach,Q61929,2557776294,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:08:55Z,nkl,person,Siri_Blakstad,Q100266984,2557776302,work location; place of birth; source for date of birth
+2026-10-16T23:08:55Z,snl,person,Ansgar_-_helgen,Q110299,,no change
+2026-10-16T23:08:56Z,nkl,person,Sissel_Arntzen,Q104175594,2557776305,work location; source for occupation
+2026-10-16T23:08:57Z,snl,person,Ansgar_Gabrielsen,Q323721,2557776311,source for date of birth
+2026-10-16T23:08:58Z,nkl,person,Sissel_Blystad,Q106974856,2557776319,NKL ID Sissel_Blystad deprecated (now SNL Sissel_Blystad); SNL ID Sissel_Blystad
+2026-10-16T23:08:59Z,snl,person,Ansgar_Guldberg,Q21075708,2557776326,source for place of birth; source for place of death; source for father; source for date of birth; source for date of death
+2026-10-16T23:09:00Z,nkl,person,Sissel_Calmeyer,Q16184040,2557776334,work location; place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T23:09:01Z,snl,person,Anson_Cameron,Q16148848,2557776341,place of birth; source for date of birth
+2026-10-16T23:09:50Z,nkl,person,Sissel_Eckhoff_Vagard,Q55473689,2557776659,work location; source for place of birth; source for occupation
+2026-10-16T23:09:51Z,snl,person,Anstein_Gjengedal,Q4770767,2557776667,source for place of birth; source for date of birth
+2026-10-16T23:09:52Z,nkl,person,Sissel_Johansen,Q118246587,2557776678,work location; occupation
+2026-10-16T23:09:53Z,snl,person,Antal_Budai_Nagy,Q718139,2557776686,other names
+2026-10-16T23:09:54Z,nkl,person,Sissel_Pape,Q113198539,2557776691,work location; place of birth; occupation
+2026-10-16T23:09:55Z,snl,person,Antal_Doráti,Q355978,2557776699,source for place of birth; source for place of death
+2026-10-16T23:09:56Z,nkl,person,Sivert_Donali,Q7532475,2557776706,work location; source for place of birth; source for occupation
+2026-10-16T23:09:57Z,snl,person,Antanas_Baranauskas,Q570952,2557776713,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:09:58Z,nkl,person,Sjugurd_Olason_Sørbøl,Q64067227,2557776724,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:09:59Z,snl,person,Antanas_Smetona,Q296950,2557776730,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:10:00Z,nkl,person,Skule_Waksvik,Q12001254,2557776736,work location; source for place of birth; source for occupation; spouse; source for date of death
+2026-10-16T23:10:01Z,snl,person,Antanas_Sniečkus,Q571040,2557776741,other names
+2026-10-16T23:10:02Z,nkl,person,Snorre_Andersen,Q52157299,2557776748,place of death; source for occupation
+2026-10-16T23:10:03Z,snl,person,Antanas_Vienuolis,Q2008524,2557776754,other names; source for place of birth; source for place of death; source for date of death
+2026-10-16T23:10:04Z,nkl,person,Snorre_Kyllingmark,Q55430515,2557776761,NKL ID Snorre_Kyllingmark deprecated (now SNL Snorre_Kyllingmark); SNL ID Snorre_Kyllingmark; work location; source for place of birth; occupation; source for occupation; source for date of birth
+2026-10-16T23:10:05Z,snl,person,Antanas_Škėma,Q4770956,2557776766,source for place of birth; source for date of birth
+2026-10-16T23:10:06Z,nkl,person,Sofus_Madsen,Q17119959,2557776772,source for place of birth; source for place of death; source for occupation; father
+2026-10-16T23:10:07Z,snl,person,Ante_Pavelić,Q36965,2557776777,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:10:08Z,nkl,person,Sole_Lefstad_Auensen,Q104175699,2557776785,work location; source for place of birth; source for date of birth
+2026-10-16T23:10:09Z,snl,person,Ante_Trumbić,Q571638,2557776790,source for place of birth; source for place of death
+2026-10-16T23:10:10Z,nkl,person,Solfrid_Aksnes,Q104173876,2557776798,work location; source for place of birth; occupation; source for date of birth
+2026-10-16T23:10:10Z,snl,person,Antenor,Q552633,,no change
+2026-10-16T23:10:11Z,nkl,person,Solfrid_Mortensen,Q66305040,2557776803,other names; work location; place of birth; source for date of birth
+2026-10-16T23:10:12Z,snl,person,Antero_de_Quental,Q467494,2557776808,source for date of death
+2026-10-16T23:10:13Z,nkl,person,Solrunn_Rones,Q56379808,2557776814,work location; source for occupation; father
+2026-10-16T23:10:15Z,snl,person,Anthelme_Brillat-Savarin,Q313027,2557776823,other names; source for date of death
+2026-10-16T23:10:15Z,nkl,person,Solveig_Hiorth_Andersen,Q113518931,2557776825,work location; place of birth; source for occupation; source for date of birth
+2026-10-16T23:10:15Z,snl,person,Anthemios_fra_Tralles,Q298226,,no change
+2026-10-16T23:10:16Z,nkl,person,Solveig_Hisdal,Q16729843,2557776833,NKL ID Solveig_Hisdal deprecated (now SNL Solveig_Hisdal); SNL ID Solveig_Hisdal; work location; place of birth; occupation
+2026-10-16T23:10:17Z,snl,person,Anthon_Bang,Q5565248,2557776842,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:10:18Z,nkl,person,Solveig_Kaurin,Q38861552,2557776849,NKL ID Solveig_Kaurin deprecated (now SNL Solveig_Kaurin); other names; place of birth; place of death; source for occupation; historical population register ID
+2026-10-16T23:10:19Z,snl,person,Anthon_Bernhard_Elias_Nilsen,Q4771910,2557776860,pseudonym; source for place of birth; place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:10:20Z,nkl,person,Solveig_Lohne,Q55466864,2557776868,work location; source for place of birth; source for occupation; occupation; source for date of birth
+2026-10-16T23:10:21Z,snl,person,Anthon_Thomas_Landmark,Q62649558,2557776881,SNL ID Anthon_Thomas_Landmark deprecated (now SNL Anthon_Landmark); SNL ID Anthon_Landmark; place of birth; place of death; source for father; source for sibling; source for date of birth; source for date of death
+2026-10-16T23:10:22Z,nkl,person,Solveig_Lønne_Christiansen,Q116276431,2557776887,other names; source for place of birth
+2026-10-16T23:10:23Z,snl,person,Anthoni_Heinsius,Q572597,2557776893,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:10:24Z,nkl,person,Solveig_Ramnæs,Q20062373,2557776904,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:10:26Z,snl,person,Anthonis_van_Dyck,Q150679,2557776916,other names
+2026-10-16T23:10:26Z,nkl,person,Solveig_Wiik,Q62075807,2557776920,work location; place of birth; place of death; source for occupation
+2026-10-16T23:10:27Z,snl,person,Anthony_Andrews,Q534898,2557776928,other names; source for date of birth
+2026-10-16T23:10:28Z,nkl,person,Solveig_Zinke,Q138339415,2557776939,work location; source for place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T23:10:29Z,snl,person,Anthony_Asquith,Q360844,2557776949,source for place of birth; source for place of death
+2026-10-16T23:10:30Z,nkl,person,Solveyg_Schafferer,Q15744610,2557776958,NKL ID Solveyg_Schafferer deprecated (now SNL Solveyg_Schafferer); SNL ID Solveyg_Schafferer; other names; work location; source for place of birth
+2026-10-16T23:10:31Z,snl,person,Anthony_Babington,Q572850,2557776963,source for place of birth; source for place of death
+2026-10-16T23:10:32Z,nkl,person,Sonja_Krohn,Q39807261,2557776970,work location; source for place of birth; occupation; source for occupation; source for father
+2026-10-16T23:10:33Z,snl,person,Anthony_Blunt,Q508392,2557776977,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:10:34Z,nkl,person,Sophie_Werenskiold,Q63341292,2557776983,source for place of birth; source for place of death; source for occupation; source for spouse; source for date of birth; source for date of death
+2026-10-16T23:10:35Z,snl,person,Anthony_Braxton,Q572924,2557776989,source for place of birth; source for date of birth
+2026-10-16T23:10:36Z,nkl,person,Sophus_Jacobsen,Q725088,2557776996,source for place of death; source for occupation
+2026-10-16T23:10:37Z,snl,person,Anthony_Buckeridge,Q2553140,2557777001,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:11:53Z,nkl,person,Stanley_Stornes,Q17108500,2557777488,other names; place of birth; occupation
+2026-10-16T23:11:54Z,snl,person,Anthony_Burgess,Q217619,2557777496,other names; source for place of birth; source for place of death; source for date of birth
+2026-10-16T23:11:54Z,nkl,person,Steen_Berner,Q64068849,2557777506,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:11:54Z,snl,person,Anthony_Carlisle,Q572978,,no change
+2026-10-16T23:11:56Z,nkl,person,Stefanny_Hillgaard,Q110082619,2557777517,place of birth; place of death; source for occupation
+2026-10-16T23:11:57Z,snl,person,Anthony_Caro,Q529591,2557777529,other names; source for date of birth; source for date of death
+2026-10-16T23:11:57Z,nkl,person,Stein_Aasen,Q110942924,2557777534,source for occupation; source for date of birth
+2026-10-16T23:11:58Z,snl,person,Anthony_Coucheron,Q3356078,2557777539,source for father
+2026-10-16T23:11:59Z,nkl,person,Steinar_Christensen,Q12002921,2557777543,place of birth; source for occupation
+2026-10-16T23:12:01Z,snl,person,Anthony_Dowell,Q573159,2557777550,other names
+2026-10-16T23:12:01Z,nkl,person,Steinar_Flatheim,Q110224324,2557777555,place of birth; place of death
+2026-10-16T23:12:03Z,snl,person,Anthony_Dymoke_Powell,Q573813,2557777563,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:12:03Z,nkl,person,Stella_Jacobi,Q113198542,2557777566,NKL ID Stella_Jacobi deprecated (now SNL Stella_Jacobi); SNL ID Stella_Jacobi; other names; place of birth; place of death
+2026-10-16T23:12:05Z,snl,person,Anthony_Eden,Q128995,2557777575,other names
+2026-10-16T23:12:06Z,nkl,person,Stephan_Abel_Sinding,Q1337281,2557777579,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:12:07Z,snl,person,Anthony_Fokker,Q76703,2557777586,source for date of birth; source for date of death
+2026-10-16T23:12:08Z,nkl,person,Stillef_Madsen_Auke,Q55399075,2557777594,source for place of birth
+2026-10-16T23:12:09Z,snl,person,Anthony_Giddens,Q220008,2557777601,source for place of birth; source for date of birth
+2026-10-16T23:12:09Z,nkl,person,Stinius_Fredriksen,Q2853015,2557777609,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:12:11Z,snl,person,Anthony_Hope,Q457287,2557777615,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:12:12Z,nkl,person,Styrk_Fjose,Q24800005,2557777623,place of birth; place of death; date of death (more precise)
+2026-10-16T23:12:13Z,snl,person,Anthony_Hopkins,Q65932,2557777631,source for place of birth; source for date of birth
+2026-10-16T23:12:13Z,nkl,person,Ståle_Blæsterdalen,Q17110063,2557777636,NKL ID Ståle_Blæsterdalen deprecated (now SNL Ståle_Blæsterdalen); SNL ID Ståle_Blæsterdalen; place of birth
+2026-10-16T23:12:15Z,snl,person,Anthony_J._Leggett,Q192718,2557777644,source for date of birth
+2026-10-16T23:12:16Z,nkl,person,Ståle_Kyllingstad,Q12003834,2557777647,source for place of death; source for occupation
+2026-10-16T23:12:16Z,snl,person,Anthony_Joseph_Drexel_Biddle,Q4772856,,no change
+2026-10-16T23:12:16Z,nkl,person,Ståle_Vold,Q137370982,2557777652,work location; place of birth; source for occupation
+2026-10-16T23:12:18Z,snl,person,Anthony_Mann,Q269975,2557777659,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:12:19Z,nkl,person,Sunni_Mundal,Q23636168,2557777665,place of birth
+2026-10-16T23:12:20Z,snl,person,Anthony_Minghella,Q188726,2557777676,source for date of birth; source for date of death
+2026-10-16T23:12:20Z,nkl,person,Sunniva_Gåsemyr,Q118634831,2557777681,work location; source for occupation; occupation
+2026-10-16T23:12:22Z,snl,person,Anthony_Ortega,Q573725,2557777686,other names; source for place of birth; source for place of death; occupation; source for date of birth; source for date of death
+2026-10-16T23:12:22Z,nkl,person,Sussi_Steigen,Q113198543,2557777690,place of birth; place of death; occupation
+2026-10-16T23:12:24Z,snl,person,Anthony_Perkins,Q193146,2557777697,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:12:25Z,nkl,person,Suzanne_Øgaard,Q373016,2557777700,work location; source for place of birth; source for occupation; occupation
+2026-10-16T23:12:26Z,snl,person,Anthony_Quinn,Q83484,2557777706,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:12:26Z,nkl,person,Svallaug_Svalastoga,Q110800866,2557777711,NKL ID Svallaug_Svalastoga deprecated (now SNL Svallaug_Svalastoga)
+2026-10-16T23:12:28Z,snl,person,Anthony_Raven_Crosland,Q301252,2557777720,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:12:28Z,nkl,person,Svein_Asbjørnsen,Q104175630,2557777726,source for place of birth; source for date of birth
+2026-10-16T23:12:30Z,snl,person,Anthony_Trollope,Q318399,2557777739,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:12:31Z,nkl,person,Svein_Berntsen,Q16174297,2557777744,place of birth; source for occupation
+2026-10-16T23:12:32Z,snl,person,Anthony_van_Diemen,Q380415,2557777748,source for place of birth
+2026-10-16T23:12:32Z,nkl,person,Svein_Bolling,Q16177293,2557777751,NKL ID Svein_Bolling deprecated (now SNL Svein_Bolling); source for place of birth
+2026-10-16T23:12:33Z,snl,organisation,Anti-Corn-Law_League,Q574598,2557777755,SNL ID Anti-Corn-Law_League deprecated (now SNL Anti_Corn-Law_League); SNL ID Anti_Corn-Law_League
+2026-10-16T23:12:34Z,nkl,person,Svein_Ellingsen,Q5709409,2557777757,source for place of birth; source for occupation
+2026-10-16T23:12:34Z,snl,person,Antialkidas,Q574812,,no change
+2026-10-16T23:12:35Z,nkl,person,Svein_Finnerud,Q33042,2557777758,work location; source for place of birth; occupation
+2026-10-16T23:12:35Z,snl,person,Antifanes,Q269301,,no change
+2026-10-16T23:12:36Z,nkl,person,Svein_Gusrud,Q12004223,2557777763,work location; place of birth
+2026-10-16T23:12:38Z,snl,person,Antifon,Q335560,2557777766,source for date of birth; source for date of death
+2026-10-16T23:14:51Z,nkl,person,Svein_Håvarstein,Q5977988,2557778441,work location; source for place of birth; source for occupation; occupation
+2026-10-16T23:14:52Z,snl,person,Antigone_Kefala,Q4774762,2557778444,source for place of birth; source for date of birth
+2026-10-16T23:14:53Z,nkl,person,Svein_Jacobsen,Q118247127,2557778446,work location; source for occupation
+2026-10-16T23:14:54Z,snl,person,Antigonos_1.,Q200401,2557778448,other names; source for date of birth; source for date of death
+2026-10-16T23:14:55Z,nkl,person,Svein_Johansen,Q12004234,2557778452,place of birth; occupation; source for occupation; source for date of birth
+2026-10-16T23:14:55Z,snl,person,Antigonos_2._Gonatas,Q241386,,no change
+2026-10-16T23:14:56Z,nkl,person,Svein_Mamen,Q56435639,2557778457,NKL ID Svein_Mamen deprecated (now SNL Svein_Mamen); other names; source for place of birth; source for occupation
+2026-10-16T23:14:57Z,snl,person,Antigonos_3._Doson,Q108816,2557778464,source for date of death
+2026-10-16T23:14:58Z,nkl,person,Svein_Narum,Q139579584,2557778468,work location
+2026-10-16T23:14:59Z,snl,person,Antimakhos,Q577769,2557778475,other names
+2026-10-16T23:15:00Z,nkl,person,Svein_Rønning,Q55462039,2557778479,work location; source for place of birth; source for occupation; occupation; source for spouse
+2026-10-16T23:15:00Z,snl,person,Antinoos,Q171876,,no change
+2026-10-16T23:15:01Z,nkl,person,Svein_Strand,Q17109648,2557778484,other names; work location; place of death; occupation; source for occupation; source for date of death
+2026-10-16T23:15:02Z,snl,person,Antiokh_Kantemir,Q372115,2557778490,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:15:03Z,nkl,person,Svein_Tang_Wa,Q12004256,2557778493,work location; source for place of birth; place of death; occupation; source for date of death
+2026-10-16T23:15:04Z,snl,person,Antiokhos_1._Soter,Q211488,2557778497,other names; source for date of birth; source for date of death
+2026-10-16T23:15:05Z,nkl,person,Svein_Thingnes,Q136686787,2557778499,other names; work location; place of birth
+2026-10-16T23:15:06Z,snl,person,Antiokhos_10._Eusebes,Q310808,2557778501,other names
+2026-10-16T23:15:07Z,nkl,person,Svein_Tore_Kleppan,Q12004199,2557778506,work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T23:15:08Z,snl,person,Antiokhos_13_Asiatus,Q313733,2557778509,other names
+2026-10-16T23:15:08Z,nkl,person,Svein_Torson_Kaasa,Q113192074,,no change
+2026-10-16T23:15:09Z,snl,person,Antiokhos_2._Theos,Q222930,2557778515,other names
+2026-10-16T23:15:10Z,nkl,person,Svein_Visted,Q96197542,2557778519,NKL ID Svein_Visted deprecated (now SNL Svein_Visted); source for place of birth; source for occupation
+2026-10-16T23:15:10Z,snl,person,Antiokhos_3._den_store,Q3365,,no change
+2026-10-16T23:15:11Z,nkl,person,Sveinung_Anondsen,Q24205297,2557778524,source for occupation
+2026-10-16T23:15:12Z,snl,person,Antiokhos_4._Epifanes,Q3356,2557778530,other names; source for date of birth; source for date of death
+2026-10-16T23:15:12Z,nkl,person,Sveinung_Bjørnson_Svalastoga,Q7651890,,no change
+2026-10-16T23:15:13Z,snl,person,Antiokhos_7._Sidetes,Q294945,2557778533,other names; source for date of birth; source for date of death
+2026-10-16T23:15:14Z,nkl,person,Sven_Erik_Grydeland,Q47515101,2557778534,work location; place of birth; occupation
+2026-10-16T23:15:15Z,snl,person,Antiokhos_8._Grypos,Q311112,2557778540,other names
+2026-10-16T23:15:16Z,nkl,person,Sven_Ivar_Dysthe,Q12004303,2557778541,work location
+2026-10-16T23:15:17Z,snl,person,Antiokhos_9._Kyzikenos,Q296446,2557778545,other names; source for date of birth; source for date of death
+2026-10-16T23:15:18Z,nkl,person,Sven_Jørgensen,Q31661372,2557778552,source for place of birth; source for occupation; source for date of birth
+2026-10-16T23:15:18Z,snl,person,Antiokhos_fra_Askalon,Q320042,,no change
+2026-10-16T23:15:19Z,nkl,person,Sven_Olsen_Traaset,Q17130898,2557778557,place of death
+2026-10-16T23:15:20Z,snl,person,Antipatros,Q204760,2557778563,source for date of birth; source for date of death
+2026-10-16T23:15:21Z,nkl,person,Sven_Revold,Q12004309,2557778569,work location; place of birth; place of death; source for occupation; source for father
+2026-10-16T23:15:21Z,snl,person,Antisthenes,Q179149,,no change
+2026-10-16T23:15:22Z,nkl,person,Sven_Sønsteby,Q16751961,2557778578,other names; work location; source for place of birth
+2026-10-16T23:15:22Z,snl,person,Antjie_Krog,Q260604,,no change
+2026-10-16T23:15:23Z,nkl,person,Svend_Halvorssøn_Aspaas,Q2648342,2557778586,other names; source for place of death; source for date of death
+2026-10-16T23:15:24Z,snl,person,Antoine-Augustin_Cournot,Q323245,2557778595,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:15:25Z,nkl,person,Sverre_Aasland,Q12004378,2557778608,source for occupation; source for date of birth; source for date of death
+2026-10-16T23:15:26Z,snl,person,Antoine-Jean_Gros,Q216999,2557778621,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:15:27Z,nkl,person,Sverre_Andersen,Q116965610,2557778632,work location
+2026-10-16T23:15:28Z,snl,person,Antoine-Jérôme_Balard,Q314306,2557778643,source for place of birth; source for place of death
+2026-10-16T23:15:29Z,nkl,person,Sverre_Bøe,Q113198545,2557778654,other names; work location; place of birth; place of death
+2026-10-16T23:15:29Z,snl,person,Antoine-Louis_Barye,Q451489,,no change
+2026-10-16T23:15:30Z,nkl,person,Sverre_Eklund,Q24303807,2557778669,other names; source for place of birth; occupation
+2026-10-16T23:15:31Z,snl,person,Antoine_Agénor_Alfred_Gramont,Q585590,2557778683,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:17:43Z,nkl,person,Sverre_Fehn,Q242002,2557779540,NKL ID Sverre_Fehn deprecated (now SNL Sverre_Fehn); source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:17:43Z,snl,person,Antoine_Alexandre_Barbier,Q328476,2557779547,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:17:44Z,nkl,person,Sverre_Halvorsen,Q7710851,2557779555,NKL ID Sverre_Halvorsen deprecated (now SNL Sverre_Halvorsen_-_norsk_tegner_og_tegnefilmskaper); place of birth; place of death; source for date of birth
+2026-10-16T23:17:45Z,snl,person,Antoine_André_Ravrio,Q2115832,2557779568,SNL ID Antoine_André_Ravrio deprecated (now SNL Antoine-André_Ravrio); SNL ID Antoine-André_Ravrio; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:17:46Z,nkl,person,Sverre_Hansen,Q118237869,2557779575,source for occupation; historical population register ID; date of death (more precise)
+2026-10-16T23:17:48Z,snl,person,Antoine_Arnauld,Q353887,2557779589,source for place of death; source for date of death
+2026-10-16T23:17:48Z,nkl,person,Sverre_Hennum,Q96146119,2557779594,other names; source for place of birth; source for occupation
+2026-10-16T23:17:50Z,snl,person,Antoine_Bourdelle,Q314350,2557779601,other names; source for place of birth; source for place of death; source for date of death
+2026-10-16T23:17:50Z,nkl,person,Sverre_Hjertsen,Q96146110,2557779606,NKL ID Sverre_Hjertsen deprecated (now SNL Sverre_Hjertsen); SNL ID Sverre_Hjertsen; source for place of birth; source for place of death; source for occupation; occupation
+2026-10-16T23:17:51Z,snl,person,Antoine_Chevalier_de_Bertin,Q2853673,2557779614,source for date of birth; source for date of death
+2026-10-16T23:17:52Z,nkl,person,Sverre_Ihle,Q56277247,2557779620,NKL ID Sverre_Ihle deprecated (now SNL Sverre_Ihle); SNL ID Sverre_Ihle; source for place of birth; source for place of death; source for occupation
+2026-10-16T23:17:53Z,snl,person,Antoine_Chintreuil,Q2615268,2557779628,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:17:54Z,nkl,person,Sverre_Ivan,Q17100937,2557779636,work location; place of birth; source for occupation
+2026-10-16T23:17:56Z,snl,person,Antoine_Condorcet,Q201477,2557779643,other names; source for date of birth
+2026-10-16T23:17:56Z,nkl,person,Sverre_Johnsen,Q108655785,2557779649,NKL ID Sverre_Johnsen deprecated (now NKL Sverre_Johnsen_-_1943–); NKL ID Sverre_Johnsen_-_1943–; other names; work location; place of birth; source for occupation
+2026-10-16T23:17:57Z,snl,person,Antoine_Court,Q585889,2557779654,source for place of birth; source for place of death; source for date of birth
+2026-10-16T23:17:58Z,nkl,person,Sverre_Johnsen_-_1,Q109700434,2557779657,NKL ID Sverre_Johnsen_-_1 deprecated (now NKL Sverre_Johnsen_-_1884–1939); NKL ID Sverre_Johnsen_-_1884–1939; source for place of birth; source for place of death; occupation; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:17:58Z,snl,person,Antoine_Coypel,Q585926,,no change
+2026-10-16T23:17:59Z,nkl,person,Sverre_Knudsen,Q46104591,2557779661,NKL ID Sverre_Knudsen deprecated (now NKL Sverre_Knudsen_-_illustratør_og_maler); NKL ID Sverre_Knudsen_-_illustratør_og_maler; source for place of death; source for occupation
+2026-10-16T23:18:01Z,snl,person,Antoine_César_Becquerel,Q318004,2557779666,source for date of death
+2026-10-16T23:18:02Z,nkl,person,Sverre_Knudsen_-_1,Q42307232,2557779670,NKL ID Sverre_Knudsen_-_1 deprecated (now NKL Sverre_Knudsen_-_arkitekt); NKL ID Sverre_Knudsen_-_arkitekt; source for date of death
+2026-10-16T23:18:02Z,snl,person,Antoine_Denis_Chaudet,Q601065,2557779676,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:03Z,nkl,person,Sverre_Loge_Pettersen,Q113198547,2557779678,work location; place of birth; occupation
+2026-10-16T23:18:04Z,snl,person,Antoine_François_Andréossy,Q175286,2557779683,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:05Z,nkl,person,Sverre_Mack,Q96393016,2557779689,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:18:05Z,snl,person,Antoine_François_Prévost,Q311480,,no change
+2026-10-16T23:18:06Z,nkl,person,Sverre_Madsen,Q113198549,2557779695,other names; place of birth; place of death; occupation; source for father
+2026-10-16T23:18:08Z,snl,person,Antoine_Furetière,Q586211,2557779705,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:08Z,nkl,person,Sverre_Narve_Ludvigsen,Q14191214,,no change
+2026-10-16T23:18:09Z,snl,person,Antoine_Griezmann,Q455462,2557779714,source for date of birth
+2026-10-16T23:18:09Z,nkl,person,Sverre_Næsheim,Q96186344,2557779720,source for place of birth; place of death; occupation; source for occupation
+2026-10-16T23:18:11Z,snl,person,Antoine_Hamilton,Q573319,2557779728,other names
+2026-10-16T23:18:11Z,nkl,person,Sverre_Olsen,Q113192014,2557779735,place of birth; occupation
+2026-10-16T23:18:11Z,snl,person,Antoine_Henri_Jomini,Q115652,,no change
+2026-10-16T23:18:13Z,nkl,person,Sverre_Pedersen,Q6039333,2557779744,source for place of birth; source for place of death; source for occupation; source for date of death
+2026-10-16T23:18:13Z,snl,person,Antoine_Laumet_de_la_Cadillac,Q586595,2557779752,other names; source for place of birth; source for place of death; source for date of birth
+2026-10-16T23:18:14Z,nkl,person,Sverre_Pettersen,Q12004406,2557779760,source for place of birth; source for place of death
+2026-10-16T23:18:15Z,snl,person,Antoine_Laurent_Dantan,Q661251,2557779768,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:17Z,nkl,person,Sverre_Poulsen,Q13655108,2557779772,source for place of birth; source for occupation; father
+2026-10-16T23:18:18Z,snl,person,Antoine_Lavoisier,Q39607,2557779776,source for date of death
+2026-10-16T23:18:18Z,nkl,person,Sverre_Sjursen_Aksnes,Q110943153,2557779783,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:18:18Z,snl,person,Antoine_Le_Nain,Q586606,,no change
+2026-10-16T23:18:20Z,nkl,person,Synnøve_Anker_Aurdal,Q14620819,2557779791,NKL ID Synnøve_Anker_Aurdal deprecated (now SNL Synnøve_Anker_Aurdal); source for place of birth; source for place of death; source for spouse; source for child
+2026-10-16T23:18:21Z,snl,person,Antoine_Le_Pautre,Q345884,2557779799,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:21Z,nkl,person,Synnøve_Korssjøen,Q28800532,2557779805,work location; source for place of birth
+2026-10-16T23:18:23Z,snl,person,Antoine_Louis_Claude_Destutt_de_Tracy,Q351691,2557779814,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:23Z,nkl,person,Synnøve_Persen,Q1136086,2557779818,NKL ID Synnøve_Persen deprecated (now SNL Synnøve_Persen); source for place of birth; source for date of birth
+2026-10-16T23:18:25Z,snl,person,Antoine_Marie_Émile_Béthouart,Q695589,2557779829,SNL ID Antoine_Marie_Émile_Béthouart deprecated (now SNL Antoine_Béthouart); SNL ID Antoine_Béthouart; other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:18:25Z,nkl,person,Syver_Hallsteinson_Grøt,Q113198553,2557779842,place of birth
+2026-10-16T23:18:25Z,snl,person,Antoine_Meillet,Q347001,,no change
+2026-10-16T23:19:05Z,nkl,person,Sæbjørn_Buttedahl,Q21078448,2557780119,other names; source for place of birth; source for place of death; source for occupation
+2026-10-16T23:19:06Z,snl,person,Antoine_Montant,Q2854259,2557780122,source for date of birth
+2026-10-16T23:19:06Z,nkl,person,Søffren_Oellssen,Q62600373,,no change
+2026-10-16T23:19:06Z,snl,person,Antoine_Parent,Q586828,,no change
+2026-10-16T23:19:07Z,nkl,person,Sønke_Paulsen,Q131832344,2557780126,work location
+2026-10-16T23:19:08Z,snl,person,Antoine_Perrenot_de_Granvelle,Q451178,2557780130,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:09Z,nkl,person,Sønvis_Olssønn_Holemoen,Q113198554,2557780136,place of birth
+2026-10-16T23:19:10Z,snl,person,Antoine_Pesne,Q203758,2557780146,source for place of birth; source for place of death; source for date of birth
+2026-10-16T23:19:11Z,nkl,person,Søren_Andreas_Wiese_Opsahl,Q55766632,2557780149,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:19:12Z,snl,person,Antoine_Pevsner,Q381950,2557780154,source for date of death
+2026-10-16T23:19:13Z,nkl,person,Søren_Begby,Q96097084,2557780161,NKL ID Søren_Begby deprecated (now SNL Søren_Begby); SNL ID Søren_Begby; historical population register ID; date of death (more precise)
+2026-10-16T23:19:14Z,snl,person,Antoine_Pierre_Joseph_Barnave,Q551481,2557780169,other names; source for date of birth
+2026-10-16T23:19:14Z,nkl,person,Søren_Lexow-Hansen,Q27949202,,no change
+2026-10-16T23:19:15Z,snl,person,Antoine_Pinay,Q356724,2557780175,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:16Z,nkl,person,Søren_Olavsson_Breidalen,Q113198556,2557780180,place of birth
+2026-10-16T23:19:17Z,snl,person,Antoine_Quentin_Fouquier-Tinville,Q453302,2557780186,source for place of death; source for date of death
+2026-10-16T23:19:18Z,nkl,person,Søren_Onsager,Q4335002,2557780192,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:19:19Z,snl,person,Antoine_Rivarol,Q203952,2557780199,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:20Z,nkl,person,Søren_Steen-Johnsen,Q17195123,2557780206,source for place of birth; place of death; source for occupation; occupation
+2026-10-16T23:19:21Z,snl,person,Antoine_Saint-Just,Q27764,2557780213,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:22Z,nkl,person,Tallev_Hallvorson_Espetveit,Q113198558,2557780222,other names; place of birth; place of death
+2026-10-16T23:19:23Z,snl,person,Antoine_Tassaert,Q51990,2557780229,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:19:24Z,nkl,person,Targjei_Olavson_Dalastøyl,Q113198560,2557780238,place of birth; place of death
+2026-10-16T23:19:25Z,snl,person,Antoine_Volodine,Q2266367,2557780243,other names
+2026-10-16T23:19:26Z,nkl,person,Teddy_Røwde,Q12005329,2557780248,NKL ID Teddy_Røwde deprecated (now SNL Teddy_Røwde); other names; place of birth; place of death; source for occupation; source for father; source for date of birth; source for date of death
+2026-10-16T23:19:27Z,snl,person,Antoine_Watteau,Q183221,2557780257,other names
+2026-10-16T23:19:28Z,nkl,person,Terje_Bergstad,Q16019643,2557780262,work location; source for place of birth; source for place of death; occupation; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:19:28Z,snl,person,Antoine_de_La_Sale,Q587247,,no change
+2026-10-16T23:19:29Z,nkl,person,Terje_Bomann-Larsen,Q113279608,2557780269,NKL ID Terje_Bomann-Larsen deprecated (now SNL Terje_Bomann-Larsen); place of birth; occupation; source for sibling
+2026-10-16T23:19:30Z,snl,person,Antoine_de_Saint-Exupéry,Q2908,2557780278,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:19:31Z,nkl,person,Terje_Fagermo,Q17058169,2557780285,other names; work location; place of birth; source for occupation; father
+2026-10-16T23:19:32Z,snl,person,Antoine_Étex,Q587417,2557780293,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:33Z,nkl,person,Terje_Grøstad,Q3434689,2557780305,source for place of birth; occupation; source for occupation; source for date of death
+2026-10-16T23:19:34Z,snl,person,Antoine_Ó_Reachtabhra,Q2661222,2557780315,other names; source for date of birth; source for date of death
+2026-10-16T23:19:35Z,nkl,person,Terje_Håkon_Risberg,Q19974633,2557780324,work location; source for place of birth; occupation; source for date of birth
+2026-10-16T23:19:36Z,snl,person,Antoinette_Bourignon_de_la_Porte,Q270552,2557780333,source for place of birth; source for date of birth
+2026-10-16T23:19:37Z,nkl,person,Terje_Meyer,Q7702478,2557780338,source for place of birth; source for date of birth
+2026-10-16T23:19:38Z,snl,person,Antoinette_Meyn,Q4967167,2557780343,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:19:39Z,nkl,person,Terje_Moe,Q12005533,2557780349,work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T23:19:40Z,snl,person,Anton_Adrian_Mussert,Q537005,2557780355,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:41Z,nkl,person,Terje_Resell,Q58903628,2557780362,work location; source for place of birth; occupation; source for father; source for spouse; source for date of birth
+2026-10-16T23:19:42Z,snl,person,Anton_Arenskij,Q313970,2557780371,other names
+2026-10-16T23:19:43Z,nkl,person,Terje_Roalkvam,Q55473048,2557780377,NKL ID Terje_Roalkvam deprecated (now SNL Terje_Roalkvam); SNL ID Terje_Roalkvam; source for date of birth
+2026-10-16T23:19:44Z,snl,person,Anton_Aure,Q12713470,2557780387,other names; source for place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T23:19:45Z,nkl,person,Terje_Strand,Q96194584,2557780390,source for occupation
+2026-10-16T23:19:46Z,snl,person,Anton_Aškerc,Q561804,2557780397,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:19:47Z,nkl,person,Terje_Svärd_Gudmundset,Q131767581,2557780402,place of birth; occupation
+2026-10-16T23:19:48Z,snl,person,Anton_Bast,Q5566977,2557780407,source for place of birth; source for place of death
+2026-10-16T23:19:49Z,nkl,person,Terje_Torp_Pettersen,Q56273536,2557780414,work location; source for place of birth; source for occupation
+2026-10-16T23:19:50Z,snl,person,Anton_Beinset,Q11958406,2557780419,place of birth; place of death; occupation; source for date of death
+2026-10-16T23:21:00Z,nkl,person,Terje_Uhrn,Q19974318,2557780855,work location; source for place of birth; source for occupation
+2026-10-16T23:21:00Z,snl,person,Anton_Bernolák,Q588302,,no change
+2026-10-16T23:21:01Z,nkl,person,Terje_Westfoss,Q55399286,2557780863,work location; source for place of birth; source for date of birth
+2026-10-16T23:21:02Z,snl,person,Anton_Blom,Q4775685,2557780867,source for date of death
+2026-10-16T23:21:03Z,nkl,person,Terje_Ythjall,Q12005575,2557780875,NKL ID Terje_Ythjall deprecated (now SNL Terje_Ythjall); source for place of birth
+2026-10-16T23:21:04Z,snl,person,Anton_Bruckner,Q81752,2557780880,source for place of death; source for date of death
+2026-10-16T23:21:05Z,nkl,person,Tertitt_Prestegaard,Q131575622,2557780884,other names; work location; place of birth; occupation
+2026-10-16T23:21:06Z,snl,person,Anton_Christian_Bang,Q3356252,2557780889,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:07Z,nkl,person,Theodor_Anton_Bahr,Q61415387,2557780895,source for place of birth; source for place of death; source for occupation; source for date of birth
+2026-10-16T23:21:08Z,snl,person,Anton_Christian_Houen,Q17119755,2557780899,source for place of birth; place of death; source for occupation
+2026-10-16T23:21:09Z,nkl,person,Theodor_Broch,Q21088056,2557780904,source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:21:10Z,snl,person,Anton_Corbijn,Q349842,2557780909,source for place of birth; source for date of birth
+2026-10-16T23:21:11Z,nkl,person,Theodor_Friestad,Q64143180,2557780913,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:12Z,snl,person,Anton_David_Svendsen_Hjorth,Q14542357,2557780919,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:21:13Z,nkl,person,Theodor_Kittelsen,Q380085,2557780927,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:21:14Z,snl,person,Anton_Delvig,Q327015,2557780934,other names; source for place of birth; source for date of birth
+2026-10-16T23:21:15Z,nkl,person,Theodor_Laureng,Q52146382,2557780941,source for place of birth; occupation; source for occupation
+2026-10-16T23:21:16Z,snl,person,Anton_Denikin,Q108314,2557780952,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:17Z,nkl,person,Theodor_Ludvig_Wilberg,Q84156154,2557780959,source for place of birth; source for place of death; occupation; source for date of birth; source for date of death
+2026-10-16T23:21:18Z,snl,person,Anton_Dohrn,Q62229,2557780970,source for place of death; source for date of death
+2026-10-16T23:21:19Z,nkl,person,Theodor_Svendsen_Aavang,Q110943055,2557780983,source for occupation; source for date of birth
+2026-10-16T23:21:20Z,snl,person,Anton_Dolin,Q588942,2557780997,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:21Z,nkl,person,Theodor_Søvig,Q108178371,2557781009,place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T23:21:21Z,snl,person,Anton_Eduard_van_Arkel,Q902921,,no change
+2026-10-16T23:21:22Z,nkl,person,Therese_Christensen,Q55462221,2557781020,source for occupation; occupation; source for spouse; source for date of death
+2026-10-16T23:21:23Z,snl,person,Anton_Eliassen,Q4559709,2557781035,source for place of birth; source for father
+2026-10-16T23:21:24Z,nkl,person,Therese_Nortvedt,Q17106130,2557781046,work location; source for place of birth; occupation; source for occupation
+2026-10-16T23:21:25Z,snl,person,Anton_Fredrik_Klaveness,Q15999141,2557781052,place of birth; place of death; source for father
+2026-10-16T23:21:26Z,nkl,person,Thomas_Breivik,Q96142771,2557781062,source for place of birth; source for occupation; occupation; source for spouse
+2026-10-16T23:21:27Z,snl,person,Anton_Graff,Q310213,2557781072,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:21:28Z,nkl,person,Thomas_Fearnley,Q1969461,2557781077,source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:21:29Z,snl,person,Anton_Grassi,Q589804,2557781089,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:30Z,nkl,person,Thomas_Frang,Q64142847,2557781099,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:21:31Z,snl,person,Anton_Günther,Q69137,2557781106,source for place of birth; source for place of death
+2026-10-16T23:21:32Z,nkl,person,Thomas_Holtan,Q96146127,2557781116,source for place of birth; place of death; source for occupation
+2026-10-16T23:21:33Z,snl,person,Anton_H._Westergård,Q589933,2557781126,source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:34Z,nkl,person,Thomas_Legler,Q11897402,2557781137,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:21:35Z,snl,person,Anton_Hansen,Q4587989,2557781145,other names; place of death
+2026-10-16T23:21:36Z,nkl,person,Thomas_Olsen_Blix,Q20142033,2557781153,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:37Z,snl,person,Anton_Hansen_Tammsaare,Q353637,2557781159,source for date of birth; source for date of death
+2026-10-16T23:21:38Z,nkl,person,Thomas_Øysteinson_Luraas,Q7791980,2557781167,NKL ID Thomas_Øysteinson_Luraas deprecated (now SNL Thomas_Luraas); other names; source for sibling
+2026-10-16T23:21:39Z,snl,person,Anton_Heiller,Q590157,2557781174,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:21:40Z,nkl,person,Thor_Bautz,Q110944597,2557781181,NKL ID Thor_Bautz deprecated (now SNL Thor_Bautz); SNL ID Thor_Bautz; work location; place of death; source for occupation; source for date of death
+2026-10-16T23:21:41Z,snl,person,Anton_Helmersberg,Q55451931,2557781189,source for place of birth; place of death
+2026-10-16T23:21:42Z,nkl,person,Thor_Erdahl,Q7796056,2557781198,work location; place of birth; source for occupation; occupation
+2026-10-16T23:21:43Z,snl,person,Anton_Henrik_Ræder,Q4775983,2557781204,source for place of birth; place of death; occupation; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:21:44Z,nkl,person,Thor_Sandborg,Q131299314,2557781210,work location; source for occupation; occupation
+2026-10-16T23:21:45Z,snl,person,Anton_Jenssen,Q11958417,2557781215,source for place of birth; source for place of death; source for occupation; source for father; source for date of birth; source for date of death
+2026-10-16T23:21:46Z,nkl,person,Thora_Quiller,Q113198562,2557781218,place of birth; place of death
+2026-10-16T23:21:47Z,snl,person,Anton_Jervell,Q16658342,2557781223,source for date of birth; source for date of death
+2026-10-16T23:22:23Z,nkl,person,Thoralf_Gjesdal,Q15633821,2557781408,place of birth; place of death; source for occupation
+2026-10-16T23:22:24Z,snl,person,Anton_Johan_Johanson,Q11958415,2557781414,place of birth; place of death; source for date of birth; source for date of death
+2026-10-16T23:22:25Z,nkl,person,Thoralf_Hauff,Q113565366,2557781419,other names; place of birth; place of death; occupation
+2026-10-16T23:22:26Z,snl,person,Anton_Johnson_Brandt,Q4775827,2557781427,SNL ID Anton_Johnson_Brandt deprecated (now SNL Anton_Brandt); SNL ID Anton_Brandt; source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:22:27Z,nkl,person,Thoralf_Klouman,Q4588564,2557781437,source for occupation; source for spouse
+2026-10-16T23:22:29Z,snl,person,Anton_Johnson_Fridrichsen,Q5743852,2557781449,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:22:30Z,nkl,person,Thoralv_Sundt-Ohlsen,Q110176528,2557781458,other names; place of birth; place of death; source for occupation; occupation
+2026-10-16T23:22:30Z,snl,person,Anton_Jørgen_Andersen,Q590896,2557781465,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:22:31Z,nkl,person,Thorben_Viking_Bille,Q44591962,2557781475,source for place of birth; source for place of death; occupation; source for date of birth; source for date of death
+2026-10-16T23:22:32Z,snl,person,Anton_Karl_Hagbart_Jakobsen,Q16760859,2557781484,SNL ID Anton_Karl_Hagbart_Jakobsen deprecated (now SNL Anton_Jakobsen); SNL ID Anton_Jakobsen; place of death; occupation; source for occupation; source for date of birth
+2026-10-16T23:22:33Z,nkl,person,Thorbjørn_Danielsen,Q96142787,2557781495,work location; source for place of birth; source for occupation
+2026-10-16T23:22:33Z,snl,person,Anton_Karlgren,Q5900861,,no change
+2026-10-16T23:22:35Z,nkl,person,Thorbjørn_Egner,Q721766,2557781509,source for place of birth; source for place of death; occupation; source for occupation
+2026-10-16T23:22:35Z,snl,person,Anton_Kontra,Q12301970,2557781519,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:22:36Z,nkl,person,Thorbjørn_Lie-Jørgensen,Q12006182,2557781530,source for place of birth; source for place of death; source for occupation; source for date of death
+2026-10-16T23:22:38Z,snl,person,Anton_LaVey,Q26168,2557781541,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:22:38Z,nkl,person,Thorbjørn_Rygh,Q47789737,2557781552,work location; source for spouse; source for date of birth; source for date of death
+2026-10-16T23:22:39Z,snl,person,Anton_Ludvik_Alvestad,Q4579525,2557781565,source for date of birth; source for date of death
+2026-10-16T23:22:40Z,nkl,person,Thorbjørn_Øritzland,Q134458938,2557781576,other names; work location; place of birth; source for occupation; date of death
+2026-10-16T23:22:41Z,snl,person,Anton_Martin_Grønningsæter,Q11958414,2557781586,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:22:43Z,nkl,person,Thore_Furulund,Q12006149,2557781603,source for place of birth; occupation; source for occupation; source for date of death
+2026-10-16T23:22:43Z,snl,person,Anton_Martin_Schweigaard,Q591793,2557781611,other names; source for place of birth; source for place of death; source for occupation
+2026-10-16T23:22:44Z,nkl,person,Thore_Hansen,Q5788670,2557781621,NKL ID Thore_Hansen deprecated (now SNL Thore_Hansen); source for occupation; father; source for date of birth; source for date of death
+2026-10-16T23:22:45Z,snl,person,Anton_Melbye,Q3486604,2557781627,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:22:46Z,nkl,person,Thore_Heramb,Q17096653,2557781634,source for place of birth; place of death; source for occupation
+2026-10-16T23:22:48Z,snl,person,Anton_Mohr,Q11958420,2557781640,source for date of birth; source for date of death
+2026-10-16T23:22:49Z,nkl,person,Thorleif_Heyerdahl,Q96146229,2557781649,NKL ID Thorleif_Heyerdahl deprecated (now SNL Thorleif_Heyerdahl); SNL ID Thorleif_Heyerdahl; source for place of birth; place of death; source for occupation
+2026-10-16T23:22:49Z,snl,person,Anton_Poulsson,Q14512476,2557781656,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:22:50Z,nkl,person,Thorleif_Jensen,Q110800867,2557781662,source for place of birth; occupation
+2026-10-16T23:22:51Z,snl,person,Anton_Qvam,Q3356502,2557781668,source for occupation; source for date of birth; source for date of death
+2026-10-16T23:22:52Z,nkl,person,Thorolf_Holmboe,Q2695615,2557781673,source for place of death; source for occupation
+2026-10-16T23:22:54Z,snl,person,Anton_Raphael_Mengs,Q76718,2557781677,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:22:55Z,nkl,person,Thorstein_Rittun,Q19848667,2557781681,work location; source for place of birth; source for occupation; occupation; source for spouse; source for date of birth
+2026-10-16T23:22:56Z,snl,person,Anton_Rosing,Q6080318,2557781691,source for place of birth; source for place of death; source for occupation; source for mother; source for spouse; source for sibling; source for date of birth; source for date of death
+2026-10-16T23:22:57Z,nkl,person,Thorvald_Astrup,Q4571729,2557781695,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:22:58Z,snl,person,Anton_Rubinstein,Q87567,2557781702,other names; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:22:58Z,nkl,person,Thorvald_Buch,Q63527315,2557781706,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:23:00Z,snl,person,Anton_Rønneberg,Q4775982,2557781711,source for place of birth; source for place of death; source for father; source for spouse; source for date of birth; source for date of death
+2026-10-16T23:23:00Z,nkl,person,Thorvald_Erichsen,Q1027392,2557781716,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:23:02Z,snl,person,Anton_Schjøth,Q11958423,2557781719,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:23:03Z,nkl,person,Thorvald_Hagbart_Torgersen,Q12006239,2557781725,source for place of birth; source for place of death; source for occupation
+2026-10-16T23:23:03Z,snl,person,Anton_Semjonovitsj_Makarenko,Q297448,2557781732,source for date of birth; source for date of death
+2026-10-16T23:23:05Z,nkl,person,Thorvald_Hellesen,Q13425753,2557781740,source for place of birth; source for place of death; source for occupation; source for father; source for spouse
+2026-10-16T23:23:06Z,snl,person,Anton_Skulberg,Q4776012,2557781744,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:23:06Z,nkl,person,Thorvald_Slettebak,Q132136743,2557781748,other names; place of birth; occupation
+2026-10-16T23:23:07Z,snl,person,Anton_Sophus_Bachke,Q11958428,2557781752,source for place of birth; source for father; source for sibling; source for date of birth; source for date of death
+2026-10-16T23:23:09Z,nkl,person,Thøger_Leonard_Binneballe,Q12006263,2557781755,place of birth (more precise); source for occupation
+2026-10-16T23:23:09Z,snl,person,Anton_Stephansen,Q63307335,2557781759,source for place of birth; source for child; source for date of birth; source for date of death
+2026-10-16T23:23:11Z,nkl,person,Tias_Eckhoff,Q497969,2557781761,work location; source for place of birth; source for date of death
+2026-10-16T23:23:11Z,snl,person,Anton_Svensson,Q26696187,2557781764,place of death; source for date of birth; source for date of death
+2026-10-16T23:23:52Z,nkl,person,Tidemand_Gjørud,Q12006286,2557782021,source for occupation; source for date of birth
+2026-10-16T23:23:53Z,snl,person,Anton_Thorkildsen_Omholt,Q4776033,2557782029,source for date of birth
+2026-10-16T23:23:54Z,nkl,person,Tit_Mohr,Q17105178,2557782037,other names; work location; source for occupation
+2026-10-16T23:23:55Z,snl,person,Anton_Tsjekhov,Q5685,2557782048,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:23:56Z,nkl,person,Titti_Karsten,Q63485417,2557782053,place of death
+2026-10-16T23:23:57Z,snl,person,Anton_Webern,Q190933,2557782059,other names; source for date of birth
+2026-10-16T23:23:58Z,nkl,person,Tittit_Wolden,Q41776264,2557782060,other names; work location; place of birth; occupation; date of death
+2026-10-16T23:23:59Z,snl,person,Anton_Wildgans,Q84894,2557782063,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:24:00Z,nkl,person,Tolle_Bleiklie,Q137041277,2557782068,other names; place of birth
+2026-10-16T23:24:01Z,snl,person,Anton_Wilhelm_Brøgger_-_norsk_arkeolog,Q3316616,2557782071,source for place of birth; source for place of death; source for father; source for child; source for date of birth
+2026-10-16T23:24:02Z,nkl,person,Tom_Bache-Wiig,Q12006616,2557782076,work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T23:24:03Z,snl,person,Anton_Wilhelm_Brøgger_-_norsk_boktrykker,Q4776065,2557782080,place of birth; place of death; source for child; source for date of birth; source for date of death
+2026-10-16T23:24:04Z,nkl,person,Tom_Doran,Q113198566,2557782083,source for place of death; source for occupation
+2026-10-16T23:24:05Z,snl,person,Anton_Wilhelm_von_Fangen,Q47786506,2557782087,source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:24:06Z,nkl,person,Tom_Gundersen,Q12006635,2557782093,NKL ID Tom_Gundersen deprecated (now SNL Tom_Gundersen); SNL ID Tom_Gundersen; other names; place of birth
+2026-10-16T23:24:07Z,snl,person,Anton_av_Bourbon,Q310334,2557782096,other names; source for date of birth; source for date of death
+2026-10-16T23:24:08Z,nkl,person,Tom_Lid,Q20155465,2557782099,NKL ID Tom_Lid deprecated (now SNL Tom_Lid); SNL ID Tom_Lid; source for place of birth
+2026-10-16T23:24:09Z,snl,person,Anton_van_Duinkerken,Q447108,2557782103,pseudonym; source for place of birth; source for place of death; source for date of death
+2026-10-16T23:24:10Z,nkl,person,Tone_Indrebø,Q56652844,2557782112,NKL ID Tone_Indrebø deprecated (now SNL Tone_Indrebø); SNL ID Tone_Indrebø; work location; source for place of birth; source for occupation
+2026-10-16T23:24:11Z,snl,person,Anton_van_Leeuwenhoek,Q43522,2557782119,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:24:12Z,nkl,person,Tone_Saastad,Q116010772,2557782126,work location; place of birth
+2026-10-16T23:24:13Z,snl,person,Antonello_da_Messina,Q5594,2557782130,source for date of death
+2026-10-16T23:24:14Z,nkl,person,Tone_Vigeland,Q17113635,2557782132,work location; source for place of birth; source for father
+2026-10-16T23:24:15Z,snl,person,Antoni_Clavé,Q537652,2557782138,source for date of birth
+2026-10-16T23:24:16Z,nkl,person,Tonje_Strøm,Q4590126,2557782141,work location; occupation; source for occupation
+2026-10-16T23:24:17Z,snl,person,Antoni_Gaudí,Q25328,2557782143,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:18Z,nkl,person,Tor_Bomann-Larsen,Q329327,2557782146,source for place of birth; source for occupation; source for spouse
+2026-10-16T23:24:19Z,snl,person,Antoni_Słonimski,Q598050,2557782151,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:20Z,nkl,person,Tor_Hoff,Q52148728,2557782156,place of birth; place of death; source for occupation
+2026-10-16T23:24:21Z,snl,person,Antoni_Tàpies,Q158099,2557782161,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:22Z,nkl,person,Tor_Hognestad,Q17096821,2557782167,place of birth
+2026-10-16T23:24:23Z,snl,person,Antonia_-_den_yngre,Q229836,2557782169,source for date of birth
+2026-10-16T23:24:24Z,nkl,person,Tor_Kvarv,Q17100611,2557782175,NKL ID Tor_Kvarv deprecated (now SNL Tor_Kvarv); SNL ID Tor_Kvarv; work location; source for place of birth; source for place of death; occupation; source for date of birth; source for date of death
+2026-10-16T23:24:25Z,snl,person,Antonia_Fraser,Q242796,2557782178,other names
+2026-10-16T23:24:26Z,nkl,person,Tor_Refsum,Q7825251,2557782181,place of birth; place of death; occupation; source for occupation
+2026-10-16T23:24:27Z,snl,person,Antonia_Pozzi,Q272797,2557782186,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:28Z,nkl,person,Tor_Sveinson_Øykjelid,Q131680669,2557782189,other names
+2026-10-16T23:24:29Z,snl,person,Antonie_Tiberg,Q4982799,2557782194,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:30Z,nkl,person,Tor_Vaa,Q17113732,2557782198,other names; place of birth; source for occupation; source for father
+2026-10-16T23:24:31Z,snl,person,Antonin_Artaud,Q187166,2557782204,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:32Z,nkl,person,Tora_Fleischer,Q130744653,2557782207,work location; place of birth; place of death; occupation; date of death
+2026-10-16T23:24:32Z,snl,person,Antonina_-_Bysants,Q291932,,no change
+2026-10-16T23:24:33Z,nkl,person,Torbjørg_Deinboll_Fortun,Q99695506,2557782211,other names; work location; place of birth; occupation; source for mother
+2026-10-16T23:24:34Z,snl,person,Antonine_Maillet,Q946031,2557782216,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:35Z,nkl,person,Torbjørn_Afdal,Q16161707,2557782219,NKL ID Torbjørn_Afdal deprecated (now SNL Torbjørn_Afdal); place of birth; place of death
+2026-10-16T23:24:36Z,snl,person,Antoninus_Pius,Q1429,2557782225,source for date of birth; source for date of death
+2026-10-16T23:24:37Z,nkl,person,Torbjørn_Alvsåker,Q109527846,2557782229,source for occupation
+2026-10-16T23:24:38Z,snl,person,Antonio_Baldini,Q599687,2557782236,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:24:39Z,nkl,person,Torbjørn_Bekken,Q131827125,2557782245,place of death
+2026-10-16T23:24:40Z,snl,person,Antonio_Banderas,Q41548,2557782250,source for place of birth; source for date of birth
+2026-10-16T23:25:22Z,nkl,person,Torbjørn_Kvasbø,Q12006924,2557782505,work location
+2026-10-16T23:25:23Z,snl,person,Antonio_Berlese,Q2066586,2557782510,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:25:24Z,nkl,person,Tore_Aarholt,Q63348042,2557782516,work location; source for place of birth; occupation; source for occupation; source for date of birth
+2026-10-16T23:25:25Z,snl,person,Antonio_Bibalo,Q1773750,2557782520,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:25:26Z,nkl,person,Tore_Asbjørnsen_Risøyne,Q55394991,2557782523,other names
+2026-10-16T23:25:27Z,snl,person,Antonio_Buero_Vallejo,Q373044,2557782529,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:25:28Z,nkl,person,Tore_Bernitz_Pedersen,Q12006961,2557782532,work location; source for place of birth; occupation; source for date of birth
+2026-10-16T23:25:29Z,snl,person,Antonio_Caldara,Q311571,2557782537,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:25:30Z,nkl,person,Tore_Bjørn_Skjølsvik,Q17107384,2557782542,source for place of birth; source for occupation
+2026-10-16T23:25:32Z,snl,person,Antonio_Canova,Q5547,2557782546,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:25:32Z,nkl,person,Tore_Eckhoff_Deinboll,Q12006967,2557782548,work location; source for place of birth; occupation; source for spouse
+2026-10-16T23:25:33Z,snl,person,Antonio_Cesti,Q350695,2557782554,other names; source for place of birth; source for place of death; source for date of death
+2026-10-16T23:25:34Z,nkl,person,Tore_Gunnar_Olsen,Q55440742,2557782555,work location; place of birth; source for occupation
+2026-10-16T23:25:35Z,snl,person,Antonio_Conte,Q26580,2557782557,source for place of birth; source for date of birth
+2026-10-16T23:25:36Z,nkl,person,Tore_Haaland,Q56273441,2557782566,other names; work location; source for place of birth; source for place of death; source for occupation
+2026-10-16T23:25:36Z,snl,person,Antonio_Conti,Q2087202,,no change
+2026-10-16T23:25:37Z,nkl,person,Tore_Hamsun,Q12006978,2557782570,work location; source for place of birth; source for occupation; spouse
+2026-10-16T23:25:38Z,snl,person,Antonio_Corpora,Q470314,2557782574,source for place of birth; source for place of death
+2026-10-16T23:25:39Z,nkl,person,Tore_Hansen,Q12006976,2557782578,NKL ID Tore_Hansen deprecated (now SNL Tore_Hansen); place of birth
+2026-10-16T23:25:40Z,snl,person,Antonio_Cánovas_del_Castillo,Q336901,2557782584,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:25:41Z,nkl,person,Tore_Juell,Q12006986,2557782587,work location; source for place of birth; source for occupation
+2026-10-16T23:25:42Z,snl,person,Antonio_Diabelli,Q160061,2557782591,source for place of birth; source for place of death; source for date of death
+2026-10-16T23:25:43Z,nkl,person,Tore_Kleven,Q113198571,2557782592,other names; place of birth; source for occupation
+2026-10-16T23:25:44Z,snl,person,Antonio_Fogazzaro,Q470067,2557782595,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:25:45Z,nkl,person,Tore_Kravik,Q110224325,2557782598,place of birth; place of death
+2026-10-16T23:25:45Z,snl,person,Antonio_Francesco_Grazzini,Q602056,,no change
+2026-10-16T23:25:46Z,nkl,person,Tore_Sigvaldsen,Q23944590,2557782604,work location; source for place of birth; source for occupation
+2026-10-16T23:25:47Z,snl,person,Antonio_Gades,Q561048,2557782607,source for date of birth; source for date of death
+2026-10-16T23:25:48Z,nkl,person,Tore_Stoa_Hansen,Q55075773,2557782613,NKL ID Tore_Stoa_Hansen deprecated (now NKL Tore_Stoa); NKL ID Tore_Stoa; work location; source for place of birth; place of death; occupation; source for date of death
+2026-10-16T23:25:49Z,snl,person,Antonio_Ghislanzoni,Q524960,2557782619,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:25:50Z,nkl,person,Torgeir_Alvsaker,Q12007025,2557782628,source for place of death; source for occupation
+2026-10-16T23:25:52Z,snl,person,Antonio_Gramsci,Q83003,2557782638,source for place of death; source for date of birth
+2026-10-16T23:25:52Z,nkl,person,Torgrim_Hagen,Q63386868,2557782642,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:25:53Z,snl,person,Antonio_Hart,Q602429,2557782647,source for place of birth; source for date of birth
+2026-10-16T23:25:53Z,nkl,person,Torgrim_Salveson_Lindefjeld,Q113198574,,no change
+2026-10-16T23:25:54Z,snl,person,Antonio_López_de_Santa_Anna,Q189145,2557782661,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:25:55Z,nkl,person,Toril_Bjorg,Q101111402,2557782671,place of birth; source for father; source for date of birth
+2026-10-16T23:25:56Z,snl,person,Antonio_Machado,Q243771,2557782683,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:25:57Z,nkl,person,Torild_Børretzen,Q12007058,2557782693,work location; place of birth; source for occupation; occupation; source for date of birth
+2026-10-16T23:25:58Z,snl,person,Antonio_Maria_Valsalva,Q603325,2557782704,source for place of birth; source for date of birth; source for date of death
+2026-10-16T23:25:59Z,nkl,person,Torill_Nøst,Q63348311,2557782713,work location; source for place of birth; source for occupation; source for date of birth
+2026-10-16T23:26:00Z,snl,person,Antonio_Mascarenhas_Monteiro,Q336265,2557782731,source for date of birth; source for date of death
+2026-10-16T23:26:01Z,nkl,person,Torkel_Arnesen,Q104175568,2557782739,work location; occupation; source for occupation; source for date of birth; source for date of death
+2026-10-16T23:26:02Z,snl,person,Antonio_Muñoz_Molina,Q450335,2557782754,source for date of birth
+2026-10-16T23:26:02Z,nkl,person,Torkjell_Knutson_Svarteberg_Gåsterud,Q113198578,,no change
+2026-10-16T23:26:03Z,snl,person,Antonio_Negri,Q310341,2557782771,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-16T23:26:04Z,nkl,person,Torkjell_Simonsson_Flottorv,Q131684506,2557782782,other names
+2026-10-16T23:26:05Z,snl,person,Antonio_Nusa,Q107357509,2557782795,source for place of birth
+2026-10-16T23:26:06Z,nkl,person,Torleif_Sohlberg,Q96195211,2557782808,source for place of birth; place of death; source for occupation
+2026-10-16T23:26:07Z,snl,person,Antonio_Oscar_de_Fragoso_da_Carmona,Q314022,2557782819,SNL ID Antonio_Oscar_de_Fragoso_da_Carmona deprecated (now SNL Óscar_Carmona); SNL ID Óscar_Carmona; source for place of birth; source for place of death; source for date of birth; source for date of death
