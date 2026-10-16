@@ -176,24 +176,22 @@ def links_in(q):
     return len(r["query"]["backlinks"])
 
 
-RESEARCH = ("Q1650915", "Q901", "Q3400985", "Q1622272", "Q121594", "Q81096", "Q39631", "Q188094", "Q1792450",
-            "Q2306091", "Q14467526", "Q201788", "Q4964182", "Q11063", "Q169470", "Q170790", "Q593644", "Q205375")
-# researcher, scientist, academic, university teacher, professor, engineer, physician, economist, art historian,
-# sociologist, linguist, historian, philosopher, astronomer, physicist, mathematician, chemist, inventor
-_research = None
+NOT_RESEARCH = ("Q33999", "Q2066131", "Q639669", "Q177220", "Q5716684", "Q4610556", "Q947873", "Q2405480")
+# actor, athlete, musician, singer, dancer, model, television presenter, voice actor: work that does not come with an
+# ORCID iD. (Psychologists, lawyers, physicians or librarians often do: only these clearly other kinds block a merge.)
+_not_research = None
 
 
-def research_like(occupations):
-    """Whether one of these occupations is research work (a subclass of researcher, scientist, academic, ...): an actor
-    and a researcher of one name are two people, an economist and a researcher may be one (Elke Arendt, actress, had
-    the ORCID iD of the food scientist Elke K. Arendt, copied there from GND)."""
-    global _research
-    if _research is None:
+def clearly_not_research(occupations):
+    """Whether every one of these occupations is of a kind that does not go with an ORCID iD (an actor, an athlete):
+    Elke Arendt, actress, born 1939, had the ORCID iD of the food scientist Elke K. Arendt, copied there from GND."""
+    global _not_research
+    if _not_research is None:
         import dictionaries as d
-        rows = d.qlever("SELECT DISTINCT ?c WHERE { VALUES ?top { " + " ".join(f"wd:{q}" for q in RESEARCH) +
+        rows = d.qlever("SELECT DISTINCT ?c WHERE { VALUES ?top { " + " ".join(f"wd:{q}" for q in NOT_RESEARCH) +
                         " } ?c wdt:P279* ?top }")
-        _research = {r[0] for r in rows} | set(RESEARCH)
-    return bool(set(occupations) & _research)
+        _not_research = {r[0] for r in rows} | set(NOT_RESEARCH)
+    return bool(occupations) and set(occupations) <= _not_research
 
 
 def check(orcid, a, b, ea, eb, oname):
@@ -240,10 +238,11 @@ def check(orcid, a, b, ea, eb, oname):
             else:
                 fail.append(f"different {what} IDs")
     oa, ob = set(values(ea, "P106", "id")), set(values(eb, "P106", "id"))
-    if not oa & ob:                                  # an ORCID iD is a researcher's: an actor's item should not have one
+    if not oa & ob:                                  # an actor's or an athlete's item should not carry an ORCID iD
         for q, occ in ((a, oa), (b, ob)):
-            if occ and not research_like(occ):
-                fail.append(f"{q} is not described as a researcher (occupation {', '.join(sorted(occ))})")
+            if clearly_not_research(occ):
+                fail.append(f"{q} describes someone whose work does not come with an ORCID iD "
+                            f"(occupation {', '.join(sorted(occ))})")
     for lang in sorted(set(ea.get("descriptions", {})) & set(eb.get("descriptions", {}))):
         da, db = ea["descriptions"][lang]["value"], eb["descriptions"][lang]["value"]
         if da != db:
@@ -307,7 +306,8 @@ def plural(n, word):
 def page(data):
     rows = data["rows"]
     ok = [r for r in rows if not r["fail"]]
-    why = collections.Counter(f.split(" (")[0].split(":")[0] for r in rows for f in r["fail"][:1])
+    why = collections.Counter(re.sub(r"^Q\d+ ", "one item ", f.split(" (")[0].split(":")[0])
+                              for r in rows for f in r["fail"][:1])
     tools = collections.Counter(r["created_merge"]["tool"] for r in rows)
     users = collections.Counter(r["created_merge"]["user"] for r in rows)
     years_ = collections.Counter(r["created_merge"]["date"][:4] for r in rows)
@@ -332,6 +332,32 @@ def page(data):
         + ", ".join(f"{t}: {n}" for t, n in tools.most_common()) + f"; by {len(users)} accounts "
         f"({', '.join(f'{u} ({n})' for u, n in users.most_common(5))}{', ...' if len(users) > 5 else ''}).",
         "",
+        "== Questions ==",
+        "; Why have these pairs not been merged already, if they are this clear?",
+        f": Most are new. In this sample the newer item was created in 2025 or 2026 for "
+        f"{sum(1 for r in rows if r['created_merge']['date'][:4] in ('2025', '2026'))} of the {len(rows)} pairs, "
+        "most of them with QuickStatements from records of the German National Library (GND), next to an author item "
+        "that already had the ORCID iD."
+        + (f" Of all {data['recent'][1]:,} pairs, {data['recent'][0]:,} ({data['recent'][0] / data['recent'][1]:.0%}) "
+           "have a newer item with a Q-number above 130 million, that is, created since 2024." if data.get("recent") else "")
+        + " Merges are made by hand, one pair at a time, and the [[Wikidata:Database reports/Constraint violations/"
+        "P496#Unique value|constraint report]] lists only the first 5,000 of these values.",
+        "; What if one or both items have Wikipedia articles?",
+        ": Articles on different wikis are no obstacle: the kept item gets all of them. If both items had an article "
+        "on the same wiki, the software would refuse the merge, and the bot skips such pairs: the wiki would have to "
+        "merge its articles first. In this sample "
+        f"{sum(1 for r in rows if r['sitelinks_keep'] or r['sitelinks_merge'])} pairs have an article and none has "
+        "articles on the same wiki on both items.",
+        "; What if the ORCID iD was put on the wrong person?",
+        ": That happens: in this sample an actress's item carried the ORCID iD of a food scientist of the same name, "
+        "copied there from a GND record. The checks below catch such cases through the names, life dates, other "
+        "identifiers and occupations, and every merged pair must be tied to the ORCID record by more than the iD "
+        "itself. Pairs that fail are left alone and listed.",
+        "; Can a merge be undone?",
+        ": Yes. Each merge is logged with both items' revisions before it, and the batches are grouped so they can "
+        "be reviewed and reverted. Within a day, before the links to the merged item are moved, a merge can be undone "
+        "on request.",
+        "",
         "== Checks ==",
         "A pair is merged only if all of these hold, checked again just before the merge:",
         "# exactly these two items carry the ORCID iD, at a rank other than deprecated;",
@@ -343,9 +369,9 @@ def page(data):
         "# where both items give them, the years of birth and death and the sex or gender agree, and the {{P|227}}, "
         "{{P|213}} and {{P|244}} values overlap (differing {{P|214}} values are only noted: VIAF often has two "
         "clusters for one person);",
-        "# neither item describes someone other than a researcher: where their occupations ({{P|106}}) do not "
-        "overlap, each item's occupations must include research work (an actor's item carrying a scientist's "
-        "ORCID iD is a known error);",
+        "# where their occupations ({{P|106}}) do not overlap, neither item describes someone whose work does not "
+        "come with an ORCID iD (an actor, an athlete, a singer, a model: an actress's item carrying a food "
+        "scientist's ORCID iD was found in this sample);",
         "# at least one item is tied to the ORCID record by more than the iD itself: it is the author ({{P|50}}) of "
         "works whose DOIs are on the ORCID record, or its {{P|227}} record at the German National Library itself "
         "links the ORCID iD.",

@@ -42,7 +42,10 @@ WORKS = {"hds": ("Q642074", "P902", "the Historical Dictionary of Switzerland"),
          "nkl": ("Q11992482", "P5081", "Norsk kunstnerleksikon"),           # the other works on snl.no, same API
          "sml": ("Q19378370", "P5082", "Store medisinske leksikon")}
 SNL_HOSTS = {"snl": "snl.no", "nkl": "nkl.snl.no", "sml": "sml.snl.no"}
-IDS = {"P902", "P4342", "P5081", "P5082", "P227", "P214", "P1248", "P4574", "P2504", "P2333"}   # compared as text
+IDS = {"P902", "P4342", "P5081", "P5082", "P227", "P214", "P1248", "P4574", "P2504", "P2333",   # compared as text,
+       "P213", "P244", "P268", "P269", "P496", "P906", "P5587", "P1006", "P7902", "P8313", "P7939", "P2180", "P9324",
+       "P4963", "P3217", "P6194", "P7842", "P13226", "P1710", "P1254", "P4854", "P651", "P13079", "P701"}
+# and never given a source: an identifier is its own reference
 LEGAL_FORMS = {"aksjeselskap": "Q15042660", "as": "Q15042660", "allmennaksjeselskap": "Q14942889",   # Norwegian forms
                "stiftelse": "Q7616418", "samvirkeforetak": "Q59554118", "enkeltpersonforetak": "Q16969092"}
 MOUNTAINS = (("Q8502", "Q207326"), ("Q54050",))         # mountain, summit; then hill
