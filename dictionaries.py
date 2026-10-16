@@ -1255,10 +1255,34 @@ PREFER_OVER_WEAK = False      # until the request says so: a differing value wit
                               # import, gets the entry's value beside it at preferred rank ("best referenced value")
 
 
+def life_years_clash(claims, entry):
+    """A note when the entry's life years show another person than the item's: a year of birth or death two or more
+    years off every year the item gives, or both years off (Jacques Martin the philosopher, 1922-1963, whose Lex ID
+    sat on the cartoonist, 1921-2010). Nothing is then added: a place or a relative would be the other person's."""
+    off, shown = {}, []
+    for pid in ("P569", "P570"):
+        ours = [int(f["value"]["value"]["time"][:5]) for f in entry["facts"] if f["pid"] == pid
+                and f["value"]["type"] == "time" and f["value"]["value"]["precision"] >= 9]
+        theirs = [int(c["mainsnak"]["datavalue"]["value"]["time"][:5]) for c in claims.get(pid, [])
+                  if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"
+                  and c["mainsnak"]["datavalue"]["value"].get("precision", 0) >= 9]
+        if ours and theirs:
+            off[pid] = min(abs(ours[0] - y) for y in theirs)
+            shown.append(f"{'birth' if pid == 'P569' else 'death'} {ours[0]} in the entry, "
+                         f"{'/'.join(map(str, sorted(set(theirs))))} on the item")
+    if any(v >= 2 for v in off.values()) or (len(off) == 2 and all(off.values())):
+        return ("the entry's life years do not fit the item's (" + "; ".join(shown) + "): the identifier is probably "
+                "on another person's item; nothing added")
+    return None
+
+
 def entry_is_person(entry):
-    """Whether the source describes a person: an HDS biography, or SNL metadata with life dates."""
+    """Whether the source describes a person: an HDS biography, or SNL metadata with life dates; for the works of
+    task 3 (sources3.py), what their reader found the entry to be."""
     if entry["work"] == "hds":
         return entry["id"] in hds_open()["bio"]
+    if entry["work"] not in SNL_HOSTS:
+        return entry.get("kind") == "person"
     return any(f["pid"] in ("P569", "P570", "P21", "P4574") for f in entry["facts"])
 
 
@@ -1274,6 +1298,9 @@ def build(ent, entry, today, labels=None):
         return [], [], notes + ["the entry describes " + ("a person" if not is_human else "no person")
                                 + " but the item " + ("does not" if not is_human else "does") + ": the identifier is "
                                 "probably on the wrong item; nothing added"]
+    clash = life_years_clash(claims, entry)
+    if clash:                                              # another person of the same name (Jacques Martin)
+        return [], [], notes + [clash]
     plain = lambda v: urllib.parse.unquote(str(v))      # the query mirror returns some IDs URL-encoded
     if not any(plain(c["mainsnak"].get("datavalue", {}).get("value")) == plain(entry["id"]) for c in claims.get(idp, [])):
         out_claims.append({"type": "statement", "rank": "normal",
@@ -1357,7 +1384,8 @@ def build(ent, entry, today, labels=None):
             done.append(f"{f['label']} (more precise)")
             continue
         if f.get("calendar_unclear") and not (equal and cites(equal[0], work_q)):
-            notes.append(f"{f['label']} {f['value']['value']['time'][1:11]} not used: calendar before 1813 unclear")
+            notes.append(f"{f['label']} {f['value']['value']['time'][1:11]} not used: "
+                         + f.get("calendar_note", "calendar before 1813 unclear"))
             continue
         if equal:
             if f["pid"] not in IDS | {"P21"} and not cites(equal[0], work_q):
