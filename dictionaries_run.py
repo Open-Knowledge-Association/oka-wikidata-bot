@@ -21,6 +21,7 @@ from itertools import zip_longest
 from pathlib import Path
 
 import dictionaries as d
+import userpage as page_builder
 from dictionaries import IDS, WORK2, WORKS, items, out, qlever
 
 APPROVED = True               # Wikidata:Requests for permissions/Bot/OKA bot 2, approved by Ymblanter on 2026-10-14
@@ -486,54 +487,13 @@ def publish():
     env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
     git = lambda *args: subprocess.run(["git", "-C", str(HERE), *args], capture_output=True, text=True, env=env)
     try:
-        git("add", LOG.name, LEFT.name)
+        git("add", LOG.name, LEFT.name, "plan_summary_task2.json")
         if git("diff", "--cached", "--quiet").returncode:
             git("commit", "-q", "-m", f"Task 2 log: {sum(1 for _ in open(LOG, encoding='utf-8')) - 1} entries done")
         git("pull", "-q", "--rebase")
         git("push", "-q")
     except OSError:
         pass
-
-
-def task2_section():
-    """The task 2 section of User:OKA bot: what the task does, and what it has done per source."""
-    rows = list(csv.DictReader(open(LOG, encoding="utf-8"))) if LOG.exists() else []
-    left = list(csv.DictReader(open(LEFT, encoding="utf-8"))) if LEFT.exists() else []
-    repo = "https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/"
-    table = ['{| class="wikitable" style="text-align:right"',
-             "! Source !! Entries !! Checked !! Items edited !! Statements added !! Sources added !! Cases for review"]
-    for work, (q, _, name) in WORKS.items():
-        planned = sum(1 for _ in open(plan_file(work), encoding="utf-8")) if plan_file(work).exists() else 0
-        mine = [r for r in rows if r["work"] == work]
-        changes = [c for r in mine if r["revid"] for c in r["changes"].split("; ")]
-        added = sum(1 for c in changes if not c.startswith("source for") and c != "other names" and "deprecated" not in c)
-        table += ["|-", f'| style="text-align:left" | [[{q}|{name.removeprefix("the ")}]] || {planned:,} || '
-                        f'{len(mine):,} || {sum(1 for r in mine if r["revid"]):,} || {added:,} || '
-                        f'{sum(1 for c in changes if c.startswith("source for")):,} || '
-                        f'{len({r["entry"] for r in left if r["work"] == work}):,}']
-    return "\n".join([
-        "== Task 2: facts from reference works ==",
-        "Approved at [[Wikidata:Requests for permissions/Bot/OKA bot 2]]. Sources: the [[Q642074|Historical Dictionary "
-        "of Switzerland]] (HDS), [[Q746368|Store norske leksikon]] (SNL) and the other works on snl.no, "
-        "[[Q11992482|Norsk kunstnerleksikon]] and [[Q19378370|Store medisinske leksikon]].", "",
-        "For each entry linked to an item, the bot adds the facts the entry states (for people, dates and places of "
-        "birth and death, occupations, relatives and places of origin; for organisations and places, the "
-        "corresponding facts), each with a reference to the entry, and adds the entry as a source where the item "
-        "already has the same value. Where the entry disagrees with an existing value, nothing is added and the case "
-        "is listed for review. Where SNL has renamed an entry, the item's old ID is kept with deprecated rank "
-        "({{P|2241}}: {{Q|Q45403344}}) and the current one is added. Only facts are taken; no text is copied.", "",
-        *table, "|}", "",
-        f"Updated {datetime.datetime.now(datetime.timezone.utc):%d %B %Y, %H:%M} UTC. Every edit is listed in "
-        f"[{repo}{LOG.name} {LOG.name}], and the cases for review in [{repo}{LEFT.name} {LEFT.name}].", ""])
-
-
-def with_task2_section(text):
-    """The user page with its task 2 section replaced by the current one."""
-    start = text.find("== Task 2")
-    if start < 0:
-        return text.rstrip() + "\n\n" + task2_section()
-    end = text.find("\n== ", start + 1)
-    return text[:start] + task2_section() + ("\n" + text[end + 1:] if end >= 0 else "")
 
 
 def run():
@@ -570,13 +530,10 @@ def run():
             append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)
             append(LEFT, ("work", "entry", "item", "title", "note"), left)
             out(f"{b + len(batch)} of {len(todo)}: {sum(1 for r in log if r[5])} saved in this batch")
-            if b == 0 or (b // 50) % 10 == 9 or b + 50 >= len(todo):   # the logs and User:OKA bot
+            if b == 0 or (b // 50) % 10 == 9 or b + 50 >= len(todo):   # User:OKA bot, then the logs
+                plans = {w: sum(1 for _ in open(plan_file(w), encoding="utf-8")) for w in WORKS if plan_file(w).exists()}
+                page_builder.save(site, "Task 2 progress (automatic)", task2_plans=plans)
                 publish()
-                page = pywikibot.Page(site, "User:OKA bot")
-                text = with_task2_section(page.text)
-                if text != page.text:
-                    page.text = text
-                    page.save("Task 2 progress", minor=True)
 
 
 if __name__ == "__main__":

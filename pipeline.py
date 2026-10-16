@@ -28,7 +28,7 @@ from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAM
 from edit import build_edit, build_new, build_p131, drop_language
 from edit_stations_areas import area_seen, builder
 import plan as planmod
-from dictionaries_run import task2_section
+import userpage as page_builder
 
 LOG = ROOT / "edits.csv"
 FIELDS = ["time", "kind", "qid", "uuid", "name", "revid", "changes"]
@@ -192,7 +192,7 @@ def publish_log():
     env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}    # never wait for a password prompt
     git = lambda *args: subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True, env=env)
     try:
-        git("add", "edits.csv")
+        git("add", "edits.csv", "plan_summary_task1.json")
         if git("diff", "--cached", "--quiet").returncode:
             saved = sum(1 for r in logged() if r["revid"])
             git("commit", "-q", "-m", f"Edit log: {saved} saved edits")
@@ -245,84 +245,29 @@ def verify(saved):
 
 # ---------------------------------------------------------------- the bot's user page
 
-# Fuller notes for the user page than common.BATCHES' own (the reasons for each limit)
-NOTES = {
-    "natural": "Valleys, ridges, waterfalls and caves get no heights. No new items are made for caves: swisstopo's type "
-               "\"Grotte, Hoehle\" also covers mine entrances, Lourdes grottoes and natural arches.",
-    "settlements": "Localities and neighbourhoods get no heights. New items are made only for localities of 100 to 9,999 "
-                   "inhabitants: larger ones all have items, and 60,722 of swissNAMES3D's 68,508 localities have fewer "
-                   "than 100 inhabitants (55,156 fewer than 20), mostly single farms and hamlets.",
-    "p131": "Buildings, archaeological sites, fountains and similar items with a position but no municipality get only "
-            "the municipality their position lies in, from [https://www.swisstopo.admin.ch/en/landscape-model-"
-            "swissboundaries3d swissBOUNDARIES3D]: they are not named features in swissNAMES3D. Items that span "
-            "municipalities (waters, glaciers, regions, roads, railway lines, bridges, tunnels) are left out.",
-    "stations": "Railway stations and other public transport stops get a source for their position, their official name "
-                "and, where missing, their municipality, but no labels: station labels follow their own conventions "
-                "(\"Bern railway station\", \"Bahnhof Bern\"), which differ from the official name by design.",
-    "areas": "Municipalities get their area from [https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d "
-             "swissBOUNDARIES3D], in square kilometres with the date the boundaries are valid on, where the item has no "
-             "area or a different one; where it has older values, the new one gets preferred rank as the most recent "
-             "({{P|7452}} {{Q|Q71533355}}), unless another value is already preferred. An equal area without a date gets "
-             "swisstopo as a source; an equal area with an older date is left as it is. Municipalities with a share of "
-             "a large lake are left out for now: their area statistics leave the lake out, swisstopo's include it.",
-}
+def task1_records():
+    """Records per batch: the features of its current plan, plus any logged ones a later plan no longer has (such as
+    the border items taken out on 10 October); and the releases the plans were built from."""
+    plans = {b: planmod.load(b) for b in BATCHES if planmod.plan_path(b).exists()}
+    keys = {}
+    for b, (_, plan_rows) in plans.items():
+        keys[b] = {log_key(log_kind(r), r.get("qid"), r.get("rec", {}).get("uuid")) for r in plan_rows}
+    for r in logged():
+        b = r["kind"].partition(":")[2]
+        if b in keys:
+            keys[b].add(log_key(r["kind"], r["qid"], r["uuid"]))
+    return {b: len(k) for b, k in keys.items()}, [h["release"] for h, _ in plans.values()]
 
 
 def userpage_text():
-    """The user page, with the counts of every batch so far (a batch with a plan file or logged rows)."""
-    rows = logged()
-    edited = len({r["qid"] for r in rows if r["kind"].split(":")[0] == "edit" and r["revid"]})
-    created = sum(1 for r in rows if r["kind"].split(":")[0] == "create" and r["revid"])
-    last = max((r["time"] for r in rows), default="")[:10]
-    logged_batches = {r["kind"].partition(":")[2] for r in rows}
-    batches = [b for b in BATCHES if planmod.plan_path(b).exists() or b in logged_batches] or [""]
-    plans = [planmod.load(b) for b in batches if planmod.plan_path(b).exists()]
-    releases = list(dict.fromkeys(header["release"] for header, _ in plans))
-    release = ", ".join(r for r in releases if r.startswith("swissnames3d"))
-    bounds_release = ", ".join(r.split("_", 1)[1] for r in releases if r.startswith("swissboundaries3d_"))
-    bounds_release = ", release " + bounds_release if bounds_release else ""
-    covers = [w for b in batches for w in BATCHES[b]["covers"]]
-    covers = ", ".join(covers[:-1]) + " and " + covers[-1]
-    notes = "".join("\n* " + (NOTES.get(b) or BATCHES[b]["note"]) for b in batches if NOTES.get(b) or BATCHES[b].get("note"))
-    done = {log_key(r["kind"], r["qid"], r["uuid"]) for r in rows}
-    left = [r for _, plan_rows in plans for r in plan_rows
-            if log_key(log_kind(r), r.get("qid"), r.get("rec", {}).get("uuid")) not in done]
-    to_check = sum(1 for r in left if r["kind"] == "edit")
-    to_create = sum(1 for r in left if r["kind"] == "create")
-    return f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]]); facts from reference works such as the Historical Dictionary of Switzerland and Store norske leksikon ([[Wikidata:Requests for permissions/Bot/OKA bot 2|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
-''This page is updated automatically by the bot after each run, with the operator's permission.''
-
-Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Association). To report a problem, please write on [[User talk:7804j]] or to info@oka.wiki. If the bot misbehaves and I'm not around, any administrator may block it.
-
-'''Source code''' (public, MIT licence): [https://github.com/Open-Knowledge-Association/oka-wikidata-bot github.com/Open-Knowledge-Association/oka-wikidata-bot], with the [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv list of every edit] the bot has made.
-
-== Task: geographic feature updates from swisstopo data ==
-Approved at [[Wikidata:Requests for permissions/Bot/OKA bot]]. Data: [https://www.swisstopo.admin.ch/en/landscape-model-swissnames3d swissNAMES3D] ({{{{Q|{SWISSNAMES3D}}}}}, release {release}) and [https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d swissBOUNDARIES3D] ({{{{Q|{SWISSBOUNDARIES3D}}}}}{bounds_release}), from the Federal Office of Topography.
-
-For Swiss {covers}, the bot adds swisstopo as a source to matching heights and positions, adds missing heights, labels, official names and municipalities, and creates items for official features that have none. Where an existing value comes only from a Wikipedia import and is more than 5 m (height) or 50 m (summit position) off, swisstopo's value is added with preferred rank and {{{{P|7452}}}} {{{{Q|Q98386534}}}}. Pass heights are only sourced when they already match.
-
-The bot does not remove other editors' statements, and does not change existing labels, descriptions or classes. It changes an existing statement only to add a source, to give an old position saved without a precision the precision its digits imply, or to correct its own mistakes (listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/corrections.csv corrections.csv]).
-{notes}
-
-* Items edited: {edited:,}. Items created: {created:,}. Last run: {last}.
-* Still to do in the batches planned so far: {to_check:,} items to check and {to_create:,} to create.
-* Every edit is listed in [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/edits.csv edits.csv].
-
-{task2_section()}"""
+    """The bot's user page (see userpage.py), with the counts of task 1's plans in this clone."""
+    records, releases = task1_records()
+    return page_builder.build_text(task1_plans=records, releases=releases)
 
 
 def userpage(site):
-    import pywikibot
-    text = userpage_text()
-    page = pywikibot.Page(site, "User:OKA bot")
-    live = page.text if page.exists() else ""
-    if "== Task 2" in live:                         # the task 2 run keeps its own section, with its table
-        text = text[:text.index("== Task 2")] + live[live.index("== Task 2"):]
-    if page.exists() and page.text.strip() == text.strip():
-        return False
-    page.text = text
-    page.save(summary="Update task status (automatic, after a run)", minor=True, bot=True)
-    return True
+    records, releases = task1_records()
+    return page_builder.save(site, "Update task status (automatic, after a run)", task1_plans=records, releases=releases)
 
 
 # ---------------------------------------------------------------- CLI
