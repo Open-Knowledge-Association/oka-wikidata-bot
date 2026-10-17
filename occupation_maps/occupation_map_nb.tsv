@@ -1,0 +1,497 @@
+word	count	qid	label_en	label_nb	method	note
+maler	1917	Q1028181	painter	kunstmaler	checked	painter (artist): nb alias; the nb label 'maler' is on Q288728 'painter and varnisher' (the trade); P106 uses: 238,471
+politiker	647	Q82955	politician	politiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 967,089
+grafiker	604	Q11569986	printmaker	grafiker	checked	printmaker: nb label (Q1925963 'graphic artist' has the same nb label; task 2 chose printmaker, as NKL uses the word for printmakers); P106 uses: 14,289
+forfatter	601	Q36180	writer	skribent	checked	writer: 'no' label; the nb label is on Q482980 'author' (task 2's choice kept); P106 uses: 458,268
+arkitekt	553	Q42973	architect	arkitekt	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 101,841
+tegner	474	Q15296811	draftsperson	tegner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,508
+billedhugger	391	Q1281618	sculptor	billedhugger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 64,391
+skuespiller	255	Q33999	actor	skuespiller	exact	alias nn and label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 394,261
+jurist	216	Q185351	jurist	jurist	checked	jurist: nb label; P106 uses: 135,189
+komponist	184	Q36834	composer	komponist	checked	composer: nb label; P106 uses: 134,622
+offiser	172	Q189290	military officer	offiser	checked	military officer: nb label; P106 uses: 61,219
+embetsmann	161	Q212238	civil servant	offentlig tjenesteperson	checked	civil servant (nn label 'embetsmann'); Q105434600 'senior civil servant' (nb label, 172 uses) and Q61021680 'embetsperson' (79 uses) are narrower; P106 uses: 44,766
+lege	158	Q39631	physician	lege	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 209,092
+tekstilkunstner	153	Q10694573	textile artist	tekstilkunstner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,194
+journalist	146	Q1930187	journalist	journalist	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 210,069
+prest	146	Q42603	priest	prest	checked	priest: nb label (Q3315492 'clergyman' has the same nb label); P106 uses: 20,719
+forretningsmann	140	Q43845	businessperson	forretningsdrivende	exact	alias nb and alias nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 93,811
+keramiker	129	Q7541856	ceramicist	keramiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,378
+forfattar	128	Q36180	writer	skribent	checked	writer (nynorsk of forfatter); the nn label is on Q482980 'author'; P106 uses: 458,268
+skipsreder	102	Q500251	ship-owner	skipsreder	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,403
+sanger	99	Q177220	singer	sanger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 137,790
+historiker	91	Q201788	historian	historiker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 152,858
+pressemann	91	Q1930187	journalist	journalist	checked	journalist (no item has the word); P106 uses: 210,069
+skolemann	87	Q974144	educator	lærer	checked	educator (task 2's choice; no item has the word); P106 uses: 12,257
+teolog	85	Q1234713	theologian	teolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 51,929
+kjøpmann	80	Q215536	merchant	handelsmann	checked	merchant: SNL uses the word for historical trading merchants; the nb label is on Q7501153 'shopkeeper'; P106 uses: 26,795
+ingeniør	78	Q81096	engineer	ingeniør	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 83,471
+politikar	78	Q82955	politician	politiker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 967,089
+treskjærer	78	Q6138343	wood carver	treskjærer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,837
+rosemaler	72	Q55385562	rosemaler	rosemaler	checked	rosemaler: nb label, the only candidate (29 uses); P106 uses: 29
+diplomat	71	Q193391	diplomat	diplomat	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 58,093
+billedkunstner	69	Q3391743	visual artist	billedkunstner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 68,201
+biskop	66	Q29182	bishop	biskop	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,605
+geistlig	63	Q2259532	cleric	geistlig	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,943
+instruktør	62	Q3455803	director	regissør	checked	director (of a creative work): SNL's instruktør are stage directors (Agnes Mowinckel, Alfhild Stormoen); the nn label is on Q777952 'instructor'; P106 uses: 55,580
+gullsmed	61	Q211423	goldsmith	gullsmed	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,339
+musiker	58	Q639669	musician	musiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 141,735
+teatersjef	58	Q1776724	theatre manager	teatersjef	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,111
+designer	53	Q5322166	designer	designer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,770
+pedagog	53	Q1231865	pedagogue	pedagog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 56,675
+filosof	52	Q4964182	philosopher	filosof	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,337
+godseier	52	Q66495020	estate owner	godseier	checked	estate owner: nb label; Q618532 'landlord' has the same nb label; P106 uses: 1,270
+lærer	52	Q37226	teacher	lærer	checked	teacher: nb label (Q974144 'educator' has the same nb label); P106 uses: 116,214
+kjemiker	51	Q593644	chemist	kjemiker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 58,305
+pianist	51	Q486748	pianist	pianist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 28,927
+filolog	48	Q13418253	philologist	filolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,507
+interiørarkitekt	48	Q103893954	interior architect	interiørarkitekt	checked	interior architect: nb and nn label; Q2133309 'interior designer' (nb label, 1,811 uses); P106 uses: 742
+kringkastingsmann	48	Q135301631	broadcaster	kringkastingsarbeider	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,354
+industrigründer	47	Q131524	entrepreneur	gründer	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 50,145
+motstandsmann	46	Q1397808	resistance fighter	motstandskjemper	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,228
+kunsthistoriker	45	Q1792450	art historian	kunsthistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 40,309
+industrimann	44	Q6606110	industrialist	industrieier	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,464
+misjonær	44	Q219477	missionary	misjonær	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,749
+fotograf	41	Q33231	photographer	fotograf	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 93,972
+redaktør	41	Q1607826	editor	redaktør	checked	editor: nb label (Q876864 'editing staff' has the same nb label); P106 uses: 36,601
+botaniker	39	Q2374149	botanist	botaniker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 66,390
+industrileder	39	Q2961975	business executive	bedriftsleder	checked	business executive: SNL's industrileder are company heads (Arve Johnsen, Asbjørn Larsen); Q30349940 'industrial leader' has no description (43 uses); P106 uses: 12,144
+sjøoffiser	39	Q10669499	naval officer	sjøoffiser	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,594
+sosialøkonom	39	Q188094	economist	samfunnsøkonom	exact	alias nb and alias nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 77,052
+bonde	38	Q131512	farmer	bonde	checked	farmer: nb label; P106 uses: 24,897
+organist	38	Q765778	organist	organist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,065
+matematiker	37	Q170790	mathematician	matematiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 60,497
+fysiker	36	Q169470	physicist	fysiker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 59,462
+språkforsker	36	Q14467526	linguist	lingvist	checked	linguist; no item has the word; P106 uses: 33,620
+byggmester	35	Q1340643	master builder	byggmester	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,187
+illustratør	35	Q644687	illustrator	illustratør	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,932
+museumsmann	35	Q47090899	museum professional	museumsfagarbeider	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 722
+dirigent	34	Q158852	conductor	dirigent	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 26,212
+filmregissør	32	Q2526255	film director	filmregissør	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 102,364
+gårdbruker	32	Q131512	farmer	bonde	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 24,897
+kunsthåndverker	32	Q11479517	handicrafter	kunsthåndverker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 966
+zoolog	32	Q350979	zoologist	zoolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,249
+billedhogger	31	Q1281618	sculptor	billedhugger	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 64,391
+bilthugger	31	Q1281618	sculptor	billedhugger	checked	sculptor (old spelling of billedhugger; Q16175078 'bilthugger', a town wood carver, 10 uses); P106 uses: 64,391
+rosemålar	31	Q55385562	rosemaler	rosemaler	checked	rosemaler (nynorsk label); P106 uses: 29
+geolog	30	Q520549	geologist	geolog	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,285
+kvinnesaksforkjemper	29	Q28692502	women's rights activist	kvinnesaksforkjemper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,801
+litteraturforsker	29	Q17167049	literary scholar	litteraturviter	checked	literary scholar ('no' label); P106 uses: 28,790
+scenograf	27	Q2707485	scenographer	scenograf	checked	scenographer: nb and nn label; P106 uses: 7,636
+sivilingeniør	26	Q81096	engineer	ingeniør	checked	engineer: 'sivilingeniør' is the Norwegian engineering degree; the nb label is wrongly on Q13582652 'civil engineer'; P106 uses: 83,471
+snekker	26	Q326358	joiner	snekker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,420
+erkebiskop	25	Q49476	archbishop	erkebiskop	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,885
+dikter	24	Q49757	poet	lyriker	checked	poet (nb alias); P106 uses: 134,152
+glasskunstner	24	Q2865798	glass artist	glasskunstner	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,077
+professor	24	Q1622272	university teacher	universitetslærer	checked	university teacher: professor is the academic rank (Q121594); P106 uses: 368,935
+trelasthandler	24	Q11518629	timber merchant	trelasthandler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 342
+skiløper	23	Q4270517	skier	skiløper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 702
+kritiker	22	Q6430706	critic	kritiker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,668
+musikkpedagog	22	Q16145150	music educator	musikkpedagog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,436
+publisist	22	Q6051619	opinion journalist	kommentator	checked	publicist (the item of German 'Publizist'); no item has the word; P106 uses: 29,503
+arkeolog	21	Q3621491	archaeologist	arkeolog	exact	alias nn and label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,552
+danser	21	Q5716684	dancer	danser	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 20,875
+jazzmusiker	20	Q15981151	jazz musician	jazzmusiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,963
+lærar	20	Q37226	teacher	lærer	checked	teacher (nynorsk of lærer); P106 uses: 116,214
+oversetter	20	Q333634	translator	oversetter	checked	translator: nb label; P106 uses: 92,366
+boktrykker	19	Q40881196	book printer	boktrykker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,375
+kartograf	19	Q1734662	cartographer	kartograf	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,745
+kunstsamler	19	Q10732476	art collector	kunstsamler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,190
+ns-politiker	19	Q82955	politician	politiker	checked	politician (of Nasjonal Samling); P106 uses: 967,089
+psykolog	19	Q212980	psychologist	psykolog	checked	psychologist: nb label; P106 uses: 39,386
+regissør	19	Q3455803	director	regissør	checked	director: nb label; P106 uses: 55,580
+skald	19	Q947305	skald	skald	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 166
+sosiolog	19	Q2306091	sociologist	sosiolog	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,005
+bibliotekar	18	Q182436	librarian	bibliotekar	checked	librarian: nb label; P106 uses: 27,287
+bokhandler	18	Q998550	bookseller	bokhandler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,123
+fiolinist	18	Q1259917	violinist	fiolinist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,235
+fotballspiller	18	Q937857	association football player	fotballspiller	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 392,562
+oppfinner	18	Q205375	inventor	oppfinner	checked	inventor: nb label; P106 uses: 9,321
+psykiater	18	Q211346	psychiatrist	psykiater	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,482
+sceneinstruktør	18	Q3387717	theatre director	sceneinstruktør	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 17,569
+skribent	18	Q36180	writer	skribent	checked	writer: nb label; P106 uses: 458,268
+forlagsmann	17	Q2516866	publisher	forlegger	checked	publisher; no item has the word; P106 uses: 30,451
+målar	17	Q1028181	painter	kunstmaler	checked	painter (nynorsk of maler); P106 uses: 238,471
+fagforeningsleder	16	Q50768646	labor leader	fagforeningsleder	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 389
+industridesigner	16	Q11287574	industrial designer	industridesigner	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,373
+lyriker	16	Q49757	poet	lyriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 134,152
+naturforsker	16	Q18805	naturalist	naturviter	checked	naturalist; no item has the word; P106 uses: 9,571
+dramatiker	15	Q214917	playwright	dramatiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,284
+historikar	15	Q201788	historian	historiker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 152,858
+litograf	15	Q16947657	lithographer	litograf	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,305
+litteraturhistoriker	15	Q13570226	literary historian	litteraturhistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,955
+næringslivsleder	15	Q2462658	manager	næringslivsleder	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,058
+skøyteløper	15	Q10866633	speed skater	skøyteløper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,318
+teatermaler	15	Q1020606	stage painter		checked	stage painter (the nb label match Q1336234 is the art of scenic painting); P106 uses: 251
+tekstforfatter	15	Q822146	lyricist	sangtekstforfatter	checked	lyricist: SNL's tekstforfatter write song texts (Alf Cranner, Arne Bendiksen); the label match Q14466416 is the advertising copywriter; P106 uses: 12,028
+brukskunstner	14	Q56673616	decorative artist		checked	decorative artist (applied art); no item has the word; P106 uses: 349
+fabrikkeier	14	Q42855995	factory owner		checked	factory owner; no item has the word; P106 uses: 1,187
+forlegger	14	Q2516866	publisher	forlegger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 30,451
+gardbrukar	14	Q131512	farmer	bonde	checked	farmer (nynorsk of gårdbruker); P106 uses: 24,897
+genealog	14	Q8963721	genealogist	genealog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,857
+ingeniøroffiser	14	Q189290	military officer	offiser	checked	military officer (of the engineer corps); P106 uses: 61,219
+koreograf	14	Q2490358	choreographer	koreograf	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,834
+skulemann	14	Q974144	educator	lærer	checked	educator (nynorsk of skolemann); P106 uses: 12,257
+skulptør	14	Q1281618	sculptor	billedhugger	exact	alias nb and alias nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 64,391
+språkforskar	14	Q14467526	linguist	lingvist	checked	linguist (nynorsk of språkforsker); P106 uses: 33,620
+veterinær	14	Q202883	veterinarian	veterinær	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,266
+forstmann	13	Q1895303	forester	forstmann	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,710
+friidrettsutøver	13	Q11513337	athletics competitor	friidrettsutøver	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 51,662
+meteorolog	13	Q2310145	meteorologist	meteorolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,613
+musikkforsker	13	Q14915627	musicologist	musikkforsker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,221
+møbeldesigner	13	Q11455387	furniture designer	møbeldesigner	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,077
+orkesterleder	13	Q806349	bandleader	bandleder	checked	bandleader: SNL's orkesterleder lead dance and jazz bands (Arnt Haugen, Bjarne Amdahl); Q135107015 'orchestra leader' has 25 uses; P106 uses: 3,284
+advokat	12	Q40348	lawyer	advokat	checked	lawyer: nb label; P106 uses: 123,225
+kringkastingsmedarbeider	12	Q135301631	broadcaster	kringkastingsarbeider	checked	broadcaster; P106 uses: 1,354
+medaljør	12	Q1708232	medalist	medaljør	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,016
+murmester	12	Q327321	bricklayer	murer	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,328
+samfunnsforsker	12	Q15319501	social scientist	samfunnsviter	checked	social scientist; no item has the word; P106 uses: 4,998
+astronom	11	Q11063	astronomer	astronom	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,760
+dekorasjonsmaler	11	Q1183704	decorative painter	dekorasjonsmaler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 387
+grafikar	11	Q11569986	printmaker	grafiker	checked	printmaker (nynorsk of grafiker); P106 uses: 14,289
+klassisk filolog	11	Q16267607	classical philologist	klassisk filolog	checked	classical philologist: nb and nn label; P106 uses: 10,503
+kunstner	11	Q483501	artist	kunstner	checked	artist: nb label; P106 uses: 114,732
+portrettmaler	11	Q2180411	portrait painter	portrettmaler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 771
+tannlege	11	Q27349	dentist	tannlege	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 18,014
+bokillustratør	10	Q644687	illustrator	illustratør	checked	illustrator; no item has the word; P106 uses: 45,932
+diktar	10	Q49757	poet	lyriker	checked	poet (nynorsk of dikter); P106 uses: 134,152
+idrettsleder	10	Q15986539	sports official	idrettsleder	checked	sports official: nb label (Q26481809 'sports executive' has the same nb label); P106 uses: 1,765
+idéhistoriker	10	Q11491523	historian of ideas	idéhistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 114
+kontrafeier	10	Q2180411	portrait painter	portrettmaler	checked	portrait painter (kontrafei = portrait); P106 uses: 771
+litteraturkritiker	10	Q4263842	literary critic	litteraturkritiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,964
+mesén	10	Q15472169	patron of the arts	mesén	exact	alias nn and label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,519
+møbeltegner	10	Q11455387	furniture designer	møbeldesigner	checked	furniture designer; no item has the word; P106 uses: 1,077
+polarforsker	10	Q11900058	explorer	oppdagelsesreisende	checked	explorer (Q47670178 'arctic explorer', 13 uses); P106 uses: 7,527
+politiembetsmann	10	Q384593	police officer	politibetjent	checked	police officer: SNL's politiembetsmenn are police chiefs; P106 uses: 12,078
+revyforfatter	10	Q10651584	revue writer	revyforfatter	checked	revue writer: nb label, the only candidate (26 uses); P106 uses: 26
+skihopper	10	Q13382603	ski jumper	skihopper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,494
+økonom	10	Q188094	economist	samfunnsøkonom	checked	economist: nn/no alias; the nb label is on Q12344332 'business undergraduate'; P106 uses: 77,052
+arrangør	9	Q1643514	music arranger	arrangør	checked	music arranger: nb label; SNL's arrangør are musicians (Bendik Hofseth, Bobben Hagerup); P106 uses: 7,828
+bankmann	9	Q806798	banker	bankier	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,410
+barnebokforfatter	9	Q4853732	children's writer	barnebokforfatter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,463
+fagforeningsmann	9	Q15627169	trade unionist	fagforeningsperson	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,121
+glassmaler	9	Q2205972	stained-glass artist	glassmaler	checked	stained-glass artist: nb label (as German 'Glasmaler'); P106 uses: 1,114
+salmedikter	9	Q13424456	hymnwriter	salmedikter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,156
+skipsfører	9	Q849424	sea captain	skipsfører	checked	sea captain: nb label; P106 uses: 1,998
+skodespelar	9	Q33999	actor	skuespiller	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 394,261
+sosialantropolog	9	Q66581878	social anthropologist	sosialantropolog	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 897
+statistiker	9	Q2732142	statistician	statistiker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,284
+arkivmann	8	Q635734	archivist	arkivar	checked	archivist; no item has the word; P106 uses: 13,901
+artist	8	Q713200	performing artist	artist	checked	performing artist: nb label; P106 uses: 11,737
+bokkunstner	8	Q56884373	book artist	bokkunstner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 286
+flyger	8	Q2095549	aircraft pilot	flyger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,373
+forsker	8	Q1650915	researcher	forsker	checked	researcher: nb label; P106 uses: 2,105,745
+godseigar	8	Q66495020	estate owner	godseier	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,270
+hardingfelespiller	8	Q1268911	spelman	spillemann	checked	spelman (Hardanger fiddler); no item has the word; P106 uses: 115
+investor	8	Q557880	investor	investor	checked	investor: nb and nn label (Q1979607 'financier' also labelled); P106 uses: 1,233
+kordirigent	8	Q1076502	choir director	korleder	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,696
+møbelsnekker	8	Q19382184	furniture maker	møbelsnekker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 471
+offentlig tjenestemann	8	Q212238	civil servant	offentlig tjenesteperson	checked	civil servant (Q11993231 'Norwegian public servant', nb label, 94 uses); P106 uses: 44,766
+skipsmegler	8	Q236979	shipbroker	skipsmegler	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 121
+stempelskjærer	8	Q25616549	stampcutter	stempelskjærer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 279
+stortingsmann	8	Q82955	politician	politiker	checked	member of the Storting -> politician (standard practice); P106 uses: 967,089
+teaterleder	8	Q1776724	theatre manager	teatersjef	checked	theatre manager; no item has the word; P106 uses: 4,111
+banksjef	7	Q32947888	bank manager	banksjef	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,344
+brukseier	7	Q3303297	ironmaster	brukseier	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 442
+emaljekunstner	7	Q21148249	enameler	emaljør	checked	enameler (nb label 'emaljør'); P106 uses: 238
+farmasøyt	7	Q105186	pharmacist	farmasøyt	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,754
+filantrop	7	Q12362622	philanthropist	filantrop	exact	alias nn and label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,376
+flyoffiser	7	Q19934710	air force officer	flyoffiser	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 597
+folkeminnesamler	7	Q3075052	folklorist	folklorist	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,914
+gitarist	7	Q855091	guitarist	gitarist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 20,403
+jernverkseier	7	Q3303297	ironmaster	brukseier	checked	ironmaster (as brukseier); P106 uses: 442
+kobberstikker	7	Q13365770	copper engraver	kobberstikker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,450
+kvinnesakskvinne	7	Q28692502	women's rights activist	kvinnesaksforkjemper	checked	women's rights activist; P106 uses: 3,801
+litterat	7	Q11499929	man of letters	litterat	checked	man of letters: nb label; P106 uses: 4,079
+lærebokforfatter	7	Q37868118	textbook writer	lærebokforfatter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 998
+miniatyrmaler	7	Q28947943	miniature painter	miniatyrmaler	checked	miniature painter: nb and nn label; P106 uses: 509
+misjonsprest	7	Q219477	missionary	misjonær	checked	missionary; P106 uses: 12,749
+operasanger	7	Q2865819	opera singer	operasanger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 22,911
+produsent	7	Q47541952	producer	produsent	checked	producer (media): nb label; SNL's produsent are film and music producers; P106 uses: 8,511
+reklamemann	7	Q10355417	advertising person	reklamearbeider	checked	advertising person (nb label 'reklamearbeider'); P106 uses: 1,101
+sangpedagog	7	Q7939609	voice teacher	sangpedagog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,427
+spelemann	7	Q1268911	spelman	spillemann	checked	spelman: nn label; P106 uses: 115
+trener	7	Q41583	coach	trener	checked	coach: nb label; P106 uses: 10,968
+treskjerar	7	Q6138343	wood carver	treskjærer	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,837
+astrofysiker	6	Q752129	astrophysicist	astrofysiker	checked	astrophysicist: nb label; P106 uses: 4,380
+bibliograf	6	Q10429346	bibliographer	bibliograf	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,273
+bilethoggar	6	Q1281618	sculptor	billedhugger	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 64,391
+biletkunstnar	6	Q3391743	visual artist	billedkunstner	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 68,201
+billedskjærer	6	Q1840507	carver	billedskjærer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,028
+bladmann	6	Q1930187	journalist	journalist	checked	journalist (newspaper man); P106 uses: 210,069
+dekoratør	6	Q22811707	decorator	dekoratør	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 592
+entreprenør	6	Q289612	general contractor	entreprenør	checked	general contractor: nb label; SNL's entreprenør are building contractors (Arthur Nordlie, Fredrik Selmer); P106 uses: 1,299
+etnograf	6	Q12347522	ethnographer	etnograf	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,453
+filmfotograf	6	Q222344	cinematographer	filmfotograf	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 21,207
+filmskuespiller	6	Q10800557	film actor	filmskuespiller	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 86,239
+fiskeribiolog	6	Q96952661	fisheries scientist		checked	fisheries scientist; P106 uses: 120
+folkeminnesamlar	6	Q3075052	folklorist	folklorist	checked	folklorist (nynorsk of folkeminnesamler); P106 uses: 3,914
+forlagsbokhandler	6	Q2516866	publisher	forlegger	checked	publisher (publishing bookseller); P106 uses: 30,451
+fysiolog	6	Q2055046	physiologist	fysiolog	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,114
+geograf	6	Q901402	geographer	geograf	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 17,481
+gravør	6	Q329439	engraver	gravør	checked	engraver: nb label; P106 uses: 7,504
+hotelleier	6	Q105756071	hotel owner	hotelleier	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 391
+kirurg	6	Q774306	surgeon	kirurg	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 18,083
+kokebokforfatter	6	Q27431213	cookbook writer	kokebokforfatter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 581
+kulturhistoriker	6	Q15462162	cultural historian	kulturhistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,030
+landskapsmaler	6	Q21600439	landscape painter	landskapsmaler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,738
+lektor	6	Q37226	teacher	lærer	checked	teacher: lektor is a Norwegian teacher title; the label match Q1553123 is a university lector; P106 uses: 116,214
+lokalhistorikar	6	Q1595570	local historian	lokalhistoriker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,004
+mosaikkunstner	6	Q282718	mosaicist	mosaikkunstner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 552
+musikkritiker	6	Q1350157	music critic	musikkritiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,691
+odontolog	6	Q27349	dentist	tannlege	checked	dentist (odontologist); P106 uses: 18,014
+omsetjar	6	Q333634	translator	oversetter	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 92,366
+oseanograf	6	Q3546255	oceanographer	oseanograf	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,555
+polfarer	6	Q13382749	polar explorer	polfarer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 278
+religionshistoriker	6	Q17488357	historian of religion	religionshistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 461
+skutemaler	6	Q25616553	marine painter	marinemaler	checked	marine painter (ship portraits); P106 uses: 166
+smykkekunstner	6	Q2519376	jewelry designer	smykkedesigner	checked	jewelry designer (nb label 'smykkedesigner'); P106 uses: 4,075
+statsviter	6	Q1238570	political scientist	statsviter	checked	political scientist: nb label; P106 uses: 32,234
+sølvsmed	6	Q2216340	silversmith	sølvsmed	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,047
+tegnelærer	6	Q10429561	drawing teacher	tegnelærer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 847
+teiknar	6	Q15296811	draftsperson	tegner	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,508
+tekstildesigner	6	Q18611810	textile designer	tekstildesigner	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 666
+tømmermann	6	Q154549	carpenter	tømrer	exact	alias nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,321
+anatom	5	Q10872101	anatomist	anatom	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,429
+apoteker	5	Q105186	pharmacist	farmasøyt	checked	pharmacist (as German 'Apotheker'); P106 uses: 13,754
+avisutgiver	5	Q24266767	newspaper proprietor	avisutgiver	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 833
+bladutgiver	5	Q24266767	newspaper proprietor	avisutgiver	checked	newspaper proprietor; P106 uses: 833
+båtkonstruktør	5	Q2860259	marine architect	skipskonstruktør	checked	marine architect; P106 uses: 344
+dramaturg	5	Q487596	dramaturge	dramaturg	checked	dramaturge: nb label; P106 uses: 8,200
+døvelærer	5	Q37226	teacher	lærer	checked	teacher (of the deaf); P106 uses: 116,214
+etnolog	5	Q1371378	ethnologist	etnolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,057
+filmprodusent	5	Q3282637	film producer	filmprodusent	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 52,073
+fjellklatrer	5	Q9149093	mountaineer	fjellklatrer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,235
+folklorist	5	Q3075052	folklorist	folklorist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,914
+forlagskonsulent	5	Q2516852	literary editor	litteraturredaktør	checked	literary editor (publisher's reader); P106 uses: 2,101
+fredsforkjemper	5	Q16323111	peace activist	fredsaktivist	checked	peace activist; P106 uses: 1,270
+frelsesoffiser	5	Q10499604	Salvation Army officer	frelsesoffiser	checked	Salvation Army officer: nb and nn label (44 uses); P106 uses: 44
+general	5	Q189290	military officer	offiser	checked	military rank; the occupation is military officer (Q189290); P106 uses: 61,219
+glassdesigner	5	Q2865798	glass artist	glasskunstner	checked	glass artist; P106 uses: 2,077
+grosserer	5	Q12310153	wholesaler	grossist	checked	wholesaler (alias 'grosserer'); the nb label is wrongly on Q5669609 'grocer'; P106 uses: 670
+handelsmann	5	Q215536	merchant	handelsmann	checked	merchant: nb label; P106 uses: 26,795
+hvalfanger	5	Q28466165	whaler	hvalfanger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 115
+idrettsutøver	5	Q2066131	athlete	idrettsutøver	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 27,293
+instrumentmaker	5	Q2341443	instrument maker	instrumentmaker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,336
+jordmor	5	Q185196	midwife	jordmor	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,430
+karikaturtegner	5	Q3658608	caricaturist	karikaturtegner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,143
+kirkehistoriker	5	Q1743122	church historian	kirkehistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,488
+kunstkritiker	5	Q4164507	art critic	kunstkritiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,563
+legpredikant	5	Q432386	preacher	predikant	checked	preacher (lay preacher); P106 uses: 6,597
+manusforfatter	5	Q28389	screenwriter	manusforfatter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 88,066
+marinbiolog	5	Q3640160	marine biologist	marinbiolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,033
+marinemaler	5	Q25616553	marine painter	marinemaler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 166
+musikar	5	Q639669	musician	musiker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 141,735
+myntgravør	5	Q329439	engraver	gravør	checked	engraver (of coins); P106 uses: 7,504
+polarfarer	5	Q13382749	polar explorer	polfarer	checked	polar explorer; P106 uses: 278
+samfunnsøkonom	5	Q188094	economist	samfunnsøkonom	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 77,052
+skiløpar	5	Q4270517	skier	skiløper	checked	skier (nynorsk of skiløper); P106 uses: 702
+skogforsker	5	Q21244999	forestry scientist	skogbruksforsker	checked	forestry scientist; P106 uses: 1,518
+skolebestyrer	5	Q1056391	head teacher	rektor	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,036
+skoleleder	5	Q1056391	head teacher	rektor	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,036
+skytter	5	Q17486376	sport shooter	sportsskytter	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,036
+smed	5	Q1639825	blacksmith	smed	checked	blacksmith: nb and nn label; P106 uses: 1,131
+sosialpsykolog	5	Q10672931	social psychologist	sosialpsykolog	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 405
+sykepleier	5	Q186360	nurse	sykepleier	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 11,016
+tekstilkunstnar	5	Q10694573	textile artist	tekstilkunstner	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,194
+verftseier	5	Q2106711	shipbuilder	skipsbygger	checked	shipbuilder: SNL's verftseier built ships (Colin Archer, Christen Christensen); P106 uses: 603
+visesanger	5	Q12344026	ballad singer	visesanger	checked	ballad singer: nb label (59 uses); P106 uses: 59
+vitenskapsmann	5	Q901	scientist	forsker	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 49,832
+xylograf	5	Q1437754	xylographer	xylograf	exact	alias nb and label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,033
+aviseier	4	Q24266767	newspaper proprietor	avisutgiver	checked	newspaper proprietor; P106 uses: 833
+bankier	4	Q806798	banker	bankier	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,410
+bergembetsmann	4	Q17310497	Bergbeamter		checked	mining official (Q17310497 'Bergbeamter', 139 uses); P106 uses: 139
+bergingeniør	4	Q18524075	mining engineer	gruveingeniør	checked	mining engineer; P106 uses: 2,576
+bergmann	4	Q820037	miner	gruvearbeider	checked	miner; P106 uses: 1,909
+bergverkseier	4	Q26805550	mine entrepreneur	gründer i gruveindustrien	checked	mine entrepreneur ('owner or operator of a mine'); P106 uses: 108
+billedvever	4	Q21117684	tapestry weaver	billedvever	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 273
+bygdemålsdiktar	4	Q61043360	dialect writer		checked	dialect writer; P106 uses: 1,537
+essayist	4	Q11774202	essayist	essayist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 11,078
+eventyrer	4	Q2873500	adventurer	eventyrer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 642
+formgiver	4	Q5322166	designer	designer	checked	designer; P106 uses: 19,770
+fotballtrener	4	Q628099	association football coach	fotballtrener	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 44,132
+heraldiker	4	Q516463	heraldist	heraldiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 900
+husstellærer	4	Q37226	teacher	lærer	checked	teacher (of home economics); P106 uses: 116,214
+idrettsadministrator	4	Q15986539	sports official	idrettsleder	checked	sports official; P106 uses: 1,765
+informatiker	4	Q82594	computer scientist	informatiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 37,568
+installasjonskunstner	4	Q18074503	installation artist	installasjonskunstner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,676
+kabaretartist	4	Q15214752	cabaret performer	kabaretartist	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,099
+kapellmester	4	Q215793	chapelmaster	kapellmester	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,713
+kildeutgiver	4	Q1607826	editor	redaktør	checked	editor (of historical sources); P106 uses: 36,601
+kokk	4	Q156839	cook	kokk	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,302
+landbrukslærar	4	Q37226	teacher	lærer	checked	teacher (of agriculture); P106 uses: 116,214
+landmåler	4	Q294126	surveyor	landmåler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,759
+lingvist	4	Q14467526	linguist	lingvist	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 33,620
+litteraturforskar	4	Q17167049	literary scholar	litteraturviter	checked	literary scholar (nynorsk); P106 uses: 28,790
+lokalhistoriker	4	Q1595570	local historian	lokalhistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,004
+marineoffiser	4	Q10669499	naval officer	sjøoffiser	checked	naval officer (nb alias); the nb label is on Q3349700 'Officer of the French Navy'; P106 uses: 10,594
+medisiner	4	Q39631	physician	lege	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 209,092
+numismatiker	4	Q2004963	numismatist	numismatiker	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,903
+oppdagelsesreisende	4	Q11900058	explorer	oppdagelsesreisende	checked	explorer: nb label; P106 uses: 7,527
+polititjenestemann	4	Q384593	police officer	politibetjent	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,078
+predikant	4	Q432386	preacher	predikant	checked	preacher: nb and nn label; P106 uses: 6,597
+proprietær	4	Q1483709	land owner	grunneier	checked	land owner (Q12332456 'proprietær', 65 uses, is the Danish-Norwegian landowner type); P106 uses: 2,706
+restauratør	4	Q3427922	restaurateur	restauratør	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,566
+salmediktar	4	Q13424456	hymnwriter	salmedikter	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,156
+samler	4	Q3243461	collector	samler	checked	collector: nb label (Q98544732 'scientific collector' has the same nb label); P106 uses: 4,534
+sjakkspiller	4	Q10873124	chess player	sjakkspiller	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,414
+skipper	4	Q1897112	skipper	skipper	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 810
+skipsreiar	4	Q500251	ship-owner	skipsreder	checked	ship-owner (nynorsk of skipsreder); P106 uses: 2,403
+småbruker	4	Q131512	farmer	bonde	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 24,897
+songar	4	Q177220	singer	sanger	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 137,790
+teaterhistoriker	4	Q70744319	theatre historian	teaterhistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 218
+teaterkritiker	4	Q17337766	theatre critic	teaterkritiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,655
+tidsskriftredaktør	4	Q1607826	editor	redaktør	checked	editor (of a periodical); P106 uses: 36,601
+trekkspiller	4	Q1863064	accordionist	trekkspiller	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,286
+universitetslærer	4	Q1622272	university teacher	universitetslærer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 368,935
+agronom	3	Q1781198	agronomist	agronom	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,857
+antropolog	3	Q4773904	anthropologist	antropolog	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,467
+arkivar	3	Q635734	archivist	arkivar	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,901
+bedriftsleder	3	Q2961975	business executive	bedriftsleder	checked	business executive: nb label (Q832136 'business manager' has the same nb label); P106 uses: 12,144
+befestningsingeniør	3	Q81096	engineer	ingeniør	checked	engineer (fortification); P106 uses: 83,471
+bildehoggar	3	Q1281618	sculptor	billedhugger	checked	sculptor (nynorsk); P106 uses: 64,391
+biokjemiker	3	Q2919046	biochemist	biokjemiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,996
+biolog	3	Q864503	biologist	biolog	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,250
+bokbinder	3	Q1413170	bookbinder	bokbinder	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,737
+boksamler	3	Q28776412	book collector	boksamler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 231
+bokser	3	Q11338576	boxer	bokser	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,658
+bryter	3	Q12369333	amateur wrestler	bryter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,516
+bygningsinspektør	3	Q56447246	Building inspector	bygningsinspektør	checked	building inspector: nb label (46 uses); P106 uses: 46
+cellist	3	Q13219637	cellist	cellist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,943
+dansepedagog	3	Q2393361	dance teacher	danseinstruktør	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,605
+dekorativ kunstner	3	Q56673616	decorative artist		checked	decorative artist; P106 uses: 349
+diakonisse	3	Q2298145	deaconess		checked	deaconess (the exact alias match was deacon Q161944); P106 uses: 159
+elfenbensskjærer	3	Q46995388	ivory carver	elfenbeinskjærer	checked	ivory carver (66 uses); P106 uses: 66
+entomolog	3	Q3055126	entomologist	entomolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 26,455
+fabrikkeigar	3	Q42855995	factory owner		checked	factory owner (nynorsk); P106 uses: 1,187
+fangstmann	3	Q14009165	trapper	pelsjeger	checked	trapper (nb alias); P106 uses: 90
+farmakolog	3	Q2114605	pharmacologist	farmakolog	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,788
+felemaker	3	Q762707	luthier	gitarmaker	checked	luthier (maker of fiddles); P106 uses: 776
+felespiller	3	Q3560496	fiddler	felespiller	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 865
+filmskaper	3	Q1414443	filmmaker	filmskaper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,394
+fiskebåtreder	3	Q500251	ship-owner	skipsreder	checked	ship-owner (of fishing vessels); P106 uses: 2,403
+fløytist	3	Q12902372	flautist	fløytist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,388
+folkelivsgransker	3	Q1371378	ethnologist	etnolog	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,057
+folkemusikksamler	3	Q67775924	folk song collector	folkesangsamler	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 261
+foredragsholder	3	Q9379869	lecturer	foredragsholder	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,530
+forsikringsmatematiker	3	Q179985	actuary	aktuar	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 345
+fysioterapeut	3	Q694748	physiotherapist	fysioterapeut	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,249
+gartner	3	Q758780	gardener	gartner	checked	gardener: nb label; P106 uses: 2,713
+geistleg	3	Q2259532	cleric	geistlig	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,943
+generalmajor	3	Q189290	military officer	offiser	checked	military rank; the occupation is military officer (Q189290); P106 uses: 61,219
+gjendikter	3	Q333634	translator	oversetter	checked	translator (of poetry); P106 uses: 92,366
+glassgravør	3	Q18510097	glass engraver	glassgravør	checked	glass engraver: nb label (94 uses); P106 uses: 94
+grafisk designer	3	Q627325	graphic designer	grafisk designer	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,154
+grafisk formgiver	3	Q627325	graphic designer	grafisk designer	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,154
+hagebruksmann	3	Q3140857	horticulturist	hortonom	checked	horticulturist; P106 uses: 1,866
+hardingfelespelemann	3	Q1268911	spelman	spillemann	checked	spelman (Hardanger fiddler); P106 uses: 115
+havforsker	3	Q61745762	marine scientist	havforsker	checked	marine scientist: nb label; P106 uses: 175
+humorist	3	Q12406482	humorist	humorist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,463
+hvalfangstreder	3	Q500251	ship-owner	skipsreder	checked	ship-owner (of whaling ships); P106 uses: 2,403
+høyesterettsdommer	3	Q55736868	national supreme court judge	høyesterettsdommer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 255
+idrettsmann	3	Q2066131	athlete	idrettsutøver	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 27,293
+impresario	3	Q943995	impresario	impresario	checked	impresario: nb and nn label; P106 uses: 1,606
+internasjonal tjenestemann	3	Q11422374	international civil servant	internasjonal tjenestemann	checked	international civil servant: nb label (71 uses); P106 uses: 71
+ishavsskipper	3	Q1897112	skipper	skipper	checked	skipper (Arctic); P106 uses: 810
+keramikar	3	Q7541856	ceramicist	keramiker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,378
+kostymedesigner	3	Q1323191	costume designer	kostymedesigner	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,420
+kulturskribent	3	Q99902913	arts writer	kulturskribent	checked	arts writer: nb label (14 uses); P106 uses: 14
+kunsthandler	3	Q173950	art dealer	kunsthandler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,135
+kunstløper	3	Q13219587	figure skater	kunstløper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,586
+kunstmaler	3	Q1028181	painter	kunstmaler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 238,471
+kvinnesakspioner	3	Q28692502	women's rights activist	kvinnesaksforkjemper	checked	women's rights activist; P106 uses: 3,801
+landbruksøkonom	3	Q26252897	agricultural economist	landbruksøkonom	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 605
+lekpredikant	3	Q432386	preacher	predikant	checked	preacher (lay preacher); P106 uses: 6,597
+leksikograf	3	Q14972848	lexicographer	leksikograf	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,539
+maskiningeniør	3	Q1906857	mechanical engineer	maskiningeniør	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,248
+medisinhistoriker	3	Q15985128	medical historian	medisinhistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 981
+mesen	3	Q15472169	patron of the arts	mesén	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,519
+mikrobiolog	3	Q3779582	microbiologist	mikrobiolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,482
+mineralog	3	Q13416354	mineralogist	mineralog	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,179
+multimediakunstner	3	Q6934789	multimedia artist	multimediakunstner	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,058
+naturfotograf	3	Q12368980	nature photographer	naturfotograf	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 110
+naturgransker	3	Q18805	naturalist	naturviter	checked	naturalist; P106 uses: 9,571
+ordensgeistlig	3	Q2259532	cleric	geistlig	checked	cleric (of a religious order); P106 uses: 8,943
+orientalist	3	Q1731155	orientalist	orientalist	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,725
+orienteringsløper	3	Q13581129	orienteer	orienteringsløper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,147
+paleontolog	3	Q1662561	paleontologist	paleontolog	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,334
+patolog	3	Q3368718	pathologist	patolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,957
+plateprodusent	3	Q183945	record producer	plateprodusent	exact	alias nn and label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 20,481
+poet	3	Q49757	poet	lyriker	checked	poet; no nb label has the word; P106 uses: 134,152
+postmester	3	Q1416611	postmaster	postmester	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 790
+reder	3	Q500251	ship-owner	skipsreder	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,403
+reindriftssame	3	Q42399261	reindeer herder	reindriftsutøver	checked	reindeer herder; P106 uses: 98
+rettshistoriker	3	Q2135538	legal historian	rettshistoriker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,392
+seiler	3	Q476246	sailor	seiler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,310
+sjøkaptein	3	Q849424	sea captain	skipsfører	checked	sea captain (Q6785142 'master mariner', nb label, 76 uses); P106 uses: 1,998
+skipskonstruktør	3	Q2860259	marine architect	skipskonstruktør	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 344
+snikkar	3	Q326358	joiner	snekker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,420
+sosialarbeider	3	Q7019111	social worker	sosionom	checked	social worker ('no' label); P106 uses: 6,232
+spion	3	Q9352089	spy	spion	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,602
+sykepleielærer	3	Q7070203	nurse educator	sykepleielærer	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 135
+syklist	3	Q2125610	cyclist	syklist	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 340
+teaterinstruktør	3	Q3387717	theatre director	sceneinstruktør	checked	theatre director; P106 uses: 17,569
+tennisspiller	3	Q10833314	tennis player	tennisspiller	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,878
+travtrener	3	Q466640	horse trainer	hestetrener	checked	horse trainer (harness racing); P106 uses: 1,735
+typograf	3	Q1229025	typographer	typograf	checked	typographer: nb and nn label; P106 uses: 3,553
+veiembetsmann	3	Q212238	civil servant	offentlig tjenesteperson	checked	civil servant (road administration); P106 uses: 44,766
+vokalist	3	Q2643890	vocalist	vokalist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,375
+admiral	2	Q10669499	naval officer	sjøoffiser	checked	naval rank; the occupation is naval officer (Q10669499); P106 uses: 10,594
+akvarellmaler	2	Q10373653	watercolorist	akvarellmaler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,695
+alpinist	2	Q4144610	alpine skier	alpinist	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,731
+arbeiderleder	2	Q50768646	labor leader	fagforeningsleder	checked	labor leader; P106 uses: 389
+arkitekturteoretiker	2	Q17391659	architectural theoretician	arkitekturteoretiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 137
+avisredaktør	2	Q17351648	newspaper editor	avisredaktør	exact	alias nb and label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,971
+avisteiknar	2	Q15296811	draftsperson	tegner	checked	draftsperson (newspaper drawer, nynorsk); P106 uses: 31,508
+ballettdanser	2	Q805221	ballet dancer	ballettdanser	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,619
+bankdirektør	2	Q32947888	bank manager	banksjef	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,344
+barnebokforfattar	2	Q4853732	children's writer	barnebokforfatter	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,463
+barnelege	2	Q1919436	pediatrician	barnelege	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,549
+bibeloversetter	2	Q24262584	Bible translator	bibeloversetter	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 713
+bokhandlar	2	Q998550	bookseller	bokhandler	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,123
+bratsjist	2	Q899758	violist	bratsjist	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,492
+bygdehistorikar	2	Q1595570	local historian	lokalhistoriker	checked	local historian; P106 uses: 9,004
+byplanlegger	2	Q131062	urban planner	byplanlegger	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,005
+børsemaker	2	Q1371796	gunsmith	børsemaker	checked	gunsmith: nb label (Q885444 'bladesmith' has the same nb label); P106 uses: 478
+dekorasjonsmålar	2	Q1183704	decorative painter	dekorasjonsmaler	checked	decorative painter (nynorsk); P106 uses: 387
+dispasjør	2	Q691167	claims adjuster	dispasjør	checked	claims adjuster (average adjuster): nb label (51 uses); P106 uses: 51
+dommer	2	Q16533	judge	dommer	checked	judge: nb label (Q202648 'referee' has the same nb label); P106 uses: 48,093
+dramatikar	2	Q214917	playwright	dramatiker	checked	playwright (nynorsk); P106 uses: 29,284
+døvepedagog	2	Q1231865	pedagogue	pedagog	checked	pedagogue (of the deaf); P106 uses: 56,675
+egyptolog	2	Q1350189	Egyptologist	egyptolog	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,757
+elektrotekniker	2	Q1327627	electrotechnician	elektrotekniker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,660
+fiskar	2	Q331432	fisher	fisker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,942
+fisker	2	Q331432	fisher	fisker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,942
+folkehøyskolelærer	2	Q37226	teacher	lærer	checked	teacher (folk high school); P106 uses: 116,214
+folkeminnegranskar	2	Q3075052	folklorist	folklorist	checked	folklorist; P106 uses: 3,914
+folkemusikar	2	Q101084010	folk musician	folkemusiker	checked	folk musician (nynorsk); P106 uses: 678
+folkemusiker	2	Q101084010	folk musician	folkemusiker	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 678
+folkesanger	2	Q2532239	traditional folk singer	folkesanger	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 230
+forkynner	2	Q432386	preacher	predikant	checked	preacher; the nb label is on Q1423891 'Christian minister' (ordained); P106 uses: 6,597
+forlagssjef	2	Q2516866	publisher	forlegger	exact	alias nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 30,451
+forleggjar	2	Q2516866	publisher	forlegger	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 30,451
+forretningsdrivende	2	Q43845	businessperson	forretningsdrivende	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 93,811
+forskar	2	Q1650915	researcher	forsker	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,105,745
+fortifikasjonsingeniør	2	Q81096	engineer	ingeniør	checked	engineer (fortification); P106 uses: 83,471
+fotojournalist	2	Q957729	photojournalist	fotojournalist	exact	label nb and label nn and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,007
+fredsaktivist	2	Q16323111	peace activist	fredsaktivist	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,270
+friidrettsutøvar	2	Q11513337	athletics competitor	friidrettsutøver	exact	label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 51,662
+gartnar	2	Q758780	gardener	gartner	checked	gardener (nynorsk); P106 uses: 2,713
+geodet	2	Q116994205	geodesist	geodet	checked	geodesist: nb label; P106 uses: 924
+gjestgiver	2	Q16513769	innkeeper	gjestgiver	checked	innkeeper: nb label; P106 uses: 654
+gründer	2	Q131524	entrepreneur	gründer	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 50,145
+gullgraver	2	Q19691902	gold miner	gullgraver	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 134
+hagearkitekt	2	Q2815948	landscape architect	landskapsarkitekt	checked	landscape architect (as German 'Gartenarchitekt'); P106 uses: 3,123
+hagebrukskyndig	2	Q3140857	horticulturist	hortonom	checked	horticulturist; P106 uses: 1,866
+hagebrukslærar	2	Q37226	teacher	lærer	checked	teacher (of horticulture); P106 uses: 116,214
+hardingfelespelar	2	Q1268911	spelman	spillemann	checked	spelman (Hardanger fiddler); P106 uses: 115
+hardingfelespelmann	2	Q1268911	spelman	spillemann	checked	spelman (Hardanger fiddler); P106 uses: 115
+hardingfelespillemann	2	Q1268911	spelman	spillemann	checked	spelman (Hardanger fiddler); P106 uses: 115
+hjerneforsker	2	Q6337803	neuroscientist	nevroviter	exact	alias nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,970
+høyesterettsadvokat	2	Q11956961	lawyer with the right to appear before the Norwegian Supreme Court	advokat med møterett for Høyesterett	exact	alias nb and alias nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 117
+immunolog	2	Q12119633	immunologist	immunolog	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,832
+industridrivende	2	Q6606110	industrialist	industrieier	checked	industrialist; P106 uses: 5,464
+jarnbaneingeniør	2	Q66711686	railway engineer	jernbaneingeniør	checked	railway engineer (nynorsk); P106 uses: 664
+ornitolog	2	Q1225716	ornithologist	ornitolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,588
+salmebokutgiver	1	Q1607826	editor	redaktør	checked	editor (of hymn books; no item has the word); P106 uses: 36,601
+sjefbibliotekar	1	Q10728547	chief librarian	biblioteksjef	checked	chief librarian (nb label 'biblioteksjef'; 18 uses); P106 uses: 18

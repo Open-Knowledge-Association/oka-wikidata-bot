@@ -131,9 +131,12 @@ def write_report(site=None):
                         f"|| {'; '.join(r['done'])} || [[Special:Diff/{r['revid']}|diff]]"]
     lines.append("|}")
     lines += ["", "== Left alone ==", "Values the bot does not add for these entries, and why (checked when this page "
-              "was written). Most are occupations in words the bot cannot map to an item yet: a map of the most "
-              "frequent occupation words of each work (German and Norwegian first), each checked on Wikidata, is "
-              "being built, so that the full run adds them."]
+              "was written). Most are occupations in words the bot could not map to an item when these entries were "
+              "read. A map of the most frequent occupation words, each checked on Wikidata, has since been built "
+              "([https://github.com/Open-Knowledge-Association/oka-wikidata-bot/tree/main/occupation_maps "
+              "occupation_maps]): German 642 words, which raises the share of occupation mentions mapped from 39% to "
+              "78%; Norwegian 496 words, from 47% to 85%. The full run uses it; offices such as mayor or minister and "
+              "the title Professor stay unmapped."]
     lines += [f"* {s.WORKS3[c['work']][2]}, {c['title']} ({{{{Q|{c['qid'][1:]}}}}}): {d.clean(n)}" for c, n in notes] \
         or ["* none"]
     fixes = s.WORK3 / "corrections.json"         # the bot's own mistakes in the test run, and how they were undone

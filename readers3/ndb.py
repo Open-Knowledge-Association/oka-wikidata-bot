@@ -19,6 +19,7 @@ import re
 import urllib.parse
 
 import dictionaries as d
+import occupations
 import sources3 as s
 
 WORK = "ndb"
@@ -231,7 +232,11 @@ CONFESSIONAL = re.compile(r"^(?:katholische[r]?|evangelische[r]?|lutherische[r]?
 
 
 def occupation(word):
-    """The item for one occupation word ('Malerin' is 'Maler'; 'katholischer Theologe' is 'Theologe'), or None."""
+    """The item for one occupation word ('Malerin' is 'Maler'; 'katholischer Theologe' is 'Theologe'), or None: the
+    checked German map of occupations.py first (642 words), then the small list above."""
+    q = occupations.occupation_qid(word, "de")
+    if q:
+        return q
     w = CONFESSIONAL.sub("", d.clean(word).strip(" .;"))
     w = FEMININE.get(w, w)
     if w not in OCCUPATIONS and w.endswith("in") and w[:-2] in OCCUPATIONS:

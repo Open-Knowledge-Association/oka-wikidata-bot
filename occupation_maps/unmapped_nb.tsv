@@ -1,0 +1,152 @@
+word	count	reason	candidates_considered
+konge	63	noble or royal title, not an occupation	Q2304859 sovereign (P106 2345); Q12097 king (P106 902)
+organisasjonsmann	56	too vague (leader in voluntary organisations)	
+dronning	48	noble or royal title, not an occupation	Q19643 queen regnant (P106 122); Q16511993 queen (P106 92)
+riksråd	44	member of the council of the realm: position (P39), not an occupation	Q15055408 Riksråd (P106 77)
+eidsvollsmann	24	member of the 1814 constituent assembly: position (P39), not an occupation	Q31202639 member of the Norwegian Constitutional Assembly (P106 0)
+ridder	24	noble or royal title, not an occupation	Q102083 knight (P106 1014); Q2261440 Knight (P106 44)
+legatstifter	19	not an occupation (founder of an endowment)	
+lensherre	17	holder of a royal fief (len): position (P39), not an occupation	Q1409420 feudatory (P106 1489); Q3408743 seignory (P106 191)
+høvedsmann	16	ambiguous: captain or chieftain	
+lagmann	15	historical office (lawman, later judge); the meaning changed over time	Q1771259 lagmann (P106 26)
+lendmann	13	noble or royal title, not an occupation (medieval landed man)	
+syslemann	13	district governor: position (P39), not an occupation	
+adelsmann	12	noble or royal title, not an occupation	
+høvding	12	chieftain: position (P39), not an occupation	Q1259323 traditional leader or chief (P106 1018)
+metallkunstner	12	no item for the metal artist	
+lensmann	11	historical fief holder, later rural police chief: position (P39), not an occupation	Q3408743 seignory (P106 191); Q1686380 lensmann (P106 95)
+norsk	10	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+presse-	10	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+siviløkonom	10	business degree title (Q16254337)	Q12344332 business undergraduate (P106 198); Q16254337 siviløkonom (P106 50)
+materialkunstner	9	too vague	
+orknøyjarl	9	noble or royal title, not an occupation	
+donator	8	not an occupation (donor)	Q15472169 patron of the arts (P106 2519); Q1968442 donor (P106 529); Q43667189 donor (P106 82)
+forsikringsmann	8	too vague (insurance man)	
+forskningsadministrator	8	too vague	
+gods-	8	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+jarl	8	noble or royal title, not an occupation	
+prinsesse	8	noble or royal title, not an occupation	Q863048 princess (P106 96)
+riddar	8	noble or royal title, not an occupation	Q102083 knight (P106 1014); Q2261440 Knight (P106 44)
+statsråd	8	cabinet minister: position (P39), not an occupation; as German 'Minister'	Q83307 minister (P106 6786)
+bryggerieier	7	owner of a brewery; no item	
+flypioner	7	too vague	
+greve	7	noble or royal title, not an occupation	Q3519259 count (P106 514); Q28989 Graf (P106 30)
+kansler	7	position (P39), not an occupation	Q373085 chancellor (P106 664); Q5070767 chancellor (P106 3)
+organisasjonsleder	7	too vague	Q25713832 leader of organization (P106 69); Q11897839 organization leader (P106 49)
+reiselivsmann	7	too vague	
+språkmann	7	ambiguous: linguist or language activist	
+antikvar	6	ambiguous: antiquarian scholar or antiquarian bookseller	Q5697103 antiquarian (P106 1170); Q187865 antiquarian seller (P106 654)
+folkeopplysningsmann	6	too vague	
+industripioner	6	too vague	
+kongsdatter	6	noble or royal title, not an occupation	
+stattholder	6	position (P39), not an occupation	Q325380 stadtholder (P106 0)
+borgermester	5	position (P39), not an occupation; as German 'Bürgermeister'	Q30185 mayor (P106 11160); Q177529 burgomaster (P106 86); Q56299314 councillor (P106 31); Q5663900 alcalde (P106 22); Q29639349 mayor in Luxembourg (P106 3); Q13423499 mayor of a place in the Netherlands (P106 1); Q2922332 mayor of a place in Hungary (P106 0)
+haugianer	5	follower of Hans Nielsen Hauge: religious movement, not an occupation	
+kirkeleder	5	too vague	
+konsul	5	diplomatic rank; honorary consuls are merchants	Q207978 consul (P106 782); Q40779 Roman consul (P106 3)
+målmann	5	ambiguous: language activist (SNL: Alf Hellevik, Edvard Os) or goalkeeper	Q172964 goalkeeper (P106 61)
+opprørskonge	5	noble or royal title, not an occupation	
+statsminister	5	position (P39), not an occupation	Q2632935 minister of state (P106 3); Q14212 prime minister (P106 0)
+stattholder i norge	5	position (P39), not an occupation	
+telegrafdirektør	5	position (P39), not an occupation	
+administrator	4	too vague	Q16532929 administrator (P106 1536); Q327353 system administrator (P106 93); Q358832 Ecclesiastical administrator (P106 12)
+amtmann	4	county governor: position (P39), not an occupation	Q592996 amtmann (P106 1084)
+dilettantarkitekt	4	amateur, not an occupation	
+fehirde	4	medieval royal treasurer: position (P39), not an occupation	Q5441501 Fehirde (P106 2)
+forskningspolitiker	4	too vague	
+humanist	4	ambiguous: humanities scholar, Renaissance humanist or humanitarian (SNL: Jon Simonssøn, Fridtjof Nansen)	Q10527030 humanist (P106 973); Q16727193 humanities scholar (P106 675)
+kanslar	4	position (P39), not an occupation	Q373085 chancellor (P106 664)
+ladejarl	4	noble or royal title, not an occupation	
+lendmann/baron	4	noble or royal title, not an occupation	
+lensherre i norge	4	position (P39), not an occupation	
+litteratur-	4	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+luftfartspioner	4	too vague	
+misjonskvinne	4	ambiguous: missionary or member of a mission society	
+misjonsleder	4	too vague	
+pioner i arbeiderbevegelsen	4	too vague	
+rådmann	4	position (P39), not an occupation (municipal chief executive; earlier a town councillor)	Q4657217 municipal executive (P106 224); Q56299314 councillor (P106 31); Q133249293  (P106 0)
+sagbrukseier	4	owner of a sawmill; no item	
+småkonge	4	noble or royal title, not an occupation	Q125282968  (P106 1)
+stadskonduktør	4	municipal engineer office: position (P39), not an occupation	
+unionskonge	4	noble or royal title, not an occupation	
+-administrator	3	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+adelsdame	3	noble or royal title, not an occupation	
+antroposof	3	conviction, not an occupation	Q112118176 anthroposophist (P106 177)
+avholdsleder	3	too vague	
+bergverksmann	3	ambiguous: miner, mine owner or mining official	
+bygdelensmann	3	rural police chief: position (P39), not an occupation	
+dikterhustru	3	not an occupation	
+drottsete	3	medieval office: position (P39), not an occupation	
+forbryter	3	not an occupation (criminal)	Q2159907 criminal (P106 2071); Q1184268 delinquent (P106 40)
+helgen	3	not an occupation (saint)	
+husfrue	3	not an occupation	
+jarl over orknøyane	3	noble or royal title, not an occupation	
+konge i dublin	3	noble or royal title, not an occupation	
+kongsmor	3	noble or royal title, not an occupation	
+konjakkprodusent	3	owner of a cognac house; no item	
+kulturadministrator	3	too vague	
+kulturformidler	3	too vague	
+kulturforsker	3	too vague	
+museumsdirektør	3	position (P39), not an occupation; as German 'Museumsdirektor'	Q22132694 museum director (P106 11)
+museumsleder	3	position (P39), not an occupation	Q22132694 museum director (P106 11)
+møbelprodusent	3	owner of a furniture factory; no item	
+opprører	3	not an occupation (rebel)	
+opprørsleiar	3	not an occupation (rebel leader)	
+pave	3	position (P39), not an occupation	Q19546 Pope (P106 2)
+riksstyrer	3	position (P39), not an occupation	
+skipioner	3	too vague	
+stallare	3	medieval court office: position (P39), not an occupation	
+stormann	3	noble or royal title, not an occupation (magnate)	
+sverige	3	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+visekonsul	3	diplomatic rank	Q56292679 vice consul (P106 21)
+væreier	3	owner of a fishing station; no item	
+-direktør	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+-formidler	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+-historiker	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+-kritiker	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+amatørhistoriker	2	amateur, not an occupation	
+amatørmaler	2	amateur, not an occupation	
+anarkist	2	conviction, not an occupation	Q12359071 anarchist (P106 613)
+arbeideragitator	2	too vague	
+arving	2	not an occupation (heir)	
+autodidakt	2	not an occupation	Q16028865 autodidact (P106 33)
+avholdsagitator	2	too vague	
+baglerkonge	2	noble or royal title, not an occupation	
+bank-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+baron	2	noble or royal title, not an occupation	Q165503 baron (P106 118)
+berghauptmann	2	position (P39), not an occupation	
+bergmester	2	mining office: position (P39), not an occupation	Q820043 bergmeister (P106 81)
+bergråd	2	title	
+bergverks-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+bergverksdirektør	2	position (P39), not an occupation	
+birkebeinhøvding	2	noble or royal title, not an occupation	
+biskop/superintendent	2	two offices in one word	
+bondeleder	2	too vague	
+danmark	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+dansk	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+dyre-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+elektronisk maler	2	unclear	
+fajanse-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+fangstbestyrer	2	too vague	
+film-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+fiskeridirektør	2	position (P39), not an occupation	
+fiskeripioner	2	too vague	
+fjellmann	2	too vague	
+forkjemper for samisk språk	2	too vague	
+forsvarsvenn	2	not an occupation	
+fribytter	2	not an occupation (freebooter)	
+frikirkeleder	2	too vague	
+fyrste	2	noble or royal title, not an occupation	Q2304859 sovereign (P106 2345); Q18244 Fürst (P106 28)
+geværkonstruktør	2	no item for the firearms designer	
+glass-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+grønlandskjøpmann	2	specific trading office; no item	
+havnedirektør	2	position (P39), not an occupation	
+hertug	2	noble or royal title, not an occupation	Q166886 duke (P106 49)
+hoffagent	2	court title; Q131737537 has no English label	Q131737537  (P106 6)
+hotellmann	2	ambiguous: hotel owner or manager	
+hotellvertinne	2	ambiguous: hotel owner or hostess	
+husdyrforsker	2	no item for the animal scientist	
+industri-	2	fragment of a split compound ('presse- og kringkastingsmann' is split at ' og ')	
+jernbaneadministrator	2	too vague	
+keiser	2	noble or royal title, not an occupation	
+kirkebygger	2	too vague	

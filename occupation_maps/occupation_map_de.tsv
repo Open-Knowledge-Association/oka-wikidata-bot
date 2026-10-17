@@ -1,0 +1,643 @@
+word	count	qid	label_en	label_de	method	note
+Theologe	7634	Q1234713	theologian	Theologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 51,929
+Schriftsteller	6037	Q36180	writer	Schriftsteller	checked	label match; Q482980 'author' has it as an alias; P106 uses: 458,268
+Jurist	4283	Q185351	jurist	Jurist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 135,189
+Politiker	4176	Q82955	politician	Politiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 967,089
+Hochschullehrer	3798	Q1622272	university teacher	Hochschullehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 368,935
+Maler	3031	Q1028181	painter	Maler	checked	label match (artist); Q288728 'painter and varnisher' (the trade) has it as an alias; P106 uses: 238,471
+Historiker	2711	Q201788	historian	Historiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 152,858
+Arzt	2638	Q39631	physician	Arzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 209,092
+Pfarrer	2522	Q955464	parson	Pfarrer	checked	parson: label match, any denomination; Q152002 'pastor' has it as an alias; P106 uses: 23,111
+Dichter	2120	Q49757	poet	Dichter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 134,152
+Komponist	2029	Q36834	composer	Komponist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 134,622
+Bischof	1885	Q29182	bishop	Bischof	checked	bishop: label match; the ordination rank, used as P106 by 4,605 items (P39: 7,682); 'Bischof von X' forms included; P106 uses: 4,605
+Unternehmer	1744	Q131524	entrepreneur	Unternehmer	checked	entrepreneur: label match; businessperson Q43845 and merchant Q215536 have it as an alias; P106 uses: 50,145
+Philologe	1679	Q13418253	philologist	Philologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,507
+Lehrer	1672	Q37226	teacher	Lehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 116,214
+Pädagoge	1623	Q1231865	pedagogue	Pädagoge	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 56,675
+Philosoph	1486	Q4964182	philosopher	Philosoph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,337
+Künstler	1456	Q483501	artist	Künstler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 114,732
+Publizist	1189	Q6051619	opinion journalist	Publizist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,503
+Mathematiker	1187	Q170790	mathematician	Mathematiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 60,497
+General	1133	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Chemiker	1106	Q593644	chemist	Chemiker	exact	alias de and label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 58,305
+Gymnasiallehrer	1040	Q131717117	teacher at a Gymnasium	Gymnasiallehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,914
+Bibliothekar	1018	Q182436	librarian	Bibliothekar	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 27,287
+Verleger	1008	Q2516866	publisher	Verleger	checked	publisher: label match; bookseller Q998550 has it as an alias; P106 uses: 30,451
+Musiker	983	Q639669	musician	Musiker	checked	musician: label match; instrumentalist Q1278335 has it as an alias; P106 uses: 141,735
+Schauspieler	973	Q33999	actor	Schauspieler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 394,261
+Übersetzer	970	Q333634	translator	Übersetzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 92,366
+Diplomat	944	Q193391	diplomat	Diplomat	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 58,093
+Physiker	868	Q169470	physicist	Physiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 59,462
+Ingenieur	863	Q81096	engineer	Ingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 83,471
+Staatsmann	861	Q372436	statesperson	Staatsmann	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,816
+Dramatiker	838	Q214917	playwright	Dramatiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,284
+Architekt	822	Q42973	architect	Architekt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 101,841
+Superintendent	749	Q2296367	superintendent	Superintendent	checked	Protestant church office, label match; used as P106 by 2,319 items (P39: 130); P106 uses: 2,319
+Buchhändler	714	Q998550	bookseller	Buchhändler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,123
+Kaufmann	714	Q215536	merchant	Kaufmann	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 26,795
+Journalist	708	Q1930187	journalist	Journalist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 210,069
+Bildhauer	698	Q1281618	sculptor	Bildhauer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 64,391
+Sänger	695	Q177220	singer	Sänger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 137,790
+Klassischer Philologe	689	Q16267607	classical philologist	Klassischer Philologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,503
+Botaniker	681	Q2374149	botanist	Botaniker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 66,390
+Offizier	678	Q189290	military officer	Offizier	checked	military officer: label match; Q61022630 'officer' (of any organisation) less used; P106 uses: 61,220
+Zeichner	665	Q15296811	draftsperson	Zeichner	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,508
+Schulmann	649	Q1231865	pedagogue	Pädagoge	checked	pedagogue: 'Schulmann' is the 19th-century word for it (Q108439375 'Schulmann', a subclass without an English label, 76 uses); P106 uses: 56,675
+Drucker	646	Q175151	printer	Drucker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,620
+Erzbischof	640	Q49476	archbishop	Erzbischof	checked	archbishop: label match; used as P106 by 1,885 items (P39: 723); P106 uses: 1,885
+Mediziner	623	Q39631	physician	Arzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 209,092
+Redakteur	577	Q876864	editing staff	Redakteur	checked	editing staff: label match; newspaper editor Q17351648 has it as an alias; P106 uses: 28,497
+Dirigent	567	Q158852	conductor	Dirigent	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 26,212
+Prediger	559	Q432386	preacher	Prediger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,597
+Astronom	534	Q11063	astronomer	Astronom	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,760
+Kupferstecher	525	Q13365770	copper engraver	Kupferstecher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,450
+Archäologe	523	Q3621491	archaeologist	Archäologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,552
+Abgeordneter	520	Q82955	politician	Politiker	checked	member of a parliament -> politician (standard practice); Q486839 'member of parliament' is a position; P106 uses: 967,089
+MdL	518	Q82955	politician	Politiker	checked	'Mitglied des Landtags' -> politician (standard practice); P106 uses: 967,089
+Regisseur	507	Q3455803	director	Regisseur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 55,580
+Orientalist	500	Q1731155	orientalist	Orientalist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,725
+Buchdrucker	498	Q40881196	book printer	Buchdrucker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,375
+Grafiker	491	Q1925963	graphic artist	Grafiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,560
+Naturwissenschaftler	485	Q18805	naturalist	Naturwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,571
+Kunsthistoriker	476	Q1792450	art historian	Kunsthistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 40,309
+Humanist	471	Q1636680	Renaissance humanist	Renaissance-Humanist	checked	Renaissance humanist (alias): the NDB uses the word for 14th-16th-century scholars (co-occurs with Reformator, Mönch, Drucker); Q10527030 is the modern world view; P106 uses: 315
+Generalleutnant	466	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Mönch	464	Q733786	monk	Mönch	checked	monk: label match; P106 uses: 7,541
+Lyriker	452	Q49757	poet	Dichter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 134,152
+Geograf	447	Q901402	geographer	Geograph	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 17,481
+Beamter	438	Q212238	civil servant	Beamter	checked	civil servant: label match (Q16258947 'Beamter', the German-specific subclass, 5,215 uses); P106 uses: 44,766
+Geologe	436	Q520549	geologist	Geologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,285
+Organist	434	Q765778	organist	Organist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,065
+Kirchenlieddichter	408	Q13424456	hymnwriter	Kirchenlieddichter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,156
+Radierer	401	Q10862983	etcher	Radierer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,122
+Chronist	396	Q3330547	chronicler	Chronist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,011
+Zoologe	386	Q350979	zoologist	Zoologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,249
+Forschungsreisender	383	Q11900058	explorer	Forschungsreisender	checked	explorer: label match; Q10498147 'scientific explorer' (194 uses); P106 uses: 7,527
+Baumeister	376	Q1340643	master builder	Baumeister	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,187
+Archivar	371	Q635734	archivist	Archivar	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,901
+Priester	371	Q42603	priest	Priester	checked	priest: label match, any denomination (Catholic priest Q250867 has it as an alias); P106 uses: 20,720
+Kirchenhistoriker	369	Q1743122	church historian	Kirchenhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,488
+Germanist	367	Q2599593	Germanist	Germanist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,778
+Industrieller	354	Q6606110	industrialist	Industrieller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,464
+Bankier	324	Q806798	banker	Bankier	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,410
+Hofprediger	318	Q12316990	court chaplain	Hofprediger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 475
+Mineraloge	317	Q13416354	mineralogist	Mineraloge	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,179
+Naturforscher	317	Q18805	naturalist	Naturwissenschaftler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,571
+Musikwissenschaftler	312	Q14915627	musicologist	Musikwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,221
+Chirurg	310	Q774306	surgeon	Chirurg	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 18,083
+Nationalökonom	302	Q188094	economist	Wirtschaftswissenschaftler	checked	economist; the alias match Q1227195 'Volkswirt' is described as an academic degree (subclass of economist); P106 uses: 77,052
+Theaterdirektor	302	Q1776724	theatre manager	Theaterleiter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,111
+Librettist	301	Q8178443	librettist	Librettist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,207
+Erfinder	293	Q205375	inventor	Erfinder	checked	inventor: label match; Q715679 'patent inventor' (68 uses); P106 uses: 9,321
+Feldmarschall	289	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Geistlicher	288	Q2259532	cleric	Kleriker	checked	cleric (alias 'Geistlicher'); P106 uses: 8,943
+Generalmajor	284	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Literarhistoriker	283	Q13570226	literary historian	Literaturhistoriker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,955
+Kapellmeister	282	Q215793	chapelmaster	Kapellmeister	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,713
+Pianist	280	Q486748	pianist	Pianist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 28,927
+Missionar	277	Q219477	missionary	Missionar	checked	missionary: label match; Catholic missionary Q117936754 has it as an alias; P106 uses: 12,749
+Herausgeber	274	Q1607826	editor	Herausgeber	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 36,601
+Anatom	272	Q10872101	anatomist	Anatom	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,429
+Autor	269	Q482980	author	Autor	checked	author: label match; writer Q36180 has it as an alias; P106 uses: 92,571
+Rechtsanwalt	257	Q40348	lawyer	Rechtsanwalt	checked	lawyer: label match; legal counselor Q2135469 has it as an alias; P106 uses: 123,225
+Kartograf	255	Q1734662	cartographer	Kartograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,745
+Paläontologe	251	Q1662561	paleontologist	Paläontologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,334
+Soldat	248	Q4991371	soldier	Soldat	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,905
+Apotheker	243	Q105186	pharmacist	Apotheker	checked	pharmacist: label match; Q1131236 'apothecary' (historical name, 266 uses); P106 uses: 13,754
+Literaturhistoriker	234	Q13570226	literary historian	Literaturhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,955
+Geograph	233	Q901402	geographer	Geograph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 17,481
+Kantor	232	Q330679	cantor	Kantor	checked	cantor (church music director): label match; NDB uses co-occur with Komponist and Organist; hazzan Q1067977 has it as an alias; P106 uses: 1,554
+MdR	232	Q82955	politician	Politiker	checked	'Mitglied des Reichstags' -> politician; P106 uses: 967,089
+Linguist	230	Q14467526	linguist	Linguist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 33,620
+Schulleiter	227	Q1056391	head teacher	Schulleiter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,037
+Gesandter	223	Q193391	diplomat	Diplomat	checked	envoy -> diplomat; Q11051391 'envoy extraordinary' is the diplomatic rank; P106 uses: 58,093
+Kunstsammler	221	Q10732476	art collector	Kunstsammler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,190
+Physiologe	219	Q2055046	physiologist	Physiologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,114
+Gynäkologe	215	Q2640827	gynecologist	Gynäkologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,892
+Reformator	211	Q763779	Protestant reformer	Reformator	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 257
+Musikschriftsteller	210	Q61996872	musicographer	Musikschriftsteller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 850
+Volkswirt	208	Q188094	economist	Wirtschaftswissenschaftler	checked	economist (alias); the label item Q1227195 is described as an academic degree (subclass of economist); P106 uses: 77,052
+Illustrator	198	Q644687	illustrator	Illustrator	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,932
+Drehbuchautor	197	Q28389	screenwriter	Drehbuchautor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 88,066
+Liederdichter	193	Q822146	lyricist	Liedtexter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,028
+Landwirt	191	Q131512	farmer	Landwirt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 24,897
+Wirtschaftswissenschaftler	190	Q188094	economist	Wirtschaftswissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 77,052
+Musiklehrer	189	Q2675537	music teacher	Musiklehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,518
+Biologe	188	Q864503	biologist	Biologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,250
+Generalfeldmarschall	187	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Literaturwissenschaftler	185	Q17167049	literary scholar	Literaturwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 28,790
+Funktionär	183	Q1328323	functionary	Funktionär	checked	functionary: label match; official Q599151 has it as an alias; P106 uses: 1,861
+Mäzen	183	Q15472169	patron of the arts	Mäzen	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,519
+Oberst	181	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Opernsänger	181	Q2865819	opera singer	Opernsänger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 22,911
+Fotograf	180	Q33231	photographer	Fotograf	checked	photographer: label match; P106 uses: 93,972
+Lithograf	179	Q16947657	lithographer	Lithograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,305
+Geodät	174	Q116994205	geodesist	Geodät	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 924
+Ethnologe	172	Q1371378	ethnologist	Ethnologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,057
+Geiger	170	Q1259917	violinist	Geiger	checked	violinist: label match; fiddler Q3560496 has it as an alias; P106 uses: 12,235
+Leibarzt	167	Q1251349	personal physician	Leibarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 277
+Agrarwissenschaftler	165	Q126368762	agricultural scientist	Agrarwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 443
+Minnesänger	165	Q11781549	Minnesänger	Minnesänger	checked	Minnesänger: label match, the only candidate (98 uses); P106 uses: 98
+Propst	161	Q756215	provost	Propst	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,316
+Dramaturg	158	Q487596	dramaturge	Dramaturg	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,200
+Volkskundler	157	Q3075052	folklorist	Volkskundler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,914
+Geschichtsschreiber	154	Q201788	historian	Historiker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 152,858
+Kanonist	154	Q12027957	canon law jurist	Kanonist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,250
+Psychologe	154	Q212980	psychologist	Psychologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 39,386
+Hebraist	151	Q4988856	Hebraist	Hebraist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 967
+Militär	149	Q47064	military personnel	Militär	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 112,843
+Altphilologe	147	Q16267607	classical philologist	Klassischer Philologe	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,503
+Fabrikant	147	Q42855995	factory owner	Fabrikant	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,187
+Widerstandskämpfer	146	Q1397808	resistance fighter	Widerstandskämpfer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,228
+Gelehrter	145	Q20826540	scholar	Gelehrter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,374
+Militärschriftsteller	144	Q42361191	military writer	Militärschriftsteller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 252
+Psychiater	140	Q211346	psychiatrist	Psychiater	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,482
+Fürstbischof	138	Q29182	bishop	Bischof	checked	prince-bishop -> bishop; Q22881 'Prince-Bishop' is a position (P106 0); P106 uses: 4,605
+Meteorologe	138	Q2310145	meteorologist	Meteorologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,613
+Rechtshistoriker	138	Q2135538	legal historian	Rechtshistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,392
+Bauingenieur	136	Q13582652	civil engineer	Bauingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,297
+Landschaftsmaler	135	Q21600439	landscape painter	Landschaftsmaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,738
+Forstmann	134	Q1895303	forester	Förster	checked	forester ('Forstmann' = forestry official); no item has the word; P106 uses: 2,710
+Polyhistor	134	Q270141	polymath	Universalgelehrter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 203
+Theaterintendant	134	Q39020112	Theaterintendant	Theaterintendant	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,005
+Graphiker	132	Q1925963	graphic artist	Grafiker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,560
+Musikdirektor	132	Q1198887	music director	Musikdirektor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,740
+Pathologe	132	Q3368718	pathologist	Pathologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,957
+Reiseschriftsteller	128	Q3579035	travel writer	Reiseschriftsteller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,353
+Techniker	128	Q5352191	technician	Techniker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,083
+Rittergutsbesitzer	127	Q66495020	estate owner	Gutsbesitzer	checked	estate owner (owner of a Rittergut); P106 uses: 1,270
+Förster	126	Q1895303	forester	Förster	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,710
+Heimatforscher	126	Q1595570	local historian	Heimatforscher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,004
+Musikverleger	126	Q222836	music publisher	Musikverleger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,276
+Kartograph	122	Q1734662	cartographer	Kartograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,745
+Goldschmied	121	Q211423	goldsmith	Goldschmied	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,339
+Richter	120	Q16533	judge	Richter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 48,093
+Statistiker	120	Q2732142	statistician	Statistiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,284
+Arrangeur	118	Q1643514	music arranger	Arrangeur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,828
+Numismatiker	118	Q2004963	numismatist	Numismatiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,903
+Soziologe	118	Q2306091	sociologist	Soziologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 31,005
+Forstwissenschaftler	117	Q21244999	forestry scientist	Forstwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,518
+Domkapitular	116	Q1237385	canon	Domherr	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,309
+Entomologe	113	Q3055126	entomologist	Entomologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 26,455
+Tänzer	113	Q5716684	dancer	Tänzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 20,875
+Internist	112	Q15924224	internist	Internist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,620
+Musiktheoretiker	112	Q16031530	music theorist	Musiktheoretiker	checked	music theorist: label match; musicologist Q14915627 has it as an alias; P106 uses: 964
+Intendant	110	Q60687737	intendant	Intendant	checked	intendant of cultural institutions: NDB uses co-occur with Regisseur, Theaterintendant, Schauspieler; Q6491450 is the administrative official; P106 uses: 85
+Rabbiner	110	Q133485	rabbi	Rabbiner	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,567
+Sprachforscher	110	Q14467526	linguist	Linguist	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 33,620
+Feldherr	106	Q1402561	military leader	Feldherr	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,932
+Musikpädagoge	104	Q16145150	music educator	Musikpädagoge	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,436
+Feldzeugmeister	103	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Pharmakologe	103	Q2114605	pharmacologist	Pharmakologe	exact	alias de and label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,788
+Gutsherr	102	Q1815782	lord of the manor	Gutsherr	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,264
+Indologe	100	Q18524037	Indologist	Indologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,694
+Diakon	99	Q161944	deacon	Diakon	checked	deacon: label match (in Lutheran use also the title of a second pastor); Catholic deacon Q25393460 has it as an alias; P106 uses: 2,355
+Elektrotechniker	97	Q1326886	electrical engineer	Elektroingenieur	checked	electrical engineer (alias): the NDB uses co-occur with Ingenieur, Physiker; Q1327627 'electrotechnician' is the vocational trade; P106 uses: 10,067
+Bühnenbildner	96	Q11613590	theatre designer	Bühnenbildner	checked	theatre designer: label match; scenographer Q2707485 has it as an alias; P106 uses: 2,006
+Konstrukteur	96	Q1779650	design engineer	Konstrukteur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,401
+Mechaniker	96	Q327029	mechanic	Mechaniker	checked	mechanic: label match; Q6804564 'mechanician' (scientist of mechanics, 181 uses); P106 uses: 1,963
+Notar	93	Q189010	notary	Notar	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,572
+Prähistoriker	93	Q17488316	prehistorian	Prähistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,810
+Kritiker	92	Q6430706	critic	Kritiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,668
+Erzähler	91	Q36180	writer	Schriftsteller	checked	writer: in the NDB 'Erzähler' is a prose writer (68 of 76 also Schriftsteller); the label match Q755070 'narrator' is the oral storyteller; P106 uses: 458,268
+Orgelbauer	91	Q1937431	organ builder	Orgelbauer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,300
+Militärarzt	90	Q4002666	military physician	Militärarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,095
+Lexikograf	89	Q14972848	lexicographer	Lexikograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,539
+Kunsthändler	88	Q173950	art dealer	Kunsthändler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,135
+Mystiker	87	Q12328016	mystic	Mystiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 707
+Bergmann	86	Q820037	miner	Bergmann	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,909
+Sammler	86	Q3243461	collector	Sammler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,534
+Sekretär	86	Q80687	secretary	Sekretär	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,456
+Sozialpolitiker	86	Q30083730	social politician	Sozialpolitiker	checked	social politician: label match, the only candidate (42 uses); P106 uses: 42
+Filmproduzent	85	Q3282637	film producer	Filmproduzent	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 52,073
+Augenarzt	84	Q12013238	ophthalmologist	Augenarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,207
+Prior	84	Q830337	prior	Prior	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 600
+Staatswissenschaftler	84	Q88198806	state political scientist	Staatswissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 422
+Verwaltungsbeamter	84	Q212238	civil servant	Beamter	checked	civil servant; the label match Q56447380 is a municipal officer; P106 uses: 44,766
+Violinist	84	Q1259917	violinist	Geiger	checked	violinist (alias); P106 uses: 12,235
+Weihbischof	84	Q29182	bishop	Bischof	checked	auxiliary bishop -> bishop; Q75178 'auxiliary bishop' is a position (P39 6,997, P106 256); P106 uses: 4,605
+Sprachwissenschaftler	83	Q14467526	linguist	Linguist	checked	linguist (alias); philologist Q13418253 also has it as an alias; P106 uses: 33,620
+Maschinenbauer	81	Q1906857	mechanical engineer	Maschinenbauingenieur	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,248
+Medailleur	81	Q1708232	medalist	Medailleur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,016
+Bezirksschulinspektor	79	Q1958649	school inspector	Schulinspektor	checked	school inspector (Q66316852 'district school inspector', 12 uses); P106 uses: 841
+Maschinenbauingenieur	79	Q1906857	mechanical engineer	Maschinenbauingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,248
+Photograph	79	Q33231	photographer	Fotograf	checked	photographer (alias); P106 uses: 93,972
+Stadtschreiber	79	Q883211	municipal clerk	Stadtschreiber	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 618
+Bergsteiger	78	Q9149093	mountaineer	Bergsteiger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,235
+Theaterkritiker	78	Q17337766	theatre critic	Theaterkritiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,655
+Anthropologe	76	Q4773904	anthropologist	Anthropologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,467
+Historienmaler	76	Q59938438	history painter	Historienmaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 255
+Stenograf	76	Q18810149	stenographer	Stenograph	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 519
+Kirchenmusiker	75	Q355493	church musician	Kirchenmusiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,670
+Musikkritiker	75	Q1350157	music critic	Musikkritiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,691
+Neurologe	74	Q783906	neurologist	Neurologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,951
+Chorleiter	73	Q1076502	choir director	Chorleiter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,696
+Feldmarschalleutnant	73	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Pastor	73	Q152002	pastor	Pastor	checked	pastor: label match; parson Q955464 has it as an alias; P106 uses: 22,458
+Eisenhüttenmann	72	Q18576582	metallurgist	Metallurg	checked	metallurgist (iron and steel); no item has the word; P106 uses: 1,740
+Ornithologe	71	Q1225716	ornithologist	Ornithologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,588
+Lexikograph	69	Q14972848	lexicographer	Lexikograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,539
+Reisender	69	Q12356615	traveler	Reisender	checked	traveler: label match; NDB uses co-occur with Reiseschriftsteller, Forschungsreisender; Q30302644 'traveling salesperson' (67 uses); P106 uses: 2,498
+Textilindustrieller	69	Q23754015	textile manufacturer	Textilfabrikant	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 216
+Althistoriker	68	Q20873384	historian of classical antiquity	Althistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,690
+Filmregisseur	67	Q2526255	film director	Filmregisseur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 102,364
+Gräzist	67	Q18916625	hellenist	Gräzist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,665
+Lithograph	67	Q16947657	lithographer	Lithograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,305
+Bibliograf	66	Q10429346	bibliographer	Bibliograph	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,273
+Kammersänger	66	Q177220	singer	Sänger	checked	singer: honorary title given to singers; P106 uses: 137,790
+Kirchenrechtler	66	Q12027957	canon law jurist	Kanonist	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,250
+Maschinenfabrikant	66	Q42855995	factory owner	Fabrikant	checked	factory owner (machine factory); P106 uses: 1,187
+Äbtissin	66	Q1646408	abbess	Äbtissin	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 699
+Filmschauspieler	65	Q10800557	film actor	Filmschauspieler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 86,239
+Kanoniker	65	Q1104153	canon	Kanoniker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,460
+Major	65	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Mundartdichter	65	Q61043360	dialect writer	Mundartschriftsteller	checked	dialect writer (Q133163346 'dialect poet' has 7 uses); P106 uses: 1,537
+Ordenspriester	65	Q2029179	regular priest	Ordenspriester	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,085
+Pharmazeut	65	Q1627196	Pharmazeut	Pharmazeut	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 583
+Sopranist	65	Q177220	singer	Sänger	checked	singer (soprano; the voice type belongs in P412); P106 uses: 137,790
+Bakteriologe	64	Q15816836	bacteriologist	Bakteriologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,156
+Frauenrechtlerin	64	Q28692502	women's rights activist	Frauenrechtler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,801
+Philanthrop	64	Q12362622	philanthropist	Philanthrop	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,376
+Tenor	64	Q177220	singer	Sänger	checked	singer (tenor; the voice type belongs in P412); P106 uses: 137,790
+Bildschnitzer	62	Q1840507	carver	Bildschnitzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,028
+Hofkapellmeister	62	Q1002228	court chapel master	Hofkapellmeister	checked	court chapel master: label match, the only candidate (P106 87, P39 80); P106 uses: 87
+Holzbildhauer	62	Q134544910	wood sculptor	Holzbildhauer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 198
+Admiral	61	Q10669499	naval officer	Marineoffizier	checked	naval rank; the occupation is naval officer (Q10669499); P106 uses: 10,594
+Dompropst	61	Q6308672	cathedral provost	Dompropst	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 260
+Medizinhistoriker	61	Q15985128	medical historian	Medizinhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 981
+Mediävist	61	Q3332711	medievalist	Mediävist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,317
+Schuldirektor	61	Q1056391	head teacher	Schulleiter	checked	head teacher (alias); Q3029407 is the French headmaster; P106 uses: 8,037
+Stenograph	61	Q18810149	stenographer	Stenograph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 519
+Gewerkschafter	60	Q15627169	trade unionist	Gewerkschafter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,121
+Glasmaler	60	Q2205972	stained-glass artist	Glasmaler	checked	stained-glass artist: label match (Q18431816 'glass painter', also labelled 'Glasmaler', 543 uses); P106 uses: 1,114
+Holzschneider	60	Q1437754	xylographer	Holzschneider	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,033
+Kabarettist	60	Q15214752	cabaret performer	Kabarettist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,099
+Musikinstrumentenbauer	60	Q1955150	musical instrument maker	Musikinstrumentenbauer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,883
+Privatgelehrter	60	Q267640	independent scholar	Privatgelehrter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 370
+Domherr	59	Q1237385	canon	Domherr	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,309
+Genealoge	59	Q8963721	genealogist	Genealoge	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,857
+Tierarzt	59	Q202883	veterinarian	Tierarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,266
+Hygieniker	58	Q24017732	public health scientist	Hygieniker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 476
+Orthopäde	58	Q71134636	orthopedist	Orthopäde	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,951
+Bildnismaler	57	Q2180411	portrait painter	Porträtmaler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 771
+Moraltheologe	57	Q98594162	moral theologian	Moraltheologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 266
+Konzertmeister	56	Q691031	concertmaster	Konzertmeister	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 903
+Meistersinger	56	Q49757	poet	Dichter	checked	poet: Q1057436 'Meistersinger' is the association (instance of advocacy group), though used as P106 by 193 items; P106 uses: 134,152
+Topograf	56	Q2443377	topographer	Topograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 510
+Wissenschaftler	56	Q901	scientist	Wissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 49,832
+Kulturhistoriker	55	Q15462162	cultural historian	Kulturhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,030
+Reeder	55	Q500251	ship-owner	Reeder	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,403
+Syndikus	55	Q1339249	syndic	Syndikus	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 477
+Ägyptologe	55	Q1350189	Egyptologist	Ägyptologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,757
+Musikdrucker	54	Q175151	printer	Drucker	checked	printer (of music); the alias match Q1725311 is the music engraver; P106 uses: 12,620
+Oberlehrer	54	Q37226	teacher	Lehrer	checked	teacher: 'Oberlehrer' is a teacher's title (Q1751254, 2,037 uses); P106 uses: 116,214
+Geophysiker	53	Q12094958	geophysicist	Geophysiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,772
+Slawist	53	Q15976341	slavist	Slawist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,678
+Staatsrechtslehrer	53	Q2325224	constitutional lawyer	Staatsrechtslehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 130
+Altertumsforscher	52	Q5697103	antiquarian	Altertumsforscher	checked	antiquarian: label match; archaeologist Q3621491 has it as an alias; P106 uses: 1,170
+Anglist	52	Q16308156	scholar of English	Anglist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,581
+Literaturkritiker	52	Q4263842	literary critic	Literaturkritiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 15,964
+Syndikusanwalt	52	Q1339249	syndic	Syndikus	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 477
+Dermatologe	51	Q2447386	dermatologist	Dermatologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,402
+Domprediger	51	Q23646062	cathedral preacher	Domprediger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 110
+Revolutionär	51	Q3242115	revolutionary	Revolutionär	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,038
+Steinmetz	51	Q328325	stonemason	Steinmetz	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,150
+Theaterleiter	51	Q1776724	theatre manager	Theaterleiter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,111
+Topograph	51	Q2443377	topographer	Topograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 510
+Erzieher	50	Q974144	educator	Erzieher	checked	educator: label match; childcare provider Q84730454 has it as an alias; P106 uses: 12,257
+Forscher	50	Q1650915	researcher	Forscher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,105,745
+Gesangslehrer	50	Q7939609	voice teacher	Gesangslehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,427
+Hymnologe	50	Q52553554	hymnologist	Hymnologe	checked	hymnologist: label match, the only candidate (70 uses); P106 uses: 70
+Ministerialbeamter	50	Q1937003	ministry official	Ministerialbeamter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,489
+Staatsrechtler	50	Q2325224	constitutional lawyer	Staatsrechtslehrer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 130
+Textilfabrikant	50	Q23754015	textile manufacturer	Textilfabrikant	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 216
+Bergingenieur	49	Q18524075	mining engineer	Bergbauingenieur	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,576
+Chefredakteur	49	Q589298	editor-in-chief	Chefredakteur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,079
+Choreograf	49	Q2490358	choreographer	Choreograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,834
+Heimatkundler	49	Q1595570	local historian	Heimatforscher	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,004
+Prälat	49	Q725440	prelate	Prälat	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,295
+Verlagsbuchhändler	49	Q2516866	publisher	Verleger	checked	publisher: 39 of 42 NDB uses also Verleger (the alias match was bookseller Q998550); P106 uses: 30,451
+Bibliophiler	48	Q18120029	bibliophile	Bibliophiler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,345
+Biochemiker	48	Q2919046	biochemist	Biochemiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,996
+Grammatiker	48	Q15991187	grammarian	Grammatiker	checked	grammarian: label match; Q451286 is the Greco-Roman teacher; P106 uses: 1,106
+Indogermanist	48	Q16267985	Indo-Europeanist	Indogermanist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 138
+Parlamentarier	48	Q82955	politician	Politiker	checked	member of a parliament -> politician; P106 uses: 967,089
+Privatlehrer	48	Q656823	in-home tutor	Hauslehrer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 312
+Buchbinder	47	Q1413170	bookbinder	Buchbinder	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,737
+Gartenarchitekt	47	Q2815948	landscape architect	Landschaftsarchitekt	checked	landscape architect (alias); Q47083093 'garden architect' (label) 62 uses; P106 uses: 3,123
+Gärtner	47	Q758780	gardener	Gärtner	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,713
+Kunstmaler	47	Q1028181	painter	Maler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 238,471
+Satiriker	47	Q9334029	satirist	Satiriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 674
+Uhrmacher	47	Q157798	watchmaker	Uhrmacher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,335
+Alttestamentler	46	Q23901032	Hebrew Bible scholar	Alttestamentler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 439
+Dozent	46	Q462390	docent	Dozent	checked	docent: label match; university teacher Q1622272 has it as an alias; P106 uses: 12,149
+Essayist	46	Q11774202	essayist	Essayist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 11,078
+Formschneider	46	Q1437754	xylographer	Holzschneider	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,033
+Bergbeamter	45	Q17310497	Bergbeamter	Bergbeamter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 139
+Elektroingenieur	45	Q1326886	electrical engineer	Elektroingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,067
+Exeget	45	Q21185790	exegete	Exeget	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 495
+Kommunalpolitiker	45	Q10547393	local politician	Kommunalpolitiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,181
+Montanist	45	Q60472581	mining scientist	Montanwissenschaftler	checked	mining scientist (alias; 23 uses): NDB uses co-occur with Geologe, Mineraloge, Bergmann; P106 uses: 23
+Mundartschriftsteller	45	Q61043360	dialect writer	Mundartschriftsteller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,537
+Generalmusikdirektor	44	Q1198887	music director	Musikdirektor	checked	music director (alias); Q48995718 'general music director' is the position (150 uses); P106 uses: 1,740
+Gymnasialdirektor	44	Q1056391	head teacher	Schulleiter	checked	head teacher (Q28078592 'headmaster of a gymnasium', 31 uses); P106 uses: 8,037
+Ministerialrat	44	Q212238	civil servant	Beamter	checked	civil servant: 'Ministerialrat' is a civil-service rank in ministries; P106 uses: 44,766
+Oberhofprediger	44	Q12316990	court chaplain	Hofprediger	checked	court chaplain (Hofprediger); no item has the word; P106 uses: 475
+Oberstleutnant	44	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Religionswissenschaftler	44	Q19829980	religious studies scholar	Religionswissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,702
+Spruchdichter	44	Q49757	poet	Dichter	checked	poet (gnomic poet; Q132346334, no English label, 17 uses); P106 uses: 134,152
+Alchemist	43	Q15954519	alchemist	Alchemist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 521
+Sozialreformer	43	Q16611574	social reformer	Sozialreformer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 497
+Glockengießer	42	Q474306	bell founder	Glockengießer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 594
+Kinderarzt	42	Q1919436	pediatrician	Kinderarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,549
+Ästhetiker	42	Q21550346	aesthetician	Ästhetiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 527
+Agrikulturchemiker	41	Q22809315	agricultural chemist	Agrikulturchemiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 185
+Bibliograph	41	Q10429346	bibliographer	Bibliograph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,273
+Heerführer	41	Q1402561	military leader	Feldherr	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,932
+Hofbeamter	41	Q11626664	court official	Hofbeamter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 469
+Kunstschriftsteller	41	Q88190618	art writer	Kunstschriftsteller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 119
+Montanwissenschaftler	41	Q60472581	mining scientist	Montanwissenschaftler	checked	mining scientist: label match, the only candidate (23 uses); P106 uses: 23
+Privatdozent	41	Q1622272	university teacher	Hochschullehrer	checked	university teacher: Privatdozent is an academic title (Q1402736, 688 uses); P106 uses: 368,935
+Romanschriftsteller	41	Q6625963	novelist	Romancier	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 36,199
+Violoncellist	41	Q13219637	cellist	Cellist	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,943
+Denkmalpfleger	40	Q30740797	historic preservationist	Denkmalpfleger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 700
+Designer	40	Q5322166	designer	Designer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,770
+Generaloberst	40	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Holzschnitzer	40	Q6138343	wood carver	Holzschnitzer	checked	wood carver: label match; Q47005195 'wood engraver' (555 uses); P106 uses: 1,837
+Händler	40	Q3704253	trader	Händler	checked	trader: label match; merchant Q215536 has it as an alias; P106 uses: 1,281
+Militärgeistlicher	40	Q918824	military chaplain	Militärgeistlicher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 779
+Postbeamter	40	Q2794672	Postbeamter	Postbeamter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 113
+Technologe	40	Q12376667	technologist	Technologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,034
+Kunsthandwerker	39	Q11479517	handicrafter	Kunsthandwerker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 966
+Optiker	39	Q71133019	optician	Optiker	checked	optician (optical scientist and instrument maker): label match; NDB uses co-occur with Mechaniker, Physiker, Instrumentenbauer; Q1996635 is the eye-care optician; P106 uses: 112
+Verfasser	39	Q482980	author	Autor	checked	author (alias); P106 uses: 92,571
+Volksschriftsteller	39	Q36180	writer	Schriftsteller	checked	writer (popular writer); no item has the word; P106 uses: 458,268
+Historiograph	38	Q201788	historian	Historiker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 152,858
+Musikhistoriker	38	Q20198542	music historian	Musikhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 818
+Papierfabrikant	38	Q42855995	factory owner	Fabrikant	checked	factory owner (paper factory; Q88283675 'paper factory owner' has 14 uses); P106 uses: 1,187
+Porzellanmaler	38	Q24056480	porcelain painter	Porzellanmaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 615
+Sinologe	38	Q15255771	sinologist	Sinologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,078
+Afrikanist	37	Q15936497	Africanist	Afrikanist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 780
+Archidiakon	37	Q633730	archdeacon	Archidiakon	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 309
+Botschafter	37	Q193391	diplomat	Diplomat	checked	ambassador -> diplomat (Q121998 is the diplomatic rank); P106 uses: 58,093
+Flötist	37	Q12902372	flautist	Flötist	checked	flautist: label match; P106 uses: 2,388
+Führungskraft	37	Q978044	executive	Führungskraft	checked	executive: label match; manager Q2462658 has it as an alias; P106 uses: 3,826
+Karikaturist	37	Q3658608	caricaturist	Karikaturist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,143
+Neutestamentler	37	Q66780166	New Testament scholar	Neutestamentler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 461
+Rechtsgelehrter	37	Q16012028	legal scholar	Rechtswissenschaftler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,268
+Wasserbauingenieur	37	Q1651055	hydraulic engineer	Wasserbauingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 725
+Arabist	36	Q620573	arabist	Arabist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,416
+Biograph	36	Q864380	biographer	Biograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,917
+General der Infanterie	36	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Genremaler	36	Q3964546	genre painter	Genremaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 373
+Großindustrieller	36	Q6606110	industrialist	Industrieller	checked	industrialist; no item has the word; P106 uses: 5,464
+Hautarzt	36	Q2447386	dermatologist	Dermatologe	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,402
+Pflanzenzüchter	36	Q3348530	plant breeder	Pflanzenzüchter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 280
+Porträtmaler	36	Q2180411	portrait painter	Porträtmaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 771
+Sozialwissenschaftler	36	Q15319501	social scientist	Sozialwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,998
+Dogmatiker	35	Q1234713	theologian	Theologe	checked	theologian (dogmatics; Q130735696, no English label, 1 use); P106 uses: 51,929
+Graveur	35	Q329439	engraver	Graveur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,504
+Instrumentenbauer	35	Q2341443	instrument maker	Instrumentenbauer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,336
+Gutsbesitzer	34	Q66495020	estate owner	Gutsbesitzer	checked	estate owner: label match; lord of the manor Q1815782 has it as an alias; P106 uses: 1,270
+Physikochemiker	34	Q16744668	physical chemist	Physikochemiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 818
+Sozialpädagoge	34	Q1227197	social pedagogue	Sozialpädagoge	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,316
+Komiker	33	Q245068	comedian	Komiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 11,370
+Konservator	33	Q446966	conservator	Konservator	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,175
+Kunstkritiker	33	Q4164507	art critic	Kunstkritiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,563
+Leutnant	33	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Nonne	33	Q191808	nun	Nonne	checked	nun: label match; monk Q733786 has it as an alias; P106 uses: 4,174
+Ophthalmologe	33	Q12013238	ophthalmologist	Augenarzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,207
+Politologe	33	Q1238570	political scientist	Politikwissenschaftler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 32,234
+Pädiater	33	Q1919436	pediatrician	Kinderarzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,549
+Reichsgerichtsrat	33	Q16533	judge	Richter	checked	judge: title of the judges of the Reichsgericht; P106 uses: 48,093
+Religionsphilosoph	33	Q88114145	philosopher of religion	Religionsphilosoph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 218
+Restaurator	33	Q2145981	restorer	Restaurator	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,344
+Schreiber	33	Q916292	scribe	Schreiber	checked	scribe: label match; P106 uses: 1,084
+Textilunternehmer	33	Q23754015	textile manufacturer	Textilfabrikant	checked	textile manufacturer ('businessperson in textile production'); P106 uses: 216
+Theaterwissenschaftler	33	Q10379007	theatrologist	Theaterwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,682
+Zeitungsverleger	33	Q24266767	newspaper proprietor	Zeitungsverleger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 833
+Astrophysiker	32	Q752129	astrophysicist	Astrophysiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,380
+Biograf	32	Q864380	biographer	Biograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,917
+Ethnograph	32	Q12347522	ethnographer	Ethnograf	checked	ethnographer (alias); P106 uses: 3,453
+Großkaufmann	32	Q215536	merchant	Kaufmann	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 26,795
+Marineoffizier	32	Q10669499	naval officer	Marineoffizier	checked	naval officer: label match; Q16102070 'Marineoffizier' (German navy, 1,512 uses); P106 uses: 10,594
+Eisenbahningenieur	31	Q66711686	railway engineer	Eisenbahningenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 664
+Fußballspieler	31	Q937857	association football player	Fußballspieler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 392,562
+Gießer	31	Q12031226	founder	Metallgießer	checked	founder (metal casting, alias 'Metallgießer'); Q19391067 'molding worker' (label, 191 uses); P106 uses: 275
+Konrektor	31	Q37226	teacher	Lehrer	checked	teacher: deputy head of a school (Q1760301 'conrector' is described as a higher education office); P106 uses: 116,214
+Schulinspektor	31	Q1958649	school inspector	Schulinspektor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 841
+Tischler	31	Q326358	joiner	Tischler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,420
+Advokat	30	Q40348	lawyer	Rechtsanwalt	checked	lawyer (alias); Q380075 'advocate' (label) 1,429 uses; P106 uses: 123,225
+Freiheitskämpfer	30	Q30242234	freedom fighter	Freiheitskämpfer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 970
+Kunsterzieher	30	Q15977927	art educator	Kunstlehrer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,640
+Landtagspräsident	30	Q82955	politician	Politiker	checked	president of a state parliament -> politician; P106 uses: 967,089
+Metallurg	30	Q18576582	metallurgist	Metallurg	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,740
+Montanindustrieller	30	Q6606110	industrialist	Industrieller	checked	industrialist (mining); no item has the word; P106 uses: 5,464
+Schulrektor	30	Q1056391	head teacher	Schulleiter	checked	head teacher; no item has the word; P106 uses: 8,037
+Söldnerführer	30	Q178197	mercenary	Söldner	checked	mercenary (leader of mercenaries); no item has the word; P106 uses: 630
+Theaterregisseur	30	Q3387717	theatre director	Bühnenregisseur	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 17,569
+Homöopath	29	Q12020057	homeopath	Homöopath	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 604
+Sportler	29	Q2066131	athlete	Sportler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 27,293
+Verbandsfunktionär	29	Q1328323	functionary	Funktionär	checked	functionary (Q61876950 'association official', 24 uses); P106 uses: 1,861
+Veterinärmediziner	29	Q202883	veterinarian	Tierarzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,266
+Abenteurer	28	Q2873500	adventurer	Abenteurer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 642
+Altertumswissenschaftler	28	Q2468727	classical scholar	Altertumswissenschaftler	checked	classical scholar: label match; P106 uses: 2,751
+Chemieindustrieller	28	Q6606110	industrialist	Industrieller	checked	industrialist (chemicals); no item has the word; P106 uses: 5,464
+Finanzbeamter	28	Q212238	civil servant	Beamter	checked	civil servant; the label match Q61820542 is the French Inspection générale des finances; P106 uses: 44,766
+Forstwirt	28	Q1895303	forester	Förster	checked	forester: NDB uses co-occur with Forstmann, Forstwissenschaftler (Q26271631 is the modern vocational forestry worker); P106 uses: 2,710
+Heraldiker	28	Q516463	heraldist	Heraldiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 900
+Alpinist	27	Q9149093	mountaineer	Bergsteiger	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,235
+Geburtshelfer	27	Q13638192	obstetrician	Geburtshelfer	checked	obstetrician: label match; midwife Q185196 has it as an alias; P106 uses: 2,140
+Lebensmittelchemiker	27	Q1810977	food chemist	Lebensmittelchemiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 716
+Literat	27	Q11499929	man of letters	Literat	checked	man of letters: label match; Q6673651 'literary scholar' (also labelled 'Literat'); P106 uses: 4,079
+Sportfunktionär	27	Q15986539	sports official	Sportfunktionär	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,765
+Sprachlehrer	27	Q30002353	language teacher	Sprachlehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,027
+Tanzpädagoge	27	Q2393361	dance teacher	Tanzlehrer	checked	dance teacher; no item has the word; P106 uses: 1,605
+Theatermaler	27	Q1020606	stage painter	Bühnenmaler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 251
+Afrikaforscher	26	Q11900058	explorer	Forschungsreisender	checked	explorer (Q138851612 'explorer of Africa', 2 uses); P106 uses: 7,527
+Astrologe	26	Q155647	astrologer	Astrologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,692
+Ballettmeister	26	Q805253	ballet master	Ballettmeister	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,052
+Legationsrat	26	Q193391	diplomat	Diplomat	checked	diplomat: 'Legationsrat' is a diplomatic rank (Q1491183); P106 uses: 58,093
+Münzmeister	26	Q1463475	mintmaster	Münzmeister	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,654
+Strafrechtler	26	Q185351	jurist	Jurist	checked	jurist (criminal-law scholar; Q136341203, 9 uses); P106 uses: 135,189
+Theaterdichter	26	Q214917	playwright	Dramatiker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,284
+Domdekan	25	Q1236978	Cathedral dean	Domdechant	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 130
+Erbauungsschriftsteller	25	Q36180	writer	Schriftsteller	checked	writer (devotional); no item has the word; P106 uses: 458,268
+Flugzeugkonstrukteur	25	Q15895020	aerospace engineer	Luft- und Raumfahrtingenieur	checked	aerospace engineer (Q125516302 'aircraft designer', 41 uses); P106 uses: 871
+Gesangspädagoge	25	Q7939609	voice teacher	Gesangslehrer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,427
+Geschäftsführer	25	Q1210069	general manager	Geschäftsführer	checked	general manager: label match; chief executive officer Q484876 has it as an alias; P106 uses: 2,541
+Jugendschriftsteller	25	Q62083492	young adult author	Jugendbuchautor	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,894
+Kriminalist	25	Q185351	jurist	Jurist	checked	jurist: 23 of 24 NDB uses also Jurist (19th-century criminal lawyers); the label match Q1726903 is a police investigator; P106 uses: 135,189
+Kunstgewerbler	25	Q56673616	decorative artist	Kunstgewerbler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 349
+Miniaturist	25	Q47494964	miniaturist	Miniaturist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 467
+Ministerialdirektor	25	Q212238	civil servant	Beamter	checked	civil servant: rank of the heads of department in ministries; the label match Q766504 'undersecretary' also covers junior ministers; P106 uses: 44,766
+Musikalienhändler	25	Q1955056	music dealer	Musikalienhändler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 241
+Schuhmacher	25	Q152355	cobbler	Schuhmacher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,116
+Stadtplaner	25	Q131062	urban planner	Stadtplaner	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,005
+Epigraphiker	24	Q15632632	epigrapher	Epigraphiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 584
+General der Kavallerie	24	Q189290	military officer	Offizier	checked	military rank; the occupation is military officer (Q189290); the rank itself belongs in P410; P106 uses: 61,220
+Militärhistoriker	24	Q1493121	military historian	Militärhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,789
+Agronom	23	Q1781198	agronomist	Agronom	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,857
+Bankdirektor	23	Q32947888	bank manager	Bankmanager	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,344
+Hofmaler	23	Q1028181	painter	Maler	checked	court painter -> painter; Q984276 'court painter' is a position (P39 726, P106 133); P106 uses: 238,471
+Lieddichter	23	Q822146	lyricist	Liedtexter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 12,028
+Religionshistoriker	23	Q17488357	historian of religion	Religionshistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 461
+Stuckateur	23	Q15284879	plasterer	Stuckateur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 427
+Tiermaler	23	Q16875701	animal painter	Tiermaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 222
+Urologe	23	Q17345122	urologist	Urologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,190
+Byzantinist	22	Q26132815	Byzantinist	Byzantinist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 842
+Genetiker	22	Q3126128	geneticist	Genetiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,639
+Kinderbuchautor	22	Q4853732	children's writer	Kinderbuchautor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 14,463
+Pflanzenphysiologe	22	Q60244908	plant physiologist	Pflanzenphysiologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 366
+Psychoanalytiker	22	Q3410028	psychoanalyst	Psychoanalytiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,688
+Schriftsetzer	22	Q4108101	typesetter	Schriftsetzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 877
+Seefahrer	22	Q12038843	seafarer	Seefahrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 332
+Amtsarzt	21	Q480298	Amtsarzt	Amtsarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 176
+Feinmechaniker	21	Q88199924	precision mechanic	Feinmechaniker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 107
+Innenarchitekt	21	Q103893954	interior architect	Innenarchitekt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 742
+Oberbergrat	21	Q17310497	Bergbeamter	Bergbeamter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 139
+Regierungsbeamter	21	Q212238	civil servant	Beamter	checked	civil servant; the label match Q2101540 is the 'politischer Beamter' (political appointee); P106 uses: 44,766
+Titularbischof	21	Q29182	bishop	Bischof	checked	titular bishop -> bishop; Q948657 is a position (P39 10,876); P106 uses: 4,605
+Vermessungsingenieur	21	Q20919317	surveying engineer	Vermessungsingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 391
+Wundarzt	21	Q1360697	surgeon	Wundarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 124
+Zahnarzt	21	Q27349	dentist	Zahnarzt	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 18,014
+Dombaumeister	20	Q1340643	master builder	Baumeister	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,187
+Irrenarzt	20	Q211346	psychiatrist	Psychiater	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,482
+Klavierlehrer	20	Q17303149	piano teacher	Klavierlehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 991
+Lautenist	20	Q21166956	lutenist	Lautenist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 548
+Lautenspieler	20	Q21166956	lutenist	Lautenist	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 548
+Museologe	20	Q10333969	museologist	Museologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,507
+Petrologe	20	Q19356817	petrologist	Petrologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 209
+Radiologe	20	Q18245236	radiologist	Radiologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,361
+Semitist	20	Q19361455	Semitist	Semitist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 219
+Talmudist	20	Q21584816	talmudist	Talmudgelehrter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 268
+Tierzüchter	20	Q1368409	animal breeder	Tierzüchter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 482
+Volksschullehrer	20	Q141497048	Volksschule teacher	Volksschullehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 264
+Wirtschaftshistoriker	20	Q17488363	economic historian	Wirtschaftshistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 878
+Bratschist	19	Q899758	violist	Bratschist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,492
+Chorherren	19	Q1104153	canon	Kanoniker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,460
+Jugendbuchautor	19	Q62083492	young adult author	Jugendbuchautor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,894
+Kunsttheoretiker	19	Q17391638	art theorist	Kunsttheoretiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,162
+Rechtsphilosoph	19	Q23760244	philosopher of law	Rechtsphilosoph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 163
+Schachspieler	19	Q10873124	chess player	Schachspieler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 29,414
+Seelsorger	19	Q352507	pastor	Seelsorger	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 800
+Verwaltungsjurist	19	Q57398663	administrative lawyer	Verwaltungsjurist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 667
+Zeichenlehrer	19	Q10429561	drawing teacher	Zeichenlehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 847
+Assyriologe	18	Q19361459	assyriologist	Assyriologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 344
+Erzgießer	18	Q12031226	founder	Metallgießer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 275
+Klassischer Archäologe	18	Q15983985	classical archaeologist	Klassischer Archäologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,109
+Kostümbildner	18	Q1323191	costume designer	Kostümbildner	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 9,420
+Markscheider	18	Q1743623	mining engineer	Markscheider	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 107
+Mikrobiologe	18	Q3779582	microbiologist	Mikrobiologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,482
+Opernregisseur	18	Q28054786	opera director	Opernregisseur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 622
+Religionslehrer	18	Q268190	religious education teacher	Religionslehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,488
+Röntgenologe	18	Q18245236	radiologist	Radiologe	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,361
+Sportpädagoge	18	Q18481512	sports pedagogue	Sportpädagoge	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 568
+Tanzlehrer	18	Q2393361	dance teacher	Tanzlehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,605
+Cellist	17	Q13219637	cellist	Cellist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,943
+Flugzeugführer	17	Q2095549	aircraft pilot	Pilot	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,373
+Kristallograph	17	Q15142825	crystallographer	Kristallograph	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 380
+Meistersänger	17	Q49757	poet	Dichter	checked	poet (see Meistersinger); P106 uses: 134,152
+Poet	17	Q49757	poet	Dichter	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 134,152
+Politikwissenschaftler	17	Q1238570	political scientist	Politikwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 32,234
+Volkswirtschaftler	17	Q188094	economist	Wirtschaftswissenschaftler	checked	economist (as Volkswirt); P106 uses: 77,052
+Altorientalist	16	Q110042402	ancient Near Eastern scholar	Altorientalist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 278
+Bauunternehmer	16	Q63755054	building contractor	Bauunternehmer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,022
+Filmarchitekt	16	Q2962070	production designer	Szenenbildner	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 6,368
+Katechet	16	Q1735732	catechist	Katechet	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 412
+Klavierbauer	16	Q885122	piano maker	Klavier- und Cembalobauer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 616
+Korrektor	16	Q356139	proofreader	Korrektor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 470
+Mathematikhistoriker	16	Q17486330	historian of mathematics	Mathematikhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 438
+Miniaturmaler	16	Q28947943	miniature painter	Miniaturmaler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 509
+Papiermacher	16	Q3362826	papermaker	Papiermacher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 679
+Pomologe	16	Q28319434	pomologist	Pomologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 273
+Puppenspieler	16	Q2629392	marionetteist	Puppenspieler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,456
+Rechtswissenschaftler	16	Q16012028	legal scholar	Rechtswissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,268
+Rennfahrer	16	Q378622	racing driver	Rennfahrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 7,649
+Romancier	16	Q6625963	novelist	Romancier	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 36,199
+Studienrat	16	Q37226	teacher	Lehrer	checked	teacher: 'Studienrat' is a teacher's title (Q1308620, 1,149 uses); P106 uses: 116,214
+Zahnmediziner	16	Q27349	dentist	Zahnarzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 18,014
+Zensor	16	Q12377291	censor	Zensor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 221
+Amerikanist	15	Q16308157	americanist	Amerikanist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 882
+Buchillustrator	15	Q644687	illustrator	Illustrator	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 45,932
+Domdechant	15	Q1236978	Cathedral dean	Domdechant	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 130
+Geschichtsforscher	15	Q201788	historian	Historiker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 152,858
+Geschäftsmann	15	Q43845	businessperson	Geschäftsmann	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 93,811
+Großgrundbesitzer	15	Q1549283	large estate owner	Großgrundbesitzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,162
+Kolonialbeamter	15	Q17765219	colonial administrator	Kolonialbeamter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,457
+Kulturwissenschaftler	15	Q19829999	cultural studies scholar	Kulturwissenschaftler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,019
+Kürschner	15	Q2295938	furrier	Kürschner	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 233
+Oberstudienrat	15	Q37226	teacher	Lehrer	checked	teacher: a teacher's title (Q2011243); P106 uses: 116,214
+Oboist	15	Q16003954	oboist	Oboist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,132
+Operndirektor	15	Q3029406	opera director	Operndirektor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 170
+Paläograf	15	Q17132038	palaeographer	Paläograf	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 768
+Papyrologe	15	Q16267158	papyrologist	Papyrologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 344
+Rhetoriker	15	Q361809	rhetorician	Rhetor	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 389
+Theaterhistoriker	15	Q70744319	theatre historian	Theaterhistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 218
+Wissenschaftshistoriker	15	Q16063546	historian of science	Wissenschaftshistoriker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,662
+Badearzt	14	Q1792938	cure doctor	Kurarzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 102
+Bibelübersetzer	14	Q24262584	Bible translator	Bibelübersetzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 713
+Bodenkundler	14	Q12370538	soil scientist	Bodenkundler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 654
+Festungsbaumeister	14	Q1340643	master builder	Baumeister	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,187
+Histologe	14	Q2552072	histologist	Histologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 364
+Hornist	14	Q19729565	horn player	Hornist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 977
+Informatiker	14	Q82594	computer scientist	Informatiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 37,568
+Klavierpädagoge	14	Q17303149	piano teacher	Klavierlehrer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 991
+Militärtheoretiker	14	Q12806039	military theorist	Militärtheoretiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 166
+Patristiker	14	Q88104555	patristic scholar	Patristiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 351
+Religionspädagoge	14	Q268190	religious education teacher	Religionslehrer	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,488
+Bauforscher	13	Q26233771	building researcher	Bauforscher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 126
+Büchsenmacher	13	Q1371796	gunsmith	Büchsenmacher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 478
+Cembalist	13	Q5371902	harpsichordist	Cembalist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,205
+Choreograph	13	Q2490358	choreographer	Choreograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 10,834
+Enzyklopädist	13	Q16314501	encyclopedist	Enzyklopädist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 195
+Galerist	13	Q20771242	gallerist	Galerist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,191
+Humorist	13	Q12406482	humorist	Humorist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,463
+Japanologe	13	Q15991218	japanologist	Japanologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,242
+Kanonikus	13	Q1104153	canon	Kanoniker	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,460
+Klavier- und Cembalobauer	13	Q885122	piano maker	Klavier- und Cembalobauer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 616
+Klimatologe	13	Q1113838	climatologist	Klimawissenschaftler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,327
+Liturgiker	13	Q10567966	liturgist	Liturgiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 397
+Maschineningenieur	13	Q1906857	mechanical engineer	Maschinenbauingenieur	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,248
+Mykologe	13	Q2487799	mycologist	Mykologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 4,610
+Oberstudiendirektor	13	Q1056391	head teacher	Schulleiter	checked	head teacher: title of the head of a Gymnasium (Q2011241); P106 uses: 8,037
+Polarforscher	13	Q13382749	polar explorer	Polarforscher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 278
+Postmeister	13	Q1416611	postmaster	Postmeister	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 790
+Sachbuchautor	13	Q15980158	non-fiction writer	Sachbuchautor	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,673
+Tiermediziner	13	Q202883	veterinarian	Tierarzt	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 13,266
+Trompeter	13	Q12377274	trumpeter	Trompeter	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,792
+Typograph	13	Q1229025	typographer	Typograf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,553
+Völkerkundler	13	Q1371378	ethnologist	Ethnologe	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 8,057
+Biophysiker	12	Q14906342	biophysicist	Biophysiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,936
+Brauer und Mälzer	12	Q836904	brewer	Brauer und Mälzer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 994
+Buchkünstler	12	Q56884373	book artist	Buchkünstler	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 286
+Bäcker	12	Q160131	baker	Bäcker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,487
+Dialektologe	12	Q16880249	dialectologist	Dialektologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 462
+Freskant	12	Q22669155	fresco painter	Freskenmaler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 222
+Imker	12	Q852389	beekeeper	Imker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 805
+Juwelier	12	Q336221	jeweler	Juwelier	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,590
+Klarinettist	12	Q118865	clarinetist	Klarinettist	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,286
+Kunsttischler	12	Q559597	cabinetmaker	Ebenist	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 703
+Logiker	12	Q14565331	logician	Logiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,033
+Modelleur	12	Q3317836	modeler	Modelleur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 119
+Musikforscher	12	Q14915627	musicologist	Musikwissenschaftler	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 19,221
+Oberregierungsrat	12	Q212238	civil servant	Beamter	checked	civil servant: rank in the German higher civil service (Q88103806); P106 uses: 44,766
+Reichstagsabgeordneter	12	Q82955	politician	Politiker	checked	member of the Reichstag -> politician; P106 uses: 967,089
+Schiffbauingenieur	12	Q1644847	marine engineer	Schiffbauingenieur	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 323
+Schriftkünstler	12	Q3303330	calligrapher	Kalligraf	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,887
+Seemann	12	Q45199	sailor	Seemann	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,201
+Sportlehrer	12	Q2312637	physical education teacher	Sportlehrer	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,131
+Stadtphysikus	12	Q2327935	town physician	Stadtphysicus	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 149
+Dolmetscher	11	Q11085831	interpreter	Dolmetscher	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,784
+Feinoptiker	11	Q17305523	optical engineer	Feinoptiker	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 104
+Finanzier	11	Q1979607	financier	Finanzier	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,936
+Gewerkschaftsfunktionär	11	Q7886765	union organizer	Gewerkschaftsfunktionär	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 417
+Heimatdichter	11	Q21140478	regional writer	Heimatschriftsteller	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 798
+Heimatschriftsteller	11	Q21140478	regional writer	Heimatschriftsteller	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 798
+Hofbaumeister	11	Q1340643	master builder	Baumeister	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 3,187
+Hydrologe	11	Q3644587	hydrologist	Hydrologe	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,334
+Landtagsabgeordneter	11	Q82955	politician	Politiker	checked	member of a state parliament -> politician (standard practice); P106 uses: 967,089
+Krankenschwester	8	Q186360	nurse	Gesundheits- und Krankenpfleger	exact	alias de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 11,016
+Vizeadmiral	7	Q10669499	naval officer	Marineoffizier	checked	naval rank; the occupation is naval officer (Q10669499); P106 uses: 10,594
+Diakonisse	5	Q2298145	deaconess	Diakonisse	exact	label de match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 159

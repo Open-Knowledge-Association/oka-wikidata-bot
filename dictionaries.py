@@ -26,6 +26,7 @@ import random
 import re
 import subprocess
 import sys
+import unicodedata
 import threading
 import time
 import urllib.error
@@ -202,7 +203,7 @@ def qlever(query):
     for attempt in range(1, 21):                    # an error page is not an empty result: wait and retry
         wait_turn(QLEVER, QLEVER_GAP)
         if shutil.which("curl"):
-            text = subprocess.run(["curl", "-s", QLEVER, "--max-time", "300", "-H",
+            text = subprocess.run(["curl", "-s", QLEVER, "--max-time", "300", "-A", UA, "-H",
                                    "Accept: text/tab-separated-values", "--data-urlencode", "query=" + query],
                                   capture_output=True, text=True, encoding="utf-8").stdout
         else:                                       # Toolforge has no curl
@@ -375,7 +376,8 @@ def fact(pid, value, label, qualifiers=None):
 
 def clean(s):
     s = re.sub(r"<[^>]+>", " ", s)
-    return re.sub(r"\s+", " ", html.unescape(s)).replace("​", "").strip()
+    s = unicodedata.normalize("NFC", html.unescape(s))     # some sources write 'ü' as 'u' + a combining mark
+    return re.sub(r"\s+", " ", s).replace("​", "").strip()
 
 
 _places = {}
