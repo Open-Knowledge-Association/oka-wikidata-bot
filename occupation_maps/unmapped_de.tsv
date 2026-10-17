@@ -1,8 +1,6 @@
 word	count	reason	candidates_considered
-Professor	1753	academic title: also borne by secondary-school (Austria, 19th-c. Saxony) and art-academy teachers; 'Hochschullehrer' is mapped	Q1622272 university teacher (P106 368935); Q121594 professor (P106 30246); Q19788990 professor (P106 65); Q25339110 full professor (P106 16); Q136923868 Associate professor (Commonwealth) (P106 0)
 Rektor	905	position: head of a university or school (the only candidate, Q3147441, is a church rector)	Q3147441 rector (P106 219); Q212071 rector (P106 10)
 Herzog	812	noble title (P97), not an occupation	Q166886 duke (P106 49)
-Bürgermeister	787	position: mayor (Q30185) is used with P39 (15,361 items); mayors were merchants, jurists etc. by occupation	Q30185 mayor (P106 11160); Q177529 burgomaster (P106 86); Q2922332 mayor of a place in Hungary (P106 0)
 Graf	626	noble title (P97), not an occupation	Q3519259 count (P106 514); Q28989 Graf (P106 30)
 Abt	507	position: abbot (Q103163) is used with P39 (5,292 items), as P106 by 9	Q2063178 prince-abbot (P106 56); Q103163 abbot (P106 9)
 Minister	389	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q83307 minister (P106 6786); Q16961626 minister (P106 0)
@@ -19,7 +17,6 @@ Markgraf	254	noble title (P97), not an occupation	Q157802 margrave (P106 95)
 Generalsuperintendent	236	church office (Q4135298: P106 2, P39 5)	Q4135298 Generalsuperintendent (P106 2)
 Fürst	224	noble title (P97), not an occupation	Q18244 Fürst (P106 28); Q2269441 territorial lord (P106 10)
 Präsident	219	position (P39), not an occupation	Q140686 chairperson (P106 1516); Q30461 president (P106 141); Q1255921 president (P106 10); Q121143633 church president (P106 1)
-Ratsherr	180	position: member of a town council (Q708492 'council member')	Q708492 council member (P106 4884); Q110242307 councillor (P106 29); Q96208019 member of municipal council (P106 23)
 Freiherr	177	noble title (P97), not an occupation	
 Konsistorialrat	175	honorary or civil-service title, not an occupation	Q1743221 ecclesiastical councillor (P106 167)
 Kurfürst	160	title (prince-elector), not an occupation	Q22722 Prince-Elector (P106 19)
@@ -27,7 +24,6 @@ Gründer	149	role (founder of something), not an occupation	Q4479442 founder (P1
 Museumsdirektor	145	position (museum director Q22132694: P39 5,571, P106 11)	Q22132694 museum director (P106 11)
 Statthalter	144	position (P39), not an occupation	Q325380 stadtholder (P106 0)
 Freimaurer	140	membership, not an occupation	Q23305046 Freemason (P106 8)
-Oberbürgermeister	135	position (P39), not an occupation	Q147733 primator (P106 1027); Q11902879 lord mayor (P106 123); Q109862464 lord mayor (P106 28)
 Dominikaner	121	membership of a religious order (P611), not an occupation; a feminine form would also need 'nun'	Q63253698 dominican friar (P106 0)
 Begründer	120	role, not an occupation	
 Romanist	119	ambiguous: Romance philologist (Q2504617) or Roman-law jurist (Q99976344); about a tenth of the NDB uses co-occur with Jurist or Rechtshistoriker	Q2504617 romanist (P106 7519); Q99976344 romanist (P106 102)
@@ -42,10 +38,8 @@ Pfalzgraf	103	noble title (P97), not an occupation	Q22932 count palatine (P106 4
 Pietist	103	conviction or affiliation, not an occupation	Q115793180 pietist (P106 92); Q52008294  (P106 7)
 Ritter	103	title (knighthood), not an occupation	Q102083 knight (P106 1014); Q2261440 Knight (P106 44)
 Gouverneur	100	position (P39), not an occupation	Q132050 governor (P106 3696)
-Finanzminister	98	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q7614320 finance minister (P106 261); Q6865835 Sweden's Minister for Finance (P106 0)
 Heiliger	97	not an occupation (saint)	
 Leiter	96	too vague	Q1162163 director (P106 8076); Q1251441 leader (P106 472); Q168639 ladder (P106 24)
-Staatsminister	93	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q2325058 German Minister of State (P106 140); Q15966511 State Minister (P106 20); Q2632935 minister of state (P106 3); Q14212 prime minister (P106 0)
 Staatsrat	92	honorary or civil-service title, not an occupation	Q15848763 Staatsrat (P106 271); Q24038970 Councillor of State (P106 25)
 Franziskaner	91	membership of a religious order (P611), not an occupation; a feminine form would also need 'nun'	
 Hofmeister	86	ambiguous: court office or private tutor (Q609016 conflates both)	Q609016 hofmeister (P106 659); Q31837745 private tutor (P106 10)
@@ -54,7 +48,6 @@ Kardinal	86	position (cardinal Q45722: P39 2,915, P106 0)	Q2033341 cardinal prie
 Staatssekretär	85	position: civil servant or politician	Q736559 secretary of state (P106 597); Q22703996 secretary of state from Germany (P106 5); Q16147743 State Secretary (P106 1)
 Mitglied	83	not an occupation	Q8191099 member (P106 33)
 Vorsitzender	80	position (P39), not an occupation	Q140686 chairperson (P106 1516)
-Amtmann	78	position: administrator of a district (Amt)	Q592996 amtmann (P106 1084)
 Erzherzog	76	noble title (P97), not an occupation	
 Senator	74	position (P39), not an occupation	Q15686806 senator (P106 13); Q17619252 Senator of Belgium (P106 0)
 Schulrat	72	honorary or civil-service title, not an occupation	Q1265001 Schulrat (P106 368)
@@ -64,12 +57,9 @@ Prinz	69	noble title (P97), not an occupation	Q2747456 prince (P106 112)
 Hauptmann	68	ambiguous: military captain or civil head of a district or town (Amtshauptmann, Stadthauptmann)	Q19100 captain (P106 594); Q1268257 mayor of a place in Switzerland (P106 1)
 Kammerherr	63	court title	Q264323 chamberlain (P106 2403)
 Kämmerer	63	ambiguous: court chamberlain, city treasurer or papal chamberlain	Q264323 chamberlain (P106 2403); Q1795352  (P106 85)
-Kriegsminister	61	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q2518691 defence minister (P106 2); Q19018174 Minister of War (P106 0)
 Generaldirektor	59	position (P39), not an occupation	Q140686 chairperson (P106 1516); Q2534525 chairperson of the executive board (P106 432); Q1501800 director general (P106 428); Q1048210 general director (P106 112)
 Kommerzienrat	59	honorary or civil-service title, not an occupation	Q1269192 councillor of commerce (P106 417)
 Nobelpreisträger	59	award, not an occupation	Q115784320 Nobel Prize winner (P106 30)
-Innenminister	58	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q17578116 interior minister (P106 3)
-Justizminister	56	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q17763739 justice minister (P106 4)
 Amtshauptmann	54	position (P39), not an occupation	Q481183 Amtshauptmann (P106 38)
 Bergrat	54	honorary or civil-service title, not an occupation	
 Kirchenrat	54	honorary or civil-service title, not an occupation	Q1743221 ecclesiastical councillor (P106 167)
@@ -81,12 +71,10 @@ Hofmarschall	51	court title/office	Q1623209 Hofmarschall (P106 399)
 Maschinenbaumechaniker	50	ambiguous: a trade (mechanical technician Q1906854) that the NDB gives to machine builders and engineers	Q1906854 mechanical technician (P106 448)
 Opfer	48	not an occupation	Q1851760 victim (P106 30)
 Tochter	47	not an occupation	
-Landrat	46	position: district administrator	Q514725 Landrat (P106 2247)
 Wirklicher Geheimer Rat	46	honorary or civil-service title, not an occupation	
 Wirtschaftspolitiker	46	ambiguous: politician or economist/publicist (Q110446574, 9 uses)	Q110446574 economic policy-maker (P106 9)
 Feministin	45	conviction or affiliation, not an occupation (Frauenrechtlerin is mapped)	Q34074720 feminist (P106 1324)
 Förderer	45	not an occupation	
-Kultusminister	45	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	
 Schultheiß	44	position: head or judge of a village or town	Q690928 Schultheiss (P106 450)
 Täufer	44	conviction or affiliation, not an occupation (Anabaptist)	Q165580 Anabaptism (P106 50)
 Adelsgeschlecht	43	not a person (noble family)	
@@ -96,7 +84,6 @@ Administrator	42	position: mostly administrators of prince-bishoprics	Q16532929 
 Generaloberer	42	position (P39), not an occupation	Q1337239 superior general (P106 0)
 Gewerkschaftsmitglied	42	membership, not an occupation	Q98833914 union member (P106 1012)
 Großherzog	42	noble title (P97), not an occupation	
-Kabinettsminister	42	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	
 Oberkonsistorialrat	42	honorary or civil-service title, not an occupation	
 Regierungschef	42	position (P39), not an occupation	Q2285706 head of government (P106 585)
 Stadtrat	42	position or body (city council)	Q4594605 magistrate (P106 4474); Q17353587 municipal council (P106 94); Q110242307 councillor (P106 29); Q3154693 city council (P106 25); Q96208019 member of municipal council (P106 23)
@@ -116,7 +103,6 @@ Zisterzienser	37	membership of a religious order (P611), not an occupation; a fe
 Antiquar	36	ambiguous: antiquarian bookseller or antiquarian scholar	Q5697103 antiquarian (P106 1170); Q187865 antiquarian seller (P106 654); Q50807995 antiquarian bookseller (P106 471)
 Marschall	36	ambiguous title (court marshal, military marshal)	Q111837 marshal (P106 128)
 Schwärmer	36	not an occupation	
-Außenminister	35	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q7330070 foreign minister (P106 381); Q14213 United States Secretary of State (P106 1); Q20203208 Minister of Foreign Affairs (P106 0)
 Kommunist	35	conviction or affiliation, not an occupation	Q28528560 communist (P106 600)
 Prinzipal	35	ambiguous: head of a theatre company or employer	
 Regent	35	position (P39), not an occupation	Q1097498 ruler (P106 2190); Q477406 regent (P106 383)
@@ -125,10 +111,8 @@ Konsul	34	diplomatic rank or office; honorary consuls are merchants	Q207978 cons
 Oberpräsident	34	position (P39), not an occupation	Q314584 Oberpräsident (P106 30)
 Obersteuereinnehmer	34	office; no item	
 Stadtverordneter	34	position: member of a city council	Q96208019 member of municipal council (P106 23)
-Verteidigungsminister	34	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q2518691 defence minister (P106 2); Q24199589 Minister of Defence of Belgium (P106 0)
 Vikar	34	ambiguous: Protestant curate in training or Catholic assistant priest	Q193364 vicar (P106 2036); Q13414944 Anglican vicar (P106 12); Q434611 altarist (P106 3)
 Fürstabt	33	position (prince-abbot; like Abt)	Q2063178 prince-abbot (P106 56)
-Konferenzminister	33	position (P39); mapping ministers to politician (Q82955) would be defensible but is left for a decision	Q83307 minister (P106 6786)
 Sozialdemokrat	33	conviction or affiliation, not an occupation	Q61078770 social democrat (P106 219)
 Agrarpolitiker	32	ambiguous: politician or agrarian reformer (Q135936338, 28 uses)	Q135936338 agricultural politician (P106 28)
 Prinzessin	32	noble title (P97), not an occupation	Q2747456 prince (P106 112); Q863048 princess (P106 96)

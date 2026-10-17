@@ -83,7 +83,6 @@ snekker	26	Q326358	joiner	snekker	exact	label nb match; the only matching occupa
 erkebiskop	25	Q49476	archbishop	erkebiskop	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 1,885
 dikter	24	Q49757	poet	lyriker	checked	poet (nb alias); P106 uses: 134,152
 glasskunstner	24	Q2865798	glass artist	glasskunstner	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 2,077
-professor	24	Q1622272	university teacher	universitetslærer	checked	university teacher: professor is the academic rank (Q121594); P106 uses: 368,935
 trelasthandler	24	Q11518629	timber merchant	trelasthandler	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 342
 skiløper	23	Q4270517	skier	skiløper	exact	label nb match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 702
 kritiker	22	Q6430706	critic	kritiker	exact	label nb and label no match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,668
@@ -495,3 +494,6 @@ jarnbaneingeniør	2	Q66711686	railway engineer	jernbaneingeniør	checked	railway
 ornitolog	2	Q1225716	ornithologist	ornitolog	exact	label nb and label nn match; the only matching occupation item used as P106 by 100 or more items (any other match below 50); P106 uses: 5,588
 salmebokutgiver	1	Q1607826	editor	redaktør	checked	editor (of hymn books; no item has the word); P106 uses: 36,601
 sjefbibliotekar	1	Q10728547	chief librarian	biblioteksjef	checked	chief librarian (nb label 'biblioteksjef'; 18 uses); P106 uses: 18
+borgermester	5	Q30185	mayor	ordfører	practice	usual practice on Wikidata: used as occupation (P106) by 11,160 items, as position held (P39) by 15,361; jz 2026-10-17
+professor	24	Q121594	professor	professor	practice	usual practice on Wikidata: used as occupation (P106) by 30,248 items, as position held (P39) by 2,757; jz 2026-10-17
+statsråd	8	Q83307	minister	minister	practice	usual practice on Wikidata: used as occupation (P106) by 6,786 items, as position held (P39) by 9,546; jz 2026-10-17
