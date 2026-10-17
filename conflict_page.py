@@ -48,10 +48,10 @@ value stays as it is, and the entry's value is added with preferred rank ({{P|74
 #* '''both''': counted sources support each value (one each is enough), and the model does not read them as \
 establishing Wikidata's. The entry's value is added beside Wikidata's, at the same rank, with the entry as its \
 reference.
-#* '''report''': counted sources support only Wikidata's value, or establish it. Nothing is added, and the error is \
-reported to the work.
-#* '''a person checks''': a source gives a third value, a place name fits both values, or the model's reading \
-contradicts the sources.
+#* '''report''': counted sources support Wikidata's value and none supports the entry's (other values found do not \
+matter), or they establish Wikidata's value. Nothing is added, and the error is reported to the work.
+#* '''a person checks''': a place name fits both values, sources give only other values (none supports Wikidata's), \
+or the model's reading contradicts the sources.
 #: The model's reading can stop an edit but cannot cause one. A value is only removed or deprecated when the counted \
 sources show no support for it and confirm the entry's value.
 #: The sources found are only used to decide, and are logged here. They are not cited on Wikidata: the bot cites only \

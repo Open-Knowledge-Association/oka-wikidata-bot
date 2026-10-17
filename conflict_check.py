@@ -6,8 +6,10 @@ source (or only an import from a Wikipedia), under the rules of the OKA bot 3 re
            entry's value is added with preferred rank (P7452: best referenced value)
   both     counted sources support each value (one each is enough): the entry's value is added beside Wikidata's at
            the same rank, unless the model reads the sources as establishing Wikidata's value
-  report   counted sources support only Wikidata's value, or establish it: nothing is added, the error is reported
-  person   a third value, a place name that fits both, or the model's reading contradicts the sources' count
+  report   counted sources support Wikidata's value and none supports the entry's (other values found do not
+           matter), or they establish Wikidata's value: nothing is added, the error is reported to the work
+  person   a place name that fits both, only other values (nothing supports Wikidata's), or the model's reading
+           contradicts the sources' count
 Nothing is edited until the request is approved (jz, 16 October 2026).
 
 Claude (with web search) does the search; every answer is logged with the sources it found, in conflict_checks.csv.
@@ -136,17 +138,17 @@ def decide(evidence, established, work, label):
     only imported from a Wikipedia (replace). If only the entry contradicts it, it stays, and the entry's value gets
     preferred rank as the best referenced value (prefer). The model's reading can stop an edit but never causes one."""
     says = {x.get("supports") for x in counted(evidence, work)}
-    if "other" in says:
-        return "person"
     if label.startswith("place") and "both" in says:      # a name that fits either place (an old name, a district)
         return "person"
-    if "wikidata" not in says:                # other sources confirm the entry: Wikidata's value is wrong (replace);
-        if established not in ("entry", "unclear"):           # only the entry: its value is preferred (prefer)
-            return "person"
-        return "replace" if "entry" in says and established == "entry" else "prefer"
-    if "entry" in says:                       # sources for each value: a real conflict, both at the same rank (jz),
-        return "report" if established == "wikidata" else "both"   # unless they establish Wikidata's value
-    return "report" if established in ("wikidata", "unclear") else "person"
+    if "wikidata" in says:
+        if "entry" in says:                   # sources for each value: a real conflict, both at the same rank (jz),
+            return "report" if established == "wikidata" else "both"   # unless they establish Wikidata's value
+        return "report" if established in ("wikidata", "unclear") else "person"   # the entry's value unsupported
+    if "other" in says:                       # nothing supports Wikidata's value, but sources give yet another one
+        return "person"
+    if established not in ("entry", "unclear"):   # other sources confirm the entry: Wikidata's value is wrong
+        return "person"                           # (replace); only the entry: its value is preferred (prefer)
+    return "replace" if "entry" in says and established == "entry" else "prefer"
 
 
 def check(r, label, ours, claims, refs, e):
