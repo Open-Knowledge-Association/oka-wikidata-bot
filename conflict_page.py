@@ -20,7 +20,7 @@ PRICES = {"claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50)}   
 SEARCH = 0.01                                                                    # $ per web search
 SUPPORTS = {"wikidata": "Wikidata's value", "entry": "the entry's value", "both": "fits both", "other": "another value"}
 OUTCOME = {"replace": "replace", "prefer": "prefer the entry's value", "both": "both", "report": "report",
-           "person": "a person checks"}
+           "retry": "checked again later"}
 
 HOW = """This page shows how [[User:OKA bot|OKA bot]] settles a disagreement between a reference work and a Wikidata \
 value that has no source, as described in [[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]. \
@@ -30,7 +30,7 @@ value that has no source, as described in [[Wikidata:Requests for permissions/Bo
 # '''Which cases.''' A date or place of birth or death where the entry gives another value and Wikidata's value has \
 no reference, or only {{P|143}}. Differences that are not disagreements are settled before this step: one place \
 inside the other, the same day in the other calendar, a year beside the full date. Where Wikidata's value has any \
-other reference, nothing is searched and a person checks the case.
+other reference, nothing is searched: two sources disagree, so the entry's value is added beside it at the same rank.
 # '''The search.''' A language model (Claude, with a web search tool, at most 5 searches per case) gets the person, \
 the fact, both values and the entry's link. It lists each page it read that states the fact, with the link, the \
 page's words and the value they support, and then says what these sources establish: Wikidata's value, the entry's \
@@ -39,23 +39,23 @@ edit (family trees, Find a Grave, forums) do not count. The prompt and the rules
 [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/conflict_check.py conflict_check.py].
 # '''The decision''' is made by code, from the sources counted and the model's reading of them:
 #* '''replace''': no counted source supports Wikidata's value, and either other sources confirm the entry's (and the \
-model reads them so), or Wikidata's value has no reference at all and no Wikipedia article about the person states \
-it. Wikidata's value is taken to be wrong: the entry's value is added with its reference, and Wikidata's value is \
-removed if it has no reference, or deprecated ({{P|2241}}: {{Q|Q41755623}}) if its only reference is {{P|143}}, so \
-that it stays visible and is not imported again.
+model reads them so), or Wikidata's value has no reference at all. Wikidata's value is taken to be wrong: the \
+entry's value is added with its reference, and Wikidata's value is removed if it has no reference and no Wikipedia \
+article about the person states it, otherwise deprecated ({{P|2241}}: {{Q|Q41755623}}), so that it stays visible \
+and is not imported again.
 #* '''prefer the entry's value''': no counted source supports Wikidata's value, none confirms the entry's either \
 (often nothing is found at all), and Wikidata's value is a Wikipedia import. The entry is a source; a Wikipedia \
 import is not. Wikidata's value stays as it is, and the entry's value is added with preferred rank ({{P|7452}}: \
 {{Q|Q98386534}}).
 #* '''both''': counted sources support each value (one each is enough), and the model does not read them as \
-establishing Wikidata's; or nothing supports Wikidata's value while sources give yet other values, so the fact is \
-unclear. The entry's value is added beside Wikidata's, at the same rank, with the entry as its reference: the two \
-values side by side show that the fact is disputed.
+establishing Wikidata's; or the fact is unclear: nothing supports Wikidata's value while sources give yet other \
+values, a place name fits both values, or the model's reading contradicts the sources. The entry's value is added \
+beside Wikidata's, at the same rank, with the entry as its reference: the two values side by side show that the \
+fact is disputed.
 #* '''report''': counted sources support Wikidata's value and none supports the entry's (other values found do not \
 matter), or they establish Wikidata's value. The entry's value is added with deprecated rank ({{P|2241}}: \
 {{Q|Q29998666}}), referenced to the entry, so that the item shows that the work states otherwise and the value is \
 not added again; the error is also reported to the work.
-#* '''a person checks''': a place name fits both values, or the model's reading contradicts the sources.
 #: The model's reading can stop an edit but cannot cause one. A value is only removed or deprecated when the counted \
 sources show no support for it.
 #: The sources found are only used to decide, and are logged here. They are not cited on Wikidata: the bot cites only \
@@ -126,9 +126,9 @@ def edits(r):
     if d == "replace":
         if r["wikidata_sources"] == "no source":
             confirmed = any(x.get("supports") == "entry" for x in counted(json.loads(r["evidence"] or "[]"), r["work"]))
-            return (f"Add {fact}: {ours} ({ref}).<br />Remove {old} (it has no reference"
-                    + (", and no source supports it)." if confirmed
-                       else ", no source supports it, and no Wikipedia article states it)."))
+            return (f"Add {fact}: {ours} ({ref}).<br />Remove {old}: it has no reference"
+                    + (" and no source supports it" if confirmed else ", and no source supports it or the entry's")
+                    + " (if a Wikipedia article states it, it is deprecated instead).")
         return (f"Add {fact}: {ours} ({ref}).<br />Deprecate {old}: reason {{{{Q|Q41755623}}}} "
                 "(its only reference is the Wikipedia import).")
     if d == "prefer":
@@ -139,7 +139,7 @@ def edits(r):
     if d == "report":
         return (f"Add {fact}: {ours}, deprecated rank, reason {{{{Q|Q29998666}}}} ({ref}).<br />{old} stays at "
                 f"normal rank.<br />The error is reported to {work}.")
-    return "None for now: a person checks the case."
+    return "None yet: the model gave no answer; the case is checked again."
 
 
 def table(rows):

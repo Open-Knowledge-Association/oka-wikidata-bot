@@ -6,14 +6,15 @@ source (or only an import from a Wikipedia), under the rules of the OKA bot 3 re
            or deprecated as incorrect (only a Wikipedia import)
   prefer   no counted source supports Wikidata's value, none confirms the entry's, and Wikidata's value is a Wikipedia
            import: it stays, the entry's value is added with preferred rank (P7452: best referenced value)
-  both     counted sources support each value (one each is enough), or nothing supports Wikidata's value while
-           sources give yet other values (the fact is unclear): the entry's value is added beside Wikidata's at the
-           same rank, unless the model reads the sources as establishing Wikidata's value
+  both     counted sources support each value (one each is enough), nothing supports Wikidata's value while sources
+           give yet other values (the fact is unclear), a place name fits both values, or the model's reading
+           contradicts the sources: the entry's value is added beside Wikidata's at the same rank. Also every case
+           where Wikidata's value cites another source (not searched: two sources disagree)
   report   counted sources support Wikidata's value and none supports the entry's (other values found do not
            matter), or they establish Wikidata's value: the entry's value is added with deprecated rank (P2241:
            Q29998666, error in referenced source), referenced to the entry, so that the item shows the work states
            otherwise (jz, 17 October 2026); the error is also reported to the work
-  person   a place name that fits both, or the model's reading contradicts the sources' count
+  retry    no answer from the model: checked again later (no case goes to a person; jz, 17 October 2026)
 Nothing is edited until the request is approved (jz, 16 October 2026).
 
 Claude (with web search) does the search; every answer is logged with the sources it found, in conflict_checks.csv.
@@ -123,7 +124,7 @@ def open_cases():
                 claims = [c for c in ent.get("claims", {}).get(LABELS[label], [])
                           if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"]
                 if not ours or not claims or any(c.get("references") and not only_import_refs(c) for c in claims):
-                    continue                          # a sourced value: a person reviews it, no search needed
+                    continue      # a sourced value: two sources disagree, both side by side (no search needed)
                 refs = "imported from a Wikipedia" if any(c.get("references") for c in claims) else "no source"
                 yield {"work": e["work"], "entry": e["id"], "qid": e["qid"]}, label, ours[0], claims, refs, ent
 
@@ -142,16 +143,17 @@ def decide(evidence, established, work, label, refs="imported from a Wikipedia")
     only imported from a Wikipedia (replace). If only the entry contradicts it, it stays, and the entry's value gets
     preferred rank as the best referenced value (prefer). The model's reading can stop an edit but never causes one."""
     says = {x.get("supports") for x in counted(evidence, work)}
+    # No case goes to a person (jz, 17 October 2026): what is unclear gets both values side by side.
     if label.startswith("place") and "both" in says:      # a name that fits either place (an old name, a district)
-        return "person"
+        return "both"
     if "wikidata" in says:
         if "entry" in says:                   # sources for each value: a real conflict, both at the same rank (jz),
             return "report" if established == "wikidata" else "both"   # unless they establish Wikidata's value
-        return "report" if established in ("wikidata", "unclear") else "person"   # the entry's value unsupported
+        return "report" if established in ("wikidata", "unclear") else "both"   # the entry's value unsupported
     if "other" in says:     # nothing supports Wikidata's value, and sources give yet other ones: the fact is unclear,
-        return "both" if established != "wikidata" else "person"   # which both values side by side show (jz)
-    if established not in ("entry", "unclear"):   # other sources confirm the entry: Wikidata's value is wrong
-        return "person"                           # (replace); only the entry: its value is preferred (prefer)
+        return "both"       # which both values side by side show (jz)
+    if established not in ("entry", "unclear"):   # the model's reading contradicts the sources: both side by side
+        return "both"
     if "entry" in says and established == "entry":
         return "replace"
     return "replace" if refs == "no source" else "prefer"     # an unsourced value no source supports goes (jz)
@@ -212,7 +214,7 @@ End with one fenced JSON block, exactly:
     return {"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "work": r["work"], "entry": r["entry"], "qid": r["qid"], "property": label,
             "wikidata_value": theirs, "wikidata_sources": refs, "entry_value": entry,
-            "decision": decide(evidence, verdict.get("established"), r["work"], label, refs) if verdict else "person",
+            "decision": decide(evidence, verdict.get("established"), r["work"], label, refs) if verdict else "retry",
             "established": (verdict or {}).get("established", ""),
             "evidence": json.dumps(evidence, ensure_ascii=False),
             "note": (verdict or {}).get("note", "no verdict returned"), "model": MODEL, "searches": searches,
