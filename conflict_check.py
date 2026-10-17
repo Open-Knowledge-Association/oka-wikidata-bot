@@ -1,9 +1,11 @@
 """Tasks 2 and 3: check the values left alone because Wikidata says something else, where Wikidata's value has no
 source (or only an import from a Wikipedia), under the rules of the OKA bot 3 request (16 October 2026):
-  replace  no counted source supports Wikidata's value and other sources confirm the entry's: the entry's value is
-           added; Wikidata's is removed (no reference) or deprecated as incorrect (only a Wikipedia import)
-  prefer   no counted source supports Wikidata's value, and none confirms the entry's: Wikidata's value stays, the
-           entry's value is added with preferred rank (P7452: best referenced value)
+  replace  no counted source supports Wikidata's value, and other sources confirm the entry's, or Wikidata's value has
+           no reference at all (jz, 17 October 2026: then it is removed unless a Wikipedia article about the person
+           states it, which the edit step checks): the entry's value is added; Wikidata's is removed (no reference)
+           or deprecated as incorrect (only a Wikipedia import)
+  prefer   no counted source supports Wikidata's value, none confirms the entry's, and Wikidata's value is a Wikipedia
+           import: it stays, the entry's value is added with preferred rank (P7452: best referenced value)
   both     counted sources support each value (one each is enough), or nothing supports Wikidata's value while
            sources give yet other values (the fact is unclear): the entry's value is added beside Wikidata's at the
            same rank, unless the model reads the sources as establishing Wikidata's value
@@ -132,7 +134,7 @@ def counted(evidence, work):
             and not re.search(WORK_SITES[work], x.get("url", ""))]
 
 
-def decide(evidence, established, work, label):
+def decide(evidence, established, work, label, refs="imported from a Wikipedia"):
     """The request's rules, applied to the counted sources and to the model's reading of them ('established'). jz's
     rules (16 October 2026): when no counted source supports Wikidata's value, the entry's value is added even if no
     other source states the fact (the entry is a source; an unsourced value or a Wikipedia import is not). If other
@@ -150,7 +152,9 @@ def decide(evidence, established, work, label):
         return "both" if established != "wikidata" else "person"   # which both values side by side show (jz)
     if established not in ("entry", "unclear"):   # other sources confirm the entry: Wikidata's value is wrong
         return "person"                           # (replace); only the entry: its value is preferred (prefer)
-    return "replace" if "entry" in says and established == "entry" else "prefer"
+    if "entry" in says and established == "entry":
+        return "replace"
+    return "replace" if refs == "no source" else "prefer"     # an unsourced value no source supports goes (jz)
 
 
 def check(r, label, ours, claims, refs, e):
@@ -208,7 +212,7 @@ End with one fenced JSON block, exactly:
     return {"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "work": r["work"], "entry": r["entry"], "qid": r["qid"], "property": label,
             "wikidata_value": theirs, "wikidata_sources": refs, "entry_value": entry,
-            "decision": decide(evidence, verdict.get("established"), r["work"], label) if verdict else "person",
+            "decision": decide(evidence, verdict.get("established"), r["work"], label, refs) if verdict else "person",
             "established": (verdict or {}).get("established", ""),
             "evidence": json.dumps(evidence, ensure_ascii=False),
             "note": (verdict or {}).get("note", "no verdict returned"), "model": MODEL, "searches": searches,

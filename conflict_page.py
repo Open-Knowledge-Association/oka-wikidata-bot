@@ -38,13 +38,15 @@ value, a genuine split, or nothing clear. Wikipedia, Wikidata and their copies, 
 edit (family trees, Find a Grave, forums) do not count. The prompt and the rules below are in \
 [https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/conflict_check.py conflict_check.py].
 # '''The decision''' is made by code, from the sources counted and the model's reading of them:
-#* '''replace''': no counted source supports Wikidata's value, other sources confirm the entry's, and the model reads \
-the sources as establishing the entry's value. Wikidata's value is taken to be wrong: the entry's value is added with \
-its reference, and Wikidata's value is removed if it has no reference, or deprecated ({{P|2241}}: {{Q|Q41755623}}) \
-if its only reference is {{P|143}}, so that it stays visible and is not imported again.
-#* '''prefer the entry's value''': no counted source supports Wikidata's value, and none confirms the entry's either \
-(often nothing is found at all). The entry is a source; an unsourced value or a Wikipedia import is not. Wikidata's \
-value stays as it is, and the entry's value is added with preferred rank ({{P|7452}}: {{Q|Q98386534}}).
+#* '''replace''': no counted source supports Wikidata's value, and either other sources confirm the entry's (and the \
+model reads them so), or Wikidata's value has no reference at all and no Wikipedia article about the person states \
+it. Wikidata's value is taken to be wrong: the entry's value is added with its reference, and Wikidata's value is \
+removed if it has no reference, or deprecated ({{P|2241}}: {{Q|Q41755623}}) if its only reference is {{P|143}}, so \
+that it stays visible and is not imported again.
+#* '''prefer the entry's value''': no counted source supports Wikidata's value, none confirms the entry's either \
+(often nothing is found at all), and Wikidata's value is a Wikipedia import. The entry is a source; a Wikipedia \
+import is not. Wikidata's value stays as it is, and the entry's value is added with preferred rank ({{P|7452}}: \
+{{Q|Q98386534}}).
 #* '''both''': counted sources support each value (one each is enough), and the model does not read them as \
 establishing Wikidata's; or nothing supports Wikidata's value while sources give yet other values, so the fact is \
 unclear. The entry's value is added beside Wikidata's, at the same rank, with the entry as its reference: the two \
@@ -55,7 +57,7 @@ matter), or they establish Wikidata's value. The entry's value is added with dep
 not added again; the error is also reported to the work.
 #* '''a person checks''': a place name fits both values, or the model's reading contradicts the sources.
 #: The model's reading can stop an edit but cannot cause one. A value is only removed or deprecated when the counted \
-sources show no support for it and confirm the entry's value.
+sources show no support for it.
 #: The sources found are only used to decide, and are logged here. They are not cited on Wikidata: the bot cites only \
 the works of its approved tasks.
 # '''Before any edit''', each batch is listed on this page with its evidence, and the operator checks a sample. \
@@ -123,7 +125,10 @@ def edits(r):
     d = r["decision"]
     if d == "replace":
         if r["wikidata_sources"] == "no source":
-            return f"Add {fact}: {ours} ({ref}).<br />Remove {old} (it has no reference)."
+            confirmed = any(x.get("supports") == "entry" for x in counted(json.loads(r["evidence"] or "[]"), r["work"]))
+            return (f"Add {fact}: {ours} ({ref}).<br />Remove {old} (it has no reference"
+                    + (", and no source supports it)." if confirmed
+                       else ", no source supports it, and no Wikipedia article states it)."))
         return (f"Add {fact}: {ours} ({ref}).<br />Deprecate {old}: reason {{{{Q|Q41755623}}}} "
                 "(its only reference is the Wikipedia import).")
     if d == "prefer":
@@ -166,7 +171,8 @@ def table(rows):
 def build(log, title):
     rows = sorted(csv.DictReader(open(log, encoding="utf-8")), key=lambda r: r["entry"])
     for r in rows:                               # the outcome under the current rules, from the logged evidence
-        r["decision"] = decide(json.loads(r["evidence"] or "[]"), r.get("established"), r["work"], r["property"])
+        r["decision"] = decide(json.loads(r["evidence"] or "[]"), r.get("established"), r["work"], r["property"],
+                               r["wikidata_sources"])
     n = collections.Counter(r["decision"] for r in rows)
     dollars, searches = cost(rows)
     model = rows[0]["model"].replace("claude-", "Claude ").replace("-5-5", " 5.5").replace("sonnet", "Sonnet").replace("haiku", "Haiku")
