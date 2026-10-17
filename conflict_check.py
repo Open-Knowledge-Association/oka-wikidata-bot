@@ -8,7 +8,9 @@ source (or only an import from a Wikipedia), under the rules of the OKA bot 3 re
            sources give yet other values (the fact is unclear): the entry's value is added beside Wikidata's at the
            same rank, unless the model reads the sources as establishing Wikidata's value
   report   counted sources support Wikidata's value and none supports the entry's (other values found do not
-           matter), or they establish Wikidata's value: nothing is added, the error is reported to the work
+           matter), or they establish Wikidata's value: the entry's value is added with deprecated rank (P2241:
+           Q29998666, error in referenced source), referenced to the entry, so that the item shows the work states
+           otherwise (jz, 17 October 2026); the error is also reported to the work
   person   a place name that fits both, or the model's reading contradicts the sources' count
 Nothing is edited until the request is approved (jz, 16 October 2026).
 

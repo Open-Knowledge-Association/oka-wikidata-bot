@@ -50,7 +50,9 @@ establishing Wikidata's; or nothing supports Wikidata's value while sources give
 unclear. The entry's value is added beside Wikidata's, at the same rank, with the entry as its reference: the two \
 values side by side show that the fact is disputed.
 #* '''report''': counted sources support Wikidata's value and none supports the entry's (other values found do not \
-matter), or they establish Wikidata's value. Nothing is added, and the error is reported to the work.
+matter), or they establish Wikidata's value. The entry's value is added with deprecated rank ({{P|2241}}: \
+{{Q|Q29998666}}), referenced to the entry, so that the item shows that the work states otherwise and the value is \
+not added again; the error is also reported to the work.
 #* '''a person checks''': a place name fits both values, or the model's reading contradicts the sources.
 #: The model's reading can stop an edit but cannot cause one. A value is only removed or deprecated when the counted \
 sources show no support for it and confirm the entry's value.
