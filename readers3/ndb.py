@@ -114,7 +114,7 @@ def coordinates(q):
     rows = d.lookup(f"SELECT ?c WHERE {{ wd:{q} wdt:P625 ?c }}")
     found = []
     for r in rows:
-        m = re.search(r"Point\(([-\d.]+) ([-\d.]+)\)", r[0] if r else "")
+        m = re.search(r"Point\(([-\d.]+) ([-\d.]+)\)", r[0] if r else "", re.I)    # QLever writes POINT(
         if m:
             found.append((float(m.group(2)), float(m.group(1))))
     return found
