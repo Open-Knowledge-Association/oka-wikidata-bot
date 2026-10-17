@@ -10551,3 +10551,503 @@ time,work,kind,entry,item,revid,changes
 2026-10-17T02:29:09Z,snl,person,Carl_Sandburg,Q193608,2557830778,source for place of birth; source for date of birth; source for date of death
 2026-10-17T02:29:10Z,snl,person,Carl_Schiøtz,Q5040773,2557830782,place of birth; place of death; source for occupation; source for sibling
 2026-10-17T02:29:11Z,snl,person,Carl_Schiøtz_Wibye,Q11963179,2557830786,place of birth
+2026-10-17T02:29:53Z,snl,person,Carl_Schmitt,Q77148,2557831048,source for place of birth; source for place of death; source for date of death
+2026-10-17T02:29:54Z,snl,person,Carl_Schwensen_Aaser,Q17120594,2557831052,SNL ID Carl_Schwensen_Aaser deprecated (now SNL Carl_Aaser); SNL ID Carl_Aaser; source for place of birth; source for place of death; source for father
+2026-10-17T02:29:55Z,snl,person,Carl_Schøyen_-_forfatter,Q5040794,2557831059,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:29:56Z,snl,person,Carl_Schøyen_-_maler,Q56256146,2557831066,source for place of birth; source for date of birth
+2026-10-17T02:29:57Z,snl,person,Carl_Siegmund_Franz_Credé,Q86476,2557831072,SNL ID Carl_Siegmund_Franz_Credé deprecated (now SNL Carl_Credé); SNL ID Carl_Credé; source for date of birth; source for date of death
+2026-10-17T02:29:58Z,snl,person,Carl_Sjöstrand,Q4354946,2557831076,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:29:59Z,snl,person,Carl_Skovgaard-Petersen,Q4563321,2557831080,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:30:00Z,snl,person,Carl_Skånberg,Q6180578,2557831083,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:01Z,snl,person,Carl_Snoilsky,Q1040670,2557831085,other names; source for date of birth; source for date of death
+2026-10-17T02:30:02Z,snl,person,Carl_Sofus_Lumholtz,Q1040662,2557831090,SNL ID Carl_Sofus_Lumholtz deprecated (now SNL Carl_Lumholtz); SNL ID Carl_Lumholtz; source for date of birth; source for date of death
+2026-10-17T02:30:03Z,snl,person,Carl_Spitteler,Q226525,2557831094,source for date of birth; source for date of death
+2026-10-17T02:30:04Z,snl,person,Carl_Spitzweg,Q164979,2557831095,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:05Z,snl,person,Carl_Stamitz,Q157898,2557831098,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:06Z,snl,person,Carl_Sternheim,Q61662,2557831099,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:30:07Z,snl,person,Carl_Struve,Q11963182,2557831104,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:30:08Z,snl,person,Carl_Støp-Bowitz,Q12346051,2557831109,source for place of birth; place of death; source for date of birth; source for date of death
+2026-10-17T02:30:09Z,snl,person,Carl_Sundt-Hansen,Q4583808,2557831115,other names; source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:30:10Z,snl,person,Carl_Søyland,Q5040866,2557831118,source for place of birth; place of death (more precise); source for date of birth; source for date of death
+2026-10-17T02:30:11Z,snl,person,Carl_Theodor_Dreyer,Q51127,2557831121,other names; source for place of birth; source for place of death
+2026-10-17T02:30:12Z,snl,person,Carl_Theodor_Ernst_von_Siebold,Q64262,2557831127,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:13Z,snl,person,Carl_Theodor_Fredrik_Koller,Q6144212,2557831129,place of birth; place of death
+2026-10-17T02:30:14Z,snl,person,Carl_Theodor_Sørensen,Q3431187,2557831136,source for date of birth; source for date of death
+2026-10-17T02:30:15Z,snl,person,Carl_Theodor_Zahle,Q1040851,2557831141,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:16Z,snl,person,Carl_Thomsen,Q11963186,2557831146,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:17Z,snl,person,Carl_Valdemar_Bramsnæs,Q5584642,2557831152,place of death; source for date of birth; source for date of death
+2026-10-17T02:30:18Z,snl,person,Carl_Valentin_Falsen,Q1808753,2557831159,other names; source for place of death; source for occupation; source for father; source for sibling; source for date of birth
+2026-10-17T02:30:19Z,snl,person,Carl_Van_Vechten,Q312851,2557831165,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:20Z,snl,person,Carl_Vilhelm_August_Strandberg,Q327853,2557831170,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:21Z,snl,person,Carl_Vilhelm_Holst,Q21795330,2557831173,other names; source for place of birth; place of death; source for date of birth; source for date of death
+2026-10-17T02:30:22Z,snl,person,Carl_Vilhelm_Petersen,Q12305396,2557831174,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:30:23Z,snl,person,Carl_Wahlbom,Q445022,2557831178,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:24Z,snl,person,Carl_Warmuth_-_norsk_musikkhandler,Q11963185,2557831182,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:24Z,snl,person,Carl_Wernicke,Q48965,,no change
+2026-10-17T02:30:25Z,snl,person,Carl_Westman,Q709240,2557831187,source for date of birth; source for date of death
+2026-10-17T02:30:26Z,snl,person,Carl_Wilhelm_Barth,Q5040957,2557831191,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:30:27Z,snl,person,Carl_Wilhelm_Boeck,Q3356303,2557831194,SNL ID Carl_Wilhelm_Boeck deprecated (now SNL Wilhelm_Boeck); SNL ID Wilhelm_Boeck; other names; source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:30:28Z,snl,person,Carl_Wilhelm_Böttiger,Q4992736,2557831199,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:29Z,snl,person,Carl_Wilhelm_Carlberg,Q4355797,2557831205,source for date of death
+2026-10-17T02:30:30Z,snl,person,Carl_Wilhelm_Carstens,Q5040958,2557831208,place of birth; place of death; date of birth (more precise); date of death (more precise)
+2026-10-17T02:30:31Z,snl,person,Carl_Wilhelm_Ludvig_Charlier,Q478599,2557831210,source for date of birth; source for date of death
+2026-10-17T02:30:31Z,snl,person,Carl_Wilhelm_Rubenson,Q5040963,,no change
+2026-10-17T02:30:32Z,snl,person,Carl_Wilhelm_Scheele,Q70538,2557831215,source for date of death
+2026-10-17T02:30:33Z,snl,person,Carl_Wilhelm_Sem-Jacobsen,Q64782327,2557831220,source for place of birth; source for place of death; source for occupation; source for father; source for date of birth; source for date of death
+2026-10-17T02:30:34Z,snl,person,Carl_Wilhelm_von_Nägeli,Q123876,2557831226,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:35Z,snl,person,Carl_Wilhelm_von_Sydow,Q930614,2557831233,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:30:36Z,snl,person,Carl_Wilhelms,Q11855024,2557831240,source for place of birth; place of death; source for date of birth; source for date of death
+2026-10-17T02:30:37Z,snl,person,Carl_Wilhelmson,Q716732,2557831248,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:38Z,snl,person,Carl_Wille_Schnitler,Q5040967,2557831258,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:39Z,snl,person,Carl_William_Blegen,Q552469,2557831267,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:30:40Z,snl,person,Carl_Wiman,Q530435,2557831274,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:09Z,snl,person,Carl_Yngvar_Christensen,Q11963189,2557833019,source for place of birth; source for date of birth
+2026-10-17T02:48:11Z,snl,person,Carl_Zuckmayer,Q76820,2557833030,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:11Z,snl,person,Carl_von_Clausewitz,Q76430,2557833037,source for place of birth
+2026-10-17T02:48:12Z,snl,person,Carl_von_Hanno,Q5041014,2557833043,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:48:14Z,snl,person,Carl_von_Linné,Q1043,2557833056,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:14Z,snl,person,Carl_von_Linné_-_den_yngre,Q178823,2557833060,source for place of death; source for date of death
+2026-10-17T02:48:15Z,snl,person,Carl_von_Ossietzky,Q76358,2557833071,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:16Z,snl,person,Carl_von_Savigny,Q76892,2557833084,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:17Z,snl,person,Carl_von_Schmettow,Q3370778,2557833091,source for place of birth; place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:48:18Z,snl,person,Carl_von_und_zu_Mansbach,Q5041016,2557833101,source for date of birth; source for date of death
+2026-10-17T02:48:19Z,snl,person,Carla_Bley,Q233721,2557833112,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:20Z,snl,person,Carla_Del_Ponte,Q122285,2557833122,source for date of birth
+2026-10-17T02:48:21Z,snl,person,Carla_Fracci,Q466733,2557833130,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:22Z,snl,person,Carle_Lange,Q95880655,2557833136,date of birth
+2026-10-17T02:48:23Z,snl,person,Carle_Vernet,Q585852,2557833142,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:48:24Z,snl,person,Carles_Puyol,Q17158,2557833148,source for place of birth; source for date of birth
+2026-10-17T02:48:25Z,snl,person,Carleton_Stevens_Coon,Q325049,2557833152,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:26Z,snl,organisation,Carlings,Q10443115,2557833158,source for legal form; official name; headquarters (more precise)
+2026-10-17T02:48:27Z,snl,person,Carlo_Ancelotti,Q174614,2557833163,source for date of birth
+2026-10-17T02:48:28Z,snl,person,Carlo_Azeglio_Ciampi,Q1224,2557833169,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:29Z,snl,person,Carlo_Bernari,Q1041877,2557833174,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:30Z,snl,person,Carlo_Blasis,Q944176,2557833179,source for place of birth; source for place of death; source for date of death
+2026-10-17T02:48:31Z,snl,person,Carlo_Borromeo,Q216946,2557833185,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:32Z,snl,person,Carlo_Carrà,Q168496,2557833191,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:48:33Z,snl,person,Carlo_Cassola,Q530655,2557833196,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:34Z,snl,person,Carlo_Cattaneo,Q1042024,2557833201,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:48:35Z,snl,person,Carlo_Cignani,Q239980,2557833207,source for date of death
+2026-10-17T02:48:35Z,snl,person,Carlo_Coccioli,Q321351,,no change
+2026-10-17T02:48:36Z,snl,person,Carlo_Collodi,Q199588,2557833215,pseudonym; source for date of death
+2026-10-17T02:48:36Z,snl,person,Carlo_Crivelli,Q348024,,no change
+2026-10-17T02:48:36Z,snl,person,Carlo_De_Benedetti,Q123638,,no change
+2026-10-17T02:48:36Z,snl,person,Carlo_Dolci,Q503322,,no change
+2026-10-17T02:48:37Z,snl,person,Carlo_Emilio_Gadda,Q378645,2557833221,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:37Z,snl,person,Carlo_Fontana,Q704356,,no change
+2026-10-17T02:48:37Z,snl,person,Carlo_Forlanini,Q939226,,no change
+2026-10-17T02:48:38Z,snl,person,Carlo_Gesualdo,Q192958,2557833224,other names; source for place of birth; source for place of death
+2026-10-17T02:48:39Z,snl,person,Carlo_Ginzburg,Q355251,2557833230,source for place of birth; source for place of death; source for occupation; source for mother; source for date of birth; source for date of death
+2026-10-17T02:48:39Z,snl,person,Carlo_Goldoni,Q165534,,no change
+2026-10-17T02:48:40Z,snl,person,Carlo_Gozzi,Q263270,2557833236,source for date of birth; source for date of death
+2026-10-17T02:48:41Z,snl,person,Carlo_Janka,Q79639,2557833241,source for place of birth; source for date of birth
+2026-10-17T02:48:42Z,snl,person,Carlo_Levi,Q312628,2557833247,source for place of birth; source for place of death
+2026-10-17T02:48:42Z,snl,person,Carlo_Lodoli,Q601642,,no change
+2026-10-17T02:48:43Z,snl,person,Carlo_Maderno,Q122328,2557833256,other names; source for place of death; source for date of death
+2026-10-17T02:48:43Z,snl,person,Carlo_Maratti,Q538998,,no change
+2026-10-17T02:48:44Z,snl,person,Carlo_Maria_Bonaparte,Q151869,2557833260,other names
+2026-10-17T02:48:44Z,snl,person,Carlo_Maria_Curci,Q576347,,no change
+2026-10-17T02:48:45Z,snl,person,Carlo_Maria_Giulini,Q430829,2557833267,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:46Z,snl,person,Carlo_Ponti,Q299419,2557833271,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:48:46Z,snl,person,Carlo_Rainaldi,Q372066,,no change
+2026-10-17T02:48:47Z,snl,person,Carlo_Rubbia,Q187199,2557833276,source for date of birth
+2026-10-17T02:49:36Z,snl,person,Carlo_Scarpa,Q51137,2557833497,source for date of birth
+2026-10-17T02:49:37Z,snl,person,Carlo_Sforza,Q463243,2557833505,source for place of death; source for date of death
+2026-10-17T02:49:38Z,snl,person,Carlo_Urbani,Q525262,2557833514,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:39Z,snl,person,Carlos_Alcaraz,Q85518537,2557833523,source for date of birth
+2026-10-17T02:49:40Z,snl,person,Carlos_Andrés_Pérez,Q295790,2557833534,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:41Z,snl,person,Carlos_Antonio_López,Q235648,2557833545,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:49:42Z,snl,person,Carlos_Barral,Q1042738,2557833553,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:43Z,snl,person,Carlos_Bousoño,Q3362422,2557833557,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:44Z,snl,person,Carlos_Castaneda,Q158878,2557833563,source for place of birth; source for date of death
+2026-10-17T02:49:45Z,snl,person,Carlos_Chávez,Q357326,2557833569,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:46Z,snl,person,Carlos_Drummond_de_Andrade,Q379745,2557833572,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:47Z,snl,person,Carlos_Felipe_Ximenes_Belo,Q234001,2557833577,source for date of birth
+2026-10-17T02:49:49Z,snl,person,Carlos_Fuentes,Q154691,2557833582,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:49Z,snl,person,Carlos_Gardel,Q229613,2557833587,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:50Z,snl,person,Carlos_Hugo_av_Bourbon-Parma,Q537914,2557833589,source for place of death; source for date of birth
+2026-10-17T02:49:51Z,snl,person,Carlos_Kleiber,Q160706,2557833594,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:49:52Z,snl,person,Carlos_Lopes,Q454958,2557833600,source for place of birth; source for date of birth
+2026-10-17T02:49:53Z,snl,person,Carlos_Menem,Q185107,2557833608,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:54Z,snl,person,Carlos_Mesa,Q312668,2557833614,other names; source for place of birth; source for date of birth
+2026-10-17T02:49:54Z,snl,person,Carlos_Mérida,Q1043100,,no change
+2026-10-17T02:49:55Z,snl,person,Carlos_Pellicer,Q4381,2557833621,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:56Z,snl,person,Carlos_Raul_Villanueva,Q1043186,2557833627,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:56Z,snl,person,Carlos_Reutemann,Q173238,,no change
+2026-10-17T02:49:56Z,snl,person,Carlos_Ribeiro_Justiniano_Chagas,Q438907,,no change
+2026-10-17T02:49:57Z,snl,person,Carlos_Roberto_Flores,Q654177,2557833633,other names
+2026-10-17T02:49:57Z,snl,person,Carlos_Roberto_Reina,Q879219,,no change
+2026-10-17T02:49:58Z,snl,person,Carlos_Ruiz_Zafón,Q296752,2557833640,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:59Z,snl,person,Carlos_Saavedra_Lamas,Q193672,2557833648,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:49:59Z,snl,person,Carlos_Sainz,Q211204,,no change
+2026-10-17T02:50:00Z,snl,person,Carlos_Sainz_-_jr.,Q544856,2557833653,source for place of birth; source for date of birth
+2026-10-17T02:50:01Z,snl,person,Carlos_Salinas_de_Gortari,Q315633,2557833660,source for place of birth
+2026-10-17T02:50:02Z,snl,person,Carlos_Santana,Q819016,2557833663,source for date of birth
+2026-10-17T02:50:03Z,snl,person,Carlos_Saura,Q295855,2557833668,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:50:04Z,snl,person,Carlos_Wiggen,Q5042786,2557833671,source for date of birth
+2026-10-17T02:50:05Z,snl,person,Carlos_de_Oliveira,Q1043323,2557833673,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:50:06Z,snl,person,Carlotta_Grisi,Q287812,2557833674,other names; source for date of birth
+2026-10-17T02:50:07Z,snl,person,Carmelita_Jeter,Q5795,2557833676,source for place of birth; source for date of birth
+2026-10-17T02:50:08Z,snl,person,Carmelo_Anthony,Q129041,2557833681,other names; source for date of birth
+2026-10-17T02:50:09Z,snl,person,Carmen_Laforet,Q269123,2557833686,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:50:10Z,snl,person,Carmen_Lundy,Q1043678,2557833691,source for place of birth; source for date of birth
+2026-10-17T02:50:11Z,snl,person,Carmen_Martín_Gaite,Q268582,2557833694,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:50:12Z,snl,person,Carmen_Maura,Q234807,2557833696,source for place of birth; source for date of birth
+2026-10-17T02:50:13Z,snl,person,Carmen_McRae,Q240371,2557833700,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:50:14Z,snl,person,Carmen_Miranda,Q121655,2557833703,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:50:15Z,snl,organisation,Carnival_Corporation_&_plc,Q1044059,2557833709,SNL ID Carnival_Corporation_&_plc deprecated (now SNL cruise); SNL ID cruise
+2026-10-17T02:50:16Z,snl,person,Carol_1.,Q57146,2557833714,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:50:17Z,snl,person,Carol_2.,Q212897,2557833718,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:50:18Z,snl,person,Carol_Ann_Duffy,Q237994,2557833727,other names; source for place of birth; source for date of birth
+2026-10-17T02:50:19Z,snl,person,Carol_Burnett,Q255565,2557833731,source for place of birth; source for date of birth
+2026-10-17T02:50:20Z,snl,person,Carol_Heiss,Q267434,2557833736,other names; source for date of birth
+2026-10-17T02:51:02Z,snl,person,Carol_Reed,Q95143,2557833925,other names; source for date of birth; source for date of death
+2026-10-17T02:51:03Z,snl,person,Carola_Häggkvist,Q212524,2557833926,other names; source for date of birth
+2026-10-17T02:51:05Z,snl,person,Carole_King,Q217787,2557833931,source for date of birth
+2026-10-17T02:51:06Z,snl,person,Carole_Lombard,Q207739,2557833934,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:51:07Z,snl,person,Carolina_Klüft,Q223672,2557833937,source for date of birth
+2026-10-17T02:51:08Z,snl,person,Caroline_-_britisk_dronning,Q167433,2557833939,source for date of birth; source for date of death
+2026-10-17T02:51:08Z,snl,person,Caroline_Albertine_Minor,Q56118575,2557833941,source for date of birth
+2026-10-17T02:51:10Z,snl,person,Caroline_Amalie,Q57845,2557833944,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:51:10Z,snl,person,Caroline_Bauer,Q110323317,2557833947,place of birth; place of death; occupation
+2026-10-17T02:51:11Z,snl,person,Caroline_Berg_Eriksen,Q17057969,2557833949,other names; source for place of birth; source for date of birth
+2026-10-17T02:51:12Z,snl,person,Caroline_Boman_Hansen,Q23042394,2557833952,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:14Z,snl,person,Caroline_Bonaparte,Q152782,2557833954,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:14Z,snl,person,Caroline_Gordon,Q5045085,2557833955,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:16Z,snl,person,Caroline_Graham_Hansen,Q5045087,2557833959,source for place of birth; source for date of birth
+2026-10-17T02:51:16Z,snl,person,Caroline_Haslett,Q41539,2557833964,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:17Z,snl,person,Caroline_Herschel,Q76948,2557833969,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:18Z,snl,person,Caroline_Ingeborg_Halvorsen,Q59307535,2557833973,source for place of birth; source for place of death; source for sibling
+2026-10-17T02:51:19Z,snl,person,Caroline_Kristina_Birgitta_Wahlström_Nesse,Q61824877,2557833981,place of birth; source for date of birth
+2026-10-17T02:51:20Z,snl,person,Caroline_Lamb,Q235665,2557833986,other names; source for place of death; source for date of birth
+2026-10-17T02:51:20Z,snl,person,Caroline_Leaf,Q1044521,,no change
+2026-10-17T02:51:22Z,snl,person,Caroline_Louise_Marguerite,Q233966,2557833989,source for date of birth
+2026-10-17T02:51:22Z,snl,person,Caroline_Mathilde,Q57668,2557833996,other names; source for date of death
+2026-10-17T02:51:23Z,snl,person,Caroline_Schlegel-Schelling,Q63928,2557834000,source for place of birth
+2026-10-17T02:51:24Z,snl,person,Caroline_Schytte_Jensen,Q3378134,2557834008,source for place of birth; place of death; source for occupation; source for child; source for date of birth; source for date of death
+2026-10-17T02:51:26Z,snl,person,Caroline_Wozniacki,Q30767,2557834015,source for place of birth
+2026-10-17T02:51:26Z,snl,person,Caroline_av_Ansbach,Q76961,2557834021,other names; source for date of birth; source for date of death
+2026-10-17T02:51:28Z,snl,person,Carolus-Duran,Q274901,2557834026,other names; source for place of birth; source for date of birth
+2026-10-17T02:51:28Z,snl,person,Carolus_Clusius,Q333372,2557834027,other names; source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:51:29Z,snl,person,Carrie_Chapman_Catt,Q270207,2557834029,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:30Z,snl,person,Carrie_Tiffany,Q5046307,2557834031,source for date of birth
+2026-10-17T02:51:31Z,snl,person,Carson_McCullers,Q230591,2557834034,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:32Z,snl,person,Carsten_Balthazar_Hansteen,Q11963234,2557834038,source for place of birth
+2026-10-17T02:51:33Z,snl,person,Carsten_Bleness,Q5046990,2557834042,place of birth
+2026-10-17T02:51:35Z,snl,person,Carsten_Borchgrevink,Q350366,2557834045,source for place of birth; source for place of death; source for child; source for date of birth
+2026-10-17T02:51:35Z,snl,person,Carsten_Boysen,Q138370205,2557834046,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:51:36Z,snl,person,Carsten_Byhring,Q346535,2557834048,source for place of birth; source for place of death; source for occupation; source for spouse; source for date of birth; source for date of death
+2026-10-17T02:51:37Z,snl,person,Carsten_Dahl,Q1045526,2557834052,source for date of birth
+2026-10-17T02:51:37Z,snl,person,Carsten_Gerhard_Bang,Q11963235,,no change
+2026-10-17T02:51:38Z,snl,person,Carsten_Hopstock,Q5046998,2557834056,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:51:38Z,snl,person,Carsten_Høeg,Q3660808,,no change
+2026-10-17T02:51:39Z,snl,person,Carsten_Jensen,Q492593,2557834057,source for date of birth
+2026-10-17T02:51:40Z,snl,person,Carsten_Klouman,Q5047001,2557834060,place of birth; source for date of birth; source for date of death
+2026-10-17T02:51:41Z,snl,person,Carsten_Lien,Q94685013,2557834064,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:43Z,snl,person,Carsten_M._Carlsen,Q15999565,2557834068,source for place of birth; source for date of birth
+2026-10-17T02:51:43Z,snl,person,Carsten_Niebuhr,Q57420,2557834072,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:51:44Z,snl,person,Carsten_Smith,Q5047012,2557834075,source for place of birth; place of death; source for occupation; source for father; source for spouse; source for date of birth; source for date of death
+2026-10-17T02:51:45Z,snl,person,Carsten_Stabell,Q17108353,2557834081,source for place of birth; source for date of birth
+2026-10-17T02:51:46Z,snl,person,Carsten_Tank,Q968659,2557834089,source for place of birth; occupation; source for occupation; source for father; source for mother; source for spouse; source for child; source for date of death
+2026-10-17T02:51:47Z,snl,person,Carsten_Tank-Nielsen,Q11009418,2557834093,source for place of birth; source for place of death; source for father
+2026-10-17T02:51:48Z,snl,person,Carsten_Tank_Anker,Q1045511,2557834099,other names; place of burial; source for place of birth; source for place of death; source for occupation; source for mother; source for sibling; source for date of birth; source for date of death
+2026-10-17T02:52:53Z,snl,person,Carsten_Tank_Nielsen,Q5047013,2557834339,source for place of birth; source for place of death; source for father; source for child; source for date of birth; source for date of death
+2026-10-17T02:52:54Z,snl,person,Carsten_Winger,Q11963243,2557834345,source for place of birth; place of death; source for date of birth; source for date of death
+2026-10-17T02:52:55Z,snl,person,Carter_Burwell,Q374754,2557834354,source for place of birth
+2026-10-17T02:52:56Z,snl,person,Cary_Grant,Q83410,2557834364,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:52:57Z,snl,person,Caryl_Chessman,Q725908,2557834374,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:52:57Z,snl,person,Caryl_Churchill,Q463574,,no change
+2026-10-17T02:52:58Z,snl,person,Caryl_Phillips,Q2940723,2557834381,source for date of birth
+2026-10-17T02:52:59Z,snl,person,Casemiro,Q616664,2557834389,other names; source for place of birth; source for date of birth
+2026-10-17T02:53:00Z,snl,person,Casimir_Delavigne,Q126961,2557834394,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:01Z,snl,person,Casimir_Perier,Q284683,2557834403,source for place of birth; source for place of death; source for date of death
+2026-10-17T02:53:02Z,snl,person,Casino_Steel,Q11963256,2557834412,source for place of birth; source for date of birth
+2026-10-17T02:53:03Z,snl,person,Caspar_Aquila,Q67126,2557834420,other names; source for place of birth; source for place of death
+2026-10-17T02:53:03Z,snl,person,Caspar_Bartholin_-_den_eldre,Q264593,,no change
+2026-10-17T02:53:03Z,snl,person,Caspar_Bartholin_-_den_yngre,Q537984,,no change
+2026-10-17T02:53:04Z,snl,person,Caspar_Bauhin,Q123612,2557834432,source for place of birth; source for place of death; source for date of birth
+2026-10-17T02:53:05Z,snl,person,Caspar_Cassadó,Q429393,2557834445,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:06Z,snl,person,Caspar_Christopher_Brockenhuus,Q12305512,2557834453,other names; place of death; source for occupation; source for date of death
+2026-10-17T02:53:07Z,snl,person,Caspar_Christopherssøn_Schøller,Q58867883,2557834457,other names; source for place of birth; source for place of death
+2026-10-17T02:53:08Z,snl,person,Caspar_Cruciger,Q67132,2557834463,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:53:09Z,snl,person,Caspar_David_Friedrich,Q104884,2557834468,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:09Z,snl,person,Caspar_Ecchienus,Q1047871,,no change
+2026-10-17T02:53:10Z,snl,person,Caspar_Fincke,Q5730756,2557834470,source for place of death; source for date of birth
+2026-10-17T02:53:11Z,snl,person,Caspar_Frederik_Harsdorff,Q710132,2557834476,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:11Z,snl,person,Caspar_Friedrich_Wolff,Q62837,,no change
+2026-10-17T02:53:12Z,snl,person,Caspar_Herman_Hausmann,Q5049088,2557834482,source for place of death; source for occupation; source for spouse; source for date of death
+2026-10-17T02:53:13Z,snl,person,Caspar_Jensenius,Q122413791,2557834489,source for date of birth; source for date of death
+2026-10-17T02:53:14Z,snl,person,Caspar_Othmayr,Q315521,2557834493,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:15Z,snl,person,Caspar_Skildrer,Q62652324,2557834498,other names
+2026-10-17T02:53:16Z,snl,person,Caspar_Wessel,Q372017,2557834504,source for place of death; source for occupation; source for sibling; source for date of birth; source for date of death
+2026-10-17T02:53:17Z,snl,person,Casparo_Aselli,Q717374,2557834508,SNL ID Casparo_Aselli deprecated (now SNL Gaspare_Aselli); SNL ID Gaspare_Aselli; other names; source for date of death
+2026-10-17T02:53:18Z,snl,person,Casper_Oimoen,Q940879,2557834514,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:19Z,snl,person,Casper_Ruud,Q18810082,2557834516,source for place of birth; source for date of birth
+2026-10-17T02:53:20Z,snl,person,Cassam_Uteem,Q323628,2557834521,source for date of birth
+2026-10-17T02:53:21Z,snl,person,Cassandra_Wilson,Q239860,2557834524,source for place of death; source for date of birth
+2026-10-17T02:53:22Z,snl,person,Cassandre,Q278945,2557834528,pseudonym; source for place of death; source for date of birth
+2026-10-17T02:53:22Z,snl,person,Cassiodorus,Q192365,,no change
+2026-10-17T02:53:23Z,snl,person,Caster_Semenya,Q5834,2557834532,source for date of birth
+2026-10-17T02:53:24Z,snl,person,Castro_Soromenho,Q3622916,2557834534,other names; place of birth (more precise); source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:25Z,snl,person,Castruccio_Castracani,Q1049990,2557834538,source for place of birth; source for place of death; source for date of death
+2026-10-17T02:53:26Z,snl,person,Cat_Anderson,Q1050088,2557834544,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:27Z,snl,person,Cat_Stevens,Q154216,2557834552,source for place of birth; source for date of birth
+2026-10-17T02:53:28Z,snl,person,Catalin_Dorian_Florescu,Q124262,2557834554,source for date of birth
+2026-10-17T02:53:29Z,snl,person,Cate_Blanchett,Q80966,2557834557,other names; source for place of birth; source for date of birth
+2026-10-17T02:53:30Z,snl,person,Caterina_Valente,Q242535,2557834562,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:31Z,snl,person,Catharina_Freymann,Q3916312,2557834566,other names; place of birth; date of birth (more precise)
+2026-10-17T02:53:32Z,snl,person,Catharina_Lysholm,Q4027340,2557834569,source for father; source for sibling; source for date of death
+2026-10-17T02:53:33Z,snl,person,Catharina_Regina_von_Greiffenberg,Q86578,2557834573,source for place of death; source for date of birth
+2026-10-17T02:53:34Z,snl,person,Catharine_Ester_Beecher,Q462169,2557834575,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:53:35Z,snl,person,Catharine_Hermine_Kølle,Q3369201,2557834578,source for place of death; source for occupation; father
+2026-10-17T02:53:36Z,snl,person,Catharinus_Elling,Q1771189,2557834584,source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:55:20Z,snl,person,Catherine_Ashton,Q105667,2557835066,source for place of birth; source for date of birth
+2026-10-17T02:55:20Z,snl,person,Catherine_Bernard,Q532297,,no change
+2026-10-17T02:55:21Z,snl,person,Catherine_Booth,Q431614,2557835074,source for date of birth; source for date of death
+2026-10-17T02:55:21Z,snl,person,Catherine_Bott,Q2905640,,no change
+2026-10-17T02:55:22Z,snl,person,Catherine_Breillat,Q289054,2557835079,source for date of birth
+2026-10-17T02:55:22Z,snl,person,Catherine_Connolly,Q5052598,,no change
+2026-10-17T02:55:23Z,snl,person,Catherine_Cookson,Q292223,2557835085,other names; source for place of birth; source for place of death; source for date of death
+2026-10-17T02:55:24Z,snl,person,Catherine_Deneuve,Q106418,2557835091,other names; source for date of birth
+2026-10-17T02:55:25Z,snl,person,Catherine_Destivelle,Q462229,2557835098,source for place of birth; source for date of birth
+2026-10-17T02:55:26Z,snl,person,Catherine_Helen_Spence,Q542217,2557835103,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:55:27Z,snl,person,Catherine_Malabou,Q432690,2557835109,source for place of birth; source for date of birth
+2026-10-17T02:55:28Z,snl,person,Catherine_Ndereba,Q230950,2557835113,other names; source for date of birth
+2026-10-17T02:55:28Z,snl,person,Cathinka_Guldberg,Q1779897,2557835116,source for place of birth; source for place of death; source for father; source for sibling; source for date of birth; source for date of death
+2026-10-17T02:55:30Z,snl,person,Cathrine_Grøndahl,Q5053351,2557835118,source for place of birth; source for date of birth
+2026-10-17T02:55:31Z,snl,person,Cathrine_Marie_Lofthus,Q26867006,2557835122,source for date of birth
+2026-10-17T02:55:31Z,snl,person,Cathrine_Maske,Q108739887,2557835126,source for date of birth
+2026-10-17T02:55:32Z,snl,person,Cathrine_Sandnes,Q5053359,2557835129,source for place of birth; source for date of birth
+2026-10-17T02:55:34Z,snl,person,Cathrine_Smith,Q17107650,2557835132,place of birth; source for date of birth
+2026-10-17T02:55:35Z,snl,person,Cathrine_Svendsen,Q2680500,2557835139,source for place of birth; source for date of birth
+2026-10-17T02:55:35Z,snl,person,Cathrine_Winnes,Q12470048,,no change
+2026-10-17T02:55:35Z,snl,person,Cathrine_Zaborowski,Q5053357,2557835141,other names; source for date of birth
+2026-10-17T02:55:36Z,snl,person,Cathrinus_Dorotheus_Olivius_Bang,Q2107214,2557835146,SNL ID Cathrinus_Dorotheus_Olivius_Bang deprecated (now SNL Cathrinus_Bang); SNL ID Cathrinus_Bang; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:55:38Z,snl,person,Cathy_Freeman,Q234762,2557835150,source for place of birth; source for date of birth
+2026-10-17T02:55:38Z,snl,person,Cathy_Song,Q5053494,2557835153,source for place of birth; source for date of birth
+2026-10-17T02:55:40Z,snl,person,Cato_Maximilian_Guldberg,Q712979,2557835157,source for place of birth; source for place of death; source for occupation; source for father; source for sibling; source for date of birth; source for date of death
+2026-10-17T02:55:40Z,snl,person,Cato_Schiøtz,Q11963302,2557835161,place of birth; source for date of birth
+2026-10-17T02:55:42Z,snl,person,Cato_Wadel,Q11963305,2557835164,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:55:43Z,snl,person,Cato_Zahl_Pedersen,Q5053615,2557835172,place of birth (more precise); source for date of birth
+2026-10-17T02:55:44Z,snl,person,Cato_den_eldre,Q180081,2557835177,source for date of birth; source for date of death
+2026-10-17T02:55:45Z,snl,person,Catrine_Telle,Q4982281,2557835183,source for place of birth
+2026-10-17T02:55:45Z,snl,person,Catull,Q163079,,no change
+2026-10-17T02:55:46Z,snl,person,Cecil_B._DeMille,Q72267,2557835189,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:55:47Z,snl,person,Cecil_Beaton,Q697096,2557835193,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:55:48Z,snl,person,Cecil_Bødker,Q93714,2557835196,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:55:49Z,snl,person,Cecil_Day-Lewis,Q954383,2557835201,source for date of birth; source for date of death
+2026-10-17T02:55:50Z,snl,person,Cecil_Frank_Powell,Q178103,2557835204,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:55:51Z,snl,person,Cecil_Harmsworth_King,Q5056109,2557835209,place of death; source for date of birth; source for date of death
+2026-10-17T02:55:52Z,snl,person,Cecil_Maurice_Bowra,Q443786,2557835215,source for place of birth
+2026-10-17T02:55:53Z,snl,person,Cecil_Rhodes,Q19825,2557835218,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:55:53Z,snl,person,Cecil_Scott_Forester,Q430182,,no change
+2026-10-17T02:55:53Z,snl,person,Cecil_Sharp,Q3889019,,no change
+2026-10-17T02:55:54Z,snl,person,Cecil_Taylor,Q363908,2557835224,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:55:55Z,snl,person,Cecilia_Bartoli,Q18828,2557835232,source for place of birth; source for date of birth
+2026-10-17T02:55:56Z,snl,person,Cecilia_Brækhus,Q292783,2557835237,other names; source for place of birth; source for date of birth
+2026-10-17T02:55:57Z,snl,person,Cecilia_Meireles,Q2607615,2557835244,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:55:57Z,snl,person,Cecilia_Månsdotter,Q2943733,,no change
+2026-10-17T02:55:58Z,snl,person,Cecilia_Payne-Gaposchkin,Q234909,2557835251,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:55:59Z,snl,person,Cecilia_Sigurdsdatter,Q1052410,2557835258,other names; source for father; source for spouse; source for child
+2026-10-17T02:56:00Z,snl,person,Cecilie_A._Mosli,Q11963331,2557835265,source for date of birth
+2026-10-17T02:56:00Z,snl,person,Cecilie_Annette_Willoch,Q141609439,,no change
+2026-10-17T02:56:33Z,snl,person,Cecilie_Brinck_Rygel,Q11963323,2557835455,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:56:34Z,snl,person,Cecilie_Christine_Schøller,Q3719953,2557835462,other names; source for place of birth; source for place of death; source for father; source for date of birth; source for date of death
+2026-10-17T02:56:34Z,snl,person,Cecilie_Daae,Q23042657,,no change
+2026-10-17T02:56:35Z,snl,person,Cecilie_Dahl,Q4943901,2557835467,source for date of birth; source for date of death
+2026-10-17T02:56:36Z,snl,person,Cecilie_Enger,Q4946751,2557835473,source for place of birth; source for date of birth
+2026-10-17T02:56:37Z,snl,person,Cecilie_Fiskerstrand,Q17155841,2557835476,source for date of birth
+2026-10-17T02:56:38Z,snl,person,Cecilie_Landsverk,Q5056479,2557835478,source for date of birth
+2026-10-17T02:56:39Z,snl,person,Cecilie_Leganger,Q272229,2557835482,source for place of birth
+2026-10-17T02:56:39Z,snl,person,Cecilie_Lindeman_Steen,Q131758103,,no change
+2026-10-17T02:56:40Z,snl,person,Cecilie_Løveid,Q468548,2557835484,source for occupation; mother; source for date of birth
+2026-10-17T02:56:41Z,snl,person,Cecilie_Myrseth,Q21197631,2557835485,source for place of birth
+2026-10-17T02:56:42Z,snl,person,Cecilie_Ore,Q4971308,2557835492,source for place of birth; source for date of birth
+2026-10-17T02:56:43Z,snl,person,Cecilie_Skog,Q3354905,2557835495,source for place of birth; source for date of birth
+2026-10-17T02:56:44Z,snl,person,Cecilie_Thoresen_Krog,Q5056489,2557835496,source for place of birth; source for place of death; source for father; source for spouse; source for child; source for date of birth; source for date of death
+2026-10-17T02:56:45Z,snl,person,Cecilie_Østensen_Berglund,Q57915414,2557835500,source for date of birth
+2026-10-17T02:56:46Z,snl,person,Cedar_Walton,Q246462,2557835503,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:56:47Z,snl,person,Cees_Nooteboom,Q158394,2557835508,other names; source for place of birth; source for place of death; source for occupation; source for date of birth; source for date of death
+2026-10-17T02:56:48Z,snl,person,Celal_Bayar,Q151735,2557835512,other names; source for place of death; source for date of death
+2026-10-17T02:56:49Z,snl,person,Celestin_(2.),Q356619,2557835516,other names
+2026-10-17T02:56:50Z,snl,person,Celestin_1.,Q160922,2557835519,other names; source for place of death; source for date of death
+2026-10-17T02:56:51Z,snl,person,Celestin_2.,Q171144,2557835523,other names; source for date of death
+2026-10-17T02:56:52Z,snl,person,Celestin_3.,Q103437,2557835529,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:56:53Z,snl,person,Celestin_4.,Q171238,2557835532,other names
+2026-10-17T02:56:54Z,snl,person,Celestin_5.,Q118081,2557835538,other names; source for date of death
+2026-10-17T02:56:56Z,snl,person,Celia_Cruz,Q474045,2557835541,source for date of death
+2026-10-17T02:56:56Z,snl,person,Celia_Johnson,Q272075,2557835543,source for date of birth; source for date of death
+2026-10-17T02:56:57Z,snl,person,Celin_Bizet_Dønnum,Q97741625,2557835547,source for place of birth; source for date of birth
+2026-10-17T02:56:58Z,snl,person,Celina_Midelfart,Q1776597,2557835551,source for place of birth; source for father
+2026-10-17T02:56:59Z,snl,person,Celio_de_Carvalho,Q11964296,2557835554,source for place of birth; source for date of birth
+2026-10-17T02:57:00Z,snl,person,Celsus,Q315370,2557835556,other names
+2026-10-17T02:57:00Z,snl,person,Cennino_Cennini,Q220813,,no change
+2026-10-17T02:57:01Z,snl,person,Cerdic,Q366048,2557835560,other names; source for date of death
+2026-10-17T02:57:02Z,snl,organisation,Cermaq_ASA,Q5064521,2557835562,source for legal form; source for official name; source for headquarters
+2026-10-17T02:57:03Z,snl,organisation,Cerro_Tololo_interamerikanske_observatorium,Q1056113,2557835566,other names
+2026-10-17T02:57:04Z,snl,person,Cesar_Bresgen,Q872568,2557835574,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:05Z,snl,person,Cesar_Cui,Q208546,2557835578,other names; source for place of death; source for date of birth
+2026-10-17T02:57:06Z,snl,person,Cesar_Domela,Q2717011,2557835586,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:07Z,snl,person,Cesar_Pelli,Q309483,2557835593,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:07Z,snl,person,Cesare_Beccaria,Q223723,,no change
+2026-10-17T02:57:07Z,snl,person,Cesare_Borgia,Q187998,,no change
+2026-10-17T02:57:08Z,snl,person,Cesare_Cantù,Q138832,2557835599,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:09Z,snl,person,Cesare_Maldini,Q296350,2557835605,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:10Z,snl,person,Cesare_Pavese,Q2022,2557835614,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:11Z,snl,person,Cesare_Prandelli,Q218380,2557835618,source for date of birth
+2026-10-17T02:57:13Z,snl,person,Cesare_Zavattini,Q469164,2557835627,source for place of birth; source for place of death; source for date of death
+2026-10-17T02:57:13Z,snl,person,Cesária_Évora,Q103759,2557835633,source for date of birth; source for date of death
+2026-10-17T02:57:14Z,snl,person,Cesário_Verde,Q982948,2557835639,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:57:15Z,snl,person,Cetewayo,Q380403,2557835648,source for date of death
+2026-10-17T02:57:16Z,snl,person,Cezar_Petrescu,Q2428037,2557835653,place of birth (more precise); source for place of death; source for date of birth; source for date of death
+2026-10-17T02:57:18Z,snl,person,Cezinando,Q28718350,2557835664,source for place of birth
+2026-10-17T02:58:26Z,snl,person,Chad_Hedrick,Q434352,2557835945,source for place of birth; source for date of birth
+2026-10-17T02:58:27Z,snl,person,Chadli_Benjedid,Q314688,2557835953,source for date of birth; source for date of death
+2026-10-17T02:58:28Z,snl,person,Chai_Ling,Q610332,2557835962,source for date of birth
+2026-10-17T02:58:29Z,snl,person,Chaim_Herzog,Q295141,2557835969,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:30Z,snl,person,Chaim_Potok,Q560735,2557835976,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:31Z,snl,person,Chaim_Weizmann,Q172183,2557835983,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:32Z,snl,person,Chaitanya,Q870262,2557835993,source for place of birth; source for place of death
+2026-10-17T02:58:33Z,snl,person,Chajim_Nachman_Bialik,Q359705,2557836005,other names; source for place of death; source for date of death
+2026-10-17T02:58:34Z,snl,person,Chaka_Khan,Q229498,2557836013,source for date of birth
+2026-10-17T02:58:34Z,snl,person,Chalcidius,Q729244,,no change
+2026-10-17T02:58:35Z,snl,person,Cham,Q482193,2557836025,SNL ID Cham deprecated (now SNL Cham_-_fransk_tegner); SNL ID Cham_-_fransk_tegner; pseudonym; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:58:36Z,snl,person,Champfleury,Q744488,2557836031,pseudonym; source for date of death
+2026-10-17T02:58:37Z,snl,person,Chana_Orloff,Q455857,2557836043,other names; source for date of death
+2026-10-17T02:58:38Z,snl,person,Chandragupta_-_konge_i_Magadhariket,Q188541,2557836051,other names; source for place of death; source for date of death
+2026-10-17T02:58:39Z,snl,person,Chandragupta_1.,Q849802,2557836060,other names
+2026-10-17T02:58:40Z,snl,person,Chandragupta_2._Vikramaditya,Q844536,2557836070,other names
+2026-10-17T02:58:41Z,snl,person,Chandrika_Bandaranaike_Kumaratunga,Q207432,2557836078,source for place of birth; source for date of birth
+2026-10-17T02:58:42Z,snl,person,Chang-Rae_Lee,Q533256,2557836087,source for place of birth; source for date of birth
+2026-10-17T02:58:43Z,snl,person,Chang_Chun-hsiung,Q716710,2557836095,source for date of birth
+2026-10-17T02:58:44Z,snl,person,Channa_Bankier,Q4937449,2557836105,source for place of birth; source for date of birth
+2026-10-17T02:58:45Z,snl,person,Chantal_Akerman,Q239823,2557836116,source for date of birth; source for date of death
+2026-10-17T02:58:46Z,snl,person,Chantal_Chawaf,Q468956,2557836123,source for place of birth
+2026-10-17T02:58:47Z,snl,person,Charles-Albert_Cingria,Q116387,2557836133,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:48Z,snl,person,Charles-Auguste_Bériot,Q385217,2557836142,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:49Z,snl,person,Charles-Ferdinand_Ramuz,Q123635,2557836148,source for date of birth; source for date of death
+2026-10-17T02:58:51Z,snl,person,Charles-François_Daubigny,Q252357,2557836161,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:51Z,snl,person,Charles-François_Hannong,Q12856932,2557836164,source for place of birth; source for place of death
+2026-10-17T02:58:52Z,snl,person,Charles-François_Tiphaigne_de_la_Roche,Q2958070,2557836169,other names; source for date of birth; source for date of death
+2026-10-17T02:58:52Z,snl,person,Charles-Jean_Marie_Degeorge,Q346913,,no change
+2026-10-17T02:58:53Z,snl,person,Charles-Louis_Didelot,Q2520519,2557836175,source for place of birth; source for place of death; source for date of death
+2026-10-17T02:58:54Z,snl,person,Charles-Marie_Widor,Q215161,2557836181,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:58:56Z,snl,person,Charles-Nicolas_Cochin_-_den_eldre,Q2958262,2557836187,source for place of birth; source for place of death
+2026-10-17T02:58:56Z,snl,person,Charles-Nicolas_Cochin_-_den_yngre,Q2408093,2557836190,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:58:57Z,snl,person,Charles-Simon_Favart,Q981902,2557836196,source for place of birth; source for date of death
+2026-10-17T02:58:59Z,snl,person,Charles_-_prins_av_Wales,Q43274,2557836206,SNL ID Charles_-_prins_av_Wales deprecated (now SNL Charles_3.); SNL ID Charles_3.; other names; source for date of birth
+2026-10-17T02:58:59Z,snl,person,Charles_Addams,Q361106,2557836209,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:59:00Z,snl,person,Charles_Adolphe_Wurtz,Q366051,2557836214,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:01Z,snl,person,Charles_Albert_Gobat,Q179458,2557836219,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:02Z,snl,person,Charles_Alexander_Eastman,Q582476,2557836224,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:03Z,snl,person,Charles_Alexandre_de_Calonne,Q437832,2557836226,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:04Z,snl,person,Charles_Algernon_Parsons,Q150910,2557836230,source for place of birth; source for date of birth; source for date of death
+2026-10-17T02:59:04Z,snl,person,Charles_Ammi_Cutter,Q1064010,,no change
+2026-10-17T02:59:05Z,snl,person,Charles_Anderson_Dana,Q2958396,2557836233,source for date of birth; source for date of death
+2026-10-17T02:59:05Z,snl,person,Charles_Antoine_Coypel,Q113536,,no change
+2026-10-17T02:59:06Z,snl,person,Charles_Antoine_Coysevox,Q505134,2557836238,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:07Z,snl,person,Charles_Antoine_Delgobe,Q5702938,2557836242,place of death; source for date of birth; source for date of death
+2026-10-17T02:59:08Z,snl,person,Charles_Augustin_Sainte-Beuve,Q1063392,2557836247,source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:09Z,snl,person,Charles_Augustin_de_Coulomb,Q81716,2557836251,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T02:59:10Z,snl,person,Charles_Austin_Beard,Q719860,2557836253,source for place of birth; source for place of death
+2026-10-17T02:59:11Z,snl,person,Charles_Aznavour,Q1785,2557836255,source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:19Z,snl,person,Charles_Babbage,Q46633,2557836580,source for date of birth; source for date of death
+2026-10-17T03:00:20Z,snl,person,Charles_Bally,Q13236,2557836587,source for place of birth; source for place of death
+2026-10-17T03:00:21Z,snl,person,Charles_Barkley,Q192707,2557836595,other names; source for place of birth; source for date of birth
+2026-10-17T03:00:22Z,snl,person,Charles_Barry,Q552584,2557836596,other names
+2026-10-17T03:00:23Z,snl,person,Charles_Baudelaire,Q501,2557836599,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:24Z,snl,person,Charles_Bell,Q451727,2557836602,other names
+2026-10-17T03:00:25Z,snl,person,Charles_Benedict_Davenport,Q982237,2557836604,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:26Z,snl,person,Charles_Bernard_Nordhoff,Q460952,2557836606,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:00:27Z,snl,person,Charles_Blondin,Q860180,2557836610,other names; source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:00:28Z,snl,person,Charles_Bohlen,Q776165,2557836614,source for place of death
+2026-10-17T03:00:29Z,snl,person,Charles_Bonnet,Q123565,2557836617,other names; source for place of birth
+2026-10-17T03:00:29Z,snl,person,Charles_Booth,Q555978,,no change
+2026-10-17T03:00:30Z,snl,person,Charles_Boyer,Q105987,2557836620,source for place of birth; source for place of death
+2026-10-17T03:00:31Z,snl,person,Charles_Brasch,Q5075749,2557836624,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:31Z,snl,person,Charles_Brenton_Huggins,Q155371,,no change
+2026-10-17T03:00:32Z,snl,person,Charles_Brockden_Brown,Q468280,2557836627,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:33Z,snl,person,Charles_Bukowski,Q76409,2557836631,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:34Z,snl,person,Charles_Bulfinch,Q1063849,2557836635,source for place of birth; source for place of death; source for date of birth
+2026-10-17T03:00:35Z,snl,person,Charles_Burchfield,Q3349279,2557836641,other names; source for place of birth
+2026-10-17T03:00:36Z,snl,person,Charles_Burney,Q547002,2557836644,source for date of death
+2026-10-17T03:00:37Z,snl,person,Charles_Cagniard_de_Latour,Q599993,2557836647,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:37Z,snl,person,Charles_Cameron,Q956467,,no change
+2026-10-17T03:00:37Z,snl,person,Charles_Carpenter_Fries,Q4492786,,no change
+2026-10-17T03:00:38Z,snl,person,Charles_Clermont-Ganneau,Q2623694,2557836650,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:39Z,snl,person,Charles_Clément_Bervic,Q2958752,2557836654,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:40Z,snl,person,Charles_Conder,Q1284465,2557836660,source for date of birth; source for date of death
+2026-10-17T03:00:41Z,snl,person,Charles_Cornwallis,Q164723,2557836661,source for place of death; source for date of death
+2026-10-17T03:00:42Z,snl,person,Charles_Correa,Q699145,2557836664,source for date of birth; source for date of death
+2026-10-17T03:00:43Z,snl,person,Charles_Coward,Q5076514,2557836667,other names; source for date of birth; source for date of death
+2026-10-17T03:00:44Z,snl,person,Charles_Cressent,Q2958822,2557836669,source for place of birth; source for place of death; source for date of birth
+2026-10-17T03:00:45Z,snl,person,Charles_Cros,Q356575,2557836672,other names; source for place of birth; source for place of death; source for date of birth
+2026-10-17T03:00:46Z,snl,person,Charles_Cunningham_Boycott,Q455534,2557836673,other names; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:47Z,snl,person,Charles_Dana_Gibson,Q151165,2557836675,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:48Z,snl,person,Charles_Dance,Q309690,2557836680,source for place of birth; source for date of birth
+2026-10-17T03:00:49Z,snl,person,Charles_Darwin,Q1035,2557836683,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:00:50Z,snl,person,Charles_Dawes,Q184565,2557836685,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:51Z,snl,person,Charles_Dawson,Q722050,2557836688,source for date of birth; source for date of death
+2026-10-17T03:00:52Z,snl,person,Charles_De_Coster,Q315176,2557836691,source for date of birth; source for date of death
+2026-10-17T03:00:53Z,snl,person,Charles_De_Geer,Q386375,2557836693,source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:54Z,snl,person,Charles_Demuth,Q380494,2557836696,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:00:55Z,snl,person,Charles_Despiau,Q82291,2557836703,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:00:56Z,snl,person,Charles_Dickens,Q5686,2557836706,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:00:57Z,snl,person,Charles_Diehl,Q516758,2557836708,source for place of birth; source for place of death; source for date of death
+2026-10-17T03:00:57Z,snl,person,Charles_Doolittle_Walcott,Q362124,,no change
+2026-10-17T03:00:58Z,snl,person,Charles_Du_Bos,Q708335,2557836712,source for place of birth; source for date of birth
+2026-10-17T03:01:00Z,snl,person,Charles_Dufresne,Q391182,2557836715,other names; source for place of birth; source for place of death; source for date of birth
+2026-10-17T03:01:00Z,snl,person,Charles_Dufresne_Du_Cange,Q442240,2557836721,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:01:01Z,snl,person,Charles_Dullin,Q455943,2557836723,source for place of death; source for date of birth; source for date of death
+2026-10-17T03:01:02Z,snl,person,Charles_Dutoit,Q116995,2557836728,other names; source for place of birth; source for date of birth
+2026-10-17T03:01:03Z,snl,person,Charles_Duveyrier,Q2958989,2557836734,source for date of birth; source for date of death
+2026-10-17T03:02:23Z,snl,person,Charles_E._Osgood,Q2372245,2557837102,source for date of birth; source for date of death
+2026-10-17T03:02:24Z,snl,person,Charles_E._Spearman,Q356611,2557837109,other names; source for place of birth; source for place of death
+2026-10-17T03:02:25Z,snl,person,Charles_Eames,Q170411,2557837115,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:26Z,snl,person,Charles_Edgar_Duryea,Q5077023,2557837122,source for place of birth; source for date of birth
+2026-10-17T03:02:27Z,snl,person,Charles_Edward_Kingsford_Smith,Q1065180,2557837130,other names; source for date of birth; source for date of death
+2026-10-17T03:02:28Z,snl,person,Charles_Eisen,Q2744998,2557837136,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:02:29Z,snl,person,Charles_Errard,Q706960,2557837140,source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:30Z,snl,person,Charles_Evans_Hughes,Q313252,2557837146,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:31Z,snl,person,Charles_F._Scott,Q1064330,2557837150,source for date of birth; source for date of death
+2026-10-17T03:02:32Z,snl,person,Charles_Fabry,Q319289,2557837154,other names; source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:33Z,snl,person,Charles_Farrar_Browne,Q1064338,2557837162,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:34Z,snl,person,Charles_Fefferman,Q284129,2557837166,source for place of birth; source for date of birth
+2026-10-17T03:02:35Z,snl,person,Charles_Ferdinand_Berry,Q464657,2557837173,source for place of birth; source for place of death; source for date of death
+2026-10-17T03:02:35Z,snl,person,Charles_Fleetwood,Q203007,,no change
+2026-10-17T03:02:36Z,snl,person,Charles_Follen_McKim,Q657848,2557837178,source for date of birth; source for date of death
+2026-10-17T03:02:37Z,snl,person,Charles_Fourier,Q181707,2557837185,source for date of birth; source for date of death
+2026-10-17T03:02:38Z,snl,person,Charles_Francis_Adams,Q75174,2557837189,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:39Z,snl,person,Charles_Francis_Annesley_Voysey,Q2601234,2557837194,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:39Z,snl,person,Charles_Francis_Hall,Q940601,,no change
+2026-10-17T03:02:40Z,snl,person,Charles_Frank_Bolden,Q25011,2557837201,source for place of birth; source for date of birth
+2026-10-17T03:02:41Z,snl,person,Charles_Franklin_Kettering,Q959123,2557837207,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:42Z,snl,person,Charles_François_Dumouriez,Q378572,2557837217,other names; source for place of birth; source for date of death
+2026-10-17T03:02:43Z,snl,person,Charles_François_Lebrun,Q707712,2557837223,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:44Z,snl,person,Charles_Frazier,Q1064454,2557837230,source for place of birth; source for date of birth
+2026-10-17T03:02:45Z,snl,person,Charles_Frederick_Cross,Q3666396,2557837237,source for date of birth; source for date of death
+2026-10-17T03:02:46Z,snl,person,Charles_Frederick_Worth,Q454330,2557837246,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:02:47Z,snl,person,Charles_Friedel,Q366724,2557837257,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:02:48Z,snl,person,Charles_Frédéric_Gerhardt,Q446900,2557837263,source for place of birth; source for place of death; source for date of birth
+2026-10-17T03:02:50Z,snl,person,Charles_Gabriel_Gleyre,Q452119,2557837271,other names; source for place of birth; source for date of death
+2026-10-17T03:02:50Z,snl,person,Charles_Gabriel_Seligman,Q185664,2557837274,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:51Z,snl,person,Charles_George_Gordon,Q310035,2557837279,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:52Z,snl,person,Charles_Ghankay_Taylor,Q49090,2557837287,source for date of birth
+2026-10-17T03:02:53Z,snl,person,Charles_Ginner,Q716453,2557837295,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:54Z,snl,person,Charles_Glover_Barkla,Q160522,2557837303,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:54Z,snl,person,Charles_Goodyear,Q207667,,no change
+2026-10-17T03:02:54Z,snl,person,Charles_Gordon_Curtis,Q376754,,no change
+2026-10-17T03:02:55Z,snl,person,Charles_Gore,Q366142,2557837311,source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:57Z,snl,person,Charles_Gounod,Q180278,2557837323,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:02:57Z,snl,person,Charles_Grant_Allen,Q725248,2557837332,source for place of birth; place of death (more precise); source for date of birth; source for date of death
+2026-10-17T03:02:58Z,snl,person,Charles_Greeley_Abbot,Q210126,2557837345,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:02:59Z,snl,person,Charles_Grey,Q294662,2557837353,source for date of birth; source for date of death
+2026-10-17T03:03:00Z,snl,person,Charles_H._Brent,Q5075765,2557837358,other names; source for date of birth; source for date of death
+2026-10-17T03:03:01Z,snl,person,Charles_H._Cooley,Q468172,2557837366,source for place of birth; source for place of death; source for date of birth; source for date of death
+2026-10-17T03:03:02Z,snl,person,Charles_H._Kaman,Q1065149,2557837372,other names; source for date of birth; source for date of death
+2026-10-17T03:03:03Z,snl,person,Charles_Haddon_Spurgeon,Q278825,2557837382,other names; source for date of birth
+2026-10-17T03:03:04Z,snl,person,Charles_Hallé,Q65648,2557837392,other names; source for place of birth; source for place of death; source for date of death
+2026-10-17T03:03:05Z,snl,person,Charles_Hard_Townes,Q184566,2557837399,source for place of birth; source for date of birth; source for date of death
+2026-10-17T03:03:05Z,snl,person,Charles_Harold_Dodd,Q1064759,,no change
+2026-10-17T03:03:06Z,snl,person,Charles_Harpur,Q1064745,2557837402,source for date of birth; source for date of death
+2026-10-17T03:03:06Z,snl,person,Charles_Havas,Q706577,,no change
