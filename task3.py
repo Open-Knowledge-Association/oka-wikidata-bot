@@ -131,7 +131,9 @@ def write_report(site=None):
                         f"|| {'; '.join(r['done'])} || [[Special:Diff/{r['revid']}|diff]]"]
     lines.append("|}")
     lines += ["", "== Left alone ==", "Values the bot does not add for these entries, and why (checked when this page "
-              "was written):"]
+              "was written). Most are occupations in words the bot cannot map to an item yet: a map of the most "
+              "frequent occupation words of each work (German and Norwegian first), each checked on Wikidata, is "
+              "being built, so that the full run adds them."]
     lines += [f"* {s.WORKS3[c['work']][2]}, {c['title']} ({{{{Q|{c['qid'][1:]}}}}}): {d.clean(n)}" for c, n in notes] \
         or ["* none"]
     fixes = s.WORK3 / "corrections.json"         # the bot's own mistakes in the test run, and how they were undone
