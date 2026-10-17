@@ -45,11 +45,13 @@ if its only reference is {{P|143}}, so that it stays visible and is not imported
 #* '''prefer the entry's value''': no counted source supports Wikidata's value, and none confirms the entry's either \
 (often nothing is found at all). The entry is a source; an unsourced value or a Wikipedia import is not. Wikidata's \
 value stays as it is, and the entry's value is added with preferred rank ({{P|7452}}: {{Q|Q98386534}}).
-#* '''both''': counted sources support each value, and the model does not read them as establishing Wikidata's. \
-The entry's value is added beside Wikidata's, at the same rank, with the entry as its reference.
-#* '''report''': the sources establish Wikidata's value. Nothing is added, and the error is reported to the work.
-#* '''a person checks''': anything else: another value, a place name that fits both values, sources for Wikidata's \
-value that do not settle the case, or the model's reading and the sources disagree.
+#* '''both''': counted sources support each value (one each is enough), and the model does not read them as \
+establishing Wikidata's. The entry's value is added beside Wikidata's, at the same rank, with the entry as its \
+reference.
+#* '''report''': counted sources support only Wikidata's value, or establish it. Nothing is added, and the error is \
+reported to the work.
+#* '''a person checks''': a source gives a third value, a place name fits both values, or the model's reading \
+contradicts the sources.
 #: The model's reading can stop an edit but cannot cause one. A value is only removed or deprecated when the counted \
 sources show no support for it and confirm the entry's value.
 #: The sources found are only used to decide, and are logged here. They are not cited on Wikidata: the bot cites only \

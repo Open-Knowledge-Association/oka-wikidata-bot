@@ -4,10 +4,10 @@ source (or only an import from a Wikipedia), under the rules of the OKA bot 3 re
            added; Wikidata's is removed (no reference) or deprecated as incorrect (only a Wikipedia import)
   prefer   no counted source supports Wikidata's value, and none confirms the entry's: Wikidata's value stays, the
            entry's value is added with preferred rank (P7452: best referenced value)
-  both     reliable sources disagree: the entry's value is added beside Wikidata's at the same rank
-  report   the sources establish Wikidata's value: nothing is added, the error is reported to the work
-  person   anything else: a third value, a place name that fits both, sources for Wikidata's value that do not settle
-           the case, or the model's reading and the sources' count disagree
+  both     counted sources support each value (one each is enough): the entry's value is added beside Wikidata's at
+           the same rank, unless the model reads the sources as establishing Wikidata's value
+  report   counted sources support only Wikidata's value, or establish it: nothing is added, the error is reported
+  person   a third value, a place name that fits both, or the model's reading contradicts the sources' count
 Nothing is edited until the request is approved (jz, 16 October 2026).
 
 Claude (with web search) does the search; every answer is logged with the sources it found, in conflict_checks.csv.
@@ -144,11 +144,9 @@ def decide(evidence, established, work, label):
         if established not in ("entry", "unclear"):           # only the entry: its value is preferred (prefer)
             return "person"
         return "replace" if "entry" in says and established == "entry" else "prefer"
-    if established not in ("wikidata", "entry", "split"):
-        return "person"
-    if "entry" not in says:
-        return "report" if established == "wikidata" else "person"
-    return "report" if established == "wikidata" else "both"
+    if "entry" in says:                       # sources for each value: a real conflict, both at the same rank (jz),
+        return "report" if established == "wikidata" else "both"   # unless they establish Wikidata's value
+    return "report" if established in ("wikidata", "unclear") else "person"
 
 
 def check(r, label, ours, claims, refs, e):
