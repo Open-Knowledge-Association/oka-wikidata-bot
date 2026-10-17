@@ -134,6 +134,11 @@ def write_report(site=None):
               "was written):"]
     lines += [f"* {s.WORKS3[c['work']][2]}, {c['title']} ({{{{Q|{c['qid'][1:]}}}}}): {d.clean(n)}" for c, n in notes] \
         or ["* none"]
+    fixes = s.WORK3 / "corrections.json"         # the bot's own mistakes in the test run, and how they were undone
+    if fixes.exists():
+        lines += ["", "== Corrections ==", "Test edits the bot corrected itself:"]
+        lines += [f"* {{{{Q|{x['qid'][1:]}}}}}: {x['what']} ([[Special:Diff/{x['revid']}|diff]])"
+                  for x in json.loads(fixes.read_text(encoding="utf-8"))]
     page = pywikibot.Page(site, REPORT_PAGE)
     page.text = "\n".join(lines) + "\n"
     page.save(summary=f"Test run report for [[Wikidata:Requests for permissions/Bot/OKA bot 3]] ({len(rows)} edits)",
