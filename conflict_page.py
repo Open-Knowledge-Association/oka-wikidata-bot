@@ -102,9 +102,45 @@ def cost(rows):
     return tin * pin / 1e6 + tout * pout / 1e6 + searches * SEARCH, searches
 
 
+def plain(v):
+    """'Frederiksberg (Q30096)' -> 'Frederiksberg'; a date as it is."""
+    return re.sub(r" \(Q\d+\)$", "", v.strip())
+
+
+def compatible(theirs, ours):
+    """A less precise Wikidata date that the entry's date falls within ('1996' beside '1996-10-21'): no conflict."""
+    return bool(re.fullmatch(r"\d{4}(-\d{2})?", theirs)) and ours.startswith(theirs)
+
+
+def edits(r):
+    """The edits the outcome makes on the item, in words."""
+    work, fact = WORK_NAMES[r["work"]], r["property"]
+    ours = plain(r["entry_value"])
+    theirs = [plain(v) for v in r["wikidata_value"].split("; ")]
+    conflicting = [v for v in theirs if not compatible(v, ours)] or theirs
+    old = ", ".join(conflicting)
+    ref = f"reference: {work}"
+    d = r["decision"]
+    if d == "replace":
+        if r["wikidata_sources"] == "no source":
+            return f"Add {fact}: {ours} ({ref}).<br />Remove {old} (it has no reference)."
+        return (f"Add {fact}: {ours} ({ref}).<br />Deprecate {old}: reason {{{{Q|Q41755623}}}} "
+                "(its only reference is the Wikipedia import).")
+    if d == "prefer":
+        return (f"Add {fact}: {ours}, preferred rank, reason {{{{Q|Q98386534}}}} ({ref}).<br />{old} stays at "
+                "normal rank.")
+    if d == "both":
+        return f"Add {fact}: {ours}, normal rank ({ref}).<br />{old} stays at normal rank."
+    if d == "report":
+        return (f"Add {fact}: {ours}, deprecated rank, reason {{{{Q|Q29998666}}}} ({ref}).<br />{old} stays at "
+                f"normal rank.<br />The error is reported to {work}.")
+    return "None for now: a person checks the case."
+
+
 def table(rows):
     work = WORK_NAMES[rows[0]["work"]]
-    lines = ['{| class="wikitable"', f"! Person !! Fact !! Wikidata (reference) !! {work} !! Sources counted !! Outcome"]
+    lines = ['{| class="wikitable"', f"! Person !! Fact !! Wikidata (reference) !! {work} !! Sources counted !! Outcome "
+             "!! Edits on Wikidata"]
     for r in rows:
         ev = json.loads(r["evidence"] or "[]")
         kept = counted(ev, r["work"])
@@ -122,7 +158,7 @@ def table(rows):
         url = URLS[r["work"]].format(r["entry"])
         lines += ["|-", f"| {{{{Q|{r['qid']}}}}} || {r['property']} || {value(r['wikidata_value'])} <small>({ref})</small> "
                         f"|| {value(r['entry_value'], url)} ||\n" + ("\n".join(items) or "''none found''"),
-                  f"| '''{out}'''<br /><small>{esc(r['note'], 300)}</small>"]
+                  f"| '''{out}'''<br /><small>{esc(r['note'], 300)}</small>", f"| {edits(r)}"]
     lines.append("|}")
     return "\n".join(lines)
 
