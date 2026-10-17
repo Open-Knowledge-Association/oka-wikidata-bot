@@ -12,7 +12,8 @@ Facts:
 - places of birth and death: the one settlement so named (in Slovenian, or in the language of the other name the
   record gives) in the present-day country the record names, lying within 10 km of the coordinates the record gives
   for the place (several such, none, a town's district or an unknown place: not used, with a note);
-- occupations through a mapping of the work's occupation codes to items checked on Wikidata (others are noted);
+- occupations through a mapping of the work's occupation codes to items checked on Wikidata (others are noted), not
+  where the item already gives the occupation more precisely ('engraver' beside 'medalist': without_coarser());
 - father, mother, spouses, siblings and children only when the list links the relative to his or her own entry,
   whose ID is on exactly one item; 'starši' (parents) is father or mother by the relative's sex on Wikidata, and the
   relative's year of birth on Wikidata must fit the relation."""
@@ -218,6 +219,30 @@ def occupation_facts(codes, notes):
     return facts
 
 
+def without_coarser(facts, pid, ident, notes):
+    """The facts less the occupations the entry's item already gives more precisely, as a subclass ('engineer' where
+    the item has 'civil engineer', 'engraver' where it has 'medalist'), unless the item has that very value too (then
+    it is sourced). Shared with ehlfl.py and dodis.py."""
+    occupations = [f["value"]["value"]["id"] for f in facts if f["pid"] == "P106"]
+    q = s.item_with(pid, ident) if occupations else None
+    if not q:
+        return facts
+    have = {r[0] for r in d.lookup(f"SELECT ?x WHERE {{ wd:{q} wdt:P106 ?x }}") if r}
+    values = " ".join(f"wd:{o}" for o in dict.fromkeys(occupations))
+    finer = {}
+    for r in d.lookup(f"SELECT DISTINCT ?o ?x WHERE {{ VALUES ?o {{ {values} }} wd:{q} wdt:P106 ?x . ?x wdt:P279+ ?o . }}"):
+        if len(r) == 2:
+            finer.setdefault(r[0], r[1])
+    kept = []
+    for f in facts:
+        o = f["value"]["value"]["id"] if f["pid"] == "P106" else None
+        if o in finer and o not in have:
+            notes.append(f"occupation {o} not added: the item has the more precise {finer[o]}")
+        else:
+            kept.append(f)
+    return kept
+
+
 def year_born(q):
     """The item's year of birth on Wikidata, when it gives one year."""
     years = {int(m.group(1)) for r in d.lookup(f"SELECT ?b WHERE {{ wd:{q} wdt:P569 ?b }}")
@@ -308,5 +333,6 @@ def read(ident):
             facts.append(d.fact(ppid, d.item_value(q), plabel))
     codes = re.findall(r'<occupation\b[^>]*\bcode="#([^"]+)"', person)
     facts += occupation_facts(list(dict.fromkeys(codes)), notes)
+    facts = without_coarser(facts, "P1254", ident, notes)
     facts += relatives(t, born, notes)
     return {"title": title, "kind": "person", "facts": facts, "notes": notes}

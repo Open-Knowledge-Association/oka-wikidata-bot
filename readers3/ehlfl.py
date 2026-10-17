@@ -19,7 +19,8 @@ Facts:
   not used). 'X bei Y', castles and uncertain places ('Vaduz (?)') are noted, not used. A bare 'Feldkirch' is
   Feldkirch in Vorarlberg, next to Liechtenstein;
 - religion ('katholisch'); occupations of the opening words through the checked mapping of readers3/ndb.py (offices
-  such as 'Landtagsabgeordneter' are noted, not used); the GND number under 'Normdaten';
+  such as 'Landtagsabgeordneter' are noted, not used; nor one the item already gives more precisely); the GND number
+  under 'Normdaten';
 - father and mother ('Sohn des [X] und der [Y]'), siblings (the list after 'zehn Geschwister', or 'Schwester des [X]'
   opening a sentence), spouses (a link right after '⚭') and children (the list after 'vier Kinder', or 'Vater des
   [X]' opening a sentence): only a link in that place, never one in the description of another relative ('und der
@@ -35,6 +36,7 @@ import dictionaries as d
 import sources3 as s
 from readers3 import ndb as n
 from readers3 import oebl
+from readers3.sbi import without_coarser
 
 WORK = "ehlfl"
 URL = "https://historisches-lexikon.li/{}"
@@ -399,6 +401,7 @@ def read(ident):
     first = re.split(r"\.\s+|\s+(?=[*†]\s*(?:um\s+)?\d)", lead, maxsplit=1)[0].strip(" .")
     if first and not first.startswith(("*", "†")) and first != lead.strip(" ."):
         facts += n.occupation_facts([w for w in re.split(r",\s*|\s+und\s+", first) if w.strip()], notes)
+        facts = without_coarser(facts, "P13079", ident, notes)    # not 'teacher' where the item has a finer one
     gnds = gnd_numbers(t)
     if len(gnds) == 1:
         f = n.gnd_fact(gnds[0], notes)
