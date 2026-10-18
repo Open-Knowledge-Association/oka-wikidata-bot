@@ -138,3 +138,4 @@ date,qid,name,revid,change
 2026-10-10,Q141685943,Pass de Chaudin,2555552558,Add country France and border description: the feature lies on the Swiss border
 2026-10-10,Q141685945,Col du Trou,2555552565,Add country France and border description: the feature lies on the Swiss border
 2026-10-10,Q141685948,Col du Sassey,2555552570,Add country France and border description: the feature lies on the Swiss border
+2026-10-18,Q1072923,Linda Woolverton,2558321780,"Task 2 added a date of death, 19 December 1952 (r2558127338), from SNL's metadata, which holds her birth date as death_date; she is alive. Deprecated as an incorrect value by Mastrocom in this revision. The SNL and Lex readers now leave out such dates (doubtful_death, death_is_birth); a scan of the whole task 2 cache found no other case."

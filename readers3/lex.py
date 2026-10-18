@@ -52,6 +52,8 @@ def read(slug, work=WORK, host=HOST):
     aliases, _ = d.other_names(m.get("alternative_form"), "person")
     facts += [d.fact("ALIAS", {"language": "da", "value": a}, "other name") for a in aliases]
     for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
+        if pid == "P570" and d.doubtful_death(m, notes):     # a birth date filed as death_date (Linda Woolverton)
+            continue
         v = d.snl_date(m.get(key), label, notes)       # day-exact dates before 1700 (Denmark's calendar change) not used
         if v:
             facts.append(d.fact(pid, v, label))

@@ -1145,13 +1145,47 @@ def other_names(raw, kind):
     return list(dict.fromkeys(aliases)), list(dict.fromkeys(pseudonyms))
 
 
+def doubtful_death(m, notes):
+    """Whether SNL metadata's date of death is to be left out: one from 1900 on with no date of birth beside it. SNL
+    has filed birth dates as death_date: Linda Woolverton '19.12.1952' (alive) and Mac Miller '19.1.1992' (born that
+    day), and task 2 added the first as her date of death (18 October 2026). In the whole task 2 cache these two and
+    one painter who died in 1922 are the only entries of that shape."""
+    death = re.fullmatch(r"\d{1,2}\.\d{1,2}\.(-?\d{1,4})", (m.get("death_date") or "").strip())
+    if death and not (m.get("birth_date") or "").strip() and int(death.group(1)) >= 1900:
+        notes.append(f"date of death '{clean(m['death_date'])}' not used: no date of birth beside it, and SNL has "
+                     "filed birth dates there")
+        return True
+    return False
+
+
+def death_is_birth(claims, entry, notes):
+    """The entry's facts without a date of death that is the same day as a date of birth on the item: a birth date
+    filed as the date of death (Linda Woolverton). Only exact days count: a year alone may be right (Sigismund Wagner,
+    died 1738, whose item has a doubtful birth on 21 May 1738)."""
+    births = [c["mainsnak"]["datavalue"]["value"] for c in claims.get("P569", [])
+              if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"]
+    days = {b["time"][:11] for b in births if b.get("precision", 0) >= 11}
+    keep = []
+    for f in entry["facts"]:
+        v = f["value"]["value"] if f["pid"] == "P570" and f["value"]["type"] == "time" else None
+        if v and v.get("precision", 0) >= 11 and v["time"][:11] in days:
+            notes.append(f"date of death {v['time'][1:11]} is the item's date of birth: probably a birth date filed as "
+                         "the date of death in the entry; not used")
+            continue
+        keep.append(f)
+    return keep
+
+
 def snl_life_dates(m, notes, keep_all=False):
     """Dates of birth (or baptism) and death from SNL metadata, read with SNL's note on them (lifespan_comment):
     an approximate date becomes its year with 'circa' (P1480). With keep_all, days and months from 1583 on are kept
-    and marked "local_calendar": the calendar they are in follows from the place (refresh_life_dates)."""
+    and marked "local_calendar": the calendar they are in follows from the place (refresh_life_dates). A doubtful
+    date of death (doubtful_death) is left out."""
     facts = []
     caveat = lifespan_caveat(m.get("lifespan_comment"))
     for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
+        if pid == "P570" and doubtful_death(m, notes):
+            continue
         v = snl_date(m.get(key), label, notes, caveat["julian"], caveat["new_style"] or keep_all)
         if not v:
             continue
@@ -1424,6 +1458,7 @@ def build(ent, entry, today, labels=None):
     clash = life_years_clash(claims, entry)
     if clash:                                              # another person of the same name (Jacques Martin)
         return [], [], notes + [clash]
+    entry = {**entry, "facts": death_is_birth(claims, entry, notes)}   # a birth date filed as death (Woolverton)
     plain = lambda v: urllib.parse.unquote(str(v))      # the query mirror returns some IDs URL-encoded
     if not any(plain(c["mainsnak"].get("datavalue", {}).get("value")) == plain(entry["id"]) for c in claims.get(idp, [])):
         out_claims.append({"type": "statement", "rank": "normal",
