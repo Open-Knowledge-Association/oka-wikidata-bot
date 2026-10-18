@@ -96,6 +96,14 @@ features).
   named features in swissNAMES3D, so the only fact swisstopo gives about them is the municipality their position lies
   in ([swissBOUNDARIES3D](https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d)). Items that span
   municipalities (waters, glaciers, regions, roads, railway lines, bridges, tunnels) are left out.
+- The `ids` batch adds only the swissNAMES3D ID
+  ([P14976](https://www.wikidata.org/wiki/Property:P14976), created in October 2026) to the items the batches above
+  edited or created, from the feature each was paired on. Only IDs that were already in the previous release are
+  used: 96–100% of them stay the same from one release to the next, while lakes, rivers and streets get new IDs in
+  every release, so lakes are left out. The 2026 release gives each locality and neighbourhood as a point and as a
+  polygon; the polygon's ID, unchanged since at least 2021, is the one used. A station that swissNAMES3D gives as
+  several points (one per platform) gets no ID, and neither does an item paired with a feature that another item is
+  also paired with.
 
 **Running:**
 
