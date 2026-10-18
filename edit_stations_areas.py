@@ -15,11 +15,17 @@ areas (swissBOUNDARIES3D municipality polygons), with the rules of BATCHES["area
 - otherwise the area is added in km² with point in time (P585) = the date the boundaries are valid on, unless the
   rules say to leave that case alone; an equal value someone deprecated, or a different value already dated the
   release date, is left alone.
+
+ids (the swissNAMES3D ID, P14976, from the UUID an earlier batch paired the item on; plan.build_ids):
+- added with swisstopo as the source, when the item still has one of the feature's names as a label or alias, has
+  Switzerland as country (P17), has no swissNAMES3D ID yet, and is no human, list, disambiguation page or class
+  (the property's constraints); an item that already has the same ID is left as it is.
 """
 import copy
 
-from common import (BATCHES, HECTARE, KM2, M2, OFFICIAL_TYPES, STATION_RADIUS, SWISSBOUNDARIES3D, SWISSNAMES3D,
-                    area_claim, cites, dist_m, item_claim, lv95_to_wgs84, mono_claim)
+from common import (BATCHES, HECTARE, ID_CONFLICTS, KM2, M2, OFFICIAL_TYPES, STATION_RADIUS, SWISSBOUNDARIES3D,
+                    SWISSNAMES3D, SWISSNAMES3D_ID, area_claim, cites, dist_m, item_claim, lv95_to_wgs84, mono_claim,
+                    statement)
 from edit import build_edit, build_p131, implied_precision
 
 PLAIN_QUALIFIERS = {"P585", "P459", "P7452"}   # point in time, determination method, reason for preferred rank
@@ -140,7 +146,33 @@ def area_seen(entity, row):
                for c in entity.get("claims", {}).get("P2046", []))
 
 
-BUILDERS = {"p131": build_p131, "stations": build_station, "areas": build_area}   # batches with their own edit rules
+def build_id(raw, row, refs):
+    """Return (data for wbeditentity or None, list of changes or a reason it was skipped): the swissNAMES3D ID."""
+    rec = row["rec"]
+    if raw.get("redirects") or "missing" in raw:
+        return None, ["skipped: redirect or deleted"]
+    claims = raw.get("claims", {})
+    uuid = rec["uuid"].strip("{}").upper()
+    have = {c["mainsnak"].get("datavalue", {}).get("value") for c in claims.get(SWISSNAMES3D_ID, [])}
+    if uuid in have:
+        return None, []
+    if have:
+        return None, ["skipped: has another swissNAMES3D ID"]
+    ids = lambda pid: {c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for c in claims.get(pid, [])
+                       if c["mainsnak"]["snaktype"] == "value" and c["rank"] != "deprecated"}
+    if ids("P31") & set(ID_CONFLICTS) or claims.get("P279"):
+        return None, ["skipped: a human, list, disambiguation page or class"]
+    if "Q39" not in ids("P17"):
+        return None, ["skipped: country is not Switzerland"]
+    names = {v["value"].casefold() for v in raw.get("labels", {}).values()} | \
+            {a["value"].casefold() for al in raw.get("aliases", {}).values() for a in al}
+    if not names & {n.casefold() for n in rec.get("names") or [rec["name"]]}:
+        return None, ["skipped: name no longer on item"]
+    claim = statement(SWISSNAMES3D_ID, {"type": "string", "value": uuid}, refs[SWISSNAMES3D])
+    return {"claims": [claim]}, ["swissNAMES3D ID"]
+
+
+BUILDERS = {"p131": build_p131, "stations": build_station, "areas": build_area, "ids": build_id}   # own edit rules
 
 
 def builder(row):
@@ -160,6 +192,8 @@ def describe(raw, row, data):
             bits.append(f"P1448 {v['text']!r}@{v['language']}")
         elif pid == "P131":
             bits.append(f"P131 {v['id']}")
+        elif pid == SWISSNAMES3D_ID:
+            bits.append(f"{pid} {v}")
         elif pid == "P2046":
             bits.append(f"P2046 {v['amount']} km2 at {c['qualifiers']['P585'][0]['datavalue']['value']['time'][1:11]}"
                         + (" (preferred)" if c["rank"] == "preferred" else ""))
@@ -167,6 +201,8 @@ def describe(raw, row, data):
         have = [(round(hectares(c) / 100, 2) if hectares(c) is not None else "?", c["rank"][:3],
                  ",".join(t[1:5] for t in _dates(c)) or "undated") for c in raw.get("claims", {}).get("P2046", [])]
         bits.append(f"| swisstopo {rec['area_ha'] / 100:.2f} km2 (BFS {rec['bfs']}); on item: {have or 'none'}")
+    elif row.get("batch") == "ids":
+        bits.append(f"| {rec['type']} {rec['name']!r}")
     else:
         bits.append(f"| {rec['type']} {rec['name']!r}, {row['dist']} m, {row['points']} point(s)")
     return "; ".join(bits)

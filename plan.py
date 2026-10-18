@@ -4,12 +4,13 @@ Everything here runs on downloaded data (swissNAMES3D, swissBOUNDARIES3D, a QLev
 The runner re-checks every item live before it edits, so the plan only needs the pairs, not the changes.
 Each batch (common.BATCHES) has its own plan file: work/plan.jsonl for the first, work/plan_<batch>.jsonl after.
 """
+import csv
 import json
 import math
 from collections import Counter, defaultdict
 
-from common import (BATCHES, NAME_LANGS, OFFICIAL_TYPES, RADIUS, RESERVOIR, WORK, Boundaries, literal, out, point, qid,
-                    sparql_tsv, swissnames3d)
+from common import (BATCHES, ID_PREVIOUS_RELEASE, ID_SOURCE_BATCHES, NAME_LANGS, OFFICIAL_TYPES, RADIUS, RESERVOIR, ROOT,
+                    WORK, Boundaries, fetch_dataset, literal, out, point, qid, sparql_tsv, swissnames3d)
 
 MUNI_GROUPS = ("summit", "pass", "waterfall", "cave",   # point features: municipality (P131) from their name point
                "settlement", "neighbourhood")
@@ -209,7 +210,93 @@ def build_areas():
     out(f"plan: {len(rows)} items paired, skipped {dict(stats)}, rules {rules} -> {path}")
 
 
+def release_records(folder):
+    """{UUID: record} of every object of a swissNAMES3D release (points, lines and polygons), with all its names."""
+    recs = {}
+    for fn in ("swissNAMES3D_PKT.csv", "swissNAMES3D_PLY.csv", "swissNAMES3D_LIN.csv"):
+        path = next(folder.rglob(fn), None)
+        if not path:
+            continue
+        with open(path, encoding="utf-8-sig", newline="") as f:
+            for r in csv.DictReader(f, delimiter=";"):
+                rec = recs.setdefault(r["UUID"], {"uuid": r["UUID"], "type": r["OBJEKTART"], "geom": fn[13:16],
+                                                  "name_uuid": r["NAME_UUID"], "name": r["NAME"], "e": float(r["E"]),
+                                                  "n": float(r["N"]), "names": []})
+                if r["NAME"] not in rec["names"]:
+                    rec["names"].append(r["NAME"])
+    return recs
+
+
+def build_ids():
+    """The swissNAMES3D ID for the items the earlier batches edited or created (BATCHES["ids"] in common.py), from the
+    UUID each was paired on in edits.csv:
+    - an item paired with more than one UUID, or a UUID paired with more than one item, is left out;
+    - a locality or neighbourhood paired on its point gets its polygon's ID (same name UUID; else the same name and
+      type within 1.5 km): the 2026 release added a point beside each polygon, and the polygon IDs date back years;
+    - a stop that is several points (one per platform) is left out: no single ID stands for it;
+    - only IDs already in the previous release count (lakes get new ones in every release)."""
+    folder = fetch_dataset("ch.swisstopo.swissnames3d", ".csv.zip")
+    release, recs = folder.name, release_records(folder)
+    previous = set(release_records(WORK / ID_PREVIOUS_RELEASE))
+    polygons = defaultdict(list)                      # (type, name UUID) and (type, name) -> polygons
+    for r in recs.values():
+        if r["geom"] == "PLY" and r["type"] in ("Ort", "Quartier"):
+            polygons[(r["type"], r["name_uuid"])].append(r)
+            polygons[(r["type"], r["name"])].append(r)
+    multi_stop = {row["qid"] for row in load("stations")[1] if row["kind"] == "edit" and row.get("points", 1) > 1} \
+        if plan_path("stations").exists() else set()
+    with open(ROOT / "edits.csv", encoding="utf-8", newline="") as f:
+        logged = [r for r in csv.DictReader(f) if r["revid"] and r["uuid"] and r["qid"]
+                  and r["kind"].partition(":")[0] in ("edit", "create") and r["kind"].partition(":")[2] in ID_SOURCE_BATCHES]
+    uuids_of = defaultdict(set)
+    for r in logged:
+        uuids_of[r["qid"]].add(r["uuid"])
+    stats, chosen = Counter(), {}
+    for q, uuids in uuids_of.items():
+        if len(uuids) > 1:
+            stats["item paired with several UUIDs"] += 1
+            continue
+        rec = recs.get(next(iter(uuids)))
+        if not rec:
+            stats["UUID not in this release"] += 1
+            continue
+        if q in multi_stop:
+            stats["stop of several points"] += 1
+            continue
+        if rec["type"] in ("Ort", "Quartier") and rec["geom"] == "PKT":
+            same = polygons.get((rec["type"], rec["name_uuid"])) or [
+                p for p in polygons.get((rec["type"], rec["name"]), []) if math.dist((p["e"], p["n"]), (rec["e"], rec["n"])) <= 1500]
+            if len(same) != 1:
+                stats["point without one polygon"] += 1
+                continue
+            rec = same[0]
+        if rec["uuid"] not in previous:
+            stats[f"ID new in {release[-4:]} ({rec['type']})"] += 1
+            continue
+        chosen[q] = rec
+    items_of = defaultdict(list)
+    for q, rec in chosen.items():
+        items_of[rec["uuid"]].append(q)
+    rows = []
+    for q, rec in sorted(chosen.items(), key=lambda kv: int(kv[0][1:])):
+        if len(items_of[rec["uuid"]]) > 1:
+            stats["UUID on several items"] += 1
+            continue
+        rows.append({"kind": "edit", "batch": "ids", "qid": q,
+                     "rec": {k: rec[k] for k in ("uuid", "name", "type", "e", "n", "names")} | {"group": "id"}})
+    path = plan_path("ids")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps({"release": release, "previous": ID_PREVIOUS_RELEASE, "items_in_scope": len(uuids_of),
+                            "skipped": dict(stats)}, ensure_ascii=False) + "\n")
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    out(f"{release}: {len(uuids_of)} items paired in the log; plan: {len(rows)} IDs "
+        f"{dict(Counter(r['rec']['type'] for r in rows).most_common())}; skipped {dict(stats)} -> {path}")
+
+
 def build(batch=""):
+    if batch == "ids":
+        return build_ids()
     if batch == "p131":
         return build_p131()
     if batch == "stations":

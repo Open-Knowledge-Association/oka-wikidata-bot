@@ -106,7 +106,7 @@ python pipeline.py run --batches 4 --batch-size 500 --rate 1
 python pipeline.py verify
 ```
 
-Add `--plan natural` (or `settlements`, `p131`) to `plan`, `preview`, `run`, `verify` and `status` for a later
+Add `--plan natural` (or `settlements`, `p131`, `ids`) to `plan`, `preview`, `run`, `verify` and `status` for a later
 batch. Each batch has its own plan (`work/plan.jsonl`, `work/plan_<batch>.jsonl`); in edits.csv the first batch's
 rows are of kind `edit` or `create` and later ones `edit:<batch>` or `create:<batch>`, so an item done in one batch
 is checked again in the next, and edited only if something is still missing. The runner checks each batch on

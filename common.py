@@ -147,6 +147,18 @@ BATCHES["areas"] = {"plan": "plan_areas.jsonl", "cache": "areas_", "covers": ["m
                             "boundaries are valid on as point in time, or swisstopo as a source for an equal area without "
                             "a date." + (" Municipalities with a share of a large lake are left out."
                                          if AREA_RULES["lake"] == "skip" else "")}
+# Seventh batch, "ids": the swissNAMES3D ID (P14976, created 17 October 2026) on the items the earlier batches edited or
+# created, from the UUID they were paired on. Only IDs that were already in the 2025 release, since lakes, rivers and
+# streets get new IDs in every release; a locality or neighbourhood, which the 2026 release gives as a point and as a
+# polygon, gets the polygon's long-standing ID; a stop only when it is one point (stations are often one point per
+# platform). Nothing else changes on these items.
+SWISSNAMES3D_ID = "P14976"
+ID_PREVIOUS_RELEASE = "swissnames3d_2025"
+ID_SOURCE_BATCHES = ("", "natural", "settlements", "stations")          # batches whose log pairs items with a UUID
+ID_CONFLICTS = ("Q5", "Q4167410", "Q13406463")      # human, disambiguation page, list: the property's conflicts-with
+BATCHES["ids"] = {"plan": "plan_ids.jsonl", "cache": "ids_", "covers": ["swissNAMES3D IDs"],
+                  "note": "Items the earlier batches edited or created get their swissNAMES3D ID, when it was already "
+                          "in the previous release; lakes are left out, since their IDs change with every release."}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")

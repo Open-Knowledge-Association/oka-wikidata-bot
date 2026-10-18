@@ -23,8 +23,8 @@ import sys
 import time
 from collections import Counter
 
-from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, UA, bot_site, cites, curl_json,
-                    dist_m, lv95_to_wgs84, out, ref_json)
+from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, SWISSNAMES3D_ID, UA, bot_site,
+                    cites, curl_json, dist_m, lv95_to_wgs84, out, ref_json)
 from edit import build_edit, build_new, build_p131, drop_language
 from edit_stations_areas import area_seen, builder
 import plan as planmod
@@ -218,7 +218,9 @@ def check(entity, kind, row, changes):
             "default label": lambda: entity.get("labels", {}).get("mul", {}).get("value") == rec["name"],
             "official name": lambda: ok("P1448"),
             "municipality": lambda: any(cites(c, SWISSBOUNDARIES3D) for c in cl.get("P131", [])),
-            "area": lambda: area_seen(entity, row), "source for area": lambda: area_seen(entity, row)}
+            "area": lambda: area_seen(entity, row), "source for area": lambda: area_seen(entity, row),
+            "swissNAMES3D ID": lambda: any(cites(c, SWISSNAMES3D) and c["mainsnak"].get("datavalue", {}).get("value")
+                                           == rec["uuid"].strip("{}").upper() for c in cl.get(SWISSNAMES3D_ID, []))}
     if kind.split(":")[0] == "create":                  # "create" or "create:<batch>"
         changes = ["official name", "municipality"] if row.get("munis") else ["official name"]
         missing += [] if any(c["mainsnak"]["datavalue"]["value"]["id"] == row["cls"] for c in cl.get("P31", [])) else ["class"]
