@@ -21,6 +21,7 @@ import os
 import subprocess
 import sys
 import time
+import urllib.parse
 from collections import Counter
 
 from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, SWISSNAMES3D_ID, UA, bot_site,
@@ -126,21 +127,30 @@ def save(site, entity_id, data, done, baserevid=None):
     raise RuntimeError("Wikidata kept refusing: rate limit or label/description clashes")
 
 
-def duplicate_nearby(site, rec, far=None):
-    """Live search: an item with this exact name that has no coordinates or lies within 2 km; with `far` (a later
-    batch's "same_kind_name" distance), also an item of the same kind within `far`, unless its position comes from
-    swissNAMES3D (then it is another swisstopo feature, e.g. a valley of the same name created just before)."""
-    from pywikibot.data import api
+def duplicate_nearby(site, rec, far=None, munis=()):
+    """Live search: an item with this exact name that lies within 2 km, or in the same municipality (P131; an old
+    position can be kilometres off: "Waldhaus" in Lützelflüh), or is a Swiss or place-like item without coordinates;
+    with `far` (a later batch's "same_kind_name" distance), also an item of the same kind within `far`, unless its
+    position comes from swissNAMES3D (then it is another swisstopo feature, e.g. a valley of the same name created
+    just before). Family names, disambiguation pages and the like without coordinates do not count."""
     lat, lon = lv95_to_wgs84(rec["e"], rec["n"])
     hits = set()
     for lang in {rec["lang"], "en", "de"}:
-        r = api.Request(site=site, parameters={"action": "wbsearchentities", "search": rec["name"], "language": lang,
-                                               "strictlanguage": 0, "type": "item", "limit": 20}).submit()
+        r = curl_json("https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&type=item&limit=20"
+                      f"&strictlanguage=0&language={lang}&search={urllib.parse.quote(rec['name'])}")
         hits |= {h["id"] for h in r.get("search", []) if h.get("match", {}).get("text", "").casefold() == rec["name"].casefold()}
     for q, ent in (fetch(sorted(hits)[:50]).items() if hits else []):
-        cs = [c for c in ent.get("claims", {}).get("P625", []) if c["mainsnak"]["snaktype"] == "value"]
+        claims = ent.get("claims", {})
+        ids = lambda pid: {c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for c in claims.get(pid, [])
+                           if c["mainsnak"]["snaktype"] == "value"}
+        if set(munis) & ids("P131"):
+            return f"{q} has the same name in the same municipality"
+        cs = [c for c in claims.get("P625", []) if c["mainsnak"]["snaktype"] == "value"]
         if not cs:
-            return f"{q} has the same name and no coordinates"
+            if "Q39" in ids("P17") or not ids("P17") and any(KIND_OF.get(k) for k in ids("P31")):   # Swiss, or a
+                # place of a known kind with no country (a German street of the same name does not count)
+                return f"{q} has the same name and no coordinates"
+            continue
         v = cs[0]["mainsnak"]["datavalue"]["value"]
         d = dist_m(v["latitude"], v["longitude"], lat, lon)
         if d <= 2000:
@@ -167,7 +177,8 @@ def run_batch(site, rows, rate, refs):
             data, done = builder(row)(ent, row, refs)
             entity_id, base = row["qid"], ent.get("lastrevid")
         else:
-            reason = duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]))
+            reason = duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]),
+                                      row.get("munis", []))
             data, done, entity_id = (None, [f"skipped: {reason}"], None) if reason else (build_new(row, refs), ["new item"], None)
         revid = ""
         if data:
@@ -225,6 +236,8 @@ def check(entity, kind, row, changes):
         changes = ["official name", "municipality"] if row.get("munis") else ["official name"]
         missing += [] if any(c["mainsnak"]["datavalue"]["value"]["id"] == row["cls"] for c in cl.get("P31", [])) else ["class"]
         missing += [] if ok("P625") else ["position"]
+        if row.get("add_id") and not want["swissNAMES3D ID"]():
+            missing.append("swissNAMES3D ID")
     for ch in changes:
         if ch in want and not want[ch]():
             missing.append(ch)

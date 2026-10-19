@@ -19,8 +19,9 @@ Rules (Wikidata:Requests for permissions/Bot/OKA bot, after review):
 import copy
 import re
 
-from common import (CANTONS, GENERIC, METRE, OFFICIAL_TYPES, RADIUS, SWISSBOUNDARIES3D, SWISSNAMES3D, TYPE_WORDS,
-                    cites, coord_claim, dist_m, height_claim, item_claim, lv95_to_wgs84, mono_claim, only_import_refs)
+from common import (CANTONS, GENERIC, METRE, OFFICIAL_TYPES, RADIUS, SWISSBOUNDARIES3D, SWISSNAMES3D, SWISSNAMES3D_ID,
+                    TYPE_WORDS, cites, coord_claim, dist_m, height_claim, item_claim, lv95_to_wgs84, mono_claim,
+                    only_import_refs, statement)
 
 
 def _amount(c):
@@ -171,6 +172,8 @@ def build_new(row, refs):
     labels, aliases, name_claims, _ = name_changes({}, rec, ref)
     claims += name_claims
     claims += [item_claim("P131", m, refs[SWISSBOUNDARIES3D]) for m in row.get("munis", [])]
+    if row.get("add_id"):                       # the swissNAMES3D ID (batches planned since the property exists)
+        claims.append(statement(SWISSNAMES3D_ID, {"type": "string", "value": rec["uuid"].strip("{}").upper()}, ref))
     data = {"labels": labels, "descriptions": descriptions(cls, row.get("canton"), row.get("muni_names")), "claims": claims}
     if aliases:
         data["aliases"] = aliases

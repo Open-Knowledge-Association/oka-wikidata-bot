@@ -294,6 +294,18 @@ def build_ids():
         f"{dict(Counter(r['rec']['type'] for r in rows).most_common())}; skipped {dict(stats)} -> {path}")
 
 
+def ids_on_wikidata():
+    """Every swissNAMES3D ID (P14976) on Wikidata now, from the live query service."""
+    import subprocess
+    from common import UA
+    raw = subprocess.run(["curl", "-s", "-S", "--max-time", "300", "-A", UA, "-H", "Accept: text/tab-separated-values",
+                          "--data-urlencode", "query=SELECT ?id WHERE { ?item wdt:P14976 ?id . }",
+                          "https://query.wikidata.org/sparql"], capture_output=True, check=True).stdout.decode("utf-8")
+    if not raw.startswith("?id"):
+        raise SystemExit(f"query service: {raw[:200]!r}")
+    return {line.strip().strip('"').upper() for line in raw.splitlines()[1:] if line.strip()}
+
+
 def build(batch=""):
     if batch == "ids":
         return build_ids()
@@ -306,6 +318,12 @@ def build(batch=""):
     cfg = BATCHES[batch]
     classes, cache, tag = cfg["classes"], cfg["cache"], ({"batch": batch} if batch else {})
     recs, release = swissnames3d(cfg["types"])
+    if cfg.get("geoms"):                              # e.g. a locality's polygon, not the point added in 2026
+        recs = [r for r in recs if r["geom"] in cfg["geoms"]]
+    if cfg.get("add_id"):                             # an ID already on Wikidata belongs to an item: nothing to create
+        taken = ids_on_wikidata()                     # (live: QLever can be days behind the IDs just added)
+        recs = [r for r in recs if r["uuid"].strip("{}").upper() not in taken]
+        out(f"{len(taken)} swissNAMES3D IDs already on Wikidata")
     bounds = Boundaries()
     values = " ".join("wd:" + q for q in classes)
     scope = f"VALUES ?class {{ {values} }} ?item wdt:P31 ?class ; wdt:P17 wd:Q39 ."
@@ -404,7 +422,8 @@ def build(batch=""):
         if (r["uuid"] in matched or r["uuid"] in seen or r["type"] not in cfg["new"] or not r["lang"]
                 or not official(r) or (r["type"] == "Ort" and r.get("pop") not in cfg.get("create_pop", ()))):
             continue
-        if any(math.hypot(r["e"] - e, r["n"] - n) <= 2000 for e, n in name_pts.get(r["name"].casefold(), [])):
+        all_names = {r["name"].casefold()} | {n["name"].casefold() for n in r["names"]}     # in any national language
+        if any(math.hypot(r["e"] - e, r["n"] - n) <= 2000 for nm in all_names for e, n in name_pts.get(nm, [])):
             continue
         far = cfg["same_kind_name"].get(r["group"])
         if far and any(math.hypot(r["e"] - e, r["n"] - n) <= far
@@ -418,7 +437,7 @@ def build(batch=""):
         seen.add(r["uuid"])
         rows.append({"kind": "create", **tag, "cls": cfg["new"][r["type"]], "rec": r,
                      "canton": cantons[0] if len(cantons) == 1 else None,
-                     "munis": munis if r["group"] in MUNI_GROUPS else []})
+                     "munis": munis if r["group"] in MUNI_GROUPS else [], **({"add_id": True} if cfg.get("add_id") else {})})
         if batch:                                     # the runner's live search would find this new item by name,
             for nm in {r["name"]} | {n["name"] for n in r["names"]}:      # so a same-named feature nearby is left out
                 name_pts[nm.casefold()].append((r["e"], r["n"]))

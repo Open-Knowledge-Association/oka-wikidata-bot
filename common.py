@@ -159,6 +159,19 @@ ID_CONFLICTS = ("Q5", "Q4167410", "Q13406463")      # human, disambiguation page
 BATCHES["ids"] = {"plan": "plan_ids.jsonl", "cache": "ids_", "covers": ["swissNAMES3D IDs"],
                   "note": "Items the earlier batches edited or created get their swissNAMES3D ID, when it was already "
                           "in the previous release; lakes are left out, since their IDs change with every release."}
+# Eighth batch, "localities": new items for the localities under 100 inhabitants that have none (jz, 16 October 2026:
+# task 1's approval says "create missing items" with no floor; wait for the swissNAMES3D ID so every new item carries
+# it). In stages: 20 to 99 inhabitants first ("hamlet"); under 20 after a quiet week. Creations only. A locality is
+# both a point and a polygon in the 2026 release: the polygon, whose ID dates back years, is used. Settlement items
+# of any of these classes, and any Swiss item with the same name, count as possible duplicates.
+LOCALITY_CLASSES = {**SETTLEMENT_CLASSES, "Q253019": "settlement", "Q3257686": "settlement", "Q131596": "settlement",
+                    "Q54935504": "settlement"}       # ...Ortsteil, locality, farm, city of Switzerland
+BATCHES["localities"] = {
+    "plan": "plan_localities.jsonl", "cache": "localities_", "classes": LOCALITY_CLASSES,
+    "types": {"Ort": "settlement"}, "edit": set(), "new": {"Ort": "Q5084"}, "create_pop": {"20 bis 49", "50 bis 99"},
+    "geoms": {"PLY"}, "add_id": True, "same_kind_name": {"settlement": 3000}, "ch_only": True,
+    "covers": ["localities of 20 to 99 inhabitants"],
+    "note": "Localities of 20 to 99 inhabitants that have no item get one, as a hamlet, with their swissNAMES3D ID."}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")
@@ -190,6 +203,7 @@ TYPE_WORDS = {"Q23397": ("lake", "See", "lac", "lago"), "Q35666": ("glacier", "G
               "Q39816": ("valley", "Tal", "vallée", "valle"), "Q740445": ("ridge", "Grat", "crête", "cresta"),
               "Q34038": ("waterfall", "Wasserfall", "cascade", "cascata"), "Q35509": ("cave", "Höhle", "grotte", "grotta"),
               "Q532": ("village", "Dorf", "village", "villaggio"),
+              "Q5084": ("hamlet", "Weiler", "hameau", "borgata"),           # the class's own labels
               "Q123705": ("neighbourhood", "Quartier", "quartier", "quartiere")}
 GENERIC = {"Q23397": ("lake in Switzerland", "See in der Schweiz", "lac suisse", "lago svizzero"),
            "Q35666": ("glacier in Switzerland", "Gletscher in der Schweiz", "glacier suisse", "ghiacciaio svizzero"),
@@ -202,8 +216,9 @@ GENERIC = {"Q23397": ("lake in Switzerland", "See in der Schweiz", "lac suisse",
            "Q34038": ("waterfall in Switzerland", "Wasserfall in der Schweiz", "cascade suisse", "cascata svizzera"),
            "Q35509": ("cave in Switzerland", "Höhle in der Schweiz", "grotte suisse", "grotta svizzera"),
            "Q532": ("village in Switzerland", "Dorf in der Schweiz", "village suisse", "villaggio svizzero"),
+           "Q5084": ("hamlet in Switzerland", "Weiler in der Schweiz", "hameau suisse", "borgata svizzera"),
            "Q123705": ("neighbourhood in Switzerland", "Quartier in der Schweiz", "quartier suisse", "quartiere svizzero")}
-KIND_OF = {**ALL_CLASSES, **SETTLEMENT_CLASSES}     # class -> feature kind, for the runner's live duplicate check
+KIND_OF = {**ALL_CLASSES, **LOCALITY_CLASSES}     # class -> feature kind, for the runner's live duplicate check
 
 
 def out(*parts):
@@ -374,6 +389,7 @@ def swissnames3d(types=TYPES):
                         names_of[r["UUID"]].append(entry)
                 if r["OBJEKTART"] in types:
                     recs.append({"uuid": r["UUID"], "name": r["NAME"], "type": r["OBJEKTART"], "group": types[r["OBJEKTART"]],
+                                 "geom": fn[13:16],
                                  "e": float(r["E"]), "n": float(r["N"]), "z": int(float(r["Z"])), "status": r["STATUS"],
                                  "lang": lang, "ntype": r["NAMEN_TYP"], "pop": r.get("EINWOHNERKATEGORIE") or ""})
     for rec in recs:

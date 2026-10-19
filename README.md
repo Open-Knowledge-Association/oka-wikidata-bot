@@ -104,6 +104,11 @@ features).
   polygon; the polygon's ID, unchanged since at least 2021, is the one used. A station that swissNAMES3D gives as
   several points (one per platform) gets no ID, and neither does an item paired with a feature that another item is
   also paired with.
+- The `localities` batch creates items for localities of 20 to 99 inhabitants that have none, as hamlets, each with
+  its swissNAMES3D ID (the polygon's, unchanged since at least 2021). Before each creation, a live search skips the
+  locality when an item of the same name lies within 2 km, is a settlement within 3 km, is in the same municipality
+  (an old position can be kilometres off), or is a Swiss place without coordinates. Localities under 20
+  inhabitants are planned as a later stage.
 
 **Running:**
 
@@ -114,7 +119,7 @@ python pipeline.py run --batches 4 --batch-size 500 --rate 1
 python pipeline.py verify
 ```
 
-Add `--plan natural` (or `settlements`, `p131`, `ids`) to `plan`, `preview`, `run`, `verify` and `status` for a later
+Add `--plan natural` (or `settlements`, `p131`, `ids`, `localities`) to `plan`, `preview`, `run`, `verify` and `status` for a later
 batch. Each batch has its own plan (`work/plan.jsonl`, `work/plan_<batch>.jsonl`); in edits.csv the first batch's
 rows are of kind `edit` or `create` and later ones `edit:<batch>` or `create:<batch>`, so an item done in one batch
 is checked again in the next, and edited only if something is still missing. The runner checks each batch on
