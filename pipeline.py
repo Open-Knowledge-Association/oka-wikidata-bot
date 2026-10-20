@@ -81,16 +81,23 @@ def chosen(qids, batch=""):
     return [r for r in planmod.load(batch)[1] if r["kind"] == "edit" and r["qid"] in want]
 
 
-def fetch(ids):
-    """Live JSON of up to 50 items (read-only, no login). While Wikidata is unreachable, waits and retries."""
+def read(url, key=None):
+    """A read-only Wikidata API answer (no login). While Wikidata is unreachable (an error page, an API error, no
+    network or no DNS, as on 20 October 2026), waits and retries for up to 55 minutes."""
     for attempt in range(1, 11):
         try:
-            return curl_json("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
-                             "&props=info|labels|aliases|descriptions|claims&ids=" + "|".join(ids))["entities"]
-        except (ValueError, KeyError, OSError, subprocess.CalledProcessError):   # error page, API error, no network
+            answer = curl_json(url)
+            return answer[key] if key else answer
+        except (ValueError, KeyError, OSError, subprocess.CalledProcessError):
             out(f"Wikidata did not answer, retrying in {attempt} min")
             time.sleep(60 * attempt)
-    raise RuntimeError("Wikidata did not answer wbgetentities for 55 minutes")
+    raise RuntimeError("Wikidata did not answer for 55 minutes: " + url[:120])
+
+
+def fetch(ids):
+    """Live JSON of up to 50 items (read-only, no login)."""
+    return read("https://www.wikidata.org/w/api.php?action=wbgetentities&format=json"
+                "&props=info|labels|aliases|descriptions|claims&ids=" + "|".join(ids), "entities")
 
 
 # ---------------------------------------------------------------- saving
@@ -136,8 +143,8 @@ def duplicate_nearby(site, rec, far=None, munis=()):
     lat, lon = lv95_to_wgs84(rec["e"], rec["n"])
     hits = set()
     for lang in {rec["lang"], "en", "de"}:
-        r = curl_json("https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&type=item&limit=20"
-                      f"&strictlanguage=0&language={lang}&search={urllib.parse.quote(rec['name'])}")
+        r = read("https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&type=item&limit=20"
+                 f"&strictlanguage=0&language={lang}&search={urllib.parse.quote(rec['name'])}")
         hits |= {h["id"] for h in r.get("search", []) if h.get("match", {}).get("text", "").casefold() == rec["name"].casefold()}
     for q, ent in (fetch(sorted(hits)[:50]).items() if hits else []):
         claims = ent.get("claims", {})
