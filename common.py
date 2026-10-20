@@ -193,10 +193,11 @@ ATTACH_CLASSES = {
     "Haltestelle Bahn": _STOP, "Uebrige Bahnen": _STOP, "Haltestelle Bus": _STOP, "Haltestelle Schiff": _STOP + ("Q863454",),
     "Historisches Areal": ("Q839954", "Q23413", "Q109607", "Q57821",   # archaeological site, castle, ruins, fortification,
                            "Q751876", "Q17715832", "Q811979"),        # chateau, castle ruin, built structure
-    "Gebaeude": ("Q41176", "Q811979"), "Offenes Gebaeude": ("Q41176", "Q811979"),        # building, built structure
     "Schul- und Hochschulareal": ("Q2385804", "Q3914", "Q3918"), "Spitalareal": ("Q16917",),
     "Oeffentliches Parkareal": ("Q22698", "Q1107656"), "Schwimmbadareal": ("Q1501", "Q1076486"),
     "Campingplatzareal": ("Q832778",), "Kraftwerkareal": ("Q159719",), "Freizeitanlagenareal": ("Q1076486", "Q22698")}
+# Not buildings ("Gebaeude"): only 61% of their object IDs of 2021 are still there in 2026 (they are rebuilt and
+# redrawn), against 95-100% for summits, passes, valleys, ridges, localities and stations.
 # Not "Gebiet" (named areas): "region" also covers municipalities and nature reserves, so the area Ballenberg
 # matched the municipality of Hofstetten bei Brienz in the sample.
 ATTACH_WIDE = {"Tal", "Gletscher", "Grat", "Ort", "Ortsteil", "Quartier", "Quartierteil"}
