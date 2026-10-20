@@ -172,6 +172,13 @@ BATCHES["localities"] = {
     "geoms": {"PLY"}, "add_id": True, "same_kind_name": {"settlement": 3000}, "ch_only": True,
     "covers": ["localities of 20 to 99 inhabitants"],
     "note": "Localities of 20 to 99 inhabitants that have no item get one, as a hamlet, with their swissNAMES3D ID."}
+# Ninth batch, "small_localities": the same for localities under 20 inhabitants (jz, 20 October 2026, after the
+# 20-99 stage: 1,869 created, 113 left to existing items by the live checks). Many are single farms; they are
+# hamlets too (jz: "proceed with the hamlets creation").
+BATCHES["small_localities"] = {
+    **BATCHES["localities"], "plan": "plan_small_localities.jsonl", "cache": "small_localities_", "create_pop": {"< 20"},
+    "covers": ["localities under 20 inhabitants"],
+    "note": "Localities under 20 inhabitants that have no item get one, as a hamlet, with their swissNAMES3D ID."}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")

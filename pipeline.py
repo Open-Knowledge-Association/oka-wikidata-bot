@@ -129,7 +129,7 @@ def save(site, entity_id, data, done, baserevid=None):
 
 def duplicate_nearby(site, rec, far=None, munis=()):
     """Live search: an item with this exact name that lies within 2 km, or in the same municipality (P131; an old
-    position can be kilometres off: "Waldhaus" in Lützelflüh), or is a Swiss or place-like item without coordinates;
+    position can be kilometres off: "Waldhaus" in Lützelflüh), or is an item of the same kind (or a Swiss item with no class) without coordinates;
     with `far` (a later batch's "same_kind_name" distance), also an item of the same kind within `far`, unless its
     position comes from swissNAMES3D (then it is another swisstopo feature, e.g. a valley of the same name created
     just before). Family names, disambiguation pages and the like without coordinates do not count."""
@@ -147,8 +147,9 @@ def duplicate_nearby(site, rec, far=None, munis=()):
             return f"{q} has the same name in the same municipality"
         cs = [c for c in claims.get("P625", []) if c["mainsnak"]["snaktype"] == "value"]
         if not cs:
-            if "Q39" in ids("P17") or not ids("P17") and any(KIND_OF.get(k) for k in ids("P31")):   # Swiss, or a
-                # place of a known kind with no country (a German street of the same name does not count)
+            kinds = {KIND_OF.get(k) for k in ids("P31")}
+            if rec["group"] in kinds or not ids("P31") and "Q39" in ids("P17"):   # the same kind of place, or a Swiss
+                # item with no class: a nature reserve or a German street of the same name does not count
                 return f"{q} has the same name and no coordinates"
             continue
         v = cs[0]["mainsnak"]["datavalue"]["value"]
