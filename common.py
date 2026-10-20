@@ -172,6 +172,42 @@ BATCHES["localities"] = {
     "geoms": {"PLY"}, "add_id": True, "same_kind_name": {"settlement": 3000}, "ch_only": True,
     "covers": ["localities of 20 to 99 inhabitants"],
     "note": "Localities of 20 to 99 inhabitants that have no item get one, as a hamlet, with their swissNAMES3D ID."}
+# Tenth batch, "attach": the swissNAMES3D ID on existing items the earlier batches did not pair (jz, 20 October 2026:
+# "you can add the 9,500"). An object of a stable type whose ID is not on Wikidata, and a Swiss item without one that
+# has one of the object's names as label or alias, lies within 300 m (2 km for areas, valleys, glaciers, ridges and
+# settlements) and is of a class this type allows (by P279*), are paired when each is the other's only match. Only
+# the ID is added (the edit rules of the "ids" batch). Field names, local names, named areas, ditches, boundary
+# stones, lines and
+# the types whose IDs change each release (lakes, rivers, streets) are left out.
+_PEAKS = ("Q8502", "Q207326", "Q54050")                               # mountain, summit, hill
+_SETTLED = ("Q486972", "Q3257686", "Q131596", "Q253019", "Q11183787",   # human settlement, locality, farm, Ortsteil,
+            "Q685309")             # Ortschaft, former municipality (its village; current municipalities are left out)
+_QUARTER = ("Q123705", "Q2983893", "Q253019", "Q486972")              # neighbourhood, quarter, Ortsteil, settlement
+_STOP = ("Q548662", "Q55488", "Q953806")                              # public transport stop, railway station, bus stop
+_PASS = ("Q133056", "Q2231510", "Q16887036", "Q10862618")             # mountain pass, col, gap, mountain saddle
+ATTACH_CLASSES = {
+    "Hauptgipfel": _PEAKS, "Gipfel": _PEAKS, "Alpiner Gipfel": _PEAKS, "Felskopf": _PEAKS, "Huegel": _PEAKS,
+    "Haupthuegel": _PEAKS, "Grat": ("Q740445",) + _PEAKS, "Pass": _PASS, "Strassenpass": _PASS,
+    "Tal": ("Q39816", "Q150784"), "Gletscher": ("Q35666",), "Wasserfall": ("Q34038",), "Grotte, Hoehle": ("Q35509",),
+    "Ort": _SETTLED, "Ortsteil": _SETTLED, "Quartier": _QUARTER, "Quartierteil": _QUARTER,
+    "Haltestelle Bahn": _STOP, "Uebrige Bahnen": _STOP, "Haltestelle Bus": _STOP, "Haltestelle Schiff": _STOP + ("Q863454",),
+    "Historisches Areal": ("Q839954", "Q23413", "Q109607", "Q57821",   # archaeological site, castle, ruins, fortification,
+                           "Q751876", "Q17715832", "Q811979"),        # chateau, castle ruin, built structure
+    "Gebaeude": ("Q41176", "Q811979"), "Offenes Gebaeude": ("Q41176", "Q811979"),        # building, built structure
+    "Schul- und Hochschulareal": ("Q2385804", "Q3914", "Q3918"), "Spitalareal": ("Q16917",),
+    "Oeffentliches Parkareal": ("Q22698", "Q1107656"), "Schwimmbadareal": ("Q1501", "Q1076486"),
+    "Campingplatzareal": ("Q832778",), "Kraftwerkareal": ("Q159719",), "Freizeitanlagenareal": ("Q1076486", "Q22698")}
+# Not "Gebiet" (named areas): "region" also covers municipalities and nature reserves, so the area Ballenberg
+# matched the municipality of Hofstetten bei Brienz in the sample.
+ATTACH_WIDE = {"Tal", "Gletscher", "Grat", "Ort", "Ortsteil", "Quartier", "Quartierteil"}
+# An item that is also something else is left out for settlement types: a hill, a building or a hotel, a church or
+# parish, or a current municipality (the earlier settlements batch never paired those; the municipality is not its
+# village). In the sample: Bleichenberg (a hill), Bad Ramsach (a hotel), Burg (hill, church, parish), Vouvry.
+_NOT_SETTLED = _PEAKS + ("Q41176", "Q16970", "Q102496", "Q70208")     # ...building, church building, parish,
+ATTACH_CONFLICTS = {t: _NOT_SETTLED for t in ("Ort", "Ortsteil", "Quartier", "Quartierteil")}   # municipality
+BATCHES["attach"] = {"plan": "plan_attach.jsonl", "cache": "attach_", "covers": ["swissNAMES3D IDs on more items"],
+                     "note": "Further existing items get their swissNAMES3D ID when name, place and class leave one "
+                             "match each way."}
 # Ninth batch, "small_localities": the same for localities under 20 inhabitants (jz, 20 October 2026, after the
 # 20-99 stage: 1,869 created, 113 left to existing items by the live checks). Many are single farms; they are
 # hamlets too (jz: "proceed with the hamlets creation").

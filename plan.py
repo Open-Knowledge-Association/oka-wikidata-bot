@@ -5,6 +5,7 @@ The runner re-checks every item live before it edits, so the plan only needs the
 Each batch (common.BATCHES) has its own plan file: work/plan.jsonl for the first, work/plan_<batch>.jsonl after.
 """
 import csv
+import hashlib
 import json
 import math
 from collections import Counter, defaultdict
@@ -306,7 +307,111 @@ def ids_on_wikidata():
     return {line.strip().strip('"').upper() for line in raw.splitlines()[1:] if line.strip()}
 
 
+def id_holders():
+    """Items that hold a swissNAMES3D ID now (live query service)."""
+    import subprocess
+    from common import UA
+    raw = subprocess.run(["curl", "-s", "-S", "--max-time", "300", "-A", UA, "-H", "Accept: text/tab-separated-values",
+                          "--data-urlencode", "query=SELECT ?item WHERE { ?item wdt:P14976 ?id . }",
+                          "https://query.wikidata.org/sparql"], capture_output=True, check=True).stdout.decode("utf-8")
+    if not raw.startswith("?item"):
+        raise SystemExit(f"query service: {raw[:200]!r}")
+    return {qid(line.strip()) for line in raw.splitlines()[1:] if line.strip()}
+
+
+def build_attach():
+    """Pairs for BATCHES["attach"] (see common.py): one existing item per swissNAMES3D object and one object per
+    item, by name (labels in NAME_LANGS and aliases), distance and class (P31, through P279*)."""
+    from common import ATTACH_CLASSES, ATTACH_CONFLICTS, ATTACH_WIDE, BATCHES as B
+    cache = B["attach"]["cache"]
+    folder = fetch_dataset("ch.swisstopo.swissnames3d", ".csv.zip")
+    release, recs = folder.name, release_records(folder)
+    previous = set(release_records(WORK / ID_PREVIOUS_RELEASE))
+    taken = ids_on_wikidata()
+    objs = [r for u, r in recs.items() if r["type"] in ATTACH_CLASSES and u in previous
+            and u.strip("{}").upper() not in taken and not (r["type"] in ("Ort", "Quartier") and r["geom"] == "PKT")]
+    holders = id_holders()
+    coords = defaultdict(list)
+    for item, c in sparql_tsv("SELECT ?item ?coord WHERE { ?item wdt:P17 wd:Q39 ; wdt:P625 ?coord . }", "coords.tsv"):
+        if "(" in c:
+            coords[qid(item)].append(point(c))
+    by_name = defaultdict(set)
+    for lg in NAME_LANGS:
+        for item, n in sparql_tsv("SELECT ?item ?name WHERE { ?item wdt:P17 wd:Q39 ; wdt:P625 ?c ; rdfs:label ?name . "
+                                  f'FILTER(LANG(?name) = "{lg}") }}', f"labels_{lg}.tsv"):
+            by_name[literal(n)[0].casefold()].add(qid(item))
+    for item, n in sparql_tsv("SELECT ?item ?name WHERE { ?item wdt:P17 wd:Q39 ; wdt:P625 ?c ; skos:altLabel ?name . }",
+                              cache + "aliases.tsv"):
+        by_name[literal(n)[0].casefold()].add(qid(item))
+    p31 = defaultdict(set)
+    for item, cls in sparql_tsv("SELECT ?item ?class WHERE { ?item wdt:P17 wd:Q39 ; wdt:P625 ?c ; wdt:P31 ?class . }",
+                                cache + "p31.tsv"):
+        p31[qid(item)].add(qid(cls))
+    stats = Counter()
+    cands = {}                                        # object UUID -> {item: distance}
+    for r in objs:
+        radius = 2000 if r["type"] in ATTACH_WIDE else 300
+        found = {}
+        for nm in {n.casefold() for n in r["names"]}:
+            for q in by_name.get(nm, ()):
+                if q in holders:
+                    continue
+                d = min((math.hypot(e - r["e"], n - r["n"]) for e, n in coords.get(q, [])), default=math.inf)
+                if d <= radius:
+                    found[q] = min(d, found.get(q, math.inf))
+        if found:
+            cands[r["uuid"]] = found
+    # which classes fall under which roots (P279*), for the classes of all candidate items
+    roots = sorted({c for v in list(ATTACH_CLASSES.values()) + list(ATTACH_CONFLICTS.values()) for c in v})
+    classes = sorted({c for f in cands.values() for q in f for c in p31.get(q, ())})
+    under = defaultdict(set)
+    for i in range(0, len(classes), 400):
+        part = " ".join("wd:" + c for c in classes[i:i + 400])
+        query = (f"SELECT ?c ?a WHERE {{ VALUES ?c {{ {part} }} VALUES ?a {{ {' '.join('wd:' + x for x in roots)} }} "
+                 f"?c wdt:P279* ?a . }}")
+        tag = hashlib.sha1(query.encode()).hexdigest()[:10]        # the cache follows the query (roots change)
+        for c, a in sparql_tsv(query, f"{cache}roots_{tag}.tsv"):
+            under[qid(c)].add(qid(a))
+    fits = lambda q, t: (any(under[c] & set(ATTACH_CLASSES[t]) for c in p31.get(q, ()))
+                         and not any(under[c] & set(ATTACH_CONFLICTS.get(t, ())) for c in p31.get(q, ())))
+    by_uuid = {r["uuid"]: r for r in objs}
+    ok = {}                                           # UUID -> {item: distance}, class-compatible only
+    for u, found in cands.items():
+        good = {q: d for q, d in found.items() if fits(q, by_uuid[u]["type"])}
+        if good:
+            ok[u] = good
+        else:
+            stats["same name nearby, other class"] += 1
+    objs_of = defaultdict(set)
+    for u, good in ok.items():
+        for q in good:
+            objs_of[q].add(u)
+    rows = []
+    for u, good in ok.items():
+        if len(good) != 1:
+            stats["several items"] += 1
+            continue
+        q, d = next(iter(good.items()))
+        if len(objs_of[q]) != 1:
+            stats["item matches several objects"] += 1
+            continue
+        r = by_uuid[u]
+        rows.append({"kind": "edit", "batch": "attach", "qid": q, "dist": round(d, 1),
+                     "rec": {k: r[k] for k in ("uuid", "name", "type", "e", "n", "names")} | {"group": "id"}})
+    rows.sort(key=lambda row: int(row["qid"][1:]))
+    path = plan_path("attach")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps({"release": release, "objects": len(objs), "skipped": dict(stats)}, ensure_ascii=False) + "\n")
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    out(f"{release}: {len(objs)} objects of the listed types without an ID on Wikidata; {len(cands)} with a "
+        f"same-named item nearby; plan: {len(rows)} IDs {dict(Counter(r['rec']['type'] for r in rows).most_common())}; "
+        f"skipped {dict(stats)} -> {path}")
+
+
 def build(batch=""):
+    if batch == "attach":
+        return build_attach()
     if batch == "ids":
         return build_ids()
     if batch == "p131":

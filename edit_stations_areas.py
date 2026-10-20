@@ -172,7 +172,8 @@ def build_id(raw, row, refs):
     return {"claims": [claim]}, ["swissNAMES3D ID"]
 
 
-BUILDERS = {"p131": build_p131, "stations": build_station, "areas": build_area, "ids": build_id}   # own edit rules
+BUILDERS = {"p131": build_p131, "stations": build_station, "areas": build_area, "ids": build_id,   # own edit rules
+            "attach": build_id}
 
 
 def builder(row):
