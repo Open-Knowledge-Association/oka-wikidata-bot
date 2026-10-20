@@ -3,6 +3,7 @@ HDS and SNL entry whose identifier sits on exactly one item, one edit per item, 
 edits a minute with maxlag 5. Nothing is created yet: entries without an item come later.
 
     python dictionaries_run.py plan hds  # no edits: the entries, their facts, and the checks against Wikidata
+    python dictionaries_run.py plan hds --crawled   # only the biographies whose HDS page the crawl has read
     python dictionaries_run.py plan snl  # (HDS once check_links.py has run, SNL once `dictionaries.py prefetch` has)
     python dictionaries_run.py run       # resumable; the log is dictionary_edits.csv, and what the bot leaves
                                          # alone for a person to look at is dictionary_left_alone.csv
@@ -160,6 +161,10 @@ def plan():
                      "qid": r["item"], "matched_by": r["matched_by"]}
                     for r in csv.DictReader(open(review, encoding="utf-8")) if r["item"]]
     out(f"{work}: {len(entries)} entries on one item each; {len(skipped)} left out (identifier on several items, or several on one)")
+    if work == "hds" and "--crawled" in sys.argv:       # only biographies whose page is read (20 October 2026: the HDS
+        entries = [e for e in entries                   # answers the crawl with 403 since 14:22 UTC); without the page
+                   if e["kind"] == "person" and (WORK2 / "hds" / f"{e['id'].zfill(6)}.html").exists()]  # only the
+        out(f"hds: {len(entries)} biographies with a page read; the others wait for the crawl")   # years would be added
     partial = WORK2 / f"full_plan_{work}.partial.jsonl"          # facts as they are computed: a restart resumes
     done = {}
     if partial.exists():
