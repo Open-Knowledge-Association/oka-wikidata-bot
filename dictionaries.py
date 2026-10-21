@@ -1114,14 +1114,21 @@ def snl_moved(work, slug):
 
 
 NAME_PREFIX = re.compile(r"^(?:egentlig|eg\.|også kjent (?:som|under (?:kallenavnet|navnet))|kalt|født|f\.|"
-                         r"[a-zæøå]+sk(?: navn)?|på [a-zæøå]+sk)\s*:?\s*", re.I)
+                         r"(?-i:[a-zæøå]+sk)(?: navn)?|[a-zæøå]+sk(?: navn\b|(?=\s*:))|på [a-zæøå]+sk)\s*:?\s*", re.I)
+# A language word is a lead only in lower case ("ungarsk Szent István") or with "navn" or a colon ("Ungarsk: ..."):
+# "Norsk Bonde- og Småbrukarlag" keeps its first word.
 PARTICLES = {"de", "von", "van", "af", "la", "le", "du", "der", "den", "da", "di", "y", "bin", "ibn", "al", "zu", "og"}
 # What task 2 wrongly took as names (Sjoerd de Bruin, 20 October 2026; 38 aliases corrected on 21 October): "Inc"
 # and "Jr" split off at a comma, "IKT" (SNL's subject heading), and phrases such as "Opprinnelig Alf Olafsen",
 # "Nå Rio Tinto", "tidligere kalt sumpfeber" or "Enron-skandalen".
 LEGAL_FORMS = r"Inc|Ltd|Co|Corp|LLC|plc|AG|S\.?A|AB|AS|ASA|A/S|GmbH|N\.?V|BV|Oyj?|S\.?p\.?A|Srl|KG|SE"
 ALONE = {"inc", "ltd", "co", "corp", "llc", "plc", "ag", "sa", "s.a", "ab", "as", "asa", "a/s", "gmbh", "nv", "n.v", "bv",
-         "oy", "oyj", "spa", "s.p.a", "srl", "kg", "se", "jr", "sr", "corporation", "company", "limited"}
+         "oy", "oyj", "spa", "s.p.a", "srl", "kg", "se", "jr", "sr", "corporation", "company", "limited",
+         # a title, particle or honour alone (the second round, 21 October: 160 "Sir", "Dame", "Lord", "GCB", "PC"...)
+         "sir", "dame", "lady", "lord", "hertug", "freiherr", "kong", "il", "d'", "don", "saint", "sankt", "st", "fra",
+         "pater", "graf", "greve", "baron", "jarl", "prins", "prinsesse", "dronning", "keiser", "pave", "biskop", "von",
+         "van", "de", "la", "le", "gcb", "gcmg", "gcvo", "kcb", "kcmg", "kcvo", "kbe", "gbe", "dbe", "cbe", "obe", "mbe",
+         "pc", "kt", "om", "ch", "frs", "vc", "dso", "mc", "qc", "kc", "cb", "cmg", "cvo"}
 NOT_NAMES = {"IKT"}
 FORMER_LEAD = re.compile(r"^(?:opprinnelig|tidligere(?: kalt| kjent som)?)\s+", re.I)
 
@@ -1139,8 +1146,14 @@ def other_names(raw, kind):
             pseudonyms += [p.strip(" .") for p in re.split(r",\s*|\s+og\s+", m.group(1)) if p.strip(" .")]
             continue
         line = NAME_PREFIX.sub("", line)
-        for part in re.split(rf",(?!\s*(?:[JS]r|{LEGAL_FORMS})\b)\s*", line, flags=re.I):  # "PepsiCo, Inc." stays whole
-            part = part.strip(" ;")
+        parts = re.split(rf",(?!\s*(?:[JS]r|{LEGAL_FORMS})\b)\s*", line, flags=re.I)  # "PepsiCo, Inc." stays whole
+        if kind == "person":                            # "Archimedes og Arcimedes": two names
+            parts = [p for part in parts for p in re.split(r"\s+og\s+", part)]
+        # a word split off a longer styled or inverted name on the same line ("Leo, Graf von Caprivi de Caprera de
+        # Montecuccoli", "Παλαιιλὸγος, Ανδρονικος II ...") is a fragment; a list of one-word variants is not
+        styled = kind == "person" and any(len(p.split()) >= 3 and "(" not in p for p in parts)
+        for part in parts:
+            part = NAME_PREFIX.sub("", part.strip(" ;"))         # 'Il, eg. Benvenuto Tisi': a lead after the comma
             if part.endswith(".") and not re.search(rf"\b(?:[JS]r|{LEGAL_FORMS})\.$", part, re.I):
                 part = part[:-1].rstrip()
             if re.match(r"(?:nå|senere)\b", part, re.I):          # 'nå Rio Tinto': a successor, not a name
@@ -1151,6 +1164,8 @@ def other_names(raw, kind):
                 continue
             words = part.split()
             if not words or len(words) > 6 or len(part) > 80 or re.search(r"[0-9:()]", part):
+                continue
+            if styled and len(words) == 1:
                 continue
             if kind == "term":
                 if re.fullmatch(r"[\w' -]+", part) and len(words) <= 5:
