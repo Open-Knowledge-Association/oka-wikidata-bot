@@ -1116,6 +1116,14 @@ def snl_moved(work, slug):
 NAME_PREFIX = re.compile(r"^(?:egentlig|eg\.|også kjent (?:som|under (?:kallenavnet|navnet))|kalt|født|f\.|"
                          r"[a-zæøå]+sk(?: navn)?|på [a-zæøå]+sk)\s*:?\s*", re.I)
 PARTICLES = {"de", "von", "van", "af", "la", "le", "du", "der", "den", "da", "di", "y", "bin", "ibn", "al", "zu", "og"}
+# What task 2 wrongly took as names (Sjoerd de Bruin, 20 October 2026; 38 aliases corrected on 21 October): "Inc"
+# and "Jr" split off at a comma, "IKT" (SNL's subject heading), and phrases such as "Opprinnelig Alf Olafsen",
+# "Nå Rio Tinto", "tidligere kalt sumpfeber" or "Enron-skandalen".
+LEGAL_FORMS = r"Inc|Ltd|Co|Corp|LLC|plc|AG|S\.?A|AB|AS|ASA|A/S|GmbH|N\.?V|BV|Oyj?|S\.?p\.?A|Srl|KG|SE"
+ALONE = {"inc", "ltd", "co", "corp", "llc", "plc", "ag", "sa", "s.a", "ab", "as", "asa", "a/s", "gmbh", "nv", "n.v", "bv",
+         "oy", "oyj", "spa", "s.p.a", "srl", "kg", "se", "jr", "sr", "corporation", "company", "limited"}
+NOT_NAMES = {"IKT"}
+FORMER_LEAD = re.compile(r"^(?:opprinnelig|tidligere(?: kalt| kjent som)?)\s+", re.I)
 
 
 def other_names(raw, kind):
@@ -1131,8 +1139,16 @@ def other_names(raw, kind):
             pseudonyms += [p.strip(" .") for p in re.split(r",\s*|\s+og\s+", m.group(1)) if p.strip(" .")]
             continue
         line = NAME_PREFIX.sub("", line)
-        for part in re.split(r",\s*(?!Jr\b|Sr\b)", line):
-            part = part.strip(" .;")
+        for part in re.split(rf",(?!\s*(?:[JS]r|{LEGAL_FORMS})\b)\s*", line, flags=re.I):  # "PepsiCo, Inc." stays whole
+            part = part.strip(" ;")
+            if part.endswith(".") and not re.search(rf"\b(?:[JS]r|{LEGAL_FORMS})\.$", part, re.I):
+                part = part[:-1].rstrip()
+            if re.match(r"(?:nå|senere)\b", part, re.I):          # 'nå Rio Tinto': a successor, not a name
+                continue
+            part = FORMER_LEAD.sub("", part)                       # 'opprinnelig Alf Olafsen': a former name
+            if re.search(r"\btidligere\b|skandalen$", part, re.I) or part in NOT_NAMES or \
+                    part.strip(".").casefold() in ALONE:            # a phrase; 'Inc' or 'Jr' alone; a subject heading
+                continue
             words = part.split()
             if not words or len(words) > 6 or len(part) > 80 or re.search(r"[0-9:()]", part):
                 continue
