@@ -49361,3 +49361,503 @@ time,work,kind,entry,item,revid,changes
 2026-10-23T20:38:22Z,hds,person,006449,Q2831428,2560108351,source for date of birth; place of birth (more precise); source for date of death; source for place of death
 2026-10-23T20:38:23Z,hds,person,006450,Q1558452,2560108357,source for place of birth; source for place of death
 2026-10-23T20:38:23Z,hds,person,006451,Q99305299,,no change
+2026-10-23T20:38:35Z,hds,person,006452,Q1321451,2560108438,source for place of death
+2026-10-23T20:38:36Z,hds,person,006453,Q99305300,2560108447,place of origin
+2026-10-23T20:38:37Z,hds,person,006454,Q20823462,2560108459,source for place of birth; source for place of death
+2026-10-23T20:38:37Z,hds,person,006455,Q78076939,,no change
+2026-10-23T20:38:38Z,hds,person,006456,Q78076958,2560108468,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:38:40Z,hds,person,006457,Q3553595,2560108478,source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:38:40Z,hds,person,006458,Q78067695,,no change
+2026-10-23T20:38:41Z,hds,person,006459,Q15456906,2560108486,source for place of birth; source for place of death; place of origin
+2026-10-23T20:38:41Z,hds,person,006460,Q55683084,2560108494,source for place of birth; source for place of death; place of origin
+2026-10-23T20:38:43Z,hds,person,006461,Q78076992,2560108502,source for place of birth; source for place of death
+2026-10-23T20:38:43Z,hds,person,006462,Q78077003,2560108512,source for place of birth; source for place of death
+2026-10-23T20:38:44Z,hds,person,006463,Q522121,2560108522,source for place of birth; source for place of death (existing reference completed)
+2026-10-23T20:38:46Z,hds,person,006464,Q1581556,2560108538,source for place of birth
+2026-10-23T20:38:46Z,hds,person,006465,Q96185067,2560108551,source for place of birth; source for place of death; place of origin
+2026-10-23T20:38:46Z,hds,person,006466,Q78067833,,no change
+2026-10-23T20:38:48Z,hds,person,006467,Q363099,2560108565,source for place of birth; source for place of death
+2026-10-23T20:38:48Z,hds,person,006468,Q99305301,2560108576,place of origin
+2026-10-23T20:38:49Z,hds,person,006469,Q1362787,2560108590,source for place of birth; source for place of death
+2026-10-23T20:38:50Z,hds,person,006470,Q2517515,2560108602,source for place of birth; source for place of death
+2026-10-23T20:38:52Z,hds,person,006471,Q15621609,2560108616,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:38:53Z,hds,person,006472,Q1330086,2560108631,source for place of birth; source for place of death
+2026-10-23T20:38:53Z,hds,person,006473,Q1754180,2560108642,source for place of birth; source for place of death; place of origin
+2026-10-23T20:38:54Z,hds,person,006474,Q1818654,2560108656,source for place of birth; source for place of death
+2026-10-23T20:38:56Z,hds,person,006475,Q1581043,2560108670,source for place of birth
+2026-10-23T20:38:56Z,hds,person,006476,Q99305302,,no change
+2026-10-23T20:38:56Z,hds,person,006477,Q96337449,2560108681,source for place of birth; source for place of death; place of origin
+2026-10-23T20:38:56Z,hds,person,006478,Q96337447,,no change
+2026-10-23T20:38:58Z,hds,person,006479,Q96337444,2560108692,source for place of origin
+2026-10-23T20:38:59Z,hds,person,006480,Q1337334,2560108710,source for date of birth; source for place of birth; source for date of death
+2026-10-23T20:38:59Z,hds,person,006481,Q64589770,2560108720,place of origin
+2026-10-23T20:39:00Z,hds,person,006482,Q1359376,2560108733,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:39:01Z,hds,person,006483,Q1579749,2560108744,source for place of birth
+2026-10-23T20:39:02Z,hds,person,006484,Q1706032,2560108755,source for place of birth; source for place of death
+2026-10-23T20:39:03Z,hds,person,006485,Q1580978,2560108762,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:39:04Z,hds,person,006486,Q2640592,2560108770,source for place of birth; source for place of death
+2026-10-23T20:39:06Z,hds,person,006487,Q99463025,2560108786,source for place of death
+2026-10-23T20:39:07Z,hds,person,006488,Q1618157,2560108793,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:39:08Z,hds,person,006489,Q99305304,2560108799,source for place of birth; source for place of death
+2026-10-23T20:39:09Z,hds,person,006490,Q677684,2560108809,source for place of birth; source for place of death
+2026-10-23T20:39:09Z,hds,person,006491,Q78065605,,no change
+2026-10-23T20:39:09Z,hds,person,006492,Q124942,2560108819,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:39:09Z,hds,person,006493,Q78065634,,no change
+2026-10-23T20:39:10Z,hds,person,006494,Q1818671,2560108829,source for place of birth; source for place of death
+2026-10-23T20:39:12Z,hds,person,006495,Q1301594,2560108845,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:39:12Z,hds,person,006496,Q96360699,,no change
+2026-10-23T20:39:12Z,hds,person,006497,Q2412174,,no change
+2026-10-23T20:39:12Z,hds,person,006499,Q96360782,,no change
+2026-10-23T20:39:13Z,hds,person,006500,Q78066057,2560108854,source for place of birth; source for place of death
+2026-10-23T20:39:14Z,hds,person,006502,Q78066147,2560108868,place of origin
+2026-10-23T20:39:14Z,hds,person,006503,Q99305306,,no change
+2026-10-23T20:39:21Z,hds,person,006504,Q55676402,2560108919,source for place of birth; source for place of death
+2026-10-23T20:39:22Z,hds,person,006505,Q1081082,2560108926,source for place of birth; source for place of death
+2026-10-23T20:39:23Z,hds,person,006506,Q1359467,2560108940,source for place of birth; source for place of death
+2026-10-23T20:39:24Z,hds,person,006507,Q1668160,2560108945,source for place of birth; source for place of death; place of origin
+2026-10-23T20:39:25Z,hds,person,006508,Q1700660,2560108953,source for place of death
+2026-10-23T20:39:26Z,hds,person,006509,Q118717,2560108964,source for place of birth; source for place of death; place of origin
+2026-10-23T20:39:27Z,hds,person,006510,Q78066279,2560108978,source for place of birth; source for place of death
+2026-10-23T20:39:28Z,hds,person,006511,Q2562030,2560108989,source for place of birth; source for place of death
+2026-10-23T20:39:29Z,hds,person,006512,Q78066418,2560108999,place of birth; place of origin
+2026-10-23T20:39:29Z,hds,person,006513,Q78066454,,no change
+2026-10-23T20:39:29Z,hds,person,006514,Q695792,2560109008,source for place of birth; source for place of death
+2026-10-23T20:39:31Z,hds,person,006515,Q1582131,2560109016,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:39:31Z,hds,person,006516,Q98106385,2560109025,source for place of birth; source for place of death
+2026-10-23T20:39:33Z,hds,person,006517,Q1673938,2560109034,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:39:33Z,hds,person,006518,Q110552070,,no change
+2026-10-23T20:39:33Z,hds,person,006519,Q94877918,,no change
+2026-10-23T20:39:33Z,hds,person,006520,Q96484563,2560109041,place of death; place of origin
+2026-10-23T20:39:35Z,hds,person,006521,Q2476343,2560109050,source for place of birth; source for place of death
+2026-10-23T20:39:35Z,hds,person,006522,Q78066603,,no change
+2026-10-23T20:39:36Z,hds,person,006523,Q1403679,2560109058,source for place of birth; source for place of death
+2026-10-23T20:39:37Z,hds,person,006524,Q78066732,2560109070,source for place of birth (existing reference completed); source for place of death (existing reference completed); source for place of origin (existing reference completed)
+2026-10-23T20:39:37Z,hds,person,006525,Q1600663,2560109079,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:39:37Z,hds,person,006526,Q78067029,,no change
+2026-10-23T20:39:39Z,hds,person,006527,Q1517278,2560109088,source for place of birth; source for place of death
+2026-10-23T20:39:39Z,hds,person,006534,Q99305308,,no change
+2026-10-23T20:39:39Z,hds,person,006535,Q65496521,,no change
+2026-10-23T20:39:39Z,hds,person,006536,Q78069022,,no change
+2026-10-23T20:39:40Z,hds,person,006537,Q2806513,2560109096,source for place of birth; source for place of death; place of origin
+2026-10-23T20:39:41Z,hds,person,006538,Q3568899,2560109106,source for place of birth; source for place of death (existing reference completed); place of origin
+2026-10-23T20:39:42Z,hds,person,006539,Q78069189,2560109112,place of birth; place of death; place of origin
+2026-10-23T20:39:43Z,hds,person,006540,Q125578,2560109122,source for place of birth; source for place of death
+2026-10-23T20:39:44Z,hds,person,006541,Q15621555,2560109129,source for place of birth; source for place of death
+2026-10-23T20:39:44Z,hds,person,006542,Q78069393,,no change
+2026-10-23T20:39:45Z,hds,person,006543,Q2173618,2560109137,source for place of birth; source for place of death
+2026-10-23T20:39:46Z,hds,person,006544,Q122438,2560109146,source for place of birth
+2026-10-23T20:39:47Z,hds,person,006545,Q1732694,2560109159,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:39:48Z,hds,person,006546,Q117884,2560109167,source for place of birth; source for place of death
+2026-10-23T20:39:49Z,hds,person,006547,Q120121,2560109175,source for place of birth; source for place of death
+2026-10-23T20:39:50Z,hds,person,006548,Q1903085,2560109190,source for place of birth; source for place of death; place of origin
+2026-10-23T20:39:50Z,hds,person,006549,Q78069917,,no change
+2026-10-23T20:39:51Z,hds,person,006550,Q1283267,2560109197,source for place of birth; source for place of death
+2026-10-23T20:39:52Z,hds,person,006551,Q15621593,2560109207,source for place of birth; source for place of death
+2026-10-23T20:39:53Z,hds,person,006552,Q1913303,2560109218,source for place of birth; source for place of death
+2026-10-23T20:39:53Z,hds,person,006553,Q78070144,,no change
+2026-10-23T20:39:53Z,hds,person,006554,Q62007471,2560109228,source for place of birth; source for place of death
+2026-10-23T20:39:55Z,hds,person,006555,Q1410143,2560109238,source for place of birth; source for place of death
+2026-10-23T20:39:55Z,hds,person,006556,Q1582102,,no change
+2026-10-23T20:39:56Z,hds,person,006557,Q78070288,2560109254,source for date of birth (existing reference completed); source for date of death (existing reference completed); place of origin
+2026-10-23T20:39:57Z,hds,person,006558,Q1489634,2560109262,source for place of birth; source for place of death
+2026-10-23T20:39:57Z,hds,person,006559,Q1081633,2560109274,source for place of birth; source for place of death
+2026-10-23T20:40:06Z,hds,person,006560,Q1397310,2560109387,source for place of death
+2026-10-23T20:40:06Z,hds,person,006561,Q78070346,2560109397,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:40:06Z,hds,person,006562,Q70018386,,no change
+2026-10-23T20:40:06Z,hds,person,006563,Q99305310,,no change
+2026-10-23T20:40:06Z,hds,person,006564,Q78070407,,no change
+2026-10-23T20:40:06Z,hds,person,006565,Q99305311,,no change
+2026-10-23T20:40:07Z,hds,person,006566,Q98556271,2560109408,source for place of death
+2026-10-23T20:40:08Z,hds,person,006567,Q78070457,2560109418,source for place of birth; source for place of death
+2026-10-23T20:40:10Z,hds,person,006569,Q3087758,2560109429,source for place of death
+2026-10-23T20:40:10Z,hds,person,006570,Q15621553,2560109437,source for place of birth; source for place of death
+2026-10-23T20:40:12Z,hds,person,006571,Q78070710,2560109449,place of origin
+2026-10-23T20:40:12Z,hds,person,006572,Q94915451,,no change
+2026-10-23T20:40:12Z,hds,person,006573,Q99305313,,no change
+2026-10-23T20:40:13Z,hds,person,006574,Q2874984,2560109459,source for place of birth (existing reference completed); source for place of death (existing reference completed); source for place of origin (existing reference completed)
+2026-10-23T20:40:13Z,hds,person,006635,Q23059347,,no change
+2026-10-23T20:40:13Z,hds,person,006644,Q98920894,,no change
+2026-10-23T20:40:13Z,hds,person,006647,Q125692,2560109465,source for place of birth; source for place of death
+2026-10-23T20:40:14Z,hds,person,006649,Q1521089,2560109475,source for place of death
+2026-10-23T20:40:15Z,hds,person,006650,Q96367097,2560109483,source for place of birth (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:40:15Z,hds,person,006651,Q99305316,,no change
+2026-10-23T20:40:16Z,hds,person,006652,Q78068499,2560109499,source for place of birth (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:40:16Z,hds,person,006653,Q3357835,,no change
+2026-10-23T20:40:17Z,hds,person,006654,Q55679472,2560109506,source for place of birth; source for place of death
+2026-10-23T20:40:17Z,hds,person,006655,Q99214369,,no change
+2026-10-23T20:40:18Z,hds,person,006656,Q55676439,2560109519,source for place of birth; source for place of death
+2026-10-23T20:40:19Z,hds,person,006657,Q1432217,2560109529,source for place of birth; source for place of death
+2026-10-23T20:40:19Z,hds,person,006658,Q138862190,,no change
+2026-10-23T20:40:19Z,hds,person,006659,Q99305318,,no change
+2026-10-23T20:40:20Z,hds,person,006660,Q15454545,2560109544,source for place of birth; source for place of death
+2026-10-23T20:40:21Z,hds,person,006661,Q55684016,2560109550,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:40:22Z,hds,person,006662,Q1758783,2560109563,source for place of birth; source for place of death
+2026-10-23T20:40:22Z,hds,person,006663,Q15428212,,no change
+2026-10-23T20:40:23Z,hds,person,006664,Q15621513,2560109576,source for place of death
+2026-10-23T20:40:24Z,hds,person,006665,Q99305319,2560109588,place of origin
+2026-10-23T20:40:26Z,hds,person,006666,Q43267685,2560109601,source for place of birth; source for place of death
+2026-10-23T20:40:26Z,hds,person,006667,Q110552032,2560109609,source for place of birth (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:40:26Z,hds,person,006668,Q99305320,,no change
+2026-10-23T20:40:27Z,hds,person,006669,Q15451942,2560109617,source for place of birth; source for place of death
+2026-10-23T20:40:27Z,hds,person,006670,Q18402639,,no change
+2026-10-23T20:40:28Z,hds,person,006671,Q78070869,2560109624,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:40:28Z,hds,person,006672,Q99305321,,no change
+2026-10-23T20:40:30Z,hds,person,006673,Q65496564,2560109635,source for place of birth; source for place of death
+2026-10-23T20:40:30Z,hds,person,006674,Q99305323,,no change
+2026-10-23T20:40:30Z,hds,person,006675,Q1512957,2560109641,source for place of birth; source for place of death; place of origin
+2026-10-23T20:40:30Z,hds,person,006676,Q99305324,,no change
+2026-10-23T20:40:31Z,hds,person,006677,Q2501360,2560109649,source for place of birth; place of origin
+2026-10-23T20:40:32Z,hds,person,006678,Q116541,2560109658,source for place of birth; source for place of death; place of origin
+2026-10-23T20:40:32Z,hds,person,006679,Q99305325,,no change
+2026-10-23T20:40:33Z,hds,person,006680,Q78071081,2560109663,place of origin
+2026-10-23T20:40:34Z,hds,person,006681,Q78071092,2560109668,place of origin
+2026-10-23T20:40:41Z,hds,person,006729,Q96239855,,no change
+2026-10-23T20:40:41Z,hds,person,006775,Q1685180,2560109711,source for place of birth; source for place of origin
+2026-10-23T20:40:42Z,hds,person,006776,Q1467924,2560109720,source for place of birth; source for place of death; place of origin
+2026-10-23T20:40:43Z,hds,person,006777,Q2077982,2560109727,source for place of birth; source for place of death; place of origin
+2026-10-23T20:40:44Z,hds,person,006778,Q2075523,2560109734,source for date of birth; source for place of birth; source for date of death; source for place of death; source for place of origin
+2026-10-23T20:40:45Z,hds,person,006779,Q40644001,2560109742,place of birth
+2026-10-23T20:40:46Z,hds,person,006781,Q3434997,2560109751,source for date of birth (existing reference completed); source for place of birth (existing reference completed); source for date of death; source for place of death
+2026-10-23T20:40:47Z,hds,person,006782,Q518734,2560109760,source for place of birth; source for place of death
+2026-10-23T20:40:48Z,hds,person,006783,Q3565689,2560109769,source for date of death; source for place of death
+2026-10-23T20:40:48Z,hds,person,006784,Q55563358,,no change
+2026-10-23T20:40:49Z,hds,person,006785,Q2475610,2560109780,source for place of birth (existing reference completed); source for date of death; place of origin
+2026-10-23T20:40:50Z,hds,person,006786,Q78061376,2560109787,place of origin
+2026-10-23T20:40:51Z,hds,person,006787,Q1582821,2560109797,source for place of birth; source for place of death
+2026-10-23T20:40:52Z,hds,person,006791,Q1603686,2560109811,source for date of death; source for place of death
+2026-10-23T20:40:53Z,hds,person,006792,Q121855,2560109824,source for place of birth; source for place of death
+2026-10-23T20:40:54Z,hds,person,006793,Q78061530,2560109837,source for place of birth (existing reference completed); source for date of death; source for place of death
+2026-10-23T20:40:55Z,hds,person,006795,Q1359563,2560109845,source for place of birth; source for place of death
+2026-10-23T20:40:56Z,hds,person,006796,Q99214372,2560109854,place of birth (more precise); source for date of death; place of origin
+2026-10-23T20:40:57Z,hds,person,006799,Q3263012,2560109867,source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:40:57Z,hds,person,006800,Q3089639,,no change
+2026-10-23T20:40:57Z,hds,person,006801,Q110576585,,no change
+2026-10-23T20:40:58Z,hds,person,006802,Q96299646,2560109878,date of death (more precise)
+2026-10-23T20:40:59Z,hds,person,006803,Q78068881,2560109888,source for date of death (existing reference completed)
+2026-10-23T20:41:00Z,hds,person,006804,Q1450819,2560109899,source for place of birth
+2026-10-23T20:41:01Z,hds,person,006805,Q78069630,2560109908,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:41:02Z,hds,person,006806,Q96285535,2560109919,source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:41:03Z,hds,person,006807,Q107000526,2560109932,source for date of birth (existing reference completed); source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:41:04Z,hds,person,006808,Q78067760,2560109943,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:41:05Z,hds,person,006809,Q78067956,2560109953,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:41:06Z,hds,person,006811,Q107014996,2560109967,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:41:07Z,hds,person,006812,Q50530619,2560109977,source for place of birth; source for place of death
+2026-10-23T20:41:07Z,hds,person,006813,Q58209122,,no change
+2026-10-23T20:41:08Z,hds,person,006814,Q78067951,2560109985,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:41:09Z,hds,person,006816,Q28223001,2560109993,source for date of birth (existing reference completed); source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:41:10Z,hds,person,006817,Q27765127,2560110000,source for date of birth; source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:41:11Z,hds,person,006819,Q28223020,2560110007,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:12Z,hds,person,006820,Q28222999,2560110017,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:13Z,hds,person,006821,Q28196429,2560110023,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:14Z,hds,person,006822,Q3170819,2560110031,source for date of birth; place of birth (more precise); source for date of death; source for place of death
+2026-10-23T20:41:15Z,hds,person,006823,Q78068570,2560110036,source for date of birth (existing reference completed); source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:41:16Z,hds,person,006824,Q3134162,2560110043,source for date of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:41:17Z,hds,person,006826,Q2835064,2560110049,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:18Z,hds,person,006827,Q120093,2560110051,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:19Z,hds,person,006828,Q3056988,2560110057,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:20Z,hds,person,006829,Q3300476,2560110064,source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:41:21Z,hds,person,006830,Q3261442,2560110071,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:22Z,hds,person,006831,Q3370549,2560110081,source for date of birth; source for date of death; source for place of death (existing reference completed); place of origin
+2026-10-23T20:41:23Z,hds,person,006832,Q121158,2560110086,source for date of birth; source for place of birth; source for date of death; place of origin
+2026-10-23T20:41:24Z,hds,person,006833,Q2958942,2560110094,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:41:25Z,hds,person,006835,Q3171897,2560110104,source for place of birth; source for place of death; place of origin
+2026-10-23T20:41:31Z,hds,person,006836,Q3588478,,no change
+2026-10-23T20:41:31Z,hds,person,006837,Q2958946,2560110173,source for date of birth; source for place of birth (existing reference completed); source for date of death; source for place of death (existing reference completed)
+2026-10-23T20:41:32Z,hds,person,006838,Q2144692,2560110189,source for date of birth; source for place of birth; source for date of death; source for place of death; source for place of origin
+2026-10-23T20:41:33Z,hds,person,006839,Q2848586,2560110203,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:41:34Z,hds,person,006841,Q121281,2560110211,source for date of birth; source for place of birth; source for date of death; source for place of origin
+2026-10-23T20:41:34Z,hds,person,006843,Q94917008,,no change
+2026-10-23T20:41:35Z,hds,person,006846,Q98815354,2560110221,source for date of death (existing reference completed)
+2026-10-23T20:41:36Z,hds,person,006847,Q55857311,2560110227,date of death (more precise); place of origin
+2026-10-23T20:41:36Z,hds,person,006848,Q138911522,,no change
+2026-10-23T20:41:37Z,hds,person,006849,Q55124537,2560110236,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:41:38Z,hds,person,006852,Q94916787,2560110245,source for place of death
+2026-10-23T20:41:39Z,hds,person,006853,Q1327699,2560110255,source for place of birth; source for place of death
+2026-10-23T20:41:40Z,hds,person,006855,Q1748881,2560110268,source for place of birth; source for place of death
+2026-10-23T20:41:41Z,hds,person,006856,Q1698224,2560110277,source for place of birth; source for place of death
+2026-10-23T20:41:42Z,hds,person,006857,Q1694907,2560110288,source for place of birth; source for place of death; place of origin
+2026-10-23T20:41:43Z,hds,person,006858,Q1736166,2560110298,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:44Z,hds,person,006859,Q1679141,2560110309,source for place of birth; source for place of death
+2026-10-23T20:41:45Z,hds,person,006860,Q816922,2560110322,source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:41:46Z,hds,person,006861,Q13142704,2560110335,source for place of birth; source for place of death
+2026-10-23T20:41:47Z,hds,person,006862,Q1698221,2560110345,source for place of birth; source for place of death
+2026-10-23T20:41:48Z,hds,person,006864,Q1085725,2560110355,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:49Z,hds,person,006865,Q1596841,2560110372,source for place of birth; source for place of death
+2026-10-23T20:41:50Z,hds,person,006866,Q1391766,2560110381,source for place of birth; source for place of death
+2026-10-23T20:41:51Z,hds,person,006867,Q1539753,2560110388,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:52Z,hds,person,006868,Q1694849,2560110397,source for place of birth; source for place of death
+2026-10-23T20:41:53Z,hds,person,006869,Q1693002,2560110403,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed)
+2026-10-23T20:41:54Z,hds,person,006870,Q1556289,2560110408,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:55Z,hds,person,006872,Q1597351,2560110417,source for date of birth; source for place of birth; source for date of death
+2026-10-23T20:41:56Z,hds,person,006875,Q1288673,2560110424,source for place of birth; source for place of death
+2026-10-23T20:41:57Z,hds,person,006876,Q1555634,2560110429,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:58Z,hds,person,006877,Q361054,2560110436,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:41:59Z,hds,person,006879,Q1712622,2560110446,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:00Z,hds,person,006881,Q1679241,2560110452,source for date of birth; source for place of birth; source for date of death; source for place of death; source for place of origin
+2026-10-23T20:42:01Z,hds,person,006882,Q1357985,2560110461,source for date of birth; source for place of birth; source for date of death
+2026-10-23T20:42:03Z,hds,person,006883,Q1579467,2560110474,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:03Z,hds,person,006884,Q1484838,2560110480,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:04Z,hds,person,006885,Q2039592,2560110486,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:05Z,hds,person,006886,Q1912810,2560110494,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:06Z,hds,person,006887,Q2059914,2560110501,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:07Z,hds,person,006888,Q1359370,2560110511,source for place of birth; source for place of death
+2026-10-23T20:42:08Z,hds,person,006889,Q2061114,2560110520,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:09Z,hds,person,006891,Q78067396,2560110529,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:10Z,hds,person,006892,Q1334729,2560110536,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:11Z,hds,person,006893,Q91645711,2560110551,source for place of birth; source for place of death
+2026-10-23T20:42:12Z,hds,person,006896,Q88644605,2560110567,source for place of birth; source for place of death
+2026-10-23T20:42:12Z,hds,person,006897,Q138911556,,no change
+2026-10-23T20:42:13Z,hds,person,006900,Q2165297,2560110581,source for date of birth; source for place of birth; source for date of death; source for place of death; source for place of origin
+2026-10-23T20:42:14Z,hds,person,006901,Q99446692,2560110594,source for place of birth; source for place of death
+2026-10-23T20:42:15Z,hds,person,006903,Q2188458,2560110608,source for date of birth; source for place of birth; source for place of death
+2026-10-23T20:42:16Z,hds,person,006904,Q94853677,2560110622,source for place of birth; source for place of death
+2026-10-23T20:42:22Z,hds,person,006906,Q61942394,2560110673,source for place of birth; source for date of death
+2026-10-23T20:42:23Z,hds,person,006907,Q4013198,2560110681,source for date of death; source for place of death; place of origin
+2026-10-23T20:42:23Z,hds,person,006908,Q78065556,,no change
+2026-10-23T20:42:24Z,hds,person,006909,Q61715333,2560110689,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:25Z,hds,person,006910,Q61654293,2560110696,source for date of death; source for place of death
+2026-10-23T20:42:26Z,hds,person,006911,Q114717668,2560110705,source for place of birth; source for place of death; source for place of origin
+2026-10-23T20:42:27Z,hds,person,006915,Q60998078,2560110716,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:28Z,hds,person,006916,Q96364202,2560110724,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:29Z,hds,person,006918,Q78059752,2560110733,source for date of death (existing reference completed)
+2026-10-23T20:42:30Z,hds,person,006919,Q78056932,2560110737,source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:31Z,hds,person,006920,Q138542345,2560110742,place of birth
+2026-10-23T20:42:32Z,hds,person,006921,Q61702329,2560110751,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:33Z,hds,person,006922,Q96281400,2560110758,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:34Z,hds,person,006923,Q1522062,2560110768,source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:42:35Z,hds,person,006924,Q78065517,2560110777,source for place of death
+2026-10-23T20:42:36Z,hds,person,006925,Q78066395,2560110787,source for place of birth; source for date of death (existing reference completed); source for place of death; place of origin
+2026-10-23T20:42:37Z,hds,person,006926,Q78068809,2560110797,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:38Z,hds,person,006927,Q114024362,2560110807,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:39Z,hds,person,006929,Q78058451,2560110815,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:40Z,hds,person,006930,Q112585335,2560110830,source for place of birth
+2026-10-23T20:42:41Z,hds,person,006931,Q114024360,2560110838,source for place of birth; source for date of death
+2026-10-23T20:42:42Z,hds,person,006932,Q96281533,2560110852,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:43Z,hds,person,006933,Q1447455,2560110865,source for place of birth
+2026-10-23T20:42:44Z,hds,person,006934,Q3766713,2560110875,source for date of death; source for place of death
+2026-10-23T20:42:45Z,hds,person,006936,Q61685269,2560110886,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:46Z,hds,person,006937,Q96364139,2560110898,source for place of birth; source for place of death
+2026-10-23T20:42:46Z,hds,person,006938,Q138510033,,no change
+2026-10-23T20:42:47Z,hds,person,006939,Q61682260,2560110907,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:48Z,hds,person,006940,Q61685763,2560110915,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:49Z,hds,person,006941,Q78067446,2560110922,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:42:50Z,hds,person,006942,Q61690688,2560110927,source for place of birth; source for date of death
+2026-10-23T20:42:51Z,hds,person,006943,Q61693889,2560110936,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:52Z,hds,person,006944,Q96360763,2560110943,source for date of death; place of origin
+2026-10-23T20:42:53Z,hds,person,006945,Q114024927,2560110948,source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:42:54Z,hds,person,006946,Q78057454,2560110955,source for date of death (existing reference completed)
+2026-10-23T20:42:55Z,hds,person,006947,Q3839769,2560110962,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:42:56Z,hds,person,006948,Q96367640,2560110977,place of birth; date of death (more precise)
+2026-10-23T20:42:57Z,hds,person,006949,Q55682610,2560110984,source for place of birth; source for place of death; place of origin
+2026-10-23T20:42:58Z,hds,person,006951,Q41617939,2560110988,place of origin
+2026-10-23T20:42:59Z,hds,person,006952,Q78065368,2560110994,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:00Z,hds,person,006953,Q78070487,2560111002,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:01Z,hds,person,006954,Q61775168,2560111010,source for place of birth; source for place of death
+2026-10-23T20:43:02Z,hds,person,006955,Q96484636,2560111018,source for date of death; source for place of death
+2026-10-23T20:43:03Z,hds,person,006956,Q78060610,2560111023,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death; source for place of origin
+2026-10-23T20:43:04Z,hds,person,006957,Q61701910,2560111035,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:05Z,hds,person,006959,Q78070092,2560111041,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:06Z,hds,person,006960,Q78068671,2560111049,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:07Z,hds,person,006961,Q78067945,2560111054,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death; place of origin
+2026-10-23T20:43:08Z,hds,person,006962,Q78068041,2560111062,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:09Z,hds,person,006963,Q78059765,2560111072,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of death; place of origin
+2026-10-23T20:43:16Z,hds,person,006964,Q3904177,2560111129,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:17Z,hds,person,006965,Q78057448,2560111139,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:18Z,hds,person,006966,Q78069368,2560111150,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death; source for place of origin
+2026-10-23T20:43:19Z,hds,person,006967,Q61702862,2560111160,source for date of birth; source for place of birth; source for date of death
+2026-10-23T20:43:20Z,hds,person,006968,Q78056927,2560111170,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:21Z,hds,person,006970,Q61585895,2560111181,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:22Z,hds,person,006971,Q78068992,2560111189,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:23Z,hds,person,006972,Q3840100,2560111203,source for date of birth; source for date of death; source for place of death
+2026-10-23T20:43:24Z,hds,person,006973,Q55681851,2560111217,source for place of birth; source for place of death
+2026-10-23T20:43:25Z,hds,person,006974,Q78062306,2560111225,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:26Z,hds,person,006975,Q61611451,2560111231,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:27Z,hds,person,006976,Q78065933,2560111234,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:28Z,hds,person,006977,Q78070156,2560111240,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death; place of origin
+2026-10-23T20:43:29Z,hds,person,006978,Q61774784,2560111244,source for place of death; place of origin
+2026-10-23T20:43:30Z,hds,person,006979,Q61727745,2560111250,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:31Z,hds,person,006980,Q96364254,2560111256,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:32Z,hds,person,006981,Q78058261,2560111262,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death; place of origin
+2026-10-23T20:43:33Z,hds,person,006984,Q21554319,2560111268,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:34Z,hds,person,006985,Q78062295,2560111273,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death; place of origin
+2026-10-23T20:43:35Z,hds,person,006986,Q107044193,2560111281,source for date of death (existing reference completed)
+2026-10-23T20:43:36Z,hds,person,006988,Q1355862,2560111288,source for date of birth; source for place of birth; source for date of death
+2026-10-23T20:43:37Z,hds,person,006989,Q1514582,2560111297,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:38Z,hds,person,006991,Q355352,2560111303,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:38Z,hds,person,006992,Q138911505,,no change
+2026-10-23T20:43:38Z,hds,person,006993,Q110208917,,no change
+2026-10-23T20:43:39Z,hds,person,006994,Q96364438,2560111312,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:40Z,hds,person,006997,Q1704899,2560111318,source for place of birth
+2026-10-23T20:43:41Z,hds,person,006998,Q96269890,2560111327,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:42Z,hds,person,006999,Q96253157,2560111334,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:43Z,hds,person,007000,Q1583803,2560111338,source for date of birth; source for place of birth; source for date of death; place of origin
+2026-10-23T20:43:44Z,hds,person,007002,Q94783720,2560111348,date of birth (more precise); date of death (more precise)
+2026-10-23T20:43:45Z,hds,person,007003,Q96487165,2560111358,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:46Z,hds,person,007004,Q78067349,2560111372,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:47Z,hds,person,007005,Q138758917,2560111380,place of origin
+2026-10-23T20:43:48Z,hds,person,007007,Q78062483,2560111390,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:48Z,hds,person,007008,Q138758560,,no change
+2026-10-23T20:43:49Z,hds,person,007009,Q112914418,2560111401,source for place of birth; source for place of death
+2026-10-23T20:43:50Z,hds,person,007010,Q78062490,2560111412,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:51Z,hds,person,007011,Q78065206,2560111418,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:52Z,hds,person,007012,Q78062124,2560111428,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:43:53Z,hds,person,007013,Q1408836,2560111435,source for date of birth; source for place of birth; source for place of death
+2026-10-23T20:43:54Z,hds,person,007155,Q78065162,2560111447,source for date of death (existing reference completed); source for place of death
+2026-10-23T20:43:55Z,hds,person,007156,Q96761516,2560111458,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T20:43:56Z,hds,person,007157,Q17579886,2560111472,source for place of birth; source for place of death
+2026-10-23T20:43:57Z,hds,person,007159,Q78059336,2560111480,source for date of death (existing reference completed)
+2026-10-23T20:43:58Z,hds,person,007162,Q57338574,2560111489,source for date of death (existing reference completed)
+2026-10-23T20:43:59Z,hds,person,007163,Q55670182,2560111500,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:00Z,hds,person,007164,Q55679544,2560111513,source for place of birth; source for place of death
+2026-10-23T20:44:00Z,hds,person,007165,Q25625551,,no change
+2026-10-23T20:44:01Z,hds,person,007166,Q498015,2560111524,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:05Z,hds,person,007167,Q57394941,,no change
+2026-10-23T20:44:06Z,hds,person,007168,Q1694889,2560111571,source for place of birth; source for place of death; place of origin
+2026-10-23T20:44:07Z,hds,person,007169,Q58324715,2560111578,source for date of death (existing reference completed)
+2026-10-23T20:44:07Z,hds,person,007170,Q94832489,,no change
+2026-10-23T20:44:08Z,hds,person,007171,Q1695087,2560111590,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:09Z,hds,person,007172,Q13142454,2560111598,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:10Z,hds,person,007173,Q499516,2560111605,source for place of birth; source for place of death
+2026-10-23T20:44:11Z,hds,person,007174,Q55856338,2560111616,date of death (more precise)
+2026-10-23T20:44:12Z,hds,person,007175,Q2077023,2560111619,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:13Z,hds,person,007176,Q88784958,2560111622,source for place of death
+2026-10-23T20:44:14Z,hds,person,007177,Q55679757,2560111631,source for place of birth; source for place of death
+2026-10-23T20:44:14Z,hds,person,007178,Q55679758,,no change
+2026-10-23T20:44:15Z,hds,person,007179,Q975770,2560111636,source for place of birth; source for place of death
+2026-10-23T20:44:16Z,hds,person,007180,Q55126200,2560111644,date of death (more precise)
+2026-10-23T20:44:17Z,hds,person,007181,Q55860570,2560111651,date of death (more precise)
+2026-10-23T20:44:17Z,hds,person,007183,Q94832734,,no change
+2026-10-23T20:44:18Z,hds,person,007192,Q13142834,2560111662,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:19Z,hds,person,007193,Q78076447,2560111669,source for date of death (existing reference completed)
+2026-10-23T20:44:20Z,hds,person,007194,Q96317449,2560111682,source for date of death (existing reference completed)
+2026-10-23T20:44:21Z,hds,person,007195,Q24188547,2560111694,place of origin
+2026-10-23T20:44:22Z,hds,person,007197,Q55849905,2560111699,date of death (more precise)
+2026-10-23T20:44:23Z,hds,person,007198,Q96297098,2560111708,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:44:24Z,hds,person,007199,Q96300012,2560111715,place of birth; date of death
+2026-10-23T20:44:25Z,hds,person,007200,Q96364324,2560111723,source for date of death (existing reference completed)
+2026-10-23T20:44:26Z,hds,person,007201,Q78063324,2560111739,source for date of death (existing reference completed)
+2026-10-23T20:44:27Z,hds,person,007202,Q3057057,2560111745,source for place of birth (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:44:28Z,hds,person,007203,Q107014983,2560111757,source for date of death (existing reference completed)
+2026-10-23T20:44:29Z,hds,person,007204,Q78066478,2560111769,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:44:30Z,hds,person,007205,Q96270019,2560111781,source for date of death (existing reference completed)
+2026-10-23T20:44:31Z,hds,person,007206,Q137313266,2560111790,date of death (more precise); place of death; place of origin
+2026-10-23T20:44:32Z,hds,person,007208,Q96270012,2560111802,source for date of death (existing reference completed)
+2026-10-23T20:44:33Z,hds,person,007209,Q94921685,2560111811,source for place of death; place of origin
+2026-10-23T20:44:34Z,hds,person,007210,Q96251915,2560111819,source for date of birth (existing reference completed); source for date of death
+2026-10-23T20:44:34Z,hds,person,007214,Q96251902,,no change
+2026-10-23T20:44:35Z,hds,person,007215,Q94847410,2560111830,source for place of birth
+2026-10-23T20:44:37Z,hds,person,007216,Q78058429,2560111855,source for date of death (existing reference completed)
+2026-10-23T20:44:37Z,hds,person,007217,Q96287104,,no change
+2026-10-23T20:44:37Z,hds,person,007218,Q96295904,2560111860,source for date of death (existing reference completed)
+2026-10-23T20:44:37Z,hds,person,007220,Q96300590,,no change
+2026-10-23T20:44:37Z,hds,person,007221,Q78061650,,no change
+2026-10-23T20:44:37Z,hds,person,007222,Q107044247,,no change
+2026-10-23T20:44:38Z,hds,person,007223,Q94886309,2560111873,source for place of birth; source for place of death
+2026-10-23T20:44:39Z,hds,person,007224,Q96322394,2560111879,source for date of death (existing reference completed)
+2026-10-23T20:44:39Z,hds,person,007225,Q78066019,,no change
+2026-10-23T20:44:40Z,hds,person,007226,Q50826018,2560111889,source for place of birth (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:44:40Z,hds,person,007227,Q94922463,,no change
+2026-10-23T20:44:41Z,hds,person,007228,Q78069793,2560111895,source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-10-23T20:44:41Z,hds,person,007229,Q46850318,,no change
+2026-10-23T20:44:42Z,hds,person,007230,Q673256,2560111904,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:43Z,hds,person,007231,Q107645489,2560111909,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:48Z,hds,person,007232,Q110526571,,no change
+2026-10-23T20:44:48Z,hds,person,007236,Q96575165,2560111951,source for place of birth; source for place of death
+2026-10-23T20:44:49Z,hds,person,007237,Q78067407,2560111957,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:44:50Z,hds,person,007238,Q78067726,2560111964,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:44:51Z,hds,person,007239,Q94246943,2560111974,source for date of death; source for place of death
+2026-10-23T20:44:52Z,hds,person,007242,Q94908120,2560111982,date of death (more precise)
+2026-10-23T20:44:53Z,hds,person,007243,Q2205856,2560111992,source for date of death
+2026-10-23T20:44:54Z,hds,person,007245,Q78061269,2560112006,source for date of death (existing reference completed)
+2026-10-23T20:44:55Z,hds,person,007246,Q1233573,2560112017,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:44:56Z,hds,person,007247,Q96319028,2560112030,source for date of birth (existing reference completed)
+2026-10-23T20:44:57Z,hds,person,007248,Q78064346,2560112041,source for date of death (existing reference completed)
+2026-10-23T20:44:58Z,hds,person,007249,Q78064351,2560112055,source for date of death (existing reference completed)
+2026-10-23T20:44:59Z,hds,person,007250,Q131670786,2560112068,source for place of birth; source for date of death
+2026-10-23T20:45:00Z,hds,person,007251,Q78066503,2560112076,source for date of death (existing reference completed)
+2026-10-23T20:45:00Z,hds,person,007252,Q125269061,,no change
+2026-10-23T20:45:00Z,hds,person,007253,Q125293181,,no change
+2026-10-23T20:45:00Z,hds,person,007254,Q94921457,,no change
+2026-10-23T20:45:01Z,hds,person,007255,Q78070498,2560112090,source for date of death (existing reference completed)
+2026-10-23T20:45:02Z,hds,person,007264,Q1504949,2560112102,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:02Z,hds,person,007266,Q55905313,,no change
+2026-10-23T20:45:03Z,hds,person,007267,Q1311183,2560112114,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:04Z,hds,person,007268,Q55677419,2560112129,source for place of birth; source for place of death
+2026-10-23T20:45:05Z,hds,person,007269,Q96317545,2560112137,source for date of death; place of origin
+2026-10-23T20:45:06Z,hds,person,007270,Q78060793,2560112144,source for date of death (existing reference completed)
+2026-10-23T20:45:07Z,hds,person,007271,Q138758868,2560112154,place of origin
+2026-10-23T20:45:08Z,hds,person,007272,Q96319203,2560112161,source for date of death (existing reference completed)
+2026-10-23T20:45:09Z,hds,person,007273,Q21294689,2560112168,source for place of birth; source for place of death
+2026-10-23T20:45:10Z,hds,person,007274,Q21512091,2560112175,source for place of birth; source for place of death
+2026-10-23T20:45:11Z,hds,person,007275,Q3619155,2560112182,source for date of death
+2026-10-23T20:45:12Z,hds,person,007276,Q335977,2560112189,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:13Z,hds,person,007277,Q78069399,2560112195,source for date of death (existing reference completed)
+2026-10-23T20:45:13Z,hds,person,007278,Q110208896,,no change
+2026-10-23T20:45:14Z,hds,person,007284,Q78056988,2560112202,source for date of death (existing reference completed)
+2026-10-23T20:45:14Z,hds,person,007285,Q96426289,,no change
+2026-10-23T20:45:15Z,hds,person,007286,Q96281540,2560112211,source for date of death (existing reference completed)
+2026-10-23T20:45:16Z,hds,person,007287,Q3766453,2560112218,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:17Z,hds,person,007289,Q78068066,2560112226,source for date of death (existing reference completed)
+2026-10-23T20:45:18Z,hds,person,007290,Q3619718,2560112233,source for place of birth; source for place of death
+2026-10-23T20:45:19Z,hds,person,007291,Q96267166,2560112239,source for date of death (existing reference completed)
+2026-10-23T20:45:20Z,hds,person,007292,Q42309448,2560112247,source for place of birth; source for place of death
+2026-10-23T20:45:20Z,hds,person,007293,Q78064597,,no change
+2026-10-23T20:45:21Z,hds,person,007294,Q96322637,2560112254,date of death (more precise)
+2026-10-23T20:45:22Z,hds,person,007295,Q78065401,2560112262,source for date of death (existing reference completed)
+2026-10-23T20:45:23Z,hds,person,007296,Q78066243,2560112268,source for date of death (existing reference completed)
+2026-10-23T20:45:23Z,hds,person,007297,Q139239816,,no change
+2026-10-23T20:45:24Z,hds,person,007298,Q42325234,2560112283,source for date of death
+2026-10-23T20:45:25Z,hds,person,007299,Q137166771,2560112292,source for place of birth; source for place of death
+2026-10-23T20:45:25Z,hds,person,007300,Q98923756,,no change
+2026-10-23T20:45:26Z,hds,person,007302,Q78067240,2560112303,source for date of death (existing reference completed)
+2026-10-23T20:45:27Z,hds,person,007303,Q124094,2560112312,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:36Z,hds,person,007305,Q1579052,2560112375,source for place of birth; source for place of death
+2026-10-23T20:45:37Z,hds,person,007307,Q61990,2560112384,source for place of birth; source for date of death; source for place of death; place of origin
+2026-10-23T20:45:38Z,hds,person,007308,Q1694878,2560112389,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:39Z,hds,person,007309,Q94845717,2560112397,date of death (more precise)
+2026-10-23T20:45:40Z,hds,person,007312,Q124208,2560112404,source for place of birth; source for place of death
+2026-10-23T20:45:41Z,hds,person,007313,Q96322600,2560112409,date of death (more precise)
+2026-10-23T20:45:42Z,hds,person,007315,Q55193237,2560112414,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:43Z,hds,person,007316,Q1694384,2560112421,place of origin
+2026-10-23T20:45:43Z,hds,person,007317,Q55131064,,no change
+2026-10-23T20:45:44Z,hds,person,007318,Q94918748,2560112427,source for place of birth
+2026-10-23T20:45:45Z,hds,person,007319,Q139204485,2560112431,place of origin
+2026-10-23T20:45:45Z,hds,person,007320,Q110571873,,no change
+2026-10-23T20:45:46Z,hds,person,007321,Q55676182,2560112440,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:47Z,hds,person,007322,Q119506,2560112447,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:48Z,hds,person,007331,Q96364143,2560112455,source for date of death (existing reference completed)
+2026-10-23T20:45:48Z,hds,person,007332,Q45735281,,no change
+2026-10-23T20:45:49Z,hds,person,007333,Q78067229,2560112468,source for date of death (existing reference completed)
+2026-10-23T20:45:50Z,hds,person,007352,Q64640,2560112479,source for place of death
+2026-10-23T20:45:51Z,hds,person,007406,Q55876255,2560112486,place of death
+2026-10-23T20:45:52Z,hds,person,007453,Q96281571,2560112491,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:45:52Z,hds,person,007457,Q96317758,,no change
+2026-10-23T20:45:53Z,hds,person,007501,Q122106,2560112497,source for date of birth; source for place of birth; source for date of death
+2026-10-23T20:45:54Z,hds,person,007512,Q96362810,2560112502,source for place of birth; source for date of death; source for place of death
+2026-10-23T20:45:55Z,hds,person,007612,Q96296762,2560112512,source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T20:45:56Z,hds,person,007615,Q1555605,2560112523,source for place of birth; source for place of death
+2026-10-23T20:45:56Z,hds,person,007720,Q96297290,,no change
+2026-10-23T20:45:57Z,hds,person,007731,Q78060335,2560112534,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:45:58Z,hds,person,007773,Q96299524,2560112543,source for date of birth (existing reference completed); source for place of birth; source for date of death
+2026-10-23T20:45:59Z,hds,person,007774,Q78069143,2560112556,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-10-23T20:46:00Z,hds,person,007775,Q96300471,2560112571,source for date of birth (existing reference completed); place of birth; source for date of death (existing reference completed); place of origin
+2026-10-23T20:46:01Z,hds,person,007776,Q138758860,2560112580,place of origin
+2026-10-23T20:46:01Z,hds,person,007795,Q110176679,,no change
+2026-10-23T20:46:01Z,hds,person,007796,Q110208919,,no change
+2026-10-23T21:01:36Z,hds,person,007797,Q14565831,2560117007,source for date of death
+2026-10-23T21:01:37Z,hds,person,007802,Q2958049,2560117018,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T21:01:38Z,hds,person,007818,Q55740234,2560117030,source for place of birth; source for date of death
+2026-10-23T21:01:39Z,hds,person,007820,Q15983671,2560117037,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T21:01:40Z,hds,person,007839,Q96418239,2560117048,source for date of birth (existing reference completed); source for date of death (existing reference completed); place of origin
+2026-10-23T21:01:41Z,hds,person,007842,Q136641238,2560117056,place of birth; date of death (more precise); place of origin
+2026-10-23T21:01:42Z,hds,person,007848,Q59526397,2560117066,source for date of birth (existing reference completed); source for place of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed); source for place of origin (existing reference completed)
+2026-10-23T21:01:43Z,hds,person,007865,Q76176,2560117075,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T21:01:44Z,hds,person,007871,Q55857960,2560117084,date of birth (more precise); date of death (more precise); place of death
+2026-10-23T21:01:45Z,hds,person,007873,Q55681702,2560117094,source for place of birth; source for date of death; source for place of death
+2026-10-23T21:01:46Z,hds,person,007879,Q78069123,2560117102,source for date of birth (existing reference completed); source for place of birth; source for date of death (existing reference completed); source for place of death
+2026-10-23T21:01:47Z,hds,person,007891,Q89926738,2560117114,source for place of death
+2026-10-23T21:01:48Z,hds,person,007895,Q77577237,2560117125,source for date of birth; source for place of birth; source for date of death
+2026-10-23T21:01:49Z,hds,person,007896,Q3315979,2560117133,source for date of birth; source for place of birth; source for date of death
+2026-10-23T21:01:50Z,hds,person,007897,Q117252,2560117144,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-10-23T21:01:51Z,hds,person,007898,Q96360685,2560117152,source for date of birth (existing reference completed); source for date of death
+2026-10-23T21:01:52Z,hds,person,007899,Q1928248,2560117162,source for date of birth; source for place of birth; source for date of death; source for place of death
