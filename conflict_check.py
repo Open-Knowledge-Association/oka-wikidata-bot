@@ -1,11 +1,9 @@
 """Tasks 2 and 3: check the values left alone because Wikidata says something else, where Wikidata's value has no
-source (or only an import from a Wikipedia), under the rules of the OKA bot 3 request (16 October 2026):
-  replace  no counted source supports Wikidata's value, and other sources confirm the entry's, or Wikidata's value has
-           no reference at all (jz, 17 October 2026: then it is removed unless a Wikipedia article about the person
-           states it, which the edit step checks): the entry's value is added; Wikidata's is removed (no reference)
-           or deprecated as incorrect (only a Wikipedia import)
-  prefer   no counted source supports Wikidata's value, none confirms the entry's, and Wikidata's value is a Wikipedia
-           import: it stays, the entry's value is added with preferred rank (P7452: best referenced value)
+source (or only an import from a Wikipedia), under the rules of the OKA bot 3 request (16 October 2026, changed
+23 October 2026 after objections to removing values without a person's review):
+  prefer   no counted source supports Wikidata's value: the entry's value is added with preferred rank (P7452: best
+           referenced value); Wikidata's value stays as it is, never removed or deprecated, and the case is listed on
+           User:OKA bot/Disagreement checks so that editors decide whether it should go
   both     counted sources support each value (one each is enough), nothing supports Wikidata's value while sources
            give yet other values (the fact is unclear), a place name fits both values, or the model's reading
            contradicts the sources: the entry's value is added beside Wikidata's at the same rank. Also every case
@@ -135,13 +133,13 @@ def counted(evidence, work):
             and not re.search(WORK_SITES[work], x.get("url", ""))]
 
 
-def decide(evidence, established, work, label, refs="imported from a Wikipedia"):
+def decide(evidence, established, work, label):
     """The request's rules, applied to the counted sources and to the model's reading of them ('established'). jz's
     rules (16 October 2026): when no counted source supports Wikidata's value, the entry's value is added even if no
-    other source states the fact (the entry is a source; an unsourced value or a Wikipedia import is not). If other
-    sources confirm the entry, Wikidata's value is wrong: removed without a reference, deprecated as incorrect when
-    only imported from a Wikipedia (replace). If only the entry contradicts it, it stays, and the entry's value gets
-    preferred rank as the best referenced value (prefer). The model's reading can stop an edit but never causes one."""
+    other source states the fact (the entry is a source; an unsourced value or a Wikipedia import is not). Since
+    23 October 2026 (jz) it gets preferred rank as the best referenced value and Wikidata's value stays, whether or
+    not other sources confirm the entry: the bot never removes or deprecates others' values, the page lists the
+    case for editors (prefer). The model's reading can stop an edit but never causes one."""
     says = {x.get("supports") for x in counted(evidence, work)}
     # No case goes to a person (jz, 17 October 2026): what is unclear gets both values side by side.
     if label.startswith("place") and "both" in says:      # a name that fits either place (an old name, a district)
@@ -154,9 +152,7 @@ def decide(evidence, established, work, label, refs="imported from a Wikipedia")
         return "both"       # which both values side by side show (jz)
     if established not in ("entry", "unclear"):   # the model's reading contradicts the sources: both side by side
         return "both"
-    if "entry" in says and established == "entry":
-        return "replace"
-    return "replace" if refs == "no source" else "prefer"     # an unsourced value no source supports goes (jz)
+    return "prefer"         # no source supports Wikidata's value: it stays, the entry's value is preferred (jz)
 
 
 def check(r, label, ours, claims, refs, e):
@@ -214,7 +210,7 @@ End with one fenced JSON block, exactly:
     return {"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "work": r["work"], "entry": r["entry"], "qid": r["qid"], "property": label,
             "wikidata_value": theirs, "wikidata_sources": refs, "entry_value": entry,
-            "decision": decide(evidence, verdict.get("established"), r["work"], label, refs) if verdict else "retry",
+            "decision": decide(evidence, verdict.get("established"), r["work"], label) if verdict else "retry",
             "established": (verdict or {}).get("established", ""),
             "evidence": json.dumps(evidence, ensure_ascii=False),
             "note": (verdict or {}).get("note", "no verdict returned"), "model": MODEL, "searches": searches,
