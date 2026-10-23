@@ -134,6 +134,16 @@ def save(site, entity_id, data, done, baserevid=None):
     raise RuntimeError("Wikidata kept refusing: rate limit or label/description clashes")
 
 
+def id_holder(uuid):
+    """A note when an item already carries this swissNAMES3D ID (search index, a minute or two behind): after a save
+    that timed out but went through, a restarted run must not create the item again (20 October 2026)."""
+    ident = uuid.strip("{}").upper()
+    r = read("https://www.wikidata.org/w/api.php?action=query&format=json&list=search&srlimit=5&srsearch="
+             + urllib.parse.quote(f'haswbstatement:"{SWISSNAMES3D_ID}={ident}"'))
+    hits = [h["title"] for h in r.get("query", {}).get("search", [])]
+    return f"{hits[0]} already has this swissNAMES3D ID" if hits else None
+
+
 def duplicate_nearby(site, rec, far=None, munis=()):
     """Live search: an item with this exact name that lies within 2 km, or in the same municipality (P131; an old
     position can be kilometres off: "Waldhaus" in Lützelflüh), or is an item of the same kind (or a Swiss item with no class) without coordinates;
@@ -185,8 +195,9 @@ def run_batch(site, rows, rate, refs):
             data, done = builder(row)(ent, row, refs)
             entity_id, base = row["qid"], ent.get("lastrevid")
         else:
-            reason = duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]),
-                                      row.get("munis", []))
+            reason = (row.get("add_id") and id_holder(rec["uuid"])) or \
+                duplicate_nearby(site, rec, BATCHES[row.get("batch", "")]["same_kind_name"].get(rec["group"]),
+                                 row.get("munis", []))
             data, done, entity_id = (None, [f"skipped: {reason}"], None) if reason else (build_new(row, refs), ["new item"], None)
         revid = ""
         if data:
