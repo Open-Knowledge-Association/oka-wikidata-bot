@@ -43,6 +43,7 @@ WORKS = {"hds": ("Q642074", "P902", "the Historical Dictionary of Switzerland"),
          "nkl": ("Q11992482", "P5081", "Norsk kunstnerleksikon"),           # the other works on snl.no, same API
          "sml": ("Q19378370", "P5082", "Store medisinske leksikon")}
 SNL_HOSTS = {"snl": "snl.no", "nkl": "nkl.snl.no", "sml": "sml.snl.no"}
+HDS_LINK = re.compile(r"hls-dhs-dss\.ch/(?:textes/[dfi]/[dfi]|(?:[a-z]{2}/)?articles/)0*(\d+)", re.I)  # D3810.php = 003810
 IDS = {"P902", "P4342", "P5081", "P5082", "P227", "P214", "P1248", "P4574", "P2504", "P2333",   # compared as text,
        "P213", "P244", "P268", "P269", "P496", "P906", "P5587", "P1006", "P7902", "P8313", "P7939", "P2180", "P9324",
        "P4963", "P3217", "P6194", "P7842", "P13226", "P1710", "P1254", "P4854", "P651", "P13079", "P701"}
@@ -1427,6 +1428,52 @@ def reference(work, ident, today):
     return ref
 
 
+def bare_ref(claim, work, ident):
+    """The position of a reference that gives this entry only as a bare link or identifier, without 'stated in'
+    ([[Q78065756#P569]], [[Q68470380#P569]]), or None. Such a reference is completed rather than repeated (Thomas
+    Kerboul and jz, 23 October 2026): nothing anyone added is removed."""
+    idp = WORKS[work][1]
+    for i, r in enumerate(claim.get("references", [])):
+        snaks = r["snaks"]
+        if not snaks.keys() <= {"P854", idp, "P813"} or not snaks.keys() & {"P854", idp} \
+                or any(len(s) > 1 or "datavalue" not in s[0] for s in snaks.values()):
+            continue
+        link = snaks["P854"][0]["datavalue"]["value"] if "P854" in snaks else None
+        m = HDS_LINK.search(link) if link and work == "hds" else None
+        if (link is None or m and int(m[1]) == int(ident)) and \
+                all(s["datavalue"]["value"] == ident for s in snaks.get(idp, [])):
+            return i
+    return None
+
+
+def completed(bare, ref):
+    """A bare link or identifier of the entry with the bot's reference merged in: 'stated in' and the identifier
+    added, the link kept, and a retrieval date already there kept rather than a second one added."""
+    snaks = {**ref["snaks"], **bare["snaks"]}
+    return {"snaks": snaks, "snaks-order": [p for p in ref["snaks-order"][:2] + ["P854", "P813"] if p in snaks]}
+
+
+def fold(ent, work, ident):
+    """The statements where the bot's own reference sits beside a bare link or identifier of the same entry (saved
+    before bare references were completed): the bare one completed with it, the bot's own taken out."""
+    work_q, idp, _ = WORKS[work]
+    one = lambda r, p: r["snaks"][p][0].get("datavalue", {}).get("value") if len(r["snaks"][p]) == 1 else None
+    out_claims = []
+    for cs in ent.get("claims", {}).values():
+        for c in cs:
+            refs = c.get("references", [])
+            own = [i for i, r in enumerate(refs) if r["snaks"].keys() == {"P248", idp, "P813"}
+                   and (one(r, "P248") or {}).get("id") == work_q and one(r, idp) == ident
+                   and (one(r, "P813") or {}).get("time", "") >= "+2026-10-15"]     # task 2's run started then
+            bare = bare_ref(c, work, ident)
+            if own and bare is not None:
+                c = copy.deepcopy(c)
+                c["references"][bare] = completed(c["references"][bare], {**refs[own[0]], "snaks-order": ["P248", idp, "P813"]})
+                del c["references"][own[0]]
+                out_claims.append(c)
+    return out_claims
+
+
 def place_labels(live, chosen):
     """Labels of the places on the items and in the entries: a place of the same name counts as the same place
     (Drammen the town and Drammen the urban area are two items; the source goes to the one the item uses)."""
@@ -1478,7 +1525,8 @@ def build(ent, entry, today, labels=None):
     """(claims for wbeditentity, list of changes, notes) for one entry and its live item."""
     work_q, idp, _ = WORKS[entry["work"]]
     cite = entry.get("cite")                           # an entry SNL has renamed or moved: cited where it is now
-    ref = reference(cite["work"], cite["slug"], today) if cite else reference(entry["work"], entry["id"], today)
+    cited = (cite["work"], cite["slug"]) if cite else (entry["work"], entry["id"])
+    ref = reference(*cited, today)
     claims = ent.get("claims", {})
     out_claims, done, notes = [], [], list(entry.get("notes", []))
     is_human = any(c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") == "Q5" for c in claims.get("P31", []))
@@ -1604,9 +1652,14 @@ def build(ent, entry, today, labels=None):
         if equal:
             if f["pid"] not in IDS | {"P21"} and not cites(equal[0], work_q):
                 c = copy.deepcopy(equal[0])
-                c.setdefault("references", []).append(ref)
+                bare = bare_ref(c, *cited)
+                if bare is None:
+                    c.setdefault("references", []).append(ref)
+                    done.append(f"source for {f['label']}")
+                else:
+                    c["references"][bare] = completed(c["references"][bare], ref)
+                    done.append(f"source for {f['label']} (existing reference completed)")
                 out_claims.append(c)
-                done.append(f"source for {f['label']}")
         elif existing and f["pid"] not in MULTI and PREFER_OVER_WEAK and f["pid"] not in IDS and all(
                 not c.get("references") or only_import_refs(c) for c in existing):
             c = statement(f["pid"], f["value"], ref, rank="preferred")   # with reason: best referenced value

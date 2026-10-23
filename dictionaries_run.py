@@ -7,6 +7,8 @@ edits a minute with maxlag 5. Nothing is created yet: entries without an item co
     python dictionaries_run.py plan snl  # (HDS once check_links.py has run, SNL once `dictionaries.py prefetch` has)
     python dictionaries_run.py run       # resumable; the log is dictionary_edits.csv, and what the bot leaves
                                          # alone for a person to look at is dictionary_left_alone.csv
+    python dictionaries_run.py fold      # HDS entries sourced before bare references were completed: the bot's
+                                         # reference merged into the bare one (log: dictionary_folds.csv)
 """
 import csv
 import datetime
@@ -30,6 +32,7 @@ HERE = Path(__file__).parent
 plan_file = lambda work: WORK2 / f"full_plan_{work}.jsonl"
 LOG = HERE / "dictionary_edits.csv"
 LEFT = HERE / "dictionary_left_alone.csv"
+FOLDS = HERE / "dictionary_folds.csv"
 PLAN_THREADS = 6             # entries whose facts are worked out at once (lookups are spaced per query service)
 SNL_KINDS = {"Q5": "person", "Q755707": "place", "Q4830453": "organisation", "Q43229": "organisation",
              "Q6881511": "organisation"}
@@ -490,11 +493,11 @@ def append(path, header, rows):
 
 
 def publish():
-    """Commit and push the two logs; a failed push never stops the bot."""
+    """Commit and push the logs; a failed push never stops the bot."""
     env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
     git = lambda *args: subprocess.run(["git", "-C", str(HERE), *args], capture_output=True, text=True, env=env)
     try:
-        git("add", LOG.name, LEFT.name, "plan_summary_task2.json")
+        git("add", *[p.name for p in (LOG, LEFT, FOLDS, HERE / "plan_summary_task2.json") if p.exists()])
         if git("diff", "--cached", "--quiet").returncode:
             git("commit", "-q", "-m", f"Task 2 log: {sum(1 for _ in open(LOG, encoding='utf-8')) - 1} entries done")
         git("pull", "-q", "--rebase")
@@ -544,7 +547,38 @@ def run():
                 publish()
 
 
+def fold():
+    """Where the run sourced a statement that already gave the HDS entry as a bare link or identifier, before such
+    references were completed (Thomas Kerboul and jz, 23 October 2026): one reference instead of two. Every entry
+    looked at is logged, so a rerun goes on where the last one stopped."""
+    from common import bot_site
+    site = bot_site(1)                        # at most one edit a second, as the run
+    import pywikibot
+    d.REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 2|OKA bot task 2]]"
+    seen = {r["entry"] for r in csv.DictReader(open(FOLDS, encoding="utf-8"))} if FOLDS.exists() else set()
+    todo = [r for r in csv.DictReader(open(LOG, encoding="utf-8")) if r["work"] == "hds" and r["revid"]
+            and "source for" in r["changes"] and r["entry"] not in seen]
+    todo = list({r["entry"]: r for r in todo}.values())
+    out(f"{len(todo)} sourced HDS entries to look at for two references to the same entry")
+    for b in range(0, len(todo), 50):
+        batch = todo[b:b + 50]
+        live = items(sorted({r["item"] for r in batch}))
+        log = []
+        for r in batch:
+            ent = live.get(r["item"], {})
+            claims = d.fold(ent, "hds", r["entry"]) if ent else []
+            props = ", ".join(f"[[Property:{c['mainsnak']['property']}]]" for c in claims)
+            revid, err = d.save(site, r["item"], claims, [f"one reference instead of two for {props}"], "hds",
+                                ent.get("lastrevid")) if claims else (None, None)
+            now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            log.append((now, "hds", r["entry"], r["item"], revid or "",
+                        err or (f"merged: {props}" if revid else "no change")))
+        append(FOLDS, ("time", "work", "entry", "item", "revid", "changes"), log)
+        out(f"{b + len(batch)} of {len(todo)}: {sum(1 for x in log if x[4])} merged in this batch")
+    publish()
+
+
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     d.check_occupations()
-    {"plan": plan, "run": run, "unlinked": unlinked, "crawl-hds": crawl_hds}[sys.argv[1]]()
+    {"plan": plan, "run": run, "fold": fold, "unlinked": unlinked, "crawl-hds": crawl_hds}[sys.argv[1]]()
