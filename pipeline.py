@@ -68,8 +68,11 @@ def log_key(kind, qid, uuid):
     return kind, (qid if kind.split(":")[0] == "edit" else uuid)
 
 
-def pending(kind, batch=""):
-    done = {log_key(r["kind"], r["qid"], r["uuid"]) for r in logged()}
+def pending(kind, batch="", retry_before=None):
+    """Plan rows not logged yet; with retry_before (YYYY-MM-DD), also those only skipped before that day, to try them
+    again after a check was fixed (a skip logged on or after that day stands, so a restart does not repeat them)."""
+    done = {log_key(r["kind"], r["qid"], r["uuid"]) for r in logged()
+            if not (retry_before and r["changes"].startswith("skipped") and r["time"] < retry_before)}
     _, rows = planmod.load(batch)
     return [r for r in rows if (kind in (None, r["kind"]))
             and log_key(log_kind(r), r.get("qid"), r["rec"]["uuid"]) not in done]
@@ -317,6 +320,8 @@ def main():
     ap.add_argument("--n", type=int, default=10)
     ap.add_argument("--last", type=int, default=500)
     ap.add_argument("--qids", help="run: re-check these already logged items (comma-separated), e.g. after a rule change")
+    ap.add_argument("--retry-skipped", metavar="YYYY-MM-DD",
+                    help="preview, run: try again the features skipped before this day, e.g. after a check was fixed")
     ap.add_argument("--plan", choices=[b for b in BATCHES if b], default="",
                     help="plan, preview, run, verify, status: work on this later batch (default: the first, work/plan.jsonl)")
     a = ap.parse_args()
@@ -329,7 +334,7 @@ def main():
         out(f"pending: {len(pending('edit', a.plan))} edits, {len(pending('create', a.plan))} creations")
     elif a.mode == "preview":
         refs = refs_for_today()
-        rows = chosen(a.qids, a.plan) if a.qids else pending(a.kind or "edit", a.plan)[:a.n]
+        rows = chosen(a.qids, a.plan) if a.qids else pending(a.kind or "edit", a.plan, a.retry_skipped)[:a.n]
         edits = [r for r in rows if r["kind"] == "edit"]
         live = {}
         for i in range(0, len(edits), 50):
@@ -368,7 +373,7 @@ def main():
         refs = refs_for_today()
         total = Counter()
         for b in range(1 if a.qids else a.batches):
-            rows = chosen(a.qids, a.plan) if a.qids else pending(a.kind, a.plan)[:a.batch_size]
+            rows = chosen(a.qids, a.plan) if a.qids else pending(a.kind, a.plan, a.retry_skipped)[:a.batch_size]
             if not rows:
                 break
             stats, saved = run_batch(site, rows, a.rate, refs)

@@ -109,12 +109,13 @@ def counts(log_rows, key):
     c = {"done": len({key(r) for r in log_rows}), "edited": 0, "created": 0, "statement": 0, "source": 0, "names": 0,
          "unclear": 0,
          "last": max((r["time"] for r in log_rows), default="")[:10]}
-    for r in log_rows:
+    last = {key(r): i for i, r in enumerate(log_rows)}
+    for i, r in enumerate(log_rows):
         changes = [x for x in (r.get("changes") or "").split("; ") if x]
         if r.get("revid"):
             c["created" if r["kind"].split(":")[0] == "create" else "edited"] += 1
         skipped = [x for x in changes if x.startswith("skipped")]
-        if skipped:
+        if skipped and last[key(r)] == i:            # a skip tried again later (--retry-skipped) no longer counts
             c["unclear"] += 1
             why = c.setdefault("why", {})
             why[reason_of(skipped[0])] = why.get(reason_of(skipped[0]), 0) + 1
