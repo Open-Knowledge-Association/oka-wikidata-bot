@@ -790,6 +790,10 @@ def hds_facts(hid, kind):
                     notes.append(f"{key} '{name}' not matched to one place item")
         header = clean(re.split(r"\.\s+(?:Sohn|Tochter)\b", first)[0])
         m = re.search(r",\s*von ([^.]+)$", header)
+        years = {f["pid"]: int(f["value"]["value"]["time"][1:5]) for f in facts if f["pid"] in ("P569", "P570")}
+        if m and (years.get("P570", 9999) < 1848 or "P570" not in years and years.get("P569", 9999) < 1748):
+            notes.append("place of origin left out: the person died before 1848")   # the notion of the 1848 federal
+            m = None                                   # state (Sapphorain, 25 October 2026; disputed, see P1321's talk)
         if m:
             for name in re.split(r",\s*|\s+und\s+", m.group(1)):
                 q = ch(name)
@@ -797,15 +801,7 @@ def hds_facts(hid, kind):
                     facts.append(fact("P1321", item_value(q), "place of origin"))
                 else:
                     notes.append(f"place of origin '{name}' not matched to one place item")
-    elif kind == "family":
-        m = re.search(r",\s*([^,]+)$", title)
-        if m and "Familie" in title:
-            q = ch(m.group(1))
-            if q:
-                facts.append(fact("P1321", item_value(q), "place of origin"))
-            else:
-                notes.append(f"place of origin '{m.group(1)}' not matched to one place item")
-    elif kind == "place":
+    elif kind == "place":                              # (families get no place of origin: P1321 is for people only)
         m = re.search(r"\.\s*(\d{3,4})\s+([A-ZÄÖÜ][^.;\d]{1,60}?)\s*\.", clean(first))
         if m and int(m.group(1)) <= 1800:
             facts.append(fact("P1249", time_value(int(m.group(1))), "earliest written record",
