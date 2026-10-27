@@ -78705,3 +78705,116 @@ time,kind,qid,uuid,name,revid,changes
 2026-10-25T18:54:39Z,edit:attach,Q141710597,{B46D721C-4844-482C-BA7D-C1B2910576D6},Rämsen,2560788692,swissNAMES3D ID
 2026-10-25T18:54:40Z,edit:attach,Q141710707,{AA2B58D9-C237-438D-95EE-E52162375671},Dörfli,2560788702,swissNAMES3D ID
 2026-10-25T18:54:41Z,edit:attach,Q141710983,{E528FAAE-EB4C-4C68-BC89-DB2E89DA6A91},Hasli,2560788715,swissNAMES3D ID
+2026-10-26T20:42:04Z,create:localities,,{E8222DF3-AFC8-40D7-9347-36CC9422F04C},Niederwil,,skipped: Q100350439 has the same name and no coordinates
+2026-10-26T20:42:04Z,create:localities,,{A8EE3BB7-B7CE-4C28-8EB2-D2C2C573C893},Hinteregg,,skipped: Q114239477 has the same name and no coordinates
+2026-10-26T22:59:18Z,create:localities,Q141882987,{93F5093B-F796-48B1-A4E5-B70010BCF7F9},Ettenberg,2561224930,new item
+2026-10-26T22:59:19Z,create:localities,,{92E709DB-037E-4B72-9893-DFC0A8A2E432},Ifang,,skipped: Q141187056 has the same name and no coordinates
+2026-10-26T22:59:22Z,create:localities,Q141882997,{0A27BD9A-001B-4CDF-90F7-2BBE3E2E5536},Hofguet,2561224984,new item
+2026-10-27T00:14:47Z,create:localities,Q141883353,{4A829070-A4A4-42EE-BBB9-BF8F6E734679},Ergeten,2561247305,new item
+2026-10-27T00:14:51Z,create:localities,Q141883355,{4FF58CE5-04B1-4B74-A265-F94EA39CC951},Schönenbüel,2561247346,new item
+2026-10-27T00:14:54Z,create:localities,Q141883357,{7BB5E8D4-1923-44BB-A5A3-21959032EC3E},Ettenberg,2561247388,new item
+2026-10-27T00:14:55Z,create:localities,,{E072B87B-4E5C-4D13-83EC-22C9D2C006AA},Forstegg,,skipped: Q1011745 has the same name in the same municipality
+2026-10-27T00:14:55Z,create:localities,,{BBDEDDA6-2511-4F25-8296-B9084AF937BC},Helsighausen,,skipped: Q65602 has the same name within 2 km
+2026-10-27T00:14:56Z,create:localities,,{ADB02807-0E26-4EFE-8416-91153C198814},Fischbach,,skipped: Q3916060 has the same name and no coordinates
+2026-10-27T00:14:56Z,create:localities,,{831DF71B-606A-46DC-8861-90D7B1591E95},Hattenhausen,,skipped: Q65991 has the same name within 2 km
+2026-10-27T00:14:58Z,create:localities,Q141883358,{5E56BCC8-3EA2-49CB-97DB-507237C74F8B},Römerstrasse,2561247426,new item
+2026-10-27T00:14:58Z,create:localities,,{B96E8BDD-BB60-4A4F-9DB7-8A08CF8F3BA3},Niederaach,,skipped: Q83630495 has the same name in the same municipality
+2026-10-27T00:14:59Z,create:localities,,{B69B2B61-56D4-470A-B42C-1B9175EA8C3B},Greutensberg,,skipped: Q65771 has the same name within 2 km
+2026-10-27T00:15:01Z,create:localities,Q141883360,{19FBB5E8-919C-41FF-B80E-F79D8AD2F2A7},Oberheimen,2561247454,new item
+2026-10-27T00:15:04Z,create:localities,Q141883361,{80BD0C14-D5A3-4E33-AEF8-BE06E2D290D4},Oberhueb,2561247478,new item
+2026-10-27T00:15:05Z,create:localities,,{37FBFD9C-185A-4D52-82EB-6FB0ACF6C06C},Ebersol,,skipped: Q96467256 has the same name and no coordinates
+2026-10-27T00:15:05Z,create:localities,,{017344B1-A20D-4AFA-BB3C-DCD1F330D8B7},Karlihof,,skipped: Q13519801 has the same name and no coordinates
+2026-10-27T00:15:06Z,create:localities,,{02ADC286-F738-440B-9D45-C67E555C8ABA},Vasön,,skipped: Q100231077 has the same name in the same municipality
+2026-10-27T00:15:08Z,create:localities,Q141883363,{E8389860-4ACE-4E4C-88FD-E6714421B1AB},Hegi,2561247508,new item
+2026-10-27T00:15:12Z,create:localities,Q141883364,{B301BEFF-3BEE-4B52-B301-A9AE617A9F8E},Weier,2561247544,new item
+2026-10-27T00:15:15Z,create:localities,Q141883366,{ABD4E8E1-6A4E-4BAC-A83C-C7B9B6BD04E9},Les Granges,2561247571,new item
+2026-10-27T00:15:15Z,create:localities,,{C3FA7DD6-7647-4895-B8D2-0C047766B3E0},Marfeldingen,,skipped: Q67278 has the same name within 2 km
+2026-10-27T00:15:18Z,create:localities,Q141883367,{736C6AC9-AA01-4F47-AB8C-4A19E7AAA1B2},Ambühl,2561247601,new item
+2026-10-27T00:15:19Z,create:localities,,{B5DC9C23-2C1B-41E9-9A3C-45B1BC219993},Scherliau,,skipped: Q55503093 has the same name and no coordinates
+2026-10-27T00:15:19Z,create:localities,,{76F3AB20-F928-4CE0-BF82-CCD8E18A5635},Lütiwil,,skipped: Q67569 has the same name within 2 km
+2026-10-27T00:15:20Z,create:localities,,{31F11247-5255-4F8C-B512-0956D735F1D6},Marmoud,,skipped: Q68532 has the same name within 2 km
+2026-10-27T00:15:20Z,create:localities,,{CFF2C1F6-5F6E-4BBA-ABB2-C727FCC5B139},Ibenmoos,,skipped: Q123294727 has the same name in the same municipality
+2026-10-27T00:15:21Z,create:localities,Q141883368,{EFF27F93-B611-45BF-B850-502184D43833},Halten,2561247640,new item
+2026-10-27T00:15:25Z,create:localities,Q141883370,{D8CCF930-253A-4D36-9B81-989483BF81BC},Beaupré,2561247667,new item
+2026-10-27T00:15:25Z,create:localities,,{58A7285F-A716-43D2-A217-9F009F13DB56},Äussere Altmatt,,skipped: Q135509551 has the same name and no coordinates
+2026-10-27T00:15:28Z,create:localities,Q141883372,{FAE45960-1D37-4995-9E5F-E0A57A76D2AB},Langmatt,2561247696,new item
+2026-10-27T00:15:32Z,create:localities,Q141883373,{7C60EF08-0792-4968-B35C-CA80F7DA4753},Oberholz,2561247726,new item
+2026-10-27T00:15:35Z,create:localities,Q141883374,{0910F500-9400-4378-A2E0-08E43BB99F0B},Leerüti,2561247749,new item
+2026-10-27T00:15:38Z,create:localities,Q141883376,{7B219D9F-AC71-4627-9774-0E1DBB02F1CC},Seewadel,2561247778,new item
+2026-10-27T00:15:39Z,create:localities,,{0C8A78FC-64B0-4006-B7D1-590C27E12BBA},Mesikon,,skipped: Q64873 has the same name and kind within 3 km
+2026-10-27T00:15:39Z,create:localities,,{620EFD19-FCE7-4929-A4F5-B00F8A6D6163},Bietenholz,,skipped: Q64873 has the same name and kind within 3 km
+2026-10-27T00:15:42Z,create:localities,Q141883377,{292E22E7-285D-4813-BC19-E18F889859D2},Aeschi,2561247815,new item
+2026-10-27T00:15:42Z,create:localities,,{8702E16B-615A-4B4F-B096-C5168B56386E},Les Prailats,,skipped: Q70232 has the same name within 2 km
+2026-10-27T00:15:43Z,create:localities,,{F0400A4A-3AB0-4C5C-82C6-2C54D081AEA9},Volligen,,skipped: Q65355 has the same name within 2 km
+2026-10-27T00:15:43Z,create:localities,,{F1677F05-7CA9-41F6-851B-CD8EDB58C9E9},Wallikon,,skipped: Q65952301 has the same name and no coordinates
+2026-10-27T00:15:44Z,create:localities,,{E87F5796-9BAD-4619-ADE5-594B1440F0FA},Sommerau,,skipped: Q35913287 has the same name and no coordinates
+2026-10-27T00:15:44Z,create:localities,,{EBFE60CD-4A89-43A5-9132-C9CEEABD859C},Gnöd,,skipped: Q67184 has the same name within 2 km
+2026-10-27T00:15:45Z,create:localities,,{5E46D087-D088-4996-9761-634917EA5ED6},Ussières,,skipped: Q68904 has the same name within 2 km
+2026-10-27T00:15:45Z,create:localities,,{E370E185-1E4D-4A34-B54C-81D2DE9033C9},Bürglen OW,,skipped: Q1721761 has the same name within 2 km
+2026-10-27T00:15:46Z,create:localities,,{09FACE2A-A97C-485F-9E8D-55103D7EC54F},Bramboden,,skipped: Q141444662 has the same name in the same municipality
+2026-10-27T00:15:46Z,create:localities,,{38FAE7BC-2A50-4173-9138-83A5B27A3FEA},Sihlbrugg,,skipped: Q692072 has the same name in the same municipality
+2026-10-27T00:15:47Z,create:localities,Q141883378,{42EE9EF2-C078-4B87-A973-48C5E797AD6A},Zimmerberg,2561247876,new item
+2026-10-27T00:15:48Z,create:localities,,{FE842343-F7AC-4A2C-90BF-7A9887C28735},Hinteruttenberg,,skipped: Q56284279 has the same name in the same municipality
+2026-10-27T00:15:51Z,create:localities,Q141883380,{4824D00A-3C34-4735-A55C-779611C872FB},Rehhag,2561247913,new item
+2026-10-27T00:15:54Z,create:localities,Q141883381,{50968AA8-1EBD-4CBF-B56B-6647D2C1EE4B},Hagnau,2561247952,new item
+2026-10-27T00:15:58Z,create:localities,Q141883382,{8E22181A-D41D-4808-B168-8E97E08D9729},Oberholz,2561247988,new item
+2026-10-27T00:16:01Z,create:localities,Q141883384,{00A80187-C675-460C-AD32-CCEA102CCE40},Rothenfluh,2561248025,new item
+2026-10-27T00:16:01Z,create:localities,,{D978785F-E7CD-4F9A-8381-8BD8160F6D43},Mulflen,,skipped: Q70273 has the same name within 2 km
+2026-10-27T00:16:02Z,create:localities,,{BC412982-1B36-4963-952A-A10C6A498716},Schenkenberg,,skipped: Q382126 has the same name in the same municipality
+2026-10-27T00:16:03Z,create:localities,,{C3DBBE5F-4A02-4E54-8285-67967582C1D0},Büschikon,,skipped: Q65190 has the same name within 2 km
+2026-10-27T00:16:03Z,create:localities,,{B8B6054D-8E74-4F94-9176-32F803A85BDA},Gwinden,,skipped: Q68302 has the same name within 2 km
+2026-10-27T00:16:04Z,create:localities,,{631DE2F3-B013-434B-87EB-C8F18B6733AD},Le Cerneux-Godat,,skipped: Q70232 has the same name within 2 km
+2026-10-27T00:16:04Z,create:localities,,{F43FD84D-3DC3-4459-B501-9F5DD46E99D8},Fornet-Dessus,,skipped: Q68079 has the same name within 2 km
+2026-10-27T00:16:05Z,create:localities,Q141883385,{56E348AF-5F79-4C87-A885-3B0237208174},Stampfi,2561248061,new item
+2026-10-27T00:16:08Z,create:localities,Q141883386,{62FBAD1A-F110-47EE-9669-9C1D5C0FE8B4},Marchstein,2561248097,new item
+2026-10-27T00:16:12Z,create:localities,Q141883387,{1EBF3FA4-F568-4AB4-8D78-2A0BD8B0ABEC},Voremwald,2561248133,new item
+2026-10-27T00:16:15Z,create:localities,Q141883390,{4580BDD9-2AFE-481C-B75D-64B69922E007},Roth,2561248167,new item
+2026-10-27T00:16:16Z,create:localities,,{D019BDBD-6986-49B5-93A0-67F9ED4D357F},Isenbergschwil,,skipped: Q65033 has the same name within 2 km
+2026-10-27T00:16:16Z,create:localities,,{AB39A654-B01E-4C2F-B567-00AB03AB5EEC},Wallenschwil,,skipped: Q65024 has the same name within 2 km
+2026-10-27T00:16:16Z,create:localities,,{BD428F7D-D44E-4D1F-AB7A-05962CA11007},Brunnwil,,skipped: Q65024 has the same name within 2 km
+2026-10-27T00:16:17Z,create:localities,,{21924EC3-F087-4760-AD07-7EF85C309DB8},Le Maley,,skipped: Q70424 has the same name in the same municipality
+2026-10-27T00:16:19Z,create:localities,Q141883391,{FC83632E-0933-458A-9C3C-12798691738A},La Côte,2561248210,new item
+2026-10-27T00:16:19Z,create:localities,,{633DFE2E-3C81-4559-B261-661918C84021},Chesard,,skipped: Q70190 has the same name within 2 km
+2026-10-27T00:16:22Z,create:localities,Q141883392,{F8B485E5-AD86-4412-8DDD-6BB46851FD21},Wyden,2561248252,new item
+2026-10-27T00:16:25Z,create:localities,Q141883395,{26321ECC-9A12-44C5-B228-1A90D201ED4B},Grenchen,2561248284,new item
+2026-10-27T00:16:26Z,create:localities,,{762CE8C3-D769-4B99-B7C6-2DE8F60ED602},Bagewil,,skipped: Q67718 has the same name within 2 km
+2026-10-27T00:16:26Z,create:localities,,{8F635A46-0FD8-463D-9D95-221F8B8BA483},Amtmerswil,,skipped: Q67718 has the same name within 2 km
+2026-10-27T00:16:29Z,create:localities,Q141883396,{378DC94C-D1D7-468C-BD17-0B4B48E997DE},Bundtels,2561248312,new item
+2026-10-27T00:16:29Z,create:localities,,{501F09EB-38E0-418E-B6AE-4D260F1D3632},Waltwil,,skipped: Q69866 has the same name within 2 km
+2026-10-27T00:16:32Z,create:localities,Q141883397,{AEEA62DE-8138-4CC9-86C6-5BDD79E98B3C},Zimmerberg,2561248345,new item
+2026-10-27T00:16:33Z,create:localities,,{3C91CEBC-ED8D-480B-8C68-8D6D2B411C8C},Jetzikofen,,skipped: Q69688 has the same name within 2 km
+2026-10-27T00:16:35Z,create:localities,Q141883398,{3E7B5AA0-8138-4D93-8927-F9762F447CBC},Oberholz,2561248376,new item
+2026-10-27T00:16:36Z,create:localities,,{D07B0E8C-3455-4341-B3CF-20CA0887881F},Kaltacker,,skipped: Q67632 has the same name within 2 km
+2026-10-27T00:16:37Z,create:localities,,{1BC56BE6-8C51-405B-90E2-ACDFBE140C49},Waldhaus,,skipped: Q56257355 has the same name in the same municipality
+2026-10-27T00:16:37Z,create:localities,,{71E03B6E-6808-48A2-9EDC-6E33C5A8BC48},Ried,,skipped: Q56257483 has the same name in the same municipality
+2026-10-27T00:16:38Z,create:localities,,{38EB3715-8773-4F14-9786-5E4F790EFA23},Chevressy,,skipped: Q70600 has the same name within 2 km
+2026-10-27T00:16:38Z,create:localities,,{6660F39E-A6F7-4C7B-A613-428771694ED0},Vers-chez-Savary,,skipped: Q69525 has the same name and kind within 3 km
+2026-10-27T00:16:39Z,create:localities,,{65BB0194-5762-47EC-BF73-BC61B3CD6A87},Etrabloz,,skipped: Q69525 has the same name and kind within 3 km
+2026-10-27T00:16:40Z,create:localities,,{C0A60AB7-BBE8-4013-99B9-8D76FFB57249},Treytorrens (Payerne),,skipped: Q70673 has the same name within 2 km
+2026-10-27T00:16:40Z,create:localities,,{EDE5800F-8B3D-4081-A820-9FB6D9035180},Vers chez Descloux,,skipped: Q67736 has the same name within 2 km
+2026-10-27T00:16:41Z,create:localities,,{0C6738B5-3A88-47B8-97CD-916A0DA30001},Les Ponts-d'Avau,,skipped: Q66444 has the same name within 2 km
+2026-10-27T00:16:43Z,create:localities,Q141883401,{1FB026C3-43F7-425B-A2BB-793FF0C75EFF},Le Pont,2561248441,new item
+2026-10-27T00:16:43Z,create:localities,,{0EFFF8A3-9E2B-4C3C-AAAD-F7F5910FDB76},Kärselen,,skipped: Q65249 has the same name within 2 km
+2026-10-27T00:16:46Z,create:localities,Q141883402,{929DBCE5-783C-4F0E-AC7E-A719203CAF83},Kaiserstuhl,2561248481,new item
+2026-10-27T00:16:47Z,create:localities,,{1B0A860C-5419-4FCB-857C-C267C7A103A1},La Dullive,,skipped: Q69300 has the same name and kind within 3 km
+2026-10-27T00:16:48Z,create:localities,,{3DF09307-D3C5-40E7-A944-88B99B284D5E},Le Jordil,,skipped: Q141710150 has the same name in the same municipality
+2026-10-27T00:16:48Z,create:localities,,{B5654207-0172-44FB-B67C-A18A8B82BA58},Prayoud,,skipped: Q56260877 has the same name in the same municipality
+2026-10-27T00:16:49Z,create:localities,,{5A489698-4994-489E-8AA2-6BDA696AEFCF},Blatten (Lötschen),,skipped: Q67496 has the same name within 2 km
+2026-10-27T00:16:49Z,create:localities,,{C4B4AA13-B9F2-4F29-A74C-B542BFBF1D02},Calonico,,skipped: Q690251 has the same name in the same municipality
+2026-10-27T00:16:50Z,create:localities,,{93451D15-F05D-4224-9628-CAB8A042C68C},Gueuroz,,skipped: Q123295657 has the same name in the same municipality
+2026-10-27T00:16:50Z,create:localities,,{E58F8D85-2E6D-4116-9B28-B240C3BE9DE2},Chemin-Dessous,,skipped: Q113896377 has the same name and no coordinates
+2026-10-27T00:16:51Z,create:localities,,{7404E6A3-5E11-49BF-B8C5-E1514E11A0F1},Treggia,,skipped: Q69043 has the same name within 2 km
+2026-10-27T00:16:52Z,create:localities,Q141883404,{1AA4D8CF-8DC2-4FEA-A5CF-4070209AD936},Bodenrüti,2561248540,new item
+2026-10-27T00:16:52Z,create:localities,,{BA1A7B22-C508-410E-9BF5-B26CBA6CADBB},Axalp,,skipped: Q791858 has the same name in the same municipality
+2026-10-27T00:16:55Z,create:localities,Q141883405,{6162BA84-9A9E-4344-AC63-7E20B4AAA11A},Ebnet,2561248574,new item
+2026-10-27T00:16:59Z,create:localities,Q141883406,{BD48547D-3234-459C-877C-C7106B64E0B3},Tüfi,2561248610,new item
+2026-10-27T00:16:59Z,create:localities,,{50321A2D-D7E8-42B8-A7F9-4EFDD5A01437},La Valsainte,,skipped: Q376486 has the same name in the same municipality
+2026-10-27T00:17:00Z,create:localities,,{4DA5917E-1F6B-491F-8E28-4642C8EBCA2D},Tannhölzli,,skipped: Q66945 has the same name within 2 km
+2026-10-27T00:17:02Z,create:localities,Q141883408,{AAF5EB4C-8640-41D6-8D7A-5F976CF9DC63},Löchli,2561248646,new item
+2026-10-27T00:17:02Z,create:localities,,{D2B9B63B-23AD-4D3A-9296-33A3844F83A6},Mungnau,,skipped: Q67238 has the same name within 2 km
+2026-10-27T00:17:05Z,create:localities,Q141883409,{CD8C844E-A853-4180-9901-CC894B34DF6B},Liebegg,2561248672,new item
+2026-10-27T00:17:06Z,create:localities,,{E3B132DA-E45C-45EB-97A9-056D99247EC9},La Bâtie,,skipped: Q67772264 has the same name in the same municipality
+2026-10-27T00:17:09Z,create:localities,Q141883410,{A2E8D769-804C-41DD-B8F6-767DA4F1DAE1},Beau-Site,2561248700,new item
+2026-10-27T00:17:12Z,create:localities,Q141883411,{EA395F75-DF39-4C66-962B-BEE9F73250AC},Rossfallen,2561248734,new item
+2026-10-27T00:17:13Z,create:localities,,{C3E0DD4A-A69E-4712-AD5B-9547278BDC4E},La Forcla,,skipped: Q141684489 has the same name in the same municipality
+2026-10-27T00:17:15Z,create:localities,Q141883413,{1BB3A174-51F9-4A52-A58B-D78A5DD84F58},La Côte,2561248763,new item
