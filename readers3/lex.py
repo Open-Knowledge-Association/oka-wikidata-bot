@@ -26,7 +26,19 @@ def candidates(n):
 
 def moved(slug, host):
     """The slug the entry's page now redirects to on the same site, or None: lex.dk renames articles as snl.no does
-    (A.B._Keith is now Arthur_Berriedale_Keith), and the old JSON address then answers 404."""
+    (A.B._Keith is now Arthur_Berriedale_Keith), and the old JSON address then answers 404. Renamed twice
+    (A.P._Møller, then A.P._Møller_-_Arnold_Peter_Møller, now A.P._Møller_-_skibsreder): followed to the end."""
+    new, seen = slug, {slug}
+    for _ in range(5):
+        step = moved_once(new, host)
+        if not step or step in seen:
+            break
+        new = step
+        seen.add(step)
+    return new if new != slug else None
+
+
+def moved_once(slug, host):
     page = f"https://{host}/{urllib.parse.quote(slug)}"
     d.wait_turn(host, 1.0)
     if shutil.which("curl"):                        # the PC (its Python's certificate store is out of date)
@@ -91,6 +103,9 @@ def read(slug, work=WORK, host=HOST):
     if e.get("metadata_license_name") != "fri":
         return {"title": e.get("title", slug), "kind": "person", "facts": [], "notes": ["metadata not marked free to reuse"]}
     m = e.get("metadata") or {}
+    if e.get("canonical") and not (m.get("birth_date") or m.get("death_date")):   # a rename can lead to an article
+        return {"title": e.get("title", slug), "kind": "person", "facts": [],     # on something else (a family, a
+                "notes": [f"entry renamed to {e['canonical']['slug']}, which gives no life dates; left alone"]}  # firm)
     aliases, _ = d.other_names(m.get("alternative_form"), "person")
     facts += [d.fact("ALIAS", {"language": "da", "value": a}, "other name") for a in aliases]
     for key, pid, label in (("birth_date", "P569", "date of birth"), ("death_date", "P570", "date of death")):
