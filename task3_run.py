@@ -29,6 +29,7 @@ from pathlib import Path
 import dictionaries as d
 import dictionaries_run as dr
 import sources3 as s
+import userpage as page_builder
 
 APPROVED = True               # Wikidata:Requests for permissions/Bot/OKA bot 3, approved by Ymblanter on 2026-11-03
 HERE = Path(__file__).parent
@@ -218,7 +219,7 @@ def publish():
     env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
     git = lambda *args: subprocess.run(["git", "-C", str(HERE), *args], capture_output=True, text=True, env=env)
     try:
-        git("add", *[p.name for p in (LOG, LEFT) if p.exists()])
+        git("add", *[p.name for p in (LOG, LEFT, HERE / "plan_summary_task3.json") if p.exists()])
         if git("diff", "--cached", "--quiet").returncode:
             git("commit", "-q", "-m", f"Task 3 log: {sum(1 for _ in open(LOG, encoding='utf-8')) - 1} entries done")
         git("pull", "-q", "--rebase")
@@ -263,7 +264,9 @@ def run():
             dr.append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)
             dr.append(LEFT, ("work", "entry", "item", "title", "note"), left)
             d.out(f"{b + len(batch)} of {len(todo)}: {sum(1 for r in log if r[5])} saved in this batch")
-            if (b // 50) % 10 == 9 or b + 50 >= len(todo):
+            if b == 0 or (b // 50) % 10 == 9 or b + 50 >= len(todo):    # User:OKA bot, then the logs
+                plans = {w: sum(1 for _ in open(plan_file(w), encoding="utf-8")) for w in s.WORKS3 if plan_file(w).exists()}
+                page_builder.save(site, "Task 3 progress (automatic)", task3_plans=plans)
                 publish()
 
 

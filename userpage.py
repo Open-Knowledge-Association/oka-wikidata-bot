@@ -1,8 +1,9 @@
 """User:OKA bot: the bot's page, written by whichever run finishes a batch (both tasks use this module).
 
 The page is built from the public logs only (edits.csv for task 1, dictionary_edits.csv and dictionary_left_alone.csv
-for task 2) and from the number of records each task has planned (plan_summary_task1.json, plan_summary_task2.json,
-committed with the logs), so the swisstopo run and the reference-works run write the same page.
+for task 2, task3_edits.csv and task3_left_alone.csv for task 3) and from the number of records each task has planned
+(plan_summary_task<n>.json, committed with the logs), so the swisstopo run and the reference-works runs write the same
+page.
 """
 import csv
 import datetime
@@ -12,7 +13,8 @@ from common import BATCHES, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D
 
 REPO = "https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/"
 TASK1_LOG, TASK2_LOG, TASK2_LEFT = ROOT / "edits.csv", ROOT / "dictionary_edits.csv", ROOT / "dictionary_left_alone.csv"
-SUMMARY = {1: ROOT / "plan_summary_task1.json", 2: ROOT / "plan_summary_task2.json"}
+TASK3_LOG, TASK3_LEFT = ROOT / "task3_edits.csv", ROOT / "task3_left_alone.csv"
+SUMMARY = {1: ROOT / "plan_summary_task1.json", 2: ROOT / "plan_summary_task2.json", 3: ROOT / "plan_summary_task3.json"}
 WORKS = {"hds": ("Q642074", "Historical Dictionary of Switzerland"), "snl": ("Q746368", "Store norske leksikon"),
          "nkl": ("Q11992482", "Norsk kunstnerleksikon"), "sml": ("Q19378370", "Store medisinske leksikon")}
 
@@ -126,8 +128,32 @@ def counts(log_rows, key):
     return c
 
 
-def table_rows(task1_plans=None, task2_plans=None):
-    """One row per swisstopo batch (task 1) and per reference work (task 2)."""
+def work_rows(task, log_path, left_path, works, plans):
+    """One row per reference work of task 2 or 3: works = {work: (item, name)}."""
+    log, left, out = rows(log_path), rows(left_path), []
+    for w, (q, name) in works.items():
+        mine = [r for r in log if r["work"] == w]
+        if not mine and w not in plans:
+            continue
+        notes = [n for n in left if n["work"] == w]
+        differs = sum(1 for n in notes if "different value" in n["note"])
+        c = counts(mine, lambda r: r["entry"])
+        c["unclear"] = len(notes) - differs
+        c["why"] = {}
+        for n in notes:
+            if "different value" not in n["note"]:
+                c["why"][reason_of(n["note"])] = c["why"].get(reason_of(n["note"]), 0) + 1
+        out.append((task, f"[[{q}|{name}]]", plans.get(w), c, differs))
+    return out
+
+
+def task3_works():
+    import sources3                                  # (imports the task 2 module; only needed here)
+    return {w: (q, name[4:] if name.startswith("the ") else name) for w, (q, _, name) in sources3.WORKS3.items()}
+
+
+def table_rows(task1_plans=None, task2_plans=None, task3_plans=None):
+    """One row per swisstopo batch (task 1) and per reference work (tasks 2 and 3)."""
     out = []
     t1 = rows(TASK1_LOG)
     plans1 = planned(1, task1_plans)
@@ -139,30 +165,19 @@ def table_rows(task1_plans=None, task2_plans=None):
         label = f"[[{q}|{source}]]: " + ", ".join(cfg["covers"])
         c = counts(mine, lambda r: (r["kind"], r["qid"] if r["kind"].startswith("edit") else r["uuid"]))
         out.append((1, label, plans1.get(b), c, None))
-    t2, left = rows(TASK2_LOG), rows(TASK2_LEFT)
-    plans2 = planned(2, task2_plans)
-    for w, (q, name) in WORKS.items():
-        mine = [r for r in t2 if r["work"] == w]
-        if not mine and w not in plans2:
-            continue
-        notes = [n for n in left if n["work"] == w]
-        differs = sum(1 for n in notes if "different value" in n["note"])
-        c = counts(mine, lambda r: r["entry"])
-        c["unclear"] = len(notes) - differs
-        c["why"] = {}
-        for n in notes:
-            if "different value" not in n["note"]:
-                c["why"][reason_of(n["note"])] = c["why"].get(reason_of(n["note"]), 0) + 1
-        out.append((2, f"[[{q}|{name}]]", plans2.get(w), c, differs))
+    out += work_rows(2, TASK2_LOG, TASK2_LEFT, WORKS, planned(2, task2_plans))
+    plans3 = planned(3, task3_plans)
+    if plans3 or TASK3_LOG.exists():
+        out += work_rows(3, TASK3_LOG, TASK3_LEFT, task3_works(), plans3)
     return out
 
 
-def overview(task1_plans=None, task2_plans=None):
+def overview(task1_plans=None, task2_plans=None, task3_plans=None):
     fmt = lambda n: "–" if n is None else f"{n:,}"
     lines = ['{| class="wikitable sortable" style="text-align:right"',
              "! Task !! Source !! Records !! Done !! Items edited !! Items created !! Statements added !! "
              "Sources added !! Names added !! Not added: Wikidata differs !! Not added: unclear !! Last edit"]
-    for task, label, records, c, differs in table_rows(task1_plans, task2_plans):
+    for task, label, records, c, differs in table_rows(task1_plans, task2_plans, task3_plans):
         lines += ["|-", f'| {task} || style="text-align:left" | {label} || {fmt(records)} || {fmt(c["done"])} || '
                         f'{fmt(c["edited"])} || {fmt(c["created"] if task == 1 else None)} || {fmt(c["statement"])} || '
                         f'{fmt(c["source"])} || {fmt(c["names"])} || {fmt(differs)} || {fmt(c["unclear"])} || '
@@ -185,24 +200,25 @@ def overview(task1_plans=None, task2_plans=None):
         "They are listed in the log too.",
         f"Logs: task 1 [{REPO}edits.csv edits.csv] (and [{REPO}corrections.csv corrections.csv]); task 2 "
         f"[{REPO}dictionary_edits.csv dictionary_edits.csv] and, for the values not added, "
-        f"[{REPO}dictionary_left_alone.csv dictionary_left_alone.csv]. Updated "
+        f"[{REPO}dictionary_left_alone.csv dictionary_left_alone.csv]; task 3 [{REPO}task3_edits.csv task3_edits.csv] "
+        f"and [{REPO}task3_left_alone.csv task3_left_alone.csv]. Updated "
         f"{datetime.datetime.now(datetime.timezone.utc):%d %B %Y, %H:%M} UTC.",
         "",
         "=== Not added: unclear, by reason ===",
         "Unclear cases are resolved over time: by better matching, by checked lists of names and words, or by hand, "
         "after which the bot makes the decided edits.",
         "",
-    ] + by_reason(task1_plans, task2_plans)
+    ] + by_reason(task1_plans, task2_plans, task3_plans)
     return "\n".join(lines)
 
 
-def by_reason(task1_plans=None, task2_plans=None):
+def by_reason(task1_plans=None, task2_plans=None, task3_plans=None):
     """The unclear cases of each source, one column per reason, and what each reason means."""
     fmt = lambda n: f"{n:,}" if n else "–"
     keys = [k for k, _, _ in REASONS]
     out = ['{| class="wikitable sortable" style="text-align:right"',
            "! Task !! Source !! " + " !! ".join(title for _, title, _ in REASONS) + " !! Total"]
-    for task, label, _, c, _ in table_rows(task1_plans, task2_plans):
+    for task, label, _, c, _ in table_rows(task1_plans, task2_plans, task3_plans):
         why = c.get("why", {})
         out += ["|-", f'| {task} || style="text-align:left" | {label} || '
                       + " || ".join(fmt(why.get(k, 0)) for k in keys) + f" || {fmt(sum(why.values()))}"]
@@ -235,8 +251,17 @@ For each entry linked to an item, the bot adds the facts the entry states (for p
 """
 
 
-def build_text(task1_plans=None, task2_plans=None, releases=()):
-    return f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]]); facts from reference works such as the Historical Dictionary of Switzerland and Store norske leksikon ([[Wikidata:Requests for permissions/Bot/OKA bot 2|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
+def task3_section():
+    names = ", ".join(f"[[{q}|{name}]]" for q, name in task3_works().values())
+    return f"""== Task 3: facts from more reference works ==
+Approved at [[Wikidata:Requests for permissions/Bot/OKA bot 3]]. Sources: {names}.
+
+The same edits as task 2, for each entry linked to an item through the work's identifier: the facts the entry states, each with a reference to the entry, and the entry as a source where the item already has the same value. Where the entry disagrees with an existing value, nothing is added in this run and the case is listed; such cases are handled later in separate batches by the approved rules (see [[User:OKA bot/Disagreement checks]]). Where lex.dk has renamed an entry, the item's old ID is kept with deprecated rank ({{{{P|2241}}}}: {{{{Q|Q45403344}}}}) and the current one is added. Only facts are taken; no text is copied.
+"""
+
+
+def build_text(task1_plans=None, task2_plans=None, releases=(), task3_plans=None):
+    return f"""{{{{Bot|7804j|task=Geographic feature updates from swisstopo data ([[Wikidata:Requests for permissions/Bot/OKA bot|approved request]]); facts from reference works such as the Historical Dictionary of Switzerland and Store norske leksikon ([[Wikidata:Requests for permissions/Bot/OKA bot 2|approved request]]) and more national biographies ([[Wikidata:Requests for permissions/Bot/OKA bot 3|approved request]])|flag=yes|framework=Pywikibot|language=Python|source=https://github.com/Open-Knowledge-Association/oka-wikidata-bot}}}}
 ''This page is updated automatically by the bot after its runs, with the operator's permission.''
 
 Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Association). To report a problem, please write on [[User talk:7804j]] or to info@oka.wiki. If the bot misbehaves and I'm not around, any administrator may block it.
@@ -244,16 +269,16 @@ Run by [[User:7804j|7804j]] on behalf of [[m:OKA|OKA]] (Open Knowledge Associati
 '''Source code''' (public, MIT licence): [https://github.com/Open-Knowledge-Association/oka-wikidata-bot github.com/Open-Knowledge-Association/oka-wikidata-bot].
 
 == Overview ==
-{overview(task1_plans, task2_plans)}
+{overview(task1_plans, task2_plans, task3_plans)}
 
 {task1_section(releases)}
-{task2_section()}"""
+{task2_section()}{chr(10) + task3_section() if planned(3, None) or TASK3_LOG.exists() else ""}"""
 
 
-def save(site, summary, task1_plans=None, task2_plans=None, releases=()):
+def save(site, summary, task1_plans=None, task2_plans=None, releases=(), task3_plans=None):
     """Write the page if it changed; returns whether it did."""
     import pywikibot
-    text = build_text(task1_plans, task2_plans, releases)
+    text = build_text(task1_plans, task2_plans, releases, task3_plans)
     page = pywikibot.Page(site, "User:OKA bot")
     if page.exists() and page.text.strip() == text.strip():
         return False

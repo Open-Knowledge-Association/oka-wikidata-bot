@@ -75,7 +75,7 @@ def read(ident):
     for date_key, place_key, gnd_key, (pid_date, label_date), (pid_place, label_place) in EVENTS:
         unknown = date_key == "Sterbedatum" and t.get("Sterbedatum unbekannt", "").lower() == "ja"
         if t.get(date_key) and not unknown:
-            when = re.sub(r"^(\d{4})/(\d{2})/(\d{2})$", r"\3.\2.\1", t[date_key].strip())   # '1952/02/15' too
+            when = re.sub(r"^(\d{4})[/-](\d{2})[/-](\d{2})$", r"\3.\2.\1", t[date_key].strip())   # '1952/02/15', '1859-12-06'
             f = n.german_date(when, pid_date, label_date, notes, country=AUSTRIA)
             if f:
                 facts.append(f)
