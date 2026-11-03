@@ -6,6 +6,7 @@ sits on exactly one item, one edit per item and work, the works in turn, at most
                                           # all works at once (one thread each); no queries while reading
     python task3_run.py plan [work ...]   # no edits: the facts of each crawled work and the checks against Wikidata,
                                           # one work at a time, as their crawls end
+    python task3_run.py check <work> [n]  # no edits: a plan's counts, and n sampled edits against the live items
     python task3_run.py run               # resumable; only the works listed in work/task3/ready.txt (each plan is
                                           # looked at first); the log is task3_edits.csv, and what the bot leaves
                                           # alone for a person to look at is task3_left_alone.csv
@@ -199,6 +200,41 @@ def plan():
         left.remove(ready[0])
 
 
+def check():
+    """What a plan would do, before its work goes into ready.txt: counts of facts and notes, then the edits of a
+    random sample against the live items, with labels (read only)."""
+    import collections
+    import random
+    work, n = sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else 15
+    rows = [json.loads(line) for line in open(plan_file(work), encoding="utf-8")]
+    facts = collections.Counter(f["label"] for e in rows for f in e["facts"])
+    notes = collections.Counter(d.clean(x).split("'")[0].split(":")[0].strip() for e in rows for x in e["notes"])
+    d.out(f"{work}: {len(rows)} entries, {sum(1 for e in rows if e['facts'])} with facts, {sum(facts.values())} facts; "
+          f"{sum(1 for e in rows if e.get('cite'))} renamed")
+    d.out("  facts: " + ", ".join(f"{k} {v}" for k, v in facts.most_common()))
+    d.out("  notes: " + ", ".join(f"{k} {v}" for k, v in notes.most_common(12)))
+    sample = random.Random(len(rows)).sample([e for e in rows if e["facts"]], min(n, len(rows)))
+    live = d.items(sorted({e["qid"] for e in sample}))
+    labels = d.place_labels(live, sample)
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
+    values = d.items(sorted({f["value"]["value"]["id"] for e in sample for f in e["facts"]
+                             if isinstance(f["value"]["value"], dict) and "id" in f["value"]["value"]}))
+    name = lambda ent: next((ent.get("labels", {})[lang]["value"] for lang in ("en", "mul", "de", "sv", "da", "fi", "nl")
+                             if lang in ent.get("labels", {})), "")
+    for e in sample:
+        ent = live.get(e["qid"], {})
+        claims, changes, notes_ = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
+        label = name(ent)
+        named = []
+        for f in e["facts"]:
+            v = f["value"]["value"]
+            v = f"{name(values.get(v['id'], {}))} ({v['id']})" if isinstance(v, dict) and "id" in v else \
+                v.get("time", "")[1:11] if isinstance(v, dict) else v
+            named.append(f"{f['label']}={v}")
+        d.out(f"- {e['id']} {e['qid']} {label!r} ({e['title']}): {'; '.join(named)}")
+        d.out(f"    changes: {'; '.join(changes) or 'none'}" + (f"   notes: {' | '.join(notes_)}" if notes_ else ""))
+
+
 # ---------------------------------------------------------------- run
 
 def logged():
@@ -273,4 +309,4 @@ def run():
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     d.check_occupations()
-    {"crawl": crawl, "plan": plan, "run": run}[sys.argv[1]]()
+    {"crawl": crawl, "plan": plan, "check": check, "run": run}[sys.argv[1]]()
