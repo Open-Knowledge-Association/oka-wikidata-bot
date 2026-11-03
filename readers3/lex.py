@@ -3,8 +3,13 @@ version whose metadata is marked free to reuse ("fri"), with the same fields as 
 death, sex, other names). Only that metadata is read, one request a second; the article text is never kept.
 Dansk kvindebiografisk leksikon (dkl.py) is the same, on its own lex.dk host."""
 import json
+import os
 import re
+import shutil
+import subprocess
+import urllib.error
 import urllib.parse
+import urllib.request
 
 import dictionaries as d
 import sources3 as s
@@ -19,11 +24,48 @@ def candidates(n):
     return s.linked("P8313", n)
 
 
+def moved(slug, host):
+    """The slug the entry's page now redirects to on the same site, or None: lex.dk renames articles as snl.no does
+    (A.B._Keith is now Arthur_Berriedale_Keith), and the old JSON address then answers 404."""
+    page = f"https://{host}/{urllib.parse.quote(slug)}"
+    d.wait_turn(host, 1.0)
+    if shutil.which("curl"):                        # the PC (its Python's certificate store is out of date)
+        location = subprocess.run(["curl", "-s", "-I", "-o", os.devnull, "-w", "%{redirect_url}", "-A", d.UA, page],
+                                  capture_output=True, text=True, encoding="utf-8").stdout.strip()
+    else:
+        class Stay(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self, *args, **kwargs):
+                return None
+        try:
+            urllib.request.build_opener(Stay).open(urllib.request.Request(page, headers={"User-Agent": d.UA},
+                                                                         method="HEAD"), timeout=60)
+            location = ""
+        except urllib.error.HTTPError as e:
+            location = e.headers.get("Location", "") if e.code in (301, 302, 307, 308) else ""
+        except OSError:
+            location = ""
+    target = urllib.parse.urlsplit(urllib.parse.urljoin(page, location)) if location else None
+    if not target or target.netloc != host or not target.path.strip("/"):
+        return None
+    new = urllib.parse.unquote(target.path.strip("/"))
+    return new if new != slug else None
+
+
 def entry(slug, work=WORK, host=HOST):
-    url = f"https://{host}/{urllib.parse.quote(slug)}.json"
-    text = s.cached(work, slug + ".json", lambda: json.dumps(
-        {k: v for k, v in s.polite_get(url, gap=1.0, as_json=True).items() if k in KEEP}, ensure_ascii=False))
-    return json.loads(text)
+    """The entry's metadata; for a renamed entry, read where its page now leads, with 'canonical' saying where that
+    is (the reference cites it, and the current ID is added beside the old one, which is deprecated as a redirect)."""
+    url = lambda x: f"https://{host}/{urllib.parse.quote(x)}.json"
+
+    def fetch():
+        try:
+            got = s.polite_get(url(slug), gap=1.0, as_json=True)
+        except (ValueError, OSError, subprocess.CalledProcessError):
+            new = moved(slug, host)
+            if not new:
+                raise
+            got = {**s.polite_get(url(new), gap=1.0, as_json=True), "canonical": {"work": work, "slug": new}}
+        return json.dumps({k: v for k, v in got.items() if k in KEEP + ("canonical",)}, ensure_ascii=False)
+    return json.loads(s.cached(work, slug + ".json", fetch))
 
 
 def danish_place(raw):
@@ -67,4 +109,7 @@ def read(slug, work=WORK, host=HOST):
                 notes.append(f"{label} '{d.clean(m[key])}' not matched to one place item")
     if m.get("gender") in d.GENDER:
         facts.append(d.fact("P21", d.item_value(d.GENDER[m["gender"]]), "sex or gender"))
-    return {"title": e.get("title", slug), "kind": "person", "facts": facts, "notes": notes}
+    got = {"title": e.get("title", slug), "kind": "person", "facts": facts, "notes": notes}
+    if e.get("canonical"):
+        got["canonical"] = e["canonical"]
+    return got

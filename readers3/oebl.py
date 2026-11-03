@@ -15,6 +15,7 @@ import json
 import re
 
 import dictionaries as d
+import occupations
 import sources3 as s
 
 WORK = "oebl"
@@ -182,15 +183,16 @@ def checked(mapping):
 
 
 def occupation_facts(words, notes, mapping=OCCUPATIONS):
-    """P106 for each word of the work's occupation field the mapping knows; a feminine form counts as its masculine
-    ('Politikerin', 'Psychologin'). Others are noted."""
+    """P106 for each word of the work's occupation field: the checked German map of occupations.py first (642 words,
+    as the NDB reader), then the mapping here; a feminine form counts as its masculine ('Politikerin',
+    'Psychologin'). Others are noted."""
     known, facts = checked(mapping), []
     for word in words:
         word = word.strip(" ;,.")
         if not word:
             continue
         forms = [word] + ([word[:-2], word[:-2] + "e"] if word.endswith("in") else [])
-        hit = next((known[f][0] for f in forms if f in known), None)
+        hit = occupations.occupation_qid(word, "de") or next((known[f][0] for f in forms if f in known), None)
         if hit:
             facts.append(d.fact("P106", d.item_value(hit), "occupation"))
         else:

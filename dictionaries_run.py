@@ -97,12 +97,13 @@ def held_elsewhere(entries):
         e["facts"] = keep
 
 
-def warm_up(work, todo, facts):
+def warm_up(work, todo, facts, keep=None):
     """Run the entries without asking anything, noting the places, people and countries they would look up, then
     fetch those 100 names to a query: the real pass finds nearly all of them answered. Rounds repeat for the entries
     that met unknown names, as a town abroad is looked up once its country is known, and an old name once no item has
-    it as its label."""
-    todo = [e for e in todo if work == "hds" or (WORK2 / work / f"{e['id'].replace('/', '_')}.json").exists()]
+    it as its label. `keep` picks the entries that can be read now (default: HDS, or an SNL entry already fetched)."""
+    keep = keep or (lambda e: work == "hds" or (WORK2 / work / f"{e['id'].replace('/', '_')}.json").exists())
+    todo = [e for e in todo if keep(e)]
     for n in range(1, 6):
         places, people, regions, met = set(), set(), set(), [False]
 
