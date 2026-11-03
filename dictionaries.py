@@ -161,7 +161,8 @@ _lock = threading.Lock()    # planning computes several entries at once: request
 QLEVER, WDQS = "https://qlever.dev/api/wikidata", "https://query.wikidata.org/sparql"
 QLEVER_GAP = 1.0            # seconds between QLever requests: it allows about one a second (and bursts of
                             # about 13), refusing the rest with 429 (measured 2026-10-15)
-GAPS = {QLEVER: QLEVER_GAP, WDQS: 0.5}
+QLEVER_OFF = os.environ.get("OKA_QLEVER") == "off"   # QLever refuses Toolforge's shared job address at times (429 on
+GAPS = {WDQS: 0.5} if QLEVER_OFF else {QLEVER: QLEVER_GAP, WDQS: 0.5}   # every query, 3 November 2026): WDQS only
 SLOWER = 3.0                # seconds the Wikidata Query Service usually takes longer than QLever
 PREFIXES = ("PREFIX wikibase: <http://wikiba.se/ontology#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
             "PREFIX wd: <http://www.wikidata.org/entity/> PREFIX wdt: <http://www.wikidata.org/prop/direct/> "
@@ -202,6 +203,13 @@ def qlever(query):
     query = PREFIXES + query
     import shutil
     for attempt in range(1, 21):                    # an error page is not an empty result: wait and retry
+        if QLEVER_OFF:
+            wait_turn(WDQS, GAPS[WDQS])
+            status, text, _ = post_query(WDQS, query)
+            if status == 200 and text.startswith("?"):
+                break
+            time.sleep(min(10 * attempt, 120))
+            continue
         wait_turn(QLEVER, QLEVER_GAP)
         if shutil.which("curl"):
             text = subprocess.run(["curl", "-s", QLEVER, "--max-time", "300", "-A", UA, "-H",
