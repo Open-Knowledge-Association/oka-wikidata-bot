@@ -96,12 +96,13 @@ def value(v, url=None):
     return "; ".join(parts)
 
 
-def cost(rows):
+def cost(rows, tokens_share=1.0):
+    """Dollars and searches; tokens_share 0.5 for a run through the Message Batches API (half the token price)."""
     tin = sum(int(r["input_tokens"] or 0) for r in rows)
     tout = sum(int(r["output_tokens"] or 0) for r in rows)
     searches = sum(int(r["searches"] or 0) for r in rows)
     pin, pout = PRICES.get(rows[0]["model"], (0, 0))
-    return tin * pin / 1e6 + tout * pout / 1e6 + searches * SEARCH, searches
+    return (tin * pin / 1e6 + tout * pout / 1e6) * tokens_share + searches * SEARCH, searches
 
 
 def plain(v):
@@ -206,7 +207,7 @@ def batch(log, number, title, sample=None):
     n = collections.Counter(r["decision"] for r in rows)
     shown = random.Random(int(number)).sample(rows, int(sample)) if sample and int(sample) < len(rows) else rows
     searched = [r for r in rows if r["model"] != "none"]
-    dollars, searches = cost(searched) if searched else (0.0, 0)
+    dollars, searches = cost(searched, float(os.environ.get("BATCH_TOKENS_SHARE", "1"))) if searched else (0.0, 0)
     repo = "https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/"
     bold = "'" * 3
     text = f"""This is batch {number} of the disagreement edits of [[User:OKA bot|OKA bot]] ([[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]). The rules are on [[User:OKA bot/Disagreement checks]]. {bold}Nothing on this page has been changed on Wikidata yet{bold}: the operator checks a sample first.
