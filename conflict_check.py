@@ -133,9 +133,30 @@ def open_cases(sourced=False, log=None):
                 cited = any(c.get("references") and not only_import_refs(c) for c in claims)
                 if not ours or not claims or cited != sourced:
                     continue      # a sourced value: two sources disagree, both side by side (no search needed)
+                if label.startswith("place") and nested([c["mainsnak"]["datavalue"]["value"]["id"] for c in claims],
+                                                        ours[0]["value"]["id"]):
+                    continue      # one place inside the other (Cambridge House in London): no disagreement
                 refs = "cites another source" if cited else \
                     "imported from a Wikipedia" if any(c.get("references") for c in claims) else "no source"
                 yield {"work": e["work"], "entry": e["id"], "qid": e["qid"]}, label, ours[0], claims, refs, ent
+
+
+def nested(theirs, ours):
+    """Whether one of Wikidata's places lies inside the entry's place or the other way round, through located in,
+    location or part of (Cambridge House in London, a village in its municipality): the values agree at different
+    precision, so there is no disagreement and nothing is edited. The bot's build() only knows towns in
+    municipalities; this also catches buildings, districts and former municipalities."""
+    for a, b in [(t, ours) for t in theirs] + [(ours, t) for t in theirs]:
+        if a != b and d.lookup(f"SELECT ?x WHERE {{ wd:{a} (wdt:P131|wdt:P276|wdt:P361)+ wd:{b} . BIND(1 AS ?x) }} LIMIT 1"):
+            return True
+    return False
+
+
+def nested_row(r):
+    """nested() for a logged case ('Cambridge House (Q5025454)' and 'London (Q84)')."""
+    theirs = re.findall(r"\((Q\d+)\)", r["wikidata_value"])
+    ours = re.findall(r"\((Q\d+)\)", r["entry_value"])
+    return r["property"].startswith("place") and bool(theirs and ours) and nested(theirs, ours[0])
 
 
 def counted(evidence, work):

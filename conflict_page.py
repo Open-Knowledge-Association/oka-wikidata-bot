@@ -17,14 +17,15 @@ import urllib.parse
 from pathlib import Path
 
 from common import WORK
-from conflict_check import URLS, WORK_NAMES, counted, decide
+from conflict_check import URLS, WORK_NAMES, counted, decide, nested_row
 
 PAGE = "User:OKA bot/Disagreement checks"
 OUT = WORK / "conflict_page.wiki"
 PRICES = {"claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50)}    # $ per million tokens in, out
 SEARCH = 0.01                                                                    # $ per web search
 SUPPORTS = {"wikidata": "Wikidata's value", "entry": "the entry's value", "both": "fits both", "other": "another value"}
-OUTCOME = {"prefer": "prefer the entry's value", "both": "both", "report": "report", "retry": "checked again later"}
+OUTCOME = {"prefer": "prefer the entry's value", "both": "both", "report": "report", "retry": "checked again later",
+           "same": "no disagreement"}
 
 HOW = """This page shows how [[User:OKA bot|OKA bot]] settles a disagreement between a reference work and a Wikidata \
 value that has no source, as described in [[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]. \
@@ -135,6 +136,8 @@ def edits(r):
                 "normal rank.<br />" + (f"Other sources confirm the entry's value, so {old} is probably wrong; "
                                         if confirmed(r) else f"No source supports {old}; ")
                 + "editors decide whether it should go.")
+    if d == "same":
+        return f"None: {old} lies inside {ours} or the other way round, so the two values agree at different precision."
     if d == "both":
         return f"Add {fact}: {ours}, at the same rank as {old} ({ref}).<br />{old} stays as it is."
     if d == "report":
@@ -204,6 +207,8 @@ def batch(log, number, title, sample=None):
     for r in rows:
         if r["model"] != "none":                 # searched cases: the outcome under the current rules
             r["decision"] = decide(json.loads(r["evidence"] or "[]"), r.get("established"), r["work"], r["property"])
+        if nested_row(r):                        # one place inside the other: no disagreement, nothing edited
+            r["decision"] = "same"
     n = collections.Counter(r["decision"] for r in rows)
     shown = random.Random(int(number)).sample(rows, int(sample)) if sample and int(sample) < len(rows) else rows
     searched = [r for r in rows if r["model"] != "none"]
@@ -213,7 +218,7 @@ def batch(log, number, title, sample=None):
     text = f"""This is batch {number} of the disagreement edits of [[User:OKA bot|OKA bot]] ([[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]). The rules are on [[User:OKA bot/Disagreement checks]]. {bold}Nothing on this page has been changed on Wikidata yet{bold}: the operator checks a sample first.
 
 == {title} ==
-{len(rows)} cases{f", {searches} searches, about ${dollars:.2f}" if searched else ""}. Outcome: {n['prefer']} prefer the entry's value, {n['both']} both, {n['report']} report, {n['retry']} checked again later. {"" if shown is rows else f"Shown below: a random sample of {len(shown)}. "}All cases: [{repo}{Path(log).name} {Path(log).name}].
+{len(rows)} cases{f", {searches} searches, about ${dollars:.2f}" if searched else ""}. Outcome: {n['prefer']} prefer the entry's value, {n['both']} both, {n['report']} report, {n['same']} no disagreement after all (one place inside the other), {n['retry']} checked again later. {"" if shown is rows else f"Shown below: a random sample of {len(shown)}. "}All cases: [{repo}{Path(log).name} {Path(log).name}].
 """
     for work in sorted({r["work"] for r in shown}):
         text += f"\n=== {WORK_NAMES[work]} ===\n" + table(sorted([r for r in shown if r["work"] == work],
