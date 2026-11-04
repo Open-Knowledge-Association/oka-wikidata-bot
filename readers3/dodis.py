@@ -67,7 +67,8 @@ def candidates(n_):
 
 def person_record(text, ident):
     """The person's record of a Dodis page (the schema.org Person block up to the Metagrid links, scripts left out),
-    or None when the page holds no record of this person."""
+    or None when the page holds no person's record. A merged entry (P10833 now leads to P107) gives the record it
+    leads to: read() then cites that entry."""
     start = text.find('itemtype="http://schema.org/Person"')
     end = text.find('id="metagrid-widget"', start)
     if start < 0 or end < 0:
@@ -75,7 +76,7 @@ def person_record(text, ident):
     block = re.sub(r"<script\b.*?</script>", "", text[start:end], flags=re.S)
     shown = re.search(r'<h2>Information about Person <a href="https?://dodis\.ch/(P\d+)".*?</h2>', block, re.S)
     content = block.find('<div class="blue-box-content">')     # (the portrait and its links are left out)
-    return shown.group(0) + "\n" + block[content:] if shown and shown.group(1) == ident and content >= 0 else None
+    return shown.group(0) + "\n" + block[content:] if shown and content >= 0 else None
 
 
 def page(ident):
@@ -238,6 +239,8 @@ def relatives(record, subject, born, notes):
 
 def read(ident):
     record = page(ident)
+    shown = re.search(r'Information about Person <a href="https?://dodis\.ch/(P\d+)"', record)
+    moved = shown.group(1) if shown and shown.group(1) != ident else None   # merged into another entry
     family = d.clean((re.search(r'itemprop="familyName">(.*?)</span>', record) or [None, ""])[1])
     given = d.clean((re.search(r'itemprop="givenName">(.*?)</span>', record) or [None, ""])[1])
     title = f"{given} {family}".strip() or ident
@@ -279,4 +282,7 @@ def read(ident):
                 notes.append(f"occupation '{w}' not mapped")
     facts = without_coarser(facts, "P701", ident, notes)      # not 'engineer' where the item has 'civil engineer'
     facts += relatives(record, subject, born, notes)
-    return {"title": title, "kind": "person", "facts": facts, "notes": notes}
+    got = {"title": title, "kind": "person", "facts": facts, "notes": notes}
+    if moved:                       # the old ID is kept, deprecated as a redirect, and the current one added (task 3)
+        got["canonical"] = {"work": WORK, "slug": moved}
+    return got
