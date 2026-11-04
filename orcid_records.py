@@ -520,82 +520,183 @@ def gnd_short(r):
     return ocp.gnd(r) or "–"
 
 
+def mistake_in(r):
+    """Where the wrong iD comes from, by the GND record: when its dates agree with the item, it is this person's record,
+    and its own link to the iD is the mistake; when they differ, the item may carry a namesake's GND ID."""
+    return {"dates agree": "GND record (it links a namesake's iD)",
+            "dates differ": "item (its GND ID may be a namesake's)"}.get(r.get("gnd_dates"), "unclear (the GND record gives no dates)")
+
+
+WRONG_INTRO = {
+    "work after death": "The record shows at least three works, or a post, dated after this person died. The GND "
+                        "record gives the same date of death.",
+    "work before birth": "The record shows work from before this person was 15. The GND record gives the same date of "
+                         "birth.",
+    "another name": "The record is in the name of someone else.",
+    "another middle initial": "The record's name has another middle initial than this person's.",
+    "nothing dated, died before 2012": "The record shows nothing dated, and this person died before ORCID existed "
+                                       "(2012).",
+    "checked by hand": "The record's posts, studies and works are those of someone in another field or place. On "
+                       "Wikidata its papers were works of the other item with the iD, which alone proves little, so "
+                       "each one was compared by hand with this item and its sources.",
+}
+WRONG_TITLE = {"work after death": "Work dated after the person's death",
+               "work before birth": "Work dated before the person could have done it",
+               "another name": "The record is in another person's name",
+               "another middle initial": "The record's name has another middle initial",
+               "nothing dated, died before 2012": "Nothing dated, and the person died before ORCID existed",
+               "checked by hand": "Another person, by the record's field or place (checked by hand)"}
+RIGHT = {"same person": ("Two items for one person", "The iD is this person's, and the other item with the same "
+                         "iD is the same person too. The two items should be merged."),
+         "right here": ("The iD is right here, wrong on the other item", "The iD is this person's. The other item "
+                        "with the same iD is someone else, so the iD should be removed there instead."),
+         "wrong date": ("The item's dates are wrong, not the iD", "The iD is this person's. The item's dates (a "
+                        "namesake's) made it look wrong; the dates should be corrected instead.")}
+OPEN = {                                           # group: (heading, introduction, question)
+    "unclear by hand": ("Checked by hand, still unclear", "These were compared by hand with the record and the item's "
+                        "sources, which do not settle them.", "Does the iD belong to this person?"),
+    "ties to this item": ("Some signs point to this person", "Some of the record's papers are works of this item on "
+                          "Wikidata (at least as many as of the other item), or the record shows a post or studies at "
+                          "the place Wikidata gives as this item's employer or school.",
+                          "Is this the person of the ORCID record? Then the iD stays."),
+    "one person?": ("Maybe two items for one person", "The record's papers are works of the other item with the iD "
+                    "and none of this item. That alone does not settle it, and nothing else in the record does: the two "
+                    "items may be one person with a wrong date or occupation on this item.",
+                    "If they are one person, the items should be merged and the iD stays; if not, it is the other "
+                    "person's."),
+    "mostly the other item's papers": ("This item's few papers may be the other person's", "Most of the record's "
+                                       "papers are works of the other item with the iD, but one or a few are linked "
+                                       "to this item, perhaps by mistake.",
+                                       "If this item's papers are the other person's, the iD is not this person's."),
+    "lifetime works": ("Died before ORCID existed, but the record lists work from their lifetime", "The record may "
+                       "be a list of this person's works made after their death, or the record of a namesake.",
+                       "Whose works are these: this person's, or a namesake's?"),
+}
+OPEN_RULES = {                                     # first Wikidata rule of an undecided row: (heading, introduction)
+    "c": ("Not a researcher on Wikidata, and the record does not tell", "Wikidata gives only occupations that do not "
+          "come with an ORCID iD (actor, musician…), and the ORCID record neither confirms nor rules out this person."),
+    "a": ("Died before ORCID existed by Wikidata, but the record does not settle it", "Wikidata says the person died "
+          "before 2012, and the ORCID record does not settle it."),
+    "b": ("Born before 1900 by Wikidata, but the record does not settle it", "Wikidata says the person was born before "
+          "1900, and the ORCID record does not settle it."),
+    "d": ("Two items marked as different people share the iD", "Two items with the same iD are marked as different "
+          "people ({{P|1889}}), and the ORCID record does not tell which one it is."),
+}
+
+
+def open_tables(rest):
+    """(heading, introduction, rows, row function, question or None) for each group of the open cases."""
+    tables = [(title, intro, [r for r in rest if r["orcid_group"] == g], first_row, q)
+              for g, (title, intro, q) in OPEN.items()]
+    undecided = [r for r in rest if r["orcid_group"] == "undecided"]
+    tables += [(title, intro, [r for r in undecided if r["rules"][0] == rule], UNDECIDED[rule][2], None)
+               for rule, (title, intro) in OPEN_RULES.items()]
+    tables.append(("The ORCID record is empty", "The record lists no works and no posts, so it cannot tell.",
+                   [r for r in rest if r["orcid_group"] == "nothing public"], first_row, None))
+    tables.append(("The ORCID record could not be read", "", [r for r in rest if r["orcid_group"] == "unreadable"],
+                   first_row, None))
+    return [t for t in tables if t[2]]
+
+
+def check_tables(rest):                            # (the old name, for orcid_check_page)
+    return open_tables(rest)
+
+
+def check_groups(rest):
+    return [(t[0], len(t[2])) for t in open_tables(rest)]
+
+
 def page(data):
     rows = data["rows"]
-    conf = [r for r in rows if r["orcid_verdict"] == "confirmed wrong"]
-    fine = [r for r in rows if r["orcid_verdict"] == "not wrong"]
+    wrong = [r for r in rows if r["orcid_verdict"] == "confirmed wrong"]
+    right = [r for r in rows if r["orcid_verdict"] == "not wrong"]
     rest = [r for r in rows if r["orcid_verdict"] == "check first"]
-    by_conf = collections.Counter(r["orcid_group"] for r in conf)
+    where = collections.Counter(mistake_in(r) for r in wrong)
     by_hand = [r for r in rows if r.get("orcid_hand")]
+    count_rows = [("Wrong iD", WRONG_TITLE[k], n) for k, n in sorted(
+        collections.Counter(r["orcid_group"] for r in wrong).items(), key=lambda kv: list(WRONG_TITLE).index(kv[0]))]
+    count_rows += [("Right iD", t, sum(1 for r in right if r["orcid_group"] == k)) for k, (t, _) in RIGHT.items()
+                   if any(r["orcid_group"] == k for r in right)]
+    count_rows += [("Not settled yet", t, n) for t, n in check_groups(rest)]
     lines = [
-        f"This list shows {{{{P|496}}}} values that QuickStatements {w.BATCH_LINK} (\"add missing ORCID via GND\", "
-        f"[[User:{w.BATCH_USER}|{w.BATCH_USER}]], July 2026) added to Wikidata items. The batch copied ORCID iDs from "
-        "GND records to the items with the same {{P|227}}. The German National Library added most of these iDs to the "
-        "GND by machine matching (names and title data matched against the ORCID data), and most were never checked, "
-        "so some belong to another person of the same name: the actress Elke Arendt ({{Q|1331446}}) had the iD of the "
-        "food scientist Elke K. Arendt ({{Q|88075585}}).",
+        "== What this page is about ==",
+        "An '''ORCID iD''' ([https://orcid.org orcid.org]) is a number that a researcher registers for themselves, so "
+        "that their publications can be told apart from those of people with the same name: one person, one iD. The "
+        "person's public '''ORCID record''' lists the works, posts and studies they or their publishers entered. On "
+        "Wikidata the iD is stored as {{P|496}}.",
         "",
-        "'''Nothing has been removed yet.''' Comments are welcome on [[User talk:" + w.BATCH_USER + "]].",
+        f"In July 2026, QuickStatements {w.BATCH_LINK} by [[User:{w.BATCH_USER}|{w.BATCH_USER}]] (\"add missing ORCID "
+        "via GND\") copied ORCID iDs from '''GND''' records, the authority file of the German National Library "
+        "({{P|227}}), onto the Wikidata items with the same GND ID. Most of these GND links to ORCID were made by a "
+        "machine matching names and titles, and most were never checked. So some items received the iD of another "
+        "person with the same name: the actress Elke Arendt ({{Q|1331446}}) got the iD of the food scientist "
+        "Elke K. Arendt ({{Q|88075585}}).",
         "",
-        "== How the list was made ==",
-        "# Wikidata: the items that got an iD from the batch were listed when the person died before ORCID existed "
-        "(October 2012), was born before 1900, has only occupations that do not come with an ORCID iD (actor, athlete, "
-        "musician…), or is marked as different ({{P|1889}}) from the other item with the same iD.",
-        "# ORCID: each listed iD was then compared with its public ORCID record: whose works its papers are on "
-        "Wikidata ({{P|50}}, by DOI), the years of its works, posts and studies, the places of its posts, and the name.",
-        "'''Confirmed wrong''' means the ORCID record itself shows someone else:",
-        "* it shows work after this person's death (at least three works, or a post) or from before they were 15;",
-        "* it is in the name of someone else;",
-        "* it shows nothing dated, and this person died before ORCID existed;",
-        "* or, compared by hand with the item, its posts, studies and works are those of someone in another field or "
-        "place.",
+        "An iD can end up on the wrong item in two ways:",
+        "* the '''GND record links a namesake's iD''': the GND record is this person's, but the machine matched it with "
+        "someone else's iD. The GND record needs correcting too (reported to the German National Library).",
+        "* the '''item has a namesake's GND ID''', and the iD came with it. The item's GND ID needs correcting too.",
         "",
-        "Two signs do not count on their own. The record's papers being works ({{P|50}}) of the other item with the "
-        "iD prove little: the tools that link papers to their authors use whichever item holds the iD, so the papers "
-        "follow a wrong iD too. And a date of birth or death counts only when the GND record gives it too: some items "
-        "carry a namesake's dates, even with a source. "
-        f"The {len(by_hand)} rows that rested on such signs were checked by hand against the record's posts, studies "
-        f"and works and the item's own sources; {len(fine)} of them turned out not to be wrong (see '''Not wrong after "
-        "all''').",
+        "This page lists the items of that batch that looked doubtful, and what their ORCID records show. "
+        f"'''Nothing has been changed yet.''' Comments are welcome on [[User talk:{w.BATCH_USER}]].",
         "",
-        "Everything else is listed under '''Check first''', however clear the Wikidata rules looked: among them records "
-        "with papers of this item or a post at its own employer or school, records that may list a dead person's own "
-        "works, and records whose papers are the other item's when the two items may be one person.",
+        "== The three outcomes ==",
+        "# '''Wrong iD''': the ORCID record belongs to someone else. The iD is removed from the item, with the "
+        "namesake's GND ID where that is where it came from (the batch's author agreed that the bot undoes these).",
+        "# '''Right iD''': the ORCID record is this person's, so the iD stays. Something else may need fixing: two "
+        "items for one person (merge), the same iD wrongly on another item, or wrong dates on this item.",
+        "# '''Not settled yet''': the ORCID record neither confirms nor rules out this person. Nothing is done until "
+        "someone has checked by hand. These are grouped by what is unclear, and each row asks the question to answer.",
         "",
         "== Counts ==",
-        f"* '''{len(rows):,}''' items listed by the Wikidata rules: the ORCID record confirms '''{len(conf):,}''' as "
-        f"wrong, '''{len(fine):,}''' are not wrong after all, and '''{len(rest):,}''' are to check first.",
-        "* Confirmed wrong, by what the record shows:"] + [
-        f"** {v}: {CONFIRM[k][0].lower() + CONFIRM[k][1:]}"
-        for k, v in sorted(by_conf.items(), key=lambda kv: list(CONFIRM).index(kv[0]))] + [
-        "* Not wrong after all:"] + [
-        f"** {sum(1 for r in fine if r['orcid_group'] == k)}: {t[0].lower() + t[1:]}" for k, (t, _) in NOT_WRONG.items()
-        if any(r["orcid_group"] == k for r in fine)] + [
-        "* Check first, by question:"] + [f"** {n}: {t}" for t, n in check_groups(rest)] + [
+        f"'''{len(rows):,}''' doubtful items: '''{len(wrong):,}''' wrong iD, '''{len(right):,}''' right iD, "
+        f"'''{len(rest):,}''' not settled yet.",
         "",
-        "== Confirmed wrong ==",
-        "The ORCID record shows that the iD belongs to someone else.",
+        '{| class="wikitable"',
+        "! Outcome !! Group !! Items",
     ]
-    for key, title in CONFIRM.items():
-        part = sorted((r for r in conf if r["orcid_group"] == key), key=lambda x: x.get("label") or "")
+    for outcome, title, n in count_rows:
+        lines += ["|-", f"| {outcome} || {title} || {n}"]
+    lines += ["|}", "",
+              "Where the wrong iDs come from, by the GND record:"] + [f"* {where[k]}: {k}" for k in sorted(where, key=lambda k: -where[k])]
+    lines += [
+        "",
+        "== How the items were checked ==",
+        "# '''Which items.''' An item that got an iD from the batch was listed when, on Wikidata, the person died "
+        "before ORCID existed (October 2012), was born before 1900, has only occupations that do not come with an "
+        "ORCID iD (actor, athlete, musician…), or is marked as different ({{P|1889}}) from the other item with the "
+        "same iD.",
+        "# '''The ORCID record.''' Each listed iD was compared with its public ORCID record: the years of its works, "
+        "posts and studies, the places of its posts, the name, and whose works its papers are on Wikidata ({{P|50}}, "
+        "by DOI).",
+        "# '''Two signs that do not count on their own.''' The record's papers being works of the other item with the "
+        "iD prove little: the tools that link papers to their authors use whichever item holds the iD, so the papers "
+        "follow a wrong iD too. And a date of birth or death counts only when the GND record gives it too: some items "
+        "carry a namesake's dates, even with a source.",
+        f"# '''By hand.''' The {len(by_hand)} items that rested on such signs were compared by hand with the record's "
+        "posts, studies and works and with the item's own sources.",
+        "",
+        f"== Wrong iD ({len(wrong)}) ==",
+        "The ORCID record belongs to someone else. The last column says where the mistake is, by the GND record.",
+    ]
+    for key, title in WRONG_TITLE.items():
+        part = sorted((r for r in wrong if r["orcid_group"] == key), key=lambda x: x.get("label") or "")
         if not part:
             continue
-        lines += ["", f"=== {title} ({len(part)}) ==="]
-        if key == "checked by hand":
-            lines += ["On Wikidata the record's papers are works of the other item with the iD, which alone proves "
-                      "little. Each was compared by hand with the record's posts, studies and works.", ""]
-        lines += ['{| class="wikitable sortable"',
-                  "! Person !! What the ORCID record shows !! GND record !! ORCID !! Other item with the iD"]
+        lines += ["", f"=== {title} ({len(part)}) ===", WRONG_INTRO[key], "", '{| class="wikitable sortable"',
+                  "! Person !! What the ORCID record shows !! GND record !! ORCID !! Other item with the iD !! "
+                  "Mistake in"]
         for r in part:
             others = ", ".join(w.q_link(o["item"]) for o in r["other"]) or "–"
             lines += ["|-", f"| {w.q_link(r['item'])} || {r['orcid_sentence']} || {gnd_short(r)} || "
-                            f"[https://orcid.org/{r['orcid']} {r['orcid']}] || {others}"]
+                            f"[https://orcid.org/{r['orcid']} {r['orcid']}] || {others} || {mistake_in(r)}"]
         lines.append("|}")
-    if fine:
-        lines += ["", "== Not wrong after all ==",
-                  "The rules listed these, but a check by hand showed that the iD is right: the mistake is elsewhere."]
-        for key, (title, what) in NOT_WRONG.items():
-            part = sorted((r for r in fine if r["orcid_group"] == key), key=lambda x: x.get("label") or "")
+    if right:
+        lines += ["", f"== Right iD ({len(right)}) ==",
+                  "Checked by hand: the ORCID record is this person's, so the iD stays. What needs fixing is "
+                  "something else."]
+        for key, (title, what) in RIGHT.items():
+            part = sorted((r for r in right if r["orcid_group"] == key), key=lambda x: x.get("label") or "")
             if not part:
                 continue
             lines += ["", f"=== {title} ({len(part)}) ===", what, "", '{| class="wikitable sortable"',
@@ -605,10 +706,10 @@ def page(data):
                 lines += ["|-", f"| {w.q_link(r['item'])} || {r['orcid_sentence']} || {gnd_short(r)} || "
                                 f"[https://orcid.org/{r['orcid']} {r['orcid']}] || {others}"]
             lines.append("|}")
-    lines += ["", "== Check first ==",
-              "These need a look before anything is removed: the ORCID record does not settle them. Each row says what "
-              "the record shows, what Wikidata says, and the question to answer."]
-    for title, intro, part, rowfn, question in check_tables(rest):
+    lines += ["", f"== Not settled yet ({len(rest)}) ==",
+              "The ORCID record does not settle these, so nothing is done until someone checks them by hand. Each "
+              "row says what the record shows, what Wikidata says, and the question to answer."]
+    for title, intro, part, rowfn, question in open_tables(rest):
         lines += ["", f"=== {title} ({len(part)}) ===", intro, "", '{| class="wikitable sortable"',
                   "! Person !! What the ORCID record shows !! What Wikidata says !! Question !! GND record !! ORCID"]
         for r in sorted(part, key=lambda x: x.get("label") or ""):
@@ -617,47 +718,6 @@ def page(data):
                             f"{gnd_short(r)} || [https://orcid.org/{r['orcid']} {r['orcid']}]"]
         lines.append("|}")
     return "\n".join(lines) + "\n"
-
-
-def check_tables(rest):
-    """(heading, introduction, rows, row function, question or None) for each group of the check-first part."""
-    tables = [("Unclear after a check by hand",
-               "These were compared by hand with the record and the item's sources, which do not settle them.",
-               [r for r in rest if r["orcid_group"] == "unclear by hand"], first_row,
-               "Does the iD belong to this person?"),
-              ("Does the iD belong to this person after all?",
-               "Some of the record's papers are works of this item on Wikidata (at least as many as of the other item), "
-               "or the record shows a post or studies at the place Wikidata gives as this item's employer or school.",
-               [r for r in rest if r["orcid_group"] == "ties to this item"], first_row,
-               "Is this the person of the ORCID record? Then the iD stays."),
-              ("Are the two items one person?",
-               "The record's papers are works of the other item with the iD and none of this item, but that alone "
-               "does not settle it, and nothing else in the record does: the two items may be one person with a wrong "
-               "date or occupation on this item.",
-               [r for r in rest if r["orcid_group"] == "one person?"], first_row,
-               "If they are one person, the items should be merged and the iD stays; if not, it is the other person's."),
-              ("Are this item's few papers really someone else's?",
-               "Most of the record's papers are works of the other item with the iD on Wikidata, but one or a few are "
-               "linked to this item, perhaps by mistake.",
-               [r for r in rest if r["orcid_group"] == "mostly the other item's papers"], first_row,
-               "If this item's papers are the other person's, the iD is not this person's."),
-              ("Does the record list this person's own works?",
-               "This person died before ORCID existed, but the record also lists work from their lifetime: it may be "
-               "a list of their own works, made after their death, or the record of a namesake.",
-               [r for r in rest if r["orcid_group"] == "lifetime works"], first_row,
-               "Whose works are these: this person's, or a namesake's?")]
-    undecided = [r for r in rest if r["orcid_group"] == "undecided"]
-    for rule, (title, intro, fn) in UNDECIDED.items():
-        tables.append((title, intro, [r for r in undecided if r["rules"][0] == rule], fn, None))
-    tables.append(("The ORCID record shows nothing public", "The record lists no works and no posts, so it cannot "
-                   "tell.", [r for r in rest if r["orcid_group"] == "nothing public"], first_row, None))
-    tables.append(("The ORCID record could not be read", "", [r for r in rest if r["orcid_group"] == "unreadable"],
-                   first_row, None))
-    return [t for t in tables if t[2]]
-
-
-def check_groups(rest):
-    return [(t[0], len(t[2])) for t in check_tables(rest)]
 
 
 def first_row(r):
@@ -747,6 +807,17 @@ if __name__ == "__main__":
             if n_ % 50 == 0:
                 w.out(f"  {n_} of {len(flagged)} records")
         w.out(f"{len(flagged)} records cached")
+    elif len(sys.argv) > 1 and sys.argv[1] == "page":      # the page again from the last pass (no fetching)
+        (w.OUT / "orcid_wrong.wiki").write_text(page(json.loads((w.OUT / "orcid_wrong.json").read_text(encoding="utf-8"))),
+                                                encoding="utf-8")
+        w.out(f"{w.OUT / 'orcid_wrong.wiki'} written")
+    elif len(sys.argv) > 1 and sys.argv[1] == "save":      # User:OKA bot/Merges/ORCID wrong, as OKA bot
+        from common import bot_site
+        site = bot_site(5)
+        import pywikibot
+        pg = pywikibot.Page(site, "User:OKA bot/Merges/ORCID wrong")
+        pg.text = (w.OUT / "orcid_wrong.wiki").read_text(encoding="utf-8")
+        pg.save(summary=" ".join(sys.argv[2:]) or "Page reorganised (nothing changed on items)", bot=True)
     elif len(sys.argv) > 1 and sys.argv[1] == "sample":    # the random confirmed rows, for the report
         dd = json.loads((w.OUT / "orcid_wrong.json").read_text(encoding="utf-8"))
         pool = [r for r in dd["rows"] if r.get("orcid_verdict") == "confirmed wrong"]
