@@ -23,6 +23,8 @@ Nothing is edited here.
   python conflict_check.py batch [N]       the same through the Message Batches API (half the price; answers within
                                            hours): submits, waits, then logs the answers
   python conflict_check.py collect ID      wait for a batch submitted earlier and log its answers
+  python conflict_check.py sourced         the disagreements where Wikidata's value cites another source: no search,
+                                           both values side by side (outcome "both"); logged in conflict_sourced.csv
 """
 import csv
 import datetime
@@ -96,11 +98,12 @@ def show(v):
     return f"{label} ({q})"
 
 
-def open_cases():
-    """Disagreements on dates and places where Wikidata's value has no source or only a Wikipedia import, judged again
-    under the bot's current rules (a place inside the other, the same day in the other calendar, a year beside the
-    full date are no disagreements)."""
-    done = {(r["work"], r["entry"], r["property"]) for r in csv.DictReader(open(LOG, encoding="utf-8"))} if LOG.exists() else set()
+def open_cases(sourced=False, log=None):
+    """Disagreements on dates and places where Wikidata's value has no source or only a Wikipedia import (with
+    `sourced`: where it cites another source), judged again under the bot's current rules (a place inside the other,
+    the same day in the other calendar, a year beside the full date are no disagreements)."""
+    log = log or LOG
+    done = {(r["work"], r["entry"], r["property"]) for r in csv.DictReader(open(log, encoding="utf-8"))} if log.exists() else set()
     only = {(r["work"], r["entry"], r["property"]) for r in csv.DictReader(open(ROOT / SAME_AS, encoding="utf-8"))} \
         if SAME_AS else None
     plans = {}
@@ -127,9 +130,11 @@ def open_cases():
                 ours = [f["value"] for f in e["facts"] if f["pid"] == LABELS[label]]
                 claims = [c for c in ent.get("claims", {}).get(LABELS[label], [])
                           if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"]
-                if not ours or not claims or any(c.get("references") and not only_import_refs(c) for c in claims):
+                cited = any(c.get("references") and not only_import_refs(c) for c in claims)
+                if not ours or not claims or cited != sourced:
                     continue      # a sourced value: two sources disagree, both side by side (no search needed)
-                refs = "imported from a Wikipedia" if any(c.get("references") for c in claims) else "no source"
+                refs = "cites another source" if cited else \
+                    "imported from a Wikipedia" if any(c.get("references") for c in claims) else "no source"
                 yield {"work": e["work"], "entry": e["id"], "qid": e["qid"]}, label, ours[0], claims, refs, ent
 
 
@@ -247,6 +252,47 @@ def check(*case):
 
 
 BATCHES = WORK / "conflicts"
+SOURCED = ROOT / "conflict_sourced.csv"
+
+
+def cited_as(claims):
+    """Where Wikidata's values say they come from: the stated-in works and reference URLs, as evidence entries."""
+    found = []
+    for c in claims:
+        for ref in c.get("references", []):
+            snaks = ref.get("snaks", {})
+            works = [s["datavalue"]["value"]["id"] for s in snaks.get("P248", []) if s.get("snaktype") == "value"]
+            urls = [s["datavalue"]["value"] for s in snaks.get("P854", []) if s.get("snaktype") == "value"]
+            if works or urls:
+                found.append({"url": urls[0] if urls else f"https://www.wikidata.org/wiki/{works[0]}",
+                              "says": "stated in " + ", ".join(show({"value": {"id": w}}) for w in works) if works
+                              else "reference URL", "supports": "wikidata"})
+    return found
+
+
+def sourced():
+    """The 'sourced' outcome of the request: Wikidata's value cites another source, so two sources disagree and the
+    entry's value goes beside it at the same rank. Nothing is searched; each case is logged with Wikidata's sources."""
+    new = not SOURCED.exists()
+    n = 0
+    with open(SOURCED, "a", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, FIELDS)
+        if new:
+            w.writeheader()
+        for r, label, ours, claims, refs, e in open_cases(sourced=True, log=SOURCED):
+            w.writerow({"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                        "work": r["work"], "entry": r["entry"], "qid": r["qid"], "property": label,
+                        "wikidata_value": "; ".join(show(c["mainsnak"]["datavalue"]) for c in claims),
+                        "wikidata_sources": refs, "entry_value": show(ours), "decision": "both", "established": "",
+                        "evidence": json.dumps(cited_as(claims), ensure_ascii=False),
+                        "note": "Wikidata's value cites another source: two sources disagree, so both values stand "
+                                "side by side (no search)", "model": "none", "searches": 0,
+                        "input_tokens": 0, "output_tokens": 0})
+            n += 1
+            if n % 500 == 0:
+                f.flush()
+                print(n, "sourced disagreements logged", flush=True)
+    print(n, "sourced disagreements logged in", SOURCED.name)
 
 
 def submit(limit):
@@ -307,6 +353,8 @@ def main():
         return collect(submit(int(sys.argv[2]) if len(sys.argv) > 2 else 20))
     if mode == "collect":
         return collect(sys.argv[2])
+    if mode == "sourced":
+        return sourced()
     limit = int(sys.argv[2]) if len(sys.argv) > 2 else 20
     new = not LOG.exists()
     with open(LOG, "a", encoding="utf-8", newline="") as f:

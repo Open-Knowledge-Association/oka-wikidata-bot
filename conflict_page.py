@@ -2,7 +2,10 @@
 each checked case with the sources found and the outcome. Nothing is edited on Wikidata here.
 
   python conflict_page.py build LOG [TITLE]   write work/conflict_page.wiki from a conflict_check log
+  python conflict_page.py batch LOG N TITLE [SAMPLE]   write work/conflict_batch.wiki: a batch for the operator's
+                                              sample check (a random SAMPLE of its cases when it is large)
   python conflict_page.py save                save it as User:OKA bot/Disagreement checks (OKA bot)
+  python conflict_page.py save-batch N        save the batch page as User:OKA bot/Disagreement checks/Batch N
 """
 import collections
 import csv
@@ -10,6 +13,7 @@ import json
 import re
 import sys
 import urllib.parse
+from pathlib import Path
 
 from common import WORK
 from conflict_check import URLS, WORK_NAMES, counted, decide
@@ -130,7 +134,7 @@ def edits(r):
                                         if confirmed(r) else f"No source supports {old}; ")
                 + "editors decide whether it should go.")
     if d == "both":
-        return f"Add {fact}: {ours}, normal rank ({ref}).<br />{old} stays at normal rank."
+        return f"Add {fact}: {ours}, at the same rank as {old} ({ref}).<br />{old} stays as it is."
     if d == "report":
         return (f"Add {fact}: {ours}, deprecated rank, reason {{{{Q|Q29998666}}}} ({ref}).<br />{old} stays at "
                 f"normal rank.<br />The error is reported to {work}.")
@@ -141,6 +145,8 @@ def table(rows):
     work = WORK_NAMES[rows[0]["work"]]
     lines = ['{| class="wikitable"', f"! Person !! Fact !! Wikidata (reference) !! {work} !! Sources counted !! Outcome "
              "!! Edits on Wikidata"]
+    refs = {"no source": "no reference", "imported from a Wikipedia": "only imported from a Wikipedia",
+            "cites another source": "cites another source"}
     for r in rows:
         ev = json.loads(r["evidence"] or "[]")
         kept = counted(ev, r["work"])
@@ -149,7 +155,7 @@ def table(rows):
         dropped = len(ev) - len(kept)
         if dropped:
             items.append(f"* <small>{dropped} more not counted (Wikipedia copies, user-edited sites or the work itself)</small>")
-        ref = "no reference" if r["wikidata_sources"] == "no source" else "only imported from a Wikipedia"
+        ref = refs.get(r["wikidata_sources"], r["wikidata_sources"])
         out = OUTCOME.get(r["decision"], r["decision"])
         if r["decision"] == "prefer":
             out += " (Wikidata's value kept)"
@@ -183,6 +189,44 @@ entry's value ({sure} of them with other sources confirming it), {n['both']} bot
     print(OUT, len(text), "characters;", dict(n), f"${dollars:.2f}")
 
 
+BATCH_OUT = WORK / "conflict_batch.wiki"
+
+
+def batch(log, number, title, sample=None):
+    """One batch for the operator's check before it runs: its counts, and its cases (or a random sample of them),
+    grouped by work. The full list is the log on GitHub."""
+    import random
+    rows = list(csv.DictReader(open(log, encoding="utf-8")))
+    for r in rows:
+        if r["model"] != "none":                 # searched cases: the outcome under the current rules
+            r["decision"] = decide(json.loads(r["evidence"] or "[]"), r.get("established"), r["work"], r["property"])
+    n = collections.Counter(r["decision"] for r in rows)
+    shown = random.Random(int(number)).sample(rows, int(sample)) if sample and int(sample) < len(rows) else rows
+    searched = [r for r in rows if r["model"] != "none"]
+    dollars, searches = cost(searched) if searched else (0.0, 0)
+    repo = "https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/"
+    bold = "'" * 3
+    text = f"""This is batch {number} of the disagreement edits of [[User:OKA bot|OKA bot]] ([[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]). The rules are on [[User:OKA bot/Disagreement checks]]. {bold}Nothing on this page has been changed on Wikidata yet{bold}: the operator checks a sample first.
+
+== {title} ==
+{len(rows)} cases{f", {searches} searches, about ${dollars:.2f}" if searched else ""}. Outcome: {n['prefer']} prefer the entry's value, {n['both']} both, {n['report']} report, {n['retry']} checked again later. {"" if shown is rows else f"Shown below: a random sample of {len(shown)}. "}All cases: [{repo}{Path(log).name} {Path(log).name}].
+"""
+    for work in sorted({r["work"] for r in shown}):
+        text += f"\n=== {WORK_NAMES[work]} ===\n" + table(sorted([r for r in shown if r["work"] == work],
+                                                                   key=lambda r: r["entry"])) + "\n"
+    BATCH_OUT.write_text(text, encoding="utf-8")
+    print(BATCH_OUT, len(text), "characters;", dict(n), f"${dollars:.2f}")
+
+
+def save_batch(number):
+    from common import bot_site
+    site = bot_site(5)
+    import pywikibot
+    p = pywikibot.Page(site, f"{PAGE}/Batch {number}")
+    p.text = BATCH_OUT.read_text(encoding="utf-8")
+    p.save(summary=f"Disagreement batch {number}, for the operator's sample check (nothing edited on items yet)", bot=True)
+
+
 def save():
     from common import bot_site
     site = bot_site(5)                           # writes the login settings; pywikibot may only be imported after this
@@ -195,7 +239,11 @@ def save():
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    if sys.argv[1] == "build":
+    if sys.argv[1] == "batch":
+        batch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5] if len(sys.argv) > 5 else None)
+    elif sys.argv[1] == "save-batch":
+        save_batch(sys.argv[2])
+    elif sys.argv[1] == "build":
         build(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else "Pilot: 20 cases")
     elif sys.argv[1] == "save":
         save()
