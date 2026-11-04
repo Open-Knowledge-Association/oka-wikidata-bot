@@ -39,7 +39,8 @@ LOG = HERE / "task3_edits.csv"
 LEFT = HERE / "task3_left_alone.csv"
 READY = W3 / "ready.txt"
 PLAN_THREADS = 6
-STOP_AFTER = 50               # entries in a row that could not be read: the site is down or refuses the bot, so stop
+STOP_AFTER = 50               # entries in a row that could not be read: the site is down or refuses the bot, so wait
+BLOCK_WAIT, BLOCK_TRIES = 6, 28   # then ask again every 6 h, for at most 7 days (jz, 4 November 2026: for all sources)
 plan_file = lambda work: W3 / f"full_plan_{work}.jsonl"
 crawled = lambda work: W3 / f"crawl_done_{work}"
 reader = lambda work: importlib.import_module(f"readers3.{work}")
@@ -96,8 +97,8 @@ def linked(work):
 def crawl():
     """Every work at once, one thread each; each site keeps its reader's gap between requests. Queries are switched
     off: read() runs only so that it fetches and caches the pages, and its facts are thrown away (the plan works them
-    out again with the lookups batched). A work whose pages fail STOP_AFTER times in a row stops: never route around
-    a block."""
+    out again with the lookups batched). A work whose pages fail STOP_AFTER times in a row waits BLOCK_WAIT hours and
+    asks again (at most BLOCK_TRIES times): never route around a block."""
     works = works_named(sys.argv[2:])
     lists = {w: linked(w)[0] for w in works if not crawled(w).exists()}
     for w, pairs in lists.items():
@@ -108,22 +109,36 @@ def crawl():
     d.viaf_current = lambda vid: None
 
     def one(work):
-        r, failed, n = reader(work), 0, 0
-        for n, (ident, _) in enumerate(lists[work], 1):
+        r, pairs = reader(work), lists[work]
+        i = failed = start = waits = 0
+        while i < len(pairs):
+            ident = pairs[i][0]
             try:
                 r.read(ident)
-                failed = 0
+                failed = waits = 0
             except Exception as e:                       # a stubbed lookup can fail an entry too: only a run of
-                failed += 1                              # failures stops the work
+                failed += 1                              # failures means the site is down or refuses the bot
                 if failed == 1:
+                    start = i
                     d.out(f"{work} {ident}: {e!r:.160}")
                 if failed >= STOP_AFTER:
-                    d.out(f"{work}: {STOP_AFTER} entries in a row not read, stopped at {n} of {len(lists[work])}")
-                    return
-            if n % 500 == 0:
-                d.out(f"{work}: {n} of {len(lists[work])} read")
+                    if waits >= BLOCK_TRIES:
+                        d.out(f"{work}: {STOP_AFTER} entries in a row not read, {BLOCK_TRIES} times {BLOCK_WAIT} h "
+                              f"apart; stopped at {i + 1} of {len(pairs)}")
+                        return
+                    waits += 1
+                    d.out(f"{work}: {STOP_AFTER} entries in a row not read; asking again in {BLOCK_WAIT} h "
+                          f"({waits} of {BLOCK_TRIES})")
+                    time.sleep(BLOCK_WAIT * 3600)        # never routed around: the same requests, hours later (jz)
+                    if getattr(r, "_stopped", None):
+                        r._stopped = None                # a reader that stopped at a block page may ask again
+                    i, failed = start, 0
+                    continue
+            i += 1
+            if i % 500 == 0:
+                d.out(f"{work}: {i} of {len(pairs)} read")
         crawled(work).write_text(datetime.datetime.now(datetime.timezone.utc).isoformat(), encoding="utf-8")
-        d.out(f"{work}: all {n} entries read")
+        d.out(f"{work}: all {len(pairs)} entries read")
 
     threads = [threading.Thread(target=one, args=(w,), name=w) for w in lists]
     for t in threads:
