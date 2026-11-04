@@ -420,6 +420,9 @@ def build(batch=""):
         return build_stations()
     if batch == "areas":
         return build_areas()
+    if batch == "lakes":
+        import lakes                                  # (needs shapely and pyshp: planned on the PC)
+        return lakes.build_lakes()
     cfg = BATCHES[batch]
     classes, cache, tag = cfg["classes"], cfg["cache"], ({"batch": batch} if batch else {})
     recs, release = swissnames3d(cfg["types"])

@@ -216,6 +216,21 @@ BATCHES["small_localities"] = {
     **BATCHES["localities"], "plan": "plan_small_localities.jsonl", "cache": "small_localities_", "create_pop": {"< 20"},
     "covers": ["localities under 20 inhabitants"],
     "note": "Localities under 20 inhabitants that have no item get one, as a hamlet, with their swissNAMES3D ID."}
+# Tenth batch, "lakes" (jz, 4 November 2026): each lake's area and municipalities from its swissTLM3D outline over
+# swissBOUNDARIES3D (lakes.py). The area only where the item has none; for a lake across the border, only the Swiss
+# part (P518 Switzerland) beside a total the item already has; every municipality holding part of the lake ("located
+# in" takes them all, jz), and the canton for water that is cantonal territory. Paired by the swissNAMES3D record of the
+# lake's water name and the item an earlier batch paired with it.
+SWISSTLM3D = "Q141994232"
+CANTON_ITEMS = ["Q11943", "Q11911", "Q12121", "Q12404", "Q12433", "Q12573", "Q12592", "Q11922", "Q11933", "Q12640",
+                "Q11929", "Q12172", "Q12146", "Q12697", "Q12079", "Q12094", "Q12746", "Q11925", "Q11972", "Q12713",
+                "Q12724", "Q12771", "Q834", "Q12738", "Q11917", "Q12755"]           # BFS canton numbers 1-26
+BATCHES["lakes"] = {"plan": "plan_lakes.jsonl", "cache": "lakes_", "covers": ["lakes"],
+                    "note": "Lakes get their area from their swissTLM3D outline (islands left out) where they have none, "
+                            "with the release date as point in time; a lake across the border gets only the area of "
+                            "its Swiss part (applies to part: Switzerland), and only beside a total area it already "
+                            "has. They get each municipality whose territory holds part of the lake "
+                            "(swissBOUNDARIES3D), and the canton where the water is cantonal territory."}
 LANG = {"Hochdeutsch inkl. Lokalsprachen": "de", "Franzoesisch inkl. Lokalsprachen": "fr",
         "Italienisch inkl. Lokalsprachen": "it", "Rumantsch Grischun inkl. Lokalsprachen": "rm"}
 OFFICIAL_TYPES = ("einfacher Name", "Endonym")

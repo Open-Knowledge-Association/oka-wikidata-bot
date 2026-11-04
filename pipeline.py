@@ -24,7 +24,7 @@ import time
 import urllib.parse
 from collections import Counter
 
-from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, SWISSNAMES3D_ID, UA, bot_site,
+from common import (BATCHES, KIND_OF, REQUEST, ROOT, SWISSBOUNDARIES3D, SWISSNAMES3D, SWISSNAMES3D_ID, SWISSTLM3D, UA, bot_site,
                     cites, curl_json, dist_m, lv95_to_wgs84, out, ref_json)
 from edit import build_edit, build_new, build_p131, drop_language
 from edit_stations_areas import area_seen, builder
@@ -55,7 +55,8 @@ def log(row):
 
 def refs_for_today():
     today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
-    return {SWISSNAMES3D: ref_json(SWISSNAMES3D, today), SWISSBOUNDARIES3D: ref_json(SWISSBOUNDARIES3D, today)}
+    return {SWISSNAMES3D: ref_json(SWISSNAMES3D, today), SWISSBOUNDARIES3D: ref_json(SWISSBOUNDARIES3D, today),
+            SWISSTLM3D: ref_json(SWISSTLM3D, today)}
 
 
 def log_kind(row):
@@ -252,6 +253,10 @@ def check(entity, kind, row, changes):
             "official name": lambda: ok("P1448"),
             "municipality": lambda: any(cites(c, SWISSBOUNDARIES3D) for c in cl.get("P131", [])),
             "area": lambda: area_seen(entity, row), "source for area": lambda: area_seen(entity, row),
+            "lake area": lambda: any(cites(c, SWISSTLM3D) for c in cl.get("P2046", [])),
+            "area of the Swiss part": lambda: any(cites(c, SWISSTLM3D) and c.get("qualifiers", {}).get("P518")
+                                                  for c in cl.get("P2046", [])),
+            "canton": lambda: any(cites(c, SWISSBOUNDARIES3D) for c in cl.get("P131", [])),
             "swissNAMES3D ID": lambda: any(cites(c, SWISSNAMES3D) and c["mainsnak"].get("datavalue", {}).get("value")
                                            == rec["uuid"].strip("{}").upper() for c in cl.get(SWISSNAMES3D_ID, []))}
     if kind.split(":")[0] == "create":                  # "create" or "create:<batch>"

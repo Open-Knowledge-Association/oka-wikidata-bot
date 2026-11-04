@@ -24,8 +24,8 @@ ids (the swissNAMES3D ID, P14976, from the UUID an earlier batch paired the item
 import copy
 
 from common import (BATCHES, HECTARE, ID_CONFLICTS, KM2, M2, OFFICIAL_TYPES, STATION_RADIUS, SWISSBOUNDARIES3D,
-                    SWISSNAMES3D, SWISSNAMES3D_ID, area_claim, cites, dist_m, item_claim, lv95_to_wgs84, mono_claim,
-                    statement)
+                    SWISSNAMES3D, SWISSNAMES3D_ID, SWISSTLM3D, area_claim, cites, day_snak, dist_m, item_claim,
+                    lv95_to_wgs84, mono_claim, statement)
 from edit import build_edit, build_p131, implied_precision
 
 PLAIN_QUALIFIERS = {"P585", "P459", "P7452"}   # point in time, determination method, reason for preferred rank
@@ -172,8 +172,55 @@ def build_id(raw, row, refs):
     return {"claims": [claim]}, ["swissNAMES3D ID"]
 
 
+def lake_area_claim(m2, date, ref, part=None):
+    """A lake's area in km² (to the hectare from 1 km², else to 100 m²) at a point in time; `part` (Switzerland) for the
+    share of a lake across the border."""
+    km2 = m2 / 1e6
+    amount = f"+{km2:.2f}" if km2 >= 1 else f"+{km2:.4f}"
+    c = statement("P2046", {"type": "quantity", "value": {"amount": amount, "unit": KM2}}, ref)
+    c["qualifiers"], c["qualifiers-order"] = {"P585": [day_snak("P585", date)]}, ["P585"]
+    if part:
+        c["qualifiers"]["P518"] = [{"snaktype": "value", "property": "P518",
+                                    "datavalue": {"type": "wikibase-entityid", "value": {"entity-type": "item",
+                                                  "numeric-id": int(part[1:]), "id": part}}}]
+        c["qualifiers-order"].append("P518")
+    return c
+
+
+def build_lake(raw, row, refs):
+    """Batch lakes: the area where the item has none (a lake across the border: only its Swiss part, beside a total the
+    item has), and every municipality holding part of the lake, plus the canton for cantonal water. Nothing else."""
+    rec, date = row["rec"], row["date"]
+    if raw.get("redirects") or "missing" in raw:
+        return None, ["skipped: redirect or deleted"]
+    names = {v["value"].casefold() for v in raw.get("labels", {}).values()} | \
+            {a["value"].casefold() for al in raw.get("aliases", {}).values() for a in al}
+    if not names & {n.casefold() for n in rec["names"]}:
+        return None, ["skipped: name no longer on item"]
+    claims = raw.get("claims", {})
+    out_claims, done = [], []
+    areas = [c for c in claims.get("P2046", []) if c["mainsnak"]["snaktype"] == "value"]
+    totals = [c for c in areas if c["rank"] != "deprecated" and not c.get("qualifiers", {}).get("P518")]
+    swiss_parts = [c for c in areas if any(q.get("datavalue", {}).get("value", {}).get("id") == "Q39"
+                                           for q in c.get("qualifiers", {}).get("P518", []))]
+    if rec["swiss_m2"] >= 0.999 * rec["m2"]:            # the whole lake is in Switzerland
+        if not areas:
+            out_claims.append(lake_area_claim(rec["m2"], date, refs[SWISSTLM3D]))
+            done.append("lake area")
+    elif totals and not swiss_parts:                    # across the border: the Swiss part beside the total
+        out_claims.append(lake_area_claim(rec["swiss_m2"], date, refs[SWISSTLM3D], part="Q39"))
+        done.append("area of the Swiss part")
+    have = {c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for c in claims.get("P131", [])
+            if c["mainsnak"]["snaktype"] == "value"}
+    new_munis = [m for m in rec["munis"] if m not in have]
+    new_cantons = [k for k in rec["cantons"] if k not in have]
+    out_claims += [item_claim("P131", q, refs[SWISSBOUNDARIES3D]) for q in new_munis + new_cantons]
+    done += ["municipality"] * bool(new_munis) + ["canton"] * bool(new_cantons)
+    return ({"claims": out_claims}, done) if out_claims else (None, [])
+
+
 BUILDERS = {"p131": build_p131, "stations": build_station, "areas": build_area, "ids": build_id,   # own edit rules
-            "attach": build_id}
+            "attach": build_id, "lakes": build_lake}
 
 
 def builder(row):
@@ -197,13 +244,19 @@ def describe(raw, row, data):
             bits.append(f"{pid} {v}")
         elif pid == "P2046":
             bits.append(f"P2046 {v['amount']} km2 at {c['qualifiers']['P585'][0]['datavalue']['value']['time'][1:11]}"
-                        + (" (preferred)" if c["rank"] == "preferred" else ""))
+                        + (" (preferred)" if c["rank"] == "preferred" else "")
+                        + (" (Swiss part)" if c["qualifiers"].get("P518") else ""))
     if row.get("batch") == "areas":
         have = [(round(hectares(c) / 100, 2) if hectares(c) is not None else "?", c["rank"][:3],
                  ",".join(t[1:5] for t in _dates(c)) or "undated") for c in raw.get("claims", {}).get("P2046", [])]
         bits.append(f"| swisstopo {rec['area_ha'] / 100:.2f} km2 (BFS {rec['bfs']}); on item: {have or 'none'}")
     elif row.get("batch") == "ids":
         bits.append(f"| {rec['type']} {rec['name']!r}")
+    elif row.get("batch") == "lakes":
+        have = [c["mainsnak"]["datavalue"]["value"]["amount"] for c in raw.get("claims", {}).get("P2046", [])
+                if c["mainsnak"]["snaktype"] == "value"]
+        bits.append(f"| {rec['name']!r} {rec['m2'] / 1e6:.3f} km2 (Swiss {rec['swiss_m2'] / rec['m2']:.0%}), "
+                    f"{len(rec['munis'])} municipalities, cantonal water {rec['cantons'] or '-'}; area on item: {have or 'none'}")
     else:
         bits.append(f"| {rec['type']} {rec['name']!r}, {row['dist']} m, {row['points']} point(s)")
     return "; ".join(bits)
@@ -219,7 +272,7 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["preview"])
-    ap.add_argument("--plan", choices=["stations", "areas"], required=True)
+    ap.add_argument("--plan", choices=["stations", "areas", "lakes"], required=True)
     ap.add_argument("--n", type=int, default=10, help="the first N pending rows")
     ap.add_argument("--sample", type=int, default=0, help="instead, K pending rows at random, shown one by one")
     a = ap.parse_args()
