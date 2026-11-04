@@ -416,14 +416,17 @@ def unlinked():
 # ---------------------------------------------------------------- reading the HDS pages (no edits)
 
 CRAWL_DELAY = 21              # seconds between HDS pages: its robots.txt asks generic bots for 20
+BLOCK_WAIT, BLOCK_TRIES = 6, 28  # after a block: one page asked for again every 6 h, for at most 7 days
 CHALLENGE = re.compile(r"Just a moment|cf-chl|challenge-platform|cf_chl_opt|Attention Required", re.I)
 
 
 def crawl_hds():
     """Read the HDS article pages, as the HDS robots.txt allows generic bots: one page every 21 s, under the bot's
     own name. Keeps only the article (the <main> part) and its date fields, in work/task2/hds/<id>.html, which
-    hds_facts() reads. Biographies linked from Wikidata first, then the other entries. Resumable. At the first
-    challenge or block page it stops: such a page is never solved or worked around."""
+    hds_facts() reads. Biographies linked from Wikidata first, then the other entries. Resumable. A challenge or block
+    page is never solved or worked around: the crawl waits BLOCK_WAIT hours and asks for the same page once more, under
+    the same name and at the same pace (jz, 4 November 2026: the block of late October was probably temporary, so try
+    again from time to time), and stops after BLOCK_TRIES such waits in a row."""
     import time
     import urllib.error
     import urllib.request
@@ -438,11 +441,7 @@ def crawl_hds():
     order += [h for kind in ("tem", "fam", "geo") for h in lists[kind]]
     todo = [h for h in dict.fromkeys(order) if not (folder / f"{h}.html").exists()]
     out(f"HDS pages to read: {len(todo)} (one every {CRAWL_DELAY} s, about {len(todo) * CRAWL_DELAY / 86400:.1f} days)")
-    last, odd = 0.0, 0
-    for n, hid in enumerate(todo, 1):
-        time.sleep(max(0.0, CRAWL_DELAY - (time.time() - last)))
-        last = time.time()
-        url = f"https://hls-dhs-dss.ch/de/articles/{hid}/"
+    def fetch(hid, url):
         for attempt in range(1, 5):
             try:
                 req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
@@ -456,10 +455,26 @@ def crawl_hds():
                 out(f"{hid}: HTTP {status} without a challenge (server busy or down); trying again in {30 * attempt} min")
                 time.sleep(1800 * attempt)          # 03:18 UTC on 16 October was such an outage, not a block
                 continue
-            break
-        if status in (403, 429, 503) or CHALLENGE.search(body[:20000]):
-            out(f"stopped at {hid} after {n - 1} pages: the HDS answered with a challenge or block (HTTP {status})")
-            sys.exit(2)
+            return status, body
+
+    last, odd = 0.0, 0
+    for n, hid in enumerate(todo, 1):
+        url = f"https://hls-dhs-dss.ch/de/articles/{hid}/"
+        for blocked in range(BLOCK_TRIES + 1):
+            time.sleep(max(0.0, CRAWL_DELAY - (time.time() - last)))
+            last = time.time()
+            status, body = fetch(hid, url)
+            if not (status in (403, 429, 503) or CHALLENGE.search(body[:20000])):
+                if blocked:
+                    out(f"{hid}: the HDS answers again (HTTP {status})")
+                break
+            if blocked == BLOCK_TRIES:
+                out(f"stopped at {hid} after {n - 1} pages: the HDS answered with a challenge or block (HTTP {status}) "
+                    f"{BLOCK_TRIES + 1} times, {BLOCK_WAIT} h apart")
+                sys.exit(2)
+            out(f"blocked at {hid} after {n - 1} pages (HTTP {status}); asking for it once more in {BLOCK_WAIT} h "
+                f"({blocked + 1} of {BLOCK_TRIES})")
+            time.sleep(BLOCK_WAIT * 3600)
         if status == 404:
             continue
         main = re.search(r"<main\b.*?</main>", body, re.S)
