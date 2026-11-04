@@ -37,7 +37,10 @@ from readers3.sbi import without_coarser
 WORK = "dodis"
 URL = "https://dodis.ch/{}"
 GAP = 12.0                                      # seconds between pages (jz: at least 10)
-MAX_PAGES = 40                                  # person pages in the cache, at most (jz: about 40 in all)
+MAX_PAGES = None                                # no cap since the full run (task 3 approved 2026-11-03); the test
+                                                # run read at most about 40 (jz)
+PERSON_ID = re.compile(r"^P\d+$")                # dodis.ch/P<n> is a person; other IDs on Wikidata are not (one is a
+                                                # 17-digit number): never asked for
 SWITZERLAND = "Q39"
 LANGS = ("en", "de", "fr", "it")
 SEX = {"male": n.MALE, "female": n.FEMALE}
@@ -77,11 +80,14 @@ def person_record(text, ident):
 
 def page(ident):
     """The person's record, read once (one page every 12 seconds, at most MAX_PAGES pages; none after a block)."""
+    if not PERSON_ID.match(ident):
+        raise LookupError(f"Dodis {ident}: not a person ID (P followed by digits); not read")
+
     def fetch():
         global _stopped
         if _stopped:
             raise RuntimeError(f"not read: the crawl stopped at an earlier page ({_stopped})")
-        if len(list((s.WORK3 / WORK).glob("P*.html"))) >= MAX_PAGES:
+        if MAX_PAGES and len(list((s.WORK3 / WORK).glob("P*.html"))) >= MAX_PAGES:
             raise RuntimeError(f"not read: {MAX_PAGES} pages read already (jz's limit for the test)")
         text = s.polite_get(URL.format(ident), gap=GAP)
         record = person_record(text, ident)

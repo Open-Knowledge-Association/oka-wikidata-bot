@@ -610,9 +610,14 @@ def prefetch_places(calls):
             chunk = names[i:i + 100]
             lits = " ".join(f'{json.dumps(n, ensure_ascii=False)}@{lang}' for n in chunk for lang in langs + ("mul",))
             found = {}
-            for label, *row in qlever(f"SELECT DISTINCT ?l ?i ?c ?links WHERE {{ VALUES ?l {{ {lits} }} "
-                                      f"{class_values(tiers)} {labelled} ?i wdt:P31 ?c {in_country} ; "
-                                      f"wikibase:sitelinks ?links . {inside} {of_country} }}"):
+            try:
+                rows = qlever(f"SELECT DISTINCT ?l ?i ?c ?links WHERE {{ VALUES ?l {{ {lits} }} "
+                              f"{class_values(tiers)} {labelled} ?i wdt:P31 ?c {in_country} ; "
+                              f"wikibase:sitelinks ?links . {inside} {of_country} }}")
+            except RuntimeError as e:                   # a query the services time out on: these names are left
+                out(f"place batch of {len(chunk)} names not answered ({e}); asked one by one later")   # to place()
+                continue
+            for label, *row in rows:
                 found.setdefault(label, []).append(row)
             for n in chunk:
                 key = (n, tiers, within, country, aliases)
