@@ -20,6 +20,9 @@ Nothing is edited here.
 
   python conflict_check.py models          which models this key can use, and whether they can search the web
   python conflict_check.py check [N]       check up to N open cases (default 20) and log the answers
+  python conflict_check.py batch [N]       the same through the Message Batches API (half the price; answers within
+                                           hours): submits, waits, then logs the answers
+  python conflict_check.py collect ID      wait for a batch submitted earlier and log its answers
 """
 import csv
 import datetime
@@ -32,7 +35,7 @@ import urllib.error
 import urllib.request
 
 import dictionaries as d
-from common import ROOT, only_import_refs
+from common import ROOT, WORK, only_import_refs
 
 API = "https://api.anthropic.com/v1"
 MODEL = os.environ.get("CONFLICT_MODEL", "claude-sonnet-5-5")      # e.g. claude-haiku-5-5, to compare cost and quality
@@ -54,17 +57,20 @@ WORK_SITES = {"snl": r"//(www\.)?snl\.no/", "nkl": r"//nkl\.snl\.no/", "sml": r"
               "hds": r"hls-dhs-dss\.ch/"}   # the work itself (NBL, NKL and SML on snl.no are other works and count)
 
 
-def call(path, body=None):
-    """One request to the Claude API (the key comes from the environment and is never printed)."""
+def call(path, body=None, raw=False):
+    """One request to the Claude API (the key comes from the environment and is never printed); `raw` gives the
+    answer's text (a batch's results are JSON lines)."""
     key = os.environ["OKA_ANTHROPIC_API_KEY"]                 # set by jz on Toolforge
     headers = {"x-api-key": key, "anthropic-version": "2023-06-01",
                "content-type": "application/json"}
-    req = urllib.request.Request(f"{API}/{path}", json.dumps(body).encode() if body else None, headers,
+    url = path if path.startswith("https://") else f"{API}/{path}"
+    req = urllib.request.Request(url, json.dumps(body).encode() if body else None, headers,
                                  method="POST" if body else "GET")
     for attempt in range(1, 6):
         try:
             with urllib.request.urlopen(req, timeout=600) as r:
-                return json.loads(r.read())
+                got = r.read()
+                return got.decode("utf-8") if raw else json.loads(got)
         except urllib.error.HTTPError as e:
             text = e.read().decode("utf-8", "replace")
             if e.code in (429, 500, 529) and attempt < 5:
@@ -155,7 +161,11 @@ def decide(evidence, established, work, label):
     return "prefer"         # no source supports Wikidata's value: it stays, the entry's value is preferred (jz)
 
 
-def check(r, label, ours, claims, refs, e):
+TOOLS = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}]
+
+
+def prompt_for(r, label, ours, claims, refs, e):
+    """The case's prompt, and what the log keeps about the case."""
     name = next((e["labels"][l]["value"] for l in ("en", "nb", "mul", "de") if l in e.get("labels", {})), r["qid"])
     desc = next((e["descriptions"][l]["value"] for l in ("en", "nb") if l in e.get("descriptions", {})), "")
     theirs = "; ".join(show(c["mainsnak"]["datavalue"]) for c in claims)
@@ -188,11 +198,19 @@ End with one fenced JSON block, exactly:
 {{"evidence": [{{"url": "...", "says": "the page's words, quoted briefly", "supports": "wikidata|entry|both|other"}}],
   "established": "wikidata|entry|split|unclear", "note": "one sentence"}}
 ```"""
+    return prompt, {"work": r["work"], "entry": r["entry"], "qid": r["qid"], "label": label, "theirs": theirs,
+                    "refs": refs, "entry_value": entry}
+
+
+def answer(prompt, first=None):
+    """The model's texts and usage for one case: from `first` (a batch result) or a fresh request, sending the turn
+    back while the search pauses it ('pause_turn')."""
     messages = [{"role": "user", "content": prompt}]
-    tools = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}]
     searches, texts, tokens_in, tokens_out = 0, [], 0, 0
-    for _ in range(6):                                # 'pause_turn': send the turn back until it ends
-        resp = call("messages", {"model": MODEL, "max_tokens": 3000, "messages": messages, "tools": tools})
+    resp = first
+    for _ in range(6):
+        if resp is None:
+            resp = call("messages", {"model": MODEL, "max_tokens": 3000, "messages": messages, "tools": TOOLS})
         usage = resp.get("usage", {})
         searches += usage.get("server_tool_use", {}).get("web_search_requests", 0)
         tokens_in += usage.get("input_tokens", 0) + usage.get("cache_read_input_tokens", 0) + usage.get("cache_creation_input_tokens", 0)
@@ -201,6 +219,12 @@ End with one fenced JSON block, exactly:
         if resp.get("stop_reason") != "pause_turn":
             break
         messages = messages[:1] + [{"role": "assistant", "content": resp["content"]}]
+        resp = None
+    return texts, searches, tokens_in, tokens_out
+
+
+def logged_row(m, texts, searches, tokens_in, tokens_out):
+    label = m["label"]
     blocks = re.findall(r"```json\s*(\{.*?\})\s*```", "\n".join(texts), re.S)
     try:
         verdict = json.loads(blocks[-1]) if blocks else None
@@ -208,13 +232,70 @@ End with one fenced JSON block, exactly:
         verdict = None
     evidence = (verdict or {}).get("evidence", [])
     return {"time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "work": r["work"], "entry": r["entry"], "qid": r["qid"], "property": label,
-            "wikidata_value": theirs, "wikidata_sources": refs, "entry_value": entry,
-            "decision": decide(evidence, verdict.get("established"), r["work"], label) if verdict else "retry",
+            "work": m["work"], "entry": m["entry"], "qid": m["qid"], "property": label,
+            "wikidata_value": m["theirs"], "wikidata_sources": m["refs"], "entry_value": m["entry_value"],
+            "decision": decide(evidence, verdict.get("established"), m["work"], label) if verdict else "retry",
             "established": (verdict or {}).get("established", ""),
             "evidence": json.dumps(evidence, ensure_ascii=False),
             "note": (verdict or {}).get("note", "no verdict returned"), "model": MODEL, "searches": searches,
             "input_tokens": tokens_in, "output_tokens": tokens_out}
+
+
+def check(*case):
+    prompt, meta = prompt_for(*case)
+    return logged_row(meta, *answer(prompt))
+
+
+BATCHES = WORK / "conflicts"
+
+
+def submit(limit):
+    """Up to `limit` open cases as one batch; the prompts and case data are kept in work/conflicts/<batch>.json."""
+    cases = {}
+    for n, case in enumerate(open_cases(), 1):
+        if n > limit:
+            break
+        prompt, meta = prompt_for(*case)
+        cases[f"case-{n}"] = {"prompt": prompt, "meta": meta}
+    b = call("messages/batches", {"requests": [
+        {"custom_id": cid, "params": {"model": MODEL, "max_tokens": 3000, "tools": TOOLS,
+                                      "messages": [{"role": "user", "content": c["prompt"]}]}}
+        for cid, c in cases.items()]})
+    BATCHES.mkdir(parents=True, exist_ok=True)
+    (BATCHES / f"{b['id']}.json").write_text(json.dumps(cases, ensure_ascii=False), encoding="utf-8")
+    print(f"batch {b['id']}: {len(cases)} cases submitted", flush=True)
+    return b["id"]
+
+
+def collect(batch_id):
+    """Wait for the batch to end, then log each case's answer (a paused search is continued by a plain request)."""
+    cases = json.loads((BATCHES / f"{batch_id}.json").read_text(encoding="utf-8"))
+    while True:
+        b = call(f"messages/batches/{batch_id}")
+        if b["processing_status"] == "ended":
+            break
+        print(f"batch {batch_id}: {b['request_counts']}", flush=True)
+        time.sleep(300)
+    new = not LOG.exists()
+    with open(LOG, "a", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, FIELDS)
+        if new:
+            w.writeheader()
+        for line in call(b["results_url"], raw=True).splitlines():
+            if not line.strip():
+                continue
+            res = json.loads(line)
+            c = cases[res["custom_id"]]
+            if res["result"]["type"] == "succeeded":
+                row = logged_row(c["meta"], *answer(c["prompt"], res["result"]["message"]))
+            else:                                   # errored or expired: checked again later
+                row = logged_row(c["meta"], [], 0, 0, 0)
+                row["note"] = f"batch result {res['result']['type']}"
+            w.writerow(row)
+            f.flush()
+            print(row["entry"], row["property"], "| WD", row["wikidata_value"], "| entry", row["entry_value"],
+                  "|", row["decision"], "| searches", row["searches"], "| tokens", row["input_tokens"],
+                  row["output_tokens"], flush=True)
 
 
 def main():
@@ -222,6 +303,10 @@ def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else "check"
     if mode == "models":
         return models()
+    if mode == "batch":
+        return collect(submit(int(sys.argv[2]) if len(sys.argv) > 2 else 20))
+    if mode == "collect":
+        return collect(sys.argv[2])
     limit = int(sys.argv[2]) if len(sys.argv) > 2 else 20
     new = not LOG.exists()
     with open(LOG, "a", encoding="utf-8", newline="") as f:
