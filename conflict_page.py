@@ -10,6 +10,7 @@ each checked case with the sources found and the outcome. Nothing is edited on W
 import collections
 import csv
 import json
+import os
 import re
 import sys
 import urllib.parse
@@ -197,6 +198,8 @@ def batch(log, number, title, sample=None):
     grouped by work. The full list is the log on GitHub."""
     import random
     rows = list(csv.DictReader(open(log, encoding="utf-8")))
+    since = os.environ.get("BATCH_SINCE")                 # only the cases logged from then on (a log holds batches)
+    rows = [r for r in rows if not since or r["time"] >= since]
     for r in rows:
         if r["model"] != "none":                 # searched cases: the outcome under the current rules
             r["decision"] = decide(json.loads(r["evidence"] or "[]"), r.get("established"), r["work"], r["property"])
