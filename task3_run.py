@@ -279,6 +279,18 @@ def publish():
         pass
 
 
+def patient(fn, *args, **kw):
+    """fn(...), waiting out long maxlag periods instead of stopping. pywikibot gives up after its retries, but the
+    query service sometimes lags for hours (task3-run-2 stopped that way on 10 November 2026)."""
+    from pywikibot.exceptions import MaxlagTimeoutError
+    while True:
+        try:
+            return fn(*args, **kw)
+        except MaxlagTimeoutError:
+            d.out("Wikidata has asked bots to wait (maxlag) for longer than pywikibot retries; trying again in 10 minutes")
+            time.sleep(600)
+
+
 def run():
     if not APPROVED:
         sys.exit("Task 3 is not approved yet.")
@@ -307,7 +319,8 @@ def run():
             for e in batch:
                 ent = live.get(e["qid"], {})
                 claims, changes, notes = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
-                revid, err = d.save(site, e["qid"], claims, changes, e["work"], ent.get("lastrevid")) if claims else (None, None)
+                revid, err = (patient(d.save, site, e["qid"], claims, changes, e["work"], ent.get("lastrevid"))
+                              if claims else (None, None))
                 now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
                 log.append((now, e["work"], e["kind"], e["id"], e["qid"], revid or "",
                             err or ("; ".join(changes) if revid else "no change")))
@@ -317,7 +330,7 @@ def run():
             d.out(f"{b + len(batch)} of {len(todo)}: {sum(1 for r in log if r[5])} saved in this batch")
             if b == 0 or (b // 50) % 10 == 9 or b + 50 >= len(todo):    # User:OKA bot, then the logs
                 plans = {w: sum(1 for _ in open(plan_file(w), encoding="utf-8")) for w in s.WORKS3 if plan_file(w).exists()}
-                page_builder.save(site, "Task 3 progress (automatic)", task3_plans=plans)
+                patient(page_builder.save, site, "Task 3 progress (automatic)", task3_plans=plans)
                 publish()
 
 

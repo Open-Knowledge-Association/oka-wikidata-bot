@@ -596,7 +596,15 @@ def bot_site(throttle):
     atexit.register(shutil.rmtree, workdir, True)
     import pywikibot
     site = pywikibot.Site("wikidata", "wikidata")
-    site.login()
+    for attempt in range(12):     # a login that waits out a long maxlag period loses its session: try again later
+        try:
+            site.login()
+            break
+        except pywikibot.exceptions.NoUsernameError as e:
+            if "timed out" not in str(e) or attempt == 11:
+                raise
+            print("login timed out while Wikidata asked bots to wait (maxlag); trying again in 10 minutes", flush=True)
+            time.sleep(600)
     if site.username() != user:
         sys.exit(f"logged in as {site.username()!r}, expected {user!r}")
     return site
