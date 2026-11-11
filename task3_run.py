@@ -297,6 +297,7 @@ def run():
     from common import bot_site
     site = bot_site(1)                        # at most one edit a second (60 a minute); writes the login settings first
     d.REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 3|OKA bot task 3]]"
+    failures = 0
     while True:
         done = logged()
         works = ready_works()
@@ -312,25 +313,41 @@ def run():
         d.out(f"{len(todo)} entries to do ({', '.join(works)})")
         for b in range(0, len(todo), 50):
             batch = todo[b:b + 50]
-            today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
-            live = d.items(sorted({e["qid"] for e in batch}))
-            labels = d.place_labels(live, batch)
             log, left = [], []
-            for e in batch:
-                ent = live.get(e["qid"], {})
-                claims, changes, notes = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
-                revid, err = (patient(d.save, site, e["qid"], claims, changes, e["work"], ent.get("lastrevid"))
-                              if claims else (None, None))
-                now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-                log.append((now, e["work"], e["kind"], e["id"], e["qid"], revid or "",
-                            err or ("; ".join(changes) if revid else "no change")))
-                left += [(e["work"], e["id"], e["qid"], e.get("title", ""), n) for n in notes]
+            try:
+                today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
+                live = d.items(sorted({e["qid"] for e in batch}))
+                labels = d.place_labels(live, batch)
+                for e in batch:
+                    ent = live.get(e["qid"], {})
+                    claims, changes, notes = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
+                    revid, err = (patient(d.save, site, e["qid"], claims, changes, e["work"], ent.get("lastrevid"))
+                                  if claims else (None, None))
+                    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                    log.append((now, e["work"], e["kind"], e["id"], e["qid"], revid or "",
+                                err or ("; ".join(changes) if revid else "no change")))
+                    left += [(e["work"], e["id"], e["qid"], e.get("title", ""), n) for n in notes]
+            except Exception:                 # a query timeout, a server error, a dropped connection: never stop the run
+                import traceback
+                dr.append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)    # what was saved
+                dr.append(LEFT, ("work", "entry", "item", "title", "note"), left)
+                failures += 1
+                d.out(f"batch failed ({failures} in a row): " + traceback.format_exc())
+                if failures >= 6:
+                    raise
+                time.sleep(600)
+                break                         # the entries are worked out again; those logged are skipped
+            failures = 0
             dr.append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)
             dr.append(LEFT, ("work", "entry", "item", "title", "note"), left)
             d.out(f"{b + len(batch)} of {len(todo)}: {sum(1 for r in log if r[5])} saved in this batch")
             if b == 0 or (b // 50) % 10 == 9 or b + 50 >= len(todo):    # User:OKA bot, then the logs
-                plans = {w: sum(1 for _ in open(plan_file(w), encoding="utf-8")) for w in s.WORKS3 if plan_file(w).exists()}
-                patient(page_builder.save, site, "Task 3 progress (automatic)", task3_plans=plans)
+                try:
+                    plans = {w: sum(1 for _ in open(plan_file(w), encoding="utf-8")) for w in s.WORKS3
+                             if plan_file(w).exists()}
+                    patient(page_builder.save, site, "Task 3 progress (automatic)", task3_plans=plans)
+                except Exception as e:        # the progress page can wait for the next round
+                    d.out(f"progress page not saved: {e!r}")
                 publish()
 
 
