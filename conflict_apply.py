@@ -108,6 +108,22 @@ def claim_for(r, e, f, existing, today):
     return c
 
 
+_places = {}
+
+
+def same_place(a, b):
+    """Two place items for one place: an old name kept as an item of its own (Kristiania, Christiania for Oslo), or
+    items that say they are the same (P460, said to be the same as)."""
+    if d.SAME_PLACE.get(a, a) == d.SAME_PLACE.get(b, b):
+        return True
+    missing = [q for q in (a, b) if q not in _places]
+    if missing:
+        _places.update(d.items(missing))
+    p460 = lambda q: {c["mainsnak"].get("datavalue", {}).get("value", {}).get("id")
+                      for c in _places.get(q, {}).get("claims", {}).get("P460", [])}
+    return b in p460(a) or a in p460(b)
+
+
 def check_live(r, ent, f):
     """(existing claims, why it is left alone or '')."""
     if not ent:
@@ -122,6 +138,9 @@ def check_live(r, ent, f):
         return existing, "the entry's value is already on the item (deprecated)"
     if not existing:
         return existing, "Wikidata's value is gone"
+    if f["value"]["type"] == "wikibase-entityid" and any(
+            same_place(c["mainsnak"]["datavalue"]["value"]["id"], f["value"]["value"]["id"]) for c in existing):
+        return existing, "the same place under another name (no disagreement)"
     if "; ".join(shown(c["mainsnak"]["datavalue"]) for c in existing) != r["wikidata_value"]:
         return existing, "Wikidata's values changed since the check"
     cited = any(c.get("references") and not only_import_refs(c) for c in existing)

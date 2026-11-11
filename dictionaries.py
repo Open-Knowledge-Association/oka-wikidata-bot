@@ -55,7 +55,8 @@ KM2 = "Q712226"
 REDIRECT = "Q45403344"                          # reason for deprecated rank: redirect (renamed SNL entries)
 MOST_PRECISE = "Q71536040"                      # reason for preferred rank: most precise value
 CIRCA = "Q5727902"                              # sourcing circumstances (P1480): circa, for dates a work gives as approximate
-SAME_PLACE = {"Q21711493": "Q585"}              # Christiania, an item of its own for Oslo's old name: Oslo
+SAME_PLACE = {"Q21711493": "Q585",             # Christiania, an item of its own for Oslo's old name: Oslo
+              "Q2375936": "Q585"}              # Kristiania, "former names of Oslo (please use Q585)"
 
 
 def less_precise_same(claim, value):
