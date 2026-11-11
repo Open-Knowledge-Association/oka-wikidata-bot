@@ -568,6 +568,31 @@ def only_import_refs(claim):
 
 # ---------------------------------------------------------------- bot session (Special:BotPasswords pair from the user environment)
 
+EDIT_CLOCK = Path("/data/project/oka-bot/.edit_clock")
+
+
+def edit_slot(gap=1.0):
+    """Wait for the bot's next edit slot. The requests allow OKA bot 60 edits a minute in all, so every job on
+    Toolforge that edits Wikidata takes its turn here: at most one edit per `gap` seconds across all of them. Elsewhere
+    (the operator's PC) nothing is shared, and only one script edits at a time."""
+    if not EDIT_CLOCK.parent.exists():
+        return
+    import fcntl
+    with open(EDIT_CLOCK, "a+") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        f.seek(0)
+        try:
+            last = float(f.read().strip() or 0)
+        except ValueError:
+            last = 0.0
+        wait = last + gap - time.time()
+        if wait > 0:
+            time.sleep(wait)
+        f.seek(0)
+        f.truncate()
+        f.write(f"{time.time():.3f}")
+
+
 def bot_site(throttle):
     import shutil
     import tempfile

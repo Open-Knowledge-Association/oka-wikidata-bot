@@ -1810,6 +1810,8 @@ def save(site, qid, claims, done, work, baserevid):
     if not data["claims"]:
         del data["claims"]
     try:
+        from common import edit_slot
+        edit_slot()                                           # at most 60 edits a minute across all of the bot's jobs
         r = api.Request(site=site, parameters={"action": "wbeditentity", "id": qid, "data": json.dumps(data),
                                                "bot": 1, "baserevid": baserevid, "token": site.tokens["csrf"],
                                                "summary": summary}).submit()
