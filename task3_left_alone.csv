@@ -4156,3 +4156,435 @@ wgw,11374,Q1750275,"Bieling, Richard",place of birth 'Gau-Algesheim am Rhein' no
 skbl,EllenNordenstreng,Q4969987,Ellen Augusta Nordenstreng,"place of birth: item has a different value, left alone"
 oebl,A/Arnsburg_Ludwig_1816_1891,Q1460851,"Arnsburg, Ludwig","place of death 'Gastein (?, Sbg.)' not matched to one place item"
 wgw,11375,Q1610686,"Bielohlawek, Hermann",occupation 'Handelsangestellter' not mapped
+lex,Albrecht_Dürer,Q5580,Albrecht Dürer,"date of death: item has a different value, left alone"
+kb,1822,Q276855,Valto Olenius,"place of birth 'Pyhäjärvi, Uudenmaan lääni' not matched to one place item"
+kb,1822,Q276855,Valto Olenius,"place of death 'Heinolan maalaiskunta': BiographySampo links Q849934, the name gives Q11861973; not used"
+skbl,EllenNordmark,Q101419131,Ellen Margareta Nordmark,"place of birth: item has a different value, left alone"
+skbl,EllenNordmark,Q101419131,Ellen Margareta Nordmark,"place of death: item has a different value, left alone"
+ndb,100455840,Q504498,Ernst Ludwig,place of birth 'Schloß Friedenstein in Gotha' not matched to one place item
+ndb,100455840,Q504498,Ernst Ludwig,place of death 'Schloß Jägersburg bei Groß-Rohrheim' not matched to one place item
+ndb,100455840,Q504498,Ernst Ludwig,occupation 'Landgraf von Hessen-Darmstadt' not mapped
+ndb,100455840,Q504498,Ernst Ludwig,date of birth 1667-12-15 not used: calendar unclear before 1700 there
+oebl,A/Arnsburg_Marie_1862_,Q998043,"Arnsburg, Marie",the life data field is not in the usual form; places not read
+oebl,A/Arnsburg_Marie_1862_,Q998043,"Arnsburg, Marie","the entry's life years do not fit the item's (birth 1862 in the entry, 1853 on the item): the identifier is probably on another person's item; nothing added"
+wgw,11378,Q94835414,"Bienek, Gustav Karl","place of birth 'Groß-Siegharts, Niederösterreich' not matched to one place item"
+dkl,Emma_Hartmann,Q5372831,Emma Hartmann,place of birth 'København †6.3.1851 samme sted' not matched to one place item
+skbl,EllenPalmstierna,Q4971803,Eleonora Wilhelmina (Ellen) Palmstierna,VIAF ID 66455894 could not be checked against VIAF; not copied
+skbl,EllenPalmstierna,Q4971803,Eleonora Wilhelmina (Ellen) Palmstierna,"date of birth: item has a different value, left alone"
+skbl,EllenPalmstierna,Q4971803,Eleonora Wilhelmina (Ellen) Palmstierna,"place of birth: item has a different value, left alone"
+skbl,EllenPalmstierna,Q4971803,Eleonora Wilhelmina (Ellen) Palmstierna,"place of death: item has a different value, left alone"
+ndb,100462073,Q5171380,Cornelius Heinrich Dretzel,date of baptism 1697-09-18 not used: calendar unclear before 1700 there
+oebl,A/Arnstein_Franziska_1758_1818,Q1395796,"Arnstein, Franziska (Fanny) Freifrau von","place of death 'Wien-Braunhirschen, ?(Wien)' not matched to one place item"
+oebl,A/Arnstein_Franziska_1758_1818,Q1395796,"Arnstein, Franziska (Fanny) Freifrau von",occupation 'Salondame' not mapped
+wgw,1138,Q61199517,"Hohenblum-Simic, Alfred von",occupation 'Agrarpolitiker' not mapped
+wgw,1138,Q61199517,"Hohenblum-Simic, Alfred von","date of death: item has a different value, left alone"
+kb,1825,Q281075,Verner Järvinen,"place of birth: item has a different value, left alone"
+skbl,EllenRoosvalvonHallwyl,Q4952238,Ellen Fredrika Wilhelmina Roosval von Hallwyl,"place of birth 'Erikslund' matched Q2606842, but SKBL's map pin is 410 km away; not used"
+skbl,EllenRoosvalvonHallwyl,Q4952238,Ellen Fredrika Wilhelmina Roosval von Hallwyl,VIAF ID 60156605 could not be checked against VIAF; not copied
+sbl,11334,Q5950279,Johan Hinric Lidén,place of death 'Norrköpings Sankt Olai församling' not matched to one place item
+ndb,100464106,Q52154089,Joseph August Du Cros,date of birth '1640 (?)' not used: not an exact date
+ndb,100464106,Q52154089,Joseph August Du Cros,place of death 'Gottorf bei Schleswig' not matched to one place item
+ndb,100464106,Q52154089,Joseph August Du Cros,religion 'mehrkonfessionell' not used: not mapped
+ndb,100464106,Q52154089,Joseph August Du Cros,occupation 'politischer Agent' not mapped
+skbl,EllenRydelius,Q4976087,Ellen Victoria Rydelius,VIAF ID 57116409 could not be checked against VIAF; not copied
+skbl,EllenRydelius,Q4976087,Ellen Victoria Rydelius,"place of death: item has a different value, left alone"
+ndb,100468691,Q2229783,Schack Hermann Ewald,religion 'evangelisch?' not used: uncertain
+ndb,100468691,Q2229783,Schack Hermann Ewald,"date of death: item has a different value, left alone"
+skbl,EllenSylviaBlind,Q50368933,Ellen-Sylvia Blind,VIAF ID 43278159 could not be checked against VIAF; not copied
+ndb,100468780,Q13135811,Gellius Faber de Bouma,date of birth 'circa 1490 Leeuwarden (Niederlande)' not used: not an exact date
+ndb,100468780,Q13135811,Gellius Faber de Bouma,date of death: the item has 1564-06-02 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+ndb,100468780,Q13135811,Gellius Faber de Bouma,"religion: item has a different value, left alone"
+oebl,A/Artaria_Domenico_1775_1842,Q50344199,"Artaria, Domenico","place of birth 'Blevio in der Brianza, ? (?, Italien)' not matched to one place item"
+wgw,11386,Q85501,"Winternitz, Wilhelm","place of birth 'Josephstadt, Böhmen' not matched to one place item"
+wgw,11386,Q85501,"Winternitz, Wilhelm",occupation 'medizinischer Kliniker' not mapped
+wgw,11386,Q85501,"Winternitz, Wilhelm",occupation 'Hydrotherapeut' not mapped
+dkl,Emma_Vestergaard,Q62080012,Emma Vestergaard,place of birth 'Stagstrup sogn' not matched to one place item
+dkl,Emma_Vestergaard,Q62080012,Emma Vestergaard,place of death 'Ordrup sogn' not matched to one place item
+skbl,EllenTerserus,Q99342659,Ellen Terserus,"place of birth: item has a different value, left alone"
+skbl,EllenTerserus,Q99342659,Ellen Terserus,"place of death: item has a different value, left alone"
+wgw,11392,Q19279827,"Wipplinger, Franz","date of birth: item has a different value, left alone"
+wgw,11392,Q19279827,"Wipplinger, Franz","date of death: item has a different value, left alone"
+dkl,Emmy_Carlsen,Q62080013,Emmy Carlsen,"place of birth 'Gammel Køgegård, Køge' not matched to one place item"
+dkl,Emmy_Carlsen,Q62080013,Emmy Carlsen,"place of death 'Gammel Køgegård, Køge' not matched to one place item"
+skbl,EllenTrotzig,Q4983437,Ellen Kristina Amalia Trotzig,VIAF ID 37987504 could not be checked against VIAF; not copied
+sbl,11341,Q16649663,Erik Lidforss,place of birth 'Västra Eneby församling (enl fb för Lund)' not used: the comment makes it unclear
+ndb,100471463,Q2627765,Franz Xaver Fieber,place of death 'Chrudim (Böhmen)' not matched to one place item
+oebl,A/Arthaber_Rudolf_1795_1867,Q771279,"Arthaber, Rudolf von",occupation 'Kunstfreund' not mapped
+lex,Albrecht_af_Mecklenburg,Q167250,Albrecht af Mecklenburg,"date of birth: item has a different value, left alone"
+skbl,EllenWester,Q4990349,Ellen Sofia Wester,VIAF ID 65045888 could not be checked against VIAF; not copied
+skbl,EllenWester,Q4990349,Ellen Sofia Wester,"date of death: item has a different value, left alone"
+skbl,EllenWester,Q4990349,Ellen Sofia Wester,"place of birth: item has a different value, left alone"
+sbl,11343,Q16649664,Hildemar A Lidholm,"place of death 'Vårdinge församling, Göteborgs Kristine församling (,)' not used: the comment makes it unclear"
+ndb,100472958,Q1037325,Karl Christian von Flatt,"religion: item has a different value, left alone"
+oebl,A/Artmann_Emil-Wilhelm_1871_1939,Q23301334,"Artmann, Emil Wilhelm","place of birth 'Rodaun, NÖ(Wien)' not matched to one place item"
+wgw,11415,Q1447720,"Wißgrill, Franz Karl","date of birth: item has a different value, left alone"
+kb,1834,Q21558139,Helmi Paasonen,"place of birth 'Heinolan maalaiskunta': BiographySampo links Q849934, the name gives Q11861973; not used"
+skbl,ElliHemberg,Q4953537,Elin Elisabeth (Elli) Hemberg,VIAF ID 51512359 could not be checked against VIAF; not copied
+skbl,ElliHemberg,Q4953537,Elin Elisabeth (Elli) Hemberg,"place of birth: item has a different value, left alone"
+skbl,ElliHemberg,Q4953537,Elin Elisabeth (Elli) Hemberg,"place of death: item has a different value, left alone"
+sbl,11345,Q40095735,Axel Fredrik Lidman,place of death 'Hedemora stadsförsamling' not matched to one place item
+ndb,100479340,Q23788013,Martin Heinrich Fuhrmann,date of birth 'Dezember 1669 Templin (Uckermark)' not used: not an exact date
+oebl,A/Artmann_Ferdinand_1830_1883,Q55881617,"Artmann, Ferdinand",occupation 'Militärtechniker' not mapped
+dkl,Emsy_Collet,Q62079996,Emsy Collet,"place of birth 'Rønnebæksholm, Rønnebæk sogn' not matched to one place item"
+skbl,EllinorCarlemanBeorecz,Q108314878,Ellinor Frida Carola Carleman-Beörecz,"place of birth: item has a different value, left alone"
+skbl,EllinorCarlemanBeorecz,Q108314878,Ellinor Frida Carola Carleman-Beörecz,"place of death: item has a different value, left alone"
+sbl,11347,Q5950396,Hans G O Lidman,"place of birth: item has a different value, left alone"
+sbl,11347,Q5950396,Hans G O Lidman,"place of death: item has a different value, left alone"
+ndb,100487483,Q1039052,Carl Johann Greith,place of birth 'Rapperswil Kanton Sankt Gallen' not matched to one place item
+ndb,100487483,Q1039052,Carl Johann Greith,place of death 'Sankt Gallen' not matched to one place item
+lex,Albrecht_von_Wallenstein,Q153545,Albrecht von Wallenstein,date of birth 24.9.1583 not used: calendar before 1700 unclear
+lex,Albrecht_von_Wallenstein,Q153545,Albrecht von Wallenstein,date of death 25.2.1634 not used: calendar before 1700 unclear
+skbl,EllinorGunnelAstriElisabetTaube,Q16946459,Ellinor Gunnel Astri Elisabet Taube,VIAF ID 76298718 could not be checked against VIAF; not copied
+skbl,EllinorGunnelAstriElisabetTaube,Q16946459,Ellinor Gunnel Astri Elisabet Taube,"place of birth: item has a different value, left alone"
+sbl,11350,Q637214,C H Sven R Lidman,place of birth 'Karlskrona stadsförsamling' not matched to one place item
+sbl,11350,Q637214,C H Sven R Lidman,place of death 'Matteus församling (AB-län)' not matched to one place item
+oebl,A/Arz-Straussenburg_Arthur_1857_1935,Q78595,"Arz von Straussenburg, Arthur Frh.","date of death: item has a different value, left alone"
+dkl,Erna_Christensen,Q62080016,Erna Christensen,"place of birth 'Rosilde, Vindinge sogn, Svendborg amt' not matched to one place item"
+skbl,EllyBertaIsabellaLofstrand,Q4964577,Elly Berta Isabella Löfstrand,"place of death: item has a different value, left alone"
+ndb,100501133,Q60579,Moritz Hermann von Jacobi,date of death '27.2. (10.3. neuen Stils)' not used: not an exact date
+ndb,100501133,Q60579,Moritz Hermann von Jacobi,religion 'mehrkonfessionell' not used: not mapped
+oebl,A/Arzberger_Friedrich_1833_1905,Q60623088,"Arzberger, Friedrich","place of birth 'Wieden, NÖ(Wien)' not matched to one place item"
+wgw,1143,Q88930,"Hohenfels-Berger, Stella","date of birth: item has a different value, left alone"
+skbl,EllyJannes,Q1332619,Elly Maria Jannes,VIAF ID 275818227 could not be checked against VIAF; not copied
+ndb,100503225,Q61277,Johann,place of death 'Schweinitz bei Wittenberg' not matched to one place item
+ndb,100503225,Q61277,Johann,place of burial 'Wittenberg' not matched to one place item
+ndb,100503225,Q61277,Johann,religion 'mehrkonfessionell' not used: not mapped
+ndb,100503225,Q61277,Johann,occupation 'Herzog von Sachsen' not mapped
+ndb,100503225,Q61277,Johann,occupation 'Kurfürst von Sachsen' not mapped
+ndb,100503225,Q61277,Johann,"date of birth: item has a different value, left alone"
+oebl,A/Arzberger_Johann_1778_1835,Q113044,"Arzberger, Johann","place of birth 'Arzberg, Oberfranken, ? (?, Deutschland)' not matched to one place item"
+oebl,A/Arzberger_Johann_1778_1835,Q113044,"Arzberger, Johann",occupation 'Maschinenbautechniker' not mapped
+dkl,Erna_Juel-Hansen,Q4957496,Erna Juel-Hansen,"place of death 'Hornbæk sogn, Frederiksborg amt' not matched to one place item"
+skbl,ElmaDanielsson,Q4944184,Elma Charlotta Danielsson,VIAF ID 4475157282929803640003 could not be checked against VIAF; not copied
+sbl,11353,Q5950483,K Martin Lidstam,place of death 'Matteus församling (AB-län)' not matched to one place item
+ndb,100504426,Q73253,Friedrich Adolf Graf von Kalckreuth,place of birth 'Sottershausen bei Sangerhausen' not matched to one place item
+ndb,100504426,Q73253,Friedrich Adolf Graf von Kalckreuth,religion 'evangelisch?' not used: uncertain
+ndb,100504426,Q73253,Friedrich Adolf Graf von Kalckreuth,"date of birth: item has a different value, left alone"
+wgw,11431,Q3087958,"Wittels, Fritz",place of death 'New York' not matched to one place item
+skbl,ElnaHansson0,Q4952597,Elna Hansson,"place of birth: item has a different value, left alone"
+skbl,ElnaHansson0,Q4952597,Elna Hansson,"place of death: item has a different value, left alone"
+ndb,100504787,Q21543822,Johannes Kapp,occupation 'Konsistorialrat' not mapped
+wgw,11433,Q78603,"Ehrenfels, Christian",place of birth 'Rodaun bei Wien' not matched to one place item
+wgw,11433,Q78603,"Ehrenfels, Christian","place of death 'Lichtenau bei Krems, Niederösterreich' not matched to one place item"
+dkl,Erna_Sonne_Friis,Q62080018,Erna Sonne Friis,"place of birth 'Knuthenborg Avlsgård, Hunseby sogn' not matched to one place item"
+dkl,Erna_Sonne_Friis,Q62080018,Erna Sonne Friis,place of death 'Tølløse sogn' not matched to one place item
+kb,1845,Q738922,Heikki Hasu,death: BiographySampo has it from another source than the National Biography; not used
+skbl,ElnaPehrsson,Q50876681,Elna Paulina Pehrsson,"place of birth 'Tullstorp' matched Q10706158, but SKBL's map pin is 80 km away; not used"
+skbl,ElnaPehrsson,Q50876681,Elna Paulina Pehrsson,"place of death: item has a different value, left alone"
+sbl,11355,Q5950518,Jonas (Lidström) Lidströmer,"place of death: item has a different value, left alone"
+ndb,100509010,Q55122382,de la Haye de Launay,date of death 'nach 1786' not used: not an exact date
+ndb,100509010,Q55122382,de la Haye de Launay,occupation 'Leiter der preußischen Accise' not mapped
+wgw,11434,Q55830563,"Wittgenstein, Hermann Christian","place of birth 'Korbach, Fürstentum Waldeck' not matched to one place item"
+wgw,11434,Q55830563,"Wittgenstein, Hermann Christian",occupation 'Wollhänder' not mapped
+wgw,11434,Q55830563,"Wittgenstein, Hermann Christian",occupation 'Immobilienhändler' not mapped
+dkl,Erna_Sørensen,Q4981904,Erna Sørensen,place of death 'Hørsholm sogn' not matched to one place item
+skbl,ElnaTenow,Q16596571,Elna Lovisa Johanna Tenow,VIAF ID 230704224 could not be checked against VIAF; not copied
+skbl,ElnaTenow,Q16596571,Elna Lovisa Johanna Tenow,"place of birth: item has a different value, left alone"
+ndb,100510140,Q29441765,Johann Dietrich Leyding,religion 'evangelisch?' not used: uncertain
+dkl,Ernestine_Nyrop,Q29053495,Ernestine Nyrop,place of death 'Gentofte sogn' not matched to one place item
+skbl,ElsaAlfhildBolin,Q47067935,Elsa Alfhild Bolin,"place of birth: item has a different value, left alone"
+skbl,ElsaAlfhildBolin,Q47067935,Elsa Alfhild Bolin,"place of death: item has a different value, left alone"
+sbl,11358,Q5950789,P F Alarik Liedbeck,"place of death: item has a different value, left alone"
+ndb,100510558,Q97419,Johann Ludwig Konrad Allendorf,place of birth 'Josbach bei Marburg/Lahn' not matched to one place item
+ndb,100510558,Q97419,Johann Ludwig Konrad Allendorf,date of birth 1693-02-09 not used: calendar unclear before 1700 there
+oebl,A/Aschbach_Josef_1801_1882,Q72116,"Aschbach, Josef von","place of birth 'Höchst a. M., ? (?, Deutschland)' not matched to one place item"
+wgw,11437,Q1527481,"Wilke, Gisela","place of birth 'Olbernhau, Sachsen' not matched to one place item"
+skbl,ElsaAlkman,Q85050418,Elsa Anna Maria Alkman,VIAF ID 71365639 could not be checked against VIAF; not copied
+skbl,ElsaAlkman,Q85050418,Elsa Anna Maria Alkman,"place of birth: item has a different value, left alone"
+wgw,11438,Q55904552,"Wilkens, Cornelius August","place of death 'Kalksburg, Niederösterreich' not matched to one place item"
+lex,Aldo_Moro,Q171834,Aldo Moro,place of birth 'Maglie i Apulien' not matched to one place item
+dkl,Ester_Frandsen,Q62080021,Ester Frandsen,"place of birth 'Forlev, Vemmelev sogn, Sorø amt' not matched to one place item"
+skbl,ElsaAndersson,Q467306,Elsa Theresia Andersson,VIAF ID 39349893 could not be checked against VIAF; not copied
+skbl,ElsaAndersson,Q467306,Elsa Theresia Andersson,"place of death: item has a different value, left alone"
+ndb,100511910,Q2756881,Gilles van Ledenbergh,religion 'andere' not used: not mapped
+ndb,100511910,Q2756881,Gilles van Ledenbergh,occupation 'Utrechter Staatsmann' not mapped
+wgw,11440,Q170348,"Wittgenstein, Paul",place of death 'New York' not matched to one place item
+wgw,11440,Q170348,"Wittgenstein, Paul","date of death: item has a different value, left alone"
+lex,Aldo_Palazzeschi,Q685342,Aldo Palazzeschi,"date of birth: item has a different value, left alone"
+dkl,Ester_Graff,Q5400975,Ester Graff,place of birth 'Hesselager sogn' not matched to one place item
+skbl,ElsaAugustaTorgerdSundling,Q27131239,Elsa Augusta Torgerd Sundling,VIAF ID 217230582 could not be checked against VIAF; not copied
+skbl,ElsaAugustaTorgerdSundling,Q27131239,Elsa Augusta Torgerd Sundling,"place of death: item has a different value, left alone"
+ndb,100513468,Q2218568,Samuel Locke,place of birth 'Eisenberg bei Moritzburg (Sachsen)' not matched to one place item
+wgw,11441,Q84227,"Ehrenfest, Paul",place of death 'Amsterdamm' not matched to one place item
+skbl,ElsaBeataWrede0,Q3359192,Elsa Beata Wrede,"place of birth 'Elimäki, Finland' not matched to one place item"
+skbl,ElsaBeataWrede0,Q3359192,Elsa Beata Wrede,VIAF ID 56593924 could not be checked against VIAF; not copied
+skbl,ElsaBeataWrede0,Q3359192,Elsa Beata Wrede,date of birth 1734-04-18 not used: calendar unclear before 1753 there
+skbl,ElsaBeataWrede0,Q3359192,Elsa Beata Wrede,"place of death: item has a different value, left alone"
+oebl,A/Aschner_Bernhard_1883_1960,Q90096,"Aschner, Bernhard",occupation 'Endokrinologe' not mapped
+lex,Aldo_van_Eyck,Q444571,Aldo van Eyck,"date of death: item has a different value, left alone"
+kb,1853,Q5742742,Erik von Frenckell,"spouse 'Vaimo Ester-Margaret Lindberg' linked to the entry of Frenckell, Ester-Margaret von (1890 - 1974); not used"
+sbl,11370,Q1580190,"Hans Henric Liewen, von",date of birth '1703/04' not used: approximate or unclear
+sbl,11370,Q1580190,"Hans Henric Liewen, von","place of death: item has a different value, left alone"
+ndb,100514995,Q55193212,Karl Louis,occupation 'Baurat' not mapped
+ndb,100514995,Q55193212,Karl Louis,occupation 'Jagdschriftsteller' not mapped
+oebl,A/Ascoli_Graziadio-Isaia_1829_1907,Q472212,"Ascoli, Graziadio Isaia","place of birth 'Görz, Görz und Gradiska (Gorízia, Italien)' not matched to one place item"
+skbl,ElsaBeskow,Q466623,Elsa Beskow,VIAF ID 97459375 could not be checked against VIAF; not copied
+sbl,11372,Q5951006,"Hans Hinrich Liwen, von",place of birth 'Estland' not matched to one place item
+sbl,11372,Q5951006,"Hans Hinrich Liwen, von","place of death: item has a different value, left alone"
+ndb,100517463,Q55122385,Johann Adam Gottlieb Kind,religion 'lutherisch?' not used: uncertain
+wgw,11452,Q56384437,"Wittner, Victor",place of birth 'Herta' not matched to one place item
+wgw,11452,Q56384437,"Wittner, Victor","date of death: item has a different value, left alone"
+lex,Aldus_Manutius,Q213220,Aldus Manutius,"place of birth: item has a different value, left alone"
+dkl,Esther_Carstensen,Q60480458,Esther Carstensen,"place of birth 'Skodsborg, Søllerød sogn' not matched to one place item"
+skbl,ElsaBjorkLiselius,Q26240520,Elsa Elida Sofia Björk-Liselius,"place of birth: item has a different value, left alone"
+ndb,100519075,Q591616,Anton Lutterbeck,place of birth 'Handorf bei Münster' not matched to one place item
+ndb,100519075,Q591616,Anton Lutterbeck,religion 'mehrkonfessionell' not used: not mapped
+oebl,A/Askerc_Anton_1856_1912,Q561804,"Aškerc, Anton","place of birth 'Globoko b. Rimske Toplice (?, ?)' not matched to one place item"
+wgw,11454,Q55127350,"Wittola, Markus Anton","place of birth 'Kosel, Oberschlesien' not matched to one place item"
+wgw,11454,Q55127350,"Wittola, Markus Anton",occupation 'Spätjansenist' not mapped
+wgw,11454,Q55127350,"Wittola, Markus Anton","date of death: item has a different value, left alone"
+dkl,Esther_Jegind,Q62080023,Esther Jegind,"place of birth 'Bruderup, Næstelsø sogn' not matched to one place item"
+skbl,ElsaBjorkmanGoldschmidt,Q4939322,Elsa Andrea Elisabeth Björkman-Goldschmidt,VIAF ID 47773167 could not be checked against VIAF; not copied
+skbl,ElsaBjorkmanGoldschmidt,Q4939322,Elsa Andrea Elisabeth Björkman-Goldschmidt,"place of birth: item has a different value, left alone"
+skbl,ElsaBjorkmanGoldschmidt,Q4939322,Elsa Andrea Elisabeth Björkman-Goldschmidt,"place of death: item has a different value, left alone"
+sbl,11375,Q38239433,Anders Bengtsson Lijdbergh,"place of death: item has a different value, left alone"
+oebl,A/Aslan_Raoul_1886_1958,Q2131226,"Aslan, Raoul (Tikran)","place of birth 'Saloniki/Selânik, Osmanisches Reich (Thessaloníkē, Griechenland)' not matched to one place item"
+oebl,A/Aslan_Raoul_1886_1958,Q2131226,"Aslan, Raoul (Tikran)",place of death 'Litzlberg (OÖ)' not matched to one place item
+oebl,A/Aslan_Raoul_1886_1958,Q2131226,"Aslan, Raoul (Tikran)","date of death: item has a different value, left alone"
+wgw,11456,Q16191629,"Ehrenhofer, Walther Edmund",place of birth 'Hohenelbe' not matched to one place item
+wgw,11456,Q16191629,"Ehrenhofer, Walther Edmund",occupation 'Orgelbaufachmann' not mapped
+dkl,Esther_Jegind_Winkel,Q62080025,Esther Jegind Winkel,place of birth 'Tårup sogn' not matched to one place item
+dkl,Esther_Jegind_Winkel,Q62080025,Esther Jegind Winkel,"date of death: item has a different value, left alone"
+kb,1859,Q267529,Ludowika Jakobsson,"place of birth: item has a different value, left alone"
+skbl,ElsaBorg,Q4940090,Elisabeth (Elsa) Dionysia Borg,place of birth 'Rytterne' not matched to one place item
+skbl,ElsaBorg,Q4940090,Elisabeth (Elsa) Dionysia Borg,"place of death: item has a different value, left alone"
+sbl,11381,Q41806603,Einar T Lilie,"place of birth 'Falu Kristine församling (enl fb för Strö, Skar.)' not used: the comment makes it unclear"
+ndb,100529577,Q1612021,Hermann Ludwig Nadermann,"religion: item has a different value, left alone"
+dkl,Esther_Laub,Q62080027,Esther Laub,"place of birth 'Sludegård, Frørup sogn' not matched to one place item"
+kb,1861,Q1341361,Kalle Jalkanen,"place of death: item has a different value, left alone"
+skbl,ElsaBrandstrom,Q469673,Elsa Brändström,"place of birth 'Sankt Petersburg, Ryssland' not matched to one place item"
+skbl,ElsaBrandstrom,Q469673,Elsa Brändström,"place of death 'Cambridge, USA' not matched to one place item"
+skbl,ElsaBrandstrom,Q469673,Elsa Brändström,VIAF ID 5722009 could not be checked against VIAF; not copied
+ndb,10053015X,Q1357792,Christof Ernst Graf von Nassau,religion 'evangelisch?' not used: uncertain
+wgw,11469,Q1041164,"Witzmann, Carl","date of death: item has a different value, left alone"
+dkl,Esther_Malling_Pedersen,Q4989461,Esther Malling Pedersen,"place of birth 'Hejlskov, Ørslevkloster sogn' not matched to one place item"
+dkl,Esther_Malling_Pedersen,Q4989461,Esther Malling Pedersen,place of death 'Odder sogn' not matched to one place item
+skbl,ElsaBritaMarcussen,Q11967234,Elsa Brita Marcussen,"place of death 'Oslo, Norge' not matched to one place item"
+skbl,ElsaBritaMarcussen,Q11967234,Elsa Brita Marcussen,VIAF ID 226268043 could not be checked against VIAF; not copied
+skbl,ElsaBritaMarcussen,Q11967234,Elsa Brita Marcussen,"place of birth: item has a different value, left alone"
+ndb,100530656,Q55122392,Cölestin Müller,occupation 'Fürstabt zu Einsiedeln' not mapped
+oebl,A/Assemani_Simone_1752_1821,Q711607,"Assemani, Simone","place of birth 'Tripolis, ? (?, Syrien)' not matched to one place item"
+oebl,A/Assemani_Simone_1752_1821,Q711607,"Assemani, Simone","place of death 'Padua, Lombardo-Venetien (Pádova, Italien)' not matched to one place item"
+wgw,11474,Q95005648,"Witz-Oberlin, Carl Alphons","place of birth 'Diedendorf, Elsaß' not matched to one place item"
+dkl,Esther_Menon,Q62080029,Esther Menon,"place of birth 'København, †1962' not matched to one place item"
+skbl,ElsaBritaNordlund,Q16946340,Elsa-Brita Nordlund,"place of birth: item has a different value, left alone"
+skbl,ElsaBritaNordlund,Q16946340,Elsa-Brita Nordlund,"place of death: item has a different value, left alone"
+sbl,11390,Q5951483,Nils Lilja,"place of death 'Lunds domkyrkoförsamling (enl db för Billinge, Malm.)' not used: the comment makes it unclear"
+ndb,100532535,Q1067174,Charlotte Elisabeth Nebel,religion 'lutherisch?' not used: uncertain
+ndb,100532535,Q1067174,Charlotte Elisabeth Nebel,occupation 'Dichterin geistlicher Lieder' not mapped
+ndb,100532535,Q1067174,Charlotte Elisabeth Nebel,"date of birth: item has a different value, left alone"
+wgw,11475,Q1386460,"Wlach, Oskar",place of death 'New York' not matched to one place item
+dkl,Esther_Møller,Q62080030,Esther Møller,"place of birth 'Næsbyhoved, Broby sogn' not matched to one place item"
+skbl,ElsaBritaStjernberg,Q24005875,Elsa Brita (Elsa-Brita) Stjernberg,"place of birth: item has a different value, left alone"
+skbl,ElsaBritaStjernberg,Q24005875,Elsa Brita (Elsa-Brita) Stjernberg,"place of death: item has a different value, left alone"
+sbl,11391,Q5951505,Sven E E Lilja,"place of death: item has a different value, left alone"
+ndb,100533086,Q125321,Karl Neugeboren,religion 'evangelisch?' not used: uncertain
+wgw,11477,Q100288,"Willmann, Otto","place of birth 'Lissa bei Posen, Polen' not matched to one place item"
+wgw,11477,Q100288,"Willmann, Otto","place of death 'Leitmeritz, Böhmen (Litoměřice, Tschechien)' not matched to one place item"
+dkl,Esther_Skriver,Q62080031,Esther Skriver,"place of birth 'Glamsbjerg, Køng sogn, Odense amt' not matched to one place item"
+dkl,Esther_Skriver,Q62080031,Esther Skriver,place of death 'Herstedvester sogn' not matched to one place item
+sbl,11392,Q2211749,Katarina,"date of birth: item has a different value, left alone"
+ndb,100533345,Q1127991,Constantin von Neurath,date of death '1816 oder 1817' not used: not an exact date
+ndb,100533345,Q1127991,Constantin von Neurath,religion 'evangelisch?' not used: uncertain
+ndb,100533345,Q1127991,Constantin von Neurath,occupation 'Reichskammergerichtsassessor' not mapped
+wgw,11479,Q214947,"Ehrenstein, Albert","date of birth: item has a different value, left alone"
+wgw,11479,Q214947,"Ehrenstein, Albert","date of death: item has a different value, left alone"
+lex,Alejandro_Toledo,Q207426,Alejandro Toledo,"date of birth: item has a different value, left alone"
+dkl,Esther_Vagning,Q43025883,Esther Vagning,place of birth 'Strib-Røjleskov sogn' not matched to one place item
+skbl,ElsaCedergren,Q4942382,Elsa Victoria Cedergren,VIAF ID 22128844 could not be checked against VIAF; not copied
+skbl,ElsaCedergren,Q4942382,Elsa Victoria Cedergren,"place of birth: item has a different value, left alone"
+skbl,ElsaCedergren,Q4942382,Elsa Victoria Cedergren,"place of death: item has a different value, left alone"
+sbl,11393,Q2073728,Katarina,"place of birth: item has a different value, left alone"
+ndb,100533450,Q55122395,Johann Karl Newen,religion 'katholisch?' not used: uncertain
+ndb,100533450,Q55122395,Johann Karl Newen,occupation 'kaiserlicher Hofpoet' not mapped
+wgw,1148,Q689030,"Hohenlohe-Schillingsfürst, Konrad","place of death: item has a different value, left alone"
+sbl,11394,Q237871,Katarina Ulfsdotter,date of birth '1331/32' not used: approximate or unclear
+sbl,11394,Q237871,Katarina Ulfsdotter,place of death 'Vadstena församling (Vadstena kloster)' not used: the comment makes it unclear
+sbl,11394,Q237871,Katarina Ulfsdotter,date of death: the item has 1381-03-24 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+oebl,A/Attems-Petzenstein_Heinrich_1834_1909,Q1599460,"Attems-Petzenstein, Heinrich Reichsgraf von",occupation 'Hortologe' not mapped
+oebl,A/Attems-Petzenstein_Heinrich_1834_1909,Q1599460,"Attems-Petzenstein, Heinrich Reichsgraf von","place of birth: item has a different value, left alone"
+dkl,Estrid_Hein,Q18242419,Estrid Hein,"place of birth 'Øregård, København' not matched to one place item"
+dkl,Estrid_Hein,Q18242419,Estrid Hein,place of death 'Hørsholm sogn' not matched to one place item
+kb,1877,Q261178,Siiri Rantanen,death: BiographySampo has it from another source than the National Biography; not used
+skbl,ElsaDansonWaghals,Q18274990,Anna Ingeborg Elsa Danson Wåghals,"place of birth: item has a different value, left alone"
+sbl,11395,Q72741,David Katz,"place of birth 'Tyskland (Kassel, Hessen-Nassau)' not used: the comment makes it unclear"
+sbl,11395,Q72741,David Katz,"place of death: item has a different value, left alone"
+oebl,A/Attems_Alexander_1814_1896,Q112358,"Attems, Alexander Gf.","date of birth: item has a different value, left alone"
+wgw,11486,Q14513655,"Ehrenstein, Louise von","sex or gender: item has a different value, left alone"
+lex,Aleks_Frøland,Q5746500,Aleks Frøland,"place of birth: item has a different value, left alone"
+kb,1887,Q1364136,Kalle Anttila,"date of death: item has a different value, left alone"
+skbl,ElsaEschelsson,Q4947169,Elsa Olava Eschelsson,VIAF ID 39346517 could not be checked against VIAF; not copied
+sbl,11396,Q5903709,Walter A Kaudern,place of death 'Göteborgs Annedals församling' not matched to one place item
+sbl,11396,Q5903709,Walter A Kaudern,"place of birth: item has a different value, left alone"
+ndb,100538819,Q92464,Georg Friedrich Pape,date of birth '1776 oder 1766' not used: not an exact date
+ndb,100538819,Q92464,Georg Friedrich Pape,occupation 'Mainzer Klubist' not mapped
+wgw,11488,Q1705300,"Modl, Josef","place of death 'Karlsbad, Böhmen' not matched to one place item"
+wgw,11488,Q1705300,"Modl, Josef",occupation 'Gesangskomiker' not mapped
+dkl,Estrid_Torkild-Hansen,Q62080032,Estrid Torkild-Hansen,"place of birth 'Sveistrup Østergård, Dover sogn' not matched to one place item"
+dkl,Estrid_Torkild-Hansen,Q62080032,Estrid Torkild-Hansen,place of death 'København Forældre: gårdejer Anders Nielsen (1859-1928) og Ane Kirstine Pedersen (1858-1941)' not matched to one place item
+kb,1888,Q1385771,Gunnar Bärlund,place of death 'Florida' is a country or region; not used
+skbl,ElsaEwerlof,Q4947351,Elsa Helga Emilia Josefina Ewerlöf,"place of birth: item has a different value, left alone"
+skbl,ElsaEwerlof,Q4947351,Elsa Helga Emilia Josefina Ewerlöf,"place of death: item has a different value, left alone"
+wgw,1149,Q1782811,"Hohenlohe-Schillingsfürst, Konstantin",place of birth 'Hessen' not matched to one place item
+dkl,Eva_Fjellerup,Q2608865,Eva Fjellerup,"place of birth: item has a different value, left alone"
+skbl,ElsaFougt,Q4948629,Elsa Fougt,place of death 'Kärnbo socken' not matched to one place item
+skbl,ElsaFougt,Q4948629,Elsa Fougt,VIAF ID 32870678 could not be checked against VIAF; not copied
+sbl,11408,Q5904831,Alexander Keiller,"place of birth 'Storbritannien och Nordirland (Dundee, Skottland)' not used: the comment makes it unclear"
+oebl,A/Attems_Ottokar-Maria_1815_1867,Q2041409,"Attems, Ottokar Maria Gf. von","date of birth: item has a different value, left alone"
+wgw,11490,Q22486468,"Willner, Oskar",place of birth 'Teplitz-Schönau' not matched to one place item
+lex,Aleksandar_Vučić,Q222031,Aleksandar Vučić,place of birth 'Beograd i Serbien (dengang en del af Jugoslavien)' not matched to one place item
+lex,Aleksandar_Vučić,Q222031,Aleksandar Vučić,"date of birth: item has a different value, left alone"
+dkl,Eva_Gredal,Q4950847,Eva Gredal,place of birth 'Hvorup sogn' not matched to one place item
+kb,1890,Q48586,Oskari Friman,"place of birth: item has a different value, left alone"
+skbl,ElsaGafvelin,Q50846999,Elsa Maria Gafvelin,"place of death: item has a different value, left alone"
+sbl,11409,Q5240228,James Keiller,place of death 'Kristine församling' not matched to one place item
+ndb,100540686,Q4218646,Samuel Theodor Quellmaltz,religion 'evangelisch?' not used: uncertain
+oebl,A/Attlmayer_Richard-Isidor_1831_1910,Q60623093,"Attlmayer, Richard Isidor",place of death '? (?)' not matched to one place item
+skbl,ElsaGrave,Q372612,Elsa Margareta Grave,VIAF ID 64300010 could not be checked against VIAF; not copied
+skbl,ElsaGrave,Q372612,Elsa Margareta Grave,"place of birth: item has a different value, left alone"
+skbl,ElsaGrave,Q372612,Elsa Margareta Grave,"place of death: item has a different value, left alone"
+oebl,A/Attlmayr_Aloisius_1815_1889,Q98818479,"Attlmayr, P. Aloisius",place of death 'Kalksburg (NÖ)' not matched to one place item
+oebl,A/Attlmayr_Aloisius_1815_1889,Q98818479,"Attlmayr, P. Aloisius",occupation 'Ordensmann' not mapped
+wgw,11499,Q102047711,"Wiltwerker, Konrad","date of birth: item has a different value, left alone"
+wgw,11499,Q102047711,"Wiltwerker, Konrad","date of death: item has a different value, left alone"
+skbl,ElsaGullberg0,Q4951304,Elsa Gullberg,VIAF ID 3541855 could not be checked against VIAF; not copied
+ndb,100541348,Q1325324,Friedrich Wilhelm von Oppel,date of birth 'um 1720 Rittergut Krebs' not used: not an exact date
+ndb,100541348,Q1325324,Friedrich Wilhelm von Oppel,place of birth 'Rittergut Krebs bei Pirna' not matched to one place item
+ndb,100541348,Q1325324,Friedrich Wilhelm von Oppel,"place of burial 'Freiberg, Kreuzgang d. Doms' not matched to one place item"
+ndb,100541348,Q1325324,Friedrich Wilhelm von Oppel,occupation 'sächsischer Berghauptmann' not mapped
+oebl,A/Attomyr_Joseph_1807_1856,Q780906,"Attomyr, Joseph","place of birth 'in Slawonien (?, ?)' not matched to one place item"
+wgw,11502,Q105065966,"Ehrenzweig, Albert",place of birth 'Baden bei Wien' not matched to one place item
+kb,1893,Q1970524,Väinö Kokkinen,"place of birth: item has a different value, left alone"
+skbl,ElsaHarrietThulin,Q4982702,Elsa Harriet Thulin,VIAF ID 9825893 could not be checked against VIAF; not copied
+skbl,ElsaHarrietThulin,Q4982702,Elsa Harriet Thulin,"place of death: item has a different value, left alone"
+sbl,11416,Q543195,Johan Henric Kellgren,"place of death: item has a different value, left alone"
+ndb,100541496,Q21544173,Johannes Vorst,"date of birth: item has a different value, left alone"
+kb,1894,Q713668,Lauri Koskela,"place of death: item has a different value, left alone"
+skbl,ElsaJuliaElliotLund,Q104886329,Elsa Julia Elliot-Lund,"place of birth: item has a different value, left alone"
+skbl,ElsaJuliaElliotLund,Q104886329,Elsa Julia Elliot-Lund,"place of death: item has a different value, left alone"
+sbl,11417,Q5905402,Per Å N Kellin,place of birth 'Svea Livgardes församling' not matched to one place item
+sbl,11417,Q5905402,Per Å N Kellin,place of death 'Matteus församling (AB-län)' not matched to one place item
+ndb,100543804,Q55133230,Georg Christoph Ferdinand von Räsewitz,religion 'mehrkonfessionell' not used: not mapped
+ndb,100543804,Q55133230,Georg Christoph Ferdinand von Räsewitz,occupation 'Konvertit' not mapped
+dkl,Eva_Madsen,Q12310744,Eva Madsen,place of death 'Ordrup sogn' not matched to one place item
+skbl,ElsaKarlsson,Q99457294,Elsa Karolina Karlsson,"place of birth: item has a different value, left alone"
+skbl,ElsaKarlsson,Q99457294,Elsa Karolina Karlsson,"place of death: item has a different value, left alone"
+oebl,A/Atzwanger_Peter-Paul_1888_1974,Q30716586,"Atzwanger, Peter Paul (Peterpaul)","place of birth 'Tisis (Feldkirch) (Feldkirch, Vbg.)' not matched to one place item"
+wgw,11524,Q872629,"Wimpffen, Maximilian",place of birth 'Münster/Westfalen' not matched to one place item
+dkl,Eva_Moltesen,Q60500397,Eva Moltesen,place of death 'Gentofte sogn' not matched to one place item
+skbl,ElsaKarolinaSvenssonSanfridsson,Q10481951,Elsa Karolina Svensson-Sanfridsson,"place of birth: item has a different value, left alone"
+sbl,11423,Q42309012,O Bernhard Kempe,"place of death: item has a different value, left alone"
+ndb,100544924,Q15453067,Johann Rietsch,occupation 'Dialektdichter' not mapped
+wgw,11525,Q13360775,"Ehrlich, Jakob",place of birth 'Bystřice pod Hostýnem (Mähren)' not matched to one place item
+wgw,11525,Q13360775,"Ehrlich, Jakob",place of death 'Dachau' not matched to one place item
+wgw,11525,Q13360775,"Ehrlich, Jakob",occupation 'Mitglied der Wiener Bürgerschaft' not mapped
+skbl,ElsaKristinaSkaringerLarson,Q57081604,Elsa Kristina Skäringer-Larson,place of birth 'Varnum' not matched to one place item
+skbl,ElsaKristinaSkaringerLarson,Q57081604,Elsa Kristina Skäringer-Larson,"date of death: item has a different value, left alone"
+skbl,ElsaKristinaSkaringerLarson,Q57081604,Elsa Kristina Skäringer-Larson,"place of death: item has a different value, left alone"
+lex,Aleksander_Nevskij,Q174044,Aleksander Nevskij,place of death 'Gorodets Radilov' not matched to one place item
+lex,Aleksander_Nevskij,Q174044,Aleksander Nevskij,"date of birth: item has a different value, left alone"
+kb,1898,Q11885443,Olli Mäki,"date of birth: item has a different value, left alone"
+skbl,ElsaKristinaStinaBergman,Q3499513,Elsa Kristina (Stina) Bergman,VIAF ID 23504789 could not be checked against VIAF; not copied
+sbl,11425,Q1039226,J Carl Kempe,"place of birth: item has a different value, left alone"
+ndb,100546250,Q55133232,Johann Leonhard Reckenberger,date of death 'nach 1740' not used: not an exact date
+wgw,11529,Q60906,"Windgassen, Wolfgang","place of birth 'Annenasse bei Genf, Haute-Savoie, Frankreich' not matched to one place item"
+dkl,Eva_Steiness,Q42309096,Eva Steiness,place of birth 'Glostrup sogn' not matched to one place item
+kb,19,Q6246989,Georg Gustaf Wrangel,date of birth 1728-03-23 not used: calendar unclear before 1753 there
+skbl,ElsaMariannevonRosen,Q3051704,Elsa Marianne von Rosen,"place of death 'Köpenhamn, Danmark' not matched to one place item"
+skbl,ElsaMariannevonRosen,Q3051704,Elsa Marianne von Rosen,VIAF ID 27978875 could not be checked against VIAF; not copied
+ndb,100546420,Q6065786,Gustav Moritz Redslob,religion 'evangelisch?' not used: uncertain
+oebl,A/Auchentaller_Josef-Maria_1865_1949,Q1705206,"Auchentaller, Josef Maria",occupation 'Plakatkünstler' not mapped
+oebl,A/Auchentaller_Josef-Maria_1865_1949,Q1705206,"Auchentaller, Josef Maria",occupation 'Schmuckdesigner' not mapped
+wgw,11535,Q106940961,"Ehrlich, Otto Hild","place of death 'Plainfield, New Jersey, USA' not matched to one place item"
+lex,Aleksander_af_Battenberg,Q159591,Aleksander af Battenberg,"date of death: item has a different value, left alone"
+kb,1901,Q1794607,Kustaa Pihlajamäki,"date of birth: item has a different value, left alone"
+skbl,ElsaNyblom,Q4970522,Elsa Kristina Nyblom,VIAF ID 25702757 could not be checked against VIAF; not copied
+skbl,ElsaNyblom,Q4970522,Elsa Kristina Nyblom,"place of birth: item has a different value, left alone"
+skbl,ElsaNyblom,Q4970522,Elsa Kristina Nyblom,"place of death: item has a different value, left alone"
+ndb,100546889,Q1910006,Matthias Hans von Behr,religion 'evangelisch?' not used: uncertain
+wgw,11538,Q57089,"Ehrlich, Paul","place of birth 'strehlen bei Schweidnitz, Preußisch-Schlesien' not matched to one place item"
+wgw,11538,Q57089,"Ehrlich, Paul",place of death 'Bad Homburg vor der Höhe' not matched to one place item
+lex,Aleksandr_Aleksandrovitj_Dejneka,Q620483,Aleksandr Dejneka,"place of death 'Moskva, Sovjetunionen (nu Rusland)' not matched to one place item"
+kb,1904,Q1302384,Sten Suvio,"place of birth: item has a different value, left alone"
+skbl,ElsaOlenius,Q4970914,Elsa Viktoria Olenius,VIAF ID 47960379 could not be checked against VIAF; not copied
+skbl,ElsaOlenius,Q4970914,Elsa Viktoria Olenius,"place of birth: item has a different value, left alone"
+skbl,ElsaOlenius,Q4970914,Elsa Viktoria Olenius,"place of death: item has a different value, left alone"
+ndb,100546951,Q23788142,Heinrich von Wedell,religion 'evangelisch?' not used: uncertain
+wgw,11539,Q1819885,"Winarsky, Leopold","place of birth 'Brünn, Mähren (Brno, Tschechien)' not matched to one place item"
+skbl,ElsaRobertson0,Q38152058,Elsa Robertson,"place of death 'Hamburg, Tyskland' not matched to one place item"
+skbl,ElsaRobertson0,Q38152058,Elsa Robertson,"place of birth: item has a different value, left alone"
+sbl,11430,Q24879268,Johan (Janne) Kempe,"place of death: item has a different value, left alone"
+oebl,A/Auer-Welsbach_Alois_1813_1869,Q1422266,"Auer-Welsbach, Alois von","place of death 'Hietzing b. Wien, NÖ(Wien)' not matched to one place item"
+kb,1906,Q927790,Tarmo Uusivirta,place of birth 'Säynätsalo' not matched to one place item
+skbl,ElsaSofiaHammarMoeschlin,Q27042115,Elsa Sofia Hammar-Moeschlin,"place of death 'Brissago, Schweiz' not matched to one place item"
+skbl,ElsaSofiaHammarMoeschlin,Q27042115,Elsa Sofia Hammar-Moeschlin,VIAF ID 62022739 could not be checked against VIAF; not copied
+sbl,11432,Q5905992,Seth M Kempe,"place of death: item has a different value, left alone"
+ndb,100553095,Q55133233,Eduard von Selmnitz,religion 'evangelisch?' not used: uncertain
+ndb,100553095,Q55133233,Eduard von Selmnitz,occupation 'sächsischer Hauptmann' not mapped
+oebl,A/Auer-Welsbach_Karl_1858_1929,Q89390,"Auer von Welsbach, Karl Frh.","place of death 'Welsbach Schloß (?, Kärnten)' not matched to one place item"
+wgw,11541,Q60623495,"Ehrlich, Sigmund","place of birth 'Groß-Beranau bei Iglau, Mähren' not matched to one place item"
+wgw,11541,Q60623495,"Ehrlich, Sigmund","date of birth: item has a different value, left alone"
+lex,Aleksandr_Bezborodko,Q2630181,Aleksandr Bezborodko,"place of birth 'Glukhov, det nuværende Hlukhiv i det nordlige Ukraine' not matched to one place item"
+lex,Aleksandr_Bezborodko,Q2630181,Aleksandr Bezborodko,date of death: the item has 1799-04-06 in the Julian calendar model and the entry the same digits in the Gregorian one; left alone: one of the two calendar models is wrong
+dkl,Fanny_Garde,Q40232948,Fanny Garde,"place of birth 'Nørre Løgum sg,. †29.4.1928 København' not matched to one place item"
+skbl,ElsaStenhammar,Q4980310,Elsa Elfrida Marguérite Stenhammar,VIAF ID 78753201 could not be checked against VIAF; not copied
+skbl,ElsaStenhammar,Q4980310,Elsa Elfrida Marguérite Stenhammar,"place of birth: item has a different value, left alone"
+skbl,ElsaStenhammar,Q4980310,Elsa Elfrida Marguérite Stenhammar,"place of death: item has a different value, left alone"
+oebl,A/Auer_Albert_1891_1973,Q94722844,"Auer, Albert (Alfons)",place of death 'Flüeli (Schweiz)' not matched to one place item
+wgw,11544,Q60623496,"Ehrmann, Camillo",place of birth 'Preßburg' not matched to one place item
+skbl,ElsaStenudd,Q50660030,Tekla Sigrid Elisabeth Elsa Stenudd,place of birth 'Nederkalix' not matched to one place item
+wgw,11550,Q50217021,"Mohn, Gottlob Samuel",place of birth 'Weißenfels an der Saale' not matched to one place item
+wgw,11550,Q50217021,"Mohn, Gottlob Samuel","place of death 'Laxenburg, Niederösterreich' not matched to one place item"
+wgw,11550,Q50217021,"Mohn, Gottlob Samuel","date of death: item has a different value, left alone"
+dkl,Fanny_Halstrøm,Q62080042,Fanny Halstrøm,"place of birth 'Dovergård, Dover sogn' not matched to one place item"
+skbl,ElsaStinaLarsdotterLaulaRenberg,Q4129778,Elsa Stina Larsdotter Laula Renberg,"place of death 'Brønnøy, Norge' not matched to one place item"
+skbl,ElsaStinaLarsdotterLaulaRenberg,Q4129778,Elsa Stina Larsdotter Laula Renberg,VIAF ID 227162867 could not be checked against VIAF; not copied
+skbl,ElsaStinaLarsdotterLaulaRenberg,Q4129778,Elsa Stina Larsdotter Laula Renberg,"place of birth: item has a different value, left alone"
+sbl,11436,Q5906242,G Douglas Kennedy,place of death 'Göteborgs Vasa församling' not matched to one place item
+sbl,11436,Q5906242,G Douglas Kennedy,"place of birth: item has a different value, left alone"
+ndb,100554180,Q55133236,Justus Wesselius Rumpaeus,"date of death: item has a different value, left alone"
+oebl,A/Auer_Erwin-Maria_1907_1989,Q59653346,"Auer, Erwin Maria",occupation 'Museumsdirektor' not mapped
+wgw,11551,Q28665456,"Ehrmannm, Martin","place of birth 'Brünn, Mähren' not matched to one place item"
+wgw,11551,Q28665456,"Ehrmannm, Martin","date of death: item has a different value, left alone"
+kb,1913,Q116090,Sylvi Saimo,"place of birth: item has a different value, left alone"
+skbl,ElsaSvartengren,Q105275977,Elsa Maria Svartengren,VIAF ID 317120400 could not be checked against VIAF; not copied
+skbl,ElsaSvartengren,Q105275977,Elsa Maria Svartengren,"place of death: item has a different value, left alone"
+ndb,100555543,Q18643331,Heinrich Ludwig Planck,"religion: item has a different value, left alone"
+oebl,A/Auer_Hans-Wilhelm_1847_1906,Q121768,"Auer, Hans Wilhelm (Hanns)","date of birth: item has a different value, left alone"
+skbl,ElseKleen,Q4959057,Else Kleen,"place of birth 'Wien, Österrike' not matched to one place item"
+skbl,ElseKleen,Q4959057,Else Kleen,VIAF ID 78750270 could not be checked against VIAF; not copied
+skbl,ElseKleen,Q4959057,Else Kleen,"place of death: item has a different value, left alone"
+ndb,10055590X,Q1080444,Christian Jakob Wagenseil,religion 'katholisch?' not used: uncertain
+oebl,A/Auer_Leopold_1845_,Q368583,"Auer, Leopold",the life data field is not in the usual form; places not read
+oebl,A/Auer_Leopold_1845_,Q368583,"Auer, Leopold","date of birth: item has a different value, left alone"
+kb,1915,Q1382922,Kurt Wires,"place of death: item has a different value, left alone"
+skbl,ElsiRydsjo,Q4976163,Elsie (Elsi) Elisabet Rydsjö,VIAF ID 23055130 could not be checked against VIAF; not copied
+skbl,ElsieAlbiin,Q4934792,Elsy (Elsie) Marianne Albiin,"place of death 'Kongens Lyngby, Danmark' not matched to one place item"
+sbl,11448,Q5907289,Olof Kexél,place of birth 'Kalmar stadsförsamling' not matched to one place item
+sbl,11448,Q5907289,Olof Kexél,"place of death: item has a different value, left alone"
+ndb,10056125X,Q55133237,Wilhelm Heinrich Sohr,religion 'evangelisch?' not used: uncertain
+oebl,A/Auerhan_Jan_1880_1942,Q12022387,"Auerhan, Jan","place of birth 'Skala (Jägerhaus) / Skála (myslivna), Bez. Deutschbrod, Böhmen (Skála, kr. Vysočina, Tschechien)' not matched to one place item"
+wgw,11559,Q14541853,"Eibenschütz, Riza",place of death 'Umgebung von Wien' not matched to one place item
+wgw,11559,Q14541853,"Eibenschütz, Riza","date of birth: item has a different value, left alone"
+wgw,11559,Q14541853,"Eibenschütz, Riza","place of birth: item has a different value, left alone"
+wgw,11559,Q14541853,"Eibenschütz, Riza","date of death: item has a different value, left alone"
+dkl,Fanny_Suenssen,Q4981128,Fanny Suenssen,"place of birth 'Tønning, Slesvig' not matched to one place item"
+skbl,ElsieDahlberg,Q4943958,Elsie Margareta Dahlberg,"place of birth: item has a different value, left alone"
+sbl,11449,Q5403135,Simon Kexlerus,"place of birth: item has a different value, left alone"
+wgw,1156,Q12026922,"Ruston, Joseph John","place of death 'Wien, Meidling' not matched to one place item"
+wgw,1156,Q12026922,"Ruston, Joseph John",occupation 'Schiffsbaumeister' not mapped
+skbl,ElsieJohnson,Q100981534,Elsie Johnson,"place of death: item has a different value, left alone"
+sbl,11451,Q4218935,E Axel H Key,place of death 'Kungsholm eller Ulrika Eleonora' not matched to one place item
+wgw,11562,Q2284064,"Eibenschütz, Siegmund","place of birth: item has a different value, left alone"
+lex,Aleksandr_Gortjakov,Q327020,Aleksandr Gortjakov,"place of birth 'Haapsalu, Estland (dengang en del af Det Russiske Kejserrige)' not matched to one place item"
+lex,Aleksandr_Gortjakov,Q327020,Aleksandr Gortjakov,"place of death 'Baden-Baden, storhertugdømmet Baden, Tyskland' not matched to one place item"
+skbl,ElviraMatildaHenriettaHarms,Q104885789,Elvira Matilda Henrietta Harms,"place of death: item has a different value, left alone"
+sbl,11452,Q5907310,Einar S H Key,place of death 'Kungsholm eller Ulrika Eleonora' not matched to one place item
+oebl,A/Auersperg_Adolf_1821_1885,Q364689,"Auersperg, Adolf Fürst",place of birth '? (?)' not matched to one place item
+oebl,A/Auersperg_Adolf_1821_1885,Q364689,"Auersperg, Adolf Fürst","place of death 'Goldegg (St. Pölten) (?, NÖ)' not matched to one place item"
+oebl,A/Auersperg_Adolf_1821_1885,Q364689,"Auersperg, Adolf Fürst",occupation 'Ministerpräsident' not mapped
+wgw,11573,Q94860016,"Eibl, Hans",place of birth 'Bielitz' not matched to one place item
+wgw,11573,Q94860016,"Eibl, Hans","date of death: item has a different value, left alone"
+skbl,EmanuellaCarlbeck,Q4941825,Emanuella Otiliana Carlbeck,"place of death 'Johannesberg' matched Q2393364, but SKBL's map pin is 379 km away; not used"
+skbl,EmanuellaCarlbeck,Q4941825,Emanuella Otiliana Carlbeck,VIAF ID 61525016 could not be checked against VIAF; not copied
+skbl,EmanuellaCarlbeck,Q4941825,Emanuella Otiliana Carlbeck,"place of birth: item has a different value, left alone"
