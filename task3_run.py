@@ -279,6 +279,31 @@ def publish():
         pass
 
 
+def plan_offsets(work, done):
+    """Where each entry of the work's plan that still has to be done starts in the file. Only the positions are
+    kept: all plans together are too big to hold in a job's memory (task3-run-6 was stopped for it, 16 November)."""
+    offsets = []
+    with open(plan_file(work), "rb") as f:
+        while True:
+            pos, line = f.tell(), f.readline()
+            if not line:
+                return offsets
+            e = json.loads(line)
+            if (e["work"], e["id"]) not in done and e["facts"]:
+                offsets.append((work, pos, e["id"]))
+
+
+def plan_entry(work, pos, ident):
+    """The entry at that position, or None when the plan was rewritten since (it is found again next round)."""
+    with open(plan_file(work), "rb") as f:
+        f.seek(pos)
+        try:
+            e = json.loads(f.readline())
+        except ValueError:
+            return None
+    return e if e.get("id") == ident else None
+
+
 def patient(fn, *args, **kw):
     """fn(...), waiting out long maxlag periods instead of stopping. pywikibot gives up after its retries, but the
     query service sometimes lags for hours (task3-run-2 stopped that way on 10 November 2026)."""
@@ -301,18 +326,16 @@ def run():
     while True:
         done = logged()
         works = ready_works()
-        todo = [e for w in works if plan_file(w).exists() for e in map(json.loads, open(plan_file(w), encoding="utf-8"))
-                if (e["work"], e["id"]) not in done and e["facts"]]
+        by_work = [plan_offsets(w, done) for w in works if plan_file(w).exists()]   # where each entry still to
+        todo = [x for group in zip_longest(*by_work) for x in group if x]            # do starts, the works in turn
         if not todo:
             if all(w in works for w in s.WORKS3):
                 break
             time.sleep(900)                   # works still crawling, planning or waiting to be looked at
             continue
-        by_work = [[e for e in todo if e["work"] == w] for w in works]
-        todo = [e for group in zip_longest(*by_work) for e in group if e]    # the works in turn
         d.out(f"{len(todo)} entries to do ({', '.join(works)})")
         for b in range(0, len(todo), 50):
-            batch = todo[b:b + 50]
+            batch = [e for e in (plan_entry(*x) for x in todo[b:b + 50]) if e]
             log, left = [], []
             try:
                 today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
