@@ -25,6 +25,7 @@ import collections
 import csv
 import datetime
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -184,8 +185,8 @@ def main():
         from common import bot_site
         site = bot_site(1)
     counts = collections.Counter()
-    new = not OUT.exists()
-    with open(OUT, "a", encoding="utf-8", newline="") as fh:
+    new = not OUT.exists() or OUT.stat().st_size == 0
+    with open(OUT if save_ else os.devnull, "a", encoding="utf-8", newline="") as fh:     # a dry run writes nothing
         w = csv.DictWriter(fh, FIELDS)
         if new and save_:
             w.writeheader()
