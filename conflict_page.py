@@ -215,7 +215,12 @@ def batch(log, number, title, sample=None):
     dollars, searches = cost(searched, float(os.environ.get("BATCH_TOKENS_SHARE", "1"))) if searched else (0.0, 0)
     repo = "https://github.com/Open-Knowledge-Association/oka-wikidata-bot/blob/main/"
     bold = "'" * 3
-    text = f"""This is batch {number} of the disagreement edits of [[User:OKA bot|OKA bot]] ([[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]). The rules are on [[User:OKA bot/Disagreement checks]]. {bold}Nothing on this page has been changed on Wikidata yet{bold}: the operator checks a sample first.
+    same_as = os.environ.get("BATCH_SAME_AS")      # a batch made exactly like an earlier, checked one
+    status = (f"It was made exactly like [[User:OKA bot/Disagreement checks/Batch {same_as}|batch {same_as}]] (same "
+              f"search, same rules), whose sample the operator checked, so its edits are made without a new check."
+              if same_as else f"{bold}Nothing on this page has been changed on Wikidata yet{bold}: the operator checks "
+              "a sample first.")
+    text = f"""This is batch {number} of the disagreement edits of [[User:OKA bot|OKA bot]] ([[Wikidata:Requests for permissions/Bot/OKA bot 3|request 3]]). The rules are on [[User:OKA bot/Disagreement checks]]. {status}
 
 == {title} ==
 {len(rows)} cases{f", {searches} searches, about ${dollars:.2f}" if searched else ""}. Outcome: {n['prefer']} prefer the entry's value, {n['both']} both, {n['report']} report, {n['same']} no disagreement after all (one place inside the other), {n['retry']} checked again later. {"" if shown is rows else f"Shown below: a random sample of {len(shown)}. "}All cases: [{repo}{Path(log).name} {Path(log).name}].
