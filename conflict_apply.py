@@ -135,7 +135,8 @@ def check_live(r, ent, f):
                 if c["rank"] != "deprecated" and c["mainsnak"]["snaktype"] == "value"]
     if any(d.same(c["mainsnak"]["datavalue"], f["value"]) for c in existing):
         return existing, "the entry's value is already on the item"
-    if any(d.same(c["mainsnak"]["datavalue"], f["value"]) for c in ent.get("claims", {}).get(f["pid"], [])):
+    if any(d.same(c["mainsnak"]["datavalue"], f["value"]) for c in ent.get("claims", {}).get(f["pid"], [])
+           if "datavalue" in c["mainsnak"]):
         return existing, "the entry's value is already on the item (deprecated)"
     if not existing:
         return existing, "Wikidata's value is gone"
@@ -220,7 +221,7 @@ def main():
                             time.sleep(1)
                             back = d.items([r["qid"]]).get(r["qid"], {})
                             ok = any(d.same(c["mainsnak"]["datavalue"], f["value"]) and c["rank"] == claim["rank"]
-                                     for c in back.get("claims", {}).get(f["pid"], []))
+                                     for c in back.get("claims", {}).get(f["pid"], []) if "datavalue" in c["mainsnak"])
                             row["revid"] = rev
                             result = f"added ({r['decision']})" if ok else "NOT CONFIRMED by read-back"
                 counts[result.split(":")[0] if result.startswith("left alone") else result] += 1
