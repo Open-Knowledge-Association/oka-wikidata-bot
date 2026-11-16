@@ -7,6 +7,7 @@ edits a minute with maxlag 5. Nothing is created yet: entries without an item co
     python dictionaries_run.py plan snl  # (HDS once check_links.py has run, SNL once `dictionaries.py prefetch` has)
     python dictionaries_run.py run       # resumable; the log is dictionary_edits.csv, and what the bot leaves
                                          # alone for a person to look at is dictionary_left_alone.csv
+    python dictionaries_run.py redo hds  # entries planned again under a changed rule (see redo())
     python dictionaries_run.py fold      # HDS entries sourced before bare references were completed: the bot's
                                          # reference merged into the bare one (log: dictionary_folds.csv)
 """
@@ -563,6 +564,63 @@ def run():
                 publish()
 
 
+def redo():
+    """Entries planned again under a changed rule, and the edits that follow (16 November 2026: place of origin for
+    people who died before 1848, once Property talk:P1321 widened the property to citizenship of a commune before the
+    federal state). Only HDS entries whose page is already cached: nothing is asked of the HDS. The plan lines are
+    replaced; the edits are made and logged as in `run`.
+        python dictionaries_run.py redo hds [ID ...]           what would change (default: the entries the
+        python dictionaries_run.py redo hds [ID ...] --save    pre-1848 rule left without a place of origin)"""
+    work, save = sys.argv[2], "--save" in sys.argv
+    if work != "hds":
+        sys.exit("redo: HDS only")
+    ids = [a for a in sys.argv[3:] if not a.startswith("--")]
+    plan = [json.loads(line) for line in open(plan_file(work), encoding="utf-8")]
+    held = lambda e: any("died before 1848" in n for n in e.get("notes", []))
+    todo = [e for e in plan if (e["id"] in ids if ids else held(e))]
+    todo = [e for e in todo if (WORK2 / "hds" / f"{e['id'].zfill(6)}.html").exists()]
+    out(f"{len(todo)} entries to plan again: {[e['id'] for e in todo]}")
+    d.hds_open()
+    new = {}
+    for e in todo:
+        e = dict(e)
+        e["title"], e["facts"], e["notes"] = d.hds_facts(e["id"], e["kind"])
+        new[e["id"]] = e
+    if save:                                          # the plan says what the bot would now do with each entry
+        tmp = plan_file(work).with_suffix(".tmp")
+        with open(tmp, "w", encoding="utf-8") as f:
+            for e in plan:
+                f.write(json.dumps(new.get(e["id"], e), ensure_ascii=False) + "\n")
+        os.replace(tmp, plan_file(work))
+    site = None
+    if save:
+        if not APPROVED:
+            sys.exit("Task 2 is not approved")
+        from common import bot_site
+        site = bot_site(1)
+        d.REQUEST2 = "[[Wikidata:Requests for permissions/Bot/OKA bot 2|OKA bot task 2]]"
+    batch = list(new.values())
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("+%Y-%m-%dT00:00:00Z")
+    live = items(sorted({e["qid"] for e in batch}))
+    batch = [d.refresh_life_dates(e, live.get(e["qid"])) for e in batch]
+    labels = d.place_labels(live, batch)
+    log, left = [], []
+    for e in batch:
+        ent = live.get(e["qid"], {})
+        claims, changes, notes = d.build(ent, e, today, labels) if ent else ([], [], ["item not found"])
+        out(f"{e['id']} {e['qid']} {e.get('title', '')}: {'; '.join(changes) or 'no change'}")
+        if not save:
+            continue
+        revid, err = d.save(site, e["qid"], claims, changes, e["work"], ent.get("lastrevid")) if claims else (None, None)
+        now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        log.append((now, e["work"], e["kind"], e["id"], e["qid"], revid or "",
+                    err or ("; ".join(changes) if revid else "no change")))
+        left += [(e["work"], e["id"], e["qid"], e.get("title", ""), n) for n in notes]
+    if save:
+        append(LOG, ("time", "work", "kind", "entry", "item", "revid", "changes"), log)
+        append(LEFT, ("work", "entry", "item", "title", "note"), left)
+
+
 def fold():
     """Where the run sourced a statement that already gave the HDS entry as a bare link or identifier, before such
     references were completed (Thomas Kerboul and jz, 23 October 2026): one reference instead of two. Every entry
@@ -597,4 +655,4 @@ def fold():
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     d.check_occupations()
-    {"plan": plan, "run": run, "fold": fold, "unlinked": unlinked, "crawl-hds": crawl_hds}[sys.argv[1]]()
+    {"plan": plan, "run": run, "redo": redo, "fold": fold, "unlinked": unlinked, "crawl-hds": crawl_hds}[sys.argv[1]]()

@@ -804,10 +804,8 @@ def hds_facts(hid, kind):
                     notes.append(f"{key} '{name}' not matched to one place item")
         header = clean(re.split(r"\.\s+(?:Sohn|Tochter)\b", first)[0])
         m = re.search(r",\s*von ([^.]+)$", header)
-        years = {f["pid"]: int(f["value"]["value"]["time"][1:5]) for f in facts if f["pid"] in ("P569", "P570")}
-        if m and (years.get("P570", 9999) < 1848 or "P570" not in years and years.get("P569", 9999) < 1748):
-            notes.append("place of origin left out: the person died before 1848")   # the notion of the 1848 federal
-            m = None                                   # state (Sapphorain, 25 October 2026; disputed, see P1321's talk)
+        # People who died before 1848 get it too: P1321 covers citizenship of a commune before the federal state
+        # (Property talk:P1321, 16 November 2026; the HDS "von" is the source the usage note asks for).
         if m:
             for name in re.split(r",\s*|\s+und\s+", m.group(1)):
                 q = ch(name)
