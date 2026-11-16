@@ -47,6 +47,29 @@ REPLACE = {
     "Q21667301": "Q3588743",  # Norrtälje district -> Norrtälje
     "Q21667335": "Q3183470",  # Sigtuna district -> Sigtuna
     "Q21684694": "Q297790",   # Öregrund district -> Öregrund
+    # second round (16 November 2026): BPN, Hessische Biografie, SAEBI, SBI, Uppslagsverket, EHLFL
+    "Q2241721": "Q220",       # Rome, hamlet in Maasdriel -> Rome
+    "Q652748": "Q220",        # Rom, municipality in Mecklenburg -> Rome (the German name)
+    "Q2784435": "Q118958",    # Leuven, hamlet in West Betuwe -> Leuven
+    "Q2501958": "Q12995",     # Kortrijk, farm village in the Netherlands -> Kortrijk
+    "Q19835370": "Q70",       # Bern, settlement in Germany -> Bern
+    "Q54728796": "Q1199713",  # Batavia, neighbourhood of Nijmegen -> Batavia, capital of the Dutch East Indies
+    "Q694307": "Q34713",      # Salzburg, municipality in the Westerwald -> Salzburg
+    "Q2105612": "Q268",       # Posen, settlement in Germany -> Poznań
+    "Q19965726": "Q34370",    # Rotterdam, settlement in Germany -> Rotterdam
+    "Q114437080": "Q43631",   # Leiden, a hermitage in Bavaria -> Leiden
+    "Q97341391": "Q84",       # London, district of Jakobstad -> London
+    "Q1786346": "Q31487",     # Krakau, settlement in Germany -> Kraków
+    "Q33949469": "Q4190",     # a settlement item within Passau -> Passau
+    "Q18798911": "Q1773",     # Riga, village in Samara Oblast -> Riga
+    "Q815551": "Q3711",       # Belgrad, part of Stoltebüll -> Belgrade
+    "Q12525263": "Q7568",     # Yogyakarta, village in Lampung -> Yogyakarta
+    "Q18327337": "Q2865",     # Cassel, settlement in Heckenbach -> Kassel (old spelling)
+    "Q32749642": "Q4065",     # a duplicate item of Stralsund -> Stralsund
+    "Q49280504": "Q6526",     # the historic centre of Bozen -> Bozen
+    "Q30027458": "Q131605",   # the historic centre of Meran -> Meran
+    "Q33724595": "Q263305",   # the historic centre of Sterzing -> Sterzing
+    "Q30023195": "Q256765",   # the historic centre of Bruneck -> Bruneck
 }
 DROP = {
     "Q660945": "Straßburg: the Carinthian town or Strasbourg",
@@ -84,6 +107,29 @@ DROP = {
     "Q14551006": "Neukirchen: which one",
     "Q135854961": "Velden: an abandoned village or Velden am Wörthersee",
     "Q133446935": "Sankt Lambrecht: a locality in Villach-Land or the Styrian market town",
+    "Q100020": "Mechelen: the village in Limburg or the city in Belgium",
+    "Q124017551": "Linden: in Hanover or the town in Hesse",
+    "Q2339754": "Steinbach: which one",
+    "Q1892383": "Marbach: which one",
+    "Q2319085": "Sankt Johann: which one",
+    "Q760496": "Oberhausen: the quarter of Augsburg or the city in the Ruhr",
+    "Q19968083": "Voerde: the borough of Ennepetal or the town on the Rhine",
+    "Q165614": "Baden: which one",
+    "Q61726764": "Schaan: a part of Jüchen or Schaan in Liechtenstein",
+    "Q15217545": "Feldkirch: a part of Hartheim or the town in Vorarlberg",
+    "Q27983898": "Newport: which one",
+    "Q7104142": "Orsk: a Polish village or the Russian city",
+    "Q18452442": "Prato: which one",
+    "Q4020045": "Podgorica: the Slovenian village or the capital of Montenegro",
+    "Q171206": "Friesland: a hamlet in Montferland or the province",
+    "Q1491603": "Mauthausen: a German village or Mauthausen in Upper Austria",
+    "Q1534385": "Wellington: which one",
+    "Q76937": "Willemstad: in North Brabant or on Curaçao",
+    "Q2463781": "Comines: in Belgium or in France",
+    "Q2661558": "Aalst: the Dutch village or the Belgian city",
+    "Q3031001": "Giessen: the Dutch village or the German city",
+    "Q2583540": "Halle: which one",
+    "Q200999": "Victoria: which one",
 }
 
 
