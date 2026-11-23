@@ -9475,3 +9475,561 @@ bpn,00473641,Q3393845,Johannes Bosscha,"place of death: item has a different val
 ehlfl,"Eberle,_Anton",Q136684434,Anton Eberle,occupation 'Gemeindevorsteher' not mapped
 dkl,Karen_Busk,Q62080730,Karen Busk,place of birth 'Beder sogn' not matched to one place item
 kb,2531,Q6213287,Mikael Toppelius,date of birth 1734-08-10 not used: calendar unclear before 1753 there
+ndb,100952496,Q310435,Ludwig der Blinde,date of birth 'circa 880' not used: not an exact date
+ndb,100952496,Q310435,Ludwig der Blinde,date of death 'zwischen 25.12.927 u. September' not used: not an exact date
+ndb,100952496,Q310435,Ludwig der Blinde,occupation 'fränkischer König und Kaiser' not mapped
+ndb,100952496,Q310435,Ludwig der Blinde,occupation 'König von Burgund' not mapped
+ndb,100952496,Q310435,Ludwig der Blinde,child 'Karl Konstantin' (GND 137951019) is on no single item; not linked
+oebl,B/Bernbrunn_Karl_1787_1854,Q1037253,"Bernbrunn, Karl","GND ID 118834800 is of someone born 1789, not 1787; not copied"
+wgw,13051,Q99098628,"Elmayer-Vestenbrugg, Willy","place of death 'Wien, Allgemeines Krankenhaus' not matched to one place item"
+wgw,13051,Q99098628,"Elmayer-Vestenbrugg, Willy","date of birth: item has a different value, left alone"
+hessbio,1024,Q131768312,"Colm-Bialla, Erich",place of birth 'Bialla (Ostpreußen)' not matched to one place item
+saebi,10260,Q19636483,"Rakebrand, Hilde",place of birth 'Walkenried/ Harz' not matched to one place item
+sbi,1002190,Q17402411,Ljudmila Bezlaj Krevel,occupation 'etnolog' not mapped
+sbi,1002190,Q17402411,Ljudmila Bezlaj Krevel,occupation 'arhivist' not mapped
+sbi,1002190,Q17402411,Ljudmila Bezlaj Krevel,occupation 'publicist' not mapped
+skbl,IngerRudberg0,Q108314922,Inger Rudberg,"place of birth 'Skagen, Danmark' not matched to one place item"
+skbl,IngerRudberg0,Q108314922,Inger Rudberg,VIAF ID 24573725 could not be checked against VIAF; not copied
+ndb,100952518,Q72789,Ludwig II.,date of birth 'um 1128' not used: not an exact date
+ndb,100952518,Q72789,Ludwig II.,place of death 'auf der Neuenburg bei Freyburg/Unstrut' not matched to one place item
+ndb,100952518,Q72789,Ludwig II.,place of burial 'Kloster Reinhardsbrunn' not matched to one place item
+ndb,100952518,Q72789,Ludwig II.,occupation 'Landgraf von Thüringen' not mapped
+ndb,100952518,Q72789,Ludwig II.,sibling 'Heinrich Raspe II.' (GND 137944780) is on no single item; not linked
+ndb,100952518,Q72789,Ludwig II.,date of death: the item has 1172-10-14 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+oebl,B/Berndl_Florian_1856_1934,Q1429592,"Berndl, Florian",occupation 'Naturheilkundler' not mapped
+wgw,13054,Q1657473,"Köck, Ignaz",occupation 'Generaldirektor der ÖMV' not mapped
+wgw,13054,Q1657473,"Köck, Ignaz","date of death: item has a different value, left alone"
+saebi,10261,Q1167872,"Werl, Elisabeth Mathilde",place of birth 'Annaberg' not matched to one place item
+uppslag,BjoerkqvistHeimer,Q11861942,"Björkqvist, Heimer","date of birth: item has a different value, left alone"
+bpn,00478965,Q16741759,Jacob van de Kerckhoven,place of birth 'Antwerpen' not matched to one place item
+ehlfl,"Eberle-Strub,_Susanne",Q28870267,Susanne Eberle-Strub,place of birth 'Grabs' not matched to one place item
+dkl,Karen_Callisen,Q23784284,Karen Callisen,"place of birth 'Troelstrup Overgård, Tønning sogn' not matched to one place item"
+kb,2534,Q3299971,Matti Åkerblom,date of birth 1740-07-18 not used: calendar unclear before 1753 there
+skbl,IngerWedborn,Q50512434,Inger Maria Wedborn,VIAF ID 243147724764364590904 could not be checked against VIAF; not copied
+sbl,12206,Q5892167,Bengt I J Jonzon,place of death 'Arvika östra församling' not matched to one place item
+ndb,100952526,Q86561,Ludwig III.,date of birth '1151 oder 1152' not used: not an exact date
+ndb,100952526,Q86561,Ludwig III.,place of death 'auf der Rückfahrt vom Kreuzzug von Akkon bei Zypern' not matched to one place item
+ndb,100952526,Q86561,Ludwig III.,place of burial 'Kloster Reinhardsbrunn' not matched to one place item
+ndb,100952526,Q86561,Ludwig III.,occupation 'Landgraf von Thüringen' not mapped
+oebl,B/Bernhard_Thomas_1931_1989,Q44336,"Bernhard, (Nicolaas, Nicolaus) Thomas",place of death 'Gmunden (OÖ)' not matched to one place item
+hessbio,10241,Q131768776,"Cronenbold, Johann Andreas",place of birth '[unbekannt] Wertheim am Main' not matched to one place item
+hessbio,10241,Q131768776,"Cronenbold, Johann Andreas",place of death 'Sandbach (Odenwald)' not matched to one place item
+sbi,1002210,Q61122032,Walter Bianchi,occupation 'oblikovalec' not mapped
+ehlfl,"Eggenberger,_Katrin",Q76598032,Katrin Eggenberger,occupation 'Regierungsrätin' not mapped
+ehlfl,"Eggenberger,_Katrin",Q76598032,Katrin Eggenberger,"place of birth: item has a different value, left alone"
+kb,2535,Q722241,Fredrik af Chapman,date of birth 1721-09-09 not used: calendar unclear before 1753 there
+skbl,IngierdGunnarsdotter,Q4951388,Ingierd Gunnarsdotter,date of birth 'Ca 1600' not used: approximate or unclear
+skbl,IngierdGunnarsdotter,Q4951388,Ingierd Gunnarsdotter,"place of death 'Höglunda' matched Q18290838, but SKBL's map pin is 493 km away; not used"
+ndb,100952739,Q55132797,Magnus von Reichersberg,place of death 'Reichersberg/Inn' not matched to one place item
+ndb,100952739,Q55132797,Magnus von Reichersberg,occupation 'Augustinerchorherr' not mapped
+wgw,13058,Q77686,"Escherich, Theodor","place of birth 'Ansbach, Franken' not matched to one place item"
+hessbio,10244,Q99064718,"Rotenstein, Eberhard von",place of birth 'vor 1280' not matched to one place item
+hessbio,10244,Q99064718,"Rotenstein, Eberhard von",occupation 'Spitalmeister' not mapped
+hessbio,10244,Q99064718,"Rotenstein, Eberhard von",occupation 'Kaplan' not mapped
+hessbio,10244,Q99064718,"Rotenstein, Eberhard von",occupation 'Abt' not mapped
+saebi,10264,Q1581576,"Otto, Hans",occupation 'Gegner des NS-Regimes' not mapped
+saebi,10264,Q1581576,"Otto, Hans","date of death: item has a different value, left alone"
+sbi,1002220,Q61121665,Dominik Biasutti,date of birth '?' not used: not an exact date
+sbi,1002220,Q61121665,Dominik Biasutti,date of death '?' not used: not an exact date
+uppslag,BjoerkstenEmilie,Q4939333,"Björksten, Emilie","date of birth: item has a different value, left alone"
+uppslag,BjoerkstenEmilie,Q4939333,"Björksten, Emilie","place of birth: item has a different value, left alone"
+bpn,00482017,Q2178595,Hendrik Jan Carsten,place of birth 'Hoogeveen' not matched to one place item
+ehlfl,"Ehingen_(Ministri),_Johann_von",Q1698049,Johann von Ehingen (Ministri),place of death 'Chur' not matched to one place item
+ehlfl,"Ehingen_(Ministri),_Johann_von",Q1698049,Johann von Ehingen (Ministri),occupation Q29182 not added: the item has the more precise Q611644
+kb,2537,Q1036858,Carl August Ehrensvärd,date of birth 1745-05-05 not used: calendar unclear before 1753 there
+skbl,IngridAmaliaPySorman,Q1712495,Ingrid Amalia (Py) Sörman,VIAF ID 62488795 could not be checked against VIAF; not copied
+skbl,IngridAmaliaPySorman,Q1712495,Ingrid Amalia (Py) Sörman,"place of birth: item has a different value, left alone"
+ndb,100952984,Q1388231,Marianus Scottus,place of birth 'Ulster(?)/Irland' uncertain; not used
+ndb,100952984,Q1388231,Marianus Scottus,"place of burial 'Mainz, Sankt Martin' not matched to one place item"
+wgw,13062,Q3182017,"Blumenthal, Josef von",place of death 'Vorstadt Breitenfeld' not matched to one place item
+hessbio,10245,Q106180,Rudolf,place of birth 'um 1000' not matched to one place item
+hessbio,10245,Q106180,Rudolf,occupation 'Abt' not mapped
+saebi,10265,Q139208801,"Panndorf, Friedrich",place of death 'k.A' not matched to one place item
+bpn,00486015,Q43127674,Klaas Boonstra,place of death 'Schore (Kapelle)' not matched to one place item
+kb,2538,Q25451061,Adolf Erik Geete,"place of birth 'Börstil, Tukholman lääni' not matched to one place item"
+kb,2538,Q25451061,Adolf Erik Geete,date of birth 1730-01-05 not used: calendar unclear before 1753 there
+skbl,IngridAndersson,Q4935813,Ingrid Svea Margareta Andersson,"place of birth 'Skeppsholmen' matched Q10670072, but SKBL's map pin is 357 km away; not used"
+skbl,IngridAndersson,Q4935813,Ingrid Svea Margareta Andersson,VIAF ID 29506474 could not be checked against VIAF; not copied
+skbl,IngridAndersson,Q4935813,Ingrid Svea Margareta Andersson,"place of death: item has a different value, left alone"
+sbl,12209,Q3719539,J Erik Jorpes,place of death 'Finska församling' not matched to one place item
+ndb,100953344,Q97498930,Matthäus von Königsaal,place of death 'Altzella bei Nossen (Sachsen)' not matched to one place item
+ndb,100953344,Q97498930,Matthäus von Königsaal,place of burial 'Altzella bei Nossen (Sachsen)' not matched to one place item
+ndb,100953344,Q97498930,Matthäus von Königsaal,occupation 'Zisterzienser' not mapped
+oebl,B/Bernstein-Porges_Elsa_1866_1949,Q107883,"Bernstein(-Porges), Elsa",date of birth '27. oder 28. 10. 1866' not used: not a plain date
+wgw,13063,Q1693429,"Hetzendorf von Hohenberg, Johann Ferdinand",place of birth 'Josefstadt (Vorstadt)' not matched to one place item
+hessbio,10246,Q19631945,"Porte, Jacob Andreas de la","date of birth: item has a different value, left alone"
+hessbio,10246,Q19631945,"Porte, Jacob Andreas de la","date of death: item has a different value, left alone"
+saebi,10266,Q84613,"Peter, Richard",place of birth 'Klein-Jenkwitz/ Schlesien (poln. Jankowice Male)' not matched to one place item
+sbi,1002240,Q61121447,Ivan Bidovec,occupation 'narodni-delavec' not mapped
+sbi,1002240,Q61121447,Ivan Bidovec,occupation 'duhovnik' not mapped
+sbi,1002240,Q61121447,Ivan Bidovec,"date of death: item has a different value, left alone"
+bpn,00491150,Q97105544,Johann Goll van Franckenstein (I) (sr),"date of birth: item has a different value, left alone"
+ehlfl,"Elkuch,_Edgar",Q136675581,Edgar Elkuch,occupation 'Gemeindevorsteher' not mapped
+kb,2540,Q18169846,Nils Mannerskants,date of birth 1738-11-17 not used: calendar unclear before 1753 there
+kb,2540,Q18169846,Nils Mannerskants,"place of death: item has a different value, left alone"
+sbl,12210,Q229810,Josefina,place of death 'Stockholms katolska församling' not matched to one place item
+ndb,100953433,Q55194042,Matthias von Beheim,date of death 'um 1350' not used: not an exact date
+ndb,100953433,Q55194042,Matthias von Beheim,occupation 'Klausner' not mapped
+oebl,B/Bernt_Ferdinand_1876_1915,Q1405117,"Bernt, Ferdinand","place of birth 'Miltschowes/Milíčeves, Bez. Saaz, Böhmen (Žatec-Milčeves, kr. Ústecký, Tschechien)' not matched to one place item"
+oebl,B/Bernt_Ferdinand_1876_1915,Q1405117,"Bernt, Ferdinand","date of birth: item has a different value, left alone"
+saebi,10267,Q84609,"Pfleumer, Fritz",occupation 'Toningenieur' not mapped
+saebi,10267,Q84609,"Pfleumer, Fritz","date of death: item has a different value, left alone"
+sbi,1002250,Q12793412,Karel Birsa,occupation Q40348 not added: the item has the more precise Q808967
+dkl,Karen_Glæsel,Q62080735,Karen Glæsel,"place of death 'Fredensborg, Asminderød sogn' not matched to one place item"
+skbl,IngridBergman,Q43247,Ingrid Bergman,"place of death 'London, Storbritannien' not matched to one place item"
+skbl,IngridBergman,Q43247,Ingrid Bergman,VIAF ID 68925401 could not be checked against VIAF; not copied
+skbl,IngridBergman,Q43247,Ingrid Bergman,"place of birth: item has a different value, left alone"
+sbl,12211,Q5892594,Arnold R Josefson,place of birth 'Göteborgs mosaiska församling' not matched to one place item
+sbl,12211,Q5892594,Arnold R Josefson,"place of death: item has a different value, left alone"
+ndb,100953565,Q55122454,Martin von Bolkenhain,date of death 'nach 1444' not used: not an exact date
+oebl,B/Bernt_Johann-Josef_1770_1842,Q1704315,"Bernt, Johann Josef",place of death '? (?)' not matched to one place item
+oebl,B/Bernt_Johann-Josef_1770_1842,Q1704315,"Bernt, Johann Josef",occupation 'Gerichtsmediziner' not mapped
+hessbio,10248,Q100371379,"Rouville gen. de Beauclair, Jean Pierre Louis de",place of death 'Homberg (Hessen)' not matched to one place item
+saebi,10268,Q1090540,"Plättner, Karl",place of birth 'Opperode bei Ballenstedt' not matched to one place item
+saebi,10268,Q1090540,"Plättner, Karl",occupation 'Bandenführer' not mapped
+sbi,1002260,Q18644512,Mario Birsa,occupation 'ljudski-pesnik' not mapped
+sbi,1002260,Q18644512,Mario Birsa,occupation 'sportnik' not mapped
+sbi,1002260,Q18644512,Mario Birsa,occupation 'atlet' not mapped
+sbi,1002260,Q18644512,Mario Birsa,"place of death: item has a different value, left alone"
+ehlfl,"Elkuch,_Ludwig",Q1874344,Ludwig Elkuch,occupation 'Gemeindevorsteher' not mapped
+ehlfl,"Elkuch,_Ludwig",Q1874344,Ludwig Elkuch,"date of birth: item has a different value, left alone"
+dkl,Karen_Gormsen,Q62080737,Karen Gormsen,"place of birth 'Vøjstrup, Nørre Broby sogn' not matched to one place item"
+kb,2546,Q6209791,Daniel af Thunberg,"place of birth 'Dals, Ångermanland' not matched to one place item"
+kb,2546,Q6209791,Daniel af Thunberg,date of birth 1712-05-15 not used: calendar unclear before 1753 there
+skbl,IngridBjornberg,Q4939369,Hildur Ingrid Margareta Björnberg,"place of death: item has a different value, left alone"
+ndb,100954111,Q18719525,Otto Morena,date of birth 'vor 1111 Lodi' not used: not an exact date
+ndb,100954111,Q18719525,Otto Morena,date of death 'nach 1174' not used: not an exact date
+ndb,100954111,Q18719525,Otto Morena,place of birth 'Lodi' not matched to one place item
+oebl,B/Berres-Perez_Joseph_1821_1912,Q1704317,"Berres-Perez, Joseph von","place of birth 'Lemberg/Lwów, Galizien (Ľviv, Ukraine)' not matched to one place item"
+hessbio,10249,Q131768446,Rugger,place of birth 'um 1100' not matched to one place item
+hessbio,10249,Q131768446,Rugger,place of death 'Fulda (?)' uncertain; not used
+hessbio,10249,Q131768446,Rugger,occupation 'Abt' not mapped
+hessbio,10249,Q131768446,Rugger,date of death: the item has 1150-06-09 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+sbi,1002270,Q17402441,Mirko Birsa,"place of death 'Maribor, Slovenija' not used: marked unverified in the entry"
+sbi,1002270,Q17402441,Mirko Birsa,date of death '2004' not used: marked unverified in the entry
+sbi,1002270,Q17402441,Mirko Birsa,occupation 'internist' not mapped
+uppslag,BjuggPetrus,Q5577219,"Bjugg, Petrus",place of birth 'Söderköping' not matched to one place item
+uppslag,BjuggPetrus,Q5577219,"Bjugg, Petrus","date of death: item has a different value, left alone"
+ehlfl,"Elkuch,_Philipp",Q1672221,Philipp Elkuch,occupation 'Gemeindevorsteher' not mapped
+dkl,Karen_Gyldenstierne,Q16946271,Karen Gyldenstierne,"place of birth 'Iversnæs, Husby sogn, Odense amt' not matched to one place item"
+dkl,Karen_Gyldenstierne,Q16946271,Karen Gyldenstierne,"place of death 'Stjernholm, Horsens' not matched to one place item"
+dkl,Karen_Gyldenstierne,Q16946271,Karen Gyldenstierne,date of birth: the item has 1544-07-18 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+kb,2547,Q472692,Per Brahe,"place of birth 'Rydboholm, Uplanti' not matched to one place item"
+kb,2547,Q472692,Per Brahe,"place of death 'Bogesund, Uplanti' not matched to one place item"
+kb,2547,Q472692,Per Brahe,date of birth 1602-02-18 not used: calendar unclear before 1753 there
+skbl,IngridDessau,Q18238379,Ingrid Dessau,VIAF ID 216493313 could not be checked against VIAF; not copied
+skbl,IngridDessau,Q18238379,Ingrid Dessau,"date of birth: item has a different value, left alone"
+skbl,IngridDessau,Q18238379,Ingrid Dessau,"place of birth: item has a different value, left alone"
+skbl,IngridDessau,Q18238379,Ingrid Dessau,"place of death: item has a different value, left alone"
+sbl,12215,Q709853,Ernst A Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+sbl,12215,Q709853,Ernst A Josephson,place of death 'Stockholms mosaiska församling' not matched to one place item
+ndb,100954154,Q1990410,Nikolaus von Muffel,occupation 'Nürnberger Staatsmann' not mapped
+ndb,100954154,Q1990410,Nikolaus von Muffel,"date of birth: item has a different value, left alone"
+oebl,B/Berres_Josef_1796_1844,Q1706615,"Berres, Josef von","place of birth 'Göding/Hodonín, Mähren (Hodonín, kr. Jihomoravský, Tschechien)' not matched to one place item"
+oebl,B/Berres_Josef_1796_1844,Q1706615,"Berres, Josef von",place of death '? (?)' not matched to one place item
+hessbio,1025,Q131768165,"Conrad, Frieda Paula*",place of death 'Heppenheim (Bergstraße)' not matched to one place item
+sbi,1002280,Q12797432,Nevin Birsa,"date of death: item has a different value, left alone"
+uppslag,BladhPeterJohan,Q5578552,"Bladh, Peter Johan",date of birth 1746-12-03 not used: calendar unclear before 1753 there
+bpn,00494332,Q421775,Cornelis Bega,date of baptism 1620-11-15 not used: calendar unclear before 1701 there
+lex,Ambroise_Vollard,Q459041,Ambroise Vollard,"date of birth: item has a different value, left alone"
+kb,2548,Q817239,Bengt Oxenstierna,"place of birth 'Mörbyn linna, Fasterna' not matched to one place item"
+kb,2548,Q817239,Bengt Oxenstierna,date of birth 1623-07-16 not used: calendar unclear before 1753 there
+skbl,IngridEmelieGottfries,Q98528635,Ingrid Emelie Gottfries,"place of birth: item has a different value, left alone"
+skbl,IngridEmelieGottfries,Q98528635,Ingrid Emelie Gottfries,"place of death: item has a different value, left alone"
+sbl,12216,Q5892792,Erik S Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+sbl,12216,Q5892792,Erik S Josephson,"place of death: item has a different value, left alone"
+ndb,100954200,Q55122455,Konrad Nachtigall,date of death '1484/85' not used: not an exact date
+wgw,13078,Q1336323,"Blümml, Emil Karl",occupation 'Lokalhistoriker' not mapped
+saebi,10270,Q139220963,"Pfund (geb. Thiele), Gertrud Leonore",place of death 'Dresden (Neustadt)' not matched to one place item
+sbi,1002290,Q12802876,Stanko Birsa,"place of death 'Trst, Trieste, Italija' not used: marked unverified in the entry"
+sbi,1002290,Q12802876,Stanko Birsa,date of death '31. dec. 1998' not used: marked unverified in the entry
+sbi,1002290,Q12802876,Stanko Birsa,occupation 'kulturni-delavec' not mapped
+sbi,1002290,Q12802876,Stanko Birsa,occupation 'organizator' not mapped
+ehlfl,"Ender,_Anton",Q94760748,Anton Ender,place of birth 'Blaichach im Allgäu (D)' not matched to one place item
+dkl,Karen_Hansen,Q62080740,Karen Hansen,"place of birth 'Nykøbing F., †1956' not matched to one place item"
+kb,2550,Q717179,Arvid Horn,date of birth 1664-04-06 not used: calendar unclear before 1753 there
+kb,2550,Q717179,Arvid Horn,"place of death: item has a different value, left alone"
+sbl,12217,Q1677426,Jacob Axel Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+ndb,100954308,Q55194291,Nestler von Speyer,date of death '15. Jahrhundert' not used: not an exact date
+ndb,100954308,Q55194291,Nestler von Speyer,occupation 'Mitverfasser der Colmarer Meisterliederhandschrift' not mapped
+oebl,B/Bersina-Siegenthal_Heinrich_1762_1831,Q60623159,"Bersina von Siegenthal, Heinrich Frh.",place of birth '? (?)' not matched to one place item
+hessbio,10252,Q92099,"Huber, Victor* Aimé",occupation 'Romanist' not mapped
+hessbio,10252,Q92099,"Huber, Victor* Aimé",religion 'katholisch; evangelisch-reformiert' not used: not mapped
+sbi,1002300,Q12805666,Viktor Birsa,"place of birth 'Kobjegava, Slovenija' not matched to one place item (no settlement of that name in that country)"
+dkl,Karen_Harrekilde-Petersen,Q62080742,Karen Harrekilde-Petersen,"place of birth 'Køng sogn, Præstø amt' not matched to one place item"
+dkl,Karen_Harrekilde-Petersen,Q62080742,Karen Harrekilde-Petersen,"place of death 'Nærum, Vedbæk sogn' not matched to one place item"
+kb,2551,Q495638,Ernst Johan Creutz,date of birth 1675-02-12 not used: calendar unclear before 1753 there
+kb,2551,Q495638,Ernst Johan Creutz,"place of death: item has a different value, left alone"
+skbl,IngridGardeWidemar,Q406819,Ingrid Gärde Widemar,VIAF ID 266799349 could not be checked against VIAF; not copied
+sbl,12218,Q5892823,John S Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+ndb,100954928,Q11780968,Nicolaus de Blonie,date of death '15. Jahrhundert' not used: not an exact date
+wgw,13088,Q2649555,"Koenig, Alma Johanna","place of death 'Konzentrationslager Minsk, Weißrussland' not matched to one place item"
+hessbio,10254,Q1598670,"Ruppel, Heinrich",occupation 'Küster' not mapped
+sbi,1002310,Q12784760,Anton Birtič,"place of death 'Mečana, Mezzana, Italija' not used: marked unverified in the entry"
+sbi,1002310,Q12784760,Anton Birtič,date of death '04. apr. 2009' not used: marked unverified in the entry
+sbi,1002310,Q12784760,Anton Birtič,occupation 'pevec-narodno-zabavne-glasbe' not mapped
+uppslag,BlombergGoeta,Q11860873,"Blomberg, Göta","place of death: item has a different value, left alone"
+ehlfl,"Ender,_Sepp_(Josef)",Q136675585,Sepp (Josef) Ender,occupation 'Sport-' not mapped
+ehlfl,"Ender,_Sepp_(Josef)",Q136675585,Sepp (Josef) Ender,occupation 'Tourismuspionier' not mapped
+dkl,Karen_Hessel,Q62080743,Karen Hessel,place of birth 'Ganløse sogn' not matched to one place item
+kb,2552,Q1038496,Carl Gustaf Tessin,"place of death 'Åkerö, Södermanland' not matched to one place item"
+kb,2552,Q1038496,Carl Gustaf Tessin,date of birth 1695-09-05 not used: calendar unclear before 1753 there
+kb,2552,Q1038496,Carl Gustaf Tessin,"mother: item has a different value, left alone"
+skbl,IngridHammarstrom,Q4952414,Ingrid Linnea Hammarström,VIAF ID 18491081 could not be checked against VIAF; not copied
+sbl,12219,Q4205904,Ludvig O Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+sbl,12219,Q4205904,Ludvig O Josephson,place of death 'Stockholms mosaiska församling' not matched to one place item
+ndb,100954936,Q55194302,Nicolaus von Posen,date of death 'um 1393' not used: not an exact date
+ndb,100954936,Q55194302,Nicolaus von Posen,occupation 'Breslauer Archidiakon' not mapped
+oebl,B/Bertalanffy_Ludwig_1901_1972,Q84345,"Bertalanffy, (Karl) Ludwig von","place of birth 'Atzgersdorf, NÖ(Wien)' not matched to one place item"
+wgw,1309,Q153832,"De Gasperi, Alcide",place of birth 'Pieve Tesino' not matched to one place item
+wgw,1309,Q153832,"De Gasperi, Alcide",place of death 'Sella di Valsugana' not matched to one place item
+wgw,1309,Q153832,"De Gasperi, Alcide","date of death: item has a different value, left alone"
+hessbio,10255,Q1731639,"Hinkel, Johann Carl*",place of death 'Amagansett (Long Island)' not matched to one place item
+sbi,1002320,Q12805197,Valentin Birtič,occupation 'duhovnik' not mapped
+sbi,1002320,Q12805197,Valentin Birtič,occupation 'kanonik' not mapped
+bpn,00499434,Q1470,Maurits Cornelis Escher,"place of death: item has a different value, left alone"
+ehlfl,"Erdingen,_Friedrich_von",Q1463681,Friedrich von Erdingen,place of death 'Brixen' not matched to one place item
+kb,2554,Q6096789,Ulrik Scheffer,"place of death 'Ek, Länsi-Götanmaa' not matched to one place item"
+kb,2554,Q6096789,Ulrik Scheffer,date of birth 1716-08-05 not used: calendar unclear before 1753 there
+skbl,IngridLingmark,Q16602172,Ingrid Elisabet Lingmark,"place of death: item has a different value, left alone"
+sbl,12220,Q465251,Ragnar Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+ndb,100954979,Q1991806,Nicolaus Bottenbach von Siegen,date of birth 'um 1450 Siegen (Westfalen)' not used: not an exact date
+ndb,100954979,Q1991806,Nicolaus Bottenbach von Siegen,place of birth 'Siegen (Westfalen)' not matched to one place item
+ndb,100954979,Q1991806,Nicolaus Bottenbach von Siegen,occupation 'Benediktiner' not mapped
+hessbio,10256,Q75727,"Ebert, Georg Karl Wilhelm Adolf*",occupation 'Romanist' not mapped
+saebi,10276,Q26086376,"Rohland, Werner",place of death 'Bad Cannstadt' not matched to one place item
+sbi,1002330,Q12784763,Anton Bitežnik,occupation 'kamnosek' not mapped
+sbi,1002330,Q12784763,Anton Bitežnik,"date of death: item has a different value, left alone"
+ehlfl,"Erne,_Daniela",Q132532330,Daniela Erne,occupation 'Gemeindevorsteherin' not mapped
+kb,2555,Q6184869,Carl Sparre,date of birth 1723-12-06 not used: calendar unclear before 1753 there
+kb,2555,Q6184869,Carl Sparre,"place of death: item has a different value, left alone"
+skbl,IngridLuterkort,Q460491,Carola Ingrid Margareta Luterkort,VIAF ID 59329259 could not be checked against VIAF; not copied
+sbl,12221,Q18243134,Wilhelm J Josephson,place of birth 'Stockholms mosaiska församling' not matched to one place item
+sbl,12221,Q18243134,Wilhelm J Josephson,place of death 'Stockholms mosaiska församling' not matched to one place item
+ndb,100955037,Q1241997,Nicolaus Germanus,date of birth 'um 1410' not used: not an exact date
+ndb,100955037,Q1241997,Nicolaus Germanus,date of death 'um 1490 Florenz (?)' not used: not an exact date
+ndb,100955037,Q1241997,Nicolaus Germanus,place of death 'Florenz (?)' uncertain; not used
+wgw,13097,Q15440107,"Koenig, Otto",occupation 'Volksbildner' not mapped
+hessbio,10257,Q131768445,Ruthard,place of birth 'um 1010' not matched to one place item
+hessbio,10257,Q131768445,Ruthard,occupation 'Abt' not mapped
+saebi,10278,Q1512417,"Schaffran, Gerhard",place of birth 'Leschnitz/ Schlesien (poln. Lesnica)' not matched to one place item
+saebi,10278,Q1512417,"Schaffran, Gerhard",occupation 'Konsistorialrat' not mapped
+sbi,1002340,Q12785979,Blaž Bitežnik,occupation 'kamnosek' not mapped
+ehlfl,"Erne,_Franziska_Regis",Q136690298,Franziska Regis Erne,place of birth '(Kreszenz) Triesen' not matched to one place item
+ehlfl,"Erne,_Franziska_Regis",Q136690298,Franziska Regis Erne,place of death 'Hall (Tirol)' not matched to one place item
+ehlfl,"Erne,_Franziska_Regis",Q136690298,Franziska Regis Erne,occupation 'Oberin' not mapped
+dkl,Karen_Jeppe,Q546323,Karen Jeppe,place of birth 'Gylling sogn' not matched to one place item
+dkl,Karen_Jeppe,Q546323,Karen Jeppe,"place of death 'Haleb, Syrien' not matched to one place item"
+skbl,IngridMargaretaAlmqvist,Q16157512,Ingrid Margareta Almqvist,"date of death: item has a different value, left alone"
+ndb,100955053,Q55193542,Nikolaus Lakman,date of birth 'um 1415 Danzig' not used: not an exact date
+ndb,100955053,Q55193542,Nikolaus Lakman,place of birth 'Danzig' not matched to one place item
+ndb,100955053,Q55193542,Nikolaus Lakman,place of death 'Breslau' not matched to one place item
+ndb,100955053,Q55193542,Nikolaus Lakman,occupation 'Franziskaner' not mapped
+ndb,100955053,Q55193542,Nikolaus Lakman,date of death: the item has 1479-11-16 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+wgw,1310,Q94866906,"Sackmauer, Ludwig",occupation 'Elektriker' not mapped
+wgw,1310,Q94866906,"Sackmauer, Ludwig",occupation 'Volksbildner' not mapped
+hessbio,10258,Q61109,"Barnack, Oskar",place of birth 'Lynow (Nuthe-Urstromtal)' not matched to one place item
+hessbio,10258,Q61109,"Barnack, Oskar",occupation 'Kameramann' not mapped
+hessbio,10258,Q61109,"Barnack, Oskar","religion: item has a different value, left alone"
+sbi,1002350,Q12796866,Mitja Bitežnik,"date of death: the record gives 2008-09-04, the page shows '2008'; not used"
+ehlfl,"Erni,_Barbara,_genannt_«goldene_Boos»",Q3785273,"Barbara, genannt «goldene Boos» Erni","place of birth 'Altenstadt (Feldkirch, Vorarlberg)' not matched to one place item"
+ehlfl,"Erni,_Barbara,_genannt_«goldene_Boos»",Q3785273,"Barbara, genannt «goldene Boos» Erni","place of death: item has a different value, left alone"
+kb,2557,Q22295055,Carl Adam Wachtmeister,"place of birth 'Rotenberg, Itä-Götanmaa' not matched to one place item"
+kb,2557,Q22295055,Carl Adam Wachtmeister,date of birth 1740-05-27 not used: calendar unclear before 1753 there
+skbl,IngridMargaretaArfelt,Q30331245,Ingrid Margareta Årfelt,"place of death 'Öregrund' matched Q297790, but SKBL's map pin is 326 km away; not used"
+sbl,12223,Q5893198,P Torsten Jovinge,"place of death: item has a different value, left alone"
+ndb,100955096,Q125009,Nikolaus Jauer,"religion: item has a different value, left alone"
+wgw,13105,Q1447553,"Bob, Franz Joseph","place of birth 'Dauching, Vorderösterreich' not matched to one place item"
+hessbio,10259,Q4188503,"Sauer, Bonifatius",occupation 'Abt' not mapped
+hessbio,10259,Q4188503,"Sauer, Bonifatius",occupation 'Vikar' not mapped
+hessbio,10259,Q4188503,"Sauer, Bonifatius","place of birth: item has a different value, left alone"
+saebi,1028,Q71700074,Clemens Maria Joseph,occupation 'Bruder des Königs Friedrich August II. und (Königs) Johann von Sachsen' not mapped
+sbi,1002360,Q12807331,Štefan Bitežnik,date of death '?' not used: not an exact date
+sbi,1002360,Q12807331,Štefan Bitežnik,occupation 'knjigar' not mapped
+dkl,Karen_Johnsen,Q56702161,Karen Johnsen,place of death 'Virum sogn' not matched to one place item
+kb,2559,Q16649228,Johannes Flachsenius,"place of birth: item has a different value, left alone"
+skbl,IngridMariaOsvald,Q4971459,Ingrid Maria Osvald,VIAF ID 66439502 could not be checked against VIAF; not copied
+skbl,IngridMariaOsvald,Q4971459,Ingrid Maria Osvald,"place of birth: item has a different value, left alone"
+sbl,12226,Q5893615,H Oscar Juel,"place of death: item has a different value, left alone"
+ndb,10095524X,Q3340968,Nikolaus von Polen,date of birth 'um 1225' not used: not an exact date
+ndb,10095524X,Q3340968,Nikolaus von Polen,date of death 'nach 1316' not used: not an exact date
+ndb,10095524X,Q3340968,Nikolaus von Polen,occupation 'Dominikaner' not mapped
+oebl,B/Berzeviczy-Pallavicini_Friedrich_1909_1989,Q1460853,"Berzeviczy-Pallavicini, Friedrich von",occupation 'Gestalter' not mapped
+wgw,13107,Q1536831,"Koenig, Otto",occupation 'Verhaltensforscher' not mapped
+hessbio,1026,Q105790,"Credner, Karl August",place of birth 'Waltershausen bei Gotha (Thüringen)' not matched to one place item
+hessbio,1026,Q105790,"Credner, Karl August","religion: item has a different value, left alone"
+saebi,10281,Q21416004,"Schmiedel, Gottfried",place of birth 'Schmiedeberg/ Erzgebirge' not matched to one place item
+sbi,1002370,Q17402453,Alojz Bizjak,occupation 'publicist' not mapped
+sbi,1002370,Q17402453,Alojz Bizjak,occupation 'srednjesolski-ucitelj' not mapped
+sbi,1002370,Q17402453,Alojz Bizjak,"date of birth: item has a different value, left alone"
+kb,2560,Q6191027,Martinus Henrici Stodius,date of birth 1590-11-09 not used: calendar unclear before 1753 there
+ndb,100955347,Q55122456,Nicolaus von Landau,date of death '14. Jahrhundert' not used: not an exact date
+ndb,100955347,Q55122456,Nicolaus von Landau,occupation 'Zisterzienser in Otterberg' not mapped
+oebl,B/Berzeviczy_Albert_1853_1936,Q793861,"Berzeviczy, Albert von","place of birth 'Berzevicze, Kom. Sáros, Ungarn (Brezovica, kr. Prešov, Slowakei)' not matched to one place item"
+hessbio,10260,Q1798142,"Lemcke, Ludwig* Gustav Constantin",occupation 'Romanist' not mapped
+saebi,10282,Q1373310,"Schön, Helmut",occupation 'Trainer' not mapped
+sbi,1002380,Q17402455,Alojz Bizjak,date of death '?' not used: not an exact date
+sbi,1002380,Q17402455,Alojz Bizjak,occupation 'sadjar' not mapped
+bpn,00512230,Q2002348,Pieter Janssens Elinga,date of baptism 1623-08-18 not used: calendar unclear before 1701 there
+ehlfl,"Erni,_Wendelin",Q136675589,Wendelin Erni,occupation 'Gemeindevorsteher' not mapped
+skbl,IngridNorlander,Q19976860,Ingrid Hedvig Margareta Nilsdotter Norlander,"place of birth: item has a different value, left alone"
+skbl,IngridNorlander,Q19976860,Ingrid Hedvig Margareta Nilsdotter Norlander,"place of death: item has a different value, left alone"
+wgw,13110,Q72242,"Koerber, Ernest von","place of birth 'Trient (Trento, Italien)' not matched to one place item"
+wgw,13110,Q72242,"Koerber, Ernest von",place of death 'Baden bei Wien' not matched to one place item
+hessbio,10261,Q1575855,"Treitz, Wilhelm",occupation 'Romanist' not mapped
+saebi,10284,Q89540,"Schulhoff, Erwin",place of death 'Wülzburg (Internierungslager)' not matched to one place item
+ehlfl,"Erzberger,_Matthias",Q57755,Matthias Erzberger,place of death 'bei Griesbach (D)' not matched to one place item
+ehlfl,"Erzberger,_Matthias",Q57755,Matthias Erzberger,"religion: item has a different value, left alone"
+lex,Amelia_Earhart,Q3355,Amelia Earhart,"place of birth 'Atchison, Kansas, USA' not matched to one place item"
+lex,Amelia_Earhart,Q3355,Amelia Earhart,place of death 'Stillehavet' not matched to one place item
+lex,Amelia_Earhart,Q3355,Amelia Earhart,"date of birth: item has a different value, left alone"
+kb,2564,Q20250158,Johannes Tillander,"place of birth 'Långsjö, Småland' not matched to one place item"
+kb,2564,Q20250158,Johannes Tillander,date of birth 1704-06-01 not used: calendar unclear before 1753 there
+skbl,IngridOrtrudMann,Q4280516,Ingrid Ortrud Mann,VIAF ID 9829404 could not be checked against VIAF; not copied
+ndb,100955401,Q16863361,Nikolaus von Basel,date of death 'zwischen 1393 und 1397' not used: not an exact date
+ndb,100955401,Q16863361,Nikolaus von Basel,religion 'mehrkonfessionell' not used: not mapped
+ndb,100955401,Q16863361,Nikolaus von Basel,occupation 'Häretiker' not mapped
+ndb,100955401,Q16863361,Nikolaus von Basel,occupation 'Begharde' not mapped
+oebl,B/Beschorner_Alexander-Marcus_1821_1896,Q2642617,"Beschorner, Alexander Marcus","date of birth: item has a different value, left alone"
+wgw,13115,Q60815955,"Koeßler, Ludwig",occupation 'Volksbildner' not mapped
+hessbio,10262,Q85408,"Brink, Bernhard ten",occupation 'Romanist' not mapped
+saebi,10285,Q70599,Max (Maximilian),place of death 'Fribourg (Schweiz)' not matched to one place item
+saebi,10285,Q70599,Max (Maximilian),occupation 'Prinz von Sachsen' not mapped
+saebi,10285,Q70599,Max (Maximilian),occupation 'Ostkirchenforscher' not mapped
+sbi,1002400,Q18604187,Josip Bizjak,occupation 'pevec' not mapped
+dkl,Karen_Lachmann,Q447594,Karen Lachmann,place of death 'Gentofte sogn' not matched to one place item
+kb,2566,Q11865101,Isaac Ross,date of birth 1706-11-01 not used: calendar unclear before 1753 there
+kb,2566,Q11865101,Isaac Ross,"place of death: item has a different value, left alone"
+skbl,IngridPersson,Q4972531,Ingrid Persson,VIAF ID 39349552 could not be checked against VIAF; not copied
+ndb,100955525,Q661001,Nithard,place of burial 'Saint Riquier' not matched to one place item
+oebl,B/Beschorner_Alexander-Mathias_1856_1935,Q1399584,"Beschorner, Alexander Mathias","date of birth: item has a different value, left alone"
+wgw,13118,Q89837,"Kofler, Peter Joseph","place of birth 'Ruffre, Südtirol' not matched to one place item"
+hessbio,10263,Q101351,"Stengel, Edmund* Max",occupation 'Romanist' not mapped
+saebi,10286,Q1457093,"Serre (geb. Hammerdörfer), Friederike Amalie",occupation 'Stifterin' not mapped
+sbi,1002410,Q12792793,Jože Bizjak,occupation 'ljudski-pesnik' not mapped
+bpn,00518228,Q73410143,Dingeman Cornelis Arie van der Graaf,place of birth 'Roosendaal en Nispen (Roosendaal)' not matched to one place item
+ehlfl,"Falk,_Hansjakob",Q136690302,Hansjakob Falk,place of death 'St' not matched to one place item
+ehlfl,"Falk,_Hansjakob",Q136690302,Hansjakob Falk,occupation 'Gemeindevorsteher' not mapped
+lex,Amelita_Galli-Curci,Q240989,Amelita Galli-Curci,"place of death 'La Jolla, Californien, USA' not matched to one place item"
+kb,2567,Q5944057,Lars Lefrén,"place of birth 'Levene, Länsi-Götanmaa' not matched to one place item"
+kb,2567,Q5944057,Lars Lefrén,date of birth 1722-12-19 not used: calendar unclear before 1753 there
+skbl,IngridRydbeckZuhr0,Q24005916,Ingrid Rydbeck-Zuhr,VIAF ID 63581722 could not be checked against VIAF; not copied
+ndb,100956149,Q72542,Oliver,date of death 'zwischen 9.8. und 18.9.1227' not used: not an exact date
+ndb,100956149,Q72542,Oliver,occupation 'Kardinalbischof von S. Sabina' not mapped
+ndb,100956149,Q72542,Oliver,occupation 'Kreuzzugsprediger' not mapped
+oebl,B/Besel_Guido_1851_1905,Q60623166,"Besel, Guido","place of death 'Guntramsdorf (Wien) (?, NÖ)' not matched to one place item"
+wgw,1312,Q86764,"Böhler, Lorenz","place of birth 'Wolfurt, Vorarlberg' not matched to one place item"
+wgw,1312,Q86764,"Böhler, Lorenz",occupation 'Unfallchirurg' not mapped
+hessbio,10264,Q15840408,"Schenk zu Schweinsberg, Philipp",place of birth 'um 1490 Schweinsberg' not matched to one place item
+hessbio,10264,Q15840408,"Schenk zu Schweinsberg, Philipp",occupation 'Subdiakon' not mapped
+hessbio,10264,Q15840408,"Schenk zu Schweinsberg, Philipp",occupation 'Dekan' not mapped
+hessbio,10264,Q15840408,"Schenk zu Schweinsberg, Philipp",occupation 'Abt' not mapped
+hessbio,10264,Q15840408,"Schenk zu Schweinsberg, Philipp",date of death: the item has 1550-01-15 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+saebi,10287,Q1255174,"Sieber, Friedrich",place of birth 'Friedersdorf bei Zittau' not matched to one place item
+saebi,10287,Q1255174,"Sieber, Friedrich","place of death 'Dresden[?], Eberswalde[?]' uncertain; not used"
+sbi,1002420,Q61120857,Evgen Blankin,occupation 'duhovnik' not mapped
+sbi,1002420,Q61120857,Evgen Blankin,occupation 'socialni-delavec' not mapped
+sbi,1002420,Q61120857,Evgen Blankin,occupation 'publicist' not mapped
+ehlfl,"Falk,_Jakob",Q133300638,Jakob Falk,occupation 'Gemeindevorsteher' not mapped
+kb,2568,Q20249848,Nils Tunander,"place of birth 'Vestervik, Småland' not matched to one place item"
+skbl,IngridSamuelssonForsen,Q19246513,Ingrid Hanna Margareta Samuelsson-Forsén,"place of death: item has a different value, left alone"
+ndb,100956688,Q74562,Ezzo von Bamberg,date of death '11. Jahrhundert' not used: not an exact date
+ndb,100956688,Q74562,Ezzo von Bamberg,occupation 'Scholastiker in Bamberg' not mapped
+hessbio,10265,Q90936,"Koschwitz, Eduard",occupation 'Romanist' not mapped
+saebi,10289,Q1579362,"Stosch-Sarrasani, Hans d.Ä.",place of birth 'Lomnitz/ Prov. Posen (poln. Lomnica)' not matched to one place item
+saebi,10289,Q1579362,"Stosch-Sarrasani, Hans d.Ä.",occupation 'Zirkusdirektor' not mapped
+sbi,1002430,Q17402468,Marko Blasutig,occupation 'misijonar' not mapped
+sbi,1002430,Q17402468,Marko Blasutig,occupation 'vzgojitelj' not mapped
+sbi,1002430,Q17402468,Marko Blasutig,occupation 'duhovnik' not mapped
+sbi,1002430,Q17402468,Marko Blasutig,occupation 'redovnik' not mapped
+sbi,1002430,Q17402468,Marko Blasutig,occupation 'stigmatinec' not mapped
+sbi,1002430,Q17402468,Marko Blasutig,"date of birth: item has a different value, left alone"
+bpn,00519252,Q2719330,Hajo Hendrik Zwager,"date of death: item has a different value, left alone"
+ehlfl,"Falkenhausen,_Ludwig_Freiherr_von",Q125758236,Ludwig Freiherr von Falkenhausen,place of birth 'Wald (Bayern)' not matched to one place item
+ehlfl,"Falkenhausen,_Ludwig_Freiherr_von",Q125758236,Ludwig Freiherr von Falkenhausen,place of death 'Wald' not matched to one place item
+kb,2569,Q2782521,Johannes Haartman,date of birth 1682-03-19 not used: calendar unclear before 1753 there
+sbl,12240,Q5894161,Isak Jundell,place of birth 'Litauen (i Wladislawów/Polen (nu Kudirkos-Naumestis))' not used: the comment makes it unclear
+sbl,12240,Q5894161,Isak Jundell,"place of death: item has a different value, left alone"
+ndb,10095670X,Q517177,Fridugis,occupation 'Kanzler Ludwig des Frommen' not mapped
+ndb,10095670X,Q517177,Fridugis,occupation 'Abt von Tours' not mapped
+oebl,B/Besser_Wilibald-Swibert_1784_1842,Q2658277,"Besser, Wilibald Swibert","place of death 'Kremenez, Rußland (Ksr.) (Kremenec᾽, Rußland (RF))' not matched to one place item"
+hessbio,10266,Q2644392,"Kißner, Paul Eduard Alfons*",occupation 'Romanist' not mapped
+hessbio,10266,Q2644392,"Kißner, Paul Eduard Alfons*","place of birth: item has a different value, left alone"
+hessbio,10266,Q2644392,"Kißner, Paul Eduard Alfons*","date of death: item has a different value, left alone"
+saebi,1029,Q55122699,"Clodius, Johann Christian",place of death 'Leipzig[?]' uncertain; not used
+sbi,1002440,Q12792792,Jože Blaznik,occupation 'pediater' not mapped
+ehlfl,"Falz-Fein,_Eduard_Alexander_Baron_von",Q950186,Eduard Alexander Baron von Falz-Fein,"place of birth 'Falz-Feinowo (Russland, heute Hawryliwka/Gawrilowka, Ukraine)' not matched to one place item"
+ehlfl,"Falz-Fein,_Eduard_Alexander_Baron_von",Q950186,Eduard Alexander Baron von Falz-Fein,occupation 'Tourismuspionier' not mapped
+dkl,Karen_Margrethe_Harup,Q263207,Karen Margrethe Harup,place of birth 'Skovshoved sogn' not matched to one place item
+kb,257,Q3735548,Arvid Stålarm,father Erik Arvidinpoika Stålarm: KB ID 3802 not on exactly one item
+kb,257,Q3735548,Arvid Stålarm,"date of birth: item has a different value, left alone"
+skbl,IngridSchrewelius,Q4977550,Ingrid Schrewelius,VIAF ID 27043693 could not be checked against VIAF; not copied
+skbl,IngridSchrewelius,Q4977550,Ingrid Schrewelius,"place of death: item has a different value, left alone"
+sbl,12245,Q42296065,Melchior Jung,place of death 'Katarina församling (begraven i Katarina)' not used: the comment makes it unclear
+oebl,B/Beth_Karl_1872_1959,Q6371626,"Beth, Karl (Carl, Karl Ernst Hermann)","date of birth: item has a different value, left alone"
+wgw,13148,Q20752907,"Kohl, Anton",place of birth 'Kosmanos (Böhmen)' not matched to one place item
+wgw,13148,Q20752907,"Kohl, Anton",occupation 'Werkzeugschlosser' not mapped
+hessbio,10267,Q107279,"Wechßler, Eduard",occupation 'Romanist' not mapped
+sbi,1002450,Q18645532,Vekoslav Blažek,occupation 'ljudski-pesnik' not mapped
+sbi,1002450,Q18645532,Vekoslav Blažek,occupation 'zbiralec-etnoloskega-gradiva' not mapped
+lex,Amfilochios,Q474872,Amfilochios,place of death 'efter 394' not matched to one place item
+skbl,IngridSegerstedtWiberg,Q3379728,Ingrid Segerstedt Wiberg,VIAF ID 262324416 could not be checked against VIAF; not copied
+skbl,IngridSegerstedtWiberg,Q3379728,Ingrid Segerstedt Wiberg,"place of birth: item has a different value, left alone"
+skbl,IngridSegerstedtWiberg,Q3379728,Ingrid Segerstedt Wiberg,"place of death: item has a different value, left alone"
+sbl,12246,Q19976632,K Torsten F Jung,"place of birth: item has a different value, left alone"
+ndb,100956793,Q55122458,Eberhard Mülner,date of birth '14. Jahrhundert' not used: not an exact date
+ndb,100956793,Q55122458,Eberhard Mülner,date of death '1372 oder 1382' not used: not an exact date
+ndb,100956793,Q55122458,Eberhard Mülner,occupation 'Schultheiß in Zürich' not mapped
+oebl,B/Beth_Marianne_1890_1984,Q89493,"Beth, Marianne",place of death 'New Jersey (USA)' not matched to one place item
+hessbio,10268,Q23063320,"Schenk zu Schweinsberg, Philipp Georg",place of birth 'um 1510 Schweinsberg' not matched to one place item
+hessbio,10268,Q23063320,"Schenk zu Schweinsberg, Philipp Georg",occupation 'Abt' not mapped
+saebi,10291,Q2591624,"Ullrich, Wolfgang",occupation 'Zoodirektor' not mapped
+sbi,1002460,Q12789035,Franc Blažič,occupation 'narodni-buditelj' not mapped
+sbi,1002460,Q12789035,Franc Blažič,occupation 'publicist' not mapped
+sbi,1002460,Q12789035,Franc Blažič,occupation 'duhovnik' not mapped
+uppslag,BobrikovNikolajIvanovitj,Q380350,"Bobrikov, Nikolaj Ivanovitj",place of birth 'Ingermanland' not matched to one place item
+bpn,00522419,Q2370130,Pieter Bos,"place of death 'Londen, Groot Brittanië' not matched to one place item"
+ehlfl,"Federspiel,_Johann_Baptist_Anton_von",Q15435068,Johann Baptist Anton von Federspiel,place of birth 'Fürstenburg (Vinschgau)' not matched to one place item
+ehlfl,"Federspiel,_Johann_Baptist_Anton_von",Q15435068,Johann Baptist Anton von Federspiel,place of death 'Chur' not matched to one place item
+ehlfl,"Federspiel,_Johann_Baptist_Anton_von",Q15435068,Johann Baptist Anton von Federspiel,occupation Q29182 not added: the item has the more precise Q611644
+lex,Amilcare_Ponchielli,Q207390,Amilcare Ponchielli,"place of birth 'Paderno Ossolaro, som nu hedder Paderno Ponchielli, Italien' not matched to one place item"
+skbl,IngridSimonsson,Q33043573,Ingrid Emerence Maria Simonsson,"place of birth: item has a different value, left alone"
+ndb,100957323,Q77296,Paulus Scriptoris,occupation 'Minorit' not mapped
+ndb,100957323,Q77296,Paulus Scriptoris,"date of death: item has a different value, left alone"
+oebl,B/Bethlen-Bethlen_Andras_1847_1898,Q4759769,"Bethlen von Bethlen, András Graf","place of death 'Bethlen, Kom. Szolnok-Doboka, Ungarn (Beclean, jud. Bistriţa-Năsăud, Rumänien)' not matched to one place item"
+wgw,13175,Q18507743,"Schram, Alois Hans",occupation 'Dekorationsmaler' not mapped
+hessbio,10269,Q817986,"Schilde, Benno* Ernst",place of birth 'Rochlitz (Sachsen)' not matched to one place item
+hessbio,10269,Q817986,"Schilde, Benno* Ernst",occupation 'Maschinenschlosser' not mapped
+hessbio,10269,Q817986,"Schilde, Benno* Ernst","date of death: item has a different value, left alone"
+saebi,10292,Q467848,"Volkmann, Robert Friedrich","date of death: item has a different value, left alone"
+saebi,10292,Q467848,"Volkmann, Robert Friedrich","place of death: item has a different value, left alone"
+uppslag,BoeoekAlarik,Q24845557,"Böök, Alarik","date of birth: item has a different value, left alone"
+bpn,00522730,Q116034,Daniël Wyttenbach,"date of death: item has a different value, left alone"
+ehlfl,"Federspiel,_Ulrich_VII._von",Q15435829,Ulrich VII. von Federspiel,place of death 'Chur' not matched to one place item
+ehlfl,"Federspiel,_Ulrich_VII._von",Q15435829,Ulrich VII. von Federspiel,occupation Q29182 not added: the item has the more precise Q611644
+ehlfl,"Federspiel,_Ulrich_VII._von",Q15435829,Ulrich VII. von Federspiel,date of birth 1657-05-07 not used: calendar unclear before 1813 there
+dkl,Karen_Møller,Q62080764,Karen Møller,place of birth 'Egernsund sogn' not matched to one place item
+kb,2573,Q16594740,Helena Escholin,date of birth 1713-09-29 not used: calendar unclear before 1753 there
+skbl,IngridSjostrand,Q4978990,Ingrid Helena Margareta Sjöstrand,VIAF ID 22192369 could not be checked against VIAF; not copied
+skbl,IngridSjostrand,Q4978990,Ingrid Helena Margareta Sjöstrand,"place of birth: item has a different value, left alone"
+skbl,IngridSjostrand,Q4978990,Ingrid Helena Margareta Sjöstrand,"place of death: item has a different value, left alone"
+ndb,100957730,Q1233727,Peter von Andlau,date of birth 'um 1420 Andlau (Oberelsaß)' not used: not an exact date
+ndb,100957730,Q1233727,Peter von Andlau,place of birth 'Andlau (Oberelsaß)' not matched to one place item
+ndb,100957730,Q1233727,Peter von Andlau,date of death: the item has 1480-03-05 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+ndb,100957730,Q1233727,Peter von Andlau,"place of death: item has a different value, left alone"
+wgw,13177,Q434131,"Ingen-Housz, Jan",place of death 'Bowood bei London' not matched to one place item
+wgw,13177,Q434131,"Ingen-Housz, Jan","date of death: item has a different value, left alone"
+hessbio,1027,Q499269,"Creuzer, Christoph Andreas Leonhard*",occupation 'Oberkonsistorialrat' not mapped
+sbi,1002480,Q12796512,Mihael Blažko,occupation 'zidarski-mojster' not mapped
+bpn,00526460,Q135497572,David Kouwenaar,place of death 'Bergen' not matched to one place item
+ehlfl,"Feger,_Alfons_(1856–1933)",Q12358844,Alfons Feger,occupation 'Provisorischer Regierungschef' not mapped
+ehlfl,"Feger,_Alfons_(1856–1933)",Q12358844,Alfons Feger,occupation 'Regierungschef-Stellvertreter' not mapped
+dkl,Karen_Parkov,Q4937989,Karen Parkov,"place of birth: item has a different value, left alone"
+kb,2574,Q6190332,Johan Stiernhöök,"place of birth 'Rättvik, Taalainmaa' not matched to one place item"
+kb,2574,Q6190332,Johan Stiernhöök,date of birth 1596-02-27 not used: calendar unclear before 1753 there
+kb,2574,Q6190332,Johan Stiernhöök,"place of death: item has a different value, left alone"
+skbl,IngridThulin,Q233732,Ingrid Lilian Thulin,VIAF ID 14959760 could not be checked against VIAF; not copied
+skbl,IngridThulin,Q233732,Ingrid Lilian Thulin,"date of birth: item has a different value, left alone"
+skbl,IngridThulin,Q233732,Ingrid Lilian Thulin,"place of death: item has a different value, left alone"
+sbl,12255,Q4830305,Axel A H Jungstedt,place of birth 'Norrköpings Sankt Olai församling' not matched to one place item
+sbl,12255,Q4830305,Axel A H Jungstedt,"place of death: item has a different value, left alone"
+ndb,100957935,Q26703416,Petrus von Rosenheim,occupation 'Benediktiner' not mapped
+oebl,B/Bettauer_Hugo_1872_1925,Q85728,"Bettauer, (Maximilian) Hugo","place of death: item has a different value, left alone"
+hessbio,10270,Q347983,"Schleifras, Adalbert I. von",occupation 'Abt' not mapped
+hessbio,10270,Q347983,"Schleifras, Adalbert I. von",religion 'evangelisch-lutherisch; katholisch' not used: not mapped
+hessbio,10270,Q347983,"Schleifras, Adalbert I. von",date of birth 1650-02-18 not used: calendar unclear before 1700 there
+sbi,1002490,Q12805672,Viktor Anton Bobek,"place of birth 'Ilirska Bistrica, Slovenija' names a part of a settlement; not matched to one place item"
+sbi,1002490,Q12805672,Viktor Anton Bobek,occupation 'pek' not mapped
+uppslag,BoijeAfGennaesBetty,Q4940327,"Boije af Gennäs, Betty",place of birth 'Baråkra' not matched to one place item
+uppslag,BoijeAfGennaesBetty,Q4940327,"Boije af Gennäs, Betty","date of birth: item has a different value, left alone"
+dkl,Karen_Paulsen,Q62080767,Karen Paulsen,place of birth 'Sønder Hygum sogn' not matched to one place item
+kb,2575,Q5494013,Axel Kempe,date of birth 1623-01-03 not used: calendar unclear before 1753 there
+kb,2575,Q5494013,Axel Kempe,date of death 1682-01-04 not used: calendar unclear before 1753 there
+skbl,IngridVangNyman,Q446436,Ingrid Vang Nyman,"place of birth 'Köpenhamn, Danmark' not matched to one place item"
+skbl,IngridVangNyman,Q446436,Ingrid Vang Nyman,"place of death 'Köpenhamn, Danmark' not matched to one place item"
+skbl,IngridVangNyman,Q446436,Ingrid Vang Nyman,VIAF ID 76432505 could not be checked against VIAF; not copied
+ndb,100958079,Q744494,Petrus Nigri,date of birth 'um 1435 Kaaden/Eger' not used: not an exact date
+ndb,100958079,Q744494,Petrus Nigri,date of death 'um 1483 Buda (Ungarn)' not used: not an exact date
+ndb,100958079,Q744494,Petrus Nigri,place of birth 'Kaaden/Eger' not matched to one place item
+ndb,100958079,Q744494,Petrus Nigri,occupation 'Dominikaner' not mapped
+oebl,B/Bettelheim-Gabillon_Helene_1857_1927,Q18916785,"Bettelheim-Gabillon, Helene",date of death 1946 not used: the entry's life years say 1946/1927
+oebl,B/Bettelheim-Gabillon_Helene_1857_1927,Q18916785,"Bettelheim-Gabillon, Helene","mother: item has a different value, left alone"
+oebl,B/Bettelheim-Gabillon_Helene_1857_1927,Q18916785,"Bettelheim-Gabillon, Helene","father: item has a different value, left alone"
+hessbio,10272,Q131768444,"Heinz, Anna Margaretha",place of death 'Pittsburgh (Pennsylvania/USA)' not matched to one place item
+saebi,10299,Q94789057,"Fuchs, Gottlieb","date of birth: item has a different value, left alone"
+saebi,10299,Q94789057,"Fuchs, Gottlieb","place of birth: item has a different value, left alone"
+sbi,1002500,Q18608706,Leopold Bobič,occupation 'javni-delavec' not mapped
+sbi,1002500,Q18608706,Leopold Bobič,"place of birth: item has a different value, left alone"
+sbi,1002500,Q18608706,Leopold Bobič,"date of death: item has a different value, left alone"
+uppslag,BoijeHansHenrik,Q5580899,"Boije, Hans Henrik",place of birth 'Östergötland' not matched to one place item
+uppslag,BoijeHansHenrik,Q5580899,"Boije, Hans Henrik",place of death 'Uppland' not matched to one place item
+uppslag,BoijeHansHenrik,Q5580899,"Boije, Hans Henrik",date of birth 1716-04-14 not used: calendar unclear before 1753 there
+bpn,00529942,Q649457,Pieter Lodewijk Muller,place of birth 'Koog aan de Zaan' not matched to one place item
+bpn,00529942,Q649457,Pieter Lodewijk Muller,"place of death 'Gardone, Frankrijk' not matched to one place item"
+ehlfl,"Feger,_Guido",Q136675590,Guido Feger,occupation 'Treuhänder' not mapped
+ehlfl,"Feger,_Guido",Q136675590,Guido Feger,"GND ID: item has a different value, left alone"
+dkl,Karen_Rasmussen,Q62080765,Karen Rasmussen,"place of birth 'Helleshulde, Kerte sogn' not matched to one place item"
+kb,2576,Q20249779,Samuel Schulteen,"place of birth 'Svedvik, Västmanland' not matched to one place item"
+kb,2576,Q20249779,Samuel Schulteen,"date of birth: item and entry give the same day in the Julian and the Gregorian calendar, one of them without saying so; left alone"
+skbl,IngridWallberg,Q4990121,Ingrid Wallberg,VIAF ID 6305153954928505680004 could not be checked against VIAF; not copied
+skbl,IngridWallberg,Q4990121,Ingrid Wallberg,"place of death: item has a different value, left alone"
+ndb,100958141,Q324701,Petrus Ravennas,date of birth 'um 1448 Ravenna' not used: not an exact date
+ndb,100958141,Q324701,Petrus Ravennas,date of death '1509/10 wohl Worms' not used: not an exact date
+ndb,100958141,Q324701,Petrus Ravennas,place of death 'wohl Worms' not matched to one place item
+ndb,100958141,Q324701,Petrus Ravennas,religion '-' not used: not mapped
+ndb,100958141,Q324701,Petrus Ravennas,occupation 'Gedächtniskünstler' not mapped
+wgw,13189,Q20755265,"Schrank, Johann Ferdinand",occupation 'Handelsschullehrer' not mapped
+saebi,1030,Q94799336,"Clodius (Klöde), Christian",occupation 'Liedersammler' not mapped
+sbi,1002510,Q12794963,Livij Bogatec,date of death '26. jul. 2011' not used: marked unverified in the entry
+sbi,1002510,Q12794963,Livij Bogatec,occupation 'gledaliski-igralec' not mapped
+dkl,Karen_Ræder,Q62080768,Karen Ræder,"place of birth 'Palstrup, Høbjerg sogn' not matched to one place item"
+kb,2577,Q6057321,Olof Pryss,date of birth 1708-06-22 not used: calendar unclear before 1753 there
+skbl,IngridWeibull,Q102370090,Ingrid Marianne Weibull,"place of birth: item has a different value, left alone"
+sbl,12258,Q4957567,E C Matilda Jungstedt,place of birth 'Norrköpings Sankt Olai församling' not matched to one place item
+ndb,100958435,Q1058040,Philipp von Harveng,date of birth 'um 1100' not used: not an exact date
+ndb,100958435,Q1058040,Philipp von Harveng,"date of death: item has a different value, left alone"
+ndb,100958435,Q1058040,Philipp von Harveng,"religion: item has a different value, left alone"
+oebl,B/Bettelheim_Bruno_1903_1990,Q84386,"Bettelheim, Bruno","place of death: item has a different value, left alone"
+wgw,13197,Q60814970,"Ingwer, Isidor","place of birth 'Tarnopol, Galizien' not matched to one place item"
+wgw,13197,Q60814970,"Ingwer, Isidor","place of death 'Terezin, Tschechische Republik' not matched to one place item"
+wgw,13197,Q60814970,"Ingwer, Isidor","date of death: item has a different value, left alone"
+hessbio,10275,Q100371785,"Feist, Alfred",occupation 'Romanist' not mapped
+sbi,1002520,Q12800532,Rudolf Bogatec,occupation 'duhovnik' not mapped
+sbi,1002520,Q12800532,Rudolf Bogatec,"date of birth: item has a different value, left alone"
+ehlfl,"Feger,_Laurenz",Q136675591,Laurenz Feger,place of death 'Chur' not matched to one place item
+ehlfl,"Feger,_Laurenz",Q136675591,Laurenz Feger,occupation Q42603 not added: the item has the more precise Q193364
+dkl,Karen_Strand,Q45903967,Karen Strand,place of birth 'Kirke Hyllinge sogn' not matched to one place item
+kb,2579,Q557382,Elias Til-Landz,"place of birth 'Rogberga, Småland' not matched to one place item"
+skbl,IngridYlvaBirgittaKallstromEklund,Q4960305,Ingrid Ylva Birgitta Källström-Eklund,VIAF ID 313475749 could not be checked against VIAF; not copied
+skbl,IngridYlvaBirgittaKallstromEklund,Q4960305,Ingrid Ylva Birgitta Källström-Eklund,"place of birth: item has a different value, left alone"
+skbl,IngridYlvaBirgittaKallstromEklund,Q4960305,Ingrid Ylva Birgitta Källström-Eklund,"place of death: item has a different value, left alone"
+sbl,12261,Q17381238,Pehr Juslén,place of death 'Finska församling' not matched to one place item
+wgw,13204,Q1037105,"Bobies, Carl","date of birth: item has a different value, left alone"
+hessbio,10276,Q2547477,"Suchier, Walther",occupation 'Romanist' not mapped
+saebi,10301,Q30572,"Mohs, Carl Christian Friedrich",place of birth 'Gernrode' not matched to one place item
+sbi,1002530,Q12805229,Valter Bohinec,"place of birth 'Opatija, Abbazia, Hrvaška' names a part of a settlement; not matched to one place item"
+sbi,1002530,Q12805229,Valter Bohinec,occupation 'geograf' not mapped
+sbi,1002530,Q12805229,Valter Bohinec,occupation 'kartograf' not mapped
+sbi,1002530,Q12805229,Valter Bohinec,occupation 'bibliotekar' not mapped
+sbi,1002530,Q12805229,Valter Bohinec,"date of birth: item has a different value, left alone"
+uppslag,BolinWilhelm,Q5475457,"Bolin, Wilhelm",place of birth 'Ingermanland' not matched to one place item
+bpn,00533496,Q55874974,Henricus Groenewegen,date of death 1692-07-15 not used: calendar unclear before 1701 there
+ehlfl,"Feger,_Wolfgang",Q65496801,Wolfgang Feger,place of death 'Kantonsspital St' not matched to one place item
+skbl,IngridafStrom,Q46998347,Ingrid Gustava af Ström,"place of death: item has a different value, left alone"
+ndb,100959091,Q7313246,Reiner,date of death 'nach 1182' not used: not an exact date
+ndb,100959091,Q7313246,Reiner,occupation 'Lütticher Mönch' not mapped
+ndb,100959091,Q7313246,Reiner,occupation 'Benediktiner' not mapped
+oebl,B/Bettelheim_Karoline_1843_1896,Q255628,"Bettelheim, Karoline","GND ID 116155833 is of someone born 1845, not 1843; not copied"
+oebl,B/Bettelheim_Karoline_1843_1896,Q255628,"Bettelheim, Karoline","date of death: item has a different value, left alone"
+oebl,B/Bettelheim_Karoline_1843_1896,Q255628,"Bettelheim, Karoline","place of birth: item has a different value, left alone"
+wgw,13205,Q60623208,"Bobies, Franz","place of birth 'Moosbrunn, Niederösterreich' not matched to one place item"
+hessbio,10277,Q18624728,"Sarrazin, Gregor",place of birth 'Grätz (Posen) (heute Grodzisk Wielkopolski/Polen)' not matched to one place item
+hessbio,10277,Q18624728,"Sarrazin, Gregor",place of death 'Breslau (heute Wrocław/Polen)' not matched to one place item
+hessbio,10277,Q18624728,"Sarrazin, Gregor","date of birth: item has a different value, left alone"
+saebi,10303,Q139205035,"Rochlitzer, Johann Carl Gotthelf",place of birth 'Frauenstein/ Erzgebirge' not matched to one place item
+saebi,10303,Q139205035,"Rochlitzer, Johann Carl Gotthelf",place of death 'k.A' not matched to one place item
+sbi,1002540,Q2901965,Benvenuta Boiani,occupation 'redovnik' not mapped
+sbi,1002540,Q2901965,Benvenuta Boiani,occupation 'dominikanec' not mapped
+uppslag,BomanssonKarlAugust,Q3364783,"Bomansson, Karl August","date of death: item has a different value, left alone"
+bpn,00536616,Q3159976,Jacques Saurin,date of birth 1677-01-06 not used: calendar unclear before 1701 there
+ehlfl,"Fehr,_Elisabeth_Charlotte",Q136690303,Elisabeth Charlotte Fehr,place of birth 'Frankfurt a.M. (D)' not matched to one place item
