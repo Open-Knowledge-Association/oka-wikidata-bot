@@ -12999,3 +12999,503 @@ time,work,kind,entry,item,revid,changes
 2026-11-24T04:15:06Z,ndb,person,101152159,Q1580286,2574293400,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation
 2026-11-24T04:15:07Z,oebl,person,B/Boehm_Josef-Daniel_1794_1865,Q1682622,2574293409,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation; occupation
 2026-11-24T04:15:08Z,wgw,person,13851,Q79061,2574293421,source for date of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:15:40Z,hessbio,person,1048,Q18025852,2574293803,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:15:41Z,saebi,person,10704,Q72117,2574293818,source for date of birth; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:15:42Z,sbi,person,1004380,Q18644672,2574293827,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:15:43Z,uppslag,person,ElfvingFredrik,Q4411433,2574293840,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:15:44Z,bpn,person,00952375,Q3856889,2574293853,date of baptism; source for place of death
+2026-11-24T04:16:16Z,ehlfl,person,"Heidegger,_Marzell",Q133038257,2574294239,source for date of birth; source for place of birth; source for date of death; sibling
+2026-11-24T04:16:16Z,lex,person,Andreas_Friis,Q28049228,,no change
+2026-11-24T04:16:17Z,dkl,person,Léonie_Sonning,Q20746669,2574294254,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:16:18Z,kb,person,2878,Q11857754,2574294267,source for date of birth; source for place of birth
+2026-11-24T04:16:19Z,skbl,person,LeaWikstrom,Q96279074,2574294282,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:16:19Z,sbl,person,12575,Q5787447,,no change
+2026-11-24T04:16:20Z,ndb,person,101156138,Q1596779,2574294294,source for date of birth; source for date of death; source for place of death; religion; source for occupation
+2026-11-24T04:16:22Z,oebl,person,B/Boehm_Josef-Edgar_1834_1890,Q85180,2574294310,source for date of birth; source for date of death; source for place of birth; source for occupation
+2026-11-24T04:16:23Z,wgw,person,13855,Q78585,2574294326,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:16:23Z,hessbio,person,10480,Q64431,2574294336,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation; religion
+2026-11-24T04:16:24Z,saebi,person,10706,Q94878127,2574294347,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:16:25Z,sbi,person,1004390,Q59857752,2574294358,source for date of birth; source for place of birth; source for occupation
+2026-11-24T04:16:26Z,uppslag,person,ElfvingHemming,Q5547454,2574294369,place of birth; place of death
+2026-11-24T04:16:27Z,bpn,person,00952446,Q12013170,2574294381,source for place of birth; source for place of death
+2026-11-24T04:16:28Z,ehlfl,person,"Heinlein_(Henelin),_Georg",Q136672167,2574294397,place of death; religion; occupation
+2026-11-24T04:16:29Z,lex,person,Andreas_Grau,Q22344280,2574294414,other names; source for date of death; source for place of death
+2026-11-24T04:16:29Z,dkl,person,Magdalena_Andersdatter,Q4964866,,no change
+2026-11-24T04:16:30Z,kb,person,2879,Q5482033,2574294427,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:16:30Z,skbl,person,LenaDahlman,Q4944041,,no change
+2026-11-24T04:16:30Z,sbl,person,12578,Q28967546,,no change
+2026-11-24T04:16:31Z,ndb,person,101160097,Q72860,2574294440,source for date of birth; source for place of death; source for occupation
+2026-11-24T04:16:33Z,oebl,person,B/Boehm_Josef-Georg_1807_1868,Q21607340,2574294457,source for place of death; source for occupation
+2026-11-24T04:16:33Z,wgw,person,13858,Q16739378,2574294467,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:16:34Z,hessbio,person,10481,Q1714002,2574294478,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:16:35Z,saebi,person,10707,Q28040135,2574294491,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:16:36Z,sbi,person,1004400,Q17402499,2574294502,source for date of birth; place of birth; occupation
+2026-11-24T04:16:38Z,uppslag,person,ElmgrenSvenGabriel,Q5710025,2574294518,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:16:38Z,bpn,person,00954433,Q719559,2574294530,source for place of birth; source for place of death
+2026-11-24T04:16:40Z,ehlfl,person,Heinrich_VI._von_Hohenstaufen,Q150953,2574294546,source for date of death; source for place of death
+2026-11-24T04:16:41Z,lex,person,Andreas_Gryphius,Q77214,2574294560,source for date of birth; source for date of death
+2026-11-24T04:16:41Z,dkl,person,Magdalene_Buch,Q62081008,2574294575,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:16:42Z,kb,person,2880,Q5629029,2574294588,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:16:43Z,skbl,person,LenaLarsson,Q4961100,2574294603,source for date of birth; source for date of death; source for place of death; source for child
+2026-11-24T04:16:44Z,sbl,person,12580,Q5915851,2574294616,place of death
+2026-11-24T04:16:46Z,ndb,person,10116033X,Q1692838,2574294630,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation; occupation; father
+2026-11-24T04:16:46Z,oebl,person,B/Boehm_Josef_1841_1893,Q1704421,2574294642,source for place of death; source for occupation; occupation
+2026-11-24T04:16:48Z,wgw,person,13859,Q324487,2574294662,source for place of death; occupation
+2026-11-24T04:16:48Z,hessbio,person,10482,Q100374446,2574294670,occupation
+2026-11-24T04:16:50Z,saebi,person,10709,Q1467098,2574294686,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-24T04:16:51Z,sbi,person,1004410,Q12795664,2574294697,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:16:51Z,uppslag,person,ElvingRudolf,Q17380142,2574294709,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:16:51Z,bpn,person,00954835,Q78351,,no change
+2026-11-24T04:16:52Z,ehlfl,person,"Heiss,_Marianus",Q136672163,2574294721,religion; occupation
+2026-11-24T04:16:52Z,lex,person,Andreas_Gursky,Q497712,,no change
+2026-11-24T04:16:54Z,dkl,person,Magdalene_Charlotte_Hedevig_Løvenskiold,Q12325690,2574294740,source for date of birth; source for date of death; place of birth
+2026-11-24T04:17:17Z,kb,person,2881,Q466373,2574295008,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:17:19Z,skbl,person,LenaNyman,Q255967,2574295021,source for date of birth; source for date of death; source for place of birth; source for place of death; source for spouse
+2026-11-24T04:17:20Z,sbl,person,12583,Q157776,2574295032,source for place of death
+2026-11-24T04:17:20Z,ndb,person,101162820,Q1367001,2574295043,source for date of birth; source for date of death; religion; source for occupation; source for father
+2026-11-24T04:17:22Z,oebl,person,B/Boehm_Joseph_1795_1876,Q700771,2574295056,source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:23Z,wgw,person,1386,Q110417036,2574295065,source for occupation
+2026-11-24T04:17:24Z,hessbio,person,10483,Q88743,2574295078,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:25Z,saebi,person,1071,Q1528475,2574295090,source for date of death; source for occupation
+2026-11-24T04:17:25Z,sbi,person,1004420,Q12794759,2574295103,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:17:26Z,uppslag,person,EnaejaerviHaavioElsa,Q11857586,2574295117,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:17:28Z,bpn,person,00957316,Q18508342,2574295126,source for place of birth; source for place of death
+2026-11-24T04:17:28Z,ehlfl,person,"Helbert,_Jakob",Q136672162,2574295141,place of birth; place of death; occupation; father
+2026-11-24T04:17:28Z,lex,person,Andreas_Hallander,Q3433842,,no change
+2026-11-24T04:17:29Z,dkl,person,Magdalene_Lauridsen,Q62081012,2574295153,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:17:31Z,kb,person,2883,Q4129860,2574295165,source for date of birth; source for place of death; source for child; child
+2026-11-24T04:17:32Z,skbl,person,LenaPersson,Q50804832,2574295178,source for date of birth; source for date of death; source for place of birth; spouse
+2026-11-24T04:17:33Z,sbl,person,12584,Q11861384,2574295184,source for place of death
+2026-11-24T04:17:33Z,ndb,person,101166532,Q88875,2574295195,source for date of birth; source for date of death; source for place of death; religion; occupation
+2026-11-24T04:17:34Z,oebl,person,B/Boehm_Karl_1846_1911,Q855041,2574295212,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:17:35Z,wgw,person,13863,Q60623503,2574295229,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:17:36Z,hessbio,person,10484,Q5815758,2574295241,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; source for child
+2026-11-24T04:17:38Z,saebi,person,10710,Q10860967,2574295258,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:38Z,sbi,person,1004430,Q3620321,2574295271,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:17:39Z,uppslag,person,EnckellCarl,Q969261,2574295286,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:17:40Z,bpn,person,00958609,Q2685381,2574295299,source for place of death
+2026-11-24T04:17:41Z,ehlfl,person,"Helbert,_Johann_Georg",Q94914819,2574295314,date of birth (more precise); source for place of birth; date of death (more precise); source for place of death; source for occupation; child
+2026-11-24T04:17:43Z,lex,person,Andreas_Herman_Hunæus,Q12301563,2574295330,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:17:43Z,dkl,person,Magdalene_Margrethe_Bärens,Q4941489,2574295344,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:17:45Z,kb,person,2884,Q11854144,2574295364,source for date of birth; source for place of birth; source for place of death; source for father; source for spouse
+2026-11-24T04:17:46Z,skbl,person,LenkeRothman,Q1251184,2574295382,source for date of birth; source for date of death; source for place of death; source for spouse; source for child
+2026-11-24T04:17:46Z,sbl,person,12585,Q3797403,,no change
+2026-11-24T04:17:47Z,ndb,person,101167555,Q55847743,2574295394,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation
+2026-11-24T04:17:48Z,oebl,person,B/Boehmerle_Emil_1853_1924,Q95182008,2574295406,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:17:49Z,wgw,person,13868,Q88090,2574295421,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:50Z,hessbio,person,10485,Q114580,2574295440,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:51Z,saebi,person,10711,Q15449403,2574295449,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:52Z,sbi,person,1004440,Q59857631,2574295462,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:17:53Z,uppslag,person,EnckellCarolus,Q11855060,2574295474,source for date of birth; source for place of birth; source for date of death; place of death
+2026-11-24T04:17:54Z,bpn,person,00960068,Q13136336,2574295487,source for place of birth; source for place of death
+2026-11-24T04:17:54Z,ehlfl,person,"Helbert,_Josef",Q136672161,2574295500,place of birth; place of death
+2026-11-24T04:17:54Z,lex,person,Andreas_Hofer,Q11697,,no change
+2026-11-24T04:17:56Z,dkl,person,Magdalene_Moos,Q62081014,2574295513,source for date of birth; source for date of death
+2026-11-24T04:17:57Z,kb,person,2886,Q5397220,2574295524,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:17:58Z,skbl,person,LeoniaMariaLeonieGeisendorf,Q1879491,2574295541,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for spouse
+2026-11-24T04:17:58Z,sbl,person,12586,Q5788523,2574295551,source for place of birth; source for place of death
+2026-11-24T04:18:00Z,ndb,person,101168128,Q78770,2574295566,source for date of birth; source for date of death; source for place of death; religion; source for occupation; occupation; source for father
+2026-11-24T04:18:00Z,oebl,person,B/Boehmerle_Karl_1851_1917,Q98834490,2574295577,source for date of birth; source for date of death; source for occupation
+2026-11-24T04:18:02Z,wgw,person,1387,Q18028505,2574295588,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:18:02Z,hessbio,person,10486,Q1679087,2574295597,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:18:03Z,saebi,person,10712,Q1912641,2574295608,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:18:56Z,sbi,person,1004450,Q533088,,no change
+2026-11-24T04:18:57Z,uppslag,person,EnckellKarl,Q5711195,2574296244,source for place of birth; source for place of death
+2026-11-24T04:18:58Z,bpn,person,00963631,Q27651723,2574296256,place of birth; place of death
+2026-11-24T04:18:59Z,ehlfl,person,"Helbok,_Adolf",Q362071,2574296278,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-24T04:19:00Z,lex,person,Andreas_Hojer,Q3428607,2574296291,source for date of death; source for place of birth; source for place of death
+2026-11-24T04:19:01Z,dkl,person,Magdalene_Paul-Petersen,Q62081016,2574296300,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:19:02Z,kb,person,2887,Q5787987,2574296315,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:19:04Z,skbl,person,LeonieDeshayes,Q100938255,2574296337,source for date of birth; source for date of death
+2026-11-24T04:33:34Z,sbl,person,12587,Q1453304,2574299041,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:33:35Z,ndb,person,101168276,Q1563190,2574299048,source for date of birth; source for place of death; source for occupation
+2026-11-24T04:33:36Z,oebl,person,B/Boer_Johann-Lukas_1751_1835,Q1695394,2574299059,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:37Z,wgw,person,13879,Q1490289,2574299071,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:38Z,hessbio,person,10487,Q28021322,2574299082,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:39Z,saebi,person,10713,Q71482,2574299092,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:40Z,sbi,person,1004460,Q59856312,2574299103,source for date of birth; place of birth (more precise)
+2026-11-24T04:33:41Z,uppslag,person,EnckellOlof,Q5711217,2574299116,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:33:42Z,bpn,person,00963676,Q708192,2574299126,source for date of death; source for place of birth; source for place of death
+2026-11-24T04:33:43Z,ehlfl,person,"Held,_Max",Q132128732,2574299139,source for date of birth (existing reference completed); place of birth; source for date of death (existing reference completed); occupation
+2026-11-24T04:33:44Z,lex,person,Andreas_Holmsen,Q611327,2574299146,source for date of birth; source for date of death
+2026-11-24T04:33:45Z,dkl,person,Magdalene_Thoresen,Q443649,2574299158,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:33:46Z,kb,person,2888,Q4992482,2574299168,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:33:47Z,skbl,person,LeonildaMariaElesaraLovisaSjostrom,Q98528665,2574299180,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-11-24T04:33:47Z,sbl,person,12588,Q5788293,,no change
+2026-11-24T04:33:48Z,ndb,person,101174063,Q18736981,2574299192,source for date of birth; source for date of death; source for place of death; religion; source for occupation
+2026-11-24T04:33:49Z,oebl,person,B/Boeriu-Polichna_Johann_1859_1919,Q15978680,2574299204,source for place of death; occupation
+2026-11-24T04:33:50Z,wgw,person,13886,Q1446849,2574299214,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:51Z,hessbio,person,10488,Q1399506,2574299223,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:52Z,saebi,person,10714,Q1505122,2574299236,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:33:53Z,sbi,person,1004470,Q12789038,2574299244,source for date of birth; place of birth; source for occupation
+2026-11-24T04:33:54Z,uppslag,person,EnckellOskar,Q1995035,2574299253,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:33:55Z,bpn,person,00964842,Q67655950,2574299264,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:33:56Z,ehlfl,person,"Helwig,_Werner",Q1521281,2574299269,source for date of birth; source for place of birth; source for occupation
+2026-11-24T04:33:57Z,lex,person,Andreas_Kalvos,Q498668,2574299280,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:33:58Z,dkl,person,Magna_Nørgaard,Q62081018,2574299284,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:33:59Z,kb,person,2889,Q4954241,2574299295,source for date of birth; source for place of death; source for spouse
+2026-11-24T04:34:01Z,skbl,person,LiaSchubert,Q4977579,2574299314,source for date of birth; source for date of death; source for spouse
+2026-11-24T04:34:01Z,sbl,person,12590,Q1806230,2574299321,source for place of death
+2026-11-24T04:34:02Z,ndb,person,1011752212,Q55895585,2574299329,source for date of birth; source for date of death; place of death; place of burial; source for occupation; occupation; mother
+2026-11-24T04:34:03Z,oebl,person,B/Boesendorfer_Ignaz_1796_1859,Q79006,2574299336,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:35:10Z,wgw,person,13889,Q59532559,2574299554,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:35:11Z,hessbio,person,10489,Q104753,2574299561,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:35:12Z,saebi,person,10715,Q1889180,2574299571,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:35:13Z,sbi,person,1004480,Q59856125,2574299578,source for date of birth; source for place of birth; source for occupation
+2026-11-24T04:35:14Z,uppslag,person,EnckellRabbe,Q1370166,2574299589,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:35:14Z,bpn,person,00966112,Q13137488,,no change
+2026-11-24T04:35:15Z,ehlfl,person,"Hermann,_Roman",Q1720695,2574299599,source for date of birth; source for place of birth
+2026-11-24T04:35:16Z,lex,person,Andreas_Karkavitsas,Q3564833,2574299609,source for place of birth
+2026-11-24T04:35:17Z,dkl,person,Magnhild_Bukdahl,Q62081020,2574299619,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of birth (existing reference completed)
+2026-11-24T04:35:18Z,kb,person,2890,Q17381043,2574299632,source for date of birth; source for place of birth; place of death
+2026-11-24T04:35:19Z,skbl,person,LiliKaelas,Q16595401,2574299644,source for date of birth; source for date of death; source for place of death; source for spouse
+2026-11-24T04:35:43Z,sbl,person,12593,Q30106564,,no change
+2026-11-24T04:35:43Z,ndb,person,101177720,Q1504349,2574299895,religion; source for occupation; occupation
+2026-11-24T04:35:44Z,oebl,person,B/Boesendorfer_Ludwig_1835_1919,Q1874268,2574299906,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:35:45Z,wgw,person,1389,Q4079751,2574299918,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-24T04:35:46Z,hessbio,person,1049,Q135207957,2574299927,source for place of birth; source for place of death; source for occupation
+2026-11-24T04:35:47Z,saebi,person,10716,Q139208812,2574299937,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:35:48Z,sbi,person,1004490,Q59856031,2574299947,source for date of birth; source for place of birth; source for occupation
+2026-11-24T04:35:49Z,uppslag,person,EnckellTorger,Q16658247,2574299958,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:35:50Z,bpn,person,00968613,Q1403708,2574299967,source for place of birth; source for place of death
+2026-11-24T04:35:51Z,ehlfl,person,"Herrmann,_Kurt",Q15824668,2574299977,source for date of birth; source for place of birth; occupation; source for occupation
+2026-11-24T04:35:52Z,lex,person,Andreas_Keil,Q137179482,2574299985,source for date of birth
+2026-11-24T04:35:53Z,dkl,person,Maja_Christiansen,Q62081023,2574299995,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:35:54Z,kb,person,2891,Q16737290,2574300004,source for place of birth; source for place of death; source for child
+2026-11-24T04:35:56Z,skbl,person,LiliZiedner,Q4990939,2574300019,source for date of birth; source for date of death; source for place of birth; source for place of death; source for sibling
+2026-11-24T04:35:56Z,sbl,person,12594,Q5789296,,no change
+2026-11-24T04:35:56Z,ndb,person,101193173,Q19513385,2574300023,source for date of birth; source for date of death; source for place of death; religion; source for occupation
+2026-11-24T04:35:57Z,oebl,person,B/Bogdan-Sturmbruck_Josef_1769_1827,Q55883637,2574300035,place of birth; source for occupation
+2026-11-24T04:35:57Z,wgw,person,13894,Q43982,,no change
+2026-11-24T04:35:58Z,hessbio,person,10490,Q105456,2574300045,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:35:59Z,saebi,person,10719,Q66929,2574300056,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:36:00Z,sbi,person,1004500,Q12786286,2574300065,source for date of birth; source for place of birth; source for occupation
+2026-11-24T04:36:02Z,uppslag,person,EnebergWaldemar,Q5711432,2574300078,date of birth (more precise); source for place of birth; date of death (more precise); place of death
+2026-11-24T04:36:02Z,bpn,person,00972752,Q52149733,2574300082,source for place of birth; source for place of death
+2026-11-24T04:36:03Z,ehlfl,person,"Herzstark,_Curt",Q85964,2574300091,source for date of birth; source for place of birth; source for date of death; source for place of death; religion; source for occupation; occupation
+2026-11-24T04:36:04Z,lex,person,Andreas_Kirkerup,Q4755490,2574300099,source for date of death
+2026-11-24T04:36:05Z,dkl,person,Maja_Foget,Q61538169,2574300107,source for date of birth; source for date of death
+2026-11-24T04:36:06Z,kb,person,2894,Q11852101,2574300110,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:36:07Z,skbl,person,LilianHultin,Q50850332,2574300116,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:36:07Z,sbl,person,12595,Q5789486,,no change
+2026-11-24T04:36:08Z,ndb,person,101204116,Q1696350,2574300122,source for date of birth; source for occupation
+2026-11-24T04:36:09Z,oebl,person,B/Bogensberger_Gustav_1838_1861,Q60623216,2574300126,place of death; source for occupation
+2026-11-24T04:36:10Z,wgw,person,13895,Q1353082,2574300134,source for date of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:36:11Z,hessbio,person,10491,Q94835236,2574300141,source for place of birth; source for date of death; source for place of death; source for occupation; occupation; religion
+2026-11-24T04:36:12Z,saebi,person,1072,Q1085444,2574300143,source for date of birth; source for place of birth; source for date of death; source for occupation; occupation
+2026-11-24T04:36:13Z,sbi,person,1004510,Q59855925,2574300149,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:36:14Z,uppslag,person,EnestamJanErik,Q2605274,2574300156,source for date of birth; source for place of birth
+2026-11-24T04:36:14Z,bpn,person,00974607,Q2546660,,no change
+2026-11-24T04:36:15Z,ehlfl,person,"Heuberger,_Richard",Q1253893,2574300164,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:36:17Z,lex,person,Andreas_Kron,Q28970245,2574300174,source for date of birth
+2026-11-24T04:36:17Z,dkl,person,Malan_Marnersdóttir,Q1886707,2574300179,source for date of birth
+2026-11-24T04:36:18Z,kb,person,2895,Q4132303,2574300186,source for date of birth; source for place of birth
+2026-11-24T04:36:19Z,skbl,person,LillemorIngeborgAinaSophieConstanceMannerheim,Q4965402,2574300193,source for date of birth (existing reference completed); source for date of death (existing reference completed); Libris-URI
+2026-11-24T04:36:19Z,sbl,person,12596,Q2017855,,no change
+2026-11-24T04:36:21Z,ndb,person,101205570,Q55133379,2574300203,source for date of birth; source for date of death; religion; occupation
+2026-11-24T04:36:21Z,oebl,person,B/Bogisic_Baltasar_1834_1908,Q1887827,2574300209,source for date of death; source for place of birth; source for place of death; source for occupation; occupation
+2026-11-24T04:36:22Z,wgw,person,13897,Q88892,2574300221,source for date of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:36:24Z,hessbio,person,10492,Q1352916,2574300231,source for date of birth; source for place of birth; source for date of death; place of death (more precise); source for occupation
+2026-11-24T04:36:24Z,saebi,person,10720,Q64642,2574300239,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:36:26Z,sbi,person,1004520,Q59853533,2574300254,source for date of birth; source for place of birth
+2026-11-24T04:36:27Z,uppslag,person,EngbergGabriel,Q5711671,2574300267,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:36:35Z,bpn,person,00974857,Q15729931,,no change
+2026-11-24T04:36:35Z,ehlfl,person,"Hiener,_Gabriel",Q136672160,2574300373,occupation
+2026-11-24T04:36:35Z,lex,person,Andreas_Laskaratos,Q433445,,no change
+2026-11-24T04:36:36Z,dkl,person,Malene_Schwartz,Q1785276,2574300387,source for date of birth; source for place of birth
+2026-11-24T04:36:38Z,kb,person,2896,Q2266966,2574300400,source for date of birth; source for place of birth; source for place of death; source for spouse
+2026-11-24T04:36:39Z,skbl,person,LillemorKim,Q108314875,2574300414,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of birth (existing reference completed); Libris-URI
+2026-11-24T04:36:39Z,sbl,person,12597,Q53660,,no change
+2026-11-24T04:36:40Z,ndb,person,101211244,Q55133382,2574300427,source for date of birth; source for date of death; source for occupation
+2026-11-24T04:36:40Z,oebl,person,B/Bognar_Friederike_1840_1914,Q1457027,2574300438,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:36:42Z,wgw,person,1390,Q875721,2574300455,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-24T04:36:43Z,hessbio,person,10493,Q1121884,2574300465,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation; source for father
+2026-11-24T04:36:43Z,saebi,person,10723,Q1708454,2574300477,occupation; source for occupation
+2026-11-24T04:36:44Z,sbi,person,1004530,Q3702759,2574300487,source for date of birth; source for place of birth; source for date of death; source for occupation; source for sibling
+2026-11-24T04:36:45Z,uppslag,person,EngblomAlma,Q11850987,2574300498,source for place of birth; source for place of death
+2026-11-24T04:36:46Z,bpn,person,00976254,Q20961971,2574300511,source for place of death
+2026-11-24T04:36:47Z,ehlfl,person,"Hilbe,_Alfred",Q1368902,2574300523,source for date of birth; source for date of death
+2026-11-24T04:36:48Z,lex,person,Andreas_Mogensen,Q499636,2574300536,source for date of birth; source for place of birth
+2026-11-24T04:36:49Z,dkl,person,Malla_Samuelsen,Q16596740,2574300548,source for date of birth; source for date of death; place of death
+2026-11-24T04:36:49Z,kb,person,2897,Q4008356,,no change
+2026-11-24T04:36:50Z,skbl,person,LillemorMajArvidsson,Q4936679,2574300558,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:36:50Z,sbl,person,12598,Q5789629,,no change
+2026-11-24T04:36:51Z,ndb,person,1012183734,Q77503,2574300570,source for date of birth; source for date of death; source for place of birth; religion; source for occupation; source for sibling
+2026-11-24T04:36:52Z,oebl,person,B/Bogovic_Mirko_1816_1893,Q877203,2574300576,source for place of birth; source for place of death; source for occupation
+2026-11-24T04:36:53Z,wgw,person,13903,Q143416,2574300585,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:36:54Z,hessbio,person,10494,Q100374455,2574300593,source for occupation
+2026-11-24T04:36:56Z,saebi,person,10724,Q1583343,2574300602,source for occupation; occupation
+2026-11-24T04:36:56Z,sbi,person,1004540,Q59852677,2574300610,source for date of birth; source for place of birth; source for occupation; source for sibling
+2026-11-24T04:36:57Z,uppslag,person,EngelCarlLudvig,Q77103,2574300617,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:36:58Z,bpn,person,00981933,Q1835766,2574300629,source for place of birth; source for place of death
+2026-11-24T04:36:59Z,ehlfl,person,"Hilbe,_Herbert",Q136147270,2574300638,source for date of birth; place of birth; source for date of death; place of death
+2026-11-24T04:37:01Z,lex,person,Andreas_Molbech_Lund,Q30148783,2574300652,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:37:01Z,dkl,person,Malvina_Mehrn,Q62081623,2574300658,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:37:02Z,kb,person,2898,Q6141099,2574300665,source for date of birth; source for place of birth
+2026-11-24T04:37:03Z,skbl,person,LilliZickerman,Q4990938,2574300673,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:37:04Z,sbl,person,12599,Q5789645,2574300682,place of birth
+2026-11-24T04:37:05Z,ndb,person,101224656,Q55194147,2574300693,source for occupation; occupation
+2026-11-24T04:37:07Z,oebl,person,B/Boguslawski_Adalbert_1757_1829,Q290902,2574300707,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:37:07Z,wgw,person,13904,Q698104,2574300713,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:37:08Z,hessbio,person,10495,Q94763720,2574300723,source for date of birth; source for place of birth; place of death; source for occupation; occupation
+2026-11-24T04:37:09Z,saebi,person,10727,Q1079350,2574300730,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:37:10Z,sbi,person,1004550,Q12795085,2574300738,source for date of birth; place of birth; source for occupation; occupation
+2026-11-24T04:37:11Z,uppslag,person,EngelbergAugust,Q11853351,2574300745,place of birth; place of death
+2026-11-24T04:37:12Z,bpn,person,00983488,Q1908666,2574300752,source for place of birth; source for place of death
+2026-11-24T04:37:13Z,ehlfl,person,"Hild,_Adolf",Q94818145,2574300759,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:37:14Z,lex,person,Andreas_Møller,Q499694,2574300768,LEX ID Andreas_Møller deprecated (now LEX Andreas_Møller_-_maler); LEX ID Andreas_Møller_-_maler; source for place of birth; source for place of death
+2026-11-24T04:37:15Z,dkl,person,Manon_Lüttichau,Q62081029,2574300777,source for date of birth; source for date of death
+2026-11-24T04:37:16Z,kb,person,290,Q3247074,2574300784,source for date of death; place of death
+2026-11-24T04:37:17Z,skbl,person,LillyHafgren,Q48227020,2574300793,source for date of birth; source for date of death; source for place of birth; father; spouse
+2026-11-24T04:37:18Z,sbl,person,12600,Q6200457,2574300804,source for place of death
+2026-11-24T04:37:19Z,ndb,person,1012270238,Q1405073,2574300810,source for occupation
+2026-11-24T04:37:27Z,oebl,person,B/Bohatec_Josef-Franz_1876_1954,Q1704341,2574300876,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:37:29Z,wgw,person,1392,Q89426,2574300887,source for date of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:37:30Z,hessbio,person,10496,Q348724,2574300902,source for date of birth; source for date of death; source for occupation; occupation
+2026-11-24T04:37:30Z,saebi,person,1073,Q2059224,2574300912,date of birth (more precise); source for place of birth; source for place of death; occupation
+2026-11-24T04:37:31Z,sbi,person,1004560,Q12795725,2574300928,source for date of birth; place of birth; source for date of death; place of death; occupation
+2026-11-24T04:37:32Z,uppslag,person,EnglundDag,Q11855706,2574300936,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:37:33Z,bpn,person,00986192,Q19756219,2574300946,source for place of birth; source for place of death
+2026-11-24T04:37:34Z,ehlfl,person,"Hiltbrunner,_Hermann",Q1611498,2574300958,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:37:35Z,lex,person,Andreas_Nicolaus_Kornerup,Q5919664,2574300971,source for date of birth; source for date of death
+2026-11-24T04:37:36Z,dkl,person,Maren_Berg,Q21817077,2574300982,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:37:37Z,kb,person,2900,Q11892295,2574300992,source for date of birth; place of birth; place of death
+2026-11-24T04:37:38Z,skbl,person,LillyHannaTurinnaArrheniusBeyer,Q64842253,2574301008,source for date of birth; source for date of death; source for place of birth; ISNI
+2026-11-24T04:37:38Z,sbl,person,12601,Q5789793,,no change
+2026-11-24T04:37:39Z,ndb,person,1012273873,Q94863798,2574301021,source for date of birth; source for date of death; source for place of birth; source for place of death; child
+2026-11-24T04:37:40Z,oebl,person,B/Bohatsch_Ottokar-Zdenko_1843_1912,Q55018489,2574301035,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:37:41Z,wgw,person,13920,Q55193084,2574301047,source for date of birth; source for date of death; place of death (more precise); occupation
+2026-11-24T04:37:42Z,hessbio,person,10497,Q94942711,2574301063,source for date of birth; place of birth; source for date of death; source for occupation
+2026-11-24T04:37:43Z,saebi,person,10731,Q1695551,2574301073,source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:37:44Z,sbi,person,1004570,Q12796701,2574301086,source for date of birth; source for place of birth; source for occupation
+2026-11-24T04:37:45Z,uppslag,person,EnglundKaj,Q11869057,2574301100,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:37:46Z,bpn,person,00986620,Q130319200,2574301113,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:37:47Z,ehlfl,person,"Hilti,_Daniel",Q16060005,2574301129,source for date of birth; source for place of birth
+2026-11-24T04:37:48Z,lex,person,Andreas_Odbjerg,Q100925726,2574301138,source for date of birth; source for place of birth
+2026-11-24T04:37:49Z,dkl,person,Maren_Grosen,Q62081030,2574301149,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:37:50Z,kb,person,2901,Q11902066,2574301164,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:37:51Z,skbl,person,LillyHellstrom,Q4953495,2574301177,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:37:51Z,sbl,person,12602,Q4724381,,no change
+2026-11-24T04:37:52Z,ndb,person,10122768X,Q84692,2574301190,source for date of birth; source for place of death; source for religion; source for occupation; sibling
+2026-11-24T04:37:53Z,oebl,person,B/Bohdal_Anton-Matthaeus_1900_2008,Q55682819,2574301208,source for place of birth; source for place of death; source for occupation
+2026-11-24T04:37:54Z,wgw,person,13928,Q59601577,2574301219,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:37:56Z,hessbio,person,10498,Q19211014,2574301240,source for place of birth; source for date of death; source for place of death; occupation; source for occupation; religion
+2026-11-24T04:37:56Z,saebi,person,10733,Q15429715,2574301247,source for place of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:37:57Z,sbi,person,1004580,Q12805815,2574301255,source for date of birth; place of birth
+2026-11-24T04:37:58Z,uppslag,person,EngmanMax,Q4356831,2574301269,source for date of birth; source for place of birth
+2026-11-24T04:37:59Z,bpn,person,00986794,Q9286544,2574301278,source for place of death
+2026-11-24T04:38:00Z,ehlfl,person,"Hilti,_Diana",Q1208835,2574301289,source for date of birth; source for occupation
+2026-11-24T04:38:01Z,lex,person,Andreas_Osiander,Q435547,2574301298,source for place of death
+2026-11-24T04:38:02Z,dkl,person,Maren_Splids,Q4979848,2574301307,source for date of birth; source for place of death
+2026-11-24T04:38:03Z,kb,person,2902,Q6142233,2574301318,source for place of birth; source for place of death
+2026-11-24T04:38:04Z,skbl,person,LilyBerglund,Q4938524,2574301328,source for date of birth (existing reference completed); source for date of death (existing reference completed)
+2026-11-24T04:38:04Z,sbl,person,12606,Q5791668,,no change
+2026-11-24T04:38:05Z,ndb,person,1012279480,Q94855229,2574301339,source for date of birth; source for date of death; source for place of death; religion; source for occupation
+2026-11-24T04:38:06Z,oebl,person,B/Bohdal_Matthaeus_1863_1937,Q55682818,2574301352,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:07Z,wgw,person,1395,Q1730405,2574301362,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:09Z,hessbio,person,10499,Q57128,2574301372,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:09Z,saebi,person,10734,Q1508575,2574301376,source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:09Z,sbi,person,1004590,Q17402570,,no change
+2026-11-24T04:38:10Z,uppslag,person,EngstroemOtto,Q1185068,2574301393,source for place of birth; date of death (more precise); source for place of death
+2026-11-24T04:38:10Z,bpn,person,00991337,Q123135452,,no change
+2026-11-24T04:38:11Z,ehlfl,person,"Hilti,_Eugen",Q26261174,2574301404,source for date of birth; source for place of birth; source for date of death; source for occupation; source for sibling
+2026-11-24T04:38:37Z,lex,person,Andreas_Papandreou,Q219256,2574301631,source for date of birth; source for date of death
+2026-11-24T04:38:38Z,dkl,person,Maren_Sørensen,Q54323270,2574301639,source for date of birth; source for date of death
+2026-11-24T04:38:39Z,kb,person,2903,Q4234438,2574301653,source for place of birth; source for place of death
+2026-11-24T04:38:40Z,skbl,person,LinaHjort,Q98528640,2574301665,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:38:40Z,sbl,person,12612,Q5749305,,no change
+2026-11-24T04:38:41Z,ndb,person,1012280144,Q72058,2574301677,source for date of birth; source for date of death; religion; source for occupation; occupation
+2026-11-24T04:38:42Z,oebl,person,B/Bohosiewicz_Teodor_1867_1948,Q16164380,2574301691,source for place of death; source for occupation
+2026-11-24T04:38:43Z,wgw,person,13953,Q55408053,2574301703,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:44Z,hessbio,person,1050,Q53538582,2574301718,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:45Z,saebi,person,10735,Q55915807,2574301730,source for date of death; source for place of death; occupation; source for occupation
+2026-11-24T04:38:46Z,sbi,person,1004600,Q59852509,2574301744,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:47Z,uppslag,person,EnkvistTerje,Q11896947,2574301754,source for place of birth; source for place of death
+2026-11-24T04:38:48Z,bpn,person,00998209,Q41305309,2574301766,source for place of birth; place of death
+2026-11-24T04:38:49Z,ehlfl,person,"Hilti,_Gottfried",Q1251822,2574301776,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation; source for sibling
+2026-11-24T04:38:50Z,lex,person,Andreas_Peter_Hovgaard,Q5814641,2574301789,source for date of birth
+2026-11-24T04:38:51Z,dkl,person,Marence_Tarp,Q62081036,2574301802,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:38:53Z,kb,person,2905,Q11868776,2574301825,source for date of birth; source for place of birth
+2026-11-24T04:38:53Z,skbl,person,LinaJonn,Q4957337,2574301837,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for sibling
+2026-11-24T04:38:53Z,sbl,person,12614,Q4352379,,no change
+2026-11-24T04:38:55Z,ndb,person,1012280438,Q16604670,2574301849,place of birth; place of death; source for occupation
+2026-11-24T04:38:55Z,oebl,person,B/Bohr_Oskar_1858_1935,Q55678424,2574301861,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation; occupation
+2026-11-24T04:38:56Z,wgw,person,13956,Q21512566,2574301873,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:58Z,hessbio,person,10500,Q89269387,2574301885,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; religion; source for father
+2026-11-24T04:38:58Z,saebi,person,10737,Q1712680,2574301902,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:38:58Z,sbi,person,1004610,Q59524819,,no change
+2026-11-24T04:39:00Z,uppslag,person,EnvallMarkku,Q8411383,2574301913,source for date of birth; source for place of birth
+2026-11-24T04:39:01Z,bpn,person,01000108,Q14519887,2574301930,source for place of birth; source for place of death
+2026-11-24T04:39:01Z,ehlfl,person,"Hilti,_Johann_(1885-1955)",Q136672154,2574301936,place of birth; date of death; place of death
+2026-11-24T04:39:01Z,lex,person,Andreas_Romberg,Q213904,,no change
+2026-11-24T04:39:02Z,dkl,person,Margaret_Hamerik,Q6759483,2574301941,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of death (existing reference completed)
+2026-11-24T04:39:03Z,kb,person,2907,Q17381896,2574301951,source for date of birth; father
+2026-11-24T04:39:03Z,skbl,person,LinaSandellBerg,Q457339,,no change
+2026-11-24T04:39:03Z,sbl,person,12615,Q5006910,,no change
+2026-11-24T04:39:04Z,ndb,person,1012284883,Q94788035,2574301961,source for date of birth; religion; source for occupation
+2026-11-24T04:39:06Z,oebl,person,B/Bohrmann_Marianne_1849_1916,Q59653147,2574301976,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:39:06Z,wgw,person,13966,Q94794610,2574301984,source for date of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:39:08Z,hessbio,person,10501,Q61975,2574301993,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; religion
+2026-11-24T04:39:09Z,saebi,person,10738,Q1694027,2574302010,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:39:10Z,sbi,person,1004620,Q12784271,2574302015,source for date of birth; source for place of birth; source for occupation; sibling
+2026-11-24T04:39:11Z,uppslag,person,EraesaariRisto,Q5401839,2574302023,source for date of birth; source for place of birth
+2026-11-24T04:39:12Z,bpn,person,01000758,Q42429255,2574302037,source for place of death
+2026-11-24T04:39:13Z,ehlfl,person,"Hilti,_Martin",Q1260211,2574302047,source for date of birth; source for place of birth; source for date of death; source for occupation; source for sibling
+2026-11-24T04:39:14Z,lex,person,Andreas_Samuelsen,Q492986,2574302055,source for date of birth; source for date of death
+2026-11-24T04:39:15Z,dkl,person,Margareta_Mikkelsen,Q62081627,2574302065,source for date of birth; source for place of birth
+2026-11-24T04:39:16Z,kb,person,2909,Q4252345,2574302073,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:39:17Z,skbl,person,LindaHaglund,Q269711,2574302085,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:39:18Z,sbl,person,12616,Q5791840,2574302095,source for place of birth; source for place of death
+2026-11-24T04:39:19Z,ndb,person,101228820X,Q1398719,2574302104,source for date of birth; source for date of death; source for religion; occupation
+2026-11-24T04:39:20Z,oebl,person,B/Bohutinsky_Anton_1847_1924,Q98834491,2574302110,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:39:20Z,wgw,person,13967,Q457654,,no change
+2026-11-24T04:39:28Z,hessbio,person,10502,Q17321756,2574302175,source for date of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:39:30Z,saebi,person,1074,Q1664649,2574302186,source for place of birth; source for place of death; occupation; source for occupation
+2026-11-24T04:39:30Z,sbi,person,1004630,Q12786061,,no change
+2026-11-24T04:39:30Z,uppslag,person,ErichMikko,Q5714444,2574302195,source for place of birth; source for place of death
+2026-11-24T04:39:31Z,bpn,person,01004426,Q19802028,2574302200,place of birth; place of death
+2026-11-24T04:39:32Z,ehlfl,person,"Hilti,_Peter",Q1784643,2574302212,source for date of birth; source for occupation
+2026-11-24T04:39:34Z,lex,person,Andreas_Schimper,Q63760,2574302220,source for date of birth; source for date of death
+2026-11-24T04:39:34Z,dkl,person,Margarethe_Hoffmann,Q62081037,2574302227,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:39:36Z,kb,person,2910,Q4960804,2574302242,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:39:36Z,skbl,person,LinneaFjallstedt,Q4948230,2574302252,source for date of birth; source for date of death
+2026-11-24T04:39:36Z,sbl,person,12618,Q5791907,,no change
+2026-11-24T04:39:38Z,ndb,person,1012299384,Q14625915,2574302264,religion; source for occupation
+2026-11-24T04:39:39Z,oebl,person,B/Bojer_Wenzel_1797_1856,Q637799,2574302275,source for date of death; source for place of birth; source for place of death; source for occupation; occupation
+2026-11-24T04:39:40Z,wgw,person,1397,Q75372831,2574302286,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:39:40Z,hessbio,person,10503,Q95007532,2574302299,source for date of birth; source for date of death; occupation; source for occupation
+2026-11-24T04:39:42Z,saebi,person,10740,Q1873060,2574302315,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:39:42Z,sbi,person,1004640,Q12795976,2574302328,source for date of birth; source for place of birth; source for occupation; sibling
+2026-11-24T04:39:44Z,uppslag,person,ErichRafael,Q959002,2574302345,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:39:44Z,bpn,person,01007175,Q94752514,2574302356,date of birth (more precise); date of death (more precise); place of birth; place of death
+2026-11-24T04:39:45Z,ehlfl,person,"Hilti,_Salutaris",Q136672155,2574302375,place of death; religion
+2026-11-24T04:39:47Z,lex,person,Andreas_Schlüter,Q500465,2574302392,source for date of death; source for place of death
+2026-11-24T04:39:47Z,dkl,person,Margarethe_Lorensen,Q62081039,2574302398,source for date of birth
+2026-11-24T04:39:48Z,kb,person,2911,Q5945455,2574302412,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:39:50Z,skbl,person,LinneaHillberg,Q4954017,2574302423,source for date of death; source for place of birth; source for place of death
+2026-11-24T04:39:50Z,sbl,person,12619,Q4952850,,no change
+2026-11-24T04:39:50Z,ndb,person,1012300226,Q94758047,,no change
+2026-11-24T04:39:50Z,oebl,person,B/Bojko_Jakob_1857_1943,Q11716372,2574302438,source for date of death; source for occupation
+2026-11-24T04:39:52Z,wgw,person,13970,Q1504277,2574302448,source for date of death; source for place of death; source for occupation
+2026-11-24T04:39:52Z,hessbio,person,10504,Q100371860,2574302464,source for date of death; occupation; source for occupation
+2026-11-24T04:39:54Z,saebi,person,10741,Q272360,2574302473,source for date of death; source for place of death
+2026-11-24T04:39:54Z,sbi,person,1004650,Q12784360,2574302484,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:39:56Z,uppslag,person,EriksonGustaf,Q332193,2574302496,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:39:56Z,bpn,person,01009009,Q27646483,2574302509,place of birth; place of death
+2026-11-24T04:39:57Z,ehlfl,person,"Hilti,_Toni_(Anton)",Q1279308,2574302518,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; source for sibling
+2026-11-24T04:39:59Z,lex,person,Andreas_Scholl,Q57439,2574302533,source for date of birth; source for place of birth
+2026-11-24T04:39:59Z,dkl,person,Margit_Fogh_Jensen,Q62081042,2574302543,source for date of birth; source for date of death; source for place of birth
+2026-11-24T04:40:00Z,kb,person,2912,Q4962639,2574302557,source for place of birth; source for place of death; source for spouse
+2026-11-24T04:40:01Z,skbl,person,LisAsklund,Q4987085,2574302568,source for date of birth; source for date of death; source for place of birth; spouse
+2026-11-24T04:40:01Z,sbl,person,12624,Q5792035,,no change
+2026-11-24T04:40:02Z,ndb,person,1012304035,Q1679006,2574302581,source for occupation
+2026-11-24T04:40:03Z,oebl,person,B/Bolfras_Arthur_1838_1922,Q712197,2574302596,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:40:05Z,wgw,person,13971,Q1693438,2574302607,source for date of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:40:05Z,hessbio,person,10505,Q100374410,2574302619,source for occupation; occupation
+2026-11-24T04:40:07Z,saebi,person,10742,Q93588,2574302630,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:40:07Z,sbi,person,1004660,Q17402579,2574302638,source for date of birth; source for place of birth; source for occupation; father; sibling
+2026-11-24T04:40:08Z,uppslag,person,ErikssonAldur,Q50368694,2574302651,source for date of birth; source for place of birth
+2026-11-24T04:40:10Z,bpn,person,01010133,Q21590842,2574302660,place of birth; place of death
+2026-11-24T04:40:11Z,ehlfl,person,"Hilti,_Werner",Q136672159,2574302672,place of birth; place of death; occupation
+2026-11-24T04:40:12Z,lex,person,Andreas_Schytte,Q12301601,2574302679,source for date of birth; source for date of death
+2026-11-24T04:40:12Z,dkl,person,Margit_Heilesen,Q62081045,2574302691,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:40:38Z,kb,person,2915,Q11885061,2574302885,place of birth; place of death
+2026-11-24T04:40:39Z,skbl,person,LisaEkedahl,Q50804814,2574302895,source for date of birth; source for date of death; source for place of death; source for father
+2026-11-24T04:40:40Z,sbl,person,12628,Q5792658,2574302906,source for place of birth; source for place of death
+2026-11-24T04:40:41Z,ndb,person,1012304531,Q94900049,2574302917,source for date of death; religion; source for occupation; father; child
+2026-11-24T04:40:42Z,oebl,person,B/Bolla-Kotek_Sibylle_1913_1969,Q1462932,2574302932,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:40:43Z,wgw,person,13977,Q12735,2574302945,source for date of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-24T04:40:44Z,hessbio,person,10506,Q94905223,2574302953,source for date of birth; place of birth; source for date of death; place of death; source for occupation; occupation
+2026-11-24T04:40:45Z,saebi,person,10743,Q77194,2574302964,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:40:46Z,sbi,person,1004670,Q12791521,2574302975,source for date of birth; source for place of birth; source for occupation; father; sibling
+2026-11-24T04:40:47Z,uppslag,person,ErikssonJakob,Q29788797,2574302990,source for place of birth
+2026-11-24T04:40:47Z,bpn,person,01011087,Q1331395,,no change
+2026-11-24T04:40:48Z,ehlfl,person,"Hilti_(-Kaufmann),_Christel",Q140559752,2574303001,date of birth; place of birth; occupation; father; sibling
+2026-11-24T04:40:49Z,lex,person,Andreas_Sigismund_Marggraf,Q57983,2574303016,source for date of birth; source for date of death
+2026-11-24T04:40:50Z,dkl,person,Margit_Vognsen,Q62081046,2574303028,source for date of birth; source for place of birth
+2026-11-24T04:40:51Z,kb,person,2917,Q5974252,2574303042,source for date of birth; source for place of birth; source for place of death; spouse
+2026-11-24T04:40:52Z,skbl,person,LisaEurenBerner,Q4947309,2574303057,source for date of birth; source for date of death; source for place of birth; source for place of death; source for sibling
+2026-11-24T04:40:53Z,sbl,person,12630,Q5792685,2574303067,source for place of birth
+2026-11-24T04:40:54Z,ndb,person,1012306348,Q1353261,2574303082,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; father
+2026-11-24T04:40:55Z,oebl,person,B/Boller_Anton_1811_1869,Q588370,2574303095,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-24T04:40:56Z,wgw,person,13982,Q1031252,2574303109,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:40:57Z,hessbio,person,10507,Q95291482,2574303119,source for date of birth; source for place of birth; occupation
+2026-11-24T04:40:58Z,saebi,person,10744,Q76549,2574303135,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:40:59Z,sbi,person,1004680,Q17402584,2574303144,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-24T04:41:00Z,uppslag,person,ErikssonJarlThure,Q11866133,2574303161,source for date of birth; source for place of birth
+2026-11-24T04:41:01Z,bpn,person,01011241,Q2084771,2574303172,place of birth; place of death
+2026-11-24T04:41:02Z,ehlfl,person,"Hilty,_Johann_(1904-1992)",Q136672127,2574303187,place of birth; place of death
+2026-11-24T04:41:03Z,lex,person,Andreas_Skov_Olsen,Q42130419,2574303198,source for date of birth; source for place of birth
+2026-11-24T04:41:03Z,dkl,person,Margot_Lander,Q6760686,,no change
+2026-11-24T04:41:03Z,kb,person,2918,Q54819982,,no change
+2026-11-24T04:47:19Z,skbl,person,LisaFonssagrivesPenn,Q256388,2574304431,source for date of birth (existing reference completed); source for date of death (existing reference completed); source for place of birth; source for spouse (existing reference completed); source for child
+2026-11-24T04:47:19Z,sbl,person,12631,Q5792678,,no change
+2026-11-24T04:47:19Z,ndb,person,101230702,Q54532672,2574304437,source for occupation
+2026-11-24T04:47:20Z,oebl,person,B/Boltzmann_Henriette-Katharina_1880_1945,Q51844334,2574304448,source for date of birth; source for place of birth; occupation; source for occupation
+2026-11-24T04:47:21Z,wgw,person,1402,Q1310649,2574304458,source for date of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:47:22Z,hessbio,person,10508,Q55674492,2574304476,source for date of birth; source for date of death; source for occupation; occupation
+2026-11-24T04:47:23Z,saebi,person,10746,Q139240399,2574304485,source for date of birth; place of birth; source for date of death
+2026-11-24T04:47:24Z,sbi,person,1004690,Q17402593,2574304499,source for date of birth; source for place of birth; occupation
+2026-11-24T04:47:25Z,uppslag,person,ErikssonJerkerA,Q16298086,2574304509,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:47:25Z,bpn,person,01012480,Q2804999,,no change
+2026-11-24T04:47:26Z,ehlfl,person,"Hilty,_Patrick",Q133254926,2574304522,source for date of birth; place of birth; occupation
+2026-11-24T04:47:27Z,lex,person,Andreas_Vesalius,Q170267,2574304534,other names
+2026-11-24T04:47:28Z,dkl,person,Margrete,Q4965564,2574304548,DKL ID Margrete deprecated (now DKL Margrete_-_helgen); DKL ID Margrete_-_helgen; source for date of death
+2026-11-24T04:47:29Z,kb,person,2920,Q4354473,2574304560,source for date of birth; source for place of birth
+2026-11-24T04:47:30Z,skbl,person,LisaHogelin,Q4955405,2574304574,source for date of birth; source for date of death; source for place of birth; source for place of death; source for child
+2026-11-24T04:47:30Z,sbl,person,12632,Q3067154,,no change
+2026-11-24T04:47:31Z,ndb,person,101231261,Q65214,2574304590,source for occupation; occupation
+2026-11-24T04:47:32Z,oebl,person,B/Boltzmann_Ida-Katharina_1884_1910,Q51844336,2574304600,source for place of birth; source for occupation
+2026-11-24T04:47:33Z,wgw,person,14054,Q59653160,2574304612,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:47:34Z,hessbio,person,10509,Q1164283,2574304622,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-24T04:47:35Z,saebi,person,10747,Q124329492,2574304634,source for date of birth; source for date of death
+2026-11-24T04:47:46Z,sbi,person,1004700,Q17402598,,no change
+2026-11-24T04:47:46Z,uppslag,person,ErikssonLars,Q20249486,2574304743,source for date of birth; source for place of birth
+2026-11-24T04:47:47Z,bpn,person,01015328,Q2471988,2574304759,place of death
+2026-11-24T04:47:49Z,ehlfl,person,"Hinderer,_Erwin",Q136646887,2574304779,source for date of birth; source for occupation; GND ID
+2026-11-24T04:47:49Z,lex,person,Andreas_Vinding,Q12301611,2574304786,source for date of birth; source for date of death
+2026-11-24T04:47:51Z,dkl,person,Margrete_1.,Q202266,2574304799,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:47:52Z,kb,person,2921,Q11865009,2574304811,source for date of birth; source for place of birth; source for place of death
+2026-11-24T04:47:53Z,skbl,person,LisaMattson,Q4966432,2574304823,source for date of birth; source for date of death; source for father
+2026-11-24T04:47:53Z,sbl,person,12645,Q720017,,no change
+2026-11-24T04:47:54Z,ndb,person,101231474,Q1696071,2574304839,source for occupation; occupation
+2026-11-24T04:47:55Z,oebl,person,B/Boltzmann_Ludwig_1844_1906,Q84296,2574304846,source for date of birth; source for date of death; source for place of birth; source for occupation
+2026-11-24T04:47:56Z,wgw,person,14057,Q522120,2574304855,source for date of death; source for place of death; source for occupation
+2026-11-24T04:47:56Z,hessbio,person,1051,Q718687,2574304859,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-24T04:47:58Z,saebi,person,10748,Q32859655,2574304869,source for place of birth; source for place of death; source for occupation; occupation
+2026-11-24T04:47:59Z,sbi,person,1004710,Q59852266,2574304876,source for occupation; occupation
+2026-11-24T04:47:59Z,uppslag,person,ErikssonPamela,Q60484833,2574304886,source for date of birth; source for date of death; place of death
+2026-11-24T04:48:01Z,bpn,person,01017441,Q2505704,2574304897,source for place of birth
+2026-11-24T04:48:02Z,ehlfl,person,"Hinger,_Anton",Q136672128,2574304904,source for place of death; source for occupation
+2026-11-24T04:48:02Z,lex,person,Andreas_Weidenhaupt,Q12301610,2574304920,source for date of birth; source for date of death
+2026-11-24T04:49:15Z,dkl,person,Margrete_Bredsdorff,Q62081049,,refused by Wikidata: badtoken
+2026-11-24T04:56:17Z,kb,person,2922,Q5411169,2574306555,source for date of birth; source for place of birth; source for place of death; child
+2026-11-24T04:56:18Z,skbl,person,LisaRolf,Q71259399,2574306572,source for date of birth; source for date of death; source for place of death; ISNI
+2026-11-24T04:56:20Z,sbl,person,12647,Q5792819,2574306593,source for place of death
+2026-11-24T04:56:20Z,ndb,person,101234449,Q11112890,2574306602,source for date of birth; source for date of death; religion; source for occupation; sibling
+2026-11-24T04:56:22Z,oebl,person,B/Bolyai-Bolya_Johann_1802_1860,Q16924,2574306617,source for date of birth; source for date of death; source for place of birth; occupation; source for occupation
+2026-11-24T04:56:22Z,wgw,person,1406,Q16088333,2574306628,source for date of birth; source for date of death; source for place of death
+2026-11-24T04:56:23Z,hessbio,person,10510,Q1040071,2574306644,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation; religion
+2026-11-24T04:56:24Z,saebi,person,10749,Q145226,2574306655,source for date of birth; source for date of death
+2026-11-24T04:56:25Z,sbi,person,1004720,Q12788039,2574306670,source for date of birth; source for place of birth; source for occupation; sibling
+2026-11-24T04:56:26Z,uppslag,person,ErikssonSune,Q4532458,2574306680,source for date of birth
+2026-11-24T04:56:26Z,bpn,person,01019331,Q1859566,,no change
+2026-11-24T04:56:29Z,ehlfl,person,"Hitler,_Adolf",Q352,2574306716,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:56:29Z,lex,person,Andreas_Werckmeister,Q61162,2574306726,source for date of death; source for place of birth; source for place of death
+2026-11-24T04:56:30Z,dkl,person,Margrete_Drejer,Q50378786,2574306746,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-24T04:56:32Z,kb,person,2923,Q5474899,2574306766,source for date of birth; source for place of birth
+2026-11-24T04:56:32Z,skbl,person,LisaSteier,Q4980182,2574306774,source for date of birth; source for date of death
+2026-11-24T04:56:32Z,sbl,person,12649,Q5792849,,no change
+2026-11-24T04:56:34Z,ndb,person,1012363619,Q27332245,2574306782,source for date of birth; source for date of death; source for place of death; place of burial; religion
+2026-11-24T04:56:35Z,oebl,person,B/Bolyai-Bolya_Wolfgang_1775_1856,Q252311,2574306794,source for date of birth; source for place of birth; source for occupation; occupation
+2026-11-24T04:56:35Z,wgw,person,14064,Q16320564,2574306802,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:56:36Z,hessbio,person,10511,Q96247,2574306815,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; religion
+2026-11-24T04:56:38Z,saebi,person,1075,Q2149257,2574306824,place of birth; source for date of death; source for place of death; source for occupation
+2026-11-24T04:56:38Z,sbi,person,1004730,Q17402599,2574306833,source for date of birth; source for place of birth; source for date of death; source for place of death; sibling
+2026-11-24T04:56:39Z,uppslag,person,ErkkoEero,Q4119026,2574306844,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-24T04:56:39Z,bpn,person,01020125,Q1355408,,no change
+2026-11-24T04:56:40Z,ehlfl,person,"Hoch,_Gebhard",Q133462947,2574306853,source for date of birth; place of birth; source for date of death; source for occupation
+2026-11-24T04:56:42Z,lex,person,Andreas_Wolff,Q2652573,2574306867,source for date of birth; source for place of birth
+2026-11-24T04:56:42Z,dkl,person,Margrete_Fredkulla,Q262305,,no change
+2026-11-24T04:56:42Z,kb,person,2924,Q4992957,2574306880,source for date of birth; source for place of birth; source for father
+2026-11-24T04:56:43Z,skbl,person,LisaThomassonLappLisa,Q4982558,2574306891,date of birth (more precise); date of death (more precise); source for place of death
