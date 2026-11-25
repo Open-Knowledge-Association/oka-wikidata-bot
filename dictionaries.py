@@ -410,6 +410,18 @@ def swiss_place(raw):
     return place(name, SWISS_PLACES, CH_LANGS, "Q39") or world_city(name, CH_LANGS)
 
 
+def swiss_municipality(raw):
+    """A place of origin (P1321): only a current or former municipality of Switzerland, by label, else by alias
+    ('Freiburg' is Fribourg's German name); never a city abroad. Thomas Kerboul, Property talk:P1321, 23 November
+    2026: through swiss_place's fallback 'von Freiburg' had become Freiburg im Breisgau, and foreigners' places of
+    origin abroad (von Grenoble, von Mailand) were added, which the property cannot hold."""
+    name = re.sub(r"\s*\((?:heute|ehemals|früher)\b[^)]*\)", "", clean(raw)).strip()
+    m = re.fullmatch(r"(.+?)\s*\(([A-Z]{2})\)", name)
+    if m and m.group(2) in CANTON_ITEMS:
+        return place(m.group(1), SWISS_PLACES, CH_LANGS, "Q39", within=CANTON_ITEMS[m.group(2)])
+    return place_or_alias(name, SWISS_PLACES, CH_LANGS, "Q39")
+
+
 def norwegian_place(raw):
     """SNL place values: a link to an SNL article; 'Madrid, Spania', 'Lombard, Illinois, USA', 'Venezia (Italia)' or
     'Wroclaw i Polen': a town of that country or region; 'Aker (Oslo)' or 'Skafså i Tokke': the first place, which
@@ -808,7 +820,7 @@ def hds_facts(hid, kind):
         # (Property talk:P1321, 16 November 2026; the HDS "von" is the source the usage note asks for).
         if m:
             for name in re.split(r",\s*|\s+und\s+", m.group(1)):
-                q = ch(name)
+                q = swiss_municipality(name)
                 if q:
                     facts.append(fact("P1321", item_value(q), "place of origin"))
                 else:
