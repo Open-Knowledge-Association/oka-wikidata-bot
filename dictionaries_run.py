@@ -570,13 +570,15 @@ def redo():
     federal state). Only HDS entries whose page is already cached: nothing is asked of the HDS. The plan lines are
     replaced; the edits are made and logged as in `run`.
         python dictionaries_run.py redo hds [ID ...]           what would change (default: the entries the
-        python dictionaries_run.py redo hds [ID ...] --save    pre-1848 rule left without a place of origin)"""
+        python dictionaries_run.py redo hds [ID ...] --save    pre-1848 rule left without a place of origin;
+        --note=REGEX picks the entries whose plan notes match, e.g. --note="place of origin '(ab|seit) [0-9]{4}")"""
     work, save = sys.argv[2], "--save" in sys.argv
     if work != "hds":
         sys.exit("redo: HDS only")
     ids = [a for a in sys.argv[3:] if not a.startswith("--")]
     plan = [json.loads(line) for line in open(plan_file(work), encoding="utf-8")]
-    held = lambda e: any("died before 1848" in n for n in e.get("notes", []))
+    note = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--note=")), "died before 1848")
+    held = lambda e: any(re.search(note, n) for n in e.get("notes", []))   # entries whose plan has this note
     todo = [e for e in plan if (e["id"] in ids if ids else held(e))]
     todo = [e for e in todo if (WORK2 / "hds" / f"{e['id'].zfill(6)}.html").exists()]
     out(f"{len(todo)} entries to plan again: {[e['id'] for e in todo]}")

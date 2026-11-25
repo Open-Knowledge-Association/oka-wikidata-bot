@@ -820,9 +820,13 @@ def hds_facts(hid, kind):
         # (Property talk:P1321, 16 November 2026; the HDS "von" is the source the usage note asks for).
         if m:
             for name in re.split(r",\s*|\s+und\s+", m.group(1)):
-                q = swiss_municipality(name)
+                # 'ab 1770 von Genf': citizen of Geneva from 1770, with that year as the start time (25 November 2026;
+                # before, these 785 places were left out as unmatched names)
+                since = re.fullmatch(r"(?:ab|seit)\s+(\d{4})\s+(?:von\s+)?(.+)", name.strip())
+                q = swiss_municipality(since.group(2) if since else name)
                 if q:
-                    facts.append(fact("P1321", item_value(q), "place of origin"))
+                    facts.append(fact("P1321", item_value(q), "place of origin",
+                                      {"P580": [time_value(int(since.group(1)))]} if since else None))
                 else:
                     notes.append(f"place of origin '{name}' not matched to one place item")
     elif kind == "place":                              # (families get no place of origin: P1321 is for people only)
