@@ -36,6 +36,8 @@ import time
 import urllib.error
 import urllib.request
 
+from pathlib import Path
+
 import dictionaries as d
 from common import ROOT, WORK, only_import_refs
 
@@ -141,13 +143,36 @@ def open_cases(sourced=False, log=None):
                 yield {"work": e["work"], "entry": e["id"], "qid": e["qid"]}, label, ours[0], claims, refs, ent
 
 
+NESTED_CACHE = Path(__file__).parent / "work" / "nested_cache.jsonl"   # answers kept across runs
+_inside = {}
+
+
+def inside(a, b):
+    """Whether place a lies in place b (located in, location or part of, any depth). The answers are kept in
+    work/nested_cache.jsonl: a run over 7,000 cases asked them for hours each time (16 November 2026)."""
+    if not _inside and NESTED_CACHE.exists():
+        for line in open(NESTED_CACHE, encoding="utf-8"):
+            try:
+                k, v = json.loads(line)
+                _inside[k] = v
+            except ValueError:
+                pass                                    # a line cut by two writers
+    key = f"{a}>{b}"
+    if key not in _inside:
+        _inside[key] = bool(d.lookup(f"SELECT ?x WHERE {{ wd:{a} (wdt:P131|wdt:P276|wdt:P361)+ wd:{b} . BIND(1 AS ?x) }} LIMIT 1"))
+        NESTED_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        with open(NESTED_CACHE, "a", encoding="utf-8") as f:
+            f.write(json.dumps([key, _inside[key]]) + "\n")
+    return _inside[key]
+
+
 def nested(theirs, ours):
     """Whether one of Wikidata's places lies inside the entry's place or the other way round, through located in,
     location or part of (Cambridge House in London, a village in its municipality): the values agree at different
     precision, so there is no disagreement and nothing is edited. The bot's build() only knows towns in
     municipalities; this also catches buildings, districts and former municipalities."""
     for a, b in [(t, ours) for t in theirs] + [(ours, t) for t in theirs]:
-        if a != b and d.lookup(f"SELECT ?x WHERE {{ wd:{a} (wdt:P131|wdt:P276|wdt:P361)+ wd:{b} . BIND(1 AS ?x) }} LIMIT 1"):
+        if a != b and inside(a, b):
             return True
     return False
 

@@ -80,12 +80,17 @@ def cases(log, since=None, until=None):
         yield r
 
 
-def plans_for(works):
+def plans_for(keys):
+    """The plan entries of these (work, entry) keys only: whole plans do not fit in a job's memory (the apply
+    job was killed at 1,700 of 2,249 on 24 November 2026)."""
     plans = {}
-    for w in works:
+    for w in {w for w, _ in keys}:
         p = d.WORK2 / f"full_plan_{w}.jsonl"
         if p.exists():
-            plans.update({(w, e["id"]): e for e in map(json.loads, open(p, encoding="utf-8"))})
+            for line in open(p, encoding="utf-8"):
+                e = json.loads(line)
+                if (w, e["id"]) in keys:
+                    plans[(w, e["id"])] = e
     return plans
 
 
@@ -180,7 +185,7 @@ def main():
         if OUT.exists() else set()
     todo = [r for r in rows if (r["work"], r["entry"], r["property"]) not in done]
     print(f"{len(rows)} cases, {len(todo)} not done yet:", dict(collections.Counter(r["decision"] for r in todo)), flush=True)
-    plans = plans_for({r["work"] for r in todo})
+    plans = plans_for({(r["work"], r["entry"]) for r in todo})
     site = None
     if save_:
         from common import bot_site
