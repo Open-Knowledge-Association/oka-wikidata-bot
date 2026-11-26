@@ -71499,3 +71499,503 @@ time,work,kind,entry,item,revid,changes
 2026-11-26T17:57:17Z,saebi,person,24972,Q55673967,2575209187,source for date of birth; source for place of birth; source for date of death; source for place of death
 2026-11-26T17:57:18Z,sbi,person,642917,Q14856637,2575209195,source for occupation; occupation
 2026-11-26T17:57:19Z,bpn,person,14411033,Q111371587,2575209210,place of death
+2026-11-26T17:57:39Z,lex,person,Erling_Nielsen,Q5389826,2575209346,source for date of birth
+2026-11-26T17:57:40Z,sbl,person,8283,Q6014991,2575209352,source for place of death
+2026-11-26T17:57:41Z,ndb,person,116628723,Q1649642,2575209356,source for occupation
+2026-11-26T17:57:42Z,oebl,person,K/Kobald_Engelbert_1848_1926,Q26260188,2575209364,source for date of death; source for place of death; source for occupation
+2026-11-26T17:57:43Z,wgw,person,34624,Q59653420,2575209368,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T17:57:44Z,hessbio,person,16050,Q2157238,2575209374,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:57:45Z,saebi,person,24973,Q23765608,2575209383,source for date of birth; source for place of birth; source for date of death; source for occupation; occupation
+2026-11-26T17:57:46Z,sbi,person,643120,Q59973561,2575209388,source for date of birth; source for date of death; source for place of death; source for occupation; source for sibling
+2026-11-26T17:57:46Z,bpn,person,14411205,Q104635462,,no change
+2026-11-26T17:57:47Z,lex,person,Erling_Olsen,Q1101406,2575209393,source for date of birth; source for date of death
+2026-11-26T17:57:47Z,sbl,person,8285,Q5626674,,no change
+2026-11-26T17:57:48Z,ndb,person,116629150,Q92123,2575209402,source for date of birth; source for date of death; source for place of death; religion; source for occupation
+2026-11-26T17:57:49Z,oebl,person,K/Kobald_Franz_1866_1933,Q26260098,2575209409,source for occupation
+2026-11-26T17:57:50Z,wgw,person,34626,Q59653598,2575209416,source for date of birth; place of birth; source for date of death; source for occupation
+2026-11-26T17:57:51Z,hessbio,person,16052,Q75389233,2575209425,source for date of birth; source for date of death; source for place of death; source for father; sibling
+2026-11-26T17:57:52Z,saebi,person,24974,Q23661840,2575209432,source for date of birth; source for place of birth; source for date of death; place of death; occupation
+2026-11-26T17:57:53Z,sbi,person,643228,Q59973212,2575209441,source for date of birth; source for place of birth; source for date of death
+2026-11-26T17:57:54Z,bpn,person,14412387,Q67198165,2575209448,source for place of birth; source for place of death
+2026-11-26T17:57:55Z,lex,person,Erling_Schroeder,Q5389832,2575209453,source for date of birth; source for date of death; source for place of birth; place of death
+2026-11-26T17:57:56Z,sbl,person,8287,Q6015028,2575209463,source for place of death
+2026-11-26T17:57:57Z,ndb,person,116629207,Q76774,2575209472,source for date of birth; source for religion; source for occupation; source for sibling
+2026-11-26T17:57:58Z,oebl,person,K/Koban_Anton_1875_1919,Q60815831,2575209476,source for place of birth; source for occupation
+2026-11-26T17:57:59Z,wgw,person,34627,Q62308,2575209485,source for place of birth; source for date of death; source for occupation
+2026-11-26T17:58:00Z,hessbio,person,16053,Q16006938,2575209493,source for date of birth; source for date of death; source for place of death; source for father; sibling
+2026-11-26T17:58:01Z,saebi,person,24975,Q21415610,2575209503,occupation; source for occupation
+2026-11-26T17:58:02Z,sbi,person,643403,Q59972440,2575209511,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:02Z,bpn,person,14414174,Q42307335,2575209520,date of death; place of birth
+2026-11-26T17:58:02Z,lex,person,Erling_Skakke,Q725219,,no change
+2026-11-26T17:58:02Z,sbl,person,8288,Q4970006,,no change
+2026-11-26T17:58:04Z,ndb,person,116629274,Q123780,2575209532,source for date of birth; source for date of death; source for place of death; religion; source for occupation; occupation
+2026-11-26T17:58:05Z,oebl,person,K/Kobatsch_Rudolf_1868_1929,Q60815835,2575209537,source for place of birth; source for place of death; source for occupation
+2026-11-26T17:58:06Z,wgw,person,34628,Q2173398,2575209547,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:07Z,hessbio,person,16055,Q75389292,2575209552,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for father; source for mother
+2026-11-26T17:58:08Z,saebi,person,24976,Q21415807,2575209556,source for date of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T17:58:09Z,sbi,person,643679,Q59972195,2575209562,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:10Z,bpn,person,14414730,Q1763464,2575209570,source for place of birth; source for place of death
+2026-11-26T17:58:10Z,lex,person,Erling_Skjalgsson,Q936090,,no change
+2026-11-26T17:58:11Z,sbl,person,8289,Q825694,2575209577,source for place of death
+2026-11-26T17:58:12Z,ndb,person,116629355,Q71853,2575209587,source for date of birth; source for date of death; source for place of death; religion; source for occupation
+2026-11-26T17:58:13Z,oebl,person,K/Kobbe_Johann_1836_1901,Q60815840,2575209591,place of death; occupation
+2026-11-26T17:58:14Z,wgw,person,34629,Q19936281,2575209597,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:15Z,hessbio,person,16056,Q75374287,2575209601,source for date of birth; source for place of birth; source for date of death; source for place of death; source for father; sibling
+2026-11-26T17:58:16Z,saebi,person,24977,Q37886114,2575209607,source for place of birth; source for place of death; source for occupation; occupation
+2026-11-26T17:58:17Z,sbi,person,643828,Q59972049,2575209612,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:18Z,bpn,person,14415256,Q1554812,2575209622,source for place of birth; source for place of death
+2026-11-26T17:58:19Z,lex,person,Erling_Steinvegg,Q777417,2575209629,source for date of death
+2026-11-26T17:58:19Z,sbl,person,8291,Q4993033,,no change
+2026-11-26T17:58:20Z,ndb,person,116629401,Q86291,2575209635,source for date of birth; source for date of death; source for place of death; source for occupation; source for father
+2026-11-26T17:58:21Z,oebl,person,K/Kobe_Julius_1880_1948,Q60815843,2575209642,source for place of birth; source for place of death; source for occupation
+2026-11-26T17:58:22Z,wgw,person,3463,Q1696260,2575209650,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:30Z,hessbio,person,16058,Q3120350,2575209708,source for date of birth; source for place of birth; source for date of death; occupation; source for father; sibling
+2026-11-26T17:58:31Z,saebi,person,24978,Q19965417,2575209718,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:32Z,sbi,person,643949,Q59971760,2575209726,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T17:58:33Z,bpn,person,14416433,Q57150987,2575209737,source for date of birth; source for date of death
+2026-11-26T17:58:35Z,lex,person,Ermanno_Olmi,Q114063,2575209742,source for date of birth; source for date of death
+2026-11-26T17:58:35Z,sbl,person,8292,Q6015181,,no change
+2026-11-26T17:58:35Z,ndb,person,116630159,Q1732736,2575209751,source for occupation
+2026-11-26T17:58:36Z,oebl,person,K/Kobe_Jurij_1807_1858,Q55907789,2575209761,source for date of birth; source for date of death; occupation
+2026-11-26T17:58:37Z,wgw,person,34630,Q89896,2575209769,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-26T17:58:38Z,hessbio,person,16059,Q75389247,2575209773,source for date of birth; source for place of birth; source for date of death; source for place of death; source for father; sibling
+2026-11-26T17:58:39Z,saebi,person,24979,Q87099,2575209785,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:40Z,sbi,person,644092,Q19938051,2575209795,source for date of birth; source for place of birth; source for place of death; source for occupation
+2026-11-26T17:58:41Z,bpn,person,14418972,Q2583897,2575209801,place of death
+2026-11-26T17:58:43Z,lex,person,Ermanno_Wolf-Ferrari,Q57275,2575209812,source for date of birth; source for date of death
+2026-11-26T17:58:43Z,sbl,person,8293,Q988871,,no change
+2026-11-26T17:58:43Z,ndb,person,116630175,Q97421,2575209821,religion; occupation
+2026-11-26T17:58:44Z,oebl,person,K/Kobelkoff_Nikolaus_1851_1933,Q1990843,2575209826,source for date of birth; source for date of death; source for place of death
+2026-11-26T17:58:45Z,wgw,person,34631,Q114498,2575209834,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:46Z,hessbio,person,1606,Q215769,2575209843,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:47Z,saebi,person,2498,Q55122267,2575209851,place of birth; date of death (more precise); source for occupation
+2026-11-26T17:58:47Z,sbi,person,644266,Q1446033,,no change
+2026-11-26T17:58:47Z,bpn,person,14422859,Q20113627,,no change
+2026-11-26T17:58:48Z,lex,person,Erna_Juel-Hansen,Q4957496,2575209858,source for date of birth; source for date of death; source for place of birth
+2026-11-26T17:58:48Z,sbl,person,8294,Q16650018,,no change
+2026-11-26T17:58:49Z,ndb,person,116630264,Q122512,2575209865,occupation
+2026-11-26T17:58:50Z,oebl,person,K/Kober_Franz_1864_1943,Q94895605,2575209873,place of birth; source for place of death
+2026-11-26T17:58:51Z,wgw,person,34632,Q59524625,2575209880,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:52Z,hessbio,person,16062,Q545176,2575209884,source for place of birth; source for place of death; source for father; source for mother; source for sibling
+2026-11-26T17:58:53Z,saebi,person,24980,Q55675464,2575209892,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:58:53Z,sbi,person,644518,Q59971364,,no change
+2026-11-26T17:58:54Z,bpn,person,14424638,Q110083123,2575209896,source for place of death
+2026-11-26T17:58:56Z,lex,person,Erna_Sack,Q72186,2575209902,other names; source for date of birth; source for date of death; source for place of death
+2026-11-26T17:58:56Z,sbl,person,8296,Q38220538,,no change
+2026-11-26T17:58:56Z,ndb,person,116630280,Q55134312,2575209905,source for date of birth; source for date of death; source for occupation; occupation
+2026-11-26T17:58:57Z,oebl,person,K/Kober_Guido_1829_1910,Q55908025,2575209908,source for place of death; occupation
+2026-11-26T17:58:58Z,wgw,person,34633,Q94040,2575209911,source for date of birth; source for place of birth; source for place of death; source for occupation
+2026-11-26T17:58:59Z,hessbio,person,16063,Q3697539,2575209916,source for place of birth; source for date of death; source for place of death; source for father; source for mother; source for sibling
+2026-11-26T17:59:00Z,saebi,person,24981,Q21339444,2575209924,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:02Z,sbi,person,644636,Q59683759,2575209934,source for date of birth; source for place of birth; source for place of death; source for occupation; sibling
+2026-11-26T17:59:02Z,bpn,person,14426225,Q123140753,2575209935,source for date of death
+2026-11-26T17:59:04Z,lex,person,Erna_Solberg,Q291644,2575209944,source for date of birth; source for place of birth
+2026-11-26T17:59:04Z,sbl,person,8297,Q6015299,,no change
+2026-11-26T17:59:04Z,ndb,person,116630647,Q1448786,2575209948,religion; occupation; source for occupation
+2026-11-26T17:59:05Z,oebl,person,K/Kober_Leo_1876_1931,Q1124820,2575209958,source for date of birth; source for place of birth; source for place of death; source for occupation
+2026-11-26T17:59:05Z,wgw,person,34634,Q111568903,,no change
+2026-11-26T17:59:06Z,hessbio,person,16064,Q1747254,2575209962,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation; religion
+2026-11-26T17:59:07Z,saebi,person,24982,Q1170070,2575209966,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:08Z,sbi,person,644756,Q12796650,2575209971,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:09Z,bpn,person,14427263,Q21555716,2575209976,place of death
+2026-11-26T17:59:10Z,lex,person,Erna_Sonne_Friis,Q62080018,2575209981,source for date of birth; source for date of death; source for place of death
+2026-11-26T17:59:22Z,sbl,person,8298,Q16650019,2575210039,source for place of death
+2026-11-26T17:59:23Z,ndb,person,116630736,Q90958,2575210046,source for date of birth; source for date of death; source for place of death; source for religion; occupation; source for occupation
+2026-11-26T17:59:24Z,oebl,person,K/Kober_Maximilian_1832_1911,Q60815847,2575210055,place of birth
+2026-11-26T17:59:25Z,wgw,person,34635,Q688565,2575210064,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T17:59:26Z,hessbio,person,16065,Q1467307,2575210071,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; religion
+2026-11-26T17:59:27Z,saebi,person,24983,Q88485978,2575210075,source for date of birth; source for place of death; source for occupation; occupation
+2026-11-26T17:59:28Z,sbi,person,644887,Q21548403,2575210082,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T17:59:29Z,bpn,person,14427436,Q19285484,2575210089,source for place of birth
+2026-11-26T17:59:29Z,lex,person,Ernest_Ansermet,Q123603,,no change
+2026-11-26T17:59:29Z,sbl,person,8299,Q6015307,,no change
+2026-11-26T17:59:30Z,ndb,person,116631074,Q70956,2575210098,source for date of birth; source for date of death; religion; occupation
+2026-11-26T17:59:31Z,oebl,person,K/Koberwein_Elisabeth_1809_1889,Q1330056,2575210108,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T17:59:32Z,wgw,person,34636,Q116037660,2575210119,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:33Z,hessbio,person,16068,Q1145260,2575210130,source for date of birth; source for date of death; source for occupation; occupation
+2026-11-26T17:59:34Z,saebi,person,24984,Q139225015,2575210137,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:35Z,sbi,person,645008,Q23011660,2575210149,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:36Z,bpn,person,14433074,Q73413997,2575210160,source for place of birth; source for place of death
+2026-11-26T17:59:37Z,lex,person,Ernest_Babelon,Q3056833,2575210169,other names; source for date of birth; source for date of death
+2026-11-26T17:59:38Z,sbl,person,8300,Q6015345,2575210178,place of death
+2026-11-26T17:59:39Z,ndb,person,116631465,Q66290,2575210187,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; occupation
+2026-11-26T17:59:40Z,oebl,person,K/Koberwein_Joseph_1774_1857,Q55844414,2575210194,source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T17:59:41Z,wgw,person,34637,Q996364,2575210208,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:42Z,hessbio,person,16069,Q94837743,2575210219,source for date of birth; source for occupation
+2026-11-26T17:59:43Z,saebi,person,24986,Q2075127,2575210226,source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:44Z,sbi,person,645171,Q59970887,2575210235,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T17:59:45Z,bpn,person,14433723,Q123140799,2575210244,place of birth; sex or gender
+2026-11-26T17:59:46Z,lex,person,Ernest_Bevin,Q332365,2575210254,source for date of birth; source for date of death
+2026-11-26T17:59:46Z,sbl,person,8302,Q16650021,,no change
+2026-11-26T17:59:47Z,ndb,person,116631503,Q110175,2575210262,source for date of birth; source for date of death; source for occupation
+2026-11-26T17:59:48Z,oebl,person,K/Koberwein_Sophie_1783_1842,Q55853745,2575210275,source for place of birth; source for place of death; source for occupation
+2026-11-26T17:59:49Z,wgw,person,34638,Q114800,2575210285,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:50Z,hessbio,person,1607,Q23063427,2575210294,source for date of birth; source for date of death; source for place of death; source for occupation; occupation; source for religion
+2026-11-26T17:59:51Z,saebi,person,24987,Q55901475,2575210302,source for date of birth; source for date of death; occupation
+2026-11-26T17:59:52Z,sbi,person,645291,Q59970725,2575210310,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T17:59:52Z,bpn,person,14433965,Q110082310,,no change
+2026-11-26T17:59:52Z,lex,person,Ernest_Bloch,Q123234,,no change
+2026-11-26T17:59:52Z,sbl,person,8303,Q6015571,,no change
+2026-11-26T17:59:53Z,ndb,person,116631945,Q104853,2575210317,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; child
+2026-11-26T17:59:54Z,oebl,person,K/Kobes_Karl_1869_1950,Q23729184,2575210324,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T17:59:55Z,wgw,person,34639,Q1731734,2575210339,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T17:59:56Z,hessbio,person,16071,Q316097,2575210348,source for date of birth; source for date of death; source for place of death; occupation; source for religion
+2026-11-26T17:59:57Z,saebi,person,24988,Q77624,2575210353,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:58Z,sbi,person,645396,Q59970440,2575210361,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T17:59:58Z,bpn,person,14434046,Q724760,,no change
+2026-11-26T17:59:59Z,lex,person,Ernest_Borgnine,Q102551,2575210373,source for date of birth; source for date of death
+2026-11-26T18:00:00Z,sbl,person,8304,Q6016992,2575210385,source for place of birth
+2026-11-26T18:00:01Z,ndb,person,116632607,Q325053,2575210395,source for date of birth; source for place of birth; source for place of death; religion; source for occupation
+2026-11-26T18:00:02Z,oebl,person,K/Kobierski_Carl_1846_1907,Q60815851,2575210400,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:00:03Z,wgw,person,34640,Q4264395,2575210405,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:00:04Z,hessbio,person,16072,Q1732188,2575210416,source for date of birth; source for date of death; source for place of death; source for occupation; religion
+2026-11-26T18:00:14Z,saebi,person,24989,Q94830623,2575210471,source for date of birth; source for place of birth; source for date of death; occupation
+2026-11-26T18:00:15Z,sbi,person,645604,Q603601,2575210476,source for date of birth; source for place of death; source for occupation
+2026-11-26T18:00:16Z,bpn,person,14440569,Q22236587,2575210482,source for place of birth; source for place of death
+2026-11-26T18:00:16Z,lex,person,Ernest_Chausson,Q312368,,no change
+2026-11-26T18:00:16Z,sbl,person,8305,Q15845362,,no change
+2026-11-26T18:00:16Z,ndb,person,116632895,Q61019183,,no change
+2026-11-26T18:00:17Z,oebl,person,K/Kobilca_Ivana_1861_1926,Q236878,2575210492,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:00:19Z,wgw,person,34641,Q78975,2575210499,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:00:19Z,hessbio,person,16074,Q1690682,2575210506,source for date of birth; source for date of death; source for place of death; source for occupation; father
+2026-11-26T18:00:20Z,saebi,person,2499,Q141691980,2575210515,occupation; source for occupation
+2026-11-26T18:00:21Z,sbi,person,645780,Q59970132,2575210523,source for date of birth
+2026-11-26T18:00:21Z,bpn,person,14440842,Q2472048,,no change
+2026-11-26T18:00:22Z,lex,person,Ernest_Fenollosa,Q933253,2575210529,other names; source for date of birth; source for date of death
+2026-11-26T18:00:23Z,sbl,person,8307,Q2469003,2575210537,source for date of birth
+2026-11-26T18:00:24Z,ndb,person,116632968,Q1462940,2575210544,occupation
+2026-11-26T18:00:25Z,oebl,person,K/Koblar_Anton_1854_1928,Q21685542,2575210551,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:00:25Z,wgw,person,34642,Q111568991,,no change
+2026-11-26T18:00:26Z,hessbio,person,16075,Q55682545,2575210558,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation; religion
+2026-11-26T18:00:27Z,saebi,person,24990,Q330025,2575210565,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:00:28Z,sbi,person,645883,Q2781986,2575210576,source for date of birth; source for place of birth; source for date of death; source for place of death; source for spouse
+2026-11-26T18:00:29Z,bpn,person,14441701,Q116854727,2575210586,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-26T18:00:30Z,lex,person,Ernest_Gellner,Q170078,2575210596,other names; source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-26T18:00:30Z,sbl,person,8308,Q6015644,,no change
+2026-11-26T18:00:31Z,ndb,person,116633670,Q85526,2575210602,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; child
+2026-11-26T18:00:32Z,oebl,person,K/Kobler_Andreas_1816_1892,Q4755493,2575210613,source for date of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:00:33Z,wgw,person,34643,Q15451127,2575210623,source for date of birth; source for place of birth; source for date of death; occupation
+2026-11-26T18:00:34Z,hessbio,person,16077,Q28828192,2575210634,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; source for father
+2026-11-26T18:00:35Z,saebi,person,24991,Q21415605,2575210642,source for date of birth; source for date of death; occupation; source for occupation
+2026-11-26T18:00:36Z,sbi,person,646050,Q59813285,2575210652,source for date of birth; source for place of birth; source for date of death; source for occupation; source for child
+2026-11-26T18:00:37Z,bpn,person,14443120,Q13573948,2575210658,source for place of birth; source for place of death
+2026-11-26T18:00:38Z,lex,person,Ernest_H._Starling,Q739275,2575210669,source for date of birth; source for date of death; source for place of birth
+2026-11-26T18:00:38Z,sbl,person,8309,Q6015629,,no change
+2026-11-26T18:00:39Z,ndb,person,116633980,Q2172642,2575210675,source for date of birth; source for date of death; religion; source for occupation
+2026-11-26T18:00:40Z,oebl,person,K/Kobler_Franz_1882_1965,Q1447841,2575210683,source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:00:41Z,wgw,person,34644,Q113142,2575210694,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:00:42Z,hessbio,person,16078,Q55677529,2575210700,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-26T18:00:43Z,saebi,person,24992,Q21103393,2575210707,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:00:44Z,sbi,person,646151,Q4523237,2575210713,source for date of birth; place of birth; source for date of death
+2026-11-26T18:00:44Z,bpn,person,14443947,Q4982133,,no change
+2026-11-26T18:00:46Z,lex,person,Ernest_Hemingway,Q23434,2575210719,source for date of birth; source for date of death
+2026-11-26T18:00:46Z,sbl,person,8310,Q16946340,,no change
+2026-11-26T18:00:46Z,ndb,person,116634170,Q67774,2575210727,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation; source for child
+2026-11-26T18:00:47Z,oebl,person,K/Kobler_Giovanni_1811_1893,Q16658008,2575210733,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:00:48Z,wgw,person,34645,Q1895975,2575210742,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:00:49Z,hessbio,person,16079,Q1696882,2575210748,source for place of birth; source for place of death; source for occupation
+2026-11-26T18:00:50Z,saebi,person,24993,Q21415740,2575210755,source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:00:51Z,sbi,person,646284,Q19923436,2575210763,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:00:52Z,bpn,person,14448813,Q135922135,2575210770,source for place of birth; source for place of death; sex or gender
+2026-11-26T18:00:53Z,lex,person,Ernest_Henry,Q119481,2575210778,source for date of death
+2026-11-26T18:00:53Z,sbl,person,8311,Q15845353,,no change
+2026-11-26T18:01:03Z,ndb,person,116634987,Q1818668,2575210864,source for occupation; occupation
+2026-11-26T18:01:04Z,oebl,person,K/Koblic_Jindrich_1876_1910,Q28071177,2575210877,source for date of birth; source for date of death; source for place of birth; source for occupation
+2026-11-26T18:01:05Z,wgw,person,34646,Q1895129,2575210890,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:01:06Z,hessbio,person,1608,Q55674644,2575210900,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:01:07Z,saebi,person,24994,Q21415957,2575210913,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:01:08Z,sbi,person,646427,Q59969933,2575210921,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:01:08Z,bpn,person,14450647,Q108862073,,no change
+2026-11-26T18:01:09Z,lex,person,Ernest_Howard_Shepard,Q382031,2575210931,source for date of birth; source for date of death; source for place of birth
+2026-11-26T18:01:09Z,sbl,person,8312,Q15845354,,no change
+2026-11-26T18:01:10Z,ndb,person,11663510X,Q87512,2575210943,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:01:11Z,oebl,person,K/Kobliska_Alois_1815_1882,Q60815854,2575210947,source for date of birth; source for date of death; source for place of birth; place of death; occupation
+2026-11-26T18:01:12Z,wgw,person,34647,Q169075,2575210954,source for date of death; source for place of death; occupation
+2026-11-26T18:01:13Z,hessbio,person,16080,Q94874043,2575210959,place of birth; place of death; source for occupation; religion
+2026-11-26T18:01:14Z,saebi,person,24995,Q139219101,2575210968,source for date of birth; place of birth; source for date of death; source for occupation
+2026-11-26T18:01:15Z,sbi,person,646549,Q11685363,2575210974,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; source for father
+2026-11-26T18:01:16Z,bpn,person,14454077,Q16859321,2575210983,source for place of birth; source for place of death
+2026-11-26T18:01:16Z,lex,person,Ernest_Jones,Q221870,,no change
+2026-11-26T18:01:16Z,sbl,person,8313,Q42303948,,no change
+2026-11-26T18:01:17Z,ndb,person,116635169,Q3787391,2575210989,source for date of birth; source for place of death; source for occupation; occupation
+2026-11-26T18:01:18Z,oebl,person,K/Koblitz-Willmburg_Johann-Ludwig_1868_1931,Q61197862,2575210992,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:01:19Z,wgw,person,34649,Q59653600,2575210995,source for date of birth; place of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:01:20Z,hessbio,person,16081,Q55855446,2575211002,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation; religion
+2026-11-26T18:01:21Z,saebi,person,24996,Q993846,2575211006,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:01:22Z,sbi,person,646705,Q9147890,2575211013,source for date of birth; source for place of birth; source for date of death; source for place of death; source for child
+2026-11-26T18:01:22Z,bpn,person,14454651,Q107683056,,no change
+2026-11-26T18:01:22Z,lex,person,Ernest_Joseph_King,Q366731,,no change
+2026-11-26T18:01:22Z,sbl,person,8314,Q139519,,no change
+2026-11-26T18:01:23Z,ndb,person,116635886,Q71501,2575211020,source for date of birth; source for date of death; source for place of death; source for occupation; occupation; source for father
+2026-11-26T18:01:24Z,oebl,person,K/Koblitz-Willmburg_Johann_1818_1908,Q55907995,2575211027,source for place of birth; source for place of death; occupation
+2026-11-26T18:01:25Z,wgw,person,34650,Q594599,2575211034,source for place of birth; source for place of death; occupation
+2026-11-26T18:01:26Z,hessbio,person,16082,Q135399605,2575211038,source for date of birth; source for place of birth; source for date of death; occupation; source for occupation; religion
+2026-11-26T18:01:27Z,saebi,person,24997,Q3724226,2575211044,source for date of birth; source for place of birth; source for date of death; source for occupation; occupation
+2026-11-26T18:01:28Z,sbi,person,646851,Q59969548,2575211050,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:01:29Z,bpn,person,14456911,Q56006766,2575211057,source for place of birth; source for place of death
+2026-11-26T18:01:30Z,lex,person,Ernest_Labrousse,Q975777,2575211068,source for date of death
+2026-11-26T18:01:31Z,sbl,person,8315,Q6015856,2575211073,source for place of birth
+2026-11-26T18:01:32Z,ndb,person,116635983,Q1350654,2575211078,source for date of birth; source for date of death; religion; source for occupation
+2026-11-26T18:01:33Z,oebl,person,K/Kobylicza_Lucian_1803_1851,Q2090263,2575211080,occupation; source for occupation
+2026-11-26T18:01:34Z,wgw,person,34651,Q4499880,2575211085,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:01:35Z,hessbio,person,16083,Q1170380,2575211088,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:01:36Z,saebi,person,24998,Q21415835,2575211099,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:01:37Z,sbi,person,647001,Q12798033,2575211106,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:01:38Z,bpn,person,14461279,Q2635527,2575211111,place of death
+2026-11-26T18:01:39Z,lex,person,Ernest_Lavisse,Q981891,2575211117,source for date of birth; source for date of death
+2026-11-26T18:01:40Z,sbl,person,8316,Q6015847,2575211124,source for place of death
+2026-11-26T18:01:41Z,ndb,person,116636130,Q895467,2575211127,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation
+2026-11-26T18:01:42Z,oebl,person,K/Kobyljanska_Olga_1863_1942,Q267137,2575211134,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:01:43Z,wgw,person,34652,Q95005329,2575211137,source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:01:44Z,hessbio,person,16084,Q55956969,2575211145,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; religion
+2026-11-26T18:01:45Z,saebi,person,24999,Q55912442,2575211151,source for date of birth; source for place of birth; source for date of death; occupation; source for occupation
+2026-11-26T18:01:56Z,sbi,person,647287,Q59969315,2575211241,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:01:57Z,bpn,person,14461652,Q2205741,2575211251,source for place of birth; source for place of death
+2026-11-26T18:01:57Z,lex,person,Ernest_Lawson,Q1185478,,no change
+2026-11-26T18:01:58Z,sbl,person,8318,Q6015904,2575211263,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-26T18:01:59Z,ndb,person,116636157,Q99580,2575211278,source for date of birth; source for date of death; source for occupation; occupation; source for child
+2026-11-26T18:02:00Z,oebl,person,K/Kobyljanskyj_Anton_1837_1910,Q12110865,2575211290,source for occupation
+2026-11-26T18:02:01Z,wgw,person,34653,Q109833656,2575211301,place of birth; place of death; source for occupation
+2026-11-26T18:02:02Z,hessbio,person,16085,Q135409415,2575211315,place of birth; occupation; religion; source for father
+2026-11-26T18:02:03Z,saebi,person,25,Q102103,2575211324,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:02:04Z,sbi,person,647402,Q59961335,2575211339,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:02:05Z,bpn,person,14469860,Q6148481,2575211350,source for place of birth; source for place of death
+2026-11-26T18:02:06Z,lex,person,Ernest_Mancoba,Q3057074,2575211362,other names; source for date of birth; source for place of death
+2026-11-26T18:02:06Z,sbl,person,8319,Q6015926,,no change
+2026-11-26T18:02:07Z,ndb,person,116636335,Q65822,2575211376,religion; source for occupation; occupation
+2026-11-26T18:02:08Z,oebl,person,K/Koca_Djuro_1853_1924,Q60815862,2575211385,source for date of birth; place of birth; place of death; source for occupation
+2026-11-26T18:02:09Z,wgw,person,34655,Q85636,2575211400,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:02:10Z,hessbio,person,16086,Q2734938,2575211408,source for date of death; source for place of death; source for occupation
+2026-11-26T18:02:11Z,saebi,person,250,Q111377,2575211420,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:02:12Z,sbi,person,647522,Q12792929,2575211430,source for date of birth; place of birth; source for date of death; place of death
+2026-11-26T18:02:13Z,bpn,person,14470385,Q4304002,2575211442,source for place of birth; source for place of death
+2026-11-26T18:02:13Z,lex,person,Ernest_Mandel,Q165121,,no change
+2026-11-26T18:02:13Z,sbl,person,8321,Q3886418,,no change
+2026-11-26T18:02:14Z,ndb,person,116636726,Q98880,2575211449,source for date of birth; source for date of death; source for place of death; religion
+2026-11-26T18:02:15Z,oebl,person,K/Kocbek_Fran_1863_1930,Q12789001,2575211453,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:02:16Z,wgw,person,34656,Q59653603,2575211460,source for date of birth; place of birth; source for date of death; place of death; source for occupation; occupation
+2026-11-26T18:02:17Z,hessbio,person,16087,Q1578602,2575211465,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation; source for religion
+2026-11-26T18:02:18Z,saebi,person,2500,Q440427,2575211475,source for date of death; source for place of death; source for occupation
+2026-11-26T18:02:19Z,sbi,person,647648,Q12796649,2575211483,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:02:20Z,bpn,person,14472497,Q27660555,2575211493,place of birth; place of death
+2026-11-26T18:02:21Z,lex,person,Ernest_Meissonier,Q354786,2575211501,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-26T18:02:22Z,sbl,person,8322,Q6015981,2575211509,source for place of birth
+2026-11-26T18:02:23Z,ndb,person,116637005,Q874978,2575211518,source for place of birth; religion; occupation; source for father; source for child
+2026-11-26T18:02:24Z,oebl,person,K/Kocevar_Ferdo_1833_1878,Q12788832,2575211527,source for date of death; source for place of birth; source for occupation
+2026-11-26T18:02:25Z,wgw,person,34657,Q15819523,2575211533,source for date of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:02:26Z,hessbio,person,16089,Q55896153,2575211539,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-26T18:02:27Z,saebi,person,25000,Q55850566,2575211545,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-26T18:02:27Z,sbi,person,647750,Q12804307,,no change
+2026-11-26T18:02:28Z,bpn,person,14480075,Q110941981,2575211555,place of birth; place of death
+2026-11-26T18:02:29Z,lex,person,Ernest_Nagel,Q553870,2575211571,source for date of death
+2026-11-26T18:02:29Z,sbl,person,8323,Q38420390,,no change
+2026-11-26T18:02:30Z,ndb,person,11663720X,Q1613294,2575211577,source for date of birth; source for date of death; source for occupation; sibling; source for child; child
+2026-11-26T18:02:31Z,oebl,person,K/Kocevar_Stefan_1808_1883,Q16737359,2575211592,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:02:32Z,wgw,person,34658,Q59653709,2575211603,source for date of birth; source for date of death; place of death; source for occupation
+2026-11-26T18:02:33Z,hessbio,person,16091,Q72060271,2575211609,source for date of birth; source for place of birth; source for date of death; source for occupation; occupation
+2026-11-26T18:02:34Z,saebi,person,25001,Q139204230,2575211618,occupation
+2026-11-26T18:02:35Z,sbi,person,647936,Q59961248,2575211626,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:02:36Z,bpn,person,14481083,Q123140741,2575211630,source for date of birth
+2026-11-26T18:02:37Z,lex,person,Ernest_Orlando_Lawrence,Q169577,2575211634,source for date of birth; source for date of death
+2026-11-26T18:02:37Z,sbl,person,8325,Q4970156,,no change
+2026-11-26T18:02:38Z,ndb,person,116637277,Q1599283,2575211640,occupation; source for occupation
+2026-11-26T18:03:33Z,oebl,person,K/Koch-Langentreu_Adolf_1829_1920,Q55907234,2575212038,place of birth; place of death; occupation
+2026-11-26T18:03:34Z,wgw,person,34659,Q90456,2575212053,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:03:35Z,hessbio,person,16092,Q1621681,2575212063,source for date of birth; source for date of death; place of death; occupation; source for occupation
+2026-11-26T18:03:36Z,saebi,person,25002,Q1610573,2575212069,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:03:37Z,sbi,person,648064,Q18529828,2575212076,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-26T18:03:38Z,bpn,person,14481257,Q130319153,2575212084,source for date of birth; source for date of death; source for place of death; sex or gender
+2026-11-26T18:03:40Z,lex,person,Ernest_Renan,Q157155,2575212092,other names; source for date of birth; source for date of death; source for place of death
+2026-11-26T18:03:40Z,sbl,person,8326,Q19976856,,no change
+2026-11-26T18:03:40Z,ndb,person,11663765X,Q55134314,2575212098,source for date of birth; source for date of death; religion; source for occupation
+2026-11-26T18:03:42Z,oebl,person,K/Koch-Langentreu_Fr-Caecilia_1866_1941,Q61197864,2575212109,source for date of birth; source for date of death; source for place of birth; source for occupation
+2026-11-26T18:03:43Z,wgw,person,34660,Q78646,2575212115,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:03:43Z,hessbio,person,16095,Q16318658,2575212121,source for place of birth; source for date of death; source for occupation
+2026-11-26T18:03:44Z,saebi,person,25003,Q139169891,2575212130,place of birth; place of death; occupation
+2026-11-26T18:03:45Z,sbi,person,648279,Q12787824,2575212137,source for date of birth; source for place of birth; source for date of death; source for occupation
+2026-11-26T18:03:46Z,bpn,person,14481542,Q2200235,2575212144,source for place of birth
+2026-11-26T18:03:48Z,lex,person,Ernest_Rutherford,Q9123,2575212152,source for date of birth; source for date of death; source for place of death
+2026-11-26T18:03:48Z,sbl,person,8327,Q42305422,,no change
+2026-11-26T18:03:49Z,ndb,person,11663801X,Q1695974,2575212155,occupation
+2026-11-26T18:03:49Z,oebl,person,K/Koch-Langentreu_Josef_1833_1905,Q55679333,2575212164,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:03:51Z,wgw,person,34661,Q563899,2575212167,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:03:51Z,hessbio,person,16096,Q760946,2575212173,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; religion
+2026-11-26T18:03:53Z,saebi,person,25004,Q21415777,2575212177,place of birth; source for place of death; source for occupation; occupation
+2026-11-26T18:03:53Z,sbi,person,648452,Q59961129,2575212184,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:03:55Z,bpn,person,14483410,Q2309375,2575212195,source for place of birth
+2026-11-26T18:03:56Z,lex,person,Ernest_Solvay,Q311665,2575212202,source for date of birth; source for date of death
+2026-11-26T18:03:56Z,sbl,person,8328,Q42539044,,no change
+2026-11-26T18:03:56Z,ndb,person,116638028,Q111301,2575212209,source for occupation
+2026-11-26T18:03:58Z,oebl,person,K/Koch-Sternfeld_Josef-Judas-Thadd-Ernest_1778_1866,Q1706939,2575212216,source for date of birth; source for place of birth; source for place of death; source for occupation; occupation
+2026-11-26T18:03:59Z,wgw,person,34662,Q59653606,2575212223,source for date of birth; place of birth; source for date of death; occupation; source for occupation
+2026-11-26T18:04:00Z,hessbio,person,16097,Q1162958,2575212236,source for place of birth; source for date of death; source for occupation; religion; child
+2026-11-26T18:04:00Z,saebi,person,25005,Q21415797,2575212241,source for date of birth; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:04:01Z,sbi,person,648605,Q59960938,2575212246,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:04:02Z,bpn,person,14487882,Q114244191,2575212256,source for place of birth
+2026-11-26T18:04:04Z,lex,person,Ernest_Thomas_Sinton_Walton,Q183631,2575212267,source for date of birth; source for date of death
+2026-11-26T18:17:32Z,sbl,person,8329,Q6016141,2575214405,source for place of birth
+2026-11-26T18:17:33Z,ndb,person,11663832X,Q73511,2575214414,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:17:34Z,oebl,person,K/Koch-Thanheimb_Josef_1812_1891,Q55907872,2575214424,place of birth; place of death; source for occupation
+2026-11-26T18:17:36Z,wgw,person,34663,Q11685276,2575214433,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:17:36Z,hessbio,person,16098,Q94768395,2575214437,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; religion; source for spouse
+2026-11-26T18:17:37Z,saebi,person,25006,Q94943844,2575214446,source for date of birth; source for date of death; place of death; source for occupation
+2026-11-26T18:17:38Z,sbi,person,648704,Q21548370,2575214449,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:17:39Z,bpn,person,14488767,Q18564763,2575214455,source for place of birth; source for place of death
+2026-11-26T18:17:41Z,lex,person,Ernest_Thompson_Seton,Q505017,2575214463,source for date of birth; source for date of death
+2026-11-26T18:17:41Z,sbl,person,8330,Q6016170,,no change
+2026-11-26T18:17:41Z,ndb,person,116638443,Q1463958,2575214474,source for date of birth; source for date of death; source for place of death; religion
+2026-11-26T18:17:42Z,oebl,person,K/Koch_Alois_1846_1917,Q98845350,2575214480,source for place of birth; source for occupation
+2026-11-26T18:17:43Z,wgw,person,34664,Q1597255,2575214486,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:17:44Z,hessbio,person,16099,Q67214644,2575214493,source for place of birth; source for date of death; source for place of death; source for occupation; religion; source for child
+2026-11-26T18:17:45Z,saebi,person,25007,Q15446680,2575214503,source for date of birth; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:17:46Z,sbi,person,648822,Q59960809,2575214509,source for date of birth; source for place of birth
+2026-11-26T18:17:57Z,bpn,person,14489829,Q18511671,2575214558,source for date of death; source for place of birth; source for place of death
+2026-11-26T18:17:57Z,lex,person,Ernest_Watson_Burgess,Q990849,,no change
+2026-11-26T18:17:57Z,sbl,person,8331,Q4547462,,no change
+2026-11-26T18:17:58Z,ndb,person,116638508,Q21544660,2575214569,religion; occupation
+2026-11-26T18:17:59Z,oebl,person,K/Koch_Antal_1843_1927,Q1114511,2575214575,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:17:59Z,wgw,person,34665,Q59653607,2575214581,source for date of birth; place of birth; source for date of death; source for occupation
+2026-11-26T18:18:01Z,hessbio,person,1610,Q55681356,2575214583,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:18:01Z,saebi,person,25008,Q21416157,2575214590,source for date of birth; source for place of birth; source for date of death; place of death; source for occupation
+2026-11-26T18:18:03Z,sbi,person,648945,Q59960627,2575214593,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:18:04Z,bpn,person,14491307,Q1909114,2575214599,source for place of birth; source for place of death
+2026-11-26T18:18:05Z,lex,person,Ernest_William_Brown,Q465729,2575214607,source for date of birth; source for date of death
+2026-11-26T18:18:06Z,sbl,person,8332,Q1380734,2575214614,source for place of birth
+2026-11-26T18:18:06Z,ndb,person,116639253,Q110196,,no change
+2026-11-26T18:18:06Z,oebl,person,K/Koch_Augustin_1754_1831,Q55907288,2575214618,source for date of birth; source for date of death; source for place of death
+2026-11-26T18:18:08Z,wgw,person,34666,Q875747,2575214624,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:18:09Z,hessbio,person,16100,Q64589850,2575214632,source for place of birth; place of death; occupation
+2026-11-26T18:18:10Z,saebi,person,25009,Q21415647,2575214640,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:18:10Z,sbi,person,649079,Q59960394,2575214645,source for date of birth; source for date of death; source for place of death
+2026-11-26T18:18:11Z,bpn,person,14492899,Q2390335,2575214653,date of baptism; date of death (more precise); place of death
+2026-11-26T18:18:13Z,lex,person,Ernest_von_Koerber,Q72242,2575214658,source for date of birth; source for date of death; source for place of death
+2026-11-26T18:18:14Z,sbl,person,8333,Q6016229,2575214664,source for place of birth
+2026-11-26T18:18:15Z,ndb,person,116639296,Q18223770,2575214666,source for date of birth; source for date of death; religion; source for occupation
+2026-11-26T18:18:16Z,oebl,person,K/Koch_Carl-Matthias_1807_1876,Q1732314,2575214670,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:18:16Z,wgw,person,34667,Q59653432,2575214678,source for date of birth; place of birth; source for date of death; place of death; source for occupation
+2026-11-26T18:18:18Z,hessbio,person,16101,Q1819327,2575214682,source for date of birth; source for date of death; source for place of death; source for occupation; religion
+2026-11-26T18:18:18Z,saebi,person,2501,Q929270,2575214686,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:18:20Z,sbi,person,649182,Q18808896,2575214694,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:18:20Z,bpn,person,14495470,Q1694746,,no change
+2026-11-26T18:18:21Z,lex,person,Ernesto_Cardenal,Q276510,2575214701,source for date of birth; source for date of death
+2026-11-26T18:18:21Z,sbl,person,8334,Q4989373,,no change
+2026-11-26T18:18:22Z,ndb,person,116639342,Q1732740,2575214709,source for occupation
+2026-11-26T18:18:23Z,oebl,person,K/Koch_Ciril-Metod_1867_1925,Q5121903,2575214719,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:18:24Z,wgw,person,34668,Q55674613,2575214728,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:18:24Z,hessbio,person,16102,Q131768197,2575214734,source for date of birth; source for occupation; occupation; religion
+2026-11-26T18:18:26Z,saebi,person,25010,Q1047818,2575214741,source for place of birth; source for place of death; source for occupation
+2026-11-26T18:18:27Z,sbi,person,649372,Q59960208,2575214750,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:18:27Z,bpn,person,14498161,Q1081679,2575214760,source for place of birth
+2026-11-26T18:18:28Z,lex,person,Ernesto_Dalgas,Q12279947,2575214770,source for date of birth; source for date of death
+2026-11-26T18:18:30Z,sbl,person,8335,Q2401130,2575214784,source for date of death; source for place of birth; source for place of death
+2026-11-26T18:18:31Z,ndb,person,116639598,Q1449854,2575214794,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation; source for father
+2026-11-26T18:18:32Z,oebl,person,K/Koch_Ernest_1755_1825,Q16739476,2575214806,source for date of death; source for place of birth; source for place of death; source for occupation
+2026-11-26T18:18:33Z,wgw,person,34669,Q1720567,2575214816,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:18:34Z,hessbio,person,16107,Q55842622,2575214827,source for place of birth; source for place of death; source for occupation; religion; source for sibling; source for child
+2026-11-26T18:18:35Z,saebi,person,25011,Q1037482,2575214835,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:18:36Z,sbi,person,649486,Q59960045,2575214846,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:18:37Z,bpn,person,14502079,Q48772012,2575214853,source for place of death
+2026-11-26T18:18:38Z,lex,person,Ernesto_Geisel,Q294241,2575214868,source for date of birth; source for date of death
+2026-11-26T18:18:38Z,sbl,person,8336,Q6016298,,no change
+2026-11-26T18:18:39Z,ndb,person,116639679,Q534817,2575214876,source for place of birth; source for place of death; religion; occupation
+2026-11-26T18:18:40Z,oebl,person,K/Koch_Felix_1829_1889,Q98845351,2575214884,source for date of birth; source for date of death; source for place of death; occupation; source for occupation
+2026-11-26T18:19:34Z,wgw,person,34670,Q65698,2575215248,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:19:35Z,hessbio,person,16108,Q111797,2575215254,source for date of birth; source for place of birth; source for date of death; source for place of death; religion
+2026-11-26T18:19:36Z,saebi,person,25012,Q2038906,2575215264,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:19:37Z,sbi,person,649640,Q59959874,2575215270,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:19:38Z,bpn,person,14503265,Q122936275,2575215278,source for date of birth; source for date of death; source for place of birth
+2026-11-26T18:19:38Z,lex,person,Ernesto_Grassi,Q319832,,no change
+2026-11-26T18:19:38Z,sbl,person,8337,Q16650026,,no change
+2026-11-26T18:19:39Z,ndb,person,116639725,Q1405953,2575215289,source for date of birth; source for date of death; source for place of birth; religion; occupation; source for father
+2026-11-26T18:19:39Z,oebl,person,K/Koch_Ferdo_1874_1935,Q60815866,,no change
+2026-11-26T18:19:40Z,wgw,person,34671,Q1705460,2575215300,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:19:41Z,hessbio,person,16109,Q15436277,2575215311,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:19:42Z,saebi,person,25013,Q136637331,2575215319,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:19:43Z,sbi,person,649759,Q59959728,2575215327,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:19:44Z,bpn,person,14505963,Q18716288,2575215337,place of burial
+2026-11-26T18:19:45Z,lex,person,Ernesto_Sábato,Q186630,2575215348,source for date of birth; source for date of death
+2026-11-26T18:19:45Z,sbl,person,8339,Q15845306,,no change
+2026-11-26T18:19:46Z,ndb,person,116640243,Q113063,2575215362,source for date of birth; source for date of death; source for place of birth; source for place of death; source for occupation; occupation
+2026-11-26T18:19:47Z,oebl,person,K/Koch_Franz_1832_1922,Q60497073,2575215368,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:19:48Z,wgw,person,34672,Q59653767,2575215376,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:19:49Z,hessbio,person,16110,Q94762237,2575215384,source for date of birth; source for date of death; place of death; source for occupation
+2026-11-26T18:19:50Z,saebi,person,25014,Q94887865,2575215391,source for date of birth; source for place of birth; source for occupation; occupation
+2026-11-26T18:19:51Z,sbi,person,649896,Q59959546,2575215398,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:19:52Z,bpn,person,14509225,Q2201389,2575215409,source for place of birth; source for place of death
+2026-11-26T18:19:53Z,lex,person,Ernesto_Teodoro_Moneta,Q12086,2575215416,source for date of birth; source for date of death; source for place of birth; source for place of death
+2026-11-26T18:19:53Z,sbl,person,8342,Q2653181,,no change
+2026-11-26T18:19:54Z,ndb,person,116640510,Q24067400,2575215422,source for date of birth; religion; source for occupation
+2026-11-26T18:19:55Z,oebl,person,K/Koch_Franz_1839_1907,Q98907858,2575215427,place of birth; place of death; source for occupation
+2026-11-26T18:19:56Z,wgw,person,34673,Q1468576,2575215429,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:19:57Z,hessbio,person,16111,Q60841378,2575215434,occupation
+2026-11-26T18:19:58Z,saebi,person,25015,Q21415813,2575215437,source for place of birth; source for place of death; source for occupation; occupation
+2026-11-26T18:19:59Z,sbi,person,649996,Q59959368,2575215442,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:19:59Z,bpn,person,14509645,Q29995416,,no change
+2026-11-26T18:20:00Z,lex,person,Ernie_Wilkins,Q326634,2575215444,other names; source for place of death
+2026-11-26T18:20:00Z,sbl,person,8343,Q6016392,,no change
+2026-11-26T18:20:01Z,ndb,person,116640545,Q2076546,2575215447,occupation
+2026-11-26T18:20:02Z,oebl,person,K/Koch_Gaudentius_1867_1944,Q61197865,2575215452,source for date of death; source for place of birth; source for place of death; occupation
+2026-11-26T18:20:03Z,wgw,person,34674,Q1277358,2575215457,source for date of birth; source for place of death; source for occupation
+2026-11-26T18:20:04Z,hessbio,person,16112,Q57697541,2575215464,source for date of birth; source for occupation; occupation; religion
+2026-11-26T18:20:05Z,saebi,person,25016,Q94870363,2575215468,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:20:06Z,sbi,person,650117,Q59959276,2575215472,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:20:07Z,bpn,person,14520193,Q57151440,2575215475,source for date of birth; source for date of death; place of birth; place of death
+2026-11-26T18:20:07Z,lex,person,Erno_Müller,Q12310487,,no change
+2026-11-26T18:20:07Z,sbl,person,8346,Q6016417,,no change
+2026-11-26T18:20:08Z,ndb,person,116640790,Q53799744,2575215481,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation; father; child
+2026-11-26T18:20:09Z,oebl,person,K/Koch_Gustav-Adolf_1846_1921,Q22920761,2575215484,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:20:10Z,wgw,person,34677,Q3148187,2575215491,source for place of birth; source for place of death; occupation
+2026-11-26T18:20:11Z,hessbio,person,16113,Q828131,2575215495,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation; religion
+2026-11-26T18:20:12Z,saebi,person,25017,Q21415637,2575215504,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation; occupation
+2026-11-26T18:20:13Z,sbi,person,650254,Q12785297,2575215508,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:20:14Z,bpn,person,14523821,Q2663107,2575215511,source for place of death
+2026-11-26T18:21:08Z,lex,person,Ernst-Hugo_Järegård,Q942438,2575215781,source for date of birth; source for date of death; source for place of birth
+2026-11-26T18:21:08Z,sbl,person,8350,Q38397006,,no change
+2026-11-26T18:21:09Z,ndb,person,116640839,Q2417826,2575215786,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation
+2026-11-26T18:21:10Z,oebl,person,K/Koch_Heinrich_1781_1861,Q19832475,2575215795,source for date of birth; source for date of death; source for occupation
+2026-11-26T18:21:11Z,wgw,person,34678,Q19937160,2575215799,source for date of birth; source for place of birth; source for date of death
+2026-11-26T18:21:12Z,hessbio,person,16114,Q62217,2575215805,source for place of birth; source for date of death; source for place of death; source for father; source for sibling
+2026-11-26T18:21:13Z,saebi,person,25018,Q1695760,2575215809,source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:21:14Z,sbi,person,650359,Q59959107,2575215812,source for date of birth; source for place of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:21:14Z,bpn,person,14524448,Q110083012,,no change
+2026-11-26T18:21:15Z,lex,person,Ernst-Wilhelm_Händler,Q1357234,2575215816,source for date of birth
+2026-11-26T18:21:15Z,sbl,person,8351,Q40072265,,no change
+2026-11-26T18:21:16Z,ndb,person,11664091X,Q52175339,2575215821,source for religion; occupation
+2026-11-26T18:21:17Z,oebl,person,K/Koch_Heinrich_1840_1889,Q98924051,2575215823,source for occupation
+2026-11-26T18:21:18Z,wgw,person,34679,Q28055125,2575215828,source for date of birth; source for place of death; source for occupation
+2026-11-26T18:21:19Z,hessbio,person,16115,Q278001,2575215831,source for place of birth; source for date of death; source for place of death; source for father; source for sibling; sibling
+2026-11-26T18:21:20Z,saebi,person,25019,Q21415910,2575215834,date of birth (more precise); source for place of birth; occupation; source for occupation
+2026-11-26T18:21:21Z,sbi,person,650524,Q59958311,2575215838,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:21:22Z,bpn,person,14529754,Q2378573,2575215842,source for place of birth; source for place of death
+2026-11-26T18:21:23Z,lex,person,Ernst_Abbe,Q76359,2575215844,source for date of birth; source for date of death
+2026-11-26T18:21:23Z,sbl,person,8357,Q6013698,,no change
+2026-11-26T18:21:24Z,ndb,person,116641479,Q111963,2575215851,source for occupation
+2026-11-26T18:21:25Z,oebl,person,K/Koch_Jakob-Ernst-I_1797_1856,Q55907299,2575215855,source for occupation
+2026-11-26T18:21:26Z,wgw,person,3468,Q86708,2575215858,source for date of death; source for place of death; source for occupation
+2026-11-26T18:21:27Z,hessbio,person,16116,Q267384,2575215863,source for place of birth; source for place of death; source for father; source for sibling
+2026-11-26T18:21:28Z,saebi,person,2502,Q994021,2575215871,source for date of birth; source for place of birth; source for date of death; source for place of death; occupation
+2026-11-26T18:21:29Z,sbi,person,650643,Q59958203,2575215877,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:21:30Z,bpn,person,14531137,Q123140765,2575215881,place of death
+2026-11-26T18:21:30Z,lex,person,Ernst_Albrecht_von_Eberstein,Q78277,,no change
+2026-11-26T18:21:31Z,sbl,person,8358,Q6016795,2575215886,source for place of birth; place of death
+2026-11-26T18:21:32Z,ndb,person,116641509,Q18916658,2575215893,source for occupation
+2026-11-26T18:21:33Z,oebl,person,K/Koch_Jakob-Ernst-Ii_1836_1907,Q60815870,2575215896,source for date of death; source for occupation
+2026-11-26T18:21:34Z,wgw,person,34680,Q55681822,2575215902,source for date of birth; source for date of death; source for place of death; source for occupation
+2026-11-26T18:21:35Z,hessbio,person,16117,Q455819,2575215906,source for place of birth; source for date of death; source for place of death; source for father; source for sibling; sibling
+2026-11-26T18:21:36Z,saebi,person,25020,Q99451,2575215912,source for place of death; source for occupation
+2026-11-26T18:21:36Z,sbi,person,650735,Q2154877,,no change
+2026-11-26T18:21:37Z,bpn,person,14534245,Q19756247,2575215918,source for place of birth; source for place of death
+2026-11-26T18:21:37Z,lex,person,Ernst_August_-_konge_af_Hannover,Q162302,,no change
+2026-11-26T18:21:37Z,sbl,person,8362,Q6016831,,no change
+2026-11-26T18:21:38Z,ndb,person,116641584,Q63990,2575215923,source for date of birth; source for date of death; source for place of birth; religion; source for occupation; source for father; source for sibling
+2026-11-26T18:21:39Z,oebl,person,K/Koch_Jakob-Ernst-Iii_1865_1947,Q60815873,2575215925,source for place of death; source for occupation
+2026-11-26T18:21:40Z,wgw,person,34681,Q6372370,2575215930,source for date of birth; source for date of death; source for place of death
+2026-11-26T18:21:41Z,hessbio,person,16118,Q9391762,2575215934,source for place of birth; source for date of death; source for place of death; source for father; source for mother; source for sibling
+2026-11-26T18:21:42Z,saebi,person,25021,Q21415644,2575215941,source for place of birth; source for place of death; source for occupation
+2026-11-26T18:21:43Z,sbi,person,650956,Q59958017,2575215947,source for date of birth; source for place of birth; source for date of death; source for place of death
+2026-11-26T18:21:44Z,bpn,person,14535000,Q27651435,2575215957,place of birth
+2026-11-26T18:21:45Z,lex,person,Ernst_August_-_kurfyrste_af_Hannover,Q372190,2575215963,source for date of birth; source for date of death
+2026-11-26T18:21:46Z,sbl,person,8372,Q15918071,2575215971,source for place of birth
+2026-11-26T18:21:47Z,ndb,person,116641762,Q922667,2575215977,source for date of birth; source for date of death; source for place of birth; source for place of death; religion; source for occupation; source for father; source for sibling; source for child
+2026-11-26T18:21:48Z,oebl,person,K/Koch_Jakob_1744_1822,Q61914244,2575215982,source for place of birth; source for occupation
+2026-11-26T18:21:49Z,wgw,person,34682,Q98834814,2575215986,source for date of birth; source for place of birth; date of death (more precise); source for place of death
