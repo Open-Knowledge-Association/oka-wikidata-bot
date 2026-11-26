@@ -64408,3 +64408,456 @@ saebi,24499,Q139218615,"Dannhorn, Hans",occupation 'Buchgestalter' not mapped
 saebi,24499,Q139218615,"Dannhorn, Hans",occupation 'Fachautor' not mapped
 sbi,581262,Q12799837,Rajko Slapernik,occupation 'restavrator' not mapped
 lex,Emilio_Salgari,Q309786,Emilio Salgari,"date of death: item has a different value, left alone"
+oebl,K/Kirsch_Arnold_1868_1930,Q89060,"Kirsch, Arnold",date of death 'um 1930' not used: not a plain date
+oebl,K/Kirsch_Arnold_1868_1930,Q89060,"Kirsch, Arnold","place of birth 'St. Louis (?, USA)um' not matched to one place item"
+oebl,K/Kirsch_Arnold_1868_1930,Q89060,"Kirsch, Arnold",place of death '? (USA)' not matched to one place item
+oebl,K/Kirsch_Arnold_1868_1930,Q89060,"Kirsch, Arnold","GND ID 101334071X is of someone born 1870, not 1868; not copied"
+oebl,K/Kirsch_Arnold_1868_1930,Q89060,"Kirsch, Arnold","the entry's life years do not fit the item's (birth 1868 in the entry, 1870 on the item): the identifier is probably on another person's item; nothing added"
+hessbio,15623,Q135710215,"Rudolph, Johann Conrad",occupation 'Gewerbeschullehrer' not mapped
+hessbio,15623,Q135710215,"Rudolph, Johann Conrad","father 'Rudolph, Johann Georg': entry 15622 is on no single item; not used"
+saebi,245,Q96269795,Arnold,place of birth 'k.A' not matched to one place item
+sbi,581409,Q18608633,Julij Slapšak,occupation 'mladinski-pisatelj' not mapped
+bpn,13418873,Q110136714,Macarius Lancelottus Havermans,date of birth 1644-09-30 not used: calendar unclear before 1701 there
+bpn,13418873,Q110136714,Macarius Lancelottus Havermans,date of death 1680-04-26 not used: calendar unclear before 1701 there
+sbl,7445,Q3740174,Conrad Quensel,"place of birth: item has a different value, left alone"
+oebl,K/Kirsch_August_1862_1931,Q27000678,"Kirsch, August",date of death 'Wien 17. 2. 1931' not used: not a plain date
+oebl,K/Kirsch_August_1862_1931,Q27000678,"Kirsch, August",occupation 'Zeitungsherausgeber' not mapped
+wgw,34148,Q55676841,"Laszky, Béla",place of birth 'Neutra' not matched to one place item
+saebi,2450,Q1692942,"Klengel, Johann Christian",place of birth 'Kesselsdorf bei Dresden' not matched to one place item
+sbi,581580,Q322661,Jurij Slatkonja,occupation 'glasbenik' not mapped
+sbi,581580,Q322661,Jurij Slatkonja,occupation 'duhovnik' not mapped
+sbi,581580,Q322661,Jurij Slatkonja,occupation 'skof' not mapped
+ndb,116543663,Q103852,August Ritter von Clemm,place of death 'Schloß Haardt bei Neustadt/Weinstraße' not matched to one place item
+ndb,116543663,Q103852,August Ritter von Clemm,religion 'evangelisch?' not used: uncertain
+ndb,116543663,Q103852,August Ritter von Clemm,"date of death: item has a different value, left alone"
+wgw,34149,Q110071052,"Fuchs, Heinrich",place of birth 'Allersdorf' not matched to one place item
+hessbio,15625,Q1342979,"Castritius, Helmut",place of death 'Darmstadt (Arheilgen)' not matched to one place item
+lex,Emily_Brontë,Q80137,Emily Brontë,"place of birth 'Thornton, Yorkshire, Storbritannien' not matched to one place item"
+lex,Emily_Brontë,Q80137,Emily Brontë,"place of death 'Haworth, Yorkshire, Storbritannien' not matched to one place item"
+ndb,116543671,Q85393,Friedrich Wilhelm Riemer,date of death '(Unfall) 19.12.1845 Weimar. (evangelisch)' not used: not an exact date
+ndb,116543671,Q85393,Friedrich Wilhelm Riemer,place of birth 'Festung Glatz (Schlesien)' not matched to one place item
+hessbio,15627,Q125370686,"Anthes, Walther* Heinrich Hermann Albert Eduard",place of death 'Echzell (Wetterau)' not matched to one place item
+hessbio,15627,Q125370686,"Anthes, Walther* Heinrich Hermann Albert Eduard","father 'Anthes, Ferdinand* Karl Theodor Richard Friedrich Hugo': entry 15630 is on no single item; not used"
+saebi,24502,Q55843694,"Dreßler, Bruno",place of birth 'Ebersbach' not matched to one place item
+sbi,581885,Q60181474,Ivan Slavec,occupation 'duhovnik' not mapped
+sbi,581885,Q60181474,Ivan Slavec,occupation 'pridigar' not mapped
+sbi,581885,Q60181474,Ivan Slavec,occupation 'kanonik' not mapped
+sbi,581885,Q60181474,Ivan Slavec,occupation 'kulturni-delavec' not mapped
+ndb,11654385X,Q55684646,Carl Clemm-Lennig,place of birth 'Lich bei Gießen' not matched to one place item
+ndb,11654385X,Q55684646,Carl Clemm-Lennig,religion 'evangelisch?' not used: uncertain
+oebl,K/Kirschner_Aloisia_1854_1934,Q446713,"Kirschner, Aloisia (Lola)","place of death: item has a different value, left alone"
+wgw,34151,Q29959040,"Reyl-Hanisch von Greifenthal, Herbert","date of birth: item has a different value, left alone"
+hessbio,1563,Q131769900,"Lehr, Heinrich",occupation 'Oberbrandmeister' not mapped
+sbi,582017,Q60181445,Maríca Slavec,occupation 'gledaliski-igralec' not mapped
+bpn,13424446,Q2353470,Hans Werveke,place of death 'Sint-Denijs-Westrem' not matched to one place item
+lex,Emily_Greene_Balch,Q215139,Emily Greene Balch,"place of birth 'Boston, Massachusetts, USA' not matched to one place item"
+lex,Emily_Greene_Balch,Q215139,Emily Greene Balch,"place of death 'Cambridge, Massachusetts, USA' not matched to one place item"
+ndb,116544147,Q1692433,Arnold von Clermont,place of death 'Vaalsbroich' not matched to one place item
+ndb,116544147,Q1692433,Arnold von Clermont,occupation 'Tuchhändler' not mapped
+wgw,34152,Q1696360,"Peithner von Lichtenfels, Johann Taddäus Anton",place of birth 'Gottesgab' not matched to one place item
+hessbio,15631,Q2038114,"Anthes, Otto* Wilhelm Johannes Eugen",place of birth 'Michelbach an der Ahr' not matched to one place item
+sbi,582158,Q28925674,Maša Slavec,occupation 'gledaliski-igralec' not mapped
+sbi,582158,Q28925674,Maša Slavec,occupation 'gledaliski-reziser' not mapped
+bpn,13427666,Q108823387,Johan Feitama,"place of burial: item has a different value, left alone"
+saebi,2451,Q100566,"Klengel, Wolf Caspar von",occupation 'Festungskommandant' not mapped
+saebi,2451,Q100566,"Klengel, Wolf Caspar von",occupation 'Oberlandbaumeister' not mapped
+saebi,2451,Q100566,"Klengel, Wolf Caspar von",date of birth 1630-06-08 not used: calendar unclear before 1700 there
+saebi,2451,Q100566,"Klengel, Wolf Caspar von",date of death 1691-01-10 not used: calendar unclear before 1700 there
+sbi,582291,Q60181427,Franc Ksaver Slavič,occupation 'solski-organizator' not mapped
+sbi,582291,Q60181427,Franc Ksaver Slavič,occupation 'duhovnik' not mapped
+sbi,582291,Q60181427,Franc Ksaver Slavič,occupation 'redovnik' not mapped
+sbi,582291,Q60181427,Franc Ksaver Slavič,occupation 'jezuit' not mapped
+bpn,13432275,Q20017569,Johanna Jacoba Hubertina Leenders,"place of death 'Brussel?, België' not matched to one place item"
+sbl,7464,Q1038477,Carl Gustaf Qvarnström,"place of birth: item has a different value, left alone"
+ndb,11654516X,Q1429877,Joseph Florian Rieß,occupation 'Jesuit' not mapped
+wgw,34155,Q114609520,"Peithner-Lichtenfels, Bernhard",place of birth 'Falkenau' not matched to one place item
+hessbio,15636,Q86967,"Adam, Otto",occupation 'Fechter' not mapped
+saebi,2452,Q55124884,"Klett (Klette), Johann Georg",occupation 'Edelsteinschneider' not mapped
+sbi,582424,Q279013,Matija Slavič,occupation 'biblicist' not mapped
+sbi,582424,Q279013,Matija Slavič,occupation 'narodni-delavec' not mapped
+sbi,582424,Q279013,Matija Slavič,occupation 'pridigar' not mapped
+sbi,582424,Q279013,Matija Slavič,occupation 'duhovnik' not mapped
+ndb,116545259,Q92503,Peter Theophil Rieß,date of birth '1804 oder 1805' not used: not an exact date
+ndb,116545259,Q92503,Peter Theophil Rieß,religion 'mehrkonfessionell' not used: not mapped
+oebl,K/Kirstein_August_1856_1939,Q762334,"Kirstein, August","place of birth 'Kosel (Cosel, Oberschlesien) (?, ?)' not matched to one place item"
+wgw,34156,Q1432747,"Stockhausen, Juliana von",place of birth 'Lahr' not matched to one place item
+wgw,34156,Q1432747,"Stockhausen, Juliana von",place of death 'Ingelheim am Rhein' not matched to one place item
+hessbio,15637,Q1467723,"Ulm, Fritz Otto","date of death: item has a different value, left alone"
+saebi,2453,Q18412924,"Klettenberg, Hector von",date of birth '[1669/1684]' not used: not an exact date
+saebi,2453,Q18412924,"Klettenberg, Hector von",place of death 'Königstein' not matched to one place item
+saebi,2453,Q18412924,"Klettenberg, Hector von",occupation 'Alchimist' not mapped
+saebi,2453,Q18412924,"Klettenberg, Hector von",occupation 'Betrüger' not mapped
+sbi,582591,Q12784934,Antonija Slavik,"place of birth 'Trst, Trieste, Italija' names a part of a settlement; not matched to one place item"
+sbi,582591,Q12784934,Antonija Slavik,occupation 'narodni-delavec' not mapped
+lex,Emir_Kusturica,Q94882,Emir Kusturica,"date of birth: item has a different value, left alone"
+sbl,7466,Q4887779,Benct Qvist Andersson,date of birth 1726-10-21 not used: calendar unclear before 1753 there
+oebl,K/Kisa_Anton-Karl_1857_1907,Q19753770,"Kisa, Anton Karl",occupation 'Museumsbeamter' not mapped
+wgw,34157,Q78685,"Rezzori, Gregor von",place of death 'Donnini (Toskana)' not matched to one place item
+hessbio,15638,Q696826,"Wolf, Arnoldina Charlotta Henrietta","date of birth: item has a different value, left alone"
+saebi,2454,Q1699933,"Klien, Karl",place of birth 'Königstein' not matched to one place item
+lex,Emma_Aastrand_Jørgensen,Q26334353,Emma Aastrand Jørgensen,"place of birth: item has a different value, left alone"
+sbl,7467,Q42296501,J Harald Qvistgaard,place of birth 'Göteborgs Masthuggs församling' not matched to one place item
+hessbio,1564,Q131768232,"Lennig, Franziska",place of death 'Villeneuve-d’Allier' not matched to one place item
+hessbio,1564,Q131768232,"Lennig, Franziska",occupation 'Schulreformerin' not mapped
+sbi,582872,Q12792113,Jan Slavík,"place of birth 'Neustupov, Češka' not matched to one place item (no settlement of that name in that country)"
+sbi,582872,Q12792113,Jan Slavík,occupation 'glasbenik' not mapped
+sbi,582872,Q12792113,Jan Slavík,occupation 'orglavec' not mapped
+sbi,582872,Q12792113,Jan Slavík,occupation 'glasbeni-pedagog' not mapped
+lex,Emma_Bonino,Q50002,Emma Bonino,"place of birth 'Bra, Piemonte i det nordvestlige Italien' not matched to one place item"
+ndb,116545690,Q7606051,Stephan Clessin,occupation 'Malakozoologe' not mapped
+saebi,2456,Q1679160,"Klinckebeil (von Grünewald), Jakob",place of death 'Guben[?]' uncertain; not used
+saebi,2456,Q1679160,"Klinckebeil (von Grünewald), Jakob",occupation 'Salzamtshauptmann' not mapped
+saebi,2456,Q1679160,"Klinckebeil (von Grünewald), Jakob",date of birth 1627-04-12 not used: calendar unclear before 1700 there
+saebi,2456,Q1679160,"Klinckebeil (von Grünewald), Jakob",date of death 1694-03-08 not used: calendar unclear before 1700 there
+sbi,582996,Q23008454,Matej Slekovec,occupation 'duhovnik' not mapped
+bpn,13448317,Q21553077,Cornelis Laakhuysen,place of birth 'Emmerik' not matched to one place item
+bpn,13448317,Q21553077,Cornelis Laakhuysen,place of death 'Loenen' not matched to one place item
+sbl,7477,Q6060150,C F Hugo Raab,"place of death: item has a different value, left alone"
+ndb,116545844,Q85929,Johannes von Kries,place of birth 'Roggenhausen bei Graudenz' not matched to one place item
+ndb,116545844,Q85929,Johannes von Kries,place of death 'Freiburg (Breisgau)' not matched to one place item
+oebl,K/Kisch_Enoch-Heinrich_1841_1918,Q4222621,"Kisch, Enoch Heinrich",occupation 'Balneologe' not mapped
+hessbio,15642,Q107679212,"Wolff, Georg Theodor Ernst",occupation 'Militäringenieur(?)' not mapped
+saebi,2457,Q44252,"Klinger, Max",place of death 'Großjena bei Naumburg/ Saale' not matched to one place item
+bpn,13459507,Q104760839,Gilbert de Flines,"place of death 'Londen, Groot-Britannië' not matched to one place item"
+ndb,116546344,Q88026,Ernst Kris,place of death 'New York' not matched to one place item
+hessbio,15643,Q215018,"Hessenstein, Friedrich Wilhelm Graf und Reichsfürst von",place of death 'Panker (Holstein)' not matched to one place item
+hessbio,15643,Q215018,"Hessenstein, Friedrich Wilhelm Graf und Reichsfürst von","date of birth: item has a different value, left alone"
+sbi,583344,Q60181397,Anton Slivnik,occupation 'veterinar' not mapped
+sbl,7479,Q6060307,J Julius Rabe,"place of death 'Lidingö församling (enl db för Danderyd,Sthlm)' not used: the comment makes it unclear"
+oebl,K/Kisch_Wilhelm-Maximilian_1827_1893,Q2574135,"Kisch, Wilhelm Maximilian",occupation 'Lokalhistoriker' not mapped
+hessbio,15644,Q108316298,"Hessen-Kassel, Maria Amelia Landgräfin von",occupation 'Landgräfin' not mapped
+sbi,583448,Q12784883,Anton Slodnjak,occupation 'literarni-kritik' not mapped
+sbi,583448,Q12784883,Anton Slodnjak,occupation 'pripovednik' not mapped
+ndb,116546492,Q103240,Friedrich Krischen,"place of death: item has a different value, left alone"
+wgw,34164,Q108813970,"Pelousek, Christine",occupation 'Generalsekretärin des Kunstvereines Wien Alte Schmiede' not mapped
+sbi,583893,Q60181348,Breda Slodnjak,occupation 'slavist' not mapped
+bpn,13464802,Q19802230,Maria van Huysum,date of baptism 1696-07-22 not used: calendar unclear before 1701 there
+sbl,7487,Q6060358,Nils Rabenius,place of death 'Hedemora stadsförsamling' not matched to one place item
+ndb,116546565,Q95553,Sigmund von Riezler,date of birth '2.10. (oder 5. ?)' not used: not an exact date
+ndb,116546565,Q95553,Sigmund von Riezler,place of death 'Ambach/Starnberger See (oder München ?)' uncertain; not used
+saebi,2460,Q18626439,"Klotsche, Johannes",occupation 'Oberkirchenrat' not mapped
+sbi,584027,Q21587466,Ina Slokan,occupation 'pripovednik' not mapped
+bpn,13468785,Q109860,Dagobert I,"date of death: item has a different value, left alone"
+lex,Emma_Hamilton,Q234811,Emma Hamilton,"date of birth: item has a different value, left alone"
+ndb,116546662,Q104964,Walter Riezler,date of death '22./23.1.1965 München.ergänzt [d. Red.]' not used: not an exact date
+ndb,116546662,Q104964,Walter Riezler,occupation 'Kunst- und Musikwissenschaftler' not mapped
+wgw,34167,Q59653550,"Fuchs, Josef Friedrich","place of death: item has a different value, left alone"
+hessbio,1565,Q135390980,"Lenz, Philipp Otto*",place of birth 'Klein-Linden' not matched to one place item
+saebi,2461,Q89704,"Klotz, Reinhold",place of birth 'Stollberg/ Erzgebirge' not matched to one place item
+saebi,2461,Q89704,"Klotz, Reinhold",place of death 'Kleinzschocher bei Leipzig' not matched to one place item
+sbi,584224,Q60181318,Jaka Slokan,occupation 'kmetijski-pisec' not mapped
+oebl,K/Kisfaludy_Karoly_1788_1830,Q927190,"Kisfaludy, Károly","place of death: item has a different value, left alone"
+hessbio,15652,Q135399399,"Arend, Nicolaus Erdmann",occupation 'Landbaumeister' not mapped
+hessbio,15652,Q135399399,"Arend, Nicolaus Erdmann","child 'Arend, Carl Wilhelm': entry 17059 is on no single item; not used"
+saebi,2462,Q1707413,"Klug (Klöck, Kluck), Joseph",place of death 'Wittenberg' not matched to one place item
+saebi,2462,Q1707413,"Klug (Klöck, Kluck), Joseph","date of birth: item has a different value, left alone"
+sbi,584334,Q60181308,Karel Slokan,occupation 'montanist' not mapped
+bpn,13474285,Q21553078,Albert Hofman,place of birth 'Kollum (Kollumerland en Nieuwkruisland)' not matched to one place item
+ndb,116546972,Q55122928,Paul Ludolph Kritz,religion 'evangelisch?' not used: uncertain
+oebl,K/Kisfaludy_Sandor_1772_1844,Q670247,"Kisfaludy, Sándor","date of birth: item has a different value, left alone"
+hessbio,15653,Q1578820,"Bredow, Hans* Carl August Friedrich",place of birth 'Schlawe heute Sławno (Polen)' not matched to one place item
+hessbio,15653,Q1578820,"Bredow, Hans* Carl August Friedrich",occupation 'Staatssekretär' not mapped
+hessbio,15653,Q1578820,"Bredow, Hans* Carl August Friedrich",occupation 'Regierungspräsident' not mapped
+sbi,584468,Q60181278,Ivan Slokar,occupation 'gospodarstvenik' not mapped
+sbi,584468,Q60181278,Ivan Slokar,occupation 'tehnicni-izumitelj' not mapped
+bpn,13475724,Q123140983,Jacob Klunder,place of birth 'Avereest (O.)' not matched to one place item
+sbl,7495,Q6060678,Reinhold Rademacher,date of birth '1609omkr' not used: approximate or unclear
+wgw,34170,Q26219043,"Richer, Laurenz","place of birth 'Tinnye bei Gran (Tinnye, Ungarn)' not matched to one place item"
+wgw,34170,Q26219043,"Richer, Laurenz",GND ID '1317317815' has no valid check digit; not used
+sbi,584693,Q591809,Anton Martin Slomšek,occupation 'nabozni-pisatelj' not mapped
+sbi,584693,Q591809,Anton Martin Slomšek,occupation 'pedagoski-delavec' not mapped
+sbi,584693,Q591809,Anton Martin Slomšek,occupation 'narodni-buditelj' not mapped
+sbi,584693,Q591809,Anton Martin Slomšek,occupation 'duhovnik' not mapped
+sbi,584693,Q591809,Anton Martin Slomšek,occupation 'skof' not mapped
+ndb,116547278,Q21544746,Friedrich Anton Rigler,religion 'mehrkonfessionell' not used: not mapped
+sbi,585982,Q60180183,Josip Slovnik,"place of birth 'Ljubljana, Slovenija' names a part of a settlement; not matched to one place item"
+bpn,13478574,Q18092707,Anne Abrahami,date of baptism 1696-07-26 not used: calendar unclear before 1701 there
+sbl,7498,Q2303658,Ragnhild,date of birth 'troligen 1000-talet' not used: approximate or unclear
+sbl,7498,Q2303658,Ragnhild,date of death 'troligen 1100' not used: approximate or unclear
+hessbio,15656,Q6250797,"Zahn, Johann Karl Wilhelm*",place of birth 'Rodenberg (Kreis Schaumburg)' not matched to one place item
+saebi,24628,Q21416202,Wolf Friedrich von Schönburg,occupation 'Herr von Schönburg' not mapped
+sbi,586116,Q60180175,Avguštin Sluga,occupation 'duhovnik' not mapped
+sbi,586116,Q60180175,Avguštin Sluga,occupation 'redovnik' not mapped
+sbi,586116,Q60180175,Avguštin Sluga,occupation 'cistercijan' not mapped
+bpn,13483636,Q1552668,Wolther of Gualtherus van Doeveren,place of birth 'Philippine' not matched to one place item
+sbl,7499,Q1342231,Ragnvald,date of birth 'omkring 1100' not used: approximate or unclear
+sbl,7499,Q1342231,Ragnvald,date of death 'omkring 1130' not used: approximate or unclear
+ndb,116548088,Q1576835,Timm Kröger,place of birth 'Haale Kreis Rendsburg-Eckernförde (Holstein)' not matched to one place item
+oebl,K/Kiss-Ittebe-Elemer_Ernoe_1800_1849,Q699111,"Kiss von Ittebe und Elemér, Ernő","date of birth: item has a different value, left alone"
+wgw,34174,Q2174464,"Richly, Rudolf","place of birth 'Ödenburg (Sopron, Ungarn)' not matched to one place item"
+hessbio,1566,Q1697947,"Leppich SJ, Johannes",place of death 'Münster (Westfalen)' not matched to one place item
+hessbio,1566,Q1697947,"Leppich SJ, Johannes",occupation 'Straßenprediger' not mapped
+sbi,586309,Q60180163,Emil Smasek,occupation 'publicist' not mapped
+sbi,586309,Q60180163,Emil Smasek,occupation 'dramaturg' not mapped
+sbi,586309,Q60180163,Emil Smasek,occupation 'reziser' not mapped
+bpn,13487032,Q5550691,Gerhard Jan Palthe,place of birth 'Denekamp' not matched to one place item
+sbl,7500,Q166572,Ragnvald,date of death '1000-talet' not used: approximate or unclear
+ndb,11654841X,Q2574679,Wilhelm Rimpau,place of birth 'Schlanstedt (Sachsen-Anhalt)' not matched to one place item
+ndb,11654841X,Q2574679,Wilhelm Rimpau,place of death 'Woltersdorf (Pommern)' not matched to one place item
+ndb,11654841X,Q2574679,Wilhelm Rimpau,occupation 'Saatgutzüchter' not mapped
+hessbio,15664,Q875270,"Rall, Johann Gottlieb",place of birth 'um 1715/1725' not matched to one place item
+hessbio,15664,Q875270,"Rall, Johann Gottlieb",place of death 'Trenton am Delaware/USA' not matched to one place item
+saebi,2463,Q141691978,"Kluge, Hans",place of birth 'Freiberg[?]' uncertain; not used
+saebi,2463,Q141691978,"Kluge, Hans",date of death 'nach 1478' not used: not an exact date
+saebi,2463,Q141691978,"Kluge, Hans",place of death 'k.A' not matched to one place item
+saebi,2463,Q141691978,"Kluge, Hans",occupation 'Oberbergmeister' not mapped
+sbi,586428,Q48606646,Frančišek Smerdu,occupation 'akademski-kipar' not mapped
+sbl,7501,Q6061182,Ragvald,"place of death 'Finland (begr i Räntämäki, Åbo o Björneb.)' not used: the comment makes it unclear"
+ndb,116548584,Q97844,Adolf von Kröner,religion 'evangelisch?' not used: uncertain
+oebl,K/Kiss_Aron_1815_1908,Q1112080,"Kiss, Áron d. Ä.",GND ID 136665373 is already on Q100151882; not copied
+oebl,K/Kiss_Aron_1815_1908,Q1112080,"Kiss, Áron d. Ä.","date of birth: item has a different value, left alone"
+sbi,586573,Q60180146,Franjo Smerdu,occupation 'ftiziolog' not mapped
+sbi,586573,Q60180146,Franjo Smerdu,occupation 'pulmolog' not mapped
+sbi,586573,Q60180146,Franjo Smerdu,occupation Q39631 not added: the item has the more precise Q24017632
+sbl,7502,Q38473405,Albert Wilhelm Rahmn,place of birth 'Kristine församling' not matched to one place item
+ndb,116548614,Q1739388,Robert Kröner,place of death 'Kirchheim/Teck' not matched to one place item
+ndb,116548614,Q1739388,Robert Kröner,religion 'evangelisch?' not used: uncertain
+oebl,K/Kiss_Aron_1845_1908,Q1112081,"Kiss, Áron d. J.","date of birth: item has a different value, left alone"
+hessbio,15667,Q94856466,"Körner, Wilhelm","date of birth: item has a different value, left alone"
+sbi,586734,Q60180122,Bojan Smerkolj,occupation 'gledaliski-igralec' not mapped
+sbi,586734,Q60180122,Bojan Smerkolj,occupation 'inspicient' not mapped
+bpn,13499144,Q19754724,Catharina Jansdr Oly,date of birth 1585-05-08 not used: calendar unclear before 1701 there
+bpn,13499144,Q19754724,Catharina Jansdr Oly,date of death 1651-03-29 not used: calendar unclear before 1701 there
+ndb,11654869X,Q1080700,Christian Kröner,"date of death: item has a different value, left alone"
+sbi,586820,Q12800704,Samo Smerkolj,occupation 'operni-pevec' not mapped
+sbi,586820,Q12800704,Samo Smerkolj,occupation 'koncertni-pevec' not mapped
+sbi,586820,Q12800704,Samo Smerkolj,occupation 'baritonist' not mapped
+ndb,116548908,Q67102,Carl Haussknecht,place of birth 'Bennungen bei Sangerhausen' not matched to one place item
+oebl,K/Kiss_Balint_1802_1868,Q1111591,"Kiss, Bálint","place of death: item has a different value, left alone"
+wgw,34180,Q89135,"Lazarsfeld, Sofie",occupation 'Frauenrechtsaktivistin' not mapped
+wgw,34180,Q89135,"Lazarsfeld, Sofie","date of birth: item has a different value, left alone"
+hessbio,15669,Q29106873,"Schnitzler, Lilly* Bertha Dorothea von",place of death 'Murnau' not matched to one place item
+hessbio,15669,Q29106873,"Schnitzler, Lilly* Bertha Dorothea von",occupation 'Mäzenatin' not mapped
+hessbio,15669,Q29106873,"Schnitzler, Lilly* Bertha Dorothea von",religion 'evangelisch; katholisch' not used: not mapped
+saebi,24633,Q1280900,"Henkels, Kurt",occupation 'Orchesterleiter' not mapped
+sbi,586932,Q12789180,Franc Smodej,occupation 'duhovnik' not mapped
+sbl,7507,Q6061909,Oscar G Ralf,"place of birth: item has a different value, left alone"
+ndb,116548967,Q1697634,Johannes Haußleiter,place of birth 'Löpsingen im Ries' not matched to one place item
+ndb,116548967,Q1697634,Johannes Haußleiter,"religion: item has a different value, left alone"
+oebl,K/Kiss_Ferenc_1862_1948,Q98844932,"Kiss, Ferenc","date of birth: item has a different value, left alone"
+oebl,K/Kiss_Ferenc_1862_1948,Q98844932,"Kiss, Ferenc","place of death: item has a different value, left alone"
+wgw,34181,Q75913,"Penck, Walter","date of birth: item has a different value, left alone"
+sbi,587083,Q60180112,Anton Smodič,occupation 'muzealec' not mapped
+ndb,116549092,Q117992,Rudolf Ulrich Krönlein,place of birth 'Stein am Rhein (Kanton Schaffhausen)' not matched to one place item
+ndb,116549092,Q117992,Rudolf Ulrich Krönlein,"religion: item has a different value, left alone"
+oebl,K/Kiss_Franz_1791_1859,Q1111679,"Kiss, Franz von","place of death: item has a different value, left alone"
+wgw,34183,Q1336883,"Stoffella, Emil","place of birth: item has a different value, left alone"
+wgw,34183,Q1336883,"Stoffella, Emil","place of death: item has a different value, left alone"
+hessbio,15670,Q110052,"Schnitzler, Georg* August Eduard von",religion 'evangelisch-reformiert; katholisch' not used: not mapped
+hessbio,15670,Q110052,"Schnitzler, Georg* August Eduard von","date of birth: item has a different value, left alone"
+saebi,24635,Q1348330,"Hergot (Herrgott), Hans (Johannes)",place of birth 'Nürnberg[?]' uncertain; not used
+saebi,24635,Q1348330,"Hergot (Herrgott), Hans (Johannes)",date of death: the item has 1527-05-20 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+sbi,587221,Q16138277,Andrej Smolè,occupation 'zbiralec-ljudskih-pesmi' not mapped
+bpn,13505985,Q2109940,Jan Jacob Thomson,place of birth 'Bredevoort' not matched to one place item
+wgw,34184,Q1580996,"Leb, Hans",place of birth 'Knappenberg' not matched to one place item
+wgw,34184,Q1580996,"Leb, Hans","date of death: item has a different value, left alone"
+hessbio,15674,Q2038678,"Feuerborn, Johann Otto* Jakob",place of birth 'Kattenstroth bei Gütersloh' not matched to one place item
+hessbio,15674,Q2038678,"Feuerborn, Johann Otto* Jakob",occupation 'Oberforstmeister' not mapped
+hessbio,15674,Q2038678,"Feuerborn, Johann Otto* Jakob",religion 'katholisch; gottgläubig' not used: not mapped
+saebi,24636,Q108286650,"Hermsdorf, Stephan",date of birth 'vor 1516' not used: not an exact date
+saebi,24636,Q108286650,"Hermsdorf, Stephan",place of birth 'k.A' not matched to one place item
+saebi,24636,Q108286650,"Hermsdorf, Stephan",date of death 'nach 1544' not used: not an exact date
+saebi,24636,Q108286650,"Hermsdorf, Stephan",place of death 'Torgau[?]' uncertain; not used
+sbi,587560,Q60180097,Avgust Smole,date of death '?' not used: not an exact date
+sbi,587560,Q60180097,Avgust Smole,occupation 'puskar' not mapped
+ndb,116549211,Q15452248,Karl Haußmann,occupation 'Geomagnetiker' not mapped
+wgw,34185,Q873124,"Führer, Robert","GND ID: item has a different value, left alone"
+ndb,116549955,Q55842855,Max Hauttmann,place of birth 'Landau (Pfalz)' not matched to one place item
+ndb,116549955,Q55842855,Max Hauttmann,place of death 'bei Igls (Tirol)' not matched to one place item
+oebl,K/Kiss_Janos_1770_1846,Q1109745,"Kiss, János",GND ID 1013392930 was merged into 130185736; 130185736 given
+wgw,34186,Q1448699,"Richter, Franz","place of birth 'Buchau (Bochov, Tschechische Republik)' not matched to one place item"
+hessbio,15676,Q1512099,"Mackenroth, Gerhard",occupation 'Bevölkerungswissenschaftler' not mapped
+saebi,24639,Q15449593,"Bleier, Oswald",place of birth 'Voigtsgrün' not matched to one place item
+saebi,24639,Q15449593,"Bleier, Oswald",place of death 'Waldheim (Zuchthaus)' not matched to one place item
+saebi,24639,Q15449593,"Bleier, Oswald",occupation 'Gegner des NS-Regimes' not mapped
+sbi,587805,Q3503913,Janko Smolè,"place of death 'Ljubljana, Slovenija' not used: marked unverified in the entry"
+sbi,587805,Q3503913,Janko Smolè,date of death '11. jun. 2010' not used: marked unverified in the entry
+sbi,587805,Q3503913,Janko Smolè,occupation 'gospodarstvenik' not mapped
+bpn,13515518,Q4700876,Akiba Lehren,place of birth ''s Gravenhage' not matched to one place item
+sbl,7522,Q4973995,Ebba G Ramsay,"place of birth: item has a different value, left alone"
+ndb,116550023,Q1360357,Ernst Haux,occupation 'Finanzverwalter und -berater der Firma Krupp' not mapped
+oebl,K/Kiss_Janos_1857_1930,Q19823292,"Kiss, János",place of death '? (?)' not matched to one place item
+sbi,587956,Q12792889,Jože Smole,occupation 'publicist' not mapped
+bpn,13517697,Q2825012,Adriaen van (I) Nieuwelandt,place of birth 'Antwerpen' not matched to one place item
+lex,Emmanuel_Le_Roy_Ladurie,Q314148,Emmanuel Le Roy Ladurie,"place of birth 'Moutiers-en-Cinglais, Frankrig' not matched to one place item"
+lex,Emmanuel_Le_Roy_Ladurie,Q314148,Emmanuel Le Roy Ladurie,"place of death 'Moutiers-en-Cinglais, Frankrig' not matched to one place item"
+sbl,7526,Q4974012,Eva J A Ramstedt,"place of birth: item has a different value, left alone"
+sbl,7526,Q4974012,Eva J A Ramstedt,"place of death: item has a different value, left alone"
+ndb,11655021X,Q1712677,Julius Havemann,place of death 'Klempau Kreis Lauenburg/Elbe' not matched to one place item
+ndb,11655021X,Q1712677,Julius Havemann,"place of birth: item has a different value, left alone"
+oebl,K/Kiss_Josef_1833_1900,Q1245371,"Kiss, Josef","place of birth 'Eisenstadt/Kismarton, Kom. Sopron, Ungarn (Eisenstadt, Bgl.)' not matched to one place item"
+oebl,K/Kiss_Josef_1833_1900,Q1245371,"Kiss, Josef","date of death: item has a different value, left alone"
+hessbio,15678,Q65224568,"Isenburg-Birstein, Victor* Alexander Prinz von",occupation 'Standesherr' not mapped
+bpn,13518356,Q4860438,Barent Graat,date of birth 1628-09-21 not used: calendar unclear before 1701 there
+sbl,7527,Q52972,Johan O Ramstedt,"place of birth: item has a different value, left alone"
+ndb,116550295,Q67041,Rudolf Havenstein,place of birth 'Meseritz' not matched to one place item
+ndb,116550295,Q67041,Rudolf Havenstein,occupation 'Reichsbankpräsident' not mapped
+sbi,588207,Q60180064,Ivan Smolej,occupation 'prosvetni-delavec' not mapped
+sbi,588207,Q60180064,Ivan Smolej,occupation 'duhovnik' not mapped
+wgw,34190,Q55134126,"Richter, Franz Xaver Johann","place of birth 'Hotzenplotz (Osoblaha, Tschechische Republik)' not matched to one place item"
+saebi,24642,Q118025,"Hoffmann, Arthur",occupation 'Gegner und Opfer des NS-Regimes' not mapped
+saebi,24642,Q118025,"Hoffmann, Arthur",occupation 'Zimmermann' not mapped
+sbi,588322,Q60180049,Matija Smolej,occupation 'nabozni-pisatelj' not mapped
+sbi,588322,Q60180049,Matija Smolej,occupation 'duhovnik' not mapped
+lex,Emmanuel_Mounier,Q351359,Emmanuel Mounier,"date of death: item has a different value, left alone"
+ndb,116550953,Q55134298,Laurentius Rinhuber,date of birth '17. Jahrhundert' not used: not an exact date
+ndb,116550953,Q55134298,Laurentius Rinhuber,date of death 'nach 1685' not used: not an exact date
+wgw,34191,Q3431248,"Stöhr, Richard",place of death 'Montpelier (USA)' not matched to one place item
+sbi,588433,Q18508653,Slavko Smolej,occupation 'umetniski-fotograf' not mapped
+lex,Emmanuel_Roblès,Q1338416,Emmanuel Roblès,"place of death 'Boulogne, Hauts-de-Seine' not matched to one place item"
+sbl,7539,Q4711085,Albert A Ranft,place of death 'Matteus församling (AB-län)' not matched to one place item
+sbl,7539,Q4711085,Albert A Ranft,"place of birth: item has a different value, left alone"
+oebl,K/Kiss_Karoly_1793_1866,Q760722,"Kiss, Károly","place of death: item has a different value, left alone"
+wgw,34192,Q94818653,"Leb, Josef",occupation 'Verlagsleiter' not mapped
+hessbio,15681,Q23564810,"Müller, Wilhelm* Justus Ferdinand Carl",occupation 'Oberappellationsgerichtsrat' not mapped
+hessbio,15681,Q23564810,"Müller, Wilhelm* Justus Ferdinand Carl",occupation 'Kassationsgerichtsrat' not mapped
+hessbio,15681,Q23564810,"Müller, Wilhelm* Justus Ferdinand Carl","date of birth: item has a different value, left alone"
+saebi,24645,Q1558488,"Howard, Wil (eigentl. Wilhelm Rudolf Hermann)",place of death 'k.A' not matched to one place item
+sbi,588611,Q18645558,Viktor Smolej,occupation 'literarni-kritik' not mapped
+sbi,588611,Q18645558,Viktor Smolej,occupation 'leksikograf' not mapped
+sbi,588611,Q18645558,Viktor Smolej,occupation 'publicist' not mapped
+sbi,588611,Q18645558,Viktor Smolej,"date of death: item has a different value, left alone"
+lex,Emmanuel_Vigeland,Q3355011,Emmanuel Vigeland,"place of birth 'Halse, Norge' not matched to one place item"
+ndb,116551070,Q122417,Friedrich Rinne,place of birth 'Osterode (Harz)' not matched to one place item
+ndb,116551070,Q122417,Friedrich Rinne,place of death 'Freiburg (Breisgau)' not matched to one place item
+ndb,116551070,Q122417,Friedrich Rinne,occupation 'Petrograph' not mapped
+oebl,K/Kiss_Karoly_1858_,Q25467045,"Kiss, Károly",the life data field is not in the usual form; places not read
+wgw,34193,Q2635647,"Pensch, Robert",occupation 'Kirchenkomponist' not mapped
+hessbio,15682,Q84422,"Gagern, Maximilian* Joseph Ludwig Freiherr von",religion 'evangelisch-reformiert; katholisch' not used: not mapped
+hessbio,15682,Q84422,"Gagern, Maximilian* Joseph Ludwig Freiherr von","date of birth: item has a different value, left alone"
+saebi,24646,Q134484719,"Borowski, Noah August",place of birth 'Peski (Russland)' not matched to one place item
+saebi,24646,Q134484719,"Borowski, Noah August",place of death 'Alma-Ata (kasach. Almaty)' not matched to one place item
+sbi,588927,Q21548118,Fran Smolik,occupation 'strokovnjak-strojnistva' not mapped
+bpn,13534874,Q14631096,Hendrik Jan van Braambeek,place of birth 'Warffum' not matched to one place item
+sbl,7541,Q4974055,Sara Ranta-Rönnlund,place of death 'Helga Trefaldighets församling' not matched to one place item
+sbl,7541,Q4974055,Sara Ranta-Rönnlund,"place of birth: item has a different value, left alone"
+wgw,34194,Q1457578,"Fürnberg, Friedl","place of birth: item has a different value, left alone"
+hessbio,15683,Q2645437,"Manigk, Alfred",place of birth 'Angerburg (Ostpreußen)' not matched to one place item
+hessbio,15683,Q2645437,"Manigk, Alfred",occupation 'Zivilrechtler' not mapped
+saebi,24647,Q15441142,"Breitmeyer, Wilhelm",place of birth 'Gröningen bei Oschersleben' not matched to one place item
+saebi,24647,Q15441142,"Breitmeyer, Wilhelm",place of death 'k.A' not matched to one place item
+sbi,589066,Q12784537,Bernard Smolnikar,"date of death: the record gives 1869, the page shows 'jan. 1869'; not used"
+sbi,589066,Q12784537,Bernard Smolnikar,occupation 'duhovnik' not mapped
+sbi,589066,Q12784537,Bernard Smolnikar,occupation 'benediktinec' not mapped
+bpn,13540470,Q17420927,Phili Viehoff,place of death 'Haren (Gr.)' not matched to one place item
+sbl,7542,Q6063509,Axel E Raphael,place of birth 'Göteborgs mosaiska församling' not matched to one place item
+sbl,7542,Q6063509,Axel E Raphael,"place of death: item has a different value, left alone"
+ndb,116551240,Q1645502,Max Rintelen,place of birth 'Graz (Steiermark)' not matched to one place item
+ndb,116551240,Q1645502,Max Rintelen,place of death 'Graz (Steiermark)' not matched to one place item
+wgw,34195,Q1602014,"Richter, Helene",place of death 'Konzentrationslager Theresienstadt' not matched to one place item
+hessbio,15684,Q65554884,"Mayer-Homberg, Edwin",place of birth 'Eupen' not matched to one place item
+hessbio,15684,Q65554884,"Mayer-Homberg, Edwin",occupation 'Zivilrechtler' not mapped
+saebi,24648,Q58378535,"Brodde, Werner",place of death 'k.A' not matched to one place item
+saebi,24648,Q58378535,"Brodde, Werner",occupation 'Sekretär für Wirtschaftspolitik' not mapped
+saebi,24648,Q58378535,"Brodde, Werner",occupation 'Gegner des NS-Regimes' not mapped
+sbi,589615,Q60180022,Luka Smolnikar,occupation 'prosvetni-delavec' not mapped
+sbi,589615,Q60180022,Luka Smolnikar,occupation 'duhovnik' not mapped
+sbi,589615,Q60180022,Luka Smolnikar,occupation 'kulturni-delavec' not mapped
+sbi,589615,Q60180022,Luka Smolnikar,occupation 'socialni-delavec' not mapped
+sbi,589615,Q60180022,Luka Smolnikar,"place of death: item has a different value, left alone"
+sbl,7543,Q4346867,B Torsten Rapp,"place of birth: item has a different value, left alone"
+sbl,7543,Q4346867,B Torsten Rapp,"place of death: item has a different value, left alone"
+oebl,K/Kitaibel_Paul_1757_1817,Q583036,"Kitaibel, Paul","place of birth 'Mattersdorf/Nagymarton, Kom. Sopron, Ungarn (Mattersburg, Bgl.)' not matched to one place item"
+oebl,K/Kitaibel_Paul_1757_1817,Q583036,"Kitaibel, Paul","place of death: item has a different value, left alone"
+wgw,34196,Q37514680,"Penther, Daniel",place of birth 'Lemberg' not matched to one place item
+wgw,34196,Q37514680,"Penther, Daniel","date of death: item has a different value, left alone"
+hessbio,15685,Q1699962,"Merk, Walther",place of birth 'Meersburg (Bodensee)' not matched to one place item
+saebi,24649,Q16007284,"Dankner, Hans",place of death 'KZ Dachau' not matched to one place item
+saebi,24649,Q16007284,"Dankner, Hans",occupation 'Gegner und Opfer des NS-Regimes' not mapped
+sbi,589817,Q18507639,Andrej Smrekar,"place of death 'Cleveland, Združene države Amerike' names a part of a settlement; not matched to one place item"
+sbi,589817,Q18507639,Andrej Smrekar,occupation 'duhovnik' not mapped
+sbi,589817,Q18507639,Andrej Smrekar,occupation Q36180 not added: the item has the more precise Q49757
+bpn,13548423,Q55902388,Rudolphus Eyssonius,date of birth 1655-02-01 not used: calendar unclear before 1701 there
+sbl,7544,Q6063594,Leon Rappaport,"place of death: item has a different value, left alone"
+saebi,2465,Q103241,"Knöbel, Johann Friedrich",occupation 'Landbaumeister' not mapped
+sbi,590048,Q6590666,Hinko Smrekar,occupation 'risar' not mapped
+sbi,590048,Q6590666,Hinko Smrekar,"place of death: item has a different value, left alone"
+lex,Emmy_Ball-Hennings,Q76815,Emmy Ball-Hennings,"place of death 'Sorengo bei Lugano, Schweiz' not matched to one place item"
+wgw,34199,Q94578615,"Penzeneter von Penzenstein, Johann",occupation 'Feldmarschallleutnant' not mapped
+sbi,590533,Q60179982,Janez Smrekar,occupation 'socialni-delavec' not mapped
+sbi,590533,Q60179982,Janez Smrekar,occupation 'duhovnik' not mapped
+lex,Emmy_Carell,Q136375696,Emmy Carell,"place of death 'Københavns Kommunehospital, Sions sogn' not matched to one place item"
+sbl,7547,Q6063626,Axel O Rappe,"date of death: item has a different value, left alone"
+sbl,7547,Q6063626,Axel O Rappe,"place of birth: item has a different value, left alone"
+ndb,116551445,Q3057341,Ernst Gottfried Fischer,place of birth 'Hoheneiche bei Saalfeld' not matched to one place item
+oebl,K/Kittel_Anton__1820,Q94874220,"Kittel, Anton",the life data field is not in the usual form; places not read
+oebl,K/Kittel_Anton__1820,Q94874220,"Kittel, Anton",occupation 'Glasschneider' not mapped
+wgw,34200,Q111568891,"Lechner, Alfred",place of birth 'Aussig' not matched to one place item
+saebi,24651,Q19299120,"Ellrodt, Richard Friedrich",occupation 'Stadtverordneter' not mapped
+sbi,590643,Q60179964,Jožef Smrekar,occupation 'kulturni-zgodovinar' not mapped
+sbi,590643,Q60179964,Jožef Smrekar,occupation 'duhovnik' not mapped
+bpn,13551823,Q18092733,Piet Hein van Asperen,place of birth 'Harlingen' not matched to one place item
+sbl,7550,Q11855309,Christopher J Rappe,place of death 'Finland (i Åbo (sv förs.))' not matched to one place item
+sbl,7550,Q11855309,Christopher J Rappe,"place of birth: item has a different value, left alone"
+hessbio,15689,Q131768199,"Nolte, Hermann",place of birth 'Elsen (Paderborn)' not matched to one place item
+saebi,24652,Q1174777,"Hoyer, David",place of birth 'Waldkirchen bei Zschopau' not matched to one place item
+saebi,24652,Q1174777,"Hoyer, David","date of birth: item has a different value, left alone"
+sbi,590769,Q60179946,Andrej Snoj,occupation 'biblicist' not mapped
+ndb,116551992,Q20183786,Gustav Krojanker,date of death 'Juni 1945 in Palästina.ergänzt' not used: not an exact date
+ndb,116551992,Q20183786,Gustav Krojanker,place of death 'in Palästina' not matched to one place item
+ndb,116551992,Q20183786,Gustav Krojanker,occupation 'Zionist' not mapped
+saebi,24653,Q159976,"Joachim, Joseph",place of birth 'Kittsee (ungar. Köpcsény) (Österreich)' not matched to one place item
+saebi,24653,Q159976,"Joachim, Joseph",occupation 'Hochschulrektor' not mapped
+sbi,590914,Q12785688,Benigen Snoj,"place of death 'Rome City, Združene države Amerike' not matched to one place item (no settlement of that name in that country)"
+sbi,590914,Q12785688,Benigen Snoj,occupation 'narodni-delavec' not mapped
+sbi,590914,Q12785688,Benigen Snoj,occupation 'homeopat' not mapped
+sbi,590914,Q12785688,Benigen Snoj,occupation 'duhovnik' not mapped
+sbi,590914,Q12785688,Benigen Snoj,occupation 'redovnik' not mapped
+sbi,590914,Q12785688,Benigen Snoj,occupation 'franciskan' not mapped
+sbi,590914,Q12785688,Benigen Snoj,"place of birth: item has a different value, left alone"
+sbl,7558,Q1648832,Signe Rappe-Welden,"place of birth: item has a different value, left alone"
+sbl,7558,Q1648832,Signe Rappe-Welden,"place of death: item has a different value, left alone"
+wgw,34203,Q1635531,"Pepper, Hugo",occupation 'Volksbildner' not mapped
+saebi,24654,Q94940104,"Kahnt, Oswald",place of death 'k.A' not matched to one place item
+sbi,591076,Q12016826,Franc Snoj,"place of birth 'Zagorje ob Savi, Slovenija' names a part of a settlement; not matched to one place item"
+lex,Emmylou_Harris,Q231286,Emmylou Harris,place of birth 'Alabama' not matched to one place item
+sbl,7560,Q42305147,Niklas B Rasck,place of birth 'Stockholms domkyrkoförsamling (troligen i Sthlm)' not used: the comment makes it unclear
+sbl,7560,Q42305147,Niklas B Rasck,place of death 'Polen (i Danzig/Gda?sk)' not matched to one place item
+sbl,7560,Q42305147,Niklas B Rasck,date of birth: the item has 1549-12-07 in the Gregorian calendar model and the entry the same digits in the Julian one; left alone: one of the two calendar models is wrong
+ndb,116552204,Q1458537,Friedrich Brockhaus,religion 'evangelisch?' not used: uncertain
+oebl,K/Kittner_Alexander_1809_1872,Q55907594,"Kittner, Alexander",occupation 'Goldarbeiter' not mapped
+sbi,591193,Q4425639,Jože Snoj,"place of death 'Ljubljana, Slovenija' not used: marked unverified in the entry"
+sbi,591193,Q4425639,Jože Snoj,date of death '7. okt. 2021' not used: marked unverified in the entry
+sbi,591193,Q4425639,Jože Snoj,occupation 'pripovednik' not mapped
+sbi,591193,Q4425639,Jože Snoj,occupation 'literarni-kritik' not mapped
+sbl,7561,Q6063842,Rasmus Ludvigsson,place of death 'Stockholms domkyrkoförsamling (trol begr i Sthlm.)' not used: the comment makes it unclear
+ndb,116552441,Q1705064,Josef Kroll,place of birth 'Arnsberg (Westfalen)' not matched to one place item
+ndb,116552441,Q1705064,Josef Kroll,place of death 'Rheinhausen bei Duisburg' not matched to one place item
+wgw,34207,Q17323455,"Pergen, Karl Ludwig",place of death 'Kaschau' not matched to one place item
+saebi,24656,Q139177373,"Kauxdorff, Andreas d.Ä.",date of birth 1592-05-10 not used: calendar unclear before 1700 there
+saebi,24656,Q139177373,"Kauxdorff, Andreas d.Ä.",date of death 1669-08-28 not used: calendar unclear before 1700 there
+sbi,591296,Q60179930,Nežka Snoj,date of death '2016' not used: marked unverified in the entry
+sbi,591296,Q60179930,Nežka Snoj,occupation 'veterinar' not mapped
+bpn,13571663,Q2714195,Carel Adrianus Engelbregt,"date of death: item has a different value, left alone"
+hessbio,15693,Q2173622,"Reinhardt, Rudolf",place of birth 'Mühlhausen (Rheinland)' not matched to one place item
+hessbio,15693,Q2173622,"Reinhardt, Rudolf",occupation 'Zivilrechtler' not mapped
+sbi,591401,Q60179908,Viktor Snoj,"place of death 'Reka, Rijeka, Fiume, Hrvaška' not used: marked unverified in the entry"
+sbi,591401,Q60179908,Viktor Snoj,date of death '30. okt. 2011' not used: marked unverified in the entry
+sbi,591401,Q60179908,Viktor Snoj,occupation 'akademski-slikar' not mapped
+ndb,116552581,Q73314,Wilhelm Kroll,place of birth 'Frankenstein (Schlesien)' not matched to one place item
+oebl,K/Kiurina_Berta_1888_1933,Q59601733,"Kiurina, Berta","GND ID 116196076 is of someone born 1882, not 1888; not copied"
+oebl,K/Kiurina_Berta_1888_1933,Q59601733,"Kiurina, Berta","date of birth: item has a different value, left alone"
+oebl,K/Kiurina_Berta_1888_1933,Q59601733,"Kiurina, Berta","place of birth: item has a different value, left alone"
+hessbio,15694,Q62444,"Röpke, Wilhelm",place of birth 'Schwarmstedt (Hannover)' not matched to one place item
+hessbio,15694,Q62444,"Röpke, Wilhelm",occupation 'Ökonom' not mapped
+hessbio,15694,Q62444,"Röpke, Wilhelm",occupation 'Sozialphilosoph' not mapped
+saebi,24658,Q1912570,"Gerbig, Max",place of death 'k.A' not matched to one place item
+sbi,591507,Q60179886,Albert Socher,occupation 'pedagoski-delavec' not mapped
+sbi,591507,Q60179886,Albert Socher,occupation 'panegirik' not mapped
+sbi,591507,Q60179886,Albert Socher,occupation 'duhovnik' not mapped
+sbi,591507,Q60179886,Albert Socher,occupation 'redovnik' not mapped
+sbi,591507,Q60179886,Albert Socher,occupation 'jezuit' not mapped
+sbl,7564,Q28840687,Siri L Rathsman,place of birth 'Sundsvalls Gustav Adolfs församling' not matched to one place item
+ndb,116552980,Q1037164,Carl Brockhausen,place of death 'Kitzbühel (Tirol)' not matched to one place item
+ndb,116552980,Q1037164,Carl Brockhausen,occupation 'Verwaltungsrechtler' not mapped
+oebl,K/Kiuver_Stephan-Agontz_1740_1824,Q21703517,"Kiuver, P. Stephan Agontz",place of birth '? (?)' not matched to one place item
+oebl,K/Kiuver_Stephan-Agontz_1740_1824,Q21703517,"Kiuver, P. Stephan Agontz","place of death 'S. Lazzaro (Venedig), Lombardo-Venetien (?, Italien)' not matched to one place item"
+oebl,K/Kiuver_Stephan-Agontz_1740_1824,Q21703517,"Kiuver, P. Stephan Agontz",GND ID 1013620437 was merged into 120404788; 120404788 given
+hessbio,15695,Q55675640,"Schätzel, Walter* Friedrich Robert",occupation 'Völkerrechtler' not mapped
+saebi,24659,Q560606,"Geyer (geb. Elbert), Anna",place of death 'Detroit (USA)' not matched to one place item
+lex,Endo_Toshikatsu,Q17057897,Endo Toshikatsu,"place of birth 'Takayama, Japan' not matched to one place item"
+sbl,7565,Q1937358,A Ruben Rausing,"place of birth: item has a different value, left alone"
+ndb,116553022,Q1597706,Karl Christian von Brockhausen,religion 'evangelisch?' not used: uncertain
+ndb,116553022,Q1597706,Karl Christian von Brockhausen,"date of birth: item has a different value, left alone"
+hessbio,15696,Q1987361,"Holstein, Ulrike Friederike* Wilhelmine Herzogin von",occupation 'Landgräfin' not mapped
+hessbio,15696,Q1987361,"Holstein, Ulrike Friederike* Wilhelmine Herzogin von","date of death: item has a different value, left alone"
